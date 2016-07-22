@@ -43,6 +43,9 @@ class Personne(object):
     def prenom(self):
         return self._prenom
 
+    def __str__(self):
+        return "Personne object %s %s" % (self._prenom, self._nom)
+
 
 class Client(Personne):
     def __init__(self, nom, prenom, id, join_date=datetime.now(), is_vip=False):
