@@ -10,7 +10,7 @@ Gestion des comptes banquaires
 
 
 from datetime import datetime
-from bank import BankAccount, Client, BusinessError
+import bank
 
 clients = {}
 
@@ -26,10 +26,10 @@ def create_client(first_name, last_name, is_vip=False, join=datetime.now()):
     clientId = first_name+last_name
 
     if clients.get(id):
-        raise BusinessError('Client %s %s already exists'
+        raise bank.BusinessError('Client %s %s already exists'
                             % first_name, last_name)
 
-    clients[clientId] = Client(last_name, first_name, clientId, join, is_vip)
+    clients[clientId] = bank.Client(last_name, first_name, clientId, join, is_vip)
 
 
 def get_clients():
@@ -53,15 +53,15 @@ def add_account(id_client, open_balance):
         raise ValueError('Client id %s does not exist' % id_client)
 
     if open_balance < MIN_DEPOSIT:
-        raise BusinessError('Minimum deposit required',
+        raise bank.BusinessError('Minimum deposit required',
                             ValueError('opne balance : %d' % open_balance))
 
     if len(client._accounts) < VIP_MAX_ACCOUNTS if client._is_vip else MAX_ACCOUNTS:
-        new_bank_account = BankAccount(client._identifiant + str(datetime.now().microsecond), open_balance)
+        new_bank_account = bank.BankAccount(client._identifiant + str(datetime.now().microsecond), open_balance)
         client.add_account(new_bank_account)
         return new_bank_account._id
     else:
-        raise BusinessError('Client have max accounts')
+        raise bank.BusinessError('Client have max accounts')
 
 
 def deposit(client_id, account_id, ammount):

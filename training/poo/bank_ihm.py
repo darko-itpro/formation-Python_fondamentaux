@@ -38,6 +38,8 @@ root.title('Create account')
 user_frame = UserInfo(root)
 user_frame.pack()
 
+import bank_manager
+
 
 def create_account():
     """
@@ -45,10 +47,9 @@ def create_account():
 
     :return: None
     """
-    from bank import Personne
     first_name, last_name = user_frame.get_values()
-    p = Personne(last_name, first_name)
-    print p
+    bank_manager.create_client(first_name, last_name)
+
 
 Button(root, text='Create',
        command=create_account).pack()
