@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from __future__ import print_function
+
 """
 Sujet
 -----
@@ -16,5 +18,5 @@ Sujet
 temps = 6.892
 distance = 19.7
 
-print "Vitesse : {} m/s".format(distance/temps)
-print "Vitesse : {:.2f} m/s".format(distance/temps)
+print("Vitesse : {} m/s".format(distance/temps))
+print("Vitesse : {:.2f} m/s".format(distance/temps))

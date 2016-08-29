@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from __future__ import print_function
+
 """
     Sujet
     -----
@@ -31,12 +33,12 @@ while True:
     volume_actuel = float(raw_input("Quel est le volume actuel ?"))
 
     if pression_actuel > PRESSION_SEUIL and volume_actuel > VOLUME_SEUIL:
-        print "Arrêt de l'enceinte !!!"
+        print ("Arrêt de l'enceinte !!!")
         break
     elif pression_actuel > PRESSION_SEUIL:
-        print "Augmentez le volume"
+        print ("Augmentez le volume")
     elif volume_actuel > VOLUME_SEUIL:
-        print "Diminuez le volume"
+        print ("Diminuez le volume")
     else:
-        print "Tout va bien…"
+        print ("Tout va bien…")
         break
