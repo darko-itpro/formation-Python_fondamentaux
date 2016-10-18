@@ -24,7 +24,16 @@ class Stack(object):
         self._pile.append(element)
 
     def depile(self):
+        """
+        depile function must not be used from this Class.
+
+        :except NotImplementedError:
+         Because this should be considered as an abstract function.
+        """
         raise NotImplementedError("You must use a real implementation")
+
+    def stack_size(self):
+        return len(self._pile)
 
     def __str__(self):
         return "pile generique"
@@ -42,7 +51,7 @@ class Lifo(Stack):
         try:
             return self._pile.pop()
         except IndexError:
-            return None
+            raise ValueError("No more element")
 
 
 class Fifo(Stack):
@@ -57,7 +66,7 @@ class Fifo(Stack):
         if len(self._pile):
             return self._pile.pop(0)
         else:
-            return None
+            raise ValueError("No more element")
 
 
 class OrderedStack(Stack):
