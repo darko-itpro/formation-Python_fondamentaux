@@ -3,10 +3,19 @@
 
 from datetime import datetime
 
+class Task2():
+    def __init__(self, title):
+        if title:
+            self.title = title
+        else:
+            raise ValueError("Title needed")
+
 class Task(object):
     def __init__(self, title, add_date=datetime.now(), due_date=None):
         super(Task, self).__init__()
 
+        if not title:
+            raise ValueError("Title should not be empty")
         self._title = title
         self._add_date = add_date
         self._due_date = due_date
