@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
+from __future__ import print_function
+from builtins import input
+
 """
 Sujet
 -----
@@ -10,8 +14,8 @@ Sujet
 
 """
 
-val1 = int(raw_input("Saisisez une valeur "))
-val2 = int(raw_input("Saisisez une autre valeur "))
+val1 = int(input("Saisisez une valeur "))
+val2 = int(input("Saisisez une autre valeur "))
 
 if val1 > val2:
     minVal = val2
@@ -21,12 +25,12 @@ else:
     minVal = None
 
 if minVal:
-    print "{} est la plus petite valeur (structure if)".format(minVal)
+    print("{} est la plus petite valeur (structure if)".format(minVal))
 else:
-    print "Vous avez saisi la même valeur"
+    print("Vous avez saisi la même valeur")
 
-val1 = int(raw_input("Saisisez une valeur "))
-val2 = int(raw_input("Saisisez une autre valeur "))
+val1 = int(input("Saisisez une valeur "))
+val2 = int(input("Saisisez une autre valeur "))
 
-print "{} est la plus petite valeur (structure ternaire)"\
-    .format(val1 if val1 < val2 else val2)
+print("{} est la plus petite valeur (structure ternaire)"\
+    .format(val1 if val1 < val2 else val2))

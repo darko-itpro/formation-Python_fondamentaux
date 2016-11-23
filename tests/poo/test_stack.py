@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from training.poo import stack
+
+from training.poo.stacks import stack
 
 
 class CreateLifo(unittest.TestCase):

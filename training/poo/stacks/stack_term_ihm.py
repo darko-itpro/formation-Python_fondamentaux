@@ -8,10 +8,10 @@ Ce module est incomplet et est destiné à être repris par les stagiaires.
 """
 
 from __future__ import print_function
+
 from builtins import input
 
-# Change import module name to your module
-import training.poo.stack as stack
+import training.poo.stacks.stack as stack
 
 
 def display_help():

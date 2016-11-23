@@ -3,12 +3,15 @@
 
 from datetime import datetime
 
-class Task2():
-    def __init__(self, title):
-        if title:
-            self.title = title
+
+class TaskManager(object):
+    def __init__(self, name, stack):
+        if name:
+            self.name = name
         else:
-            raise ValueError("Title needed")
+            raise ValueError('Title needed')
+        if
+
 
 class Task(object):
     def __init__(self, title, add_date=datetime.now(), due_date=None):

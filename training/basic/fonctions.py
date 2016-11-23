@@ -27,6 +27,7 @@ from __future__ import print_function
 
 def table(base, debut=0, fin=10, inc=1):
 
+    print("Ma table")
     print("{:2} : {}"
           .format(base, [base * i for i in range(debut, fin + 1, inc)]))
 
@@ -39,6 +40,17 @@ def compteur_mots(chaine):
 
         else:
             frequence[mot] = 1
+
+    tous_mots = frequence.keys()
+    tous_mots.sort()
+    for mot in tous_mots:
+        print ("{} : {}".format(mot, frequence[mot]))
+
+
+def compteur_mots_bis(chaine):
+    frequence = {}
+    for mot in chaine.split():
+        frequence[mot] = frequence.get(mot, 0) + 1
 
     tous_mots = frequence.keys()
     tous_mots.sort()
@@ -59,3 +71,4 @@ def empile(element):
 
 def depile():
     return pile_lifo.pop()
+

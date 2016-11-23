@@ -3,7 +3,7 @@
 
 import unittest
 
-from training.poo.tasks import Task
+from training.poo.stacks.tasks import Task
 
 
 class TestCompareDueDate(unittest.TestCase):

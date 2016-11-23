@@ -8,7 +8,7 @@ Gestion des tâches
 
 """
 
-from stack import OrderedStack
+import stack
 
 personnel = {}
 
@@ -20,7 +20,7 @@ def creer_gestionnaire_tache(nom):
     :param nom: name of the user
     :return: None
     """
-    personnel[nom] = OrderedStack()
+    personnel[nom] = stack.OrderedStack()
 
 
 def add_task(name, task):
@@ -34,7 +34,7 @@ def add_task(name, task):
     try:
         personnel.get(name).empile(task)
     except AttributeError:
-        print 'User unknown, you gave %s' % name
+        print('User unknown, you gave %s' % name)
         raise ValueError('name not found')
 
 
@@ -47,6 +47,6 @@ def get_task(nom):
     """
     next_task = personnel.get(nom).depile()
     if next_task:
-        print "{} doit realiser {}".format(nom, next_task)
+        print("{} doit realiser {}".format(nom, next_task))
     else:
-        print "Plus rien à faire !!!"
+        print("Plus rien à faire !!!")

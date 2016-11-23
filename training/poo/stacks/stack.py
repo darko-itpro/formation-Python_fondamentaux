@@ -32,8 +32,11 @@ class Stack(object):
         """
         raise NotImplementedError("You must use a real implementation")
 
-    def stack_size(self):
+    def __len__(self):
         return len(self._pile)
+
+    def __getitem__(self, item):
+        return self._pile[item]
 
     def __str__(self):
         return "pile generique"

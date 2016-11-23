@@ -10,5 +10,6 @@ from __future__ import print_function
 import sys
 
 if __name__ == '__main__':
+    print("-- Exemple usage args --")
     for arg in sys.argv:
         print(arg)

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
+from builtins import input
 
 """
     Sujet
@@ -29,7 +30,7 @@ while b > 0:
     if b % 2:
         print (b)
 
-valeur_bornee = int(raw_input("Saisissez une valeur "))
+valeur_bornee = int(input("Saisissez une valeur "))
 
 if valeur_bornee in range(1, 11):
     print ("Vous avez saisi {}".format(valeur_bornee))

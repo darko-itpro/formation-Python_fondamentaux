@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from training.poo import tasks
+
+from training.poo.stacks import tasks
 
 
 class createTask(unittest.TestCase):
