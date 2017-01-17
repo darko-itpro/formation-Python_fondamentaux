@@ -6,8 +6,12 @@ trainee, the rest of the explanations are in french.
 Ce référentiel complète la formation que je propose et est donc avant tout
 destiné à mes stagiaires. 
 
-Ces sources sont organisées pour coller au déroulement de la formation tout en
+Ces sources sont organisées pour suivre le déroulement de la formation tout en
 respectant l'organisation d'un package.
+
+**Important** : depuis janvier 2017, mes formations sont orientées Python3, ces
+exercices et illustrations sont donc compatible Python3 et une compatibilité
+Python2 n'est plus garantie.  
 
 ## Illustration du cours
 
