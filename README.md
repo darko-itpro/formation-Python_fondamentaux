@@ -29,3 +29,10 @@ sujet de l'exercice (chaque module correspond à un exercice).
 Le contenu du package *poo* est plus complexe et correspond à l'implementation
 *finale* des **exercices**. Consultez les sources pour la documentation
 de l'implémentation.
+
+## Ressources
+
+Le répertoire *assets* contient des fichiers issus de
+l'[Opendata de la SNCF](https://data.sncf.com/). Les droits appartiennent
+évidemment à la SNCF et ces fichiers sont présents ici pour disposer de documents
+ texte volumineux à parcourir et explorer.
