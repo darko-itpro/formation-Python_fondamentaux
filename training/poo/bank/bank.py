@@ -75,24 +75,24 @@ class BankAccount(object):
     """
     A Bank account should have an id as
     """
-    def __init__(self, id, balance):
+    def __init__(self, id, balance=100):
         if not id:
             raise ValueError('Bank account must have an ID')
 
-        if balance < 0:
+        if float(balance) < 0:
             raise ValueError('Balance cannot be lower than 0, currently %d'
                              % balance)
 
         self._id = id
-        self._balance = balance
+        self._balance = float(balance)
 
-    def credit(self, value):
+    def deposit(self, value):
         if value >= 0:
             self._balance += value
         else:
             raise ValueError("Negative value")
 
-    def debit(self, value):
+    def withdraw(self, value):
         if 0 < value < self._balance:
             value -= value
         elif self._balance < value:
@@ -100,8 +100,8 @@ class BankAccount(object):
         else:
             raise ValueError("Negative value")
 
-    def solde(self):
-        return "{}: {}".format(self._client, self._balance)
+    def balance(self):
+        return self._balance
 
     def __str__(self):
         return "Compte client {} - solde {}"\

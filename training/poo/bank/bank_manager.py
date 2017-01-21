@@ -65,8 +65,8 @@ def add_account(id_client, open_balance):
 
 
 def deposit(client_id, account_id, ammount):
-    clients[client_id][account_id].credit(ammount)
+    clients[client_id][account_id].deposit(ammount)
 
 
 def withdraw(client_id, account_id, ammount):
-    clients[client_id][account_id].debit(ammount)
+    clients[client_id][account_id].withdraw(ammount)
