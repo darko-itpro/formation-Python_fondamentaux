@@ -1,48 +1,28 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import print_function
-from builtins import input
-
 """
-    Sujet
-    -----
-
     Initialisez deux entiers a = 0 et b = 10
 
-    - Écrire une boucle affichant et incrémentant la valeur de a tant qu'elle
-    reste inférieure à celle de b
-    - Écrire une autre boucle décrémentant la valeur de b et affichant sa valeur
-    si elle est impaire tant que b n'est pas nul.
+    #. Affichez les entiers de 0 à 15 non compris de 3 en 3 en utilisant la boucle
+       **for** et la fonction **range()**
+    #. Affichez chaque caractère qu'une chaine en utilisant la boucle **for**
+    #. Affichez chaque élément d'une listeen utilisant la boucle **for**
 """
 
-a = 0
-b = 10
+from __future__ import print_function
 
-print ("Exo sur A")
-while a < b:
-    print (a)
-    a += 1
+if __name__ == '__main__':
 
-print ("Exo sur B")
-while b > 0:
-    b -= 1
-    if b % 2:
-        print (b)
+    for i in range(0, 15, 3):
+        print(i)
 
-valeur_bornee = int(input("Saisissez une valeur "))
+    ma_chaine = "hello world"
 
-if valeur_bornee in range(1, 11):
-    print ("Vous avez saisi {}".format(valeur_bornee))
-else:
-    print ("Valeur en dehors des bornes")
+    for char in ma_chaine:
+        print (char)
 
-ma_chaine = "hello world"
+    ma_liste = ["Python", "Java", "Swift"]
 
-for char in ma_chaine:
-    print (char)
-
-ma_liste = ["Python", "Java", "Swift"]
-
-for lang in ma_liste:
-    print (lang)
+    for lang in ma_liste:
+        print (lang)

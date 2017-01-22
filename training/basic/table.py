@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import print_function
-
 """
     Sujet
     -----
@@ -11,6 +9,8 @@ from __future__ import print_function
     *fin* et *pas* peuvent être proposés optionnellement.
 
 """
+
+from __future__ import print_function
 
 
 def table(base, start=0, end=10, step=1):

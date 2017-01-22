@@ -1,14 +1,12 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*-
 
-from __future__ import print_function
-
 """
-    Sujet
-    -----
+    Tables de multiplication
+    ^^^^^^^^^^^^^^^^^^^^^^^^
 
-    Ecrire une fonction qui affiche une table de multiplication de la valeur passée en paramètre sous la forme suivante
-    (pour la table de 4)::
+    Ecrire une fonction qui affiche une table de multiplication de la valeur
+    passée en paramètre sous la forme suivante (pour la table de 4)::
 
           4 |   8 |  12 |  16 |  20 |  24 |  28 |  32 |  36 |  40
 
@@ -28,6 +26,8 @@ from __future__ import print_function
         ---------------------------------------------------------
 
 """
+
+from __future__ import print_function
 
 
 def multiplication(value, max=10):

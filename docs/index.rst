@@ -1,16 +1,16 @@
-.. Python Training documentation master file, created by
-   sphinx-quickstart on Sat Jan 21 16:09:56 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Documentation Formation Python
+==============================
 
-Welcome to Python Training's documentation!
-===========================================
+Ce projet est un support de formation au langage Python. La documentation présente est en fait un cahier d'exercices.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-
+   students_notes
+   modules/basic
+   exercices/exercices
+   exercices/bank
 
 Indices and tables
 ==================

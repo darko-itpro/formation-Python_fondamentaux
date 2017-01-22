@@ -13,22 +13,34 @@ respectant l'organisation d'un package.
 exercices et illustrations sont donc compatible Python3 et une compatibilité
 Python2 n'est plus garantie.  
 
-## Illustration du cours
-
-Le package *competition* est l'implémentation complète des illustrations du
-cours.
-
 ## Exercices pratiques formation Python
 
 Ces sources contiennet un *corrigé* des exercices pratiques proposés en cours.
 Rappelez-vous qu'il n'y a pas qu'une manière de faire.
 
-Vous trouverez dans les commentaires de chaque module du package *basic* le
-sujet de l'exercice (chaque module correspond à un exercice).
+Historiquement certains modules contiennent le sujet.
 
-Le contenu du package *poo* est plus complexe et correspond à l'implementation
-*finale* des **exercices**. Consultez les sources pour la documentation
-de l'implémentation.
+La documentation accompagnant les sources contient les sujets d'exercice pour
+une mise en pratique pendant la formation. Pour y accéder, vous devez générer
+la documentation.
+ 
+Assurez-vous que [pip](https://pypi.python.org/pypi/pip) soit installé. Créez
+si vous le souhaitez un [virtualenv](https://virtualenv.pypa.io/en/stable/)
+dédié à la formation. Placez vous alors à la racine du projet et saisissez
+
+```
+pip install -r requirements.txt
+```
+
+Votre environnement contient alors toutes les dépendances nécessaires. Il ne
+reste plus qu'à générer la documentation. Placez-vous dans le répertoire *docs*
+ et exécutez
+ 
+```
+make html
+```
+
+La documentation est alors dispoible dans le sous répertoire *_build/html*.
 
 ## Ressources
 
