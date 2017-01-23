@@ -34,12 +34,12 @@ if __name__ == "__main__":
         pression_actuel = float(input("Quel est la pression actuelle ? "))
 
         if pression_actuel > P_LIMIT * 2:
-            print ("Arrêt de l'enceinte !!!")
+            print("Arrêt de l'enceinte !!!")
             break
         elif pression_actuel > P_LIMIT:
-            print ("Diminuez temperature")
+            print("Diminuez temperature de {:.2f}".format(pression_actuel*VOLUME - P_LIMIT * VOLUME))
         elif pression_actuel < 1:
-            print ("Augmentez temperature")
+            print("Augmentez temperature de {:.2f}".format(VOLUME - pression_actuel * VOLUME))
         else:
-            print ("Tout va bien…")
+            print("Tout va bien…")
             break

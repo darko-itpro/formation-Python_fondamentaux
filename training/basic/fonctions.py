@@ -37,5 +37,5 @@ def compteur_mots_bis(chaine):
     tous_mots = frequence.keys()
     tous_mots.sort()
     for mot in tous_mots:
-        print ("{} : {}".format(mot, frequence[mot]))
+        print("{} : {}".format(mot, frequence[mot]))
 

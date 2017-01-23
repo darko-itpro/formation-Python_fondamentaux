@@ -5,12 +5,16 @@
     Tables de multiplication
     ^^^^^^^^^^^^^^^^^^^^^^^^
 
-    Ecrire une fonction qui affiche une table de multiplication de la valeur
-    passée en paramètre sous la forme suivante (pour la table de 4)::
+    #. Ecrire une fonction qui affiche une table de multiplication de la valeur
+       passée en paramètre sous la forme suivante (pour la table de 4)::
 
           4 |   8 |  12 |  16 |  20 |  24 |  28 |  32 |  36 |  40
 
-    Ecrire une fonction qui affiche la table de Pythagore avec le format suivant::
+    #. La fonction table multiplication doit avoir un paramètre optionnel
+       **multiplicateur_max** qui est par défaut à 10.
+
+    #. Ecrire une fonction qui à l'aide de la fonction précédente affiche la
+       table de Pythagore avec le format suivant::
 
         ---------------------------------------------------------
           1 |   2 |   3 |   4 |   5 |   6 |   7 |   8 |   9 |  10
