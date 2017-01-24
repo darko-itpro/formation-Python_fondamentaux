@@ -49,3 +49,13 @@ Un voyage est associé à un voyageur. Un voyageur est géré comme un client co
 défini dans la partie :ref:`bank-object-reference-label`.
 
 #. Si vous avez défini la classe **Client**, réutilisez-la en tant qu'attribut d'un voyage.
+
+Gestion des erreurs
+-------------------
+
+Gérez la cohérence par des exceptions
+
+Qualité
+-------
+
+Ajoutez des tests.

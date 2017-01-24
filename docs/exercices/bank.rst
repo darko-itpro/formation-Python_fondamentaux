@@ -44,7 +44,30 @@ les opérations jusqu'à les exécuter.
 
 Un compte d'épargne est un compte qui est rémunéré d'un certain taux une fois par mois.
 
-#. Ajoutez cette gestion de comptes
-#. Ajoutez à la classe Client une méthode à exécuter tous les mois qui exécutera les tâches
-   mensuelles des comptes
+#. Créez ces deux types de comptes en exploitant l'héritage
+#. Ces deux comptes doivent déclarer et implanter une méthode **triggerMontlyAction**
+   qui, pour le compte à débit différé, fait la somme de toutes les opétations en
+   attente, débite le solde et supprime les actions et pour le compte épargne,
+   crédite le compte en fonction du taux.
 #. Ajoutons la contrainte qu'un client ne peut avoir que 5 comptes.
+#. Écrire une fonction qui pour une liste de comptes exécute les opérations mensuelles.
+
+
+Gestion des erreurs
+-------------------
+
+Ajouter une gestion des erreurs :
+
+#. Ajouter un compte alors que le client en a déjà 5 doit déclencher une erreur
+#. Faire un retrait entrainant un solde débiteur alors que le compte ne doit pas l'être doit
+   déclencher une erreur
+#. Créditer ou débiter une somme négative doit déclencher une erreur.
+
+Observez le comportement du code à l'aide du script training.poo.bank.bank_term_ihm après
+l'avoir adapté à votre gestion bancaire.
+
+Qualité
+-------
+
+#. Ajoutez de la documentation à vos classes
+#. Écrivez quelques classes de test.
