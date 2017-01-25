@@ -73,7 +73,7 @@ class Client(Personne):
 
 class BankAccount(object):
     """
-    A Bank account should have an id as
+    A Bank account
     """
     def __init__(self, id, balance=100):
         if not id:
@@ -106,6 +106,23 @@ class BankAccount(object):
     def __str__(self):
         return "Compte client {} - solde {}"\
             .format(self._id, self._balance)
+
+
+class DeferedAccount(BankAccount):
+    """
+        For a deffered account, withdraws does not change the balance. A special
+        method is added to trigger the actions
+    """
+    def __init__(self, id, balance=100):
+        BankAccount.__init__(self, id, balance)
+        self._operations = []
+
+    def withdraw(self, value):
+        self._operations.append(value)
+
+    def triggerMonthlyOperation(self):
+        while self._operations:
+            self._balance -= self._operations.pop()
 
 
 class DebtAccount(BankAccount):
