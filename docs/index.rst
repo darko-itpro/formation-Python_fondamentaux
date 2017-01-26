@@ -11,6 +11,7 @@ Ce projet est un support de formation au langage Python. La documentation prése
    modules/basic
    exercices/bank
    exercices/travel
+   exercices/regex
 
 Indices and tables
 ==================
