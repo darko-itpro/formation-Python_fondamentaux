@@ -15,11 +15,12 @@
     * Si la pression est inférieur à 1 : demander d'augmenter la température
     * Sinon, déclarer que tout va bien.
 
-    #. Écrivez le script
+    #. Écrivez le script et testez le avec différentes valeurs de pression.
     #. Améliorez le script en indiquant de quelle valeur la température doit être modifiée. Rappel de thermodynamique :
        PV = nRT simplifié ici par **PV = T**.
-    #. Incluez ce script dans une boucle qui répète la question tant que soit la situation soit rétablie soit l'enceinte
-       arrêtée.
+    #. Incluez ce script dans une boucle qui demande à l'utilisateur de saisir la pression tant que la situation n'est
+       pas rétablie ou que l'enceinte n'est pas arrêtée.
+    #. Modifiez l'exercice en demandant la temperature
 
 """
 
@@ -32,6 +33,7 @@ if __name__ == "__main__":
 
     while True:
         pression_actuel = float(input("Quel est la pression actuelle ? "))
+        # pression_actuel = float(input("Quel est la temperature ? ")) / VOLUME
 
         if pression_actuel > P_LIMIT * 2:
             print("Arrêt de l'enceinte !!!")
