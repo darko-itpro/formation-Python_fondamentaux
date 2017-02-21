@@ -1,7 +1,11 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*-
 
+# Modifiez l'import pour référencer votre module de gestion bancaire sur le modèle
+# from packages import bank_module as bank
+# Utiliser l'alias évite de mettre à jour tous les namespaces.
 from training.poo.bank import bank
+
 
 def display_help():
     print("Account manager ready")

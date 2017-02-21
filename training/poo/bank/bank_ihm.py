@@ -13,7 +13,7 @@ class UserInfo(Frame):
         self.last_name_value = StringVar()
         self.first_name_value = StringVar()
 
-        Entry(self, textvariable=self.last_name_value, width=30)\
+        Entry(self, textvariable=self.last_name_value, width=30) \
             .grid(column=1, row=0)
         Entry(self, textvariable=self.first_name_value, width=30) \
             .grid(column=1, row=1)
@@ -32,13 +32,14 @@ class UserInfo(Frame):
 
         return first_name, last_name
 
+
 root = Tk()
 root.title('Create account')
 
 user_frame = UserInfo(root)
 user_frame.pack()
 
-import bank_manager
+from training.poo.bank import bank_manager
 
 
 def create_account():
