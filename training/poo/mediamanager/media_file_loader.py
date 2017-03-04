@@ -32,6 +32,16 @@ def get_series_value_from_file(filename):
                 series_file_name[series_match.end():].replace('_', ' '),
                 series_ext]
 
+
+def open_file(filepath):
+    if os.path.exists(filepath):
+        media_file = open(filepath, 'r')
+        media_data = [get_series_value_from_file(media[:-1]) for media in media_file]
+        media_file.close()
+
+        return media_data
+
+
 if __name__ == '__main__':
 
     import argparse
@@ -42,9 +52,8 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    if args.file and os.path.exists(args.file):
-        media_file = open(args.file, 'r')
-        for media in media_file:
-            print(get_series_value_from_file(media[:-1]))
+    if args.file:
+        for media in open_file(args.file):
+            print(media)
     else:
         print(get_series_value_from_file(series_full_name))

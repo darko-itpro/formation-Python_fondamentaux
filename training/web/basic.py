@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Exemple d'usage de Battle avec quelques cas.
+Exemple d'usage de Bottle avec quelques cas.
 
 Commectez-vous en :8080/ ou :8080/tpl/
 

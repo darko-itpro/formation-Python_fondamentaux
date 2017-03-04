@@ -10,7 +10,6 @@ class TaskManager(object):
             self.name = name
         else:
             raise ValueError('Title needed')
-        if
 
 
 class Task(object):

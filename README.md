@@ -56,7 +56,7 @@ des documents type *Jupyter Notebooks* générés à l'aide de
 Placez-vous dans le répertoire *notebooks* et exécutez la commande
 
 ```
-jupyter notebook 01_bases.ipynb
+jupyter notebook 00_presentation.ipynb
 ```
 
 Vous pouvez maintenant travailler avec les *notebooks*. Ceux-ci sont proposés

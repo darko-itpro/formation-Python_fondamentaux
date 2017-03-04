@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Demonstrate how to basically access to the command line arguments.
+Démonstration de l'accès basique aux arguments de la ligne de commande.
 """
 
 from __future__ import print_function

@@ -15,8 +15,7 @@ class BusinessError(Exception):
     Exception destinée à identifier des erreurs métier.
     """
     def __init__(self, value, cause=None):
-        super(BusinessError, self)\
-            .__init__(value + u', caused by ' + repr(cause))
+        super().__init__(value + u', caused by ' + repr(cause))
         self.cause = cause
 
     def __str__(self):

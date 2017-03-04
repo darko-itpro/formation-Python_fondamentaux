@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-This module demonstrate the getopt usage.
+Démonstration de l'utilisation de getopt
 
 Usage:
     basic_getopt options
