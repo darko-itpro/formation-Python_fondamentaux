@@ -17,6 +17,18 @@ class TvShow:
         else:
             raise ValueError('Season exists')
 
+    def add_episode(self, episode, seaons_number):
+        if seaons_number not in self:
+            self.add_season(Season(seaons_number))
+
+        for element in self._seasons:
+            if seaons_number == element.number:
+                element.add(episode)
+
+    def seasons(self):
+        """return a copy of this object's seasons list"""
+        return list(self._seasons)
+
     def _sort(self):
         """
         Tri les saisons par ordre *naturel* (numéro de saison).
@@ -31,8 +43,13 @@ class TvShow:
         return len(self._seasons)
 
     def __contains__(self, item):
+        if hasattr(item, "number"):
+            cmp_value = item.number
+        else:
+            cmp_value = item
+
         for element in self._seasons:
-            if element.number == item.number:
+            if element.number == cmp_value:
                 return True
 
         return False
