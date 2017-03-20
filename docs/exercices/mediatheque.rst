@@ -11,14 +11,24 @@ contient une collection d'épisodes (`episode`) caractérisés par leur numéro 
 Modélisation objet
 ------------------
 
-Dans un module dédié, écrivez les classes représentant ces entités. Les objets doivent permettre de créer des séries,
-leur ajouter des saisons, ajouter des épisodes aux saisons et consulter l'ensemble des informations.
+Dans un module dédié, écrivez la classe **Episode** permétant de gérer un épisode.
+
+Ajoutez la classe **Season** permétant de gérer une saison. Le numéro de la saison est défini par un attribut
+**number**. La classe doit avoir une méthode permétant d'ajouter un épisode et une méthode **episodes()** retournant la
+liste des épisodes de la saison.
+
+Ajoutez la classe **TvShow** qui possède un attribut **name**. La classe doit avoir une méthode
+**add_episode(episode, season_number)** qui permet d'ajouter un épisode pour une saison et une méthode **seasons()** qui
+retourne la liste des saisons.
 
 Exceptions : contrôle d'intégrité
 ---------------------------------
 
 Améliorez votre modèle qui doit lancer une exception si vous essayez d'ajouter une saiaons ou un épisode existant.
 L'accès à un élément innexistant doit également retourner une exception.
+
+Pour tester le mécanisme des esceptions, vous disposez du module **training.poo.mediamanager.mediacli**. Recopiez ce
+module dans votre projet et adaptez-le.  
 
 Regex : chargement des données
 ------------------------------

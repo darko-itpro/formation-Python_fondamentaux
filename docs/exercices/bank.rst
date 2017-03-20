@@ -8,9 +8,9 @@ Fonctions
 
 On souhaite gérer la notion de compte bancaire dans un module. Créez un module contenant 3 fonctions:
 
-* create : parmet de créer un compte bancaire avec un solde initial (100 par défaut) et un identifiant
-* withdraw : permet de faire un retrait de la somme passée en paramètre
-* deposit : permet de faire un dépôt de la somme passée en paramètre
+* **create(id, initial_value) -> None** : parmet de créer un compte bancaire avec un solde initial (100 par défaut) et un identifiant
+* **withdraw(value) -> None** : permet de faire un retrait de la somme passée en paramètre
+* **deposit(value) -> None** : permet de faire un dépôt de la somme passée en paramètre
 
 .. _bank-object-reference-label:
 
@@ -23,12 +23,12 @@ On souhaite gérer un compte bancaire sous forme d'objets. Créez une classe per
 #. Écrivez les méthodes **deposit** et **withdraw** qui acceptent un paramètre **value**.
 #. Testez la classe via le shell interactif.
 
+Relations entre classes
+-----------------------
+
 La notion de compte devra être rattachée à un client. Un client est caractérisé par un nom, prénom et un identifiant.
 
 #. Écrire une classe **Person** qui a comme attribut un identifiant, un nom et un prénom.
-
-Relations entre classes
------------------------
 
 Un client peut posséder plusieurs comptes.
 

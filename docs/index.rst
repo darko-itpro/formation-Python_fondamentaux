@@ -10,8 +10,8 @@ Ce projet est un support de formation au langage Python. La documentation prése
    students_notes
    modules/basic
    exercices/bank
+   exercices/mediatheque
    exercices/travel
-   exercices/mediatheque.rst
    exercices/regex
 
 Indices and tables
