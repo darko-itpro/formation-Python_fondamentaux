@@ -5,7 +5,7 @@
 Module destiné à fournir une interface de type terminal.
 """
 
-from training.poo.mediamanager import mediamodel as mediamodel
+from training.poo.mediamanager import simplemodel as mediamodel
 
 
 def saisons_list():
@@ -55,4 +55,6 @@ if __name__ == "__main__":
             actions[choice]()
         elif choice == "q":
             break
+        else:
+            print("Choix non valide")
     print("Bye")

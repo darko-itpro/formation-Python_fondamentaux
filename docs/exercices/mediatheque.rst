@@ -24,11 +24,11 @@ retourne la liste des saisons.
 Exceptions : contrôle d'intégrité
 ---------------------------------
 
-Améliorez votre modèle qui doit lancer une exception si vous essayez d'ajouter une saiaons ou un épisode existant.
+Améliorez votre modèle qui doit lancer une exception si vous essayez d'ajouter une saison ou un épisode existant.
 L'accès à un élément innexistant doit également retourner une exception.
 
 Pour tester le mécanisme des esceptions, vous disposez du module **training.poo.mediamanager.mediacli**. Recopiez ce
-module dans votre projet et adaptez-le.  
+module dans votre projet et adaptez-le.
 
 Regex : chargement des données
 ------------------------------
