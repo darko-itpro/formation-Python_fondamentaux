@@ -4,26 +4,28 @@
 
 class TvShow:
     """
-    Définit une série et permet de gérer les saisons associées ainsi que les informations générales de la série.
+    Représente une série et permet de gérer les saisons associées ainsi que les informations générales de la série.
     """
     def __init__(self, name):
         self.name = name
         self._seasons = []
 
-    def add_season(self, season):
+    def _add_season(self, season):
         if season not in self:
             self._seasons.append(season)
             self._sort()
         else:
             raise ValueError('Season exists')
 
-    def add_episode(self, episode, seaons_number):
-        if seaons_number not in self:
-            self.add_season(Season(seaons_number))
-
-        for element in self._seasons:
-            if seaons_number == element.number:
-                element.add(episode)
+    def add_episode(self, episode, season_number):
+        for season in self._seasons:
+            if season.number == season_number:
+                season.add(episode)
+                break
+        else:
+            season = Season(season_number)
+            season.add(episode)
+            self._add_season(season)
 
     def seasons(self):
         """return a copy of this object's seasons list"""
@@ -70,6 +72,8 @@ class Season:
         if episode not in self:
             self._episodes.append(episode)
             self.sort()
+        else:
+            raise ValueError("Episode exists")
 
     def episode(self, number):
         """
@@ -94,6 +98,9 @@ class Season:
 
     def sort(self):
         self._episodes.sort(key=lambda x: x.number)
+
+    def __lt__(self, other):
+        return self.number < other.number
 
     def __len__(self):
         return len(self._episodes)
