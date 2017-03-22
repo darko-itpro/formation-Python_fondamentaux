@@ -36,17 +36,3 @@ class MediaDao:
         cur = self._connect.cursor()
         cur.execute(SQL_ADD_EPISODE, (ep_number, season_number, name))
         self._connect.commit()
-
-    def get_episodes(self, season_number=None):
-        """
-        Retourne une liste d'épisodes sous forme de tableaux de données contennat le nom, numéro
-        de saison et numéro d'épisode. ou nom et numéro d'épisode si la requête ne concerne qu'une
-        saison
-        :return: liste d'enregistrements
-        """
-        cur = self._connect.cursor()
-        if season_number:
-            cur.execute(SQL_GET_EPISODES_FOR_SEASON, str(season_number))
-        else:
-            cur.execute(SQL_GET_ALL_EPISODES)
-        return cur.fetchall()

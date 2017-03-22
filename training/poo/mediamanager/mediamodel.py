@@ -4,13 +4,21 @@
 
 class TvShow:
     """
-    Représente une série et permet de gérer les saisons associées ainsi que les informations générales de la série.
+    Représente une série et permet de gérer les saisons associées ainsi que les informations
+    générales de la série.
     """
     def __init__(self, name):
         self.name = name
         self._seasons = []
 
     def _add_season(self, season):
+        """
+        On ne gère pas de saison directement, cette méthode est donc privée. Il est préférable de
+        passer par cette méthode qui s'assure le tri.
+
+        :param season:
+        :return: None
+        """
         if season not in self:
             self._seasons.append(season)
             self._sort()
@@ -35,8 +43,8 @@ class TvShow:
         """
         Tri les saisons par ordre *naturel* (numéro de saison).
 
-        La méthode est privée car la collection en elle même est privée et de ce fait, le tri de la liste appatient à la
-        classe.
+        La méthode est privée car la collection en elle même est privée et de ce fait, le tri de la
+        liste appatient à l'objet.
         :return: None
         """
         self._seasons.sort(key=lambda x: x.number)
@@ -45,6 +53,13 @@ class TvShow:
         return len(self._seasons)
 
     def __contains__(self, item):
+        """
+        Un TvShow peut être considéré comme un conteneur de saisons. Cette méthode permet donc
+        d'interroger un TvShow à la manière `saison in show`
+
+        :param item:
+        :return:
+        """
         if hasattr(item, "number"):
             cmp_value = item.number
         else:
@@ -128,7 +143,4 @@ class Episode:
         return "ep.{} - {}".format(self.number, self.title)
 
 if __name__ == '__main__':
-    ep = Episode('02', 'Something aweful')
-    se = Season(2)
-    se.add(ep)
-    se.episode(3)
+    pass
