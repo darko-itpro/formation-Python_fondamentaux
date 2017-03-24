@@ -15,6 +15,11 @@ from __future__ import print_function
 
 
 def compteur_mots(chaine):
+    """
+    Compte les mots d'une chaine passée en paramètre et les affiche. Implémentation avec test.
+    :param chaine: La chaine pour laquelle il faut compter les mots
+    :return: None
+    """
     frequence = {}
     for mot in chaine.split():
         if mot in frequence:
@@ -30,6 +35,11 @@ def compteur_mots(chaine):
 
 
 def compteur_mots_bis(chaine):
+    """
+    Compte les mots d'une chaine passée en paramètre et les affiche. Implémentation sans test.
+    :param chaine: La chaine pour laquelle il faut compter les mots
+    :return: None
+    """
     frequence = {}
     for mot in chaine.split():
         frequence[mot] = frequence.get(mot, 0) + 1

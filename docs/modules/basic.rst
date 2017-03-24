@@ -1,7 +1,8 @@
 Les bases
 =========
 
-Les sujets suivants sont exraits des modules contenant les exercices de base.
+Les sujets suivants sont exraits des modules contenant les exercices de base. Ces exercices sont
+également proposés dans les notebooks. Préférez les Notebooks pour les réaliser.
 
 Les variables
 -------------
@@ -35,3 +36,6 @@ Les fonctions
 .. automodule:: training.basic.multiplication
 
 .. automodule:: training.basic.fonctions
+
+.. automodule:: training.poo.mediamanager.mediamodel
+    :members:
