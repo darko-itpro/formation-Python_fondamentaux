@@ -7,7 +7,7 @@ module dédié. Les épisodes sont gérés sous forme d'une collection dans une 
 
 """
 
-from tkinter import Tk, Button, LEFT, RIGHT
+from tkinter import Tk, Button, Frame, LEFT, RIGHT, BOTTOM
 
 from training.poo.mediamanager import mediamodel
 from training.poo.mediamanager import media_widgets
@@ -36,11 +36,14 @@ def delete_episode(ep_index):
 
 fenetre.title('Episode Manager')
 
-form_frame = media_widgets.EpisodeEntry(fenetre, add_episode)
+buttons_frame = Frame(fenetre)
+Button(buttons_frame, text='Quit', command=fenetre.quit).pack(side=RIGHT)
+buttons_frame.pack(side=BOTTOM)
+
+form_frame = media_widgets.EpisodeEntry(fenetre, add_episode, "Titre", "N°")
 episodes_frame = media_widgets.CollectionFrame(fenetre, select_callback=select_episode,
                                                delete_callback=delete_episode)
 episodes_frame.pack(side=LEFT)
 form_frame.pack()
-Button(fenetre, text='Quit', command=fenetre.quit).pack(side=RIGHT)
 
 fenetre.mainloop()

@@ -10,15 +10,15 @@ class EpisodeEntry(Frame):
     """
     Frame permétant de grouper le éléments du formulaire de saisie d'un épisode.
     """
-    def __init__(self, master=None, action_callback=None):
+    def __init__(self, master=None, action_callback=None, label_1_text=None, label_2_text=None):
         Frame.__init__(self, master)
 
         self._callback = action_callback
 
         form_frame = Frame(self)
 
-        Label(form_frame, text='Titre').grid(column=0, row=0)
-        Label(form_frame, text='Numéro').grid(column=0, row=1)
+        Label(form_frame, text=label_1_text if label_1_text else 'Label 1').grid(column=0, row=0)
+        Label(form_frame, text=label_2_text if label_2_text else 'Label 2').grid(column=0, row=1)
 
         self.title_value = StringVar()
         self.number_value = IntVar()

@@ -57,9 +57,13 @@ Les fichiers suivants correspondent au pattern reconnu par le médiacenter Plex 
     Breaking_Bad-s04e08-Hermanos.avi
     Supergirl-s01e01-Pilot.mkv
 
-#. Ecrivez un script qui permet d'extraire les noms de séries, numéro de saison,
-   numéro d'épisode dans la saison, titre de l'épisode et type de fichier
-   (extension).
+#. Ecrivez un script qui permet d'extraire le numéro de la saison et le numéro de l'épisode d'une
+   séquence de ce type.
+#. Améliorez ce code en extrayant les noms de séries, numéro de saison, numéro d'épisode dans la
+   saison, titre de l'épisode et type de fichier (extension).
+#. Placez ce code dans une fonction qui prend en paramètre une chaine de caractères qui doit
+   correspondre à une des lignes précédentes et retourne une liste des éléments (titre série, numéro
+   saison, numéro épisode, titre épisode et extension de fichier).
 
 Base de données : Stockage des données
 --------------------------------------
@@ -82,12 +86,13 @@ stockées en base.
 TkInter : Interface homme-machine
 ---------------------------------
 
-L'exercice consiste à créer une interface permétant d'ajouter au système un épisode (titre et
+L'exercice consiste à créer une interface qui permet d'ajouter au système un épisode (titre et
 numéro), d'afficher les détails d'un épisode et de supprimer un épisode.
 
 #. Créez un formulaire permétant la saisie d'une chaine de caractères (le titre) et d'un nombre (le
-   numéro de l'épisode). Les épisodes sont gérés dans une liste.
-#. À chaque ajout, afficher le contenu de la liste.
+   numéro de l'épisode).
+#. Assurez-vous du bon fonctionnement en affichant la saisie dans le terminal lors de la valdation.
+#. Les épisodes sont gérés dans une liste. À chaque ajout, afficher le contenu de la liste.
 #. Assurez-vous qu'à chaque ajout, la liste soit ordonnée (par le numéro de l'épisode).
 #. Ajoutez une ListBox qui contiendra la liste des épisodes.
 #. Lorsque vous ajoutez un épisode, son titre doit apparaitre dans la ListBox.
