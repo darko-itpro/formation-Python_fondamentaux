@@ -17,13 +17,22 @@ Python2 n'est plus garantie.
 
 Ces sources contiennet un *corrigé* des exercices pratiques proposés en cours.
 Rappelez-vous que bien que la devise de Python soit *Il y a une manière évidente
-de faire*, il n'y a pas qu'une manière de faire.
+de faire*, il s'agit donc d'une proposition de *solution* utilisant au mieux ce qui a été présenté
+en formation. Les répertoires d'intérêt sont :
+* `/training/basic` contient des modules correspondants au à la présentation des *bases* de Python et 
+  qui sont globalement les exercices proposés dans les notebooks.
+* `/training/poo/mediamanager` contient des modules répondant aux différents exercices de création et
+  gestion de médiathèque.
+* `/training/cases` est un package contennat des modules illustrant outils présentés en formation
+* `/training/sncf_db` propose principalement le module `countdata` qui est la résolution de la
+  Regex.
 
 Historiquement certains modules contiennent le sujet.
 
-La documentation accompagnant les sources contient les sujets d'exercice pour
-une mise en pratique pendant la formation. Pour y accéder, vous devez la
-générer.
+La documentation accompagnant les sources dans le répertoire `/docs` contient les sujets d'exercice.
+ Le plus simple pour y accéder pendant la formation est de générer la documentation.
+ 
+Le répertoire `/draft` est un répertoire contenant des squelettes de modules à compléter.
 
 ## Mise en place de l'environnement
 
@@ -31,7 +40,8 @@ Il faut donc commencer par récupérer les sources en local.
 
 Assurez-vous que [pip](https://pypi.python.org/pypi/pip) soit installé. Créez
 si vous le souhaitez un [virtualenv](https://virtualenv.pypa.io/en/stable/)
-dédié à la formation. Placez vous alors à la racine du projet et saisissez
+dédié à la formation. Si vous utilisez un IDE tel que PyCharm, vous pouvez l'utiliser pour créer
+ce virtualenv. Placez vous alors à la racine du projet et saisissez
 
 ```
 pip install -r requirements.txt
