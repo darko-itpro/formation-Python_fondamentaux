@@ -17,15 +17,18 @@ Python2 n'est plus garantie.
 
 Ces sources contiennet un *corrigé* des exercices pratiques proposés en cours.
 Rappelez-vous que bien que la devise de Python soit *Il y a une manière évidente
-de faire*, il s'agit donc d'une proposition de *solution* utilisant au mieux ce qui a été présenté
-en formation. Les répertoires d'intérêt sont :
-* `/training/basic` contient des modules correspondants au à la présentation des *bases* de Python et 
-  qui sont globalement les exercices proposés dans les notebooks.
-* `/training/poo/mediamanager` contient des modules répondant aux différents exercices de création et
-  gestion de médiathèque.
-* `/training/cases` est un package contennat des modules illustrant outils présentés en formation
-* `/training/sncf_db` propose principalement le module `countdata` qui est la résolution de la
-  Regex.
+de faire*, il s'agit donc d'une proposition de *solution* dont l'objectif principal est d'illustrer
+ce qui a été présenté en formation. Les répertoires d'intérêt sont :
+* `/training/basic` contient des modules correspondants à la présentation des *bases* de Python et 
+  qui sont globalement proposition de résolution des exercices des notebooks.
+* `/training/projects` propose plusieurs projets regroupés en packages.
+    * `/bank` propose des modules sur le thème de la gestion de comptes bancaires.
+    * `/mediamanager` contient des modules répondant aux différents exercices de création et
+      gestion de médiathèque.
+    * `/sncf` contient le module `best_day` qui est une solution de l'extraction de donnée à partir
+      d'un fichier.
+* `/training/cases` est un package contennat des modules illustrant des outils présentés durant la
+  formation
 
 Historiquement certains modules contiennent le sujet.
 

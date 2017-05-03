@@ -32,17 +32,20 @@ def main():
     :return: None
     """
     try:
-        opts, args = getopt.getopt(sys.argv[1:], 'ho:', ['help', 'output='])
+        opts, args = getopt.getopt(sys.argv[1:], 'hvo:', ['help', 'verbose', 'output='])
     except getopt.GetoptError as err:
         print(str(err))
         usage()
         sys.exit(2)
+
+    print(type(opts))
 
     for o, a in opts:
         if o in ('-h', '--help'):
             usage()
             sys.exit()
         elif o in ('-o', '--output'):
+            output_filename = a
             print('Output is %s' % a)
 
     print(args)

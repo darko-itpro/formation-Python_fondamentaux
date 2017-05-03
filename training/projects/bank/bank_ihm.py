@@ -39,7 +39,7 @@ root.title('Create account')
 user_frame = UserInfo(root)
 user_frame.pack()
 
-from training.poo.bank import bank_manager
+from training.projects.bank import bank_manager
 
 
 def create_account():

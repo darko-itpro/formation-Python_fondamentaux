@@ -5,7 +5,7 @@
 Module destiné à fournir une interface de type terminal.
 """
 
-from training.poo.mediamanager import mediamodel as mediamodel
+from training.projects.mediamanager import mediamodel as mediamodel
 
 
 def saisons_list():

@@ -3,7 +3,7 @@
 
 import unittest
 
-from training.poo.stacks import tasks
+from training.projects.stacks import tasks
 
 
 class createTask(unittest.TestCase):

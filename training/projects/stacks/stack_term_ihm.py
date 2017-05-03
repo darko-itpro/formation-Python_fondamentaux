@@ -11,7 +11,7 @@ from __future__ import print_function
 
 from builtins import input
 
-import training.poo.stacks.stack as stack
+import training.projects.stacks.stack as stack
 
 
 def display_help():

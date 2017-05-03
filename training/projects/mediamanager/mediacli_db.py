@@ -1,7 +1,7 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*-
 
-from training.poo.mediamanager import media_db as media_db
+from training.projects.mediamanager import media_db as media_db
 
 
 def episodes_list():

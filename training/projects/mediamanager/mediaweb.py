@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from bottle import run, route, template
-from training.poo.mediamanager import media_file_loader
+from training.projects.mediamanager import media_file_loader
 
 
 @route('/series/')

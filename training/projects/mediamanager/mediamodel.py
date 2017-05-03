@@ -121,11 +121,29 @@ class Season:
         return len(self._episodes)
 
     def __contains__(self, item):
+        """
+        Fonction *avancée* permétant d'interroger un objet Season pour savoir il possède un objet de
+        type Episode avec l'instruction *episode in season*
+        
+        :param item: un objet de type Episode ou du moins qui contient un attribut *number* 
+        :return: vrai si un élément de la collection contient un attribut *number* égal à l'attribut
+        *number* de l'objet.
+        """
         for element in self._episodes:
             if element.number == item.number:
                 return True
 
         return False
+
+    def __iter__(self):
+        """
+        Fonction *avancée*, permet de retourner un itérateur sous la forme d'un générateur qui sera
+        utilisé pour la fonction for et permet de d'itérer sur les épisodes.
+
+        :return: un générateur sur les épisodes
+        """
+        for episode in self._episodes:
+            yield episode
 
     def __str__(self):
         return "Season {} <{}>".format(self.number, len(self._episodes))

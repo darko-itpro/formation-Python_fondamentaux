@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from training.poo.bank import bank
+from training.projects.bank import bank
 
 
 class TestCreateAccount(unittest.TestCase):

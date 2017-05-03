@@ -3,7 +3,7 @@
 
 import unittest
 
-from training.poo.stacks import stack
+from training.projects.stacks import stack
 
 
 class CreateLifo(unittest.TestCase):

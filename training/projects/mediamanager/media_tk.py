@@ -9,8 +9,8 @@ module dédié. Les épisodes sont gérés sous forme d'une collection dans une 
 
 from tkinter import Tk, Button, Frame, LEFT, RIGHT, BOTTOM
 
-from training.poo.mediamanager import mediamodel
-from training.poo.mediamanager import media_widgets
+from training.projects.mediamanager import mediamodel
+from training.projects.mediamanager import media_widgets
 
 fenetre = Tk()
 

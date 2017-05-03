@@ -3,7 +3,7 @@
 
 from Tkinter import *
 
-from training.poo.stacks import tasks
+from training.projects.stacks import tasks
 
 
 class TaskFrame(Frame):
