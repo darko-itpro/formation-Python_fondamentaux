@@ -1,14 +1,16 @@
 Gestion de médiathèque
 ======================
 
-Les exércices suivants ont pour thème la gestion de médiathèque et plus particulièrement, la
-gestion d'une bibliothèque de séries télévisées. Ces exercices proposent un fil directeur pour
-aborder les différents aspects proposés en formation.
+Présentation du thème
+---------------------
+Les exércices suivants ont pour thème la gestion de médiathèque étendu à la
+gestion de médiacenter. Ces exercices proposent un fil directeur pour aborder les
+différents aspects proposés en formation.
 
 Le package `draft` contient un package `media` qui vous propose un ensemble de modules que vous
 pouvez prendre comme le squelette de composants.
 
-Le package `training.poo.mediamanager` propose une implémentation complète de cet exercice.
+Le package `training.projects.mediamanager` propose une implémentation complète de cet exercice.
 
 Une série est modélisée par le concept de *série* (`tvshow`)  ayant comme caractéristiques le nom
 de la série. Chaque série contient des *saisons* (`seasons`) dont la caractéristiques est le numéro
