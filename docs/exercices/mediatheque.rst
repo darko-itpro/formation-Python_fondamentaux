@@ -3,9 +3,10 @@ Gestion de médiathèque
 
 Présentation du thème
 ---------------------
-Les exércices suivants ont pour thème la gestion de médiathèque étendu à la
-gestion de médiacenter. Ces exercices proposent un fil directeur pour aborder les
-différents aspects proposés en formation.
+
+La gestion d'une médiathèque est le fil directeur de ces exercices qui
+permettent de manipuler plusieurs concepts. La notion de médiathèque pourra être
+étendue à la gestion de médiacenter, voir de service de vidéo à la demande.
 
 Le package `draft` contient un package `media` qui vous propose un ensemble de modules que vous
 pouvez prendre comme le squelette de composants.
@@ -13,22 +14,21 @@ pouvez prendre comme le squelette de composants.
 Le package `training.projects.mediamanager` propose une implémentation complète de cet exercice.
 
 Une série est modélisée par le concept de *série* (`tvshow`)  ayant comme caractéristiques le nom
-de la série. Chaque série contient des *saisons* (`seasons`) dont la caractéristiques est le numéro
-de saison (int). Enfin, chaque saison contient une collection d'épisodes (`episode`) caractérisés
-par leur numéro dans la saison et leur titre.
+de la série. Chaque série est composée de *saisons* (`seasons`) dont la caractéristiques est le numéro
+de saison (int). Enfin, chaque saison est composée d'épisodes (`episode`) caractérisés
+par leur numéro d'ordre dans la saison et un titre.
 
 Modélisation objet
 ------------------
 
-Dans un module dédié, écrivez la classe **Episode** permétant de gérer un épisode.
+Nous allons avoir besoin de manipuler les notions de série et d'épisodes. Le
+modèle sera discuté en formation. Il devra comporter :
 
-Ajoutez la classe **Season** permétant de gérer une saison. Le numéro de la saison est défini par
-un attribut **number**. La classe doit avoir une méthode permétant d'ajouter un épisode et une
-méthode **episodes()** retournant la liste des épisodes de la saison.
+Une classe `Episode` permétant de gérer un épisode dont le constructeur attends
+le titre, numéro d'épisode et numéro de saison.
 
-Ajoutez la classe **TvShow** qui possède un attribut **name**. La classe doit avoir une méthode
-**add_episode(episode, season_number)** qui permet d'ajouter un épisode pour une saison et une
-méthode **seasons()** qui retourne la liste des saisons.
+Une classe `TvShow` qui possède un attribut `name`. La classe doit avoir une méthode
+`add_episode(episode, season_number)` qui permet d'ajouter un épisode pour une saison.
 
 Pour la suite, le module `mediamodel` propose une structure de base de ce modèle objet.
 
@@ -42,8 +42,26 @@ situation.
 Ajoutez la levée d'exceptions lorsque cela est pertinent.
 
 Pour tester le mécanisme des esceptions, vous disposez du module
-**training.poo.mediamanager.mediacli**. Recopiez ce module dans votre projet et ajoutez la capture
+`training.poo.mediamanager.mediacli`. Recopiez ce module dans votre projet et ajoutez la capture
 des exceptions afin que l'utilisateur ne voit pas de stack trace.
+
+Pour utiliser ce module, vous devez compléter votre modèle en ajoutant à la
+class TvShow une méthode `seasons() qui retourne la liste des *saisons*.
+La notion de *saison* de cette liste sera disutée en formation.
+
+Étendre le modèle
+-----------------
+
+Cette partie propose des évolutions du modèle pour explorer d'autres
+fonctionalités du langage.
+
+Nous souhaitons également gérer les *films*. Nous allons créer une classe `Movie`.
+Nous discuterons des attributs et de la pertinence de l'héritage.
+
+Nous souhaitons suivre les médias visionnés. Il faut ajouter une gestin de vu/non vu.
+
+Cette gestion des vu/non vu doit être multi-utilisateur, il faut donc ajouter
+la gestion des utilisateurs.
 
 Regex : chargement des données
 ------------------------------

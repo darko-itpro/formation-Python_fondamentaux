@@ -74,20 +74,20 @@ class BankAccount(object):
     """
     A Bank account
     """
-    def __init__(self, id, balance=100):
-        if not id:
+    def __init__(self, nid, balance=100):
+        if not nid:
             raise ValueError('Bank account must have an ID')
 
         if float(balance) < 0:
             raise ValueError('Balance cannot be lower than 0, currently %d'
                              % balance)
 
-        self._id = id
+        self._id = nid
         self._balance = float(balance)
 
     def deposit(self, value):
-        if value >= 0:
-            self._balance += value
+        if float(value) >= 0:
+            self._balance += float(value)
         else:
             raise ValueError("Negative value")
 
@@ -99,12 +99,23 @@ class BankAccount(object):
         else:
             raise ValueError("Negative value")
 
-    def balance(self):
+    def id(self):
+        return self._id
+
+    def _get_balance(self):
         return self._balance
+
+    balance = property(_get_balance)
 
     def __str__(self):
         return "Compte client {} - solde {}"\
             .format(self._id, self._balance)
+
+    def __repr__(self):
+        return "BankAccount.{}".format(self._id)
+
+    def __lt__(self, other):
+        return self._id < other.id()
 
 
 class DeferedAccount(BankAccount):
@@ -112,8 +123,8 @@ class DeferedAccount(BankAccount):
         For a deffered account, withdraws does not change the balance. A special
         method is added to trigger the actions
     """
-    def __init__(self, id, balance=100):
-        BankAccount.__init__(self, id, balance)
+    def __init__(self, nid, balance=100):
+        BankAccount.__init__(self, nid, balance)
         self._operations = []
 
     def withdraw(self, value):

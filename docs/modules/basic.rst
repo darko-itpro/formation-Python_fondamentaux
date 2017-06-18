@@ -36,6 +36,3 @@ Les fonctions
 .. automodule:: training.basic.multiplication
 
 .. automodule:: training.basic.fonctions
-
-.. automodule:: training.poo.mediamanager.mediamodel
-    :members:
