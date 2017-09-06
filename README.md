@@ -81,3 +81,6 @@ Le répertoire *assets* contient des fichiers issus de
 l'[Opendata de la SNCF](https://data.sncf.com/). Les droits appartiennent
 évidemment à la SNCF et ces fichiers sont présents ici pour disposer de documents
  texte volumineux à parcourir et explorer.
+ 
+Durant la formation, des ressources complémentaires peuvent être disponibles
+[sur le partage suivant](https://goo.gl/lRyzMZ).
