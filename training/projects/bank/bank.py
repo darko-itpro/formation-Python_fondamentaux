@@ -22,11 +22,11 @@ class BusinessError(Exception):
         return repr(self._value)
 
 
-class Personne(object):
+class Person(object):
     """
     My class Personne
 
-    >>> personne = Personne('Durant', 'Gilles')
+    >>> personne = Person('Durant', 'Gilles')
     >>> personne._nom
     'Durant'
 
@@ -46,16 +46,17 @@ class Personne(object):
         return "Personne object %s %s" % (self._prenom, self._nom)
 
 
-class Client(Personne):
-    def __init__(self, nom, prenom, id, join_date=datetime.now(), is_vip=False):
+class Client(Person):
+    def __init__(self, nom, prenom, nid, join_date=datetime.now(), is_vip=False):
         Personne.__init__(self, nom, prenom)
-        self._identifiant = id
+        self._identifiant = nid
         self._join_date = join_date
         self._is_vip = is_vip
         self._accounts = {}
 
-    def add_account(self, accout):
-        self._accounts[accout._id] = accout
+    def add_account(self, account):
+        if len(self._accounts < 5):
+            self._accounts.append(account)
 
     def has_vip_privileges(self):
         """
@@ -99,12 +100,18 @@ class BankAccount(object):
         else:
             raise ValueError("Negative value")
 
-    def id(self):
+    def _set_id(self, nid):
+        if not nid:
+            raise ValueError('Wrong id')
+        self._id = nid
+
+    def _get_id(self):
         return self._id
 
     def _get_balance(self):
         return self._balance
 
+    nid = property(_get_id, _set_id)
     balance = property(_get_balance)
 
     def __str__(self):

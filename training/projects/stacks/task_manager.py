@@ -8,7 +8,7 @@ Gestion des tâches
 
 """
 
-import stack
+from training.projects import stack
 
 personnel = {}
 

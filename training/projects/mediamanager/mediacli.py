@@ -14,9 +14,9 @@ def saisons_list():
     :return: None
     """
     print("Saisons pour {}".format(_tvshow.name))
-    if len(_tvshow.seasons()) > 0:
-        for saison in _tvshow.seasons():
-            print("Saison {} - {} épisodes".format(saison.number, len(saison.episodes())))
+    if len(_tvshow.seasons) > 0:
+        for saison in _tvshow.seasons:
+            print("Saison {} - {} épisodes".format(saison.number, len(saison.episodes)))
     else:
         print("Pas de saison pour la série {}".format(_tvshow.name))
 
@@ -27,10 +27,10 @@ def episodes_list():
     :return: None
     """
     print("Épisodes pour {}".format(_tvshow.name))
-    if len(_tvshow.seasons()) > 0:
-        for saison in _tvshow.seasons():
+    if len(_tvshow.seasons) > 0:
+        for saison in _tvshow.seasons:
             print("Saison {}".format(saison.number))
-            for episode in saison.episodes():
+            for episode in saison.episodes:
                 print("({:>2}) {}".format(episode.number, episode.title))
     else:
         print("Pas d'épisodes pour la série {}".format(_tvshow.name))
@@ -50,7 +50,7 @@ def add_episode():
         return
 
     try:
-        _tvshow.add_episode(mediamodel.Episode(ep_number, ep_title), ep_season)
+        _tvshow.add_episode(mediamodel.Episode(ep_title, ep_number), ep_season)
     except ValueError:
         print("L'épisode {} de la saison {} existe déjà".format(ep_number, ep_season))
 

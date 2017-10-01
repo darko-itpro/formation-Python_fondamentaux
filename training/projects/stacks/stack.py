@@ -5,10 +5,12 @@
 Implémentation de piles
 -----------------------
 
-Les piles (stacks) LIFO et FIFO permettent de gérer les deux types de piles.
+Les piles LIFO (le terme devrait être Stack avec push et pop) et FIFO (le nom
+devrait être Queue avec enqueue et dequeue permettent de gérer les deux types
+de piles.
 
 La pile OrderedStack gère une pile où les éléments sont retournés selon leur
-ordre naturel
+ordre naturel ou selon la clef de tri passé en paramètre.
 
 """
 
@@ -20,12 +22,13 @@ class Stack(object):
     def __init__(self, *args):
         self._pile = list(args)
 
-    def empile(self, element):
+    def push(self, element):
+        """Add an element to the stack"""
         self._pile.append(element)
 
-    def depile(self):
+    def pop(self):
         """
-        depile function must not be used from this Class.
+        Must not be used from this Class.
 
         :except NotImplementedError:
          Because this should be considered as an abstract function.
@@ -34,9 +37,6 @@ class Stack(object):
 
     def __len__(self):
         return len(self._pile)
-
-    def __getitem__(self, item):
-        return self._pile[item]
 
     def __str__(self):
         return "pile generique"
@@ -50,7 +50,7 @@ class Lifo(Stack):
     def __str__(self):
         return "LIFO Stack with %d elements" % len(self._pile)
 
-    def depile(self):
+    def pop(self):
         try:
             return self._pile.pop()
         except IndexError:
@@ -65,7 +65,7 @@ class Fifo(Stack):
     def __str__(self):
         return "FIFO Stack with %d elements" % len(self._pile)
 
-    def depile(self):
+    def pop(self):
         if len(self._pile):
             return self._pile.pop(0)
         else:
@@ -74,7 +74,16 @@ class Fifo(Stack):
 
 class OrderedStack(Stack):
 
-    def depile(self):
+    def __init__(self, *args, key=None):
+        """
+
+        :param args:
+        :param key: must be un function as for the key parameter of the sorted function.
+        """
+        Stack.__init__(self, *args)
+        self._key = key
+
+    def pop(self):
         """
         Returns the lowest ranked element.
 
@@ -82,7 +91,7 @@ class OrderedStack(Stack):
          Lowest ranked element
         """
         if len(self._pile):
-            self._pile.sort()
+            self._pile.sort(key=self._key)
             return self._pile.pop(0)
 
     def __str__(self):

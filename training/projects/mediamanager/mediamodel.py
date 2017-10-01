@@ -35,6 +35,7 @@ class TvShow:
             season.add(episode)
             self._add_season(season)
 
+    @property
     def seasons(self):
         """return a copy of this object's seasons list"""
         return list(self._seasons)
@@ -104,6 +105,7 @@ class Season:
 
         raise ValueError('Episode {} does not exist'.format(number))
 
+    @property
     def episodes(self):
         """
         Cet *accesseur* retourne une copie de la liste des épisodes, évitant ainsi une modification accidentelle.
@@ -153,12 +155,13 @@ class Episode:
     """
     Définit un épisode qui est un objet de type média.
     """
-    def __init__(self, number, title):
+    def __init__(self, title, number):
         self.number = int(number)
         self.title = title
 
     def __str__(self):
         return "ep.{} - {}".format(self.number, self.title)
+
 
 if __name__ == '__main__':
     pass

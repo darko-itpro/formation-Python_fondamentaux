@@ -47,10 +47,10 @@ if __name__ == '__main__':
                 print("This is not a task...")
                 continue
 
-            task_manager.empile(new_task)
+            task_manager.push(new_task)
 
         elif char_choice == "g":
-            print("Nest task:\n\n\t{}\n".format(task_manager.depile()))
+            print("Nest task:\n\n\t{}\n".format(task_manager.pop()))
 
         elif char_choice == "e":
             print("Leaving, bye")

@@ -1,6 +1,11 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*-
 
+"""
+Ce module propose les deux implémentations de la gestion de piles : par fonction
+et par objets.
+"""
+
 stack = []
 
 

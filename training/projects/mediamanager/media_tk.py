@@ -19,7 +19,7 @@ episode_list = []
 
 def add_episode(title, number):
 
-    episode = mediamodel.Episode(number, title)
+    episode = mediamodel.Episode(title, number)
     episode_list.append(episode)
     episode_list.sort(key=lambda x: x.number)
     ep_index = episode_list.index(episode)
