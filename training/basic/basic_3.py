@@ -18,32 +18,30 @@
 
 """
 
-from __future__ import print_function
-
 if __name__ == '__main__':
     ma_liste = [17, 38, 10, 25, 72]
 
     ma_liste.sort()
-    print ("Ma liste triee : {}".format(ma_liste))
+    print ("Ma liste triee :", ma_liste)
 
     ma_liste.append(12)
-    print ("Ma liste ajout 12 : {}".format(ma_liste))
+    print ("Ma liste ajout 12 :", ma_liste)
 
     ma_liste.reverse()
-    print ("Ma liste inversee : {}".format(ma_liste))
+    print ("Ma liste inversee :", ma_liste)
 
-    print ("Ma liste position 17 : {}".format(ma_liste.index(17)))
+    print ("Ma liste position 17 :", ma_liste.index(17))
 
     ma_liste.remove(38)
-    print ("Ma liste sans 38 : {}".format(ma_liste))
+    print ("Ma liste sans 38 :", ma_liste)
 
-    print ("Ma liste de 2 a 3 : {}".format(ma_liste[2:4]))
+    print ("Ma liste de 2 a 3 :", ma_liste[2:4])
 
-    print ("Ma liste jusuq'a 2 : {}".format(ma_liste[:3]))
+    print ("Ma liste jusuq'a 2 :", ma_liste[:3])
 
-    print ("Ma liste a parir de 3 : {}".format(ma_liste[3:]))
+    print ("Ma liste a parir de 3 :", ma_liste[3:])
 
-    print ("Ma liste dernier element : {}".format(ma_liste[-1]))
+    print ("Ma liste dernier element :", ma_liste[-1])
 
     # Il n'y a pas ici de ma_deuxieme_liste = ma_liste, voici comment faire une
     # copie

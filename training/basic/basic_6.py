@@ -8,8 +8,6 @@
     #. Affichez chaque élément d'une liste en utilisant la boucle **for**
 """
 
-from __future__ import print_function
-
 if __name__ == '__main__':
 
     for i in range(0, 15, 3):

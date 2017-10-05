@@ -31,8 +31,6 @@
 
 """
 
-from __future__ import print_function
-
 
 def multiplication(value, max=10):
     for i in range(1, max):

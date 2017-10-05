@@ -11,8 +11,6 @@
 
 """
 
-from __future__ import print_function
-
 
 def compteur_mots(chaine):
     """

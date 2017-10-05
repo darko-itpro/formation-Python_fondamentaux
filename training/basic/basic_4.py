@@ -11,9 +11,6 @@ Contrôle de base
 
 """
 
-from __future__ import print_function
-from builtins import input
-
 if __name__ == '__main__':
     val1 = int(input("Saisisez une valeur "))
     val2 = int(input("Saisisez une autre valeur "))

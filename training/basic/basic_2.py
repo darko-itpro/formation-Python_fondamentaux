@@ -13,9 +13,6 @@
     coucher ?
 """
 
-from __future__ import print_function
-from builtins import input
-
 if __name__ == '__main__':
     name = str(input("Votre nom ? "))
     age = int(input("Votre age ? "))
@@ -23,8 +20,10 @@ if __name__ == '__main__':
           .format(name, age))
 
     print("J'en ai pour {}h{}".format((3 * 53) // 60, (3 * 53) % 60))
-    # Une fonction permet de récupérer les deux valeurs :
+
+    # La fonction divmod permet de récupérer les deux valeurs :
     hour, minutes = divmod(3 * 53, 60)
-    print("J'en ai pour {}h{}".format(hour, minutes))
+    print("J'en ai pour {}h{} (divmod)".format(hour, minutes))
+
     hour, minutes = divmod(42 + (3 * 53), 60)
     print("Je serai au lit à {}h{}".format(20 + hour, minutes))

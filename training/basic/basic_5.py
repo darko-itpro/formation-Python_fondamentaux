@@ -24,9 +24,6 @@
 
 """
 
-from __future__ import print_function
-from builtins import input
-
 if __name__ == "__main__":
     P_LIMIT = 3.5
     VOLUME = 7.41

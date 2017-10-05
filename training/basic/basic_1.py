@@ -16,8 +16,6 @@
 
 """
 
-from __future__ import print_function
-
 if __name__ == '__main__':
     temps = 6.892
     distance = 19.7
