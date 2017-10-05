@@ -22,6 +22,11 @@ class Task(object):
         self._add_date = add_date
         self._due_date = due_date
 
+    def _get_title(self):
+        return self._title
+
+    title = property(_get_title)
+
     def __lt__(self, other):
         """
         For ordering purpose, if the dates are equals, this object is considered
