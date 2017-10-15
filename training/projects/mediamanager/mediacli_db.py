@@ -41,9 +41,24 @@ actions['a'] = add_episode
 actions['e'] = episodes_list
 
 if __name__ == "__main__":
-    print("Gestion de série")
 
-    _db = media_db.MediaDao()
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Gestion de médiathèque par base de données"
+    )
+
+    parser.add_argument('-p', '--db_path',
+                        help='Chemin vers le fichier de la base')
+
+    args = parser.parse_args()
+
+    if args.db_path:
+        _db = media_db.MediaDao(args.db_path)
+    else:
+        _db = media_db.MediaDao()
+
+    print("Gestion de série")
 
     while True:
         print("""
