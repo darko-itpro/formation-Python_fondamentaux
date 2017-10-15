@@ -10,11 +10,11 @@ class Episode:
     """
     Un épisode d'une série
     """
-    def __init__(self, number, title):
+    def __init__(self, title, number):
         self._number = number
         self.title = title
 
-    def number(self):
+    def get_number(self):
         return self._number
 
     def __lt__(self, other):
@@ -25,6 +25,8 @@ class Episode:
         """
         return self._number < other.number()
 
+    number = property(get_number)
+
 
 class Season:
     """
@@ -34,20 +36,23 @@ class Season:
         self._number = number
         self._episodes = []
 
-    def number(self):
+    def get_number(self):
         return self._number
 
     def add(self, episode):
         self._episodes.append(episode)
         self._episodes.sort()
 
-    def episodes(self):
+    def get_episodes(self):
         """
         Retourne une liste des épisodes sous forme d'une copie afin d'éviter les
         modifications involontaires.
         :return: Une copie de la liste des épisodes
         """
         return list(self._episodes)
+
+    number = property(get_number)
+    episodes = property(get_episodes)
 
 
 class TvShow:
@@ -65,5 +70,7 @@ class TvShow:
             season.add(episode)
             self._seasons.append(season)
 
-    def seasons(self):
+    def get_seasons(self):
         return list(self._seasons)
+
+    seasons = property(get_seasons)

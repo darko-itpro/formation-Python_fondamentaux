@@ -26,5 +26,6 @@ class TestCompareDueDate(unittest.TestCase):
         t2 = Task("task2", datetime(2015, 1, 1), datetime(2016, 1, 1))
         self.assertGreater(t1, t2)
 
+
 if __name__ == "__main__":
     unittest.main()

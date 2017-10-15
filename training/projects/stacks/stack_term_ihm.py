@@ -7,17 +7,13 @@ Ce module est incomplet et est destiné à être repris par les stagiaires.
 
 """
 
-from __future__ import print_function
-
-from builtins import input
-
 import training.projects.stacks.stack as stack
 
 
 def display_help():
     print("Task manager ready")
     try:
-        print("Current task size: {}".format(task_manager.stack_size()))
+        print("Current task size: {}".format(len(task_manager)))
     except AttributeError:
         pass
     print("[a] - Add a Task")

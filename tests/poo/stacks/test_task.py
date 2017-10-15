@@ -6,7 +6,7 @@ import unittest
 from training.projects.stacks import tasks
 
 
-class createTask(unittest.TestCase):
+class CreateTask(unittest.TestCase):
 
     def testSimpleTaskCreate(self):
         task = tasks.Task("Toto")

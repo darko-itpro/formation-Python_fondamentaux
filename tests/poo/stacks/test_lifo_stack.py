@@ -9,26 +9,26 @@ from training.projects.stacks import stack
 class CreateLifo(unittest.TestCase):
 
     def testCreateEmptyArgs(self):
-        ma_pile = stack.Lifo()
+        ma_pile = stack.Lifo('name')
         self.assertEqual(0, len(ma_pile))
 
     def testCreateOneArg(self):
-        ma_pile = stack.Lifo("toto")
+        ma_pile = stack.Lifo('name', "toto")
         self.assertEqual(1, len(ma_pile))
 
     def testMoreArgs(self):
-        ma_pile = stack.Lifo("toto", "tata", 2)
+        ma_pile = stack.Lifo('name', "toto", "tata", 2)
         self.assertEqual(3, len(ma_pile))
 
     def testListArg(self):
-        ma_pile = stack.Lifo(["toto", "tata"])
+        ma_pile = stack.Lifo('name', ["toto", "tata"])
         self.assertEqual(1, len(ma_pile), "Les collectoins ne doivent pas etre eclatees")
 
 
-class DepileLifo(unittest.TestCase):
+class PopFromLifo(unittest.TestCase):
 
     def setUp(self):
-        self.ma_pile = stack.Lifo("one", "two")
+        self.ma_pile = stack.Lifo("name", "one", "two")
 
     def tearDown(self):
         del self.ma_pile

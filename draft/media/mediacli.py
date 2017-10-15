@@ -14,9 +14,9 @@ def saisons_list():
     :return: None
     """
     print("Saisons pour {}".format(_tvshow.name))
-    if len(_tvshow.seasons()) > 0:
-        for saison in _tvshow.seasons():
-            print("Saison {} - {} épisodes".format(saison.number, len(saison.episodes())))
+    if len(_tvshow.seasons) > 0:
+        for saison in _tvshow.seasons:
+            print("Saison {} - {} épisodes".format(saison.number, len(saison.episodes)))
     else:
         print("Pas de saison pour la série {}".format(_tvshow.name))
 
@@ -30,7 +30,7 @@ def add_episode():
     ep_season = input("Saison de l'épisode")
     ep_number = input("Numéro de l'épisode dans la saison")
 
-    _tvshow.add_episode(mediamodel.Episode(ep_number, ep_title), ep_season)
+    _tvshow.add_episode(mediamodel.Episode(ep_title, ep_number), ep_season)
 
 actions = {}
 actions['a'] = None

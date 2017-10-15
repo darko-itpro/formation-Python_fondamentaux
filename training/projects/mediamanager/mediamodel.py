@@ -96,7 +96,7 @@ class Season:
         Retourne un épisode en fonction de son numéro. Une exception est levée si aucun épisode ne correspond.
 
         :param number: Numéro de l'épisode.
-        :return: Un épisode si la saisin contient un épisode avec ce numéro ou None.
+        :return: Un épisode si la saison contient un épisode avec ce numéro ou None.
         :raises ValueError: If there is no episode with the given number.
         """
         for element in self._episodes:
@@ -154,6 +154,8 @@ class Season:
 class Episode:
     """
     Définit un épisode qui est un objet de type média.
+
+    Le titre et le numéro sont considérés comme pouvant être modifés.
     """
     def __init__(self, title, number):
         self.number = int(number)

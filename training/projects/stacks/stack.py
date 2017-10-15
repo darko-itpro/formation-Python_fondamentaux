@@ -5,9 +5,9 @@
 Implémentation de piles
 -----------------------
 
-Les piles LIFO (le terme devrait être Stack avec push et pop) et FIFO (le nom
-devrait être Queue avec enqueue et dequeue permettent de gérer les deux types
-de piles.
+D'un point de vue sépantique, les piles LIFO devraient s'appeler  Stack avec les
+méthodes push et pop. Les piles FIFO, Queue avec les méthodes enqueue et
+dequeue.
 
 La pile OrderedStack gère une pile où les éléments sont retournés selon leur
 ordre naturel ou selon la clef de tri passé en paramètre.
@@ -15,11 +15,12 @@ ordre naturel ou selon la clef de tri passé en paramètre.
 """
 
 
-class Stack(object):
+class AbstractStack:
     """
     Generic class declaration for a stack
     """
-    def __init__(self, *args):
+    def __init__(self, name, *args):
+        self.name = name
         self._pile = list(args)
 
     def push(self, element):
@@ -42,7 +43,7 @@ class Stack(object):
         return "pile generique"
 
 
-class Lifo(Stack):
+class Lifo(AbstractStack):
     """
     *Last in First out* stack
     """
@@ -57,13 +58,19 @@ class Lifo(Stack):
             raise ValueError("No more element")
 
 
-class Fifo(Stack):
+class Fifo(AbstractStack):
     """
     *First in First out* stack
     """
 
     def __str__(self):
         return "FIFO Stack with %d elements" % len(self._pile)
+
+    def enqueue(self, element):
+        AbstractStack.push(self, element)
+
+    def dequeue(self):
+        return self.pop()
 
     def pop(self):
         if len(self._pile):
@@ -72,7 +79,7 @@ class Fifo(Stack):
             raise ValueError("No more element")
 
 
-class OrderedStack(Stack):
+class OrderedStack(AbstractStack):
 
     def __init__(self, *args, key=None):
         """
@@ -80,7 +87,7 @@ class OrderedStack(Stack):
         :param args:
         :param key: must be un function as for the key parameter of the sorted function.
         """
-        Stack.__init__(self, *args)
+        AbstractStack.__init__(self, *args)
         self._key = key
 
     def pop(self):
