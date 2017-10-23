@@ -157,9 +157,26 @@ class Episode:
 
     Le titre et le numéro sont considérés comme pouvant être modifés.
     """
-    def __init__(self, title, number):
+    def __init__(self, title, number, duration=0):
         self.number = int(number)
         self.title = title
+        self._duration = int(duration)
+
+    @property
+    def duration(self):
+        """Duration of the episode."""
+        if self._duration == 0:
+            raise ValueError("Duration not set")
+        else:
+            return self._duration
+
+    @duration.setter
+    def duration(self, value):
+        self._duration = int(value)
+
+    @duration.deleter
+    def duration(self):
+        self._duration = 0
 
     def __str__(self):
         return "ep.{} - {}".format(self.number, self.title)
