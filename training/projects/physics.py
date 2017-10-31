@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import division
-
 """
 Rappel:
 PV = nRT, ici nR est considéré = 1

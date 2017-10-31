@@ -5,8 +5,6 @@
 Démonstration de l'accès basique aux arguments de la ligne de commande.
 """
 
-from __future__ import print_function
-
 import sys
 
 if __name__ == '__main__':

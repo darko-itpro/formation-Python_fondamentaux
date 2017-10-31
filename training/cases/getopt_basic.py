@@ -12,7 +12,6 @@ Options:
   * -o or --output [file]: displays the file intended for output
 """
 
-from __future__ import absolute_import, print_function
 import getopt, sys
 
 
