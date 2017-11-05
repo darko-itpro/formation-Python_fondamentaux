@@ -5,20 +5,19 @@
 Module destiné à fournir une interface de type terminal.
 """
 
-from draft.media import mediamodel as mediamodel
+from draft.media import base_mediamodel as mediamodel
 
 
-def saisons_list():
+def episoedes_list():
     """
-    Fonction qui liste les saisons pour la série gérée.
-    :return: None
+    Cette fonction attends une liste d'épisodes ordonnés.
     """
-    print("Saisons pour {}".format(_tvshow.name))
-    if len(_tvshow.seasons) > 0:
-        for saison in _tvshow.seasons:
-            print("Saison {} - {} épisodes".format(saison.number, len(saison.episodes)))
+    print("Épisodes pour {}".format(_tvshow.name))
+    episodes = _tvshow.episodes()
+    if episodes:
+        pass # TODO : ajouter le code pour lister les épisodes
     else:
-        print("Pas de saison pour la série {}".format(_tvshow.name))
+        print("Pas d'épisodes pour la série.")
 
 
 def add_episode():
@@ -30,12 +29,13 @@ def add_episode():
     ep_season = input("Saison de l'épisode")
     ep_number = input("Numéro de l'épisode dans la saison")
 
-    _tvshow.add_episode(mediamodel.Episode(ep_title, ep_number), ep_season)
+    _tvshow.add_episode(ep_title, ep_number, ep_season)
+
 
 actions = {}
 actions['a'] = None
-actions['s'] = saisons_list
-actions['e'] = None
+actions['s'] = None
+actions['e'] = episoedes_list
 
 if __name__ == "__main__":
     print("Gestion de série")

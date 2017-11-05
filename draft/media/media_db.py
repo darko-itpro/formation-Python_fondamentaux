@@ -32,7 +32,7 @@ class MediaDao:
     def __str__(self):
         return 'Media DB Connector ({})'.format(self._db_name)
 
-    def add_episode(self, name, season_number, ep_number):
+    def add_episode(self, title, ep_number, season_number):
         cur = self._connect.cursor()
-        cur.execute(SQL_ADD_EPISODE, (ep_number, season_number, name))
+        cur.execute(SQL_ADD_EPISODE, (ep_number, season_number, title))
         self._connect.commit()

@@ -3,87 +3,87 @@
 
 import unittest
 
-from draft.media import basemedia
+from draft.media import base_mediamodel as mediamodel
 
 
 class CreateEpisode(unittest.TestCase):
 
     def test_create_episode_without_season(self):
-        episode = basemedia.Episode("Title", 1)
+        episode = mediamodel.Episode("Title", 1)
         self.assertIsNotNone(episode)
 
     def test_create_episode_with_season(self):
-        episode = basemedia.Episode("Title", 1, 1)
+        episode = mediamodel.Episode("Title", 1, 1)
         self.assertIsNotNone(episode)
 
     def test_title_accessible(self):
-        episode = basemedia.Episode("Title", 1)
+        episode = mediamodel.Episode("Title", 1)
         self.assertEqual(episode.title, "Title")
 
     def test_should_not_assign_title(self):
-        episode = basemedia.Episode("Title", 1)
+        episode = mediamodel.Episode("Title", 1)
         with self.assertRaises(AttributeError):
             episode.title = 'Other title'
 
     def test_number_accessible(self):
-        episode = basemedia.Episode("Title", 1)
+        episode = mediamodel.Episode("Title", 1)
         self.assertEqual(episode.number, 1)
 
     def test_should_not_assign_number(self):
-        episode = basemedia.Episode("Title", 1)
+        episode = mediamodel.Episode("Title", 1)
         with self.assertRaises(AttributeError):
             episode.number = 2
 
     def test_season_accessible(self):
-        episode = basemedia.Episode("Title", 1, 2)
+        episode = mediamodel.Episode("Title", 1, 2)
         self.assertEqual(episode.season, 2)
 
     def test_shouldnt_assign_season(self):
-        episode = basemedia.Episode("Title", 1)
+        episode = mediamodel.Episode("Title", 1)
         with self.assertRaises(AttributeError):
             episode.season = 2
 
     def test_without_season_should_be_none(self):
-        episode = basemedia.Episode("Title", 1)
+        episode = mediamodel.Episode("Title", 1)
         self.assertIsNone(episode.season)
 
     def test_number_must_be_integer_compatible(self):
-        episode = basemedia.Episode('Title', 1)
+        episode = mediamodel.Episode('Title', 1)
         self.assertEqual(episode.number, 1)
-        episode = basemedia.Episode('Title', "1")
+        episode = mediamodel.Episode('Title', "1")
         self.assertEqual(episode.number, 1)
         with self.assertRaises(ValueError):
-            basemedia.Episode('Title', "un")
+            mediamodel.Episode('Title', "un")
 
     def test_season_must_be_integer_compatible(self):
-        episode = basemedia.Episode('Title', 1, 2)
+        episode = mediamodel.Episode('Title', 1, 2)
         self.assertEqual(episode.season, 2)
-        episode = basemedia.Episode('Title', 1, "2")
+        episode = mediamodel.Episode('Title', 1, "2")
         self.assertEqual(episode.season, 2)
         with self.assertRaises(ValueError):
-            basemedia.Episode('Title', 1, "un")
+            mediamodel.Episode('Title', 1, "un")
 
     def test_title_should_be_string_or_raise_error(self):
         with self.assertRaises(ValueError):
-            basemedia.Episode(10, 1)
+            mediamodel.Episode(10, 1)
 
     def test_title_cannot_be_empty(self):
         with self.assertRaises(ValueError):
-            basemedia.Episode('', 1)
+            mediamodel.Episode('', 1)
 
 
 class CreateShow(unittest.TestCase):
 
     def test_create_new_show(self):
-        show = basemedia.TvShow('Mr. Robot')
+        show = mediamodel.TvShow('Mr. Robot')
         self.assertIsNotNone(show)
 
     def test_show_name_accessible(self):
-        show = basemedia.TvShow('Mr. Robot')
+        show = mediamodel.TvShow('Mr. Robot')
         self.assertEqual(show.name, 'Mr. Robot')
 
     def test_shouldnt_assign_name(self):
-        show = basemedia.TvShow('Mr. Robot')
+        show = mediamodel.TvShow('Mr. Robot')
         with self.assertRaises(AttributeError):
             show.name = 'Dr. Who'
 
@@ -91,7 +91,7 @@ class CreateShow(unittest.TestCase):
 class AccessEpisodes(unittest.TestCase):
 
     def setUp(self):
-        self.show = basemedia.TvShow('Game of Thrones')
+        self.show = mediamodel.TvShow('Game of Thrones')
 
     def tearDown(self):
         del self.show
@@ -115,7 +115,7 @@ class AccessEpisodes(unittest.TestCase):
 
     def test_should_not_alter_episodes(self):
         episodes = self.show.episodes()
-        episodes.append(basemedia.Episode('Intruder', 2))
+        episodes.append(mediamodel.Episode('Intruder', 2))
         self.assertEqual(len(self.show.episodes()), 0)
 
     def test_should_not_add_same_episode(self):
@@ -132,7 +132,7 @@ class SeasonEvolution(unittest.TestCase):
     """
 
     def setUp(self):
-        self.show = basemedia.TvShow('Game of Thrones')
+        self.show = mediamodel.TvShow('Game of Thrones')
         self.show.add_episode("Into the North", 1, 1)
 
     def tearDown(self):
@@ -156,7 +156,7 @@ class SeasonEvolution(unittest.TestCase):
 
     @unittest.skip("Evolution 5")
     def test_season_is_object_with_episodes_attr(self):
-        self.assertTrue(hasattr(self.show.season(1)), 'episodes')
+        self.assertTrue(hasattr(self.show.season(1), 'episodes'))
 
     @unittest.skip("Evolution 6")
     def test_existing_season_has_one_element(self):
@@ -171,9 +171,9 @@ class SeasonEvolution(unittest.TestCase):
     def test_new_season_has_two_elements(self):
         self.show.add_episode('Stormborn', 1, 2)
         self.show.add_episode('valar morghulis', 2, 2)
-        self.assertEqual(len(self.show.season(2)), 2)
-        self.assertEqual(len(self.show.season(1)), 1)
+        self.assertEqual(len(self.show.season(2).episodes), 2)
+        self.assertEqual(len(self.show.season(1).episodes), 1)
 
 
 if __name__ == '__main__':
-    pass
+    unittest.main()

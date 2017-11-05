@@ -14,17 +14,18 @@ class Episode(object):
         self._number = int(number)
         self._season = int(season) if season else None
 
-    @property
-    def title(self):
+    def _get_title(self):
         return self._title
 
-    @property
-    def number(self):
+    def _get_number(self):
         return self._number
 
-    @property
-    def season(self):
+    def _get_season(self):
         return self._season
+
+    title = property(_get_title)
+    number = property(_get_number)
+    season = property(_get_season)
 
 
 class TvShow(object):
@@ -32,9 +33,10 @@ class TvShow(object):
         self._name = name
         self._episodes = []
 
-    @property
-    def name(self):
+    def _get_name(self):
         return self._name
+
+    name = property(_get_name)
 
     def episodes(self):
         return list(self._episodes)
