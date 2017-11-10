@@ -1,20 +1,24 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*-
 
+"""
+Module définissant les objets *métier* de la gestion d'une médiathèque.
+"""
+
 
 class TvShow:
     """
-    Représente une série et permet de gérer les saisons associées ainsi que les informations
-    générales de la série.
+    Représente une série et permet de gérer les saisons associées ainsi que les
+    informations générales de la série.
     """
     def __init__(self, name):
-        self.name = name
+        self._name = name
         self._seasons = []
 
     def _add_season(self, season):
         """
-        On ne gère pas de saison directement, cette méthode est donc privée. Il est préférable de
-        passer par cette méthode qui s'assure le tri.
+        On ne gère pas de saison directement, cette méthode est donc privée. Il
+        est préférable de passer par cette méthode qui s'assure le tri.
 
         :param season:
         :return: None
@@ -25,41 +29,66 @@ class TvShow:
         else:
             raise ValueError('Season exists')
 
-    def add_episode(self, episode, season_number):
+    def add_episode(self, title, ep_number, season_number=None):
         for season in self._seasons:
             if season.number == season_number:
-                season.add(episode)
+                season.add(Episode(title, ep_number, season_number))
                 break
         else:
             season = Season(season_number)
-            season.add(episode)
+            season.add(Episode(title, ep_number, season_number))
             self._add_season(season)
+
+    @property
+    def name(self):
+        return self._name
 
     @property
     def seasons(self):
         """return a copy of this object's seasons list"""
         return list(self._seasons)
 
+    def season(self, number):
+        for season in self._seasons:
+            if season.number == number:
+                return season
+
+    def episodes(self):
+        episodes = list()
+
+        for season in self._seasons:
+            episodes.extend(season.episodes)
+
+        return episodes
+
     def _sort(self):
         """
         Tri les saisons par ordre *naturel* (numéro de saison).
 
-        La méthode est privée car la collection en elle même est privée et de ce fait, le tri de la
-        liste appatient à l'objet.
-        :return: None
+        La méthode est privée car la collection en elle même est privée en
+        conséquence, le tri de la liste appatient à l'objet.
         """
         self._seasons.sort(key=lambda x: x.number)
 
     def __len__(self):
+        """
+        Un TvShow peut être considéré comme un conteneur de saisons. Cette
+        méthode spéciale permet donc d'obtenir la *taille* d'un TvShow qui sera
+        donc le nombre de saisons grâce à la fonction len :
+        `len(show)`
+        :return: un entier correspondant au nombre de saisons.
+        """
         return len(self._seasons)
 
     def __contains__(self, item):
         """
-        Un TvShow peut être considéré comme un conteneur de saisons. Cette méthode permet donc
-        d'interroger un TvShow à la manière `saison in show`
+        Un TvShow peut être considéré comme un conteneur de saisons. Cette
+        méthode spéciale permet donc d'interroger un TvShow à la manière
+        `saison in show`
 
-        :param item:
-        :return:
+        :param item: Un élément qui doit être une saison mais qui doit surtout
+        posséder une propriété `number`
+        :return: Vrai si la collection de saisons possède un élément du même numéro.
         """
         if hasattr(item, "number"):
             cmp_value = item.number
@@ -81,7 +110,11 @@ class Season:
     Définit une saison caractérisée par son *numéro* et la liste des épisodes.
     """
     def __init__(self, number):
-        self.number = int(number)
+
+        self._number = int(number) if number else None
+        if self._number and  self._number < 0:
+            raise ValueError('Season number cannot be negative')
+
         self._episodes = []
 
     def add(self, episode):
@@ -104,6 +137,10 @@ class Season:
                 return element
 
         raise ValueError('Episode {} does not exist'.format(number))
+
+    @property
+    def number(self):
+        return self._number
 
     @property
     def episodes(self):
@@ -151,16 +188,18 @@ class Season:
         return "Season {} <{}>".format(self.number, len(self._episodes))
 
 
-class Episode:
-    """
-    Définit un épisode qui est un objet de type média.
+class Media:
+    def __init__(self, title, duration=None, year=None):
 
-    Le titre et le numéro sont considérés comme pouvant être modifés.
-    """
-    def __init__(self, title, number, duration=0):
-        self.number = int(number)
-        self.title = title
-        self._duration = int(duration)
+        try:
+            if not title or title.isspace():
+                raise ValueError("Title must have characters")
+        except AttributeError:
+            raise ValueError("Title must be a String")
+
+        self._title = title
+        self._duration = int(duration) if duration else None
+        self.year = int(year) if year else None
 
     @property
     def duration(self):
@@ -178,8 +217,47 @@ class Episode:
     def duration(self):
         self._duration = 0
 
+    @property
+    def title(self):
+        return self._title
+
+    def hm_duration(self):
+        """
+        Returns the duration in a hour/minute format
+        :return: a tuple representing the duration where the first element is
+        the duration in hours and the second is the remaining duration in
+        minutes
+        """
+        return divmod(self.duration, 60) if self.duration else None
+
+
+class Episode(Media):
+    """
+    Définit un épisode qui est un objet de type média.
+
+    Le titre et le numéro sont considérés comme pouvant être modifés.
+    """
+    def __init__(self, title, number, season=None, duration=None, year=None):
+        Media.__init__(self, title, duration, year)
+        self._number = int(number)
+        self._season = int(season) if season else None
+
+    @property
+    def number(self):
+        return self._number
+
+    @property
+    def season(self):
+        return self._season
+
     def __str__(self):
         return "ep.{} - {}".format(self.number, self.title)
+
+
+class Movie(Media):
+    def __init__(self, title, duration=None, year=None, director=None):
+        Media.__init__(self, title, duration, year)
+        self.director = str(director) if director else None
 
 
 if __name__ == '__main__':

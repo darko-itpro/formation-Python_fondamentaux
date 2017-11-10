@@ -50,7 +50,7 @@ def add_episode():
         return
 
     try:
-        _tvshow.add_episode(mediamodel.Episode(ep_title, ep_number), ep_season)
+        _tvshow.add_episode(ep_title, ep_number, ep_season)
     except ValueError:
         print("L'épisode {} de la saison {} existe déjà".format(ep_number, ep_season))
 
