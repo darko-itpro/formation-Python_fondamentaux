@@ -3,7 +3,7 @@
 
 
 class Episode(object):
-    def __init__(self, title, number, season=None):
+    def __init__(self, title, number, season=None, duration=None):
         try:
             if not title or title.isspace():
                 raise ValueError('Empty title')
@@ -13,6 +13,7 @@ class Episode(object):
         self._title = title
         self._number = int(number)
         self._season = int(season) if season else None
+        self._duration = int(duration) if duration else None
 
     def _get_title(self):
         return self._title
@@ -23,9 +24,13 @@ class Episode(object):
     def _get_season(self):
         return self._season
 
+    def _get_duration(self):
+        return self._duration
+
     title = property(_get_title)
     number = property(_get_number)
     season = property(_get_season)
+    duration = property(_get_duration)
 
 
 class TvShow(object):
