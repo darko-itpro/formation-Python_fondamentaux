@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Fonctions utilitaires d'affichage.
+Fonctions utilitaires d'affichage et d'analyse de chaines de caractères.
 """
 
 
