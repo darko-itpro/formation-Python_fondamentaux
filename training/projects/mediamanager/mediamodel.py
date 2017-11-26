@@ -10,6 +10,8 @@ class TvShow:
     """
     Représente une série et permet de gérer les saisons associées ainsi que les
     informations générales de la série.
+
+    La gestion des saisons se fait ici à l'aide d'un
     """
     def __init__(self, name):
         self._name = name
@@ -211,11 +213,14 @@ class Media:
 
     @duration.setter
     def duration(self, value):
+        if value <= 0:
+            raise ValueError("Duration must be a positive value"
+                             )
         self._duration = int(value)
 
     @duration.deleter
     def duration(self):
-        self._duration = 0
+        self._duration = None
 
     @property
     def title(self):
