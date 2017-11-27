@@ -13,7 +13,7 @@ def episoedes_list():
     Cette fonction attends une liste d'épisodes ordonnés.
     """
     print("Épisodes pour {}".format(_tvshow.name))
-    episodes = _tvshow.episodes()
+    episodes = _tvshow.get_episodes()
     if episodes:
         pass # TODO : ajouter le code pour lister les épisodes
     else:

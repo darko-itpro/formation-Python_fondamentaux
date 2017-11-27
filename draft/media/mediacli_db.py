@@ -31,6 +31,7 @@ def add_episode():
 
 actions = {}
 actions['a'] = add_episode
+actions['s'] = None
 actions['e'] = episodes_list
 
 if __name__ == "__main__":
@@ -41,6 +42,7 @@ if __name__ == "__main__":
     while True:
         print("""
         [a] ajouter un épisode
+        [s] lister les saisons
         [e] lister les épisodes
         [q] sortie
         """)

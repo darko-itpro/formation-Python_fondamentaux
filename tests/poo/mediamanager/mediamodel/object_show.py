@@ -30,27 +30,27 @@ class AccessEpisodes(unittest.TestCase):
     def tearDown(self):
         del self.show
 
-    def test_has_episodes_attr(self):
-        self.assertTrue(hasattr(self.show, 'episodes'))
+    def test_has_get_episodes_attr(self):
+        self.assertTrue(hasattr(self.show, 'get_episodes'))
 
     def test_has_add_episode_attr(self):
         self.assertTrue(hasattr(self.show, 'add_episode'))
 
     def test_empty_show(self):
-        self.assertEqual(len(self.show.episodes()), 0)
+        self.assertEqual(len(self.show.get_episodes()), 0)
 
     def test_add_episode_with_season_number(self):
         self.show.add_episode("Into the North", 1, 1)
-        self.assertEqual(len(self.show.episodes()), 1)
+        self.assertEqual(len(self.show.get_episodes()), 1)
 
     def test_add_episode_without_season_number(self):
         self.show.add_episode("Into the North", 1)
-        self.assertEqual(len(self.show.episodes()), 1)
+        self.assertEqual(len(self.show.get_episodes()), 1)
 
     def test_should_not_alter_episodes(self):
-        episodes = self.show.episodes()
+        episodes = self.show.get_episodes()
         episodes.append(mediamodel.Episode('Intruder', 2))
-        self.assertEqual(len(self.show.episodes()), 0)
+        self.assertEqual(len(self.show.get_episodes()), 0)
 
     def test_should_not_add_same_episode(self):
         self.show.add_episode("Into the North", 1, 1)

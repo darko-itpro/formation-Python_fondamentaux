@@ -55,13 +55,19 @@ class TvShow:
             if season.number == number:
                 return season
 
-    def episodes(self):
-        episodes = list()
+    def get_episodes(self, season_number=None):
 
-        for season in self._seasons:
-            episodes.extend(season.episodes)
+        if season_number:
+            for season in self._seasons:
+                if season.number == season_number:
+                    return season.episodes
+            else:
+                return []
 
-        return episodes
+        else:
+            return sum([season.episodes
+                        for season
+                        in self._seasons], [])
 
     def _sort(self):
         """
