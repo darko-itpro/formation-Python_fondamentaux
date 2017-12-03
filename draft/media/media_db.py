@@ -3,7 +3,7 @@
 
 import sqlite3 as sqlite
 
-SQL_CREATE_EPISODES_TABME = "CREATE TABLE IF NOT EXISTS episodes (number INT NOT NULL, season INT NOT NULL, title TEXT NOT NULL)"
+SQL_CREATE_EPISODES_TABLE = "CREATE TABLE IF NOT EXISTS episodes (number INT NOT NULL, season INT NOT NULL, title TEXT NOT NULL)"
 
 SQL_ADD_EPISODE = "INSERT INTO episodes values(?, ?, ?)"
 SQL_GET_ALL_EPISODES = "SELECT title, season, number FROM episodes ORDER BY season, number"
@@ -17,7 +17,7 @@ class MediaDao:
 
         try:
             cur = self._connect.cursor()
-            cur.execute(SQL_CREATE_EPISODES_TABME)
+            cur.execute(SQL_CREATE_EPISODES_TABLE)
         except sqlite.Error as e:
             print("Error occured")
             print(e)

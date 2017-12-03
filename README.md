@@ -19,8 +19,6 @@ Ces sources contiennet un *corrigé* des exercices pratiques proposés en cours.
 Rappelez-vous que bien que la devise de Python soit *Il y a une manière évidente
 de faire*, il s'agit donc d'une proposition de *solution* dont l'objectif principal est d'illustrer
 ce qui a été présenté en formation. Les répertoires d'intérêt sont :
-* `/training/basic` contient des modules correspondants à la présentation des *bases* de Python et 
-  qui sont globalement proposition de résolution des exercices des notebooks.
 * `/training/projects` propose plusieurs projets regroupés en packages.
     * `/bank` propose des modules sur le thème de la gestion de comptes bancaires.
     * `/mediamanager` contient des modules répondant aux différents exercices de création et
@@ -30,7 +28,7 @@ ce qui a été présenté en formation. Les répertoires d'intérêt sont :
 * `/training/cases` est un package contennat des modules illustrant des outils présentés durant la
   formation
 
-Historiquement certains modules contiennent le sujet.
+Historiquement certains modules peuvent contenir le sujet.
 
 La documentation accompagnant les sources dans le répertoire `/docs` contient les sujets d'exercice.
  Le plus simple pour y accéder pendant la formation est de générer la documentation.
