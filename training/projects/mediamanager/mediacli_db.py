@@ -53,10 +53,12 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+    show_name = input("Quelle est votre série ? ")
+
     if args.db_path:
-        _db = media_db.MediaDao(args.db_path)
+        _db = media_db.MediaDao(show_name, args.db_path)
     else:
-        _db = media_db.MediaDao()
+        _db = media_db.MediaDao(show_name)
 
     print("Gestion de série")
 
