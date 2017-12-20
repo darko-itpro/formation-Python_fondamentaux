@@ -10,7 +10,7 @@ SQL_GET_ALL_EPISODES = "SELECT title, season, number FROM episodes ORDER BY seas
 SQL_GET_EPISODES_FOR_SEASON = "SELECT title, number FROM episodes where season = ? ORDER BY number"
 
 
-class MediaDao:
+class TvShowDao:
     def __init__(self, dbname="test.db"):
         self._db_name = dbname
         self._connect = sqlite.connect(dbname)

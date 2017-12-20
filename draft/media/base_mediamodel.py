@@ -23,13 +23,14 @@ class Media:
         self._title = title
         self._duration = int(duration) if duration else None
 
-    @property
-    def title(self):
+    def _get_title(self):
         return self._title
 
-    @property
-    def duration(self):
+    def _get_duration(self):
         return self._duration
+
+    title = property(_get_title)
+    duration = property(_get_duration)
 
     def hm_duration(self):
         if self._duration:
@@ -43,6 +44,9 @@ class Episode(Media):
         Media.__init__(self, title, duration)
         self._number = int(number)
         self._season = int(season) if season else None
+
+    def __eq__(self, other):
+        return self.number == other.number and self.season == other.season
 
     def _get_number(self):
         return self._number
@@ -73,11 +77,12 @@ class TvShow(object):
             return list(self._episodes)
 
     def add_episode(self, title, number, season=None):
-        for episode in self._episodes:
-            if episode.number == number and episode.season == season:
-                raise ValueError('Episode exists')
+        episode = Episode(title, number, season)
 
-        self._episodes.append(Episode(title, number, season))
+        if episode in self._episodes:
+            raise ValueError('Episode exists')
+
+        self._episodes.append(episode)
 
 
 class Movie(Media):
@@ -91,6 +96,7 @@ class Movie(Media):
 
         self._director = director if director else None
 
-    @property
-    def director(self):
+    def _get_director(self):
         return self._director
+
+    director = property(_get_director)

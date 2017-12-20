@@ -1,14 +1,18 @@
 Documentation Formation Python
 ==============================
 
-Ce projet est un support de formation au langage Python. La documentation présente est en fait un cahier d'exercices.
+Ceci est la documentation du projet de formation Python.
+
+Les outils de cette formation sont l'actuel projet aisni que le support de cours
+que vous pouvez vous procurer à partir de l'adresse ___.
+
+Les outils de formation sont les notebooks ainsi que le code.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
    students_notes
-   modules/basic
    exercices/mediatheque
    exercices/regex
 

@@ -5,10 +5,10 @@
 Module destiné à fournir une interface de type terminal.
 """
 
-from draft.media import base_mediamodel as mediamodel
+from draft.media import base_mediamodel as media
 
 
-def episoedes_list():
+def episodes_list():
     """
     Cette fonction attends une liste d'épisodes ordonnés.
     """
@@ -32,15 +32,17 @@ def add_episode():
     _tvshow.add_episode(ep_title, ep_number, ep_season)
 
 
-actions = {}
-actions['a'] = None
-actions['s'] = None
-actions['e'] = episoedes_list
-
 if __name__ == "__main__":
+
+    actions = {}
+    actions['a'] = None
+    actions['s'] = None
+    actions['e'] = episodes_list
+
     print("Gestion de série")
     tvshow_name = input("Entrez le titre de la série ")
-    _tvshow = mediamodel.TvShow(tvshow_name)
+
+    _tvshow = media.TvShow(tvshow_name)
 
     while True:
         print("""

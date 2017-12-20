@@ -136,7 +136,7 @@ class SeasonClassEvolution(unittest.TestCase):
 
     """
 
-    unittest.skip("Season new class 1")
+    @unittest.skip("Season new class 1")
     def test_create_new_season(self):
         """
         Test simplement l'existence d'une classe Season qui doit attendre un
@@ -145,7 +145,7 @@ class SeasonClassEvolution(unittest.TestCase):
         season = mediamodel.Season(1)
         self.assertIsNotNone(season)
 
-    unittest.skip("Season new class 2")
+    @unittest.skip("Season new class 2")
     def test_season_number_must_be_positive_value(self):
         """
         Test que le numéro de saison doit être positif
@@ -153,7 +153,7 @@ class SeasonClassEvolution(unittest.TestCase):
         with self.assertRaises(ValueError):
             mediamodel.Season(-1)
 
-    unittest.skip("Season new class 3")
+    @unittest.skip("Season new class 3")
     def test_has_number_attribute(self):
         """
         Test que la classe Season a bien un attribut *number*.
@@ -161,7 +161,7 @@ class SeasonClassEvolution(unittest.TestCase):
         season = mediamodel.Season(1)
         self.assertTrue(hasattr(season, 'number'))
 
-    unittest.skip("Season new class 4")
+    @unittest.skip("Season new class 4")
     def test_number_is_the_season_number(self):
         """
         Test que l'attribut *number* correspond bien au paramètre passé à
@@ -172,7 +172,7 @@ class SeasonClassEvolution(unittest.TestCase):
         season = mediamodel.Season(1)
         self.assertEqual(season.number, 1)
 
-    unittest.skip("Season new class 5")
+    @unittest.skip("Season new class 5")
     def test_number_must_be_int(self):
         """
         Test que number doit être un entier.
@@ -187,7 +187,7 @@ class SeasonClassEvolution(unittest.TestCase):
         with self.assertRaises(ValueError):
             mediamodel.Season("deux")
 
-    unittest.skip("Season new class 6")
+    @unittest.skip("Season new class 6")
     def test_has_episodes_attribute(self):
         """
         Test que la classe Season a bien un attribut *episodes*
@@ -195,7 +195,7 @@ class SeasonClassEvolution(unittest.TestCase):
         season = mediamodel.Season(1)
         self.assertTrue(hasattr(season, 'episodes'))
 
-    unittest.skip("Season new class 7")
+    @unittest.skip("Season new class 7")
     def test_episodes_attribute_is_collection(self):
         """
         Test que l'atribut episodes soit bien une collection.
@@ -203,7 +203,7 @@ class SeasonClassEvolution(unittest.TestCase):
         season = mediamodel.Season(1)
         self.assertEqual(len(season.episodes), 0)
 
-    unittest.skip("Season new class 8")
+    @unittest.skip("Season new class 8")
     def test_has_add_attribute(self):
         """
         Test que la classe Season a un attribut *add*.
@@ -211,7 +211,7 @@ class SeasonClassEvolution(unittest.TestCase):
         season = mediamodel.Season(1)
         self.assertTrue(hasattr(season, 'add'))
 
-    unittest.skip("Season new class 9")
+    @unittest.skip("Season new class 9")
     def test_can_add_value_to_episodes(self):
         """
         Test simplement que la méthode add prends un paramètre. Dans une
@@ -223,7 +223,7 @@ class SeasonClassEvolution(unittest.TestCase):
         season.add("value")
         self.assertEqual(len(season.episodes), 1)
 
-    unittest.skip("Season new class 10")
+    @unittest.skip("Season new class 10")
     def test_added_episodes_cannot_be_duplicates(self):
         """
         Il ne doit pas être possible d'ajouter deux même épisodes, c'est à dire
