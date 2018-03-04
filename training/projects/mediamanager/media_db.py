@@ -16,7 +16,7 @@ SQL_CREATE_EPISODES_TABLE = "CREATE TABLE IF NOT EXISTS episodes (" \
                             "ON DELETE CASCADE);"
 
 SQL_ADD_SHOW = "INSERT INTO shows values(?)"
-SQL_SELECT_SHOWS = "SELECT name FROM shows"
+SQL_SELECT_SHOWS = "SELECT name FROM shows ORDER BY name"
 
 SQL_ADD_EPISODE = "INSERT INTO episodes values(?, ?, ?, ?)"
 SQL_GET_ALL_EPISODES = "SELECT title, season, number " \
@@ -30,6 +30,32 @@ SQL_GET_EPISODES_FOR_SEASON = "SELECT title, number " \
 
 
 class MediaDao:
+    def __init__(self, dbname="test.db"):
+        self._db_name = dbname
+        self._connect = sqlite.connect(dbname)
+
+        try:
+            cur = self._connect.cursor()
+            cur.execute(SQL_CREATE_SHOWS_TABLE)
+
+        except sqlite.Error as e:
+            print("Error occured")
+            print(e)
+
+    def __del__(self):
+        try:
+            self._connect.close()
+        except sqlite.Error as e:
+            print("Error occured")
+            print(e)
+
+    def get_shows(self):
+        cur = self._connect.cursor()
+        cur.execute(SQL_SELECT_SHOWS)
+        return cur.fetchall()
+
+
+class TvShowDao:
     def __init__(self, show_name, dbname="test.db"):
         self._db_name = dbname
         self._connect = sqlite.connect(dbname)
@@ -70,6 +96,10 @@ class MediaDao:
 
     def __str__(self):
         return 'Media DB Connector ({})'.format(self._db_name)
+
+    @property
+    def name(self):
+        return self._show_name
 
     def add_episode(self, name, season_number, ep_number):
         cur = self._connect.cursor()

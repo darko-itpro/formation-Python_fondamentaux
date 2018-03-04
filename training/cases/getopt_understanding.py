@@ -5,7 +5,8 @@ import getopt
 import sys
 
 """
-Ce module est destiné à illustrer le comportement de getopt.
+Ce module est destiné à illustrer le comportement de getopt. Pour un exemple,
+voir le module getopt_usage
 """
 
 try:

@@ -5,10 +5,11 @@
 Démonstration de l'utilisation de getopt
 
 Usage:
-    basic_getopt options
+    getopt_usage options
 
 Options:
   * -h or --help: displays help
+  * -v or --verbose: verbose mode
   * -o or --output [file]: displays the file intended for output
 """
 

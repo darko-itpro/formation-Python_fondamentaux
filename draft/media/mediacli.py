@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-Module destiné à fournir une interface de type terminal.
+Module destiné à fournir une interface de type terminal. Doit être un module
+principal.
 """
 
 from draft.media import base_mediamodel as media
@@ -10,7 +11,9 @@ from draft.media import base_mediamodel as media
 
 def episodes_list():
     """
-    Cette fonction attends une liste d'épisodes ordonnés.
+    Fonction destinée à afficher une liste d'épisodes ordonnés.
+
+    Cette fonction fait appel à la méthode get_episodes de l'objet saison.
     """
     print("Épisodes pour {}".format(_tvshow.name))
     episodes = _tvshow.get_episodes()
@@ -23,7 +26,10 @@ def episodes_list():
 def add_episode():
     """
     Fonction qui permet d'ajouter un épisode à la série.
-    :return:
+
+    Après avoir posé les questions pour récupérer les paramètres titre, saison
+    et numéro d'épisode, elle fait appel à la méthode add_episode de l'objet
+    saison.
     """
     ep_title = input("Titre de l'épisode")
     ep_season = input("Saison de l'épisode")

@@ -1,23 +1,24 @@
-Documentation Formation Python
+Python : découverte du langage
 ==============================
 
-Ceci est la documentation du projet de formation Python.
-
-Les outils de cette formation sont l'actuel projet aisni que le support de cours
-que vous pouvez vous procurer à partir de l'adresse ___.
-
-Les outils de formation sont les notebooks ainsi que le code.
+Cette documentation Python est un support de formation. Il est un complément
+de la formation et ne saurait se substituer à celle-ci. Cette documentation ne
+constitue pas non plus à elle seule une référence du langage Python.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   students_notes
+   cours/presentation
+   cours/toolbox
+   cours/bases
+   cours/structures_controle
+   cours/fonctions
    exercices/mediatheque
-   exercices/regex
+   modules/draft
 
-Indices and tables
-==================
+Index et tableaux
+=================
 
 * :ref:`genindex`
 * :ref:`modindex`

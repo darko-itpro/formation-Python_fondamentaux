@@ -53,12 +53,27 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+    if args.db_path:
+        _db = media_db.MediaDao(args.db_path)
+    else:
+        _db = media_db.MediaDao()
+
+    shows = _db.get_shows()
+    if shows:
+        print('Available shows :')
+        for show in shows:
+            print(show[0])
+    else:
+        print('No show in database')
+
+    print()
+
     show_name = input("Quelle est votre série ? ")
 
     if args.db_path:
-        _db = media_db.MediaDao(show_name, args.db_path)
+        _db = media_db.TvShowDao(show_name, args.db_path)
     else:
-        _db = media_db.MediaDao(show_name)
+        _db = media_db.TvShowDao(show_name)
 
     print("Gestion de série")
 

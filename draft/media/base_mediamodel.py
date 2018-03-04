@@ -59,7 +59,17 @@ class Episode(Media):
 
 
 class TvShow(object):
+    """
+    Décrit une série télévisée
+
+    :param name: Le nom de la série
+    """
     def __init__(self, name):
+        """
+        Constructeur d'une série télévisée
+
+        :param name: Le nom de la série
+        """
         self._name = name
         self._episodes = []
 
@@ -69,6 +79,15 @@ class TvShow(object):
     name = property(_get_name)
 
     def get_episodes(self, season_number=None):
+        """
+        Retourne une liste d'épisodes
+
+        :param season_number: Numéro de la saison afin de retourner une liste
+            d'épisodes filtrés sur cette saison.
+        :type season_number: Int positif
+
+        :return: Une liste d'épisodes
+        """
         if season_number:
             return [episode
                     for episode in self._episodes
@@ -77,6 +96,15 @@ class TvShow(object):
             return list(self._episodes)
 
     def add_episode(self, title, number, season=None):
+        """
+        Ajoute un épisode à la saison à partir de ses informations de base.
+
+        :param title: Titre de l'épisode
+        :param number: Numéro de l'épisode dans la saison
+        :type number: Int positif
+        :param season: Saison de l'épisode
+        :type season: Int positif
+        """
         episode = Episode(title, number, season)
 
         if episode in self._episodes:

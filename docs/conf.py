@@ -153,5 +153,5 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-
+applehelp_bundle_id = 'net.dad3zero'
 
