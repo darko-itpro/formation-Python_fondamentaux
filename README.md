@@ -39,7 +39,7 @@ Le répertoire `/draft` est un répertoire contenant des squelettes de modules �
 
 Il faut donc commencer par récupérer les sources en local.
 
-Assurez-vous que [pip](https://pypi.python.org/pypi/pip) soit installé. Créez
+Assurez-vous que [pip](https://pypi.python.org/pypi/pip) est installé. Créez
 si vous le souhaitez un [virtualenv](https://virtualenv.pypa.io/en/stable/)
 dédié à la formation. Si vous utilisez un IDE tel que PyCharm, vous pouvez l'utiliser pour créer
 ce virtualenv. Placez vous alors à la racine du projet et saisissez

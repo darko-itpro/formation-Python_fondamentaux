@@ -11,9 +11,15 @@ class TvShow:
     Représente une série et permet de gérer les saisons associées ainsi que les
     informations générales de la série.
 
-    La gestion des saisons se fait ici à l'aide d'un
+    La gestion des saisons se fait ici à l'aide d'une liste triée à l'ajout de
+    chaque nouvelle saison.
     """
     def __init__(self, name):
+        """
+        Crée une nouvelle série
+
+        :param name: Nom de la série (non modifiable)
+        """
         self._name = name
         self._seasons = []
 
@@ -53,7 +59,8 @@ class TvShow:
     def season(self, number):
         for season in self._seasons:
             if season.number == number:
-                return season
+                import copy
+                return copy.deepcopy(season)
 
     def get_episodes(self, season_number=None):
 
