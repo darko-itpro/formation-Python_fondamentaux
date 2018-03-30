@@ -5,6 +5,7 @@
 Ce module illustre la création de classes par prototype
 """
 
+
 def proto_init_tvshow(self, name):
     """
     Méthode qui est destinée à devenir l'initialiseur de la classe

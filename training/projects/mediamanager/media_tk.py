@@ -18,6 +18,13 @@ episode_list = []
 
 
 def add_episode(title, number):
+    """
+    Ajoute un épisode à la collection gérée. Ajoute également cet épisode au
+    composant `episode_frame`.
+
+    :param title: Titre de l'épisode à ajouter
+    :param number: Numéro de l'épisode à ajouter
+    """
 
     episode = mediamodel.Episode(title, number)
     episode_list.append(episode)
@@ -28,10 +35,20 @@ def add_episode(title, number):
 
 
 def select_episode(ep_index):
+    """
+    Communique les informations d'un épisode à la `form_frame`.
+
+    :param ep_index: indice d'un épisode dans la collection.
+    """
     form_frame.set_values(episode_list[ep_index].title, episode_list[ep_index].number)
 
 
 def delete_episode(ep_index):
+    """
+    Supprime un épisode de la liste des épisodes.
+
+    :param ep_index: indice de l'épisode à supprimer.
+    """
     episode_list.pop(ep_index)
 
 fenetre.title('Episode Manager')
