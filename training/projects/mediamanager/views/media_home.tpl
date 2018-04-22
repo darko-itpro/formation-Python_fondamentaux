@@ -7,9 +7,11 @@
 <body>
     <h1>Gestion médiathèque</h1>
 
+    <p>Cette page ne sert qu'à illustrer la génération d'une page <i>statique</i>.</p>
+
     <p>Options :
     <ul>
-        <li><a href="/shows/">Vue séries</a></li>
+        <li><a href="/shows/">Mes séries</a></li>
     </ul>
     </p>
 
