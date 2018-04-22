@@ -1,6 +1,6 @@
 def add(a, b):
     """
-        Illustration d'un Doctest
+        Illustration d'un Doctest.
 
         :Example:
 

@@ -1,7 +1,12 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*-
 
-"""Voir https://docs.python.org/3/howto/argparse.html"""
+"""
+Module démo pour l'usage de `argparse` afin d'exploiter les arguments du
+lancement de programme.
+
+.. seealso:: Voir https://docs.python.org/3/howto/argparse.html
+"""
 
 if __name__ == "__main__":
     import argparse

@@ -1,6 +1,11 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*-
 
+"""
+Ce module contient un objet *simple* qui peut être utilisé pour manipuler un
+premier objet *complexe*.
+"""
+
 
 class Playlist:
     """
