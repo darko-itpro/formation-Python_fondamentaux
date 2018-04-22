@@ -61,8 +61,8 @@ if __name__ == "__main__":
     shows = _db.get_shows()
     if shows:
         print('Available shows :')
-        for show in shows:
-            print(show[0])
+        for title in shows:
+            print(title)
     else:
         print('No show in database')
 

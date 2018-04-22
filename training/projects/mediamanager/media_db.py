@@ -52,7 +52,7 @@ class MediaDao:
     def get_shows(self):
         cur = self._connect.cursor()
         cur.execute(SQL_SELECT_SHOWS)
-        return cur.fetchall()
+        return [show[0] for show in cur.fetchall()]
 
 
 class TvShowDao:
