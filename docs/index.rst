@@ -14,6 +14,7 @@ constitue pas non plus à elle seule une référence du langage Python.
    cours/bases
    cours/structures_controle
    cours/fonctions
+   cours/web
    exercices/sncf
    exercices/mediatheque
    modules/draft

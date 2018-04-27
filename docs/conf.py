@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Python Training'
-copyright = '2017, Darko Stankovski CC-BY-NC-ND'
+copyright = '2017-2018, Darko Stankovski CC-BY-NC-ND'
 author = 'Darko Stankovski'
 
 # The version info for the project you're documenting, acts as replacement for
