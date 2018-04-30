@@ -1,9 +1,9 @@
 bottle==0.12.13
-cosmic-ray==3.1.0
+cosmic-ray==3.1.2
 coverage==4.5.1
-ipython==6.2.1
+ipython==6.3.1
 jupyter==1.0.0
-pylint==1.8.2
-Sphinx==1.7.2
-virtualenv==15.1.0
+pylint==1.8.4
+Sphinx==1.7.4
+virtualenv==15.2.0
 virtualenvwrapper==4.8.2

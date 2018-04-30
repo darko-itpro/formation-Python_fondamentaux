@@ -3,7 +3,7 @@
 
 """
 Ce module contient un objet *simple* qui peut être utilisé pour manipuler un
-premier objet *complexe*.
+premier objet.
 """
 
 
@@ -19,7 +19,7 @@ class Playlist:
         """
         Retourne le contenu de la playlist.
         :return: Une liste de chaines de caractères représentant les titres dans
-        l'ordre.
+        l'ordre d'ajout.
         """
         return self._stack
 
@@ -28,7 +28,6 @@ class Playlist:
         Ajoute un élément à la playliste si il n'est pas déjà présent.
 
         :param title: le titre de l'épisode
-        :return:
         :raise ValueError: si l'élément existe déjà dans la lsite.
         """
         if title not in self._stack:

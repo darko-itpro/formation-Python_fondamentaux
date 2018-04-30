@@ -19,7 +19,7 @@ def index():
 
 @route('/tpl/')
 def indextpl():
-    return template('hello_world', names = our_heroes)
+    return template('hello_world', names=our_heroes)
 
 
 @route('/hello/<name>')
