@@ -18,6 +18,7 @@ constitue pas non plus à elle seule une référence du langage Python.
    exercices/sncf
    exercices/mediatheque
    modules/draft
+   modules/mediatheque
 
 Index et tableaux
 =================

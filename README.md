@@ -60,17 +60,17 @@ La documentation est alors dispoible dans le sous répertoire *_build/html*.
 
 ## Cahiers d'exercices
 
-Le répertoire *notebooks* contient des *cahiers d'exercices*. Ceux-ci sont
+Le répertoire *workbooks* contient des *cahiers d'exercices*. Ceux-ci sont
 des documents type *Jupyter Notebooks* générés à l'aide de
 [Jupyter](http://jupyter.org/). Ce dernier est inclus dans les dépendances.
  
-Placez-vous dans le répertoire *notebooks* et exécutez la commande
+Placez-vous dans le répertoire *workbooks* et exécutez la commande
 
 ```
 jupyter notebook 00_presentation.ipynb
 ```
 
-Vous pouvez maintenant travailler avec les *notebooks*. Ceux-ci sont proposés
+Vous pouvez maintenant travailler avec les *workbooks*. Ceux-ci sont proposés
 comme outil pour vous aider à vous familiariser avec le langage.
 
 ## Ressources
