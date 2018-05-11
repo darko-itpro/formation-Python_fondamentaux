@@ -36,6 +36,21 @@ def add_episode():
     except ValueError:
         print("L'épisode {} de la saison {} existe déjà".format(ep_number, ep_season))
 
+
+def display_shows(db_path):
+    """
+    Affiche les séries contenues dans la base.
+    """
+    shows_db = media_db.MediaDao(db_path)
+
+    shows = shows_db.get_shows()
+    if shows:
+        print('Available shows :')
+        for title in shows:
+            print(title)
+    else:
+        print('No show in database')
+
 actions = {}
 actions['a'] = add_episode
 actions['e'] = episodes_list
@@ -53,27 +68,15 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    if args.db_path:
-        _db = media_db.MediaDao(args.db_path)
-    else:
-        _db = media_db.MediaDao()
+    db_path = args.db_path if args.db_path else "default.db"
 
-    shows = _db.get_shows()
-    if shows:
-        print('Available shows :')
-        for title in shows:
-            print(title)
-    else:
-        print('No show in database')
+    display_shows(db_path)
 
     print()
 
     show_name = input("Quelle est votre série ? ")
 
-    if args.db_path:
-        _db = media_db.TvShowDao(show_name, args.db_path)
-    else:
-        _db = media_db.TvShowDao(show_name)
+    _db = media_db.TvShowDao(show_name, db_path)
 
     print("Gestion de série")
 
@@ -85,10 +88,10 @@ if __name__ == "__main__":
         """)
 
         choice = input("Choix ? ")
-        if choice in actions:
-            actions[choice]()
-        elif choice == "q":
+        if choice == "q":
             break
+        elif choice in actions:
+            actions[choice]()
         else:
             print("Choix non valide")
     print("Bye")

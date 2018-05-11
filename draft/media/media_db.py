@@ -7,7 +7,7 @@ SQL_CREATE_EPISODES_TABLE = "CREATE TABLE IF NOT EXISTS episodes (number INT NOT
 
 SQL_ADD_EPISODE = "INSERT INTO episodes values(?, ?, ?)"
 SQL_GET_ALL_EPISODES = "SELECT title, season, number FROM episodes ORDER BY season, number"
-SQL_GET_EPISODES_FOR_SEASON = "SELECT title, number FROM episodes where season = ? ORDER BY number"
+SQL_GET_EPISODES_FOR_SEASON = "SELECT title, season, number FROM episodes where season = ? ORDER BY number"
 
 
 class TvShowDao:

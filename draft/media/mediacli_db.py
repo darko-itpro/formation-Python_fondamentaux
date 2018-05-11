@@ -55,10 +55,10 @@ if __name__ == "__main__":
         """)
 
         choice = input("Choix ? ")
-        if choice in actions:
-            actions[choice]()
-        elif choice == "q":
+        if choice == "q":
             break
+        elif choice in actions:
+            actions[choice]()
         else:
             print("Choix non valide")
     print("Bye")

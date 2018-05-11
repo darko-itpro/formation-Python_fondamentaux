@@ -254,7 +254,14 @@ class Episode(Media):
     Définit un épisode qui est un objet de type média.
 
     Le titre et le numéro sont considérés comme pouvant être modifés.
+
+    :param title: Titre de l'épisode
+    :param number: Numéro de l'épisode, doit être un entier positif ou nul.
+    :param season: Saison à laquelle appartient l'épisode. Soit être un entier positif ou nul ou None si la saison n'est pas connue.
+    :param duration: Durée en minutes. Doit être un entier positif ou None si la durée est inconnue.
+    :param year: Année de l'épisode, doit être un entier positif suppérieur à 1900 ou None si inconnu.
     """
+
     def __init__(self, title, number, season=None, duration=None, year=None):
         Media.__init__(self, title, duration, year)
         self._number = int(number)
@@ -262,10 +269,16 @@ class Episode(Media):
 
     @property
     def number(self):
+        """
+        Le numérod e l'épisode, ne peut être modifié.
+        """
         return self._number
 
     @property
     def season(self):
+        """
+        La saison à laquelle appartient l'épisode. Ne peut être modifiée.
+        """
         return self._season
 
     def __str__(self):
