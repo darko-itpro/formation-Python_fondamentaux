@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
@@ -33,6 +33,11 @@ class Media:
     duration = property(_get_duration)
 
     def hm_duration(self):
+        """
+        Human readable duration
+
+        :return: la durée sous forme de tuple (heures, minutes)
+        """
         if self._duration:
             return divmod(self._duration, 60)
         else:

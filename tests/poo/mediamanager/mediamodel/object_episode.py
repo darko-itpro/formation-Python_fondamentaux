@@ -1,12 +1,19 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*-
 
+"""
+Module de test de la classe Episode
+"""
+
 import unittest
 
 from training.projects.mediamanager import mediamodel
 
 
 class CreateEpisode(unittest.TestCase):
+    """
+    Tests de la création d'un épisode
+    """
 
     def test_create_episode_without_season(self):
         episode = mediamodel.Episode("Title", 1)

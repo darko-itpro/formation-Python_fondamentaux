@@ -12,9 +12,9 @@ from tkinter import Tk, Button, Frame, LEFT, RIGHT, BOTTOM
 from training.projects.mediamanager import mediamodel
 from training.projects.mediamanager import media_widgets
 
-fenetre = Tk()
+FENETRE = Tk()
 
-episode_list = []
+EPISODE_LIST = []
 
 
 def add_episode(title, number):
@@ -27,11 +27,11 @@ def add_episode(title, number):
     """
 
     episode = mediamodel.Episode(title, number)
-    episode_list.append(episode)
-    episode_list.sort(key=lambda x: x.number)
-    ep_index = episode_list.index(episode)
+    EPISODE_LIST.append(episode)
+    EPISODE_LIST.sort(key=lambda x: x.number)
+    ep_index = EPISODE_LIST.index(episode)
 
-    episodes_frame.add_element(title, ep_index)
+    EPISODES_FRAME.add_element(title, ep_index)
 
 
 def select_episode(ep_index):
@@ -40,7 +40,7 @@ def select_episode(ep_index):
 
     :param ep_index: indice d'un épisode dans la collection.
     """
-    form_frame.set_values(episode_list[ep_index].title, episode_list[ep_index].number)
+    FORM_FRAME.set_values(EPISODE_LIST[ep_index].title, EPISODE_LIST[ep_index].number)
 
 
 def delete_episode(ep_index):
@@ -49,18 +49,18 @@ def delete_episode(ep_index):
 
     :param ep_index: indice de l'épisode à supprimer.
     """
-    episode_list.pop(ep_index)
+    EPISODE_LIST.pop(ep_index)
 
-fenetre.title('Episode Manager')
+FENETRE.title('Episode Manager')
 
-buttons_frame = Frame(fenetre)
-Button(buttons_frame, text='Quit', command=fenetre.quit).pack(side=RIGHT)
-buttons_frame.pack(side=BOTTOM)
+BUTTONS_FRAME = Frame(FENETRE)
+Button(BUTTONS_FRAME, text='Quit', command=FENETRE.quit).pack(side=RIGHT)
+BUTTONS_FRAME.pack(side=BOTTOM)
 
-form_frame = media_widgets.EpisodeEntry(fenetre, add_episode, "Titre", "N°")
-episodes_frame = media_widgets.CollectionFrame(fenetre, select_callback=select_episode,
+FORM_FRAME = media_widgets.EpisodeEntry(FENETRE, add_episode, "Titre", "N°")
+EPISODES_FRAME = media_widgets.CollectionFrame(FENETRE, select_callback=select_episode,
                                                delete_callback=delete_episode)
-episodes_frame.pack(side=LEFT)
-form_frame.pack()
+EPISODES_FRAME.pack(side=LEFT)
+FORM_FRAME.pack()
 
-fenetre.mainloop()
+FENETRE.mainloop()

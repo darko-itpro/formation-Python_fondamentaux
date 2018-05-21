@@ -1,12 +1,17 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
+"""
+Ce module contient les outils pour charger les données média à partir de
+fichiers.
+"""
 
 import re
 import os
 
-series_re = re.compile("-s([0-9]{2})e([0-9]{2})-")
+SERIES_RE = re.compile("-s([0-9]{2})e([0-9]{2})-")
 
-series_full_name = "Silicon_Valley-s01e03-Articles_Of_Incorporation.avi"
+SERIES_FULL_NAME = "Silicon_Valley-s01e03-Articles_Of_Incorporation.avi"
 
 
 def get_series_value_from_file(filename):
@@ -24,7 +29,7 @@ def get_series_value_from_file(filename):
     """
     series_file_name, series_ext = os.path.splitext(filename)
 
-    series_match = series_re.search(series_file_name)
+    series_match = SERIES_RE.search(series_file_name)
 
     if series_match:
         return series_file_name[:series_match.start()].replace('_', ' '),\
@@ -35,6 +40,13 @@ def get_series_value_from_file(filename):
 
 
 def open_file(filepath):
+    """
+    Fonction spécifique aux exercices pour charger les noms de fichiers à partir
+    d'un fichier.
+
+    :param filepath: Chemin vers le fichier contenant les noms de fichiers épisodes
+    :return: Une liste de tuples (titre série, numéro série, numéro épisode, titre épisode)
+    """
     if os.path.exists(filepath):
         media_file = open(filepath, 'r')
         media_data = [get_series_value_from_file(media[:-1])
@@ -42,21 +54,22 @@ def open_file(filepath):
         media_file.close()
 
         return media_data
+    else:
+        return None
 
 
 if __name__ == '__main__':
 
     import argparse
-    import os
 
-    parser = argparse.ArgumentParser(description='')
-    parser.add_argument("-f", "--file", help="Path to the file to parse",
+    PARSER = argparse.ArgumentParser(description='')
+    PARSER.add_argument("-f", "--file", help="Path to the file to parse",
                         type=str, action="store")
 
-    args = parser.parse_args()
+    ARGS = PARSER.parse_args()
 
-    if args.file:
-        for media in open_file(args.file):
+    if ARGS.file:
+        for media in open_file(ARGS.file):
             print(media)
     else:
-        print(get_series_value_from_file(series_full_name))
+        print(get_series_value_from_file(SERIES_FULL_NAME))

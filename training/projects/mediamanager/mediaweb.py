@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
@@ -15,8 +15,8 @@ def index():
 
 @route('/shows/')
 def index_show():
-    _my_shows.get_shows()
-    return template('series', series=_my_shows.get_shows())
+    _MY_SHOWS.get_shows()
+    return template('series', series=_MY_SHOWS.get_shows())
 
 
 @post('/add/')
@@ -29,6 +29,6 @@ def add_show():
 
 if __name__ == '__main__':
 
-    _my_shows = media_db.MediaDao()
+    _MY_SHOWS = media_db.MediaDao()
 
     run(host='localhost', port=8080)

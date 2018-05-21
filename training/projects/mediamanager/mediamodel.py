@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
@@ -38,6 +38,15 @@ class TvShow:
             raise ValueError('Season exists')
 
     def add_episode(self, title, ep_number, season_number=None):
+        """
+        Ajoute un épisode
+
+        :param title: Titre de l'épisode
+        :param ep_number: Numéro de l'épisode, entier positif
+        :type ep_number: int
+        :param season_number: Numéro de saison entier positif ou nul
+        :type season_number: int
+        """
         for season in self._seasons:
             if season.number == season_number:
                 season.add(Episode(title, ep_number, season_number))
@@ -62,14 +71,23 @@ class TvShow:
                 import copy
                 return copy.deepcopy(season)
 
+        return None
+
     def get_episodes(self, season_number=None):
+        """
+        Retourne une liste d'épisodes
+
+        :param season_number: Numéro de saison afin de filtrer les épisodes, entier positif ou nul.
+        :type season_number: int
+        :return: Une liste d'épisodes ou vide si aucun épiside ne correspond à la saison.
+        """
 
         if season_number:
             for season in self._seasons:
                 if season.number == season_number:
                     return season.episodes
-            else:
-                return []
+
+            return []
 
         else:
             return sum([season.episodes
@@ -141,7 +159,8 @@ class Season:
 
     def episode(self, number):
         """
-        Retourne un épisode en fonction de son numéro. Une exception est levée si aucun épisode ne correspond.
+        Retourne un épisode en fonction de son numéro. Une exception est levée
+        si aucun épisode ne correspond.
 
         :param number: Numéro de l'épisode.
         :return: Un épisode si la saison contient un épisode avec ce numéro ou None.
@@ -160,7 +179,8 @@ class Season:
     @property
     def episodes(self):
         """
-        Cet *accesseur* retourne une copie de la liste des épisodes, évitant ainsi une modification accidentelle.
+        Cet *accesseur* retourne une copie de la liste des épisodes, évitant
+        ainsi une modification accidentelle.
         :return: La liste des épisodes
         """
         return list(self._episodes)
@@ -178,8 +198,8 @@ class Season:
         """
         Fonction *avancée* permétant d'interroger un objet Season pour savoir il possède un objet de
         type Episode avec l'instruction *episode in season*
-        
-        :param item: un objet de type Episode ou du moins qui contient un attribut *number* 
+
+        :param item: un objet de type Episode ou du moins qui contient un attribut *number*
         :return: vrai si un élément de la collection contient un attribut *number* égal à l'attribut
         *number* de l'objet.
         """
@@ -227,8 +247,7 @@ class Media:
     @duration.setter
     def duration(self, value):
         if value <= 0:
-            raise ValueError("Duration must be a positive value"
-                             )
+            raise ValueError("Duration must be a positive value")
         self._duration = int(value)
 
     @duration.deleter
@@ -237,6 +256,11 @@ class Media:
 
     @property
     def title(self):
+        """
+        Méthode destinées à la property retournant le titre.
+
+        :return:
+        """
         return self._title
 
     def hm_duration(self):
@@ -286,6 +310,9 @@ class Episode(Media):
 
 
 class Movie(Media):
+    """
+    Généralisaton du concept de Media.
+    """
     def __init__(self, title, duration=None, year=None, director=None):
         Media.__init__(self, title, duration, year)
         self.director = str(director) if director else None

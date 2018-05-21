@@ -64,10 +64,11 @@ Le répertoire *workbooks* contient des *cahiers d'exercices*. Ceux-ci sont
 des documents type *Jupyter Notebooks* générés à l'aide de
 [Jupyter](http://jupyter.org/). Ce dernier est inclus dans les dépendances.
  
-Placez-vous dans le répertoire *workbooks* et exécutez la commande
+Dans un terminal localisé dans le répertoire racine du projet,  exécutez la
+commande
 
 ```
-jupyter notebook 00_presentation.ipynb
+jupyter notebook
 ```
 
 Vous pouvez maintenant travailler avec les *workbooks*. Ceux-ci sont proposés
