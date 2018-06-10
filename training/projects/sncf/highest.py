@@ -5,18 +5,19 @@ Module *solution* de l'exercices "quel est la valeur la plus élevée de
 montants".
 
 
-L'exéction de ce module est supposé à la racine du projet.
+L'exéction de ce module est supposé à la racine du projet pour le chemin vers le
+fichier de données.
 """
 import os.path
 
-file_name = "assets/comptage-voyageurs-trains-transilien.csv"
+FILE_NAME = "assets/comptage-voyageurs-trains-transilien.csv"
 
-if not os.path.exists(file_name):
+if not os.path.exists(FILE_NAME):
     print('Attention, exécutez ce module à la racine du projet !')
     import sys
     sys.exit(1)
 
-with open(file_name) as SNCF_FILE:
+with open(FILE_NAME) as SNCF_FILE:
 
     SNCF_FILE.readline()
 

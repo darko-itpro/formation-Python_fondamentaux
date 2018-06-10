@@ -208,11 +208,13 @@ Python permet des opérations binaires.
 
 Donc ``0b101`` OU BINAIRE ``0b110`` donne ``0b111`` soit 7.
 
-*************
-Les séquences
-*************
+***************
+Les collections
+***************
 
-La notion de séquences regroupe les types qui représentent des collections.
+La notion de **collection** regroupe les types qui contiennent des… collections
+de données. Les collections d'éléments ordonnés sont des **séquences**.
+
 Python propose plusieurs types de base : les chaines de caractères (``string``),
 les listes, les tuples, les ensembles (``set``) et les dictionnaires.
 
