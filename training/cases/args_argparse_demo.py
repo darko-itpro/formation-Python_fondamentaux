@@ -2,8 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
-Module démo pour l'usage de `argparse` afin d'exploiter les arguments du
+Démonstration de l'usage de `argparse` afin d'exploiter les arguments du
 lancement de programme.
+
+Le module est destiné à illustrer la présentation, si vous voulez le tester,
+décommantez les lignes sauf celles commentées `will fail`.
 
 .. seealso:: Voir https://docs.python.org/3/howto/argparse.html
 """
