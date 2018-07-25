@@ -22,7 +22,7 @@ def index_show():
 @post('/add/')
 def add_show():
     show_title = request.forms.get('new_show')
-    my_new_show = media_db.TvShowDao(show_title)
+    my_new_show = media_db.TvShow(show_title)
     del my_new_show
     redirect("/shows/")
 

@@ -1,8 +1,5 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-from training.projects.mediamanager import media_db as media_db
-
 
 def episodes_list():
     """
@@ -10,10 +7,11 @@ def episodes_list():
     :return: None
     """
     print("Liste d'épisodes")
-    ep_liste = _db.get_episodes()
-    if len(ep_liste) > 0:
+    ep_liste = TV_SHOW.get_episodes()
+    if ep_liste:
         for entry in ep_liste:
-            print("s{:0>2}e{:0>2} {}".format(entry[1], entry[2], entry[0]))
+            print("s{:0>2}e{:0>2} {}"
+                  .format(entry.season, entry.number, entry.title))
     else:
         print("Pas d'épisodes")
 
@@ -32,24 +30,29 @@ def add_episode():
         return
 
     try:
-        _db.add_episode(ep_title, str(ep_season), str(ep_number))
+        TV_SHOW.add_episode(ep_title, str(ep_season), str(ep_number))
     except ValueError:
-        print("L'épisode {} de la saison {} existe déjà".format(ep_number, ep_season))
+        print("L'épisode {} de la saison {} existe déjà"
+              .format(ep_number, ep_season))
 
 
 def display_shows(db_path):
     """
-    Affiche les séries contenues dans la base.
+    Affiche les séries contenues dans un gestionnaire de séries.
     """
-    shows_db = media_db.MediaDao(db_path)
+    if db_path is None:
+        print('Gestion en mémoire.')
+        return
+
+    shows_db = media.MediaDao(db_path)
 
     shows = shows_db.get_shows()
     if shows:
-        print('Available shows :')
+        print('Séries disponibles :')
         for title in shows:
             print(title)
     else:
-        print('No show in database')
+        print('Pas de série dans la base')
 
 actions = {}
 actions['a'] = add_episode
@@ -60,15 +63,27 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Gestion de médiathèque par base de données"
+        description="Gestion de médiathèque. Par défaut, la gestion des données"
+                    " est assurée par une base de données."
     )
 
+    parser.add_argument('-s', '--statefull', action='store_true',
+                        help="Force l'utilisation du modèle objet. "
+                             "Ignoré si une base est spécifiée")
     parser.add_argument('-p', '--db_path',
                         help='Chemin vers le fichier de la base')
 
-    args = parser.parse_args()
+    ARGS = parser.parse_args()
 
-    db_path = args.db_path if args.db_path else "default.db"
+    if ARGS.db_path:
+        db_path = ARGS.db_path
+        from training.projects.mediamanager import media as media
+    elif ARGS.statefull:
+        db_path = None
+        from training.projects.mediamanager import mediamodel as media
+    else:
+        db_path = "default.db"
+        from training.projects.mediamanager import media as media
 
     display_shows(db_path)
 
@@ -76,7 +91,7 @@ if __name__ == "__main__":
 
     show_name = input("Quelle est votre série ? ")
 
-    _db = media_db.TvShowDao(show_name, db_path)
+    TV_SHOW = media.TvShowDao(show_name, db_path)
 
     print("Gestion de série")
 
