@@ -3,9 +3,6 @@
 
 """
 Mediamodel de base mettant en œuvre l'héritage pour les types Movie et Episode.
-
-L'usage des property est décrit des deux manières, par décorateurs au sein de
-Media et Movie, par la classe property dans la classe Episode.
 """
 
 
@@ -23,14 +20,13 @@ class Media:
         self._title = title
         self._duration = int(duration) if duration else None
 
-    def _get_title(self):
+    @property
+    def title(self):
         return self._title
 
-    def _get_duration(self):
+    @property
+    def duration(self):
         return self._duration
-
-    title = property(_get_title)
-    duration = property(_get_duration)
 
     def hm_duration(self):
         """
@@ -53,14 +49,13 @@ class Episode(Media):
     def __eq__(self, other):
         return self.number == other.number and self.season == other.season
 
-    def _get_number(self):
+    @property
+    def number(self):
         return self._number
 
-    def _get_season(self):
+    @property
+    def season(self):
         return self._season
-
-    number = property(_get_number)
-    season = property(_get_season)
 
 
 class TvShow(object):
@@ -78,10 +73,9 @@ class TvShow(object):
         self._name = name
         self._episodes = []
 
-    def _get_name(self):
+    @property
+    def name(self):
         return self._name
-
-    name = property(_get_name)
 
     def get_episodes(self, season_number=None):
         """
@@ -129,7 +123,6 @@ class Movie(Media):
 
         self._director = director if director else None
 
-    def _get_director(self):
+    @property
+    def director(self):
         return self._director
-
-    director = property(_get_director)

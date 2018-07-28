@@ -108,11 +108,11 @@ class BankAccount(object):
     def _get_id(self):
         return self._id
 
-    def _get_balance(self):
+    @property
+    def balance(self):
         return self._balance
 
     nid = property(_get_id, _set_id)
-    balance = property(_get_balance)
 
     def __str__(self):
         return "Compte client {} - solde {}"\
@@ -150,4 +150,5 @@ if __name__ == '__main__':
 
     import doctest
     doctest.testmod()
+
 

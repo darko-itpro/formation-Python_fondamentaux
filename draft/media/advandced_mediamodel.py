@@ -53,7 +53,8 @@ class Season:
         self._number = number
         self._episodes = []
 
-    def _get_number(self):
+    @property
+    def number(self):
         return self._number
 
     def add(self, episode):
@@ -64,16 +65,14 @@ class Season:
         self._episodes.append(episode)
         self._episodes.sort()
 
-    def _get_episodes(self):
+    @property
+    def episodes(self):
         """
         Retourne une liste des épisodes sous forme d'une copie afin d'éviter les
         modifications involontaires.
         :return: Une copie de la liste des épisodes
         """
         return list(self._episodes)
-
-    number = property(_get_number)
-    episodes = property(_get_episodes)
 
 
 class TvShow:
@@ -103,11 +102,10 @@ class TvShow:
             if season.number == number:
                 return season
 
-    def _get_name(self):
+    @property
+    def name(self):
         return self._name
 
-    def _get_seasons(self):
+    @property
+    def seasons(self):
         return list(self._seasons)
-
-    name = property(_get_name)
-    seasons = property(_get_seasons)
