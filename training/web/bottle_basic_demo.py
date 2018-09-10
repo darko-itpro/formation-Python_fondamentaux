@@ -3,6 +3,9 @@
 
 """
 Illustration de l'usage Web avec Bottle.
+
+Attention ! Ce module sert à présenter les fonctions, certaines fonctions sont
+redondantes ce qui fait que ce module n'est pas à exécuter en tant que tel.
 """
 
 from bottle import route, run, template, post, request, error, view
@@ -97,4 +100,4 @@ def do_login():
         return "<p>Login failed.</p>"
 
 
-run(host='localhost', port=8080)
+# run(host='localhost', port=8080)

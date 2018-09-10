@@ -20,39 +20,39 @@ def next_member(member: typing.Union[int, str]) -> int:
     :param member: Un entier
     :return: L'entier suivant dans la suite de Conway
     """
-    next_one = []
+    NEXT_ONE = []
     last_value = None
-    occurences = 0
+    occurrences = 0
 
     for value in str(member):
         if last_value == value:
-            occurences += 1
+            occurrences += 1
         else:
-            next_one.append(str(occurences))
-            next_one.append(str(last_value))
+            NEXT_ONE.append(str(occurrences))
+            NEXT_ONE.append(str(last_value))
             last_value = value
-            occurences = 1
+            occurrences = 1
 
-    next_one.append(str(occurences))
-    next_one.append(str(last_value))
+    NEXT_ONE.append(str(occurrences))
+    NEXT_ONE.append(str(last_value))
 
-    next_one.pop(0)
-    next_one.pop(0)
+    NEXT_ONE.pop(0)
+    NEXT_ONE.pop(0)
 
-    return int("".join(next_one))
+    return int("".join(NEXT_ONE))
 
 
-def print_next_occurences(initial_value:typing.Union[int, str]=1, occurences:int=1):
+def print_next_occurences(initial_value:typing.Union[int, str]=1, occurrences:int=1):
     """
     Affiche les `occurences` éléments suivants d'une suite avec la valeur de
     départ `initial_value`.
 
     :param initial_value: Valeur initiale, 1 par défaut.
-    :param occurences: Nombre d'occurences de la suite, 1 par défaut.
+    :param occurrences: Nombre d'occurences de la suite, 1 par défaut.
     """
     value = str(initial_value)
     print(value)
-    for occurence in range(occurences):
+    for occurrence in range(occurrences):
         value = next_member(value)
         print(value)
 

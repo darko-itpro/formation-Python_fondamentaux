@@ -30,11 +30,13 @@ class AccessEpisodes(unittest.TestCase):
     def tearDown(self):
         del self.show
 
-    def test_has_get_episodes_attr(self):
+    def test_has_get_episodes_callable_attr(self):
         self.assertTrue(hasattr(self.show, 'get_episodes'))
+        self.assertTrue(callable(self.show.get_episodes))
 
-    def test_has_add_episode_attr(self):
+    def test_has_add_episode_callable_attr(self):
         self.assertTrue(hasattr(self.show, 'add_episode'))
+        self.assertTrue(callable(self.show.add_episode))
 
     def test_empty_show(self):
         self.assertEqual(len(self.show.get_episodes()), 0)
