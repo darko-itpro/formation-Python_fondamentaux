@@ -7,7 +7,7 @@
 <body>
     <h1>Gestion médiathèque</h1>
 
-    <p>Cette page ne sert qu'à illustrer la génération d'une page <i>statique</i>.</p>
+    <p>Cette page très Web 1.0 sert à illustrer la gestion d'une page <i>statique</i>.</p>
 
     <p>Options :
     <ul>

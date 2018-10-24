@@ -1,4 +1,4 @@
-<html>
+<html lang="FR_fr">
     <head>
         <title>Gestion Médiathèque</title>
     </head>
@@ -10,7 +10,7 @@
     % if series:
     <ul>
         % for name in series:
-        <li><a href="/hello/{{name}}">{{name}}</a> </li>
+        <li><a href="/show/{{name.replace(' ', '_')}}">{{name}}</a> </li>
         % end
     </ul>
     % else:
