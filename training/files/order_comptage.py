@@ -44,7 +44,10 @@ class ComptageReader:
 
     def get_stations(self):
         """
-        Permet d'obtenir la liste des gares
+        Permet d'obtenir la liste des gares.
+
+        La méthode utilise un set pour collecter le nom des gares afin d'éviter
+        les doublons.
 
         :return: Une liste ordonnée alphabétiquement des gares.
         """

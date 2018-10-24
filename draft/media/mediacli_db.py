@@ -1,7 +1,11 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*-
 
-from draft.media import media_db as media_db
+"""
+Module destiné à fournir une interface de type terminal.
+"""
+
+from draft.media import media_db as media
 
 
 def episodes_list():
@@ -29,27 +33,32 @@ def add_episode():
 
     # TODO: Ajouter le code pour ajouter un épisode en base
 
-actions = {}
-actions['a'] = add_episode
-actions['e'] = episodes_list
 
 if __name__ == "__main__":
-    print("Gestion de série")
 
-    _db = media_db.MediaDao()
+    actions = {}
+    actions['a'] = add_episode
+    actions['s'] = None
+    actions['e'] = episodes_list
+
+    print("Gestion de série")
+    tvshow_name = input("Entrez le titre de la série ")
+
+    _db = media.TvShowDao()
 
     while True:
         print("""
         [a] ajouter un épisode
+        [s] lister les saisons
         [e] lister les épisodes
         [q] sortie
         """)
 
         choice = input("Choix ? ")
-        if choice in actions:
-            actions[choice]()
-        elif choice == "q":
+        if choice == "q":
             break
+        elif choice in actions:
+            actions[choice]()
         else:
             print("Choix non valide")
     print("Bye")

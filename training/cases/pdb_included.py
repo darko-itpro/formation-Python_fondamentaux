@@ -5,7 +5,6 @@
 Example how to use pdb to interrupt an exception and explore the post-mortem.
 """
 
-from __future__ import print_function
 import pdb
 
 a = 0

@@ -19,8 +19,6 @@ Ces sources contiennet un *corrigé* des exercices pratiques proposés en cours.
 Rappelez-vous que bien que la devise de Python soit *Il y a une manière évidente
 de faire*, il s'agit donc d'une proposition de *solution* dont l'objectif principal est d'illustrer
 ce qui a été présenté en formation. Les répertoires d'intérêt sont :
-* `/training/basic` contient des modules correspondants à la présentation des *bases* de Python et 
-  qui sont globalement proposition de résolution des exercices des notebooks.
 * `/training/projects` propose plusieurs projets regroupés en packages.
     * `/bank` propose des modules sur le thème de la gestion de comptes bancaires.
     * `/mediamanager` contient des modules répondant aux différents exercices de création et
@@ -30,7 +28,7 @@ ce qui a été présenté en formation. Les répertoires d'intérêt sont :
 * `/training/cases` est un package contennat des modules illustrant des outils présentés durant la
   formation
 
-Historiquement certains modules contiennent le sujet.
+Historiquement certains modules peuvent contenir le sujet.
 
 La documentation accompagnant les sources dans le répertoire `/docs` contient les sujets d'exercice.
  Le plus simple pour y accéder pendant la formation est de générer la documentation.
@@ -41,7 +39,7 @@ Le répertoire `/draft` est un répertoire contenant des squelettes de modules �
 
 Il faut donc commencer par récupérer les sources en local.
 
-Assurez-vous que [pip](https://pypi.python.org/pypi/pip) soit installé. Créez
+Assurez-vous que [pip](https://pypi.python.org/pypi/pip) est installé. Créez
 si vous le souhaitez un [virtualenv](https://virtualenv.pypa.io/en/stable/)
 dédié à la formation. Si vous utilisez un IDE tel que PyCharm, vous pouvez l'utiliser pour créer
 ce virtualenv. Placez vous alors à la racine du projet et saisissez
@@ -62,17 +60,18 @@ La documentation est alors dispoible dans le sous répertoire *_build/html*.
 
 ## Cahiers d'exercices
 
-Le répertoire *notebooks* contient des *cahiers d'exercices*. Ceux-ci sont
+Le répertoire *workbooks* contient des *cahiers d'exercices*. Ceux-ci sont
 des documents type *Jupyter Notebooks* générés à l'aide de
 [Jupyter](http://jupyter.org/). Ce dernier est inclus dans les dépendances.
  
-Placez-vous dans le répertoire *notebooks* et exécutez la commande
+Dans un terminal localisé dans le répertoire racine du projet,  exécutez la
+commande
 
 ```
-jupyter notebook 00_presentation.ipynb
+jupyter notebook
 ```
 
-Vous pouvez maintenant travailler avec les *notebooks*. Ceux-ci sont proposés
+Vous pouvez maintenant travailler avec les *workbooks*. Ceux-ci sont proposés
 comme outil pour vous aider à vous familiariser avec le langage.
 
 ## Ressources

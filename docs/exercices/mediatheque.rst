@@ -1,22 +1,26 @@
-Gestion de médiathèque
-======================
+Fil directeur : Gestion de médiathèque
+======================================
 
 Présentation du thème
 ---------------------
 
-La gestion d'une médiathèque est le fil directeur de ces exercices qui
-permettent de manipuler plusieurs concepts. La notion de médiathèque pourra être
+Le fil directeur de la pratique de cette formation est la gestion d'une
+médiathèque. Ce fil directeur permettra d'assembler au fur et à mesure les
+différents concepts abordés.
+
 étendue à la gestion de médiacenter, voir de service de vidéo à la demande.
 
-Le package `draft` contient un package `media` qui vous propose un ensemble de modules que vous
-pouvez prendre comme le squelette de composants.
+Le package `draft` contient un package `media` qui vous propose un ensemble de
+modules que vous pouvez prendre comme le squelette de composants.
 
-Le package `training.projects.mediamanager` propose une implémentation complète de cet exercice.
+Le package `training.projects.mediamanager` propose une implémentation complète
+de cet exercice.
 
-Une série est modélisée par le concept de *série* (`tvshow`)  ayant comme caractéristiques le nom
-de la série. Chaque série est composée de *saisons* (`seasons`) dont la caractéristiques est le numéro
-de saison (int). Enfin, chaque saison est composée d'épisodes (`episode`) caractérisés
-par leur numéro d'ordre dans la saison et un titre.
+Une série est modélisée par le concept de *série* (`tvshow`)  ayant comme
+caractéristiques le nom de la série. Chaque série est composée de *saisons*
+(`seasons`) dont la caractéristiques est le numéro de saison (int). Enfin,
+chaque saison est composée d'épisodes (`episode`) caractérisés par leur numéro
+d'ordre dans la saison et un titre.
 
 Modélisation objet
 ------------------
@@ -27,10 +31,12 @@ modèle sera discuté en formation. Il devra comporter :
 Une classe `Episode` permétant de gérer un épisode dont le constructeur attends
 le titre, numéro d'épisode et numéro de saison.
 
-Une classe `TvShow` qui possède un attribut `name`. La classe doit avoir une méthode
-`add_episode(episode, season_number)` qui permet d'ajouter un épisode pour une saison.
+Une classe `TvShow` qui possède un attribut `name`. La classe doit avoir une
+méthode `add_episode(episode, season_number)` qui permet d'ajouter un épisode
+pour une saison.
 
-Pour la suite, le module `mediamodel` propose une structure de base de ce modèle objet.
+Pour la suite, le module `mediamodel` propose une structure de base de ce modèle
+objet.
 
 Exceptions : contrôle d'intégrité
 ---------------------------------

@@ -2,45 +2,53 @@
 # -*- coding: utf-8 -*-
 
 """
-Module destiné à fournir une interface de type terminal.
+Module destiné à fournir une interface de type terminal. Doit être un module
+principal.
 """
 
-from draft.media import mediamodel as mediamodel
+from draft.media import base_mediamodel as media
 
 
-def saisons_list():
+def episodes_list():
     """
-    Fonction qui liste les saisons pour la série gérée.
-    :return: None
+    Fonction destinée à afficher une liste d'épisodes ordonnés.
+
+    Cette fonction fait appel à la méthode get_episodes de l'objet saison.
     """
-    print("Saisons pour {}".format(_tvshow.name))
-    if len(_tvshow.seasons) > 0:
-        for saison in _tvshow.seasons:
-            print("Saison {} - {} épisodes".format(saison.number, len(saison.episodes)))
+    print("Épisodes pour {}".format(_tvshow.name))
+    episodes = _tvshow.get_episodes()
+    if episodes:
+        pass # TODO : ajouter le code pour lister les épisodes
     else:
-        print("Pas de saison pour la série {}".format(_tvshow.name))
+        print("Pas d'épisodes pour la série.")
 
 
 def add_episode():
     """
     Fonction qui permet d'ajouter un épisode à la série.
-    :return:
+
+    Après avoir posé les questions pour récupérer les paramètres titre, saison
+    et numéro d'épisode, elle fait appel à la méthode add_episode de l'objet
+    saison.
     """
     ep_title = input("Titre de l'épisode")
     ep_season = input("Saison de l'épisode")
     ep_number = input("Numéro de l'épisode dans la saison")
 
-    _tvshow.add_episode(mediamodel.Episode(ep_title, ep_number), ep_season)
+    _tvshow.add_episode(ep_title, ep_number, ep_season)
 
-actions = {}
-actions['a'] = None
-actions['s'] = saisons_list
-actions['e'] = None
 
 if __name__ == "__main__":
+
+    actions = {}
+    actions['a'] = None
+    actions['s'] = None
+    actions['e'] = episodes_list
+
     print("Gestion de série")
     tvshow_name = input("Entrez le titre de la série ")
-    _tvshow = mediamodel.TvShow(tvshow_name)
+
+    _tvshow = media.TvShow(tvshow_name)
 
     while True:
         print("""
@@ -51,10 +59,10 @@ if __name__ == "__main__":
         """)
 
         choice = input("Choix ? ")
-        if choice in actions:
-            actions[choice]()
-        elif choice == "q":
+        if choice == "q":
             break
+        elif choice in actions:
+            actions[choice]()
         else:
             print("Choix non valide")
     print("Bye")

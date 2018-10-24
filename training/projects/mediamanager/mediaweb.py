@@ -1,15 +1,57 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from bottle import run, route, template
-from training.projects.mediamanager import media_file_loader
+"""
+Module illsutrant une interface web.
+"""
+
+from bottle import run, route, post, redirect, request, template
+from training.projects.mediamanager import media_db
+
+@route('/')
+def index():
+    return template('media_home')
 
 
-@route('/series/')
-def indexseries():
-    return template('series', series=list(set([raw_episode[0]
-                                               for raw_episode
-                                               in media_file_loader.open_file('/Users/dad3zero/workspace/formations/training-python/assets/showsfiles.txt')])))
+@route('/shows/')
+def index_show():
+    _MY_SHOWS.get_shows()
+    return template('series', series=_MY_SHOWS.get_shows())
 
 
-run(host='localhost', port=8080)
+@post('/add/')
+def add_show():
+    show_title = request.forms.get('new_show')
+    my_new_show = media_db.TvShow(show_title)
+    del my_new_show
+    redirect("/shows/")
+
+
+@route('/show/<name>')
+def view_show_details(name):
+    name = name.replace('_', ' ')
+    selected_show = media_db.TvShow(name)
+    return template('show_detail', title=selected_show.name,
+                    episodes=selected_show.get_episodes())
+
+
+@route('/show/<name>/add')
+def view_show_details(name):
+    name = name.replace('_', ' ')
+    selected_show = media_db.TvShow(name)
+    return template('show_add', title=selected_show.name)
+
+
+@post('/add/<name>/episode/add')
+def view_add_episode(name):
+    episode_title = request.forms.get('episode_title')
+    episode_number = request.forms.get('episode_number')
+    episode_season = request.forms.get('season_number')
+    return template("<b>Ok</b>")
+
+
+if __name__ == '__main__':
+
+    _MY_SHOWS = media_db.MediaDao()
+
+    run(host='localhost', port=8080)

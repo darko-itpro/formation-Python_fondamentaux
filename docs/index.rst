@@ -1,19 +1,29 @@
-Documentation Formation Python
+Python : découverte du langage
 ==============================
 
-Ce projet est un support de formation au langage Python. La documentation présente est en fait un cahier d'exercices.
+Cette documentation Python est un support de formation. Il est un complément
+de la formation et ne saurait se substituer à celle-ci. Cette documentation ne
+constitue pas non plus à elle seule une référence du langage Python.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   students_notes
-   modules/basic
+   cours/presentation
+   cours/toolbox
+   cours/bases
+   cours/structures_controle
+   cours/fonctions
+   cours/objet
+   cours/web
+   cours/glossaire
+   exercices/sncf
    exercices/mediatheque
-   exercices/regex
+   modules/draft
+   modules/mediatheque
 
-Indices and tables
-==================
+Index et tableaux
+=================
 
 * :ref:`genindex`
 * :ref:`modindex`
