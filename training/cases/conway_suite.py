@@ -20,26 +20,25 @@ def next_member(member: typing.Union[int, str]) -> int:
     :param member: Un entier
     :return: L'entier suivant dans la suite de Conway
     """
-    NEXT_ONE = []
-    last_value = None
-    occurrences = 0
+    member = str(member)
 
-    for value in str(member):
+    next_one = []
+    last_value = member[0]
+    occurrences = 1
+
+    for value in member[1:]:
         if last_value == value:
             occurrences += 1
         else:
-            NEXT_ONE.append(str(occurrences))
-            NEXT_ONE.append(str(last_value))
+            next_one.append(str(occurrences))
+            next_one.append(str(last_value))
             last_value = value
             occurrences = 1
 
-    NEXT_ONE.append(str(occurrences))
-    NEXT_ONE.append(str(last_value))
+    next_one.append(str(occurrences))
+    next_one.append(str(last_value))
 
-    NEXT_ONE.pop(0)
-    NEXT_ONE.pop(0)
-
-    return int("".join(NEXT_ONE))
+    return int("".join(next_one))
 
 
 def print_next_occurences(initial_value:typing.Union[int, str]=1, occurrences:int=1):
