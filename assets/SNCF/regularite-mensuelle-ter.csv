@@ -1,0 +1,1011 @@
+ID;Date;Région;Nombre de trains programmés;Nombre de trains ayant circulé;Nombre de trains annulés;Nombre de trains en retard à l'arrivée;Taux de régularité;Nombre de trains à l'heure pour un train en retard à l'arrivée;Commentaires
+TER_1;2013-01;Alsace;20095;19874;221;897;95.5;21.2;Intempéries.
+TER_3;2013-01;Auvergne;5785;5732;53;431;92.5;12.3;Conditions météos défavorables.
+TER_14;2013-01;Midi Pyrénées;8208;7941;267;903;88.6;7.8;
+TER_19;2013-01;Provence Alpes Côte d'Azur;13956;13219;737;1816;86.3;6.3;
+TER_7;2013-02;Centre;8979;8830;149;629;92.9;13.0;
+TER_14;2013-02;Midi Pyrénées;7657;7455;202;915;87.7;7.1;Intempéries.
+TER_3;2013-03;Auvergne;5099;5045;54;371;92.6;12.6;Problèmes sur le matériel roulant.
+TER_5;2013-03;Bourgogne;7949;7646;303;634;91.7;11.1;Le meilleur mois de mars depuis 2007 en terme de ponctualité avec des bons résultats sur la quasi-totalité des axes.
+TER_6;2013-03;Bretagne;8363;8208;155;924;88.7;7.9;Perte de régularité supérieure à 6 points en global région à cause des limitations de vitesse pour travaux entre Rennes et Redon.
+TER_8;2013-03;Champagne Ardenne;6597;6421;176;378;94.1;16.0;Conditions météorologiques dégradées du 12 au 14 mars (neige et froid inhabituels à cette période de l'année).
+TER_10;2013-03;Haute Normandie;5444;5320;124;326;93.9;15.3;Episodes neigeux.
+TER_15;2013-03;Nord Pas de Calais;18744;17096;1648;1689;90.1;9.1;Intempéries les 12 et 13 mars.
+TER_20;2013-03;Rhône Alpes;29670;29424;246;3644;87.6;7.1;Dérangements sur l'infrastructure.
+TER_1;2013-04;Alsace;18846;18726;120;581;96.9;31.2;
+TER_6;2013-04;Bretagne;8371;8276;95;579;93.0;13.3;Régularité encore perturbée par les travaux entre Rennes et Redon (fin le 26 avril)
+TER_7;2013-04;Centre;9327;9241;86;561;93.9;15.5;
+TER_7;2013-05;Centre;9017;8952;65;418;95.3;20.4;
+TER_8;2013-05;Champagne Ardenne;6463;6442;21;225;96.5;27.6;
+TER_12;2013-05;Limousin;3944;3897;47;171;95.6;21.8;
+TER_4;2013-06;Basse Normandie;3186;3063;123;183;94.0;15.7;Plusieurs mouvements sociaux (dont l'un à PSL suite à l'agression d'un ASCT).
+TER_14;2013-06;Midi Pyrénées;8381;8140;241;640;92.1;11.7;Intempéries.
+TER_20;2013-06;Rhône Alpes;26957;26586;371;3162;88.1;7.4;
+TER_1;2013-07;Alsace;14462;14363;99;483;96.6;28.7;
+TER_2;2013-07;Aquitaine;8883;8618;265;1527;82.3;4.6;Importantes causes externes climatiques : fortes chaleurs et orages en fin de mois. 6 accidents de personnes ou routiers.
+TER_4;2013-07;Basse Normandie;3815;3786;29;259;93.2;13.6;Intempéries la semaine 30 ayant entrainés de nombreux obstacles sur la voie (chutes d'arbres) et des difficultés de circulation (correspondances surtout).
+TER_6;2013-07;Bretagne;7363;7299;64;483;93.4;14.1;Impact limitation de vitesse suite à fortes chaleurs et orages (en Bretagne et hors région).
+TER_18;2013-07;Poitou Charentes;3582;3507;75;418;88.1;7.4;Déraillement d'un train de FRET à Saintes le 16 juillet avec obstruction totale de la circulation des trains en direction de Bordeaux, Angoulême et Royan entrainant des perturbations sur l'ensemble de la semaine 29. Intempéries le 27 juillet, violents orages sur toute la région Poitou-Charentes.
+TER_8;2013-08;Champagne Ardenne;5639;5623;16;288;94.9;18.5;Restrictions de vitesse sur certaines lignes suite aux fortes chaleurs et aux travaux sur la voie.
+TER_13;2013-08;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_12;2013-09;Limousin;4004;3788;216;393;89.6;8.6;Défaut de géométrie de la voie.
+TER_14;2013-09;Midi Pyrénées;7613;7448;165;605;91.9;11.3;Actes de malveillance, dérangements des IS, intempéries et incident matériel en ligne.
+TER_17;2013-09;Picardie;11252;11181;71;713;93.6;14.7;Limitation de vitesse 40 en place suite à travaux entre Esbly et Trilport, plusieurs avaries sur les BB15000 sur l'axe Paris-Est-Château-Thierry.
+TER_13;2013-09;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_2;2013-10;Aquitaine;8728;8618;110;960;88.9;8.0;Actes de malveillance (colis suspect à Bordeaux. incident caténaire), intrusion dans le tunnel de La Réole et limitations de vitesse.
+TER_3;2013-10;Auvergne;6239;6145;94;715;88.4;7.6;Conditions météos et dérangement d'installations de sécurité.
+TER_11;2013-10;Languedoc Roussillon;4974;4676;298;478;89.8;8.8;Intempéries, malveillance et mouvement social.
+TER_18;2013-10;Poitou Charentes;3527;3416;111;284;91.7;11.0;Mouvement social des agents de conduite du site de La Rochelle du 27 octobre au 1er novembre et nombreux événements externes.
+TER_2;2013-11;Aquitaine;8374;8253;121;1071;87.0;6.7;Fort impact externe (intrusions, obstacles, actes de malveillances et accidents de personnes), défaillances du matériels (pannes et indisponibilités) et dérangements d'IS (procédures lourdes).
+TER_7;2013-11;Centre;8995;8772;223;998;88.6;7.8;Travaux, problèmes matériel, patinages-enrayages.
+TER_14;2014-01;Midi Pyrénées;8989;8796;193;1022;88.4;7.6;Intempéries, malveillance et divagation d'animaux (199 circulations). Appropriation par les agents de conduite de nouvelle ligne Toulouse-St Sulpice (185 circulations). Dérangements d'installations (174 circulations). Détresse matériel roulant (114 circulations).
+TER_7;2014-01;Centre;9332;9283;49;537;94.2;16.3;
+TER_11;2014-01;Languedoc Roussillon;4903;4866;37;386;92.1;11.6;Un bon mois de janvier en rupture par rapport aux mauvais résultats du dernier trimestre 2013. Les dérangements d'installation représentent la principale cause des retards.
+TER_20;2014-02;Rhône Alpes;25636;25284;352;2638;89.6;8.6;Événements externes, panne matériel et problèmes d'infrastructure.
+TER_18;2014-02;Poitou Charentes;3227;3173;54;240;92.4;12.2;Un mois marqué par de nombreux dérangements d'installations et d'événements d'origine externe (arbres sur les voies, heurt d'animaux).
+TER_7;2014-02;Centre;8409;8332;77;517;93.8;15.1;
+TER_13;2014-02;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_3;2014-03;Auvergne;5544;5489;55;286;94.8;18.2;Conditions météo, dérangements d'installations, événements extérieurs (malveillance, accident de personne)
+TER_5;2014-03;Bourgogne;7505;7334;171;528;92.8;12.9;Un bon mois de mars, certes moins exceptionnel que celui en 2013, qui permet de clore un trimestre remarquable d'homogénéité sur la majorité des axes Bourguignons
+TER_9;2014-03;Franche Comté;5258;5154;104;306;94.1;15.8;
+TER_10;2014-03;Haute Normandie;5910;5863;47;234;96.0;24.1;
+TER_14;2014-03;Midi Pyrénées;8135;7938;197;699;91.2;10.4;Dérangements PN et installations (150 Circ.) 1,88 point. Malveillance et intempéries (129 circ.) 1,61 point. Défaillance Engin moteur (114 Circ.) 1,43 point. Agent de conduite (83 Circ.) 1,04 point.
+TER_2;2014-04;Aquitaine;8373;8239;134;629;92.4;12.1;De nombreux chocs (avec des animaux et des arbres) sur les voies ont endommagés le matériels roulants le rendant indisponibles pendant de longues périodes.
+TER_7;2014-04;Centre;8955;8893;62;506;94.3;16.6;
+TER_16;2014-04;Pays de la Loire;10173;10083;90;637;93.7;14.8;
+TER_15;2014-05;Nord Pas de Calais;18023;17828;195;1108;93.8;15.1;
+TER_1;2014-05;Alsace;18720;18566;154;633;96.6;28.3;
+TER_3;2014-05;Auvergne;5047;4956;91;333;93.3;13.9;Tension sur le parc matériel et dérangements d'installations.
+TER_6;2014-05;Bretagne;8330;8270;60;350;95.8;22.6;0,75 point d'irrégularité suite à travaux entre Rennes et La Mans.
+TER_8;2014-05;Champagne Ardenne;5927;5876;51;295;95.0;18.9;Ralentissements entre Épernay et Chalons suite à des travaux de renouvellement de voie du 5 au 20 mai. Mouvement social national, régional et local le 22 mai.
+TER_9;2014-05;Franche Comté;5445;5413;32;563;89.6;8.6;
+TER_18;2014-05;Poitou Charentes;3449;3409;40;186;94.5;17.3;
+TER_1;2014-06;Alsace;16152;14943;1209;652;95.6;21.9;Mouvement social national.
+TER_8;2014-06;Champagne Ardenne;4681;4601;80;339;92.6;12.6;Ralentissements de vitesse entre Epernay et Chalons suite à des travaux de renouvellement de voie. Du 11 au 24, mouvement social SNCF national avec mise en place d'un service de transport adapté.
+TER_12;2014-06;Limousin;3446;2853;593;288;89.9;8.9;Mouvement social.
+TER_13;2014-06;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_17;2014-07;Picardie;9714;9343;371;807;91.4;10.6;
+TER_20;2014-07;Rhône Alpes;26007;25666;341;3059;88.1;7.4;Un redressement s'est amorcé et se confirme en fin de mois de juillet.
+TER_3;2014-08;Auvergne;5113;5061;52;259;94.9;18.5;Dérangements d'installations et événements extérieurs (intempéries, malveillance).
+TER_4;2014-08;Basse Normandie;3615;3586;29;179;95.0;19.0;Beaucoup de retard pour correspondances sur les axes touristiques Lisieux-Trouville et Trouville-Dives.  Vol de câble ayany entrainé un dérangement de signalisation qui a duré plusieurs jours.
+TER_6;2014-08;Bretagne;7406;7372;34;307;95.8;23.0;Un mois d'août traditionnellement bon.
+TER_9;2014-08;Franche Comté;5463;5426;37;276;94.9;18.7;
+TER_10;2014-08;Haute Normandie;5828;5784;44;259;95.5;21.3;
+TER_20;2014-08;Rhône Alpes;24375;24029;346;1811;92.5;12.3;Un bon mois marqué touefois par la fermeture partielle de la ligne Lyon / Bourg en Bresse liée aux intempéries début août.
+TER_1;2014-09;Alsace;19660;19543;117;500;97.4;38.1;
+TER_2;2014-09;Aquitaine;8817;8671;146;1038;88.0;7.4;Des travaux de modernisation en gare de Bordeaux et ses alentours ont réduit la capacité de celle-ci, occasionnant de nombreux retards. Cela est complété par la mise en place de nouveaux matériels roulants.
+TER_3;2014-09;Auvergne;5168;5061;107;337;93.3;14.0;Problèmes matériel, dérangements d'installations et événements extérieurs.
+TER_7;2014-09;Centre;8935;8855;80;510;94.2;16.4;
+TER_10;2014-09;Haute Normandie;5933;5865;68;256;95.6;21.9;
+TER_15;2014-09;Nord Pas de Calais;19414;19078;336;1513;92.1;11.6;
+TER_17;2014-09;Picardie;10609;10332;277;963;90.7;9.7;
+TER_20;2014-09;Rhône Alpes;28760;28490;270;2870;89.9;8.9;Une réalisation de l'offre à l'objectif mais une régularité touchée par des événements externes.
+TER_2;2014-10;Aquitaine;9227;9045;182;1060;88.3;7.5;Des travaux de modernisation en gare de Bordeaux et ses alentours ont réduit la capacité de celle-ci, occasionnant de nombreux retards. Cela est complété par un phénomène d'été indien sur certaine ligne.
+TER_7;2014-10;Centre;9201;9085;116;736;91.9;11.3;Perte de temps pour travaux et évenements externes.
+TER_9;2014-10;Franche Comté;5900;5841;59;670;88.5;7.7;
+TER_2;2014-11;Aquitaine;8323;8171;152;1032;87.4;6.9;Des travaux de modernisation en gare de Bordeaux et son agglomération ont réduit la capacité de celle-ci, occasionnant de nombreux retards.
+TER_3;2014-11;Auvergne;5527;5403;124;380;93.0;13.2;Evénements extérieurs, dérangements d'installations et problèmes de ressources.
+TER_4;2014-11;Basse Normandie;2964;2942;22;195;93.4;14.1;Malgré plusieurs difficultés en début de mois (accidents routiers, personnes suicidaire, patinages…), c'est le meilleur mois de novembre de ces trois dernières années.
+TER_5;2014-11;Bourgogne;7354;7287;67;956;86.9;6.6;Un mois de novembre catastrophique malgré des conditions météorologiques favorables pour la saison. Les causes non directement maitrisables par TER Bourgogne atteignent un niveau record. A l'origine de cette hausse, plusieurs limitations temporaires de vitesse à plusieurs points de la Bourgogne et qui, de Decize-Etang à Villeneuve-Combs en passant par Beaune-Meursault, ont fait des ravages. Le Morvan est également fortement impacté.
+TER_8;2014-11;Champagne Ardenne;5580;5546;34;272;95.1;19.4;
+TER_18;2014-11;Poitou Charentes;3273;3235;38;274;91.5;10.8;
+TER_1;2014-12;Alsace;18677;18536;141;689;96.3;25.9;
+TER_13;2014-12;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_17;2014-12;Picardie;10807;10673;134;861;91.9;11.4;
+TER_20;2014-12;Rhône Alpes;26575;25583;992;3587;86.0;6.1;Evénements externes , mouvements sociaux locaux, défaillances matériel et prises en charge clientèle.
+TER_6;2015-01;Bretagne;8409;8361;48;494;94.1;15.9;
+TER_8;2015-01;Champagne Ardenne;6137;6085;52;297;95.1;19.5;
+TER_10;2015-01;Haute Normandie;5961;5828;133;324;94.4;17.0;
+TER_15;2015-01;Nord Pas de Calais;19522;19180;342;1559;91.9;11.3;
+TER_4;2015-02;Basse Normandie;3014;2975;39;116;96.1;24.6;
+TER_7;2015-02;Centre;8301;8178;123;655;92.0;11.5;Difficultés en matériel sur la ligne Paris / Nogent
+TER_2;2013-01;Aquitaine;8099;8014;85;731;90.9;10.0;Intempéries à partir du 20 janvier.
+TER_9;2013-01;Franche Comté;5826;5744;82;553;90.4;9.4;
+TER_10;2013-01;Haute Normandie;5957;5878;79;488;91.7;11.0;Episodes neigeux et difficultés matériels.
+TER_6;2013-02;Bretagne;7729;7644;85;448;94.1;16.1;Quelques journées perturbées par des épisodes neigeux sur le nord Bretagne (provoquant des dérangement d'installations) et limitations temporaires de vitesse non prévues pour travaux entre Rennes et Redon (du 26 mars au 26 avril 2013).
+TER_16;2013-02;Pays de la Loire;9238;9126;112;503;94.5;17.1;
+TER_17;2013-02;Picardie;10215;10137;78;879;91.3;10.5;
+TER_18;2013-02;Poitou Charentes;3014;2991;23;118;96.1;24.3;
+TER_1;2013-03;Alsace;19138;18970;168;658;96.5;27.8;
+TER_7;2013-03;Centre;9633;9446;187;634;93.3;13.9;
+TER_12;2013-03;Limousin;3989;3855;134;193;95.0;19.0;
+TER_18;2013-03;Poitou Charentes;3433;3418;15;198;94.2;16.3;
+TER_13;2013-03;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_8;2013-04;Champagne Ardenne;6219;6152;67;232;96.2;25.5;
+TER_18;2013-04;Poitou Charentes;3306;3285;21;181;94.5;17.1;
+TER_10;2013-05;Haute Normandie;5447;5433;14;215;96.0;24.3;
+TER_15;2013-05;Nord Pas de Calais;18181;17997;184;922;94.9;18.5;
+TER_9;2013-06;Franche Comté;5398;5334;64;446;91.6;11.0;
+TER_11;2013-06;Languedoc Roussillon;5106;4770;336;475;90.0;9.0;Intempéries, malveillance et détresse matériel.
+TER_15;2013-06;Nord Pas de Calais;17776;17483;293;1140;93.5;14.3;Grève le 13.
+TER_3;2013-07;Auvergne;5564;5451;113;590;89.2;8.2;Conditions météorologiques (fortes chaleurs, orages. vents violents).
+TER_8;2013-07;Champagne Ardenne;6059;6000;59;381;93.7;14.7;Episodes de fortes chaleurs et de violents orages ayant perturbé la circulation des trains (dérangements d'installations, limitations de vitesse localisées, chutes d'arbres sur les voies et les caténaires).
+TER_14;2013-07;Midi Pyrénées;9627;9088;539;1029;88.7;7.8;Fortes chaleurs.
+TER_16;2013-07;Pays de la Loire;10018;9840;178;900;90.9;9.9;Les fortes chaleurs et les nombreux orages sur la région et hors région représentent plus de 2,5 points de la non ponctualité.
+TER_2;2013-08;Aquitaine;8740;8651;89;937;89.2;8.2;Orages dans le sud Aquitaine (plateforme ferroviaire endommagée), fortes chaleur au nord de Bordeaux et affluences voyageurs.
+TER_3;2013-08;Auvergne;5580;5518;62;448;91.9;11.3;Conditions météos et dérangement d'installations de sécurité.
+TER_6;2013-08;Bretagne;7479;7449;30;327;95.6;21.8;
+TER_9;2013-08;Franche Comté;4928;4906;22;282;94.3;16.4;
+TER_11;2013-08;Languedoc Roussillon;5238;5173;65;484;90.6;9.7;Dérangements d'installations.
+TER_12;2013-08;Limousin;3919;3837;82;316;91.8;11.1;Intempéries et défaut de géomérie de la voie.
+TER_14;2013-08;Midi Pyrénées;9023;8845;178;673;92.4;12.1;
+TER_18;2013-08;Poitou Charentes;3490;3469;21;237;93.2;13.6;Nombreux dérangements d'installation de sécurité ce mois ci.
+TER_19;2013-08;Provence Alpes Côte d'Azur;13672;13154;518;2238;83.0;4.9;
+TER_2;2013-09;Aquitaine;8154;8086;68;869;89.3;8.3;Impact fort des limitations de vitesse pour travaux et réduction de capacité pour le pont Adour. Deux accidents (accident de personne et accident routier) ont également été des vecteurs importants d'irrégularité en fin de mois.
+TER_4;2013-09;Basse Normandie;3239;3144;95;167;94.7;17.8;Mouvement social le 10.
+TER_8;2013-09;Champagne Ardenne;6391;6207;184;362;94.2;16.1;"Mouvement social national interprofessionnel le 10/09 ; mouvement social local les 28 et 29/09"
+TER_1;2013-10;Alsace;20430;20274;156;1032;94.9;18.6;Travaux Vendenheim 2ème phase TGV Est et patinage.
+TER_19;2013-10;Provence Alpes Côte d'Azur;11011;10306;705;2382;76.9;3.3;Mouvement social interprofessionnel.
+TER_1;2013-11;Alsace;18580;18468;112;811;95.6;21.8;Travaux Vendenheim 2ème phase TGV Est et patinage.
+TER_12;2013-11;Limousin;3863;3363;500;511;84.8;5.6;Mouvement social, adhérence dégradée
+TER_18;2013-11;Poitou Charentes;3164;3133;31;302;90.4;9.4;Nombreux dérangements d'installation de sécurité, ainsi que de nombreux événements d'origine externe comme les phénomènes saisonniers de patinage et enrayage, de nombreux accidents de personnes sur la région Poitou-Charentes, ainsi que des collisions sur des passages à niveau ou des obstacles sur les voies.
+TER_19;2013-11;Provence Alpes Côte d'Azur;13054;12480;574;2205;82.3;4.7;Prolongation de la fermeture de la ligne Aspres Livron / interuption de trafic entre Meyragues et Aix en Provence suite à un accident routier (un camion heurte la pile d'un pont ferroviaire)
+TER_20;2013-11;Rhône Alpes;26800;26182;618;3531;86.5;6.4;Intempéries et problèmes d'infrastructure.
+TER_8;2013-12;Champagne Ardenne;6413;6104;309;417;93.2;13.6;Mouvement social national le 12, acte de vandalisme sur la ligne Reims-Chalons (câbles de signalisation brûlés) le 16, accident de personne avec le train 840805 à Reims Maisonblanche le 22, arbres sur les voies suite au passage de la tempête DIRK le 24, mouvement social local à l'ESV CA.
+TER_11;2013-12;Languedoc Roussillon;4750;4468;282;485;89.1;8.2;Mouvement social et accidents de personne le 5.
+TER_20;2013-12;Rhône Alpes;25268;24811;457;4185;83.1;4.9;Événements externes, panne matériel et problèmes d'infrastructure.
+TER_13;2013-12;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_20;2014-01;Rhône Alpes;28044;27625;419;3008;89.1;8.2;Événements externes, panne matériel et problèmes d'infrastructure.
+TER_18;2014-01;Poitou Charentes;3655;3620;35;165;95.4;20.9;
+TER_6;2014-01;Bretagne;8781;8714;67;416;95.2;19.9;Régularité impactée en janvier par les travaux entre Rennes et Redon (1 point d'irrégularité).
+TER_5;2014-01;Bourgogne;8282;8240;42;516;93.7;15.0;Un mois de janvier aux résultats homogènes avec 10 axes au vert et 3 en retrait. Un résultat global qui fait référence sur les sept dernières années.
+TER_19;2014-02;Provence Alpes Côte d'Azur;12677;11676;1001;2143;81.6;4.4;Eboulement ligne Nice Breil (voie coupée) et application d'un plan de transport adapté.
+TER_17;2014-02;Picardie;10652;10575;77;698;93.4;14.2;Mise en place d'un plan de transport adapté sur l'axe Beauvais-Le Tréport permettant une amélioration de la régularité, même si quelques retards subsistent.
+TER_15;2014-02;Nord Pas de Calais;17126;16820;306;1156;93.1;13.6;Mouvements sociaux chaque week-end.
+TER_9;2014-02;Franche Comté;5041;4987;54;265;94.7;17.8;
+TER_5;2014-02;Bourgogne;7129;6980;149;455;93.5;14.3;Un mois de février excellent en terme de régularité. Un mouvement social régional vient cependant contrarier la réalisation de l'offre (hors grève : 99,3% de taux de réalisation).
+TER_1;2014-02;Alsace;17814;17957;129;799;95.6;21.5;Ralentissements Vendenheim suite travaux TGV.
+TER_2;2014-03;Aquitaine;8679;8505;174;772;90.9;10.0;Intempéries en début de mois : éboulement de talus entre Bayonne et St Jean Pied de Port depuis le 26. Travaux: gestion difficile du site de Bordeaux.
+TER_4;2014-03;Basse Normandie;3233;3184;49;136;95.7;22.4;Beaucoup de suppressions dues à des absences de personnel (conduite et accompagnement des trains) et au mouvement social Pays de Loire. Ainsi qu'un accident de personne en gare de Mézidon le 24.
+TER_7;2014-03;Centre;8884;8793;91;578;93.4;14.2;
+TER_8;2014-03;Champagne Ardenne;6186;5977;209;289;95.2;19.7;"Mouvement social à l’établissement de Services Voyageurs de Champagne-Ardenne du SA 01 à 02h00 au MA 04 à 08h00 ; ligne Charleville – Givet : à partir du 11. Mise en place de limitations de vitesse pour une durée indéterminée suite à un risque de chute."
+TER_12;2014-03;Limousin;4088;4062;26;225;94.5;17.1;
+TER_20;2014-03;Rhône Alpes;28473;27697;776;2484;91.0;10.2;Mois correct malgré des événements externes importants
+TER_1;2014-04;Alsace;18322;18188;134;485;97.3;36.5;
+TER_6;2014-04;Bretagne;8114;8061;53;346;95.7;22.3;Régularité impacté en avril par les travaux entre Rennes et Redon (2 points d'irrégularité).
+TER_11;2014-04;Languedoc Roussillon;4518;4488;30;327;92.7;12.7;Le meilleur mois depuis ce début d'année à plus de deux points au-dessus de l'objectif.
+TER_14;2014-04;Midi Pyrénées;8618;8485;133;682;92.0;11.4;Malveillance et intempéries (143 circ.) 1,68 point Dérangements PN et installations (133 Circ.) 1,56 point. Défaillance Engin moteur (117 Circ.) 1,37 point. Agent de conduite (104 Circ.) 1,22 point
+TER_19;2014-04;Provence Alpes Côte d'Azur;13459;12957;502;2413;81.4;4.4;La circulation des trains est rétablie entre Grenoble et Gap (éboulement à Clelles Mens) le 21/04/2014.
+TER_20;2014-04;Rhône Alpes;27596;27022;574;2587;90.4;9.4;Les événements externes viennent impacter la régularité régionale
+TER_13;2014-04;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_5;2014-05;Bourgogne;7569;7480;89;565;92.4;12.2;Des résultats supérieurs à l’exercice 2013, mais handicapés par une deuxième quinzaine irrégulière, avec notamment sept journées sous les 91%.
+TER_7;2014-05;Centre;8927;8847;80;580;93.4;14.3;
+TER_10;2014-05;Haute Normandie;5590;5546;44;212;96.2;25.2;
+TER_20;2014-05;Rhône Alpes;27238;26528;710;2621;90.1;9.1;Régularité à l'objectif. Elle est impactée par les incidents Infrastructure et externes.
+TER_3;2014-06;Auvergne;3728;3614;114;319;91.2;10.3;Evénements extérieurs (malveillance), dérangements d'installations. Mouvement social.
+TER_2;2014-07;Aquitaine;8514;8203;311;1286;84.3;5.4;L'accident à Denguin le 17 juillet et les restrictions de circulation pour l’enquête et les vérifications des installations ont fortement perturbé la ponctualité des TER dans la région de Pau mais aussi sur le reste de la région Aquitaine.
+TER_5;2014-07;Bourgogne;7175;7108;67;576;91.9;11.3;Bon mois de juillet avec peu d'annulation de train et une régularité marquée par des incidents infrastructure et matériel.
+TER_15;2014-07;Nord Pas de Calais;18125;17849;276;1461;91.8;11.2;
+TER_5;2014-08;Bourgogne;6738;6671;67;467;93.0;13.3;Un mois d'août plutôt homogène en termes de ponctualité et d'annulation de trains sur les axes Bourguignon. Résultats satisfaisants.
+TER_7;2014-08;Centre;8987;8915;72;520;94.2;16.1;
+TER_17;2014-08;Picardie;8841;8621;220;600;93.0;13.4;
+TER_6;2014-09;Bretagne;7982;7929;53;345;95.6;22.0;Un mois de septembre dans la moyenne des quatre dernières années (95,51 %)
+TER_8;2014-09;Champagne Ardenne;6111;6031;80;296;95.1;19.4;
+TER_18;2014-09;Poitou Charentes;3545;3503;42;245;93.0;13.3;
+TER_19;2014-09;Provence Alpes Côte d'Azur;14036;13441;595;2581;80.8;4.2;L’indisponibilité d’une partie du parc (TER 2 N NG) perturbe fortement la production PACA. En effet, un certain nombre de rames doit être acheminées dans un délai très court sur leur centre de maintenance pour vérifier et/ou intervenir sur les organes de roulement.
+TER_5;2014-10;Bourgogne;8180;8095;85;939;88.4;7.6;Malgré des conditions météorologiques favorables, l’impact des travaux (sur Bourgogne Sud, mais également apparition de LTV contraignantes sur Bourgogne Nord), conjugué à un taux de dérangements d’installations élevé et à une forte inflation des conflits avec les autres transporteurs, ont grandement contribué à ce résultat.
+TER_6;2014-10;Bretagne;8151;8088;63;545;93.3;13.8;Un mois d'octobre fortement perturbé par les travaux sur la ligne Rennes-Messac.
+TER_17;2014-10;Picardie;11027;10843;184;1213;88.8;7.9;Mouvement social local sur Paris-Beauvais. Toujours de nombreuses limitations temporaires de vitesse.
+TER_18;2014-10;Poitou Charentes;3569;3536;33;237;93.3;13.9;
+TER_19;2014-10;Provence Alpes Côte d'Azur;14114;13169;945;2198;83.3;5.0;L’Indisponibilité d’une partie du parc, les TER 2 N NG, perturbe fortement la production PACA. En effet, un certain nombre de rames doit être acheminées dans un délai très court sur leur centre de maintenance pour vérifier et/ou intervenir sur les organes de roulement.
+TER_1;2014-11;Alsace;18308;18163;145;625;96.6;28.1;
+TER_10;2014-11;Haute Normandie;5363;5324;39;346;93.5;14.4;
+TER_11;2014-11;Languedoc Roussillon;4115;3976;139;617;84.5;5.4;
+TER_15;2014-11;Nord Pas de Calais;17889;17467;422;1967;88.7;7.9;
+TER_3;2014-12;Auvergne;5796;5666;130;374;93.4;14.1;
+TER_11;2014-12;Languedoc Roussillon;4246;4044;202;597;85.2;5.8;
+TER_1;2015-01;Alsace;19378;19172;206;653;96.6;28.4;
+TER_5;2015-01;Bourgogne;8051;7964;87;566;92.9;13.1;Production très homogène, presque tous les axes sont à l’objectif. Le domaine matériel, avec 29 suppressions dont 17 provoquées par un déficit de parc, est en responsabilité de 45% des suppressions enregistrées hors grève. Les  Intercités conventionnés Paris-Nevers ont été victimes de défaillances de production Intercités sur le secteur de Paris
+TER_9;2015-01;Franche Comté;5627;5550;77;396;92.9;13.0;
+TER_12;2015-01;Limousin;4234;4186;48;313;92.5;12.4;
+TER_18;2015-01;Poitou Charentes;3550;3495;55;328;90.6;9.7;
+TER_7;2013-01;Centre;9882;9687;195;812;91.6;10.9;Trois incidents caténaires lourds, dont deux pour cause externe.
+TER_12;2013-01;Limousin;3817;3770;47;210;94.4;17.0;
+TER_16;2013-01;Pays de la Loire;10407;10195;212;713;93.0;13.3;
+TER_20;2013-01;Rhône Alpes;31438;30779;659;3552;88.5;7.7;
+TER_13;2013-01;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_3;2013-02;Auvergne;5229;5166;63;427;91.7;11.1;Conditions météos et dérangement d'installations de sécurité.
+TER_4;2013-02;Basse Normandie;3013;2991;22;185;93.8;15.2;Nombreuses difficultés de circulation et plusieurs dérangements d'installations.
+TER_5;2013-02;Bourgogne;7418;7337;81;630;91.4;10.6;Un mois de février en retrait d'un point sur le mois précédent (deux journée noires les 19 et 25) mais conforte un résultat global cumulé jamais réalisé lors des six derniers exercices précédents.
+TER_10;2013-02;Haute Normandie;5349;5301;48;211;96.0;24.1;
+TER_12;2013-02;Limousin;3449;3406;43;219;93.6;14.6;
+TER_13;2013-02;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_4;2013-03;Basse Normandie;3283;2808;475;251;91.1;10.2;Très fort épisode neigeux la semaine 11 (interruption des circulations pendant plusieurs jours).
+TER_14;2013-03;Midi Pyrénées;7946;7802;144;670;91.4;10.6;
+TER_16;2013-03;Pays de la Loire;9837;9484;353;520;94.5;17.2;
+TER_2;2013-04;Aquitaine;8329;8236;93;967;88.3;7.5;Cinq accidents de personnes.
+TER_3;2013-04;Auvergne;5202;5167;35;342;93.4;14.1;Dérangements d'installations de sécurité et défaillance technique matériel roulant.
+TER_5;2013-04;Bourgogne;7492;7403;89;654;91.2;10.3;Un mois d'avril très contrasté en terme de ponctualité avec d'importantes variations : 12 journées à 94% de ponctualité ou plus et 7 journées sous les 88%.
+TER_11;2013-04;Languedoc Roussillon;4776;4518;258;417;90.8;9.8;Intempéries et mouvement social.
+TER_16;2013-04;Pays de la Loire;9758;9549;209;501;94.8;18.1;
+TER_20;2013-04;Rhône Alpes;25660;25326;334;3016;88.1;7.4;
+TER_4;2013-05;Basse Normandie;3178;3009;169;173;94.3;16.4;Nombreuses difficultés de circulation (conséquence de la mauvaise régularité IC)
+TER_6;2013-05;Bretagne;7977;7910;67;323;95.9;23.5;
+TER_9;2013-05;Franche Comté;5776;5742;34;417;92.7;12.8;
+TER_17;2013-05;Picardie;10505;10450;55;623;94.0;15.8;
+TER_3;2013-06;Auvergne;5117;5067;50;414;91.8;11.2;Dérangements d'installations de sécurité et défaillance technique matériel roulant.
+TER_5;2013-06;Bourgogne;7452;6707;745;707;89.5;8.5;Mouvements sociaux (national et régional) ayant entrainé d'importantes annulations de trains
+TER_7;2013-06;Centre;9496;8977;519;650;92.8;12.8;Grève nationale.
+TER_8;2013-06;Champagne Ardenne;6447;6208;239;256;95.9;23.3;Mouvement social national le 13/06/2013.
+TER_10;2013-06;Haute Normandie;5564;5485;79;256;95.3;20.4;Mouvement sociaux, recrudescence des causes externes
+TER_12;2013-06;Limousin;4003;3716;287;237;93.6;14.7;
+TER_16;2013-06;Pays de la Loire;9665;9217;448;574;93.8;15.1;73% des annulations sont liées à des mouvements sociaux.
+TER_18;2013-06;Poitou Charentes;3308;3165;143;230;92.7;12.8;Mouvement social le 13/06. Importants travaux avec des limitations de vitesse, ainsi que de nombreux dérangements d'installation
+TER_7;2013-07;Centre;9512;9243;269;868;90.6;9.6;Perturbation suite à l'accident de Brétigny. Fortes chaleurs.
+TER_10;2013-07;Haute Normandie;6037;5988;49;328;94.5;17.3;Orages. Incidents INFRA liés à la chaleur.
+TER_12;2013-07;Limousin;4032;3961;71;406;89.8;8.8;Défaut de géomérie de la voie entre Limoges et Poitiers.
+TER_19;2013-07;Provence Alpes Côte d'Azur;13918;13276;642;2762;79.2;3.8;
+TER_5;2013-08;Bourgogne;7234;7191;43;448;93.8;15.1;Avec 26 journées sur 31 satisfaisantes, c’est le meilleur résultat en période estivale sur les six dernières années.Très bons scores de toute l'étoile Dijonnaise. sur Laroche-Paris.
+TER_16;2013-08;Pays de la Loire;9754;9663;91;583;94.0;15.6;
+TER_20;2013-08;Rhône Alpes;28320;28038;282;2391;91.5;10.7;Bons résultats en régularité et réalisation de l'offre de transport.
+TER_6;2013-09;Bretagne;8218;8166;52;472;94.2;16.3;Les limitations temporaires de vitesse suite à des travaux entre Brest et Rennes impactent de 1,60 point la régularité du mois.
+TER_9;2013-09;Franche Comté;5416;5301;115;459;91.3;10.5;
+TER_10;2013-09;Haute Normandie;5748;5598;150;217;96.1;24.8;Mouvement social.
+TER_11;2013-09;Languedoc Roussillon;5024;4754;270;422;91.1;10.3;Malveillance et mouvement social.
+TER_16;2013-09;Pays de la Loire;9731;9381;350;651;93.1;13.4;73% des annulations sont liées à des mouvements sociaux.
+TER_19;2013-09;Provence Alpes Côte d'Azur;13024;12465;559;1745;86.0;6.1;
+TER_5;2013-10;Bourgogne;8123;7991;132;916;88.5;7.7;"""Mouvements sociaux (national et régional) ayant entrainé des annulations de trains - Ponctualité en retrait dont la cause est principalement liée aux limitations de vitesse imposées par le """"phénomène feuilles mortes"""" sur les rails."
+TER_9;2013-10;Franche Comté;5843;5806;37;601;89.6;8.7;
+TER_10;2013-10;Haute Normandie;6010;5942;68;370;93.8;15.1;Augmentation des causes externes et difficultés matériels.
+TER_16;2013-10;Pays de la Loire;10176;9893;283;1012;89.8;8.8;50% des suppressions sont des conséquences du mouvement social du 9 octobre. 33% de l'irrégularité provient de causes externes (accident entre un TGV et un poids lourd vers Sillé le Guillaume, conditions climatiques, feuilles mortes, actes de malveillance, divagations d'animaux.
+TER_17;2013-10;Picardie;11373;11277;96;1205;89.3;8.4;Travaux sur le Pont du Havre. A partir de mi-octobre, adhérence dégradée avec de nombreux patinages-enrayages et une journée noire le 28 (arbres et branches sur les voies).
+TER_20;2013-10;Rhône Alpes;29798;29430;368;3531;88.0;7.3;Les événements externes perturbent ce mois.
+TER_3;2013-11;Auvergne;5854;5546;308;721;87.0;6.7;Conditions météos et dérangement d'installations de sécurité.
+TER_4;2013-11;Basse Normandie;3098;2878;220;220;92.4;12.1;Plan automnal sur Dreux/Granville, difficultés de circulations (notament dus aux feuilles mortes) et mouvement social du 12 suite agression d'un ASCT la veille.
+TER_11;2013-11;Languedoc Roussillon;4433;4270;163;576;86.5;6.4;Intempéries.
+TER_14;2013-11;Midi Pyrénées;7365;7131;234;868;87.8;7.2;Causes externes, dérangements des IS et limitations de vitesse. Non respect des marches tracées.
+TER_17;2013-11;Picardie;10818;10705;113;1261;88.2;7.5;Adhérence dégradée avec de nombreux patinages-enrayages et deux incidents caténaires sur la région Parisienne. Les causes extérieures et l'infrastructure représentent 55% de l'irrégularité.
+TER_4;2013-12;Basse Normandie;3273;3050;223;232;92.4;12.1;Mouvement social national le 12 et intempéries les 23 et 24.
+TER_10;2013-12;Haute Normandie;5899;5359;540;420;92.2;11.8;Mouvement social et plan automne.
+TER_14;2013-12;Midi Pyrénées;8281;7949;332;1407;82.3;4.6;Non respect des marches tracées, causes externes, dérangement des IS et incidents matériel en ligne.
+TER_15;2013-12;Nord Pas de Calais;14691;14411;280;1600;88.9;8.0;Grève nationale le 12 puis préavis locaux jusqu'à la fin de l'année.
+TER_16;2013-12;Pays de la Loire;9900;9409;491;947;89.9;8.9;68% des annulations sont liées à des mouvements sociaux, 32% des trains en retard est due aux conditions climatiques, actes de malveillance et divagations d'animaux.
+TER_18;2013-12;Poitou Charentes;3519;3420;99;216;93.7;14.8;Mouvement social national le 12/12.
+TER_16;2014-01;Pays de la Loire;10247;10127;120;717;92.9;13.1;20% des trains irréguliers sont dus aux travaux d'amélioration du réseau ferroviaire de la région.
+TER_13;2014-01;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_4;2014-02;Basse Normandie;3029;2989;20;140;95.3;20.4;Tempête Ulla en milieu de mois avec des arbres sur les voies.
+TER_3;2014-02;Auvergne;5202;5152;50;283;94.5;17.2;Conditions météo, dérangements d'installations.
+TER_11;2014-02;Languedoc Roussillon;4102;4081;21;314;92.3;12.0;Une météo clémente et peu de causes externes permettent d'obtenir un résultat à deux points au-dessus de l'objectif.
+TER_1;2014-03;Alsace;19367;19212;155;547;97.2;34.1;
+TER_4;2014-04;Basse Normandie;3155;3138;17;117;96.3;25.8;La principale cause de retard reste les correspondances avec des trains Intercités
+TER_5;2014-04;Bourgogne;7653;7583;70;503;93.4;14.1;Un mois d'avril qui se caractérise par une augmentation des incidents. Les résultats restent supérieurs à ceux acquis en 2012 et 2013 à la même période.
+TER_18;2014-04;Poitou Charentes;3448;3417;31;182;94.7;17.8;
+TER_2;2014-05;Aquitaine;8026;7927;99;614;92.3;11.9;Intempéries (orages) principalement sur la Dordogne.
+TER_14;2014-05;Midi Pyrénées;8431;8270;161;572;93.1;13.5;Malveillance et intempéries (155 circulations, dérangements sur passages à niveau et installations (116 circulation.), défaillance d'engin moteur (89 circulations, agent de conduite (50 circulations).
+TER_16;2014-05;Pays de la Loire;10442;10315;127;519;95.0;18.9;
+TER_19;2014-05;Provence Alpes Côte d'Azur;13947;13546;401;2056;84.8;5.6;Le mois est marqué par des mouvements sociaux
+TER_13;2014-05;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_11;2014-06;Languedoc Roussillon;3661;3063;598;358;88.3;7.6;Le mouvement social impacte fortement la production de ce mois de juin.
+TER_15;2014-06;Nord Pas de Calais;;;;;;;
+TER_20;2014-06;Rhône Alpes;20799;18325;2474;2693;85.3;5.8;La ponctualité a été fortement impactée par le mouvement social. Des non-saisies en opérationnel durant la grève pénalisent très fortement la statistique du nombre de trains annulés.
+TER_10;2014-07;Haute Normandie;5994;5888;106;345;94.1;16.1;
+TER_11;2014-07;Languedoc Roussillon;5140;5036;104;564;88.8;7.9;
+TER_12;2014-07;Limousin;4187;4140;47;329;92.1;11.6;
+TER_14;2014-07;Midi Pyrénées;8952;8658;294;878;89.9;8.9;Malveillance et intempéries, dérangements sur passages à niveau et installations, agents de conduite et défaillance enfin moteur.
+TER_13;2014-08;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_15;2014-08;Nord Pas de Calais;17612;17422;190;851;95.1;19.5;
+TER_4;2014-09;Basse Normandie;3250;3207;43;165;94.9;18.4;Des travaux urgents de traitement de la végétation ont étés organisés sur l'axe Caen-Rennes. Il y a eu beaucoup de suppressions en raison d'une tension en personnel de conduite.
+TER_4;2014-10;Basse Normandie;3325;3291;34;252;92.3;12.1;Ce mois est marqué par de nombreuses difficultés de circulations avec le début des patinages, et de nombreuses correspondances et espacements avec des trains Intercités. De plus nous avons subit beaucoup de difficultés matériel.
+TER_11;2014-10;Languedoc Roussillon;4492;4283;209;614;85.7;6.0;
+TER_12;2014-10;Limousin;4335;4306;29;274;93.6;14.7;
+TER_13;2014-10;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_16;2014-10;Pays de la Loire;11639;11498;141;940;91.8;11.2;
+TER_7;2014-11;Centre;8382;8313;69;709;91.5;10.7;Nombreux problèmes d'adhérence sur les lignes.
+TER_13;2014-11;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_19;2014-11;Provence Alpes Côte d'Azur;12950;12179;771;3122;74.4;2.9;La production est confrontée à de fortes intempéries.
+TER_20;2014-11;Rhône Alpes;27300;26846;454;3758;86.0;6.1;Mois dégradé avec pour trois principales causes : externe, infrastructure et trains des autres activités SNCF.
+TER_5;2014-12;Bourgogne;8021;7924;97;661;91.7;11.0;L’objectif est presque atteint en décembre. Il s'agit de la meilleure performance enregistrée ces sept dernières années. Tous les axes affichent une progression par rapport au mois de novembre. Dijon – Nevers est encore marqué par les limitations temporaires de vitesse jusqu'au 19 décembre.
+TER_8;2014-12;Champagne Ardenne;6065;5986;79;331;94.5;17.1;Quelques difficultés de production suite à des mouvements sociaux locaux.
+TER_9;2014-12;Franche Comté;5716;5644;72;452;92.0;11.5;
+TER_14;2015-01;Midi Pyrénées;8726;8528;198;725;91.5;10.8;"1. Intempéries, malveillance et divagation d'animaux (232 circ.)
+2. ADC TER (185 Circ.)
+3. Dérangements d'installations (109 Circ.)
+4. Détresse matériel roulant (76 Circ.)"
+TER_20;2015-01;Rhône Alpes;29933;29530;403;3271;88.9;8.0;Début d'année compliqué marquée par des évenements externes (intempéries), des pannes matériel, des événement survenus aux autres transporteurs SNCF et à l'Infrastructure.
+TER_6;2013-01;Bretagne;8776;8631;145;554;93.6;14.6;Fortes chutes de neige ayant entrainé des perturbations exceptionnelles sur le Nord de la Bretagne et perturbations liées à un éboulement de terre à Morlaix (axe Rennes - Brest).
+TER_8;2013-01;Champagne Ardenne;6648;6595;53;334;94.9;18.7;Conditions météorologiques dégradées du 15 au 21 janvier (froid, neige et verglas).
+TER_15;2013-01;Nord Pas de Calais;19227;18890;337;2332;87.7;7.1;Vol de câble à Lille Sud.
+TER_9;2013-02;Franche Comté;5241;5174;67;522;89.9;8.9;
+TER_15;2013-02;Nord Pas de Calais;17478;17228;250;1040;94.0;15.6;Intempéries mi-février.
+TER_20;2013-02;Rhône Alpes;28215;27910;305;3771;86.5;6.4;Météo difficile et intrusions.
+TER_2;2013-03;Aquitaine;8167;8081;86;822;89.8;8.8;Coup de froid sur l'ensemble de la région lors de la semaine 11.
+TER_11;2013-03;Languedoc Roussillon;4930;4548;382;567;87.5;7.0;Mouvement social et nouvel arrêt de travail spontané suite l'agression d'un agent du service commercial train.
+TER_17;2013-03;Picardie;10440;10304;136;882;91.4;10.7;Fortes chutes de neige ayant entrainé des perturbations exceptionnelles (nombreuses suppressions non reprises dans les trains annulés suite au plan de transport adapté mis en place lors des intempéries du 12 au 17 mars).
+TER_19;2013-03;Provence Alpes Côte d'Azur;13994;13042;952;2010;84.6;5.5;La non fiabilité dans la restitution de travaux amène l'activité à transférer sur route les premiers trains qui suivent l'heure théorique de restitution des travaux.
+TER_10;2013-04;Haute Normandie;5662;5616;46;245;95.6;21.9;
+TER_14;2013-04;Midi Pyrénées;8481;8378;103;576;93.1;13.5;
+TER_1;2013-05;Alsace;18659;18533;126;444;97.6;40.7;
+TER_14;2013-05;Midi Pyrénées;8569;8454;115;605;92.8;13.0;
+TER_18;2013-05;Poitou Charentes;3292;3276;16;161;95.1;19.3;
+TER_20;2013-05;Rhône Alpes;26805;26527;278;2512;90.5;9.6;Bonne performance du système de production malgré les travaux sur l'axe Lyon-Grenoble.
+TER_17;2013-06;Picardie;10617;10570;47;791;92.5;12.4;
+TER_5;2013-07;Bourgogne;7613;7558;55;688;90.9;10.0;Résultats ponctualité alternant le bon et le moins bon, marqués par des aléas dont le caractère est principalement externe (chute d'arbres suite vent violent. rupture câble électrique EDF sur l'axe Nord le 23 juillet.
+TER_15;2013-07;Nord Pas de Calais;15550;15313;237;1013;93.4;14.1;Intempéries, orages.
+TER_17;2013-07;Picardie;10623;10418;205;831;92.0;11.5;Mises en place de limitation de vitesse en raison des fortes chaleurs sur plusieurs axes et plusieurs jours. Intempéries avec de violents orages ayant entrainé de nombreux arbres et branches sur les voies.
+TER_20;2013-07;Rhône Alpes;29889;29432;457;3518;88.0;7.4;
+TER_1;2013-08;Alsace;15416;15283;133;418;97.3;35.6;
+TER_10;2013-08;Haute Normandie;5872;5824;48;199;96.6;28.3;
+TER_17;2013-08;Picardie;9862;9806;56;501;94.9;18.6;
+TER_1;2013-09;Alsace;18800;18680;120;801;95.7;22.3;Travaux Vendenheim 2ème phase TGV Est
+TER_3;2013-09;Auvergne;5887;5803;84;441;92.4;12.2;Défaillance technique du matériel roulant et erreur anomalie défaillance technique.
+TER_18;2013-09;Poitou Charentes;3385;3273;112;237;92.8;12.8;Mouvement social le 10/09. Importants travaux avec des limitations de vitesse (raccordement LGV SEA à Villognon).
+TER_20;2013-09;Rhône Alpes;28297;27961;336;2953;89.4;8.5;Résultats très corrects pour un mois de reprise.
+TER_6;2013-10;Bretagne;8768;8705;63;766;91.2;10.4;Les travaux entre Brest et Landerneau et entre Quimper et Lorient impactent de 2,5 points la régularité de l'activité TER Bretagne, 1 point d'irrégularité cause intempéries/enrayage. L'incident de Sillé Le Guillaume (heurt d'un camion par un TGV) entrainent une irrégularité de 1 point (correspondances TER).
+TER_8;2013-10;Champagne Ardenne;6453;6227;226;589;90.5;9.6;Mouvement social local le 5 et 6, mouvement social national le 9, collision entre un train et une camionnette à un passage à niveau le 19, agression d'un contrôleur dans un train ayant entraîné une forte perturbation des circulations le 19, incident caténaire le 22 causé par un tracteur à un passage à niveau ayant entrainé des restrictions de circulations jusqu'au 25. Deuxième quinzaine du mois : patinages et enrayages des trains suite à la chute des feuilles mortes sur les rails.
+TER_15;2013-10;Nord Pas de Calais;18038;17815;223;2147;87.9;7.3;Tempête Christian le 28 avec des répercussions sur trois jours.
+TER_13;2013-10;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_6;2013-11;Bretagne;8083;8014;69;713;91.1;10.2;Les travaux entre Quimper et Lorient impactent de 1,85 points la régularité de ce mois : 2 points d'irrégularité pour cause intempéries/enrayage, 1,2 point pour avarie matériel et 0,9 pour causes externes (obstacles. accident de personne).
+TER_9;2013-11;Franche Comté;5475;5390;85;640;88.1;7.4;
+TER_16;2013-11;Pays de la Loire;9330;9200;130;904;90.2;9.2;Mauvaise adhérence sur le rail (chute des feuilles mortes), nombreuses limitations de vitesse pour travaux (Nantes-Angers, Angers-Le Mans, Nantes-St Gilles, Le Mans-Château du Loir).
+TER_13;2013-11;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_2;2013-12;Aquitaine;8802;8647;155;985;88.6;7.8;Intempéries (patinages, enrayages, givres et brouillard), défaillances du matériels (pannes et indisponibilités) et les ralentissements sont les causes principales des retards en décembre.
+TER_17;2013-12;Picardie;10760;10685;75;1075;89.9;8.9;Intempéries (tempête DIRK) et mise en place d'une limitation de vitesse sur 32km entre Beauvais et Grandvilliers.
+TER_15;2014-01;Nord Pas de Calais;19770;19507;263;1417;92.7;12.8;Nombreux coups de vent.
+TER_12;2014-01;Limousin;4301;4240;61;299;92.9;13.2;
+TER_10;2014-01;Haute Normandie;6090;6002;88;333;94.5;17.0;Agression d'un agent de conduite, tôle d'un particulier sur les caténaires, détresse d'un train de travaux, accident de personne à Maromme.
+TER_8;2014-01;Champagne Ardenne;6388;6301;87;207;96.7;29.4;Droit de retrait exercé par de nombreux agents du service commercial train suite à l'agression d'un de leurs collègues en gare de Reims le 25, restrictions de circulation entre Charleville et Hirson suite à un affaissement de terrain (fontis) près de Charleville du 30 janvier à début février.
+TER_4;2014-01;Basse Normandie;3318;3303;15;128;96.1;24.8;Meilleure résultats qu'en janvier 2013.
+TER_2;2014-01;Aquitaine;9681;9472;209;790;91.7;11.0;Causes externe, intempéries à partir du 20 janvier, obstacles sur les voies.
+TER_1;2014-01;Alsace;19598;19405;193;727;96.3;25.7;Météo particulièrement clémente pour un mois de janvier.
+TER_16;2014-02;Pays de la Loire;9285;9175;110;709;92.3;11.9;Retards dûs pour 20% par les travaux d'amélioration du réseau ferroviaire de la région et pour 80% par les intempéries répétitives.
+TER_14;2014-02;Midi Pyrénées;8022;7877;145;787;90.0;9.0;Dérangements à un passage à niveau (155 circulations et 1,96 point d'irrégularité), agent de conduite (144 circulations et 1,82 point), intempéries et malveillance (134 circulations et 1,69 point). défaillance d'engin moteur (107 circulations, 1,35 point).
+TER_12;2014-02;Limousin;3816;3765;51;199;94.7;17.9;
+TER_10;2014-02;Haute Normandie;5560;5491;69;296;94.6;17.6;Recrudescence de causes INFRA (rupture caténaires, dérangement de PN …)
+TER_8;2014-02;Champagne Ardenne;5675;5633;42;216;96.2;25.1;Pas de faits majeurs ce mois ci. La circulation des trains champardennais a cependant été perturbée certains jours par des actes de malveillance, des intrusions de tiers dans les emprises ferroviaires, des panne de trains, des intempéries ou des accidents.
+TER_6;2014-02;Bretagne;8025;7872;153;561;92.9;13.0;Régularité impactée en février par les conséquences de la tempête Ulla (2,2 points d'irrégularité) et les travaux entre Rennes et Redon (1,7 point). 90 trains supprimés suite aux intempéries.
+TER_6;2014-03;Bretagne;8383;8337;46;209;97.5;38.9;Meilleur résultat depuis juillet 2010.
+TER_15;2014-03;Nord Pas de Calais;18988;18601;387;1186;93.6;14.7;Difficulté de couverture traction du plan de transport.
+TER_18;2014-03;Poitou Charentes;3473;3451;22;206;94.0;15.8;
+TER_15;2014-04;Nord Pas de Calais;18991;17957;129;799;95.6;21.5;
+TER_3;2014-04;Auvergne;4559;4497;62;291;93.5;14.5;Problèmes matériel, dérangements d'installations, événements extérieurs.
+TER_8;2014-04;Champagne Ardenne;6069;6035;34;243;96.0;23.8;Ligne Reims-Charleville : à partir du 24/03 et jusqu'au 25/04, les trains en journée sont remplacés par des autocars suite à des travaux de modernisation des voies et ouvrages d'art.
+TER_10;2014-04;Haute Normandie;5789;5745;44;263;95.4;20.8;
+TER_12;2014-04;Limousin;4089;4057;32;156;96.2;25.0;
+TER_4;2014-05;Basse Normandie;3104;3072;32;161;94.8;18.1;Ce mois de mai présente les résultats les plus médiocres depuis le début d'année. On compte notamment un accident de personne le 1er et la grève du 22, mais c'est une limitation temporaire de vitesse entre Coutances et St Lô pour défaut de géométrie de la voie qui entraîne le plus de retards.
+TER_11;2014-05;Languedoc Roussillon;4493;4222;271;253;94.0;15.7;Le meilleur mois depuis que la régularité est mesurée et analysée en Languedoc Roussillon.
+TER_17;2014-05;Picardie;10811;10763;48;605;94.4;16.8;
+TER_2;2014-06;Aquitaine;6195;5781;414;630;89.1;8.2;Mouvement social du 11 au 24, travaux au nord de Bordeaux (ralentissements et correspondances), affluences voyageurs suite au festival Garorock à Marmande et orage le 29 avec la foudre sur le bâtiment de la gare de Bordeaux.
+TER_7;2014-06;Centre;7752;6641;1111;577;91.3;10.5;Grève nationale du 11 au 24 juin.
+TER_9;2014-06;Franche Comté;4340;4283;57;486;88.7;7.8;
+TER_19;2014-06;Provence Alpes Côte d'Azur;9834;9430;404;1630;82.7;4.8;La reprise du mouvement social occasionne des problèmes de disponibilité de matériel. Le mois est marqué par des intempéries occasionnat des suppressions.
+TER_1;2014-07;Alsace;16628;16370;258;549;96.6;28.8;
+TER_6;2014-07;Bretagne;7520;7485;35;298;96.0;24.1;Deuxième des meilleurs résultats depuis le début de l'année.
+TER_8;2014-07;Champagne Ardenne;5791;5746;45;287;95.0;19.0;Pas de faits majeurs ce mois-ci. La régularité des trains a été impactée par des défaillances du matériel, des dérangements d'installations (signaux, passages à niveau) et des aléas externes (individus sur les voies, divagation de bestiaux, actes de malveillance, conditions météo, etc...).
+TER_9;2014-07;Franche Comté;5685;5629;56;465;91.7;11.1;
+TER_13;2014-07;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_16;2014-07;Pays de la Loire;10970;10754;216;816;92.4;12.2;
+TER_18;2014-07;Poitou Charentes;3655;3622;33;324;91.1;10.2;
+TER_1;2014-08;Alsace;15834;15667;167;393;97.5;38.9;
+TER_2;2014-08;Aquitaine;8424;8246;178;990;88.0;7.3;Des restrictions de circulation pour l’enquête et les vérifications des installations suite à l’accident survenu le 17 juillet 2014 à Denguin ont fortement perturbé la ponctualité des TER dans la région de Pau.
+TER_11;2014-08;Languedoc Roussillon;4955;4874;81;598;87.7;7.2;
+TER_12;2014-08;Limousin;3991;3964;27;202;94.9;18.6;
+TER_18;2014-08;Poitou Charentes;3541;3525;16;242;93.1;13.6;
+TER_19;2014-08;Provence Alpes Côte d'Azur;14404;13842;562;2228;83.9;5.2;
+TER_9;2014-09;Franche Comté;5681;5662;19;466;91.8;11.2;
+TER_11;2014-09;Languedoc Roussillon;4715;4524;191;691;84.7;5.5;
+TER_12;2014-09;Limousin;4116;4079;37;284;93.0;13.4;
+TER_14;2014-09;Midi Pyrénées;8709;8590;119;670;92.2;11.8;Dérangements aux passages à niveau et installations, divagations d'animaux, intempéries et problèmes dans la prise en charge en gare.
+TER_16;2014-09;Pays de la Loire;11013;10822;191;695;93.6;14.6;
+TER_1;2014-10;Alsace;20186;19950;236;905;95.5;21.0;Deux droits d'alerte suite à l'agression de contrôleurs.
+TER_3;2014-10;Auvergne;6150;6026;124;372;93.8;15.2;Problèmes matériel, conséquences travaux, événements extérieurs.
+TER_10;2014-10;Haute Normandie;6124;6069;55;454;92.5;12.4;
+TER_14;2014-10;Midi Pyrénées;8541;8340;201;828;90.1;9.1;Divagation d'animaux et intempéries (186 circulations), dérangements d'installations et de passages à niveau (131 circulations), défaillance matériel (102 circulations), agent de conduite (82 circulations).
+TER_20;2014-10;Rhône Alpes;30531;30064;467;3580;88.1;7.4;Un mois difficile marqué par les événements externes, des problèmes d'infrastructure et les autres transporteurs.
+TER_6;2014-11;Bretagne;7146;7087;59;517;92.7;12.7;Un mois de novembre fortement perturbé par les travaux sur la ligne Rennes-Messac.
+TER_14;2014-11;Midi Pyrénées;7946;7709;237;975;87.4;6.9;
+TER_17;2014-11;Picardie;9879;9807;72;953;90.3;9.3;Intempéries et plusieurs limitations temporaires de vitesse.
+TER_4;2014-12;Basse Normandie;3126;3079;47;232;92.5;12.3;Les mauvais résultats du mois sont dûs à de nombreuses difficultés de gestion du parc matériel (beaucoup d'absences matériel), à des dérangements d'installations ferroviaire et à des espacements et correspondances avec des Intercités. De plus, le début de mois a été marqué par le mouvement social national des 5 et 6 décembre.
+TER_6;2014-12;Bretagne;8116;8034;82;580;92.8;12.9;Un mois de décembre fortement perturbé par les travaux sur la ligne Rennes-Messac
+TER_14;2014-12;Midi Pyrénées;7731;7270;461;916;87.4;6.9;
+TER_19;2014-12;Provence Alpes Côte d'Azur;13478;12367;1111;2691;78.2;3.6;Problèmes de fiabilité et de de disponibilité du parc matériel, remise en marche difficile du plan de transport après les grèves des conducteurs de trains et des contrôleurs, incidents sur les infrastructures et incidents externes.
+TER_2;2015-01;Aquitaine;8944;8636;308;1014;88.3;7.5;Malgré les travaux de modernisation en gare de Bordeaux et des évènements externe (givre), la régularité est en légère progression.
+TER_3;2015-01;Auvergne;6155;6039;116;320;94.7;17.9;Conditions météo, dérangements d'installations et problèmes matériel.
+TER_11;2015-01;Languedoc Roussillon;4737;4665;72;429;90.8;9.9;
+TER_19;2015-01;Provence Alpes Côte d'Azur;15384;14541;843;2717;81.3;4.4;
+TER_4;2013-01;Basse Normandie;3331;3297;34;311;90.6;9.6;Grand froid et épisode neigeux les semaines 3 et 4. Tension au niveau du personnel agent de conduite. Difficultés de circulation, conséquence de la mauvaise régularité des trains Intercités.
+TER_5;2013-01;Bourgogne;8400;8332;68;625;92.5;12.3;Un mois de janvier qui surpasse les six exercices précédents en termes d'annulation et de ponctualité des trains.
+TER_11;2013-01;Languedoc Roussillon;5024;4897;127;377;92.3;12.0;Chute de neige sur le littoral.
+TER_17;2013-01;Picardie;11754;11673;81;1245;89.3;8.4;Fortes chutes de neige ayant entrainé des perturbations exceptionnelles.
+TER_18;2013-01;Poitou Charentes;3269;3134;135;205;93.5;14.3;Mouvements sociaux des agents du service commercial trains le ASCT le 1er et le 8 janvier. Fortes chutes de neige ayant entrainé des perturbations exceptionnelles.
+TER_1;2013-02;Alsace;18263;18097;166;771;95.7;22.5;Intempéries.
+TER_2;2013-02;Aquitaine;7926;7832;94;912;88.4;7.6;Inondations au sud de Dax du 11 au 13 février.
+TER_8;2013-02;Champagne Ardenne;5801;5763;38;233;96.0;23.7;
+TER_11;2013-02;Languedoc Roussillon;4614;4402;212;387;91.2;10.4;Arrêt de travail spontané suite à l'agression d'un agent du service commercial train.
+TER_19;2013-02;Provence Alpes Côte d'Azur;12581;12142;439;1761;85.5;5.9;
+TER_9;2013-03;Franche Comté;5676;5628;48;360;93.6;14.6;
+TER_4;2013-04;Basse Normandie;3221;3137;84;190;93.9;15.5;Plusieurs zones de travaux. Dérangements de d'installations dues aux variations de températures.
+TER_9;2013-04;Franche Comté;5655;5638;17;327;94.2;16.2;
+TER_12;2013-04;Limousin;4030;3834;196;196;94.9;18.6;
+TER_13;2013-04;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_15;2013-04;Nord Pas de Calais;18841;18585;256;1294;93.0;13.4;Grève nationale le 13.
+TER_17;2013-04;Picardie;10870;10819;51;657;93.9;15.5;
+TER_19;2013-04;Provence Alpes Côte d'Azur;13437;12168;1269;1660;86.4;6.3;Un éboulement dans un tunnel suite à des intempéries entraîne la suppression des trains sur une partie de leur parcours.
+TER_2;2013-05;Aquitaine;8722;8656;66;833;90.4;9.4;Deux actes de malveillance majeurs et cinq accidents de personnes.
+TER_3;2013-05;Auvergne;4996;4965;31;393;92.1;11.6;Intempéries.
+TER_5;2013-05;Bourgogne;7507;7429;78;806;89.2;8.2;Résultats ponctualité marqués par des limitations temporaires de vitesse. des inondations de voies suite aux pluies diluviennes et aléas divers.
+TER_11;2013-05;Languedoc Roussillon;4909;4666;243;335;92.8;12.9;Intempéries et mouvement social.
+TER_16;2013-05;Pays de la Loire;9823;9420;403;658;93.0;13.3;73% des annulations sont liées à des mouvements sociaux.
+TER_19;2013-05;Provence Alpes Côte d'Azur;13312;12977;335;2244;82.7;4.8;
+TER_13;2013-05;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_1;2013-06;Alsace;17810;17668;142;784;95.6;21.5;Mouvement social et travaux à Vendenheim pour la deuxième phase du TGV Est.
+TER_2;2013-06;Aquitaine;8152;8052;100;892;88.9;8.0;Inondations sur le piémont pyrénéen.
+TER_6;2013-06;Bretagne;7901;7837;64;280;96.4;27.0;
+TER_19;2013-06;Provence Alpes Côte d'Azur;12916;11957;959;2160;81.9;4.5;
+TER_13;2013-06;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_9;2013-07;Franche Comté;5169;5149;20;513;90.0;9.0;
+TER_11;2013-07;Languedoc Roussillon;5446;5317;129;711;86.6;6.5;Malveillance et causes externes.
+TER_13;2013-07;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_4;2013-08;Basse Normandie;3721;3691;30;226;93.9;15.3;Nombreuses difficultés matériels et des difficultés de circulation.
+TER_7;2013-08;Centre;9132;9047;85;519;94.3;16.4;
+TER_15;2013-08;Nord Pas de Calais;15120;14752;368;832;94.4;16.7;Intempéries, orages et affluence liée à la braderie de Lille.
+TER_5;2013-09;Bourgogne;7489;7227;262;693;90.4;9.4;Mouvement social interprofessionnel national le 10 et droit de retrait suite à une agression de contrôleur le 21 ayant entraîné d'importantes annulations de trains.
+TER_7;2013-09;Centre;9572;9188;384;632;93.1;13.5;Grève nationale.
+TER_15;2013-09;Nord Pas de Calais;18746;18215;531;1358;92.5;12.4;Incendie des postes d'aiguillage de Lourches et de Jeumont, vol de câble en gare de Seclin.
+TER_4;2013-10;Basse Normandie;3397;3278;119;262;92.0;11.5;Mouvement social du 9, début des patinages et intempéries (arbres et branches sur les voies).
+TER_7;2013-10;Centre;9857;9640;217;1003;89.6;8.6;Grève, intempéries et travaux.
+TER_12;2013-10;Limousin;4094;3833;261;370;90.3;9.4;
+TER_14;2013-10;Midi Pyrénées;7859;7757;102;654;91.6;10.9;Causes externes, dérangements des organisations syndicales.
+TER_5;2013-11;Bourgogne;7344;7270;74;964;86.7;6.5;Novembre devient le mois le plus irrégulier de l'année. Nombre croissant d'incidents en ligne conjugués à des intempéries très marquées sur l'ouest Bourgogne ont participé à des résultats contrastés.
+TER_8;2013-11;Champagne Ardenne;6045;5488;557;521;90.5;9.5;Nombreux patinages et enrayages de trains suite à la chute des feuilles mortes sur les rails, problèmes de disponibilité du matériel nécessitant la mise en œuvre de plans de transports adaptés, droit de retrait exercé du 6 au 8 par des contrôleurs champardennais suite à l'agression de l'un d'entre eux dans le train 839112 à Meaux le 6.
+TER_10;2013-11;Haute Normandie;5472;5293;179;426;92.0;11.4;Camion en panne à un passage à niveau, accident de personne, agression d'un agent du service commercial train. dérangement d'installations à la bifurcation de Darnétal, déraillement à Mantes.
+TER_15;2013-11;Nord Pas de Calais;17208;16959;249;2074;87.8;7.2;Alerte à la bombe le 4 et incendie aux abords des voies le 27 en gare de Lille Flandres.
+TER_1;2013-12;Alsace;17968;17780;188;738;95.8;23.1;Temps humide, nombreux incidents matériel et d'infrastructure.
+TER_3;2013-12;Auvergne;5092;5001;91;656;86.9;6.6;Conditions météos et intempéries.
+TER_5;2013-12;Bourgogne;7892;7605;287;749;90.2;9.2;Décembre 2013 est proche du résultat enregistré un an plus tôt. Le mois est marqué par un mouvement social important le 12 décembre traduisant un taux d'annulation important.
+TER_6;2013-12;Bretagne;8576;8246;330;613;92.6;12.5;Les travaux impactent de 1,2 point la régularité de ce mois. A signaler également : 1,2 point d'irrégularité pour cause d'enrayage et 1 point suite à la tempête DIRK, 1 point pour avarie matériel et 0.5 pour causes externes (obstacles. accident de personne). Sur 330 trains supprimés, 207 suite à une grève nationale le 10 décembre, 59 suite à la tempête DIRK et 22 pour avaries matériel.
+TER_7;2013-12;Centre;9737;9010;727;898;90.0;9.0;Grève, problèmes matériel, intempéries, givre à la caténaire.
+TER_9;2013-12;Franche Comté;5517;5444;73;541;90.1;9.1;
+TER_12;2013-12;Limousin;4118;3519;599;434;87.7;7.1;
+TER_19;2013-12;Provence Alpes Côte d'Azur;14882;10858;4024;2016;81.4;4.4;Prolongation de la fermeture de la ligne Aspres Livron. Mouvements sociaux.
+TER_19;2014-01;Provence Alpes Côte d'Azur;14703;13336;1367;2652;80.1;4.0;
+TER_17;2014-01;Picardie;11843;11756;87;992;91.6;10.9;La mise en place d'une limitation de vitesse à 60 km/h sur une distance de 32 km sur l'axe Beauvais-Le Tréport a impacté la régularité d'environ 2%.
+TER_9;2014-01;Franche Comté;5867;5825;42;382;93.4;14.2;
+TER_3;2014-01;Auvergne;6364;6305;59;581;90.8;9.9;Conditions météo, dérangements d'installations et limitation de vitesse.
+TER_2;2014-02;Aquitaine;8384;8223;171;819;90.0;9.0;Les intempéries depuis le 21 janvier représentent l’impact fort. Deux accidents routiers (Pauillac et St Emilion), des intrusions d’animaux sur les voies et un impact de foudre sont les causes des difficultés rencontrées par le matériel pour la tenue du plan de transport.
+TER_11;2014-03;Languedoc Roussillon;4465;4396;69;355;91.9;11.4;Toujours sur la dynamique de ce début d'année, un bon mois de mars (peu de causes externes)
+TER_16;2014-03;Pays de la Loire;10291;10058;233;629;93.7;15.0;
+TER_17;2014-03;Picardie;11171;11079;92;671;93.9;15.5;Plusieurs accidents de personne lourds de conséquences pour ce mois de mars, ainsi qu'un défaut de géométrie de la voie sur Paris-Nord les 20 et 21 Mars.
+TER_19;2014-03;Provence Alpes Côte d'Azur;13338;12790;548;1903;85.1;5.7;Fermeture de la ligne Nice Breil et coupure de la ligne Grenoble Briançon au niveau de Clelles Mens consécutives à des éboulements.
+TER_13;2014-03;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_9;2014-04;Franche Comté;5520;5494;26;461;91.6;10.9;
+TER_17;2014-04;Picardie;11129;11059;70;729;93.4;14.2;
+TER_12;2014-05;Limousin;4063;4012;51;358;91.1;10.2;Intempéries.
+TER_4;2014-06;Basse Normandie;2466;2287;179;178;92.2;11.8;Nombreuses difficultés matériel ainsi que dérangements d'installation. Plusieurs évènements externes comme l'accident de personne du train 3338 en gare de Caen le 4 juin et l'affluence lors des commémorations du débarquement.
+TER_5;2014-06;Bourgogne;6027;5653;374;643;88.6;7.8;Des résultats particulièrement mauvais, handicapés par le mouvement social sur la réforme ferroviaire.
+TER_6;2014-06;Bretagne;7470;7253;217;387;94.7;17.7;Grève nationale. 1,2 point d'irrégularité suite à acte de malveillance et 0,75 point cause travaux.
+TER_10;2014-06;Haute Normandie;4269;3978;291;217;94.5;17.3;
+TER_14;2014-06;Midi Pyrénées;6320;6119;201;612;90.0;9.0;Malveillance et intempéries (151 circulations, dérangements sur passages à niveau et installations (148 circulations), prise en charge client (72 circulations), agent de conduite (68 circulations).
+TER_16;2014-06;Pays de la Loire;7734;7525;209;554;92.6;12.6;Le mouvement social du mois a entraîné la déprogrammation de nombreux trains.
+TER_17;2014-06;Picardie;7840;7719;121;780;89.9;8.9;Mouvement social national du 11 au 24 juin.
+TER_18;2014-06;Poitou Charentes;2700;2527;173;190;92.5;12.3;Mouvement social national du 11 au 24 juin.
+TER_3;2014-07;Auvergne;5262;5220;42;288;94.5;17.1;
+TER_4;2014-07;Basse Normandie;3731;3704;27;173;95.3;20.4;Un mois de juillet à l'objectif avec tout de même des difficultés de production la semaine 29 (des correspondances avec des Intercités en retards, des dérangements d'installation et des difficultés matériels).
+TER_7;2014-07;Centre;9294;9177;117;791;91.4;10.6;Fortes chaleurs, limitations temporaires de vitesse et nombreux dérangements d'installations.
+TER_19;2014-07;Provence Alpes Côte d'Azur;14923;14388;535;2373;83.5;5.1;
+TER_8;2014-08;Champagne Ardenne;5532;5499;33;214;96.1;24.7;
+TER_14;2014-08;Midi Pyrénées;8477;8227;250;637;92.3;11.9;Malveillance et intempéries, dérangements sur passage à niveau et installations, difficulté de prise en charge en gare, matériel.
+TER_16;2014-08;Pays de la Loire;10808;10698;110;549;94.9;18.5;
+TER_5;2014-09;Bourgogne;7977;7946;31;666;91.6;10.9;Les résultats sont corrects et homogènes sur  une grande partie du territoire. A noter que les zones périurbaines de Dijon ont été perturbés par les limitations temporaires de vitesse.
+TER_13;2014-09;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_8;2014-10;Champagne Ardenne;6008;5952;56;299;95.0;18.9;Le 7 octobre et suivants : fontis aux abords de la voie 1 entre Nogent sur Seine et Romilly sur Seine ayant entrainé des restrictions de circulation. Le 21 octobre : forts coups de vent avec arbres sur la voie et la caténaire.
+TER_15;2014-10;Nord Pas de Calais;20121;19812;309;1707;91.4;10.6;
+TER_9;2014-11;Franche Comté;5456;5368;88;457;91.5;10.7;
+TER_12;2014-11;Limousin;3923;3875;48;390;89.9;8.9;
+TER_16;2014-11;Pays de la Loire;10403;10273;130;746;92.7;12.8;
+TER_2;2014-12;Aquitaine;9074;8794;280;1364;84.5;5.4;Des travaux de modernisation en gare de Bordeaux et ses alentours ont réduit la capacité de celle-ci, occasionnant de nombreux retards.
+TER_7;2014-12;Centre;9185;9074;111;813;91.0;10.2;Grève national le 5 décembre, nombreux dérangements d'installation et problèmes d'adhérences en début de mois.
+TER_10;2014-12;Haute Normandie;5866;5759;107;341;94.1;15.9;
+TER_12;2014-12;Limousin;4166;4096;70;331;91.9;11.4;
+TER_15;2014-12;Nord Pas de Calais;18923;18349;574;1647;91.0;10.1;
+TER_16;2014-12;Pays de la Loire;11412;11169;243;1010;91.0;10.1;
+TER_18;2014-12;Poitou Charentes;3562;3489;73;358;89.7;8.7;
+TER_4;2015-01;Basse Normandie;3275;3245;30;162;95.0;19.0;Beaucoup de difficultés avec le parc matériel et de nombreux obstacles sur la voie (innondation du souterrain de Frénouville avec risque de traversée de voie). Nous avons aussi eu beaucoup de suppressions pour des absences de conducteur.
+TER_7;2015-01;Centre;9084;8999;85;637;92.9;13.1;
+TER_13;2015-01;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_10;2015-02;Haute Normandie;5483;5399;84;275;94.9;18.6;
+TER_14;2015-02;Midi Pyrénées;8017;7771;246;710;90.9;9.9;"1. Matériel TER (134 circ.)
+2. Dérangements d'installations (123 Circ.)
+3. ADC TER (104 Circ.)
+4. ASCT TER (33 Circ.)"
+TER_18;2015-02;Poitou Charentes;3242;3193;49;304;90.5;9.5;
+TER_15;2015-03;Nord Pas de Calais;19080;18488;592;1552;91.6;10.9;
+TER_16;2015-03;Pays de la Loire;11293;11197;96;766;93.2;13.6;
+TER_5;2015-04;Bourgogne;7696;7623;73;583;92.4;12.1;Avril aura été marqué par une hausse des dérangements d’installations et des conséquences des travaux (x2 par rapport à avril 2014) et une forte irrégularité générée par le matériel roulant.
+TER_10;2015-04;Haute Normandie;5777;5738;39;267;95.3;20.5;
+TER_14;2015-04;Midi Pyrénées;8178;8037;141;638;92.1;11.6;"1. Dérangements d'installations (131 Circ.)
+2. Externe (116 circ.)
+3. Matériel TER (94 Circ.)
+4. ADC TER (71 Circ.)"
+TER_15;2015-04;Nord Pas de Calais;;;;;;;
+TER_3;2015-05;Auvergne;5591;5534;57;203;96.3;26.3;Événements externes, Problèmes matériels, dérangements d'installations
+TER_6;2015-05;Bretagne;7692;7655;37;265;96.5;27.9;
+TER_9;2015-05;Franche Comté;5394;5347;47;418;92.2;11.8;
+TER_11;2015-05;Languedoc Roussillon;4447;4397;50;493;88.8;7.9;
+TER_10;2015-06;Haute Normandie;5982;5915;67;287;95.1;19.6;
+TER_11;2015-06;Languedoc Roussillon;4666;4483;183;599;86.6;6.5;
+TER_12;2015-06;Limousin;4211;4168;43;275;93.4;14.2;"De manière générale, les principaux retards en juin sont liés :
+• Aux défaillances de l’infrastructure pour 2,66 points (en forte augmentation par rapport au mois précédent de quasi 1,5 point) suite en particulier à des dérangements de PN principalement sur la ligne 2, des dérangements de block sur la ligne 4, des dérangements du compteur d’essieux sur lignes 2 et 8, et la mise en place d’une LTV pour défaut de géométrie de la voie sur la ligne 2.
+• Aux causes externes pour 1,17 point  avec comme faits marquants   des divagations de bestiaux et un accident de personne sur Intercité.
+• A des causes imputables à la circulation ferroviaire pour 0,31 point avec en particulier des prises de services tardives sur ligne 5 et des difficultés de gestion des circulations sur ligne 8.
+• Aux défaillances du matériel roulant (1,25 point), en légère augmentation par rapport au mois précédent avec en particulier le blocage d’un bogie sur ligne 8.
+•  Aux correspondances et prises en charge clientèle (0,60 point).
+• A des causes liées aux conducteurs et ASCT pour 0,28 point.
+
+On enregistre des suppressions :
+•  pour défauts ou défaillances de matériel dont 10 liés à l’incident du 17 juin sur ligne 8 (blocage d’un bogie sur un engin)
+•  pour absences et/ou défaut de conducteurs. 
+• en lien avec des défaillances de l’infrastructure dont en particulier 5 suite d’un dérangement du compteur d’essieux sur ligne 2 et 6 suite d’un dérangement de zone sur le secteur circulation de Saint Sulpice .
+• pour l’externe suite d’un accident de personne sur un Intercité."
+TER_14;2015-06;Midi Pyrénées;8545;8349;196;767;90.8;9.9;"1. Dérangements d'installations (189 Circ.)
+2. Externe (182 circ.)
+3. ADC TER (90 Circ.)
+4. Matériel TER (78 Circ.)"
+TER_6;2015-07;Bretagne;7026;6986;40;275;96.1;24.4;
+TER_7;2015-07;Centre;9371;9099;272;831;90.9;9.9;Résultat en dessous de l'objectif : Les événements marquants sur les lignes Euréliennes, des causes Externes avec des colis suspects, signal d'alarme sur Transilien, des causes fortes chaleurs avec mise en place de limitation de vitesse. Les lignes Centre, marquées également par les fortes chaleurs et leurs conséquences sur les infrastructures (mise en place de limitation de vitesse pour préserver les installations), mais aussi origine de nombreux incendies (feux de talus, champs ...). Enfin l'événement ayant le plus de conséquences sur la ponctualité est l'incendie sous le  pont de Grammont du 11 juillet, avec des interruptions de circulations pendant 3 jours puis des restrictions de circulations pour une durée d'une semaine. Il est à noter un point positif, la bonne tenue du parc matériel TER.
+TER_16;2015-07;Pays de la Loire;10625;10442;183;895;91.4;10.7;
+TER_17;2015-07;Picardie;10368;10085;283;870;91.4;10.6;Un mois en-dessous de l'objectif même si en amélioration par rapport au mois de juin, avec notamment un lourd impact des fortes chaleurs et des dérangements d'installations.
+TER_6;2015-08;Bretagne;7050;6980;70;358;94.9;18.5;
+TER_7;2015-08;Centre;9258;9176;82;641;93.0;13.3;"Résultat en dessous de l'objectif :
+Pas d'incidents majeurs sur les lignes Centre même si 19 journées ne sont pas à l'objectifs. Trois familles de causes restent à u niveau supérieur à la moyenne : Transporteur (avec des avaries matériels), Réseau (dérangements d'installation) et Externe (Rafales de vent du 24/08 provoquant la chutes de branches/arbres). A noter également des retards imputés au service voyageurs (Vélo, PMR, groupe).
+Deux semaines difficiles pour les lignes euréliennes. 43% des retards sont des causes Externes (Collision PN, Collision animal, Conditions climatiques), 25% pour Réseau (Divers dérangements d'installation) enfin 13%  pour le Transporteur (Avaries matériel)."
+TER_14;2015-08;Midi Pyrénées;8120;7958;162;564;92.9;13.1;"1. Externe (139 circ.)
+2. Dérangements d'installations (120 Circ.)
+3. ADC TER (91 Circ.)
+4. Matériel TER (83 Circ.)"
+TER_15;2015-08;Nord Pas de Calais;15700;15513;187;949;93.9;15.3;
+TER_19;2015-08;Provence Alpes Côte d'Azur;15661;15143;518;2802;81.5;4.4;
+TER_5;2015-09;Bourgogne;7711;7662;49;658;91.4;10.6;"""Intempérie le 16/09 impactant le service.
+A un niveau de 91.3% sans la journée du 16/09 (cas de force majeure, alerte rouge très tardive 01h30 avant la tempête), le résultat dépassait celui des mois de septembre 2014 et 2013…
+
+Une production relativement homogène sur le territoire, presque tous les axes sont à l’objectif.
+"""
+TER_6;2015-09;Bretagne;8232;8140;92;502;93.8;15.2;
+TER_9;2015-09;Franche Comté;5674;5596;78;447;92.0;11.5;
+TER_14;2015-09;Midi Pyrénées;8777;8564;213;789;90.8;9.9;"1. Externe (207 circ.)
+2. Dérangements d'installations (125 Circ.)
+3. ADC TER (105 Circ.)
+4. Matériel TER (106 Circ.)"
+TER_15;2015-09;Nord Pas de Calais;19841;19542;299;1580;91.9;11.4;
+TER_17;2015-09;Picardie;11479;11308;171;752;93.3;14.0;Premier mois de l'année au-dessus de l'objectif fixé. Le nombre de trains supprimés a diminué par rapport aux trois mois précédents.
+TER_3;2015-10;Auvergne;5725;5607;118;346;93.8;15.2;Événements externes, Problèmes matériels, limitations de vitessse et dérangements d'installations
+TER_14;2015-10;Midi Pyrénées;8130;7629;501;758;90.1;9.1;"1. Externe (200 circ.)
+2. ADC TER (130 Circ.)
+3. Dérangements d'installations (125 Circ.)
+4. Autre transporteur Sncf (66 Circ.)"
+TER_18;2015-10;Poitou Charentes;3423;3392;31;352;89.6;8.6;La nouvelle limitation de vitesse à 40km/h sur l'axe Poitiers- La Rochelle conduit à une forte baisse de al régularité sur cet axe, faisant baisser la régularité globale Poitou-Charente.
+TER_19;2015-10;Provence Alpes Côte d'Azur;14986;14141;845;2898;79.5;3.9;Aux difficultés de production liées au manque de fiabilité des matériels et aux nombreux travaux d’infrastructure sur la région, est venu s’ajouter l’épisode des très fortes intempéries sur la Côte d'Azur. Les conséquences ont été très importantes, 6 rames ont été inutilisables pendant plusieurs semaines, les installations de sécurité ont dû être recontrôlées. Les personnels ont été fortement sollicités pendant cette période. C’est la production de la ligne Nice Toulon Marseille (matériels roulants inondés, voies déstabilisées...) qui en a le plus souffert.
+TER_4;2015-11;Basse Normandie;2842;2658;184;263;90.1;9.1;Le début du mois a été difficile avec un dérangement de l'Infrastructure entrainant de grosses contraintes de circulation (catégorie C) entre Lison et Caen jusqu'au 4. Les 9 est 10, les contrôleurs ont exercé un droit de retrait suite à l'agression de l'un d'entre eux, entrainant la suppression de la majorité de nos circulations. Enfin de très nombreuses difficultés d'adhérence ont continués de rendre la production difficile jusqu'à la fin du mois.
+TER_10;2015-11;Haute Normandie;5297;5157;140;497;90.4;9.4;
+TER_12;2015-11;Limousin;3954;3906;48;472;87.9;7.3;"De manière générale, les principaux retards en novembre sont liés :
+• Aux défaillances de l’infrastructure pour 2,66 points suite en particulier à des dérangements de PN, signaux et compteurs d’essieux et surtout la mise en application de mesures conservatoires suite des deshuntages sur certaines parties de voie sur la ligne 11.
+• Aux causes externes pour 2,84 points  avec des adhérences dégradées et de nombreuses  divagations ou heurt  de bestiaux. A noter aussi la mise en application de la procédure colis suspect sur Périgueux le 20 nov.
+• Aux défaillances du matériel roulant (quasi 1,7 points), en stagnation par rapport au mois précédent avec des avaries de portes, des difficultés de formation d’UM, d’isolements de moteurs… et des difficultés de gestion des rames au dépôt entrainant des sorties tardives.
+•  Aux correspondances et prises en charge clientèle (0,7 point), 
+• A des causes liées aux conducteurs et ASCT pour quasi 0,6 point.
+
+Suppressions :
+•  pour défauts ou défaillances de matériel.
+• suppressions pour absences et/ou défaut de conducteurs. 
+• suppressions pour absences et/ou défaut d’ASCT.
+• suppressions suite problème de remisage à Poitiers.
+• suppressions suite à des dérangements d’installations, travaux et circulation.
+• suppressions pour l’externe suite en particulier d’adhérence dégradées.
+• suppressions affectées à d’autres transporteurs ayant demandés le secours pour avarie de matériel ou autre.
+• suppressions en production suite problématique deshuntage."
+TER_13;2015-11;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_20;2015-11;Rhône Alpes;27732;26978;754;3705;86.3;6.3;Mois qui se dégrade  dû principalement aux événements externes ( malveillance, colis suspects dans les gares et accidents de personnes), à l'Infrastructure( travaux) et aux incidents matériel
+TER_11;2015-12;Languedoc Roussillon;4502;4419;83;444;90.0;9.0;
+TER_14;2015-12;Midi Pyrénées;8393;8180;213;828;89.9;8.9;"1. Externe (211 circ.)
+2. ADC TER (172 circ.)
+3. Matériel TER (98 circ.)
+4. Infra Equipement (89 Circ.)"
+TER_1;2016-01;Alsace;18928;18683;245;995;94.7;17.8;Mise en place inopinée d'un RAL 10  en amont de Molsheim pour des raisons de sécurité  - conditions extrêmes sem. 3
+TER_5;2016-01;Bourgogne;7767;7715;52;658;91.5;10.7;"""11 axes sur 15 sont à l’objectif
+1ère activité TER en Janvier 2016"""
+TER_12;2016-01;Limousin;4212;4154;58;304;92.7;12.7;"De manière générale, les principaux retards en janvier sont liés :
+• Aux défaillances de l’infrastructure pour 1 point suite en particulier à des dérangements d’installations : intervalles et compteurs d’essieux sur lignes 2 et 3, système d’exploitation de la ligne 8, signalisation sur ligne 4, et quelques PN.
+• Aux causes externes pour 1,6 point  avec des  divagations ou heurts  de bestiaux, des chutes d’arbres,   un bri de barrière de PN par un tiers sur ligne 8, et un accident de personne en gare de Limoges.
+• Aux défaillances du matériel roulant (1,9 point), en augmentation par rapport au mois précédent avec des avaries de portes, des difficultés de formation d’UM, d’isolements de moteurs… et des difficultés de gestion des rames au dépôt entrainant des sorties tardives. 
+•  Aux correspondances et prises en charge clientèle (0,5 point), 
+• A des causes liées aux conducteurs et ASCT pour quasi 0,2 point.
+
+Suppressions :
+• pour défauts ou défaillances de matériel.
+•  pour absences et/ou défaut de conducteurs.
+•  suite réutilisation des ressources 
+•  suite secours d’un autre train
+• suite panne d’un train travaux.
+•  liées au dérangement du CAPI sur Brive
+•  pour causes externes : divagations d’animaux, heurt avec arbres et accidents de personne en gare de Limoges."
+TER_1;2016-02;Alsace;18666;18379;287;904;95.1;19.3;Maintien du ralentissement à 10 km/h  entre Bourg-Bruche et St-Blaise-la-Roche-Poutay pour des raisons de sécurité
+TER_3;2016-02;Auvergne;5474;5382;92;295;94.5;17.2;Causes externes (1,39% / 5,48%) - Dérangements installation (0,72% / 5,48%) - Pb de matériel (0,68% / 5,48%)
+TER_10;2016-02;Haute Normandie;5706;5599;107;236;95.8;22.7;
+TER_11;2016-02;Languedoc Roussillon;4520;4438;82;445;90.0;9.0;
+TER_15;2016-02;Nord Pas de Calais;18831;18130;701;1642;90.9;10.0;
+TER_3;2016-03;Auvergne;5257;5203;54;321;93.8;15.2;Pb Réseau (1,36%) - Externe (1,13%) - Matériel (1,04%)
+TER_19;2016-03;Provence Alpes Côte d'Azur;15247;14727;520;1989;86.5;6.4;
+TER_2;2015-02;Aquitaine;8037;7823;214;825;89.5;8.5;
+TER_3;2015-02;Auvergne;5418;5294;124;340;93.6;14.6;Problèmes matériel, conditions météos (intempéries), Travaux,
+TER_11;2015-02;Languedoc Roussillon;4331;4237;94;461;89.1;8.2;
+TER_13;2015-02;Lorraine;12387;12217;170;543;95.6;21.5;
+TER_7;2015-03;Centre;8996;8878;118;548;93.8;15.2;Résultat à l'objectif, néanmoins les évenements marquants sont une panne d'un TER à la Villette-St-Prest, 2 restitutions tardive de travaux à Tours, plan de transport adapté suite à dériallement d'un train Fret à l'entrée de Vendôme.
+TER_10;2015-03;Haute Normandie;5956;5862;94;293;95.0;19.0;
+TER_12;2015-03;Limousin;4153;4130;23;285;93.1;13.5;
+TER_18;2015-03;Poitou Charentes;3449;3426;23;272;92.1;11.6;Régularité principalement impactée par des limitations temporaires de vitesse pour travaux ou pour défaut de géométrie de la voie.
+TER_19;2015-03;Provence Alpes Côte d'Azur;15324;14907;417;2413;83.8;5.2;
+TER_4;2015-04;Basse Normandie;3223;3205;18;120;96.3;25.7;De bon résultats encore pour ce mois d'avril, dans la ligné de ce début d'année avec toujours des conséquences de retards Intercités (Espacements et correspondances) et des dérangements de l'infrastructure (dérangement de compteur d'essieux entre Lison et St Lô le 15).
+TER_11;2015-04;Languedoc Roussillon;4479;4408;71;417;90.5;9.6;
+TER_17;2015-04;Picardie;10926;10719;207;994;90.7;9.8;Toujours la présence de la LTV entre Corcy et Villers-Cotterêts, mais également de nombreuses causes extérieures.
+TER_19;2015-04;Provence Alpes Côte d'Azur;14966;14550;416;2640;81.9;4.5;
+TER_1;2015-05;Alsace;17576;17422;154;432;97.5;39.3;
+TER_4;2015-05;Basse Normandie;3065;3057;8;94;96.9;31.5;"C’est le meilleur mois de ces 3 dernières années avec des résultats supérieurs encore à avril 2015.
+Seulement 8 suppressions ce mois ci dont 6 sont dues à des difficultés de matériel et 2 à une absence de conducteur."
+TER_10;2015-05;Haute Normandie;5363;5345;18;154;97.1;33.7;
+TER_7;2015-06;Centre;9080;8984;96;812;91.0;10.1;"Résultat en dessous de l'objectif :
+ Les évènements marquants sur les lignes Centre, LTV 40 à St Cyr en Val suite à Fontis, fortes chaleurs avec mise en place de limitations de vitesse sur plusieurs jours pour préserver les installations, ralentissements sur l'axe Château-du-Loir.
+Sur les lignes Euréliennes, la LTV 40 à St Cyr en Val impacte l'arrivée des trains en zone parisienne, retards également suite aux fortes chaleurs sur 3 journées, nombreux retards suite aux problèmes d'interdépendance (ex : pannes Transilien)."
+TER_9;2015-06;Franche Comté;5669;5622;47;457;91.9;11.3;
+TER_15;2015-06;Nord Pas de Calais;19499;19125;374;1693;91.1;10.3;
+TER_19;2015-06;Provence Alpes Côte d'Azur;15062;14554;508;2477;83.0;4.9;
+TER_2;2015-07;Aquitaine;8373;7990;383;1186;85.2;5.7;"""Des travaux en gare de Bordeaux et dans sa périphérie mettent en difficulté la circulation des trains. 
+Les fortes chaleurs de juillet et des incendies en bordures des voies ont impactées fortement la régularité, des restrictions de vitesse des trains ont été mise en place pour préserver les installations (voie et caténaire)."""
+TER_11;2015-07;Languedoc Roussillon;5130;5051;79;839;83.4;5.0;
+TER_13;2015-07;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_18;2015-07;Poitou Charentes;3594;3537;57;321;90.9;10.0;"Le mois de juillet est ""traditionnellement"" faible. Les fortes chaleurs, divers incidents et autres heurts (véhicules ou personnes) ont encore plus péjoré les résultats."
+TER_19;2015-07;Provence Alpes Côte d'Azur;15718;15118;600;3141;79.2;3.8;
+TER_4;2015-08;Basse Normandie;3672;3640;32;190;94.8;18.2;"Un mois d’aout à l’image de juillet avec des difficultés matériel, des difficultés de circulation et des retards pour causes externe (un vol de cable provoque de nombreux dérangement d'installatiopn en début de mois).
+Les suppressions sont en majorité à des absences  de conducteurs mais aussi à des obstacles sur la voie (intempéries du 24 aout dans le Sud-Manche)"
+TER_9;2015-08;Franche Comté;5375;5333;42;341;93.6;14.6;
+TER_10;2015-08;Haute Normandie;5881;5828;53;223;96.2;25.1;
+TER_12;2015-08;Limousin;4113;4070;43;392;90.4;9.4;"De manière générale, les principaux retards en aout sont liés :
+• Aux défaillances de l’infrastructure pour 4,8 points (en légère baisse par rapport au mois précédent à 5 points) suite en particulier à la mise en place de LTV pour défaut de géométrie de la voie sur la ligne 2, des  dérangements de block et d’intervalle (compteur d’essieux) sur les lignes 2, 4, 5, 8 et 10. A noter aussi quelques dérangements de signalisation et PN .
+• Aux causes externes pour quasi 1,9 points  avec comme faits marquants   des chocs avec arbres suite intempéries et des divagations de bestiaux.
+• Aux défaillances du matériel roulant (1 point), en légère baisse par rapport au mois précédent avec quelques demandes de secours en ligne, des défaillances de portes, Grog, freins…
+•  Aux correspondances et prises en charge clientèle (0,70 point), avec l’effet groupe et PSH lié aux vacances scolaires.
+• A des causes liées aux conducteurs et ASCT pour 0,5 point.
+Suppressions :
+• 13  pour défauts ou défaillances de matériel.
+• 19  pour absences et/ou défaut de conducteurs. 
+• 3  suite à erreur de commande
+• 16  pour l’externe suite d’un accident de personne et intempérie
+• 2  suite à absence d’agent circulation sur ligne 5"
+TER_16;2015-08;Pays de la Loire;10550;10417;133;800;92.3;12.0;
+TER_17;2015-08;Picardie;9810;9575;235;716;92.5;12.4;Un mois en amélioration malgré de nombreuses causes extérieures et Infra. Encore un nombre conséquent de suppressions.
+TER_7;2015-09;Centre;8935;8810;125;646;92.7;12.6;"Un résultat au dessus de l'objectif conventionnel mais inférieur à notre objectif mensuel. La majorité des incidents se porte sur  le réseau que ce soit en dérangements d'installations (signalisation; zones) et par des phénomènes d'intempéries (vents forts le 16/9 ayant entraîné son lot de branches et arbres sur la voie, pratiquement sur l'ensemble de notre périmètre) mais également des affaissements de voie dus à des fontis sur deux zones (St Cyr en val problème déjà rencontré en juin dernier) et sur Joué les tours. Autre fait à noter : la forte prégnance de l'interdépendance : Transilien sur PCLM  (suite LTV sur zone de Dreux  impactant les TER à St Cyr) Tours Poitiers (impact TGV) et Les Aubrais Vierzon (impact PALITO) cette cause représente environ 16% de nos retards."
+TER_12;2015-09;Limousin;4230;4196;34;357;91.5;10.8;"De manière générale, les principaux retards en septembre sont liés :
+• Aux défaillances de l’infrastructure pour 2,98 points (en baisse par rapport au mois précédent de plus de 1,5 points) suite  en particulier à la mise en place de LTV pour défaut de géométrie de la voie et fontis sur la ligne 2, et des dérangements  de compteurs d’essieux sur la zone  Beynac / Nexon.  A noter aussi quelques dérangements de signalisation et PN.
+• Aux causes externes pour quasi 1,5 points  avec comme faits marquants  en particulier  des chocs avec arbres suite intempéries, des divagations de bestiaux et une collision avec véhicule routier sur Mussidan.
+• Aux défaillances du matériel roulant (quai 1,5 points), en hausse d’un demi-point par rapport au mois précédent avec des avaries de portes, d’isolement de moteurs… et des difficultés de gestion des rames au dépôt entrainant des sorties tardives.
+•  Aux correspondances et prises en charge clientèle (0,5 point), 
+• A des causes liées aux conducteurs et ASCT pour quasi 0,5 point.
+Suppressions :
+•  pour défauts ou défaillances de matériel.
+•  pour absences et/ou défaut de conducteurs. 
+• suite à des dérangements d’installations (compteur d’essieux, dérangement du système d’exploitation Mistral,…)
+• pour l’externe suite intempérie et acte de malveillance
+• suppression suite à secours d’un train Fret"
+TER_16;2015-09;Pays de la Loire;11631;11456;175;817;92.9;13.0;
+TER_18;2015-09;Poitou Charentes;3458;3429;29;275;92.0;11.5;Un mois médiocre, toujours impacté par les mauvais résultats de l'axe Poitiers-La Rochelle et Niort-Saintes.
+TER_6;2015-10;Bretagne;8185;8098;87;473;94.2;16.1;
+TER_7;2015-10;Centre;9024;8941;83;867;90.3;9.3;"Un mauvais mois en ponctualité marqué par une part Réseau toujours assez haute avec deux causes majeures impactantes : les conséquences des travaux (ralentissements essentiellement et quelques restitutions tardives) ; des dérangements d'installations fixes (signalisation et voie); deux causes externes sont marquantes ce mois -ci : les ""colis supect"" (7 incidents) et les ""intrusion-personne dans les voies"". Enfin une part d'interdépendances avec les autres activités (TN,TGV et IC) très importante et centrée sur quelques lignes TER Centre. La production du transporteur reste quant à elle globalement maîtrisée à l'exception des suppressions dont la cause principale est l'absence d'ADC en corrélation avec la tension actuelle dans ce domaine."
+TER_9;2015-10;Franche Comté;5722;5698;24;457;92.0;11.5;
+TER_1;2015-11;Alsace;18297;18130;167;1056;94.2;16.2;Nombreux heurts avec gibiers
+TER_19;2015-11;Provence Alpes Côte d'Azur;14901;14345;556;2594;81.9;4.5;
+TER_7;2015-12;Centre;9324;9196;128;673;92.7;12.7;"Un beau mois de décembre pour Centre, c'est le meilleur mois sur ces trois dernières années.. Les incidents les plus importants en impact production ce mois-ci  sont les conséquences:
+ -De la LTV  sur Etampes (retour à une situation quasi normale sur la seconde quinzaine de décembre).
+ -Du franchissement de carré le 29/12 à Orléans (aiguille rendue inutilisable) qui a fortement perturbé les lignes Orléans/Vierzon/Bourges/Nevers pendant 2 jours.
+ -Du déraillement d'un train de Fret à Reignac avec fermeture de la ligne Tours-Loches durant deux jours.
+Malgré quelques retards (correspondances assurées) nous avons pu, pour l'affluence de ces fêtes de fin d'année, transporter tous nos clients sans incident majeur."
+TER_8;2015-12;Champagne Ardenne;6359;6287;72;311;95.1;19.2;"pas de faits marquants durant ce mois. Les motifs de retards sont variés : défaillances de matériels et attentes de personnels ; colis suspects dans des trains ; dérangements de signaux et de passages à niveau ; etc…"
+TER_10;2015-12;Haute Normandie;5922;5837;85;313;94.6;17.6;
+TER_13;2015-12;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_16;2015-12;Pays de la Loire;11889;11730;159;1117;90.5;9.5;
+TER_18;2015-12;Poitou Charentes;3601;3515;86;479;86.4;6.3;Mise en place de plusieurs limitations temporaires de vitesse à Beillant depuis le 3/12. L'impact sur les axes Saintes-Bordeaux et Saintes-Angoulême représente 6,2% d'irrégularité sur le mois.
+TER_3;2016-01;Auvergne;5610;5515;95;307;94.4;17.0;Problèmes matériel, Conditions météo.
+TER_6;2016-01;Bretagne;7824;7747;77;558;92.8;12.9;
+TER_9;2016-01;Franche Comté;5730;5658;72;367;93.5;14.4;
+TER_14;2016-01;Midi Pyrénées;8390;8293;97;859;89.6;8.7;"1. Intempéries, malveillance et divagation d'animaux (195 circ.)
+2. Dérangements d'installations (156 Circ.)
+3. ADC TER (130 Circ.)
+4. Détresse matériel roulant (114 Circ.)"
+TER_20;2016-01;Rhône Alpes;29464;29119;345;3382;88.4;7.6;Des événements  externes, Infrastructure et matériel viennent impacter ce mois de janvier.
+TER_2;2016-02;Aquitaine;8056;7844;212;1028;86.9;6.6;"""Les travaux en gare de Bordeaux, mais également sur l'ensemble du territoire Aquitain, mettent en difficulté la circulation des trains. 
+De fortes contraintes d'exploitation des matériels X73500 pénalisent également fortement la production, notamment sur les lignes du sud
+Incidents du mois : arbres sur voie, incendie en gare de Pons, inondations à La Grave, fontis à Urt, intervention police à libourne et Castillon, 3 detresses de trains Fret"""
+TER_5;2016-02;Bourgogne;7568;7489;79;712;90.5;9.5;Résultats issus d'effets conjugués entre : impact travaux contexte RVB Laroche,  Sens impactant BG Nord, suppressions pour cause matériel en legere hausse
+TER_13;2016-02;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_16;2016-02;Pays de la Loire;11114;10983;131;736;93.3;13.9;
+TER_5;2016-03;Bourgogne;7385;7260;125;567;92.2;11.8;"premier mois à l'objectif > 91% sur un mois marqué par mvt social.
+Les travaux ont toujours des impacts sur la ponctulaité à 5'"
+TER_16;2016-03;Pays de la Loire;11138;10946;192;806;92.6;12.6;
+TER_17;2016-03;Picardie;10246;10013;233;928;90.7;9.8;Limitation de la vitesse toujours en place entre Corcy et Villers-Cotterêts, nombreuses causes extérieures avec notamment des intempéries (tempêtes) et également des dérangements d'installations Infra.
+TER_1;2015-02;Alsace;18052;17859;193;637;96.4;27.0;
+TER_5;2015-02;Bourgogne;7180;7124;56;483;93.2;13.7;
+TER_8;2015-02;Champagne Ardenne;5633;5572;61;226;95.9;23.7;
+TER_20;2015-02;Rhône Alpes;27776;26753;1023;3598;86.6;6.4;un mois de février difficile avec  les mêmes items qu'en janvier sur les causes des retards, avec en plus l'item des forts trafics sur les Alpes pendant toutes vacances scolaires des 3 zones, mars commence sous de meilleures auspices
+TER_5;2015-03;Bourgogne;7864;7800;64;533;93.2;13.6;
+TER_17;2015-03;Picardie;11447;11087;360;1027;90.7;9.8;Toujours la présence de la LTV entre Corcy et Villers-Cotterêts, mais également de nombreuses suppressions suite à des absences d'agent de conduite des trains
+TER_20;2015-03;Rhône Alpes;29488;29096;392;2773;90.5;9.5;Les indicateurs se redressent en mars ce qui ce confirme début avril.
+TER_8;2015-04;Champagne Ardenne;5644;5538;106;373;93.3;13.8;"1) 10 et 24/04 : mouvement social local à l'ESV CA 
+2) 13/04 : voiture accidentée sur les voies entre Bar sur Aube et Chaumont au PK 223
+3) 21/04 : heurt d'un transport exceptionnel routier par le train 1646 au passage à niveau n° 41 à Nangis ayant entrainé de fortes perturbations de la circulation pendant plusieurs jours
+4) 22/04 : déraillement d'un train de fret à Epernay ayant entrainé de fortes perturbations de la circulation (+ des restrictions résiduelles de circulation pendant plusieurs semaines)"
+TER_9;2015-04;Franche Comté;5478;5461;37;370;93.2;13.8;
+TER_2;2015-05;Aquitaine;8028;7871;157;893;88.7;7.8;Des travaux en gare de Bordeaux et dans sa périphérie mettent en difficulté la circulation des trains. Interruption partielle de la ligne Périgueux Agen suite à un accident pont rail à Penne d’Agenais le 27 Mai 2015.
+TER_5;2015-05;Bourgogne;7407;7360;47;524;92.9;13.0;"Exceptés l’axe Laroche – Paris et le portefeuille des « 17xxx » marqués par des problèmes sur le matériel roulant [*] et la gestion des correspondances, la production est homogène sur tout le territoire.
+Le périurbain de l’étoile dijonnaise se porte bien, l’axe Sud revient à l’objectif et sort des travaux à partir du 28/05 pour retrouver la trame horaire nominale."
+TER_12;2015-05;Limousin;3824;3793;31;192;94.9;18.8;
+TER_14;2015-05;Midi Pyrénées;8122;8009;113;597;92.5;12.4;"1. Externe (199 circ.)
+2. Matériel TER (118 Circ.)
+3. Dérangements d'installations (103 Circ.)
+4. ADC TER (58 Circ.)"
+TER_17;2015-05;Picardie;10224;10061;163;814;91.9;11.4;Toujours la présence de la LTV entre Corcy et Villers-Cotterêts jusqu'au 13/05, mais également de nombreuses avaries du matériel et causes extérieures
+TER_1;2015-06;Alsace;19640;19391;249;727;96.3;25.7;
+TER_3;2015-06;Auvergne;6234;6171;63;307;95.0;19.1;Problème matériel, Derangement d'installation, conditions météo
+TER_5;2015-06;Bourgogne;7961;7863;98;667;91.5;10.8;"1er mois en dessous de l’objectif
+4 crises majeures impactant plus de 1% de ponctualité (2 incendies en bord de voie, 1 dérangment PAI et 1 incident caténaire).  Outre les 4 crises en période de pointe, l’artère PLM aura été marquée par de nombreux dérangements d’installation et par les problèmes sur le parc matériel roulant."
+TER_13;2015-06;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_16;2015-06;Pays de la Loire;11081;10868;213;925;91.5;10.7;
+TER_17;2015-06;Picardie;11499;11266;233;1063;90.6;9.6;Un mois marqué essentiellement par des événements extérieurs à l'EF (74%), dont les conséquences des fortes chaleurs du 30 juin.
+TER_3;2015-07;Auvergne;6094;5987;107;361;94.0;15.6;Dérangements d'installations, évenements externes, problèmes matériels
+TER_4;2015-07;Basse Normandie;3731;3682;49;191;94.8;18.3;"Un mois de juin à l’objectif marqué cependant par de nombreux dérangements d’installations
+ferroviaires et plusieurs heurts d’obstacles. La première partie du mois est plutôt marquée par de nombreux heurts (arbres, branches, vaches…) ainsi que des incidents matériels, et la fin du mois par des défaillances d’installation d’Infrastructure (PN…)."
+TER_5;2015-07;Bourgogne;6951;6823;128;610;91.1;10.2;La production a été en dents de scie, marquée par des incidents lourds (plusieurs feux de talus, vol de câble), par de nombreux dérangements (canicule) et une tension forte sur le parc locomotives BB7200R touchant plus particulièrement la Bourgogne Nord.
+TER_8;2015-07;Champagne Ardenne;5863;5815;48;351;94.0;15.6;Production perturbée par des fortes chaleurs (ralentissements / dérangements de signaux et de PN / pannes de matériels, feux aux abords de la voie, …)
+TER_10;2015-07;Haute Normandie;6017;5976;41;276;95.4;20.7;
+TER_12;2015-07;Limousin;4016;3970;46;447;88.7;7.9;Très forte dégradation de la régularité en juillet notamment à cause de la ligne Limoges-Poitiers: 63,78% suite à la mise en place de 2 LTV pour defaut de géométrie de la voie,
+TER_15;2015-07;Nord Pas de Calais;15988;15686;302;1053;93.3;13.9;
+TER_11;2015-08;Languedoc Roussillon;5125;4954;171;906;81.7;4.5;
+TER_18;2015-08;Poitou Charentes;3540;3512;28;301;91.4;10.7;
+TER_20;2015-08;Rhône Alpes;26631;26341;290;2403;90.9;10.0;Un bon mois malgré le phénomène d'événements externes  importants.
+TER_20;2015-09;Rhône Alpes;28859;28318;541;3494;87.7;7.1;Mois difficile avec des événements externes , infrastructure et matériel qui sont venus impacter la Production
+TER_10;2015-10;Haute Normandie;5947;5735;212;407;92.9;13.1;
+TER_12;2015-10;Limousin;4068;3966;102;385;90.3;9.3;"De manière générale, les principaux retards en octobre sont liés :
+• Aux défaillances de l’infrastructure pour 2,64 points suite en particulier à des dérangements de PN souvent ciblés sur la ligne 2 mais aussi de block et d’aiguille à St Sulpice. A noter aussi la mise en application de procédures pour des deshuntages techniques sur certaines parties de voie sur la ligne 11.
+• Aux causes externes pour 2,84 points  avec une recrudescence des adhérences dégradées. De nombreuses  divagations de bestiaux ont eu aussi des conséquences sur la régularité. A noter aussi un accident de personne Ligne 11 et une collision avec véhicule routier sur ligne 4.
+• Aux défaillances du matériel roulant (quasi 1,6 points), en stagnation par rapport au mois précédent avec des avaries de portes, d’isolement de moteurs… et des difficultés de gestion des rames au dépôt entrainant des sorties tardives.
+•  Aux correspondances et prises en charge clientèle (0,9 point), 
+• A des causes liées aux conducteurs et ASCT pour quasi 0,5 point.
+
+Suppressions :
+•  suppressions pour défauts ou défaillances de matériel.
+•  suppressions pour absences et/ou défaut de conducteurs. 
+•  suppressions suite à des dérangements d’installations et application de procédures déshuntage technique (catégorie C).
+• suppressions pour l’externe suite accident de personne.
+• suppression en production"
+TER_5;2015-11;Bourgogne;7224;7154;70;855;88.0;7.4;L'un des plus mauvais mois de l’année, marqué comme octobre par de nombreux incidents (voir faits marquants) et une forte actualité travaux sur la Bourgogne nord (de Paris à Dijon). Au global, 63% de causes non maîtrisables par l’exploitant TER.
+TER_16;2015-11;Pays de la Loire;11013;10833;180;1235;88.6;7.8;
+TER_17;2015-11;Picardie;10878;10691;187;1381;87.1;6.7;Un mois en-dessous de l'objectif avec un lourd impact des intempéries (adhérence dégradée et arbres dans la voie) et des gènes de circulation avec les trains des autres EF, mais également des avaries du matériel.
+TER_1;2015-12;Alsace;18739;18497;242;740;96.0;24.0;
+TER_3;2015-12;Auvergne;5739;5680;59;317;94.4;16.9;Problèmes matériels, Événements externes, Dérangements d'installations
+TER_9;2015-12;Franche Comté;5428;5274;154;365;93.1;13.4;
+TER_15;2015-12;Nord Pas de Calais;18800;18414;386;1327;92.8;12.9;
+TER_17;2015-12;Picardie;11485;11214;271;691;93.8;15.2;Un mois à l'objectif, le meilleur de l'année, avec néanmoins de nombreuses suppressions suite au manque de personnel.
+TER_19;2015-12;Provence Alpes Côte d'Azur;14702;14029;673;1961;86.0;6.2;La baisse des incidents externes et des dérangements  liés à l’infrastructure s’accompagne d’une amélioration de la ponctualité et de la régularité en cette fin d’année.
+TER_8;2016-01;Champagne Ardenne;6186;6132;54;392;93.6;14.6;"""1) défaillances de matériel durant tout le mois ;
+2) dérangements d'installations diverses (PN, signaux, rails cassés,…) ;
+3) le 18 : fortes perturbations de la circulation vers Chalons suite au heurt par le 839105 d'une voiture égarée sur un passage planchéié ;
+4) le 22 : évacuation de la gare de Reims suite à la découverte d'un colis suspect dans le train 839928"""
+TER_10;2016-01;Haute Normandie;5821;5773;48;306;94.7;17.9;
+TER_11;2016-01;Languedoc Roussillon;4511;4345;166;507;88.3;7.6;
+TER_15;2016-01;Nord Pas de Calais;19083;18612;471;1393;92.5;12.4;
+TER_17;2016-01;Picardie;11272;11113;159;963;91.3;10.5;Un mois marqué par de nombreux dérangements d'installations de l'Infrastructure.
+TER_6;2016-02;Bretagne;7859;7761;98;353;95.5;21.0;
+TER_8;2016-02;Champagne Ardenne;5745;5698;47;333;94.2;16.1;La production a été particulièrement dégradée le 08 (intempéries / panne du train 1745 / câble de signalisation arraché au cours de travaux réalisés par une entreprise externe) et le 16 (défaillances de matériel / enfants dans les voies / dérangements de PN / colis suspect à Paris-Est / ...)
+TER_14;2016-02;Midi Pyrénées;8205;8058;147;740;90.8;9.9;"1. Intempéries, malveillance (6 661 minutes perdues)
+2. Dérangements d'installations (1 894 minutes perdues)
+3. Détresse matériel roulant (1 356 minutes perdues)
+4. ADC TER (1 176 minutes perdues)"
+TER_19;2016-02;Provence Alpes Côte d'Azur;14010;13707;303;1771;87.1;6.7;Consolidation des résultats
+TER_4;2016-03;Basse Normandie;3098;3051;47;186;93.9;15.4;"Ce mois de mars est bien en dessous de l'objectif. 
+La production est marquée par les mouvements sociaux des 9 et 31 mars. Cependant nous avons aussi du assurer de nombreuses correspondances avec des trains intercité. Enfin nous avons subit de beaucoup de retards pour des causes externes (obstacles sur la voie, intempéries...)."
+TER_7;2016-03;Centre;8379;8255;124;611;92.6;12.5;Plutôt un bon mois pour TER Centre avec 15 lignes à plus de 92% de ponctualité et 7 lignes en dessous. Un très bon résultat sur Paris Chartres/Nogent le Rotrou et des retards liés, pour l’essentiel, à des causes externes : accident de personne et la présence de personnes dans les voies en Ile de France. Sur les autres lignes, le fait du mois ce sont les conséquences des travaux importants notamment les limitations de vitesse imposées faisant suite au renouvellement de voie et aiguillages, deux lignes sont particulièrement touchées : Tours-Orléans (renouvellement de la voie entre Les Aubrais et Blois jusqu’à fin avril) et Paris Orléans et Paris Châteaudun (suite travaux entre Juvisy et Brétigny). Autre fait majeur du mois : les deux mouvements sociaux des 9 et 31 mars qui ont entraîné de nombreuses suppressions de trains et la mise en place de cars de substitution.
+TER_8;2016-03;Champagne Ardenne;5739;5666;73;261;95.4;20.7;"Bon mois pour la régularité du TER CA qui dépasse son objectif (95,00 %). 
+L'Activité a cependant été impactée par des mouvements sociaux, des travaux sur la ligne classique Paris-Strasbourg (tunnel d'Armentières), quelques actes de malveillance, dérangements d'installations diverses et défaillances de matériel."
+TER_9;2016-03;Franche Comté;5534;5468;66;369;93.3;13.8;
+TER_13;2016-03;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_14;2016-03;Midi Pyrénées;8106;7930;176;784;90.1;9.1;1. Matériel TER (2 980 minutes perdues) 2. Cause Externe (2 853 minutes perdues) 3. Dérangements d'installations (2 050 minutes perdues) 4. ADC TER (1 138 minutes perdues)
+TER_18;2016-03;Poitou Charentes;3299;3245;54;451;86.1;6.2;Limitation de vitesse temporaire de Beillant l'incendie de la gare de Pons..
+TER_4;2016-01;Basse Normandie;3211;3153;58;185;94.1;16.0;Ce mois est encore marqué par de nombreuses difficultés avec le parc matériel qui ont entrainés beaucoup de retards et de suppressions, et par des difficultés de circulations, mais l'évènement le plus marquant du mois reste l'accident de personne du 25 janvier qui a beaucoup impacté la production.
+TER_6;2015-02;Bretagne;7892;7839;53;464;94.1;15.9;
+TER_9;2015-02;Franche Comté;5086;4979;107;391;92.1;11.7;
+TER_16;2015-02;Pays de la Loire;10316;10191;125;846;91.7;11.0;
+TER_17;2015-02;Picardie;10286;10125;161;1058;89.6;8.6;Un mois encore difficile, avec notamment la mise en place d'une LTV entre Corcy et Villers-Cotterêts suite à l'instabilité d'un talus
+TER_19;2015-02;Provence Alpes Côte d'Azur;14362;13783;579;2411;82.5;4.7;
+TER_2;2015-03;Aquitaine;8388;8114;274;679;91.6;10.9;
+TER_4;2015-03;Basse Normandie;3265;3244;21;134;95.9;23.2;
+TER_8;2015-03;Champagne Ardenne;5948;5891;57;254;95.7;22.2;
+TER_2;2015-04;Aquitaine;8405;8178;227;1038;87.3;6.9;Des travaux en gare de Bordeaux et dans sa péripherie mettent en difficulté la circulation des trains.
+TER_3;2015-04;Auvergne;5670;5622;48;182;96.8;29.9;Problèmes matériels, événements externes, travaux,
+TER_7;2015-04;Centre;8718;8632;86;555;93.6;14.6;Résultat à l'objectif, les évenements marquants pour les lignes Euréliennes sont des événements hors transporteur du type : des feux de talus, alimentation éléctrique. Concernant les lignes Centre, 2 dérangements d'installations ont principalement marqué le mois.
+TER_12;2015-04;Limousin;3920;3891;29;190;95.1;19.5;"De manière générale, les principaux retards en mars sont liés :
+• Aux défaillances de l’infrastructure pour 1.64 point (en baisse par rapport au mois précédent de ½ point) suite en particulier à des dérangements du système d’exploitation de la ligne 8, de la non libération de l’intervalle Limoges Nexon, et d’une extinction du TCO au PRCI de la ligne Limoges Poitiers.
+• Aux causes externes pour 0.9 point (en baisse par rapport au mois précédent) avec comme faits marquants une alerte à la bombe en gare de Limoges et des divagations de bestiaux sur la ligne 2.
+• A des causes imputables à la circulation ferroviaire pour 0.3 points avec en particulier des prises de services tardives et des derrouillages de partie de voie.
+• Aux défaillances du matériel roulant (1 point en  baisse par rapport au mois précédent : -0.5 point).
+•  Aux correspondances et prises en charge clientèle (0,26 point).
+• A des causes liées aux conducteurs pour 0.3 point.
+
+Suppressions :
+On enregistre des : 
+
+•  suppressions pour défauts ou défaillances de matériel.
+•  suppressions pour absences et/ou défaut de conducteurs. 
+•  suppressions  pour signalement par erreur par un tiers d’un dérangement de PN, et une suppression suite heurt avec un chevreuil.
+•  suppressions en lien avec des défaillances de l’infrastructure dont 8 imputable aux dérangements de la CCVI ligne 8.
+•  suppressions suite travaux sur la ligne 11."
+TER_13;2015-04;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_18;2015-04;Poitou Charentes;3406;3372;34;311;90.8;9.8;Un début de mois toujours fortement impacté par des limitations temporaires de vitesse pour des problemes de voie. Un retour à la normale en fin de mois.
+TER_20;2015-04;Rhône Alpes;27854;27534;320;2724;90.1;9.1;le mois d'avril confirme le retour à une production plus stable et les événements marquants proviennent principalement des  éléments externes et infrastructure
+TER_7;2015-05;Centre;8341;8278;63;505;93.9;15.4;Résultat à l'objectif : 1/Une excellente ponctualité sur les deux lignes Eulériennes : PCLM et Chartres Courtalain. 2/Concernant les lignes Centre : un mois en 2 temps avec une première quinzaine sans incident majeur, puis quelques journées noires. Elles sont marquées par des avaries matériel, des dérangements d'installation, et principalement par feux de talus entre Vierzon et Châteauroux en soirée du 29/05.
+TER_18;2015-05;Poitou Charentes;3288;3271;17;194;94.1;15.9;Une production qui retrouve un bon niveau.
+TER_20;2015-05;Rhône Alpes;26627;26319;308;2684;89.8;8.8;Un fléchissement en mai  avec en événements majeurs liès à l'externe et l'infrastructure
+TER_4;2015-06;Basse Normandie;3311;3276;35;159;95.1;19.6;"Un mois de juin à l’objectif marqué cependant, les 2 premières semaines, par de nombreux heurts (arbres, branches, vaches…) ainsi que des incidents matériels, et en fin de mois par des défaillances d’installation d’Infrastructure (PN…).
+Les suppressions sont dues en grande partie à des absences de conducteurs mais aussi aux obstacles sur la voie"
+TER_18;2015-06;Poitou Charentes;3504;3479;25;305;91.2;10.4;Difficultés liées aux fortes  ainsi que difficultés liées à la mise en service du nouveau système de télécommande des aiguilles à St Benoit (Sud Poitiers).
+TER_9;2015-07;Franche Comté;5659;5629;30;421;92.5;12.4;
+TER_14;2015-07;Midi Pyrénées;8323;8217;106;680;91.7;11.1;"1. Externe (166 circ.)
+2. Matériel TER (105 Circ.)
+3. Dérangements d'installations (96 Circ.)
+4. ADC TER (87 Circ.)"
+TER_20;2015-07;Rhône Alpes;27129;26601;528;3408;87.2;6.8;Comme en juin , les impacts de l'externe ( intempéries…) et de l'Infrastructure sont encore importants sur juillet
+TER_1;2015-08;Alsace;16188;16081;107;526;96.7;29.6;
+TER_2;2015-08;Aquitaine;8351;8192;159;1004;87.7;7.2;"""Des travaux en gare de Bordeaux et dans sa périphérie mettent en difficulté la circulation des trains. 
+Fortes chaleurs en août, des restrictions de vitesse des trains ont été mise en place pour préserver les installations (voie et caténaire). Forte affluence voyageurs notament sur les lignes Bordeaux Arcachon et Bordeaux Hendaye."""
+TER_5;2015-08;Bourgogne;6762;6672;90;528;92.1;11.6;"Après une première semaine marquée par 3 incidents lourds, 16 journées consécutives ont été au-dessus de l’objectif.
+Les mesures post-déshuntage sur l’axe Cosne – Nevers du 25 au 30/08 pèsent pour 1% sur le résultat global mensuel.
+particulièrement la Bourgogne Nord.
+Les résultats sur le périurbain de l’étoile dijonnaise sont très bons.
+Le plan de transport adapté sur la coupure de ligne Montchanin – Cercy La Tour tient bien (très peu de réclamations clients) avec de bons résultats production (« Dijon – Nevers » et Montchanin – Paray).
+L’axe Paris – Laroche est logiquement impacté par le RVB de Champigny S/ Yonne, chantier d’un mois qui a conduit à une adaptation « importante » et à des effets LTV."
+TER_13;2015-08;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_3;2015-09;Auvergne;6106;5988;118;359;94.0;15.7;Événements externes (Intrusion, malveillance, ...), dérangements d'installations, problèmes matériels
+TER_4;2015-09;Basse Normandie;3165;3121;44;151;95.2;19.7;A l'image de l'année dernière le mois de septembre montre une amélioration par rapport à l'été. Le mois a été marqué par de nombreux évènements exterieurs qui ont fortement impacté la production notament au niveau des suppressions (obstacles, travaux, accident de personne...)
+TER_10;2015-09;Haute Normandie;5881;5826;55;299;94.9;18.5;
+TER_11;2015-09;Languedoc Roussillon;4835;4755;80;597;87.4;7.0;
+TER_13;2015-09;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_1;2015-10;Alsace;19454;19261;193;802;95.8;23.0;Travaux d’infrastructure et nombreux heurts avec gibiers
+TER_2;2015-10;Aquitaine;8739;8470;269;1036;87.8;7.2;"""Des travaux en gare de Bordeaux et dans sa périphérie mettent en difficulté la circulation des trains. 
+Incidents du mois: Collision avec un camion à Preignac, Détresse Euro Cargo Rail à Libourne, Bris de barrière au PN de Malause, Accident de personne à Labourheyre """
+TER_11;2015-10;Languedoc Roussillon;4448;4391;57;498;88.7;7.8;
+TER_20;2015-10;Rhône Alpes;28761;28386;375;3281;88.4;7.7;"Octobre est en amélioration  par rapport à septembre  sur les 2 items; les événements externes et Infrastructure sont les plus prépondérants  dans ce mois"
+TER_2;2015-11;Aquitaine;8502;8219;283;1370;83.3;5.0;"""Des travaux en gare de Bordeaux et dans sa périphérie mettent en difficulté la circulation des trains. De fortes contraintes d'exploitation des matériels X73500 pénalisent les circulations en sud Aquitaine  
+Incidents du mois : déraillement d’un train de chantier à Aiguillon, multiples bagages abandonnés nécessitant l’intervention des démineurs, détresse infrarail à st Loubes, incident caténaire au Verdon"""
+TER_3;2015-11;Auvergne;5200;5017;183;555;88.9;8.0;Événements externes, Problèmes matériels, dérangements d'installations
+TER_6;2015-11;Bretagne;7911;7832;79;647;91.7;11.1;
+TER_9;2015-11;Franche Comté;5536;5492;44;543;90.1;9.1;18 TER supprimés suite à l'interdiction de l'EPSF de circuler 73500 en US. Concernant les TER en retard, une journée difficile suite à l'incendie d'une sous-station
+TER_11;2015-11;Languedoc Roussillon;4428;4310;118;680;84.2;5.3;
+TER_14;2015-11;Midi Pyrénées;7701;7418;283;974;86.9;6.6;"1. Externe (253 circ.)Dérangements d'installations (174 Circ.)
+2. Matériel TER (126 circ.)
+3. ADC TER (118 circ.)
+4. Escale - Prise en charge client (116 Circ.)"
+TER_2;2015-12;Aquitaine;8469;7920;549;1109;86.0;6.1;"Des travaux en gare de Bordeaux et dans sa périphérie mettent en difficulté la circulation des trains. De fortes contraintes d'exploitation des matériels X73500 pénalisent les circulations en sud Aquitaine  
+Incidents du mois : ralentissements suite à déshuntage à Pau, droit de retrait des contrôleurs suite à agression à Biarritz , accident de personne en gare de Bordeaux"
+TER_6;2015-12;Bretagne;8447;8344;103;412;95.1;19.3;
+TER_2;2016-01;Aquitaine;8409;8135;274;1045;87.2;6.8;"Les travaux en gare de Bordeaux et dans sa périphérie mettent en difficulté la circulation des trains. De fortes contraintes d'exploitation des matériels X73500 pénalisent également fortement les circulations
+Incidents du mois : circulaion en catégorie C à Bordeaux, fontis à Urt, intervention police à Castillon, heurt d'un chevreuil par un TGV à Bassens....."
+TER_18;2016-01;Poitou Charentes;3481;3405;76;419;87.7;7.1;Plusieurs limitations temporaires de vitesse à Beillant depuis le 3/12/15. L'impact sur les axes Saintes-Bordeaux et Saintes-Angoulême représente 5,5% d'irrégularité sur le mois.
+TER_19;2016-01;Provence Alpes Côte d'Azur;15923;15387;536;1952;87.3;6.9;Début d'année en amélioration  , favorisé par la baisse des incidents externes et des dérangements  liés à l’infrastructure.
+TER_7;2016-02;Centre;8476;8326;150;624;92.5;12.3;"Un mois à l'objectif pour les lignes Centre, avec les 2/3 des journées au dessus de l'objectif du mois (91,5%). On
+pourra toutefois noter que la plus mauvaise journée est due aux conditions climatiques : le passage des vents
+violents des 09 et 13 février et son cortège d'arbres , branches sur les voies/la caténaire. Malgré l'ampleur de
+l'incident ( 5 lignes impactées, de nombreux TER retards et/ou supprimé) tous nos voyageurs ont été pris en charge . A noter enfin le bon résultat quant à la gestion des correspondances qui amorcent une nette baisse pour le second
+mois consécutif."
+TER_9;2016-02;Franche Comté;5497;5441;56;433;92.0;11.6;
+TER_12;2016-02;Limousin;4045;3948;97;295;92.5;12.4;"De manière générale, les principaux retards en février sont liés :
+• Aux défaillances de l’infrastructure pour 2,2 points suite en particulier à des dérangements du système d’exploitation de la ligne 8, mais aussi tout un lot de PN particulièrement ciblés sur ligne 2 et des dérangements de block sur ligne 4.
+• Aux causes externes pour 2,5 points  avec des  divagations ou heurts  de bestiaux, des chutes d’arbres, et un choc avec un tracteur.
+• Aux défaillances du matériel roulant (1,10 point), en nette diminution par rapport au mois précédent avec des avaries de portes, des difficultés de formation d’UM, d’isolements de moteurs… et encore des difficultés de gestion des rames au dépôt entrainant des sorties tardives. 
+•  Aux correspondances et prises en charge clientèle (0,5 point), 
+• A des causes liées aux conducteurs et ASCT pour quasi 0,3 point.
+Suppressions :
+•  pour défauts ou défaillances de matériel.
+•  pour absences et/ou défaut de conducteurs.
+• 5 suppressions suite réutilisation des ressources 
+• suppression pour absences et/ou défaut de contrôleur.
+• suppressions suite au dérangement du système d’exploitation de la ligne 8.
+• suppressions liées à une avarie de caténaires
+• suppressions suite problème de signalisation
+• suppressions pour causes externes : divagations d’animaux, heurts avec arbres et choc avec tracteur
+• suppressions suite panne d’un train Fret
+• suppressions suite absence d’agent circulation"
+TER_17;2016-02;Picardie;10702;10402;300;1014;90.3;9.3;Mise en place d'une limitation de la vitesse entre Corcy et Villers-Cotterêts suite à un glissement de terrain au niveau d'un talus, lourd impact sur la régularité.
+TER_18;2016-02;Poitou Charentes;3396;3321;75;487;85.3;5.8;S'est ajouté en février à la limitation de vitesse temporaire de Beillant l'incendie de la gare de Pons, détruisant les installations pour comander les signaux, passages à niveau, etc.
+TER_1;2016-03;Alsace;18446;18254;192;757;95.9;23.1;Maintien du ralentissement à 10 km/h  entre Bourg-Bruche et St-Blaise-la-Roche-Poutay pour des raisons de sécurité.
+TER_2;2016-03;Aquitaine;8043;7873;170;819;89.6;8.6;"Les travaux en gare de Bordeaux, mais également sur l'ensemble du territoire Aquitain, mettent en difficulté la circulation des trains. 
+De fortes contraintes d'exploitation des matériels X73500 pénalisent également fortement la production, notamment sur les lignes du sud
+Incidents du mois : Intempéries ayant provoqué la disjonction d’un TGV à Mouthiers, des dérangements de signal à Bassens et Ruffec suite à orage, des branches sur voie à Siorac et une adhérence dégradée à Coarraze; Actes de malveillance : interventions de la police à Libourne, Vélines et Castillon, signal d’alarme à Gardonne, incidents barrières de PN à Vélines et Mussidan, jets de pierre à Bergerac; Accidents de personnes à Rochefort et Beautiran; Voyageurs malades à Bayonne, Bordeaux, Libourne et Dax."
+TER_16;2015-01;Pays de la Loire;11178;10980;198;941;91.4;10.7;
+TER_17;2015-01;Picardie;10847;10698;149;1039;90.3;9.3;Début d'année difficile avec de nombreux actes de malveillance, principalement des colis suspects.
+TER_15;2015-02;Nord Pas de Calais;17200;16779;421;1262;92.5;12.3;
+TER_1;2015-03;Alsace;19700;19530;170;704;96.4;26.7;
+TER_3;2015-03;Auvergne;5652;5602;50;224;96.0;24.0;Problèmes matériels, événements externes, travaux,
+TER_6;2015-03;Bretagne;8039;7972;67;390;95.1;19.4;
+TER_9;2015-03;Franche Comté;5672;5636;36;310;94.5;17.2;
+TER_11;2015-03;Languedoc Roussillon;4382;4293;89;459;89.3;8.4;
+TER_13;2015-03;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_14;2015-03;Midi Pyrénées;8706;8524;182;559;93.4;14.2;"1. Externe (157 circ.)
+2. ADC TER (130 Circ.)
+3. Matériel TER (74 Circ.)
+4. Dérangements d'installations (67 Circ.)"
+TER_1;2015-04;Alsace;18397;18233;164;521;97.1;34.0;
+TER_6;2015-04;Bretagne;8141;8097;44;297;96.3;26.3;
+TER_16;2015-04;Pays de la Loire;10970;10886;84;529;95.1;19.6;
+TER_8;2015-05;Champagne Ardenne;5741;5687;54;210;96.3;26.1;
+TER_13;2015-05;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_15;2015-05;Nord Pas de Calais;17642;17376;266;1152;93.4;14.1;
+TER_16;2015-05;Pays de la Loire;9933;9851;82;525;94.7;17.8;
+TER_19;2015-05;Provence Alpes Côte d'Azur;15272;14969;303;2110;85.9;6.1;
+TER_2;2015-06;Aquitaine;8360;8115;245;1146;85.9;6.1;"""Des travaux en gare de Bordeaux et dans sa périphérie mettent en difficulté la circulation des trains. 
+Les fortes chaleurs de juin ont impactées fortement la régularité, des restrictions de vitesse des trains ont été mise en place pour préserver les installations (voie et caténaire)."""
+TER_6;2015-06;Bretagne;8494;8446;48;362;95.7;22.3;
+TER_8;2015-06;Champagne Ardenne;6081;6038;43;322;94.7;17.8;Production perturbée par les fortes chaleurs des 04 + 05 + 30 Juin (ralentissements / dérangements de signaux et de PN / pannes de matériels, …)
+TER_20;2015-06;Rhône Alpes;28458;28068;390;3149;88.8;7.9;La production est fortement impactée par des événements Infrastructure et externe en forte hausse.
+TER_1;2015-07;Alsace;17170;17012;158;676;96.0;24.2;
+TER_3;2015-08;Auvergne;5983;5899;84;429;92.7;12.8;Dérangements d'installations, évenements externes, problèmes matériels
+TER_8;2015-08;Champagne Ardenne;5550;5491;59;281;94.9;18.5;"Plusieurs incendies aux abords de la voie (notamment le 02 à St Dizier et le 03 à Changis St Jean) ; Plusieurs arbres tombés sur la voie ou les caténaires suite aux orages (notamment le 13 entre Trilport et Nogent l'Artaud) ; quelques défaillances de matériel (notemment panne du train transilien 117132 à Changis St Jean)"
+TER_1;2015-09;Alsace;19628;19475;153;804;95.9;23.2;Recrudescence de dérangements d'infrastructure et d'incidents matériels
+TER_2;2015-09;Aquitaine;9135;8947;188;970;89.2;8.2;"""Des travaux en gare de Bordeaux et dans sa périphérie mettent en difficulté la circulation des trains. 
+Incidents du mois:Fortes intempéries en Lot et Garonne et en Pyrénées Atlantiques en début de mois; Choc anormal à Villenave d'Ornon et panne d'un engin travaux à Ychoux le 17; Accident routier à St Astier et incident caténaire à Dax le 28."""
+TER_8;2015-09;Champagne Ardenne;6089;5992;97;331;94.5;17.1;défaillances de matériel + opérations de déminage à Noisy le Sec le 06 + dérangement du poste d'aiguillage de Vaires le 14 + dérangement d'un aiguillage au raccordement LGV de Trois-Puits le 15 + intempéries généralisées sur la région le 16 et arrachage de caténaire le 17 près d'Esbly
+TER_19;2015-09;Provence Alpes Côte d'Azur;15924;15444;480;2542;83.5;5.1;
+TER_4;2015-10;Basse Normandie;3045;2899;146;185;93.6;14.7;Ce mois d'Octobre, de mannière comparable à l'année dernière, est marqué par les difficultés d'adhérence ainsi que des difficultés de circulations. Cependant ce qui a le plus marqué la production en fin de mois est le droit de retrait qu'ont exercés les conducteurs, sur un certain type de matériel, suite à la dérive d'un train consécutif à un heurt le 20 octobre en Picardie.
+TER_5;2015-10;Bourgogne;7778;7690;88;887;88.5;7.7;"Mois marqué par de nombreux incidents  et une forte actualité travaux sur la Bourgogne nord (de Paris à Dijon).
+La Bourgogne nord est notamment très marquée par les 3 semaines de travaux préparatoires au RVB Sens – Laroche, dont les conséquences ont été plus importantes que celles attendues sur les travaux principaux du 1er semestre 2016 en matière d’impacts sur le plan de transport (PTA).
+De plus, l’axe Paris – Laroche – Dijon cumule plusieurs zones de LTV (Combs La Ville – Lieusaint, Sens – Laroche, Saint Florentin, Montbard…) avec des effets collatéraux en matière de service voyageurs et gestion des correspondances  dans les gares de Laroche et Sens."
+TER_8;2015-10;Champagne Ardenne;5824;5789;35;271;95.3;20.4;"motifs de retards divers : dérangements d'installations de signalisation ; incident caténaire à Rethel (le 15) ; accident de personne à Vaires (le 22) ; jets de pierres sur les trains vers Reims (le 22) ; défaillances de matériel ; quelques patinages de trains suite aux chutes de feuilles mortes sur les rails"
+TER_13;2015-10;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_15;2015-10;Nord Pas de Calais;18904;18489;415;1822;90.1;9.1;
+TER_16;2015-10;Pays de la Loire;11705;11526;179;1020;91.2;10.3;
+TER_17;2015-10;Picardie;11405;11206;199;1153;89.7;8.7;Un mois en-dessous de l'objectif avec de nombreuses causes Infra et extérieures, avec notamment le retour des intempéries (adhérence dégradée, patinage…), mais également de nombreuses avaries du matériel
+TER_7;2015-11;Centre;8409;8285;124;984;88.1;7.4;"Ce mois constitue le plus mauvais  résultat de l'année 2015. Parmis les causes principales se retrouvent :  les conséquences des conditions automnales (patinage/enrayage ; phénomène de brouillard, orage). Une dégradation des dérangements d'installations avec des incidents très pénalisants (plusieurs incidents caténaires sur la région et hors région ; un dérangement de TVP...) ; les ralentissements qui restent également à un haut niveau (+ de 70 TER retardés sur le mois). Les causes Externes sont également à la hausse (+16%). Les autres activités (TGV, TN,IC,Fret et autres EF) n'étant pas au mieux, nos retards consécutifs aux espacements et autres incidents indirectes sont en nette augmentation (+23%). Coté transporteur , on notera une hausse des correspondances (dont une bonne partie due à la LTV de Etampes et péjorant les IC)."
+TER_8;2015-11;Champagne Ardenne;5804;5673;131;357;93.7;14.9;Quelques mouvements sociaux locaux durant le mois (notamment dans la zone de Culmont-Chalindrey) + des patinages / enrayages suite aux chutes de feuilles sur les rails + des incidents sur le matériel (avec quelques demandes de secours de trains) + des dérangements d'installations diverses et de PN
+TER_15;2015-11;Nord Pas de Calais;18760;18339;421;2443;86.7;6.5;
+TER_18;2015-11;Poitou Charentes;3296;3250;46;337;89.6;8.6;Fort impact de la limitation temporaire de vitesse à 40km/h déjà en place depuis le mois dernier sur l'axe Poitiers-La Rochelle.
+TER_4;2015-12;Basse Normandie;3269;3182;87;204;93.6;14.6;Nous terminons l'année à l'objectif malgré un mois de décembre marqué par le plan automnal qui à duré jusqu'au changement de service et qui a été suivi de difficultés de production au niveau du parc matériel. Nous avons aussi subit de nombreux retards dus à des obstacles sur la voie et à des heurts d'animaux (sangliers).
+TER_5;2015-12;Bourgogne;7542;7347;195;716;90.3;9.3;"Mois de décembre pénalisé par les travaux sur Bourgogne Nord, défaillance Matériel (7200 et BGC)
+Nota : Panne du PAI Melun nous faisant perdre à elle seule l'obectif du mois"
+TER_12;2015-12;Limousin;4306;4274;32;271;93.7;14.8;"De manière générale, les principaux retards en décembre sont liés :
+• Aux défaillances de l’infrastructure pour 1,15 point suite en particulier à des dérangements d’installations (PN, signaux, block,….) ciblés pour la majorité sur lignes 2 et 8.
+• Aux causes externes pour 1,15 point  avec peu d’adhérences dégradées mais des  divagations ou heurt  de bestiaux et un bri de barrière de PN par un tiers sur ligne 2.
+• Aux défaillances du matériel roulant (1,30 point), en légère baisse par rapport au mois précédent avec des avaries de portes, des difficultés de formation d’UM, d’isolements de moteurs… et des difficultés de gestion des rames au dépôt entrainant des sorties tardives. A noter une alerte radio émise le 07 décembre suite présomption de déraillement en sortie dépôt ayant impacté fortement la régularité. 
+•  Aux correspondances et prises en charge clientèle (0,7 point), 
+• A des causes liées aux conducteurs et ASCT pour quasi 0,5 point.
+
+Suppressions :
+•  pour défauts ou défaillances de matériel.
+•  pour absences et/ou défaut de conducteurs. 
+• pour absences et/ou défaut d’ASCT.
+•  suite à rail cassé.
+•  en lien avec la gestion des ressources.
+• suite à gestion escale.
+•  suite droit de retrait ASCT de Bordeaux.
+• suite à pénétration d’une circulation électrique sur voie non électrifiée."
+TER_20;2015-12;Rhône Alpes;28268;27895;373;3211;88.5;7.7;"En redressement net par rapport à novembre; les évenements externes( malveillance et colis supects),matériel et Infrastructure sont les éléments marquants de ce mois."
+TER_7;2016-01;Centre;8966;8757;209;615;93.0;13.2;"Un bon début d'année quant à la ponctualité avec 24 journées au dessus de l'objectif .
+Le fait du mois se porte sur le niveau des suppressions (169 au total sur les lignes Centre) avec un évènement marquant : le droit de retrait exercé par les ASCT les 11 et 12 janvier faisant suite à une agression d'un ASCT à bord d'un TER (près de 50% des suppressions du mois). Au final  près de 3,3% pour les lignes Centre soit un dépassement de 2,5pts de l'objectif mensuel. 
+Le double accident de personne du 19, un fait rare car dans la même plage horaires de matinée, sur le même axe  et à moins de 20km de distance!
+Pour ce premier mois des travaux du RVB,  les conséquences indirectes des travaux représentent environ 30% des retards et 3 pts de PFP sur cet axe."
+TER_13;2016-01;Lorraine;;;;;;;Le Président de la Région Lorraine s'est opposé, par courrier du 10 juillet 2013, à ce que SNCF transmette à l'AQST les données relatives aux trains TER lorrains en retard ou annulés, au motif qu'il n'a pas ''de visibilité sur les capacités des régions à poursuivre leurs missions d'autorité organisatrice des transports régionaux''.
+TER_16;2016-01;Pays de la Loire;11320;11231;89;797;92.9;13.1;
+TER_4;2016-02;Basse Normandie;3121;3051;70;147;95.2;19.8;Le résultat de ce mois de février reste moins bon que les années précédentes. Il est marqué par plusieurs dérangements d’installation ferroviaires (PN, caténaires…) et surtout par l’exercice du droit de retrait des contrôleurs. Ce dernier évènement, qui a fait suite à une agression, a paralysé la production le 24 février.
+TER_20;2016-02;Rhône Alpes;26764;26330;434;3328;87.4;6.9;Mois difficile avec en événements marquants:l'externe ( malveillance notamment), les autres transporteurs SNCF, l'Infrastructure et le Matériel
+TER_6;2016-03;Bretagne;7833;7726;107;439;94.3;16.6;
+TER_10;2016-03;Haute Normandie;5634;5580;54;253;95.5;21.1;
+TER_11;2016-03;Languedoc Roussillon;4268;4205;63;403;90.4;9.4;
+TER_12;2016-03;Limousin;3730;3664;66;274;92.5;12.4;"""De manière générale, les principaux retards en mars sont liés :
+• Aux défaillances de l’infrastructure pour 2,3 points suite en particulier à des dérangements d’intervalle sur Vieilleville, un défaut d’isolement sur le secteur circulation de Limoges ayant eu de fortes conséquences au niveau des circulations, quelques dérangements du système d’exploitation de la ligne 8,  mais aussi tout un lot de dérangements  de PN et signaux particulièrement ciblés sur les lignes 2, 3 et 8, quelques dérangements de block sur ligne 4.
+• Aux causes externes pour 0,9 point  avec des  divagations ou heurts  de bestiaux, des chutes d’arbres, et quelques actes de vandalisme avec dépose d’obstacles sur la voie.
+• Aux défaillances du matériel roulant (1,6 point), avec des difficultés de sorties du dépôt, des avaries de portes, des difficultés de formation d’UM, … ainsi qu’une avarie de boucle inductive. 
+•  Aux correspondances et prises en charge clientèle (0,6 point), 
+• A des causes liées aux conducteurs et ASCT pour quasi 0,4 point.
+Suppressions :
+•  suppressions pour défauts ou défaillances de matériel.
+•  suppressions pour absences et/ou défaut de conducteurs.
+•  suppression suite réutilisation des ressources.
+• suppression pour absences et/ou défaut de contrôleur.
+• suppressions suite en particuliers au défaut d’isolement sur le secteur circulation du PRCI de Limoges.
+•  suppressions pour causes externes"
+TER_15;2016-03;Nord Pas de Calais;18120;17471;649;1436;91.8;11.2;
+TER_20;2016-03;Rhône Alpes;27852;27451;401;3435;87.5;7.0;Même si la tendance est plutot à l'amélioration par rapport à février, mars reste compliqué avec toujours des événements externes et Infrastruture.
+TER_12;2015-02;Limousin;3795;3755;40;229;93.9;15.4;
