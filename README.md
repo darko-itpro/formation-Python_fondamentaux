@@ -77,8 +77,10 @@ comme outil pour vous aider à vous familiariser avec le langage.
 ## Ressources
 
 Le répertoire *assets* contient des fichiers issus de
-l'[Opendata de la SNCF](https://data.sncf.com/). Les droits appartiennent
-évidemment à la SNCF et ces fichiers sont présents ici pour disposer de documents
+l'[Opendata de la SNCF](https://data.sncf.com/), de la
+[région Ile-de-Frace](https://data.iledefrance.fr/explore/) et de la
+[Ville de Paris](https://opendata.paris.fr/explore/). Les droits appartiennent
+évidemment à chaque e et ces fichiers sont présents ici pour disposer de documents
  texte volumineux à parcourir et explorer.
  
 Durant la formation, des ressources complémentaires peuvent être disponibles
