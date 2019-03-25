@@ -1,5 +1,6 @@
 #!/usr/bin/env python 
 
+
 class CycleStation:
     def __init__(self, identifier, name, capacity):
         self.identifier = identifier
