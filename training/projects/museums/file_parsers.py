@@ -1,9 +1,9 @@
 #!/usr/bin/env python 
 
-file_path = "../../../assets/ministere_culture/frequentation-des-musees-de-france.csv"
+FILE_PATH = "../../../assets/ministere_culture/frequentation-des-musees-de-france.csv"
 
 
-def display_max_visites():
+def display_max_visites(file_path=FILE_PATH):
     max_visites = 0
     visites_data = None
 
@@ -19,7 +19,14 @@ def display_max_visites():
     print(visites_data)
 
 
-def load_as_dicts():
+def load_as_dicts(file_path=FILE_PATH):
+    """
+    Extrait les informations sur les musées sous forme d'un dictionnaire.
+
+    :param file_path: Chemin vers le fichier csv de l'OpenData
+    :return: un dictionnaire dont la clef est l'identifiant et la valeur une représentation du musée et du comptage.
+    :rtype: dict
+    """
     museums = {}
 
     with open(file_path) as freq_file:
@@ -39,11 +46,11 @@ def load_as_dicts():
                                       'city': city,
                                       'visits': []}
 
-            museums[museum_id]['visits'].append([year, visits])
+            museums[museum_id]['visits'].append([year, visits, kind])
 
-    print(len(museums))
-    print(museums)
+    return museums
 
 
 if __name__ == "__main__":
-    load_as_dicts()
+    for name in sorted([(element['museum_name'], element['city']) for element in load_as_dicts().values()]):
+        print(name)
