@@ -21,7 +21,7 @@ class Media:
 
     @property
     def duration(self):
-        """Duration of the episode."""
+        """Retourne la durée d'un épisode. Utilisé en tant que property"""
         if self._duration == 0:
             raise ValueError("Duration not set")
         else:
@@ -29,26 +29,33 @@ class Media:
 
     @duration.setter
     def duration(self, value: int):
+        """
+        Permet d'attribuer une durée en tant que property mais en levant une
+        exception si la durée est négative.
+        :param value:
+        """
         if value <= 0:
             raise ValueError("Duration must be a positive value")
         self._duration = int(value)
 
     @duration.deleter
     def duration(self):
+        """
+        Property permétant de supprimer la durée et la remet à None.
+        :return:
+        """
         self._duration = None
 
     @property
     def title(self):
         """
         Méthode destinées à la property retournant le titre.
-
-        :return:
         """
         return self._title
 
     def hm_duration(self):
         """
-        Returns the duration in a hour/minute format
+        Retourne la durée en un format heures/minutes
         :return: a tuple representing the duration where the first element is
         the duration in hours and the second is the remaining duration in
         minutes
