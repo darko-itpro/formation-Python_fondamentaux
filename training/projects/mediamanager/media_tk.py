@@ -7,12 +7,12 @@ module dédié. Les épisodes sont gérés sous forme d'une collection dans une 
 
 """
 
-from tkinter import Tk, Button, Frame, LEFT, RIGHT, BOTTOM
+import tkinter as tk
 
 from training.projects.mediamanager import mediamodel
 from training.projects.mediamanager import media_widgets
 
-FENETRE = Tk()
+FENETRE = tk.Tk()
 
 EPISODE_LIST = []
 
@@ -53,14 +53,14 @@ def delete_episode(ep_index):
 
 FENETRE.title('Episode Manager')
 
-BUTTONS_FRAME = Frame(FENETRE)
-Button(BUTTONS_FRAME, text='Quit', command=FENETRE.quit).pack(side=RIGHT)
-BUTTONS_FRAME.pack(side=BOTTOM)
+BUTTONS_FRAME = tk.Frame(FENETRE)
+tk.Button(BUTTONS_FRAME, text='Quit', command=FENETRE.quit).pack(side=tk.RIGHT)
+BUTTONS_FRAME.pack(side=tk.BOTTOM)
 
 FORM_FRAME = media_widgets.EpisodeEntry(FENETRE, add_episode, "Titre", "N°")
 EPISODES_FRAME = media_widgets.CollectionFrame(FENETRE, select_callback=select_episode,
                                                delete_callback=delete_episode)
-EPISODES_FRAME.pack(side=LEFT)
+EPISODES_FRAME.pack(side=tk.LEFT)
 FORM_FRAME.pack()
 
 FENETRE.mainloop()
