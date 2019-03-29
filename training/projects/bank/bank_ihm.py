@@ -1,21 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from tkinter import *
+import tkinter as tk
 
 
-class UserInfo(Frame):
+class UserInfo(tk.Frame):
     def __init__(self, master=None, cnf={}, **kw):
-        Frame.__init__(self, master, cnf, **kw)
-        Label(self, text='nom').grid(column=0, row=0)
-        Label(self, text='prenom').grid(column=0, row=1)
+        tk.Frame.__init__(self, master, cnf, **kw)
+        tk.Label(self, text='nom').grid(column=0, row=0)
+        tk.Label(self, text='prenom').grid(column=0, row=1)
 
-        self.last_name_value = StringVar()
-        self.first_name_value = StringVar()
+        self.last_name_value = tk.StringVar()
+        self.first_name_value = tk.StringVar()
 
-        Entry(self, textvariable=self.last_name_value, width=30) \
+        tk.Entry(self, textvariable=self.last_name_value, width=30) \
             .grid(column=1, row=0)
-        Entry(self, textvariable=self.first_name_value, width=30) \
+        tk.Entry(self, textvariable=self.first_name_value, width=30) \
             .grid(column=1, row=1)
 
     def get_values(self):
@@ -33,7 +33,7 @@ class UserInfo(Frame):
         return first_name, last_name
 
 
-root = Tk()
+root = tk.Tk()
 root.title('Create account')
 
 user_frame = UserInfo(root)
@@ -52,7 +52,7 @@ def create_account():
     bank_manager.create_client(first_name, last_name)
 
 
-Button(root, text='Create',
-       command=create_account).pack()
+tk.Button(root, text='Create',
+          command=create_account).pack()
 
 root.mainloop()

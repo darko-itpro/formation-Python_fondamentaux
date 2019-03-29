@@ -1,12 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from tkinter import Entry, Frame, Button, Listbox, Variable, Label
-from tkinter import RIGHT, END
-from tkinter import StringVar, IntVar
+import tkinter as tk
 
-
-class EpisodeEntry(Frame):
+class EpisodeEntry(tk.Frame):
     """
     Frame permétant de grouper le éléments du formulaire de saisie d'un épisode.
     """
@@ -20,23 +17,23 @@ class EpisodeEntry(Frame):
         :param label_2_text: label à afficher pour le second champ (entier)
         """
 
-        Frame.__init__(self, master)
+        tk.Frame.__init__(self, master)
 
         self._callback = action_callback
 
-        form_frame = Frame(self)
+        form_frame = tk.Frame(self)
 
-        Label(form_frame, text=label_1_text if label_1_text else 'Label 1').grid(column=0, row=0)
-        Label(form_frame, text=label_2_text if label_2_text else 'Label 2').grid(column=0, row=1)
+        tk.Label(form_frame, text=label_1_text if label_1_text else 'Label 1').grid(column=0, row=0)
+        tk.Label(form_frame, text=label_2_text if label_2_text else 'Label 2').grid(column=0, row=1)
 
-        self.title_value = StringVar()
-        self.number_value = IntVar()
+        self.title_value = tk.StringVar()
+        self.number_value = tk.IntVar()
 
-        Entry(form_frame, textvariable=self.title_value, width=30).grid(column=1, row=0)
-        Entry(form_frame, textvariable=self.number_value, width=30).grid(column=1, row=1)
+        tk.Entry(form_frame, textvariable=self.title_value, width=30).grid(column=1, row=0)
+        tk.Entry(form_frame, textvariable=self.number_value, width=30).grid(column=1, row=1)
 
         form_frame.pack()
-        Button(self, text='Ajouter', command=self.button_action).pack()
+        tk.Button(self, text='Ajouter', command=self.button_action).pack()
 
     def button_action(self):
         """
@@ -78,7 +75,7 @@ class EpisodeEntry(Frame):
         self.number_value.set(number)
 
 
-class CollectionFrame(Frame):
+class CollectionFrame(tk.Frame):
     """
     Frame permétant de gérer la collection d'épisodes.
     """
@@ -90,21 +87,21 @@ class CollectionFrame(Frame):
         :param select_callback: Fonction déclenchée lors de la sélection d'un élément. Doit accepter un paramètre qui sera l'indice de l'élément sélectionné.
         :param delete_callback: Fonction déclenchée lors de la suppression d'un élément. Doit accepter un paramètre qui sera l'indice de l'élément sélectionné dont la donnée devra être supprimée.
         """
-        Frame.__init__(self, master)
+        tk.Frame.__init__(self, master)
 
         self._select_callback = select_callback
         self._delete_callback = delete_callback
 
-        choices = Variable(self)
-        self.listbox = Listbox(self, listvariable=choices, selectmode='single')
+        choices = tk.Variable(self)
+        self.listbox = tk.Listbox(self, listvariable=choices, selectmode='single')
         self.listbox.pack()
 
-        buttons_frame = Frame(self)
-        Button(buttons_frame, text="Select", command=self.get_selected_element).pack(side=RIGHT)
-        Button(buttons_frame, text="Delete", command=self.delete_selected_element).pack(side=RIGHT)
+        buttons_frame = tk.Frame(self)
+        tk.Button(buttons_frame, text="Select", command=self.get_selected_element).pack(side=tk.RIGHT)
+        tk.Button(buttons_frame, text="Delete", command=self.delete_selected_element).pack(side=tk.RIGHT)
         buttons_frame.pack()
 
-    def add_element(self, element, index=END):
+    def add_element(self, element, index=tk.END):
         """
         Ajoute un épisode dans la liste. L'index permet d'ordonner les épisodes.
 
