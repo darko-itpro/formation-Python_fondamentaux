@@ -1,8 +1,9 @@
-bottle==0.12.16
-cosmic-ray==5.2.0
-coverage==4.5.3
-Flask==1.0.2
-ipython==7.4.0
+bottle>=0.12.16
+cosmic-ray>=5.2.0
+coverage>=4.5.3
+Flask>=1.0.2
+ipython>=7.4.0
 jupyter==1.0.0
-pylint==2.3.1
-Sphinx==2.0.0
+pylint>=2.3.1
+pytest>=4.4.0
+Sphinx>=2.0.0
