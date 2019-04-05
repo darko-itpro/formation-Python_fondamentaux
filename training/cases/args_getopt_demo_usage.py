@@ -13,7 +13,8 @@ Options:
   * -o or --output [file]: displays the file intended for output
 """
 
-import getopt, sys
+import getopt
+import sys
 
 
 def usage():
@@ -46,7 +47,7 @@ def main():
             sys.exit()
         elif o in ('-o', '--output'):
             output_filename = a
-            print('Output is %s' % a)
+            print('Output is %s' % output_filename)
 
     print(args)
 

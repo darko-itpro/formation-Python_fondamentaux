@@ -6,7 +6,7 @@ Module destiné à fournir une interface de type terminal. Doit être un module
 principal.
 """
 
-from draft.media import base_mediamodel as media
+from draft.media import mediamodel as media
 
 
 def episodes_list():

@@ -1,41 +1,41 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*-
 
-import unittest
+"""
+Ce module illustre les tests avec PyTest.
+"""
+
 from training.projects.bank import bank
+import pytest
 
 
-class TestCreateAccount(unittest.TestCase):
-
-    def testBasicAccount(self):
-        account = bank.BankAccount('012345')
-        self.assertEqual(100, account.balance)
-
-    def testAccountWithBalance(self):
-        account = bank.BankAccount('012345', 500)
-        self.assertEqual(500, account.balance)
-
-    def testAccountWithBalanceAsString(self):
-        account = bank.BankAccount('012345', '500')
-        self.assertEqual(500, account.balance)
+def test_basic_account():
+    account = bank.BankAccount('012345')
+    assert 100 == account.balance
 
 
-class TestDeposit(unittest.TestCase):
+def test_account_with_balance():
+    account = bank.BankAccount('012345', 500)
+    assert 500 == account.balance
 
-    def setUp(self):
-        self.account = bank.BankAccount('012345', 500)
 
-    def testBasicDeposit(self):
-        self.account.deposit(100)
-        self.assertEqual(600, self.account.balance)
+def test_account_with_balance_as_string():
+    account = bank.BankAccount('012345', '500')
+    assert 500 == account.balance
 
-    def testNegativeDeposit(self):
-        with self.assertRaises(ValueError) as context:
-            self.account.deposit(-100)
-            self.assertTrue('Negative value' in context.exception)
 
-    def tearDown(self):
-        del self.account
+@pytest.fixture()
+def create_account():
+    return bank.BankAccount('012345', 500)
 
-if __name__ == "__main__":
-    unittest.main()
+
+def test_basic_deposit(create_account):
+    account = create_account
+    account.deposit(100)
+    assert 600 == account.balance
+
+
+def test_negative_deposit(create_account):
+    account = create_account
+    with pytest.raises(ValueError):
+        account.deposit(-100)

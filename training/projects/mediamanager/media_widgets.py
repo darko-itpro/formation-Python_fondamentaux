@@ -7,12 +7,14 @@ class EpisodeEntry(tk.Frame):
     """
     Frame permétant de grouper le éléments du formulaire de saisie d'un épisode.
     """
-    def __init__(self, master=None, action_callback=None, label_1_text=None, label_2_text=None):
+    def __init__(self, master=None, action_callback=None, label_1_text=None,
+                 label_2_text=None):
         """
         Construct a frame widget with the parent MASTER
 
         :param master: Conteneur parent
-        :param action_callback: Fonction déclenchée à la pression du bouton. Doit accepter deux paramètres.
+        :param action_callback: Fonction déclenchée à la pression du bouton.
+        Doit accepter deux paramètres.
         :param label_1_text: label à afficher pour le premier champ (texte)
         :param label_2_text: label à afficher pour le second champ (entier)
         """
@@ -23,14 +25,18 @@ class EpisodeEntry(tk.Frame):
 
         form_frame = tk.Frame(self)
 
-        tk.Label(form_frame, text=label_1_text if label_1_text else 'Label 1').grid(column=0, row=0)
-        tk.Label(form_frame, text=label_2_text if label_2_text else 'Label 2').grid(column=0, row=1)
+        tk.Label(form_frame, text=label_1_text if label_1_text else 'Label 1')\
+            .grid(column=0, row=0)
+        tk.Label(form_frame, text=label_2_text if label_2_text else 'Label 2')\
+            .grid(column=0, row=1)
 
         self.title_value = tk.StringVar()
         self.number_value = tk.IntVar()
 
-        tk.Entry(form_frame, textvariable=self.title_value, width=30).grid(column=1, row=0)
-        tk.Entry(form_frame, textvariable=self.number_value, width=30).grid(column=1, row=1)
+        tk.Entry(form_frame, textvariable=self.title_value, width=30)\
+            .grid(column=1, row=0)
+        tk.Entry(form_frame, textvariable=self.number_value, width=30)\
+            .grid(column=1, row=1)
 
         form_frame.pack()
         tk.Button(self, text='Ajouter', command=self.button_action).pack()
@@ -84,8 +90,12 @@ class CollectionFrame(tk.Frame):
         Construct a frame widget with the parent MASTER
 
         :param master: Conteneur parent
-        :param select_callback: Fonction déclenchée lors de la sélection d'un élément. Doit accepter un paramètre qui sera l'indice de l'élément sélectionné.
-        :param delete_callback: Fonction déclenchée lors de la suppression d'un élément. Doit accepter un paramètre qui sera l'indice de l'élément sélectionné dont la donnée devra être supprimée.
+        :param select_callback: Fonction déclenchée lors de la sélection d'un
+        élément. Doit accepter un paramètre qui sera l'indice de l'élément
+        sélectionné.
+        :param delete_callback: Fonction déclenchée lors de la suppression d'un
+        élément. Doit accepter un paramètre qui sera l'indice de l'élément
+        sélectionné dont la donnée devra être supprimée.
         """
         tk.Frame.__init__(self, master)
 
@@ -93,12 +103,17 @@ class CollectionFrame(tk.Frame):
         self._delete_callback = delete_callback
 
         choices = tk.Variable(self)
-        self.listbox = tk.Listbox(self, listvariable=choices, selectmode='single')
+        self.listbox = tk.Listbox(self,
+                                  listvariable=choices, selectmode='single')
         self.listbox.pack()
 
         buttons_frame = tk.Frame(self)
-        tk.Button(buttons_frame, text="Select", command=self.get_selected_element).pack(side=tk.RIGHT)
-        tk.Button(buttons_frame, text="Delete", command=self.delete_selected_element).pack(side=tk.RIGHT)
+        tk.Button(buttons_frame, text="Select",
+                  command=self.get_selected_element)\
+            .pack(side=tk.RIGHT)
+        tk.Button(buttons_frame, text="Delete",
+                  command=self.delete_selected_element)\
+            .pack(side=tk.RIGHT)
         buttons_frame.pack()
 
     def add_element(self, element, index=tk.END):
