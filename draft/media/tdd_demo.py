@@ -2,7 +2,7 @@
 
 import unittest
 
-from draft.media import base_mediamodel as mediamodel
+from draft.media import mediamodel as mediamodel
 
 
 class SeasonClassEvolution(unittest.TestCase):

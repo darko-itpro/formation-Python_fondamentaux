@@ -3,7 +3,7 @@
 
 import unittest
 
-from draft.media import base_mediamodel as mediamodel
+from draft.media import mediamodel as mediamodel
 
 
 class CreateEpisode(unittest.TestCase):
@@ -36,16 +36,16 @@ class CreateEpisode(unittest.TestCase):
 
     def test_season_accessible(self):
         episode = mediamodel.Episode("Title", 1, 2)
-        self.assertEqual(episode.season, 2)
+        self.assertEqual(episode.season_number, 2)
 
     def test_shouldnt_assign_season(self):
         episode = mediamodel.Episode("Title", 1)
         with self.assertRaises(AttributeError):
-            episode.season = 2
+            episode.season_number = 2
 
     def test_without_season_should_be_none(self):
         episode = mediamodel.Episode("Title", 1)
-        self.assertIsNone(episode.season)
+        self.assertIsNone(episode.season_number)
 
     def test_number_must_be_integer_compatible(self):
         episode = mediamodel.Episode('Title', 1)
@@ -57,9 +57,9 @@ class CreateEpisode(unittest.TestCase):
 
     def test_season_must_be_integer_compatible(self):
         episode = mediamodel.Episode('Title', 1, 2)
-        self.assertEqual(episode.season, 2)
+        self.assertEqual(episode.season_number, 2)
         episode = mediamodel.Episode('Title', 1, "2")
-        self.assertEqual(episode.season, 2)
+        self.assertEqual(episode.season_number, 2)
         with self.assertRaises(ValueError):
             mediamodel.Episode('Title', 1, "un")
 

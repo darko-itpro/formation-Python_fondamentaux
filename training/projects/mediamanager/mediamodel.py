@@ -7,7 +7,10 @@ Module définissant les objets *métier* de la gestion d'une médiathèque.
 
 
 class Media:
-    def __init__(self, title: str, duration: int=None, year: int=None):
+    """
+    Classe générale représentant un Media.
+    """
+    def __init__(self, title: str, duration: int = None, year: int = None):
 
         try:
             if not title or title.isspace():
@@ -24,8 +27,8 @@ class Media:
         """Retourne la durée d'un épisode. Utilisé en tant que property"""
         if self._duration == 0:
             raise ValueError("Duration not set")
-        else:
-            return self._duration
+
+        return self._duration
 
     @duration.setter
     def duration(self, value: int):
@@ -71,13 +74,16 @@ class Episode(Media):
 
     :param title: Titre de l'épisode
     :param number: Numéro de l'épisode, doit être un entier positif ou nul.
-    :param season: Saison à laquelle appartient l'épisode. Soit être un entier positif ou nul ou None si la saison n'est pas connue.
-    :param duration: Durée en minutes. Doit être un entier positif ou None si la durée est inconnue.
-    :param year: Année de l'épisode, doit être un entier positif suppérieur à 1900 ou None si inconnu.
+    :param season: Saison à laquelle appartient l'épisode. Soit être un entier
+    positif ou nul ou None si la saison n'est pas connue.
+    :param duration: Durée en minutes. Doit être un entier positif ou None si
+    la durée est inconnue.
+    :param year: Année de l'épisode, doit être un entier positif suppérieur à
+    1900 ou None si inconnu.
     """
 
-    def __init__(self, title: str, number: int, season: int=None,
-                 duration: int=None, year: int=None):
+    def __init__(self, title: str, number: int, season: int = None,
+                 duration: int = None, year: int = None):
         Media.__init__(self, title, duration, year)
         self._number = int(number)
         self._season = int(season) if season else None
@@ -104,8 +110,8 @@ class Movie(Media):
     """
     Généralisaton du concept de Media.
     """
-    def __init__(self, title: str, duration: int=None,
-                 year: int=None, director: str=None):
+    def __init__(self, title: str, duration: int = None,
+                 year: int = None, director: str = None):
         Media.__init__(self, title, duration, year)
         self.director = str(director) if director else None
 
@@ -168,11 +174,14 @@ class Season:
 
     def __contains__(self, item: Episode):
         """
-        Fonction *avancée* permétant d'interroger un objet Season pour savoir il possède un objet de
-        type Episode avec l'instruction *episode in season*
+        Fonction *avancée* permétant d'interroger un objet Season pour savoir
+        il possède un objet de type Episode avec l'instruction *episode in
+        season*
 
-        :param item: un objet de type Episode ou du moins qui contient un attribut *number*
-        :return: vrai si un élément de la collection contient un attribut *number* égal à l'attribut
+        :param item: un objet de type Episode ou du moins qui contient un
+        attribut *number*
+        :return: vrai si un élément de la collection contient un attribut
+        *number* égal à l'attribut
         *number* de l'objet.
         """
         for element in self._episodes:
@@ -183,8 +192,9 @@ class Season:
 
     def __iter__(self):
         """
-        Fonction *avancée*, permet de retourner un itérateur sous la forme d'un générateur qui sera
-        utilisé pour la fonction for et permet de d'itérer sur les épisodes.
+        Fonction *avancée*, permet de retourner un itérateur sous la forme d'un
+        générateur qui sera utilisé pour la fonction for et permet de d'itérer
+        sur les épisodes.
 
         :return: un générateur sur les épisodes
         """
@@ -226,7 +236,8 @@ class TvShow:
         else:
             raise ValueError('Season exists')
 
-    def add_episode(self, title: str, ep_number: int, season_number: int=None):
+    def add_episode(self, title: str, ep_number: int,
+                    season_number: int = None):
         """
         Ajoute un épisode
 
@@ -260,25 +271,29 @@ class TvShow:
 
         return None
 
-    def get_episodes(self, season_number: int=None):
+    def get_episodes(self, season_number: int = None):
         """
         Retourne une liste d'épisodes
 
-        :param season_number: Numéro de saison afin de filtrer les épisodes, entier positif ou nul.
-        :return: Une liste d'épisodes ou vide si aucun épiside ne correspond à la saison.
+        :param season_number: Numéro de saison afin de filtrer les épisodes,
+        entier positif ou nul.
+        :return: Une liste d'épisodes ou vide si aucun épiside ne correspond à
+        la saison.
         """
 
-        if season_number:
+        if season_number is not None:
             for season in self._seasons:
                 if season.number == season_number:
                     return season.episodes
 
-            return []
+            episodes = []
 
         else:
-            return sum([season.episodes
-                        for season
-                        in self._seasons], [])
+            episodes = sum([season.episodes
+                            for season
+                            in self._seasons], [])
+
+        return episodes
 
     def _sort(self):
         """
@@ -307,7 +322,8 @@ class TvShow:
 
         :param item: Un élément qui doit être une saison mais qui doit surtout
         posséder une propriété `number`
-        :return: Vrai si la collection de saisons possède un élément du même numéro.
+        :return: Vrai si la collection de saisons possède un élément du même
+        numéro.
         """
         if hasattr(item, "number"):
             cmp_value = item.number
