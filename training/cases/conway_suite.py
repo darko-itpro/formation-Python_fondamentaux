@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
@@ -41,7 +41,8 @@ def next_member(member: typing.Union[int, str]) -> int:
     return int("".join(next_one))
 
 
-def print_next_occurences(initial_value:typing.Union[int, str]=1, occurrences:int=1):
+def print_next_occurences(initial_value: typing.Union[int, str] = 1,
+                          occurrences: int = 1):
     """
     Affiche les `occurences` éléments suivants d'une suite avec la valeur de
     départ `initial_value`.
@@ -54,6 +55,7 @@ def print_next_occurences(initial_value:typing.Union[int, str]=1, occurrences:in
     for occurrence in range(occurrences):
         value = next_member(value)
         print(value)
+
 
 if __name__ == '__main__':
     pass
