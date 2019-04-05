@@ -1,5 +1,4 @@
 #!/usr/bin/env python 
-# -*- coding: utf-8 -*-
 
 """
 Démonstration de la mise en œuvre des properties
@@ -15,10 +14,10 @@ class SayHello:
         self._to_who = "World"
 
     def set_who(self, who):
-        self._to_who = str(who)
+        self._to_who = ":) {} (:".format(who)
 
     def get_who(self):
-        return self._to_who if self._to_who else "I have no friends"
+        return self._to_who if self._to_who is not None else "I have no friends"
 
     def del_who(self):
         self._to_who = None
@@ -36,11 +35,11 @@ class SayDecoratedHello:
 
     @property
     def who(self):
-        return self._to_who if self._to_who else "I have no friends"
+        return self._to_who if self._to_who is not None else "I have no friends"
 
     @who.setter
     def who(self, who):
-        self._to_who = str(who)
+        self._to_who = ":) {} (:".format(who)
 
     @who.deleter
     def who(self):

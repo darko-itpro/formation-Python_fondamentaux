@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
@@ -48,24 +48,27 @@ class UserInfo(tk.Frame):
 
 if __name__ == '__main__':
 
-    root = tk.Tk()
-    root.title('Demo')
+    WINDOW = tk.Tk()
+    WINDOW.title('Demo')
 
-    user_frame = UserInfo(root)
-    user_frame.pack()
+    USER_FRAME = UserInfo(WINDOW)
+    USER_FRAME.pack()
 
     def log_form_values():
-        first_name, last_name = user_frame.get_values()
+        """
+        Fonction appelée par le bouton pour faire un log du contenu des champs.
+        """
+        first_name, last_name = USER_FRAME.get_values()
         print("Data: ", first_name, "and", last_name)
 
-    buttons_frame = tk.Frame(root)
+    BUTTONS_FRAME = tk.Frame(WINDOW)
 
-    tk.Button(buttons_frame, text='Log',
+    tk.Button(BUTTONS_FRAME, text='Log',
               command=log_form_values).pack(side=tk.RIGHT)
 
-    tk.Button(buttons_frame, text='defaut',
-              command=user_frame.set_defaut_values).pack(side=tk.RIGHT)
+    tk.Button(BUTTONS_FRAME, text='defaut',
+              command=USER_FRAME.set_defaut_values).pack(side=tk.RIGHT)
 
-    buttons_frame.pack()
+    BUTTONS_FRAME.pack()
 
-    root.mainloop()
+    WINDOW.mainloop()

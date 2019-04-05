@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+Module d'interface terminal avec l'utilisateur
+"""
+
 EPISODE_DETAIL_TEMPLATE = "s{:0>2}e{:0>2} {}"
 
 
@@ -58,44 +62,44 @@ def display_shows(db_path):
         print('Pas de série dans la base')
 
 
-actions = {}
-actions['a'] = add_episode
-actions['e'] = episodes_list
+ACTIONS = {}
+ACTIONS['a'] = add_episode
+ACTIONS['e'] = episodes_list
 
 if __name__ == "__main__":
 
     import argparse
 
-    parser = argparse.ArgumentParser(
+    PARSER = argparse.ArgumentParser(
         description="Gestion de médiathèque. Par défaut, la gestion des données"
                     " est assurée par une base de données."
     )
 
-    parser.add_argument('-s', '--statefull', action='store_true',
+    PARSER.add_argument('-s', '--statefull', action='store_true',
                         help="Force l'utilisation du modèle objet. "
                              "Ignoré si une base est spécifiée")
-    parser.add_argument('-p', '--db_path',
+    PARSER.add_argument('-p', '--db_path',
                         help='Chemin vers le fichier de la base')
 
-    ARGS = parser.parse_args()
+    ARGS = PARSER.parse_args()
 
     if ARGS.db_path:
-        db_path = ARGS.db_path
+        DB_PATH = ARGS.db_path
         from training.projects.mediamanager import media_db as media
     elif ARGS.statefull:
-        db_path = None
+        DB_PATH = None
         from training.projects.mediamanager import mediamodel as media
     else:
-        db_path = "default.db"
+        DB_PATH = "default.db"
         from training.projects.mediamanager import media_db as media
 
-    display_shows(db_path)
+    display_shows(DB_PATH)
 
     print()
 
-    show_name = input("Quelle est votre série ? ")
+    SHOW_NAME = input("Quelle est votre série ? ")
 
-    TV_SHOW = media.TvShow(show_name, db_path)
+    TV_SHOW = media.TvShow(SHOW_NAME, DB_PATH)
 
     print("Gestion de série")
 
@@ -106,11 +110,11 @@ if __name__ == "__main__":
         [q] sortie
         """)
 
-        choice = input("Choix ? ")
-        if choice == "q":
+        CHOICE = input("Choix ? ")
+        if CHOICE == "q":
             break
-        elif choice in actions:
-            actions[choice]()
+        elif CHOICE in ACTIONS:
+            ACTIONS[CHOICE]()
         else:
             print("Choix non valide")
     print("Bye")
