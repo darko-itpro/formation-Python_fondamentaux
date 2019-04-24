@@ -27,3 +27,7 @@ def hello(name):
 def add_hero():
     our_heroes.append(request.form.get('new_hero'))
     return "<a href='/tpl/'>Go back<a>"
+
+
+if __name__ == '__main__':
+    app.run()

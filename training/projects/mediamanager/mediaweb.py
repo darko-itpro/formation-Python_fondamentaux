@@ -5,53 +5,54 @@
 Module illsutrant une interface web.
 """
 
-from bottle import run, route, post, redirect, request, template
+from flask import Flask, render_template, request, redirect
 from training.projects.mediamanager import media_db
 
-@route('/')
+app = Flask(__name__)
+
+
+@app.route('/')
 def index():
-    return template('media_home')
+    return render_template('media_home.html')
 
 
-@route('/shows/')
+@app.route('/shows/')
 def index_show():
+    _MY_SHOWS = media_db.MediaDao()
     _MY_SHOWS.get_shows()
-    return template('series', series=_MY_SHOWS.get_shows())
+    return render_template('series.html', series=_MY_SHOWS.get_shows())
 
 
-@post('/add/')
+@app.route('/add/', methods=['POST'])
 def add_show():
-    show_title = request.forms.get('new_show')
+    show_title = request.form['new_show']
     my_new_show = media_db.TvShow(show_title)
     del my_new_show
-    redirect("/shows/")
+    return redirect("/shows/")
 
 
-@route('/show/<name>')
+@app.route('/show/<name>')
 def view_show_details(name):
     name = name.replace('_', ' ')
     selected_show = media_db.TvShow(name)
-    return template('show_detail', title=selected_show.name,
-                    episodes=selected_show.get_episodes())
+    return render_template('show_detail.html', title=selected_show.name,
+                           episodes=selected_show.get_episodes())
 
 
-@route('/show/<name>/add')
-def view_show_details(name):
+@app.route('/show/<name>/add')
+def add_show_details(name):
     name = name.replace('_', ' ')
     selected_show = media_db.TvShow(name)
-    return template('show_add', title=selected_show.name)
+    return render_template('show_add.html', title=selected_show.name)
 
 
-@post('/add/<name>/episode/add')
+@app.route('/add/<name>/episode/add', methods=['POST'])
 def view_add_episode(name):
     episode_title = request.forms.get('episode_title')
     episode_number = request.forms.get('episode_number')
     episode_season = request.forms.get('season_number')
-    return template("<b>Ok</b>")
+    return render_template("<b>Ok</b>")
 
 
 if __name__ == '__main__':
-
-    _MY_SHOWS = media_db.MediaDao()
-
-    run(host='localhost', port=8080)
+    app.run()
