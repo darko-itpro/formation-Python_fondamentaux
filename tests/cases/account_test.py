@@ -25,17 +25,15 @@ def test_account_with_balance_as_string():
 
 
 @pytest.fixture()
-def create_account():
+def basic_account():
     return bank.BankAccount('012345', 500)
 
 
-def test_basic_deposit(create_account):
-    account = create_account
-    account.deposit(100)
-    assert 600 == account.balance
+def test_basic_deposit(basic_account):
+    basic_account.deposit(100)
+    assert 600 == basic_account.balance
 
 
-def test_negative_deposit(create_account):
-    account = create_account
+def test_negative_deposit(basic_account):
     with pytest.raises(ValueError):
-        account.deposit(-100)
+        basic_account.deposit(-100)

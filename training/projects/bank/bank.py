@@ -71,7 +71,7 @@ class Client(Person):
         return "{}, {}".format(self._nom, self.prenom())
 
 
-class BankAccount(object):
+class BankAccount:
     """
     A Bank account
     """
