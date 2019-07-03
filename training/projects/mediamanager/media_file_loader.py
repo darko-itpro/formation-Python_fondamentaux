@@ -24,7 +24,7 @@ def get_series_value_from_file(filename):
     * Extension du fichier
 
     :param filename: nom du fichier duquel extraire les données
-    :return: une liste de chaines de caractères.
+    :return: une liste de chaines de caractères, voir description.
     :return type: list
     """
     series_file_name, series_ext = os.path.splitext(filename)
@@ -39,23 +39,20 @@ def get_series_value_from_file(filename):
                series_ext
 
 
-def open_file(filepath):
+def load_episode_from_file(filepath):
     """
     Fonction spécifique aux exercices pour charger les noms de fichiers à partir
     d'un fichier.
 
     :param filepath: Chemin vers le fichier contenant les noms de fichiers épisodes
     :return: Une liste de tuples (titre série, numéro série, numéro épisode, titre épisode)
+    :raise OSError: if file does not exist.
     """
-    if os.path.exists(filepath):
-        media_file = open(filepath, 'r')
+    with open(filepath, 'r') as media_file:
         media_data = [get_series_value_from_file(media[:-1])
                       for media in media_file]
-        media_file.close()
 
-        return media_data
-    else:
-        return None
+    return media_data
 
 
 if __name__ == '__main__':
@@ -69,7 +66,7 @@ if __name__ == '__main__':
     ARGS = PARSER.parse_args()
 
     if ARGS.file:
-        for media in open_file(ARGS.file):
+        for media in load_episode_from_file(ARGS.file):
             print(media)
     else:
         print(get_series_value_from_file(SERIES_FULL_NAME))

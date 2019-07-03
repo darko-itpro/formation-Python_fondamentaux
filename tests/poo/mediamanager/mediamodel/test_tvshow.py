@@ -16,6 +16,14 @@ def empty_show():
     return media.TvShow("My Show")
 
 
+@pytest.fixture()
+def show_with_few_episodes_same_season():
+    my_show = media.TvShow("My Show")
+    my_show.add_episode("First", 1, 1)
+    my_show.add_episode("Second", 2, 1)
+    my_show.add_episode("Fifth", 5, 1)
+
+
 def test_add_one_episode(empty_show):
     empty_show.add_episode("episode", 1, 1)
     assert len(empty_show.episodes) == 1
