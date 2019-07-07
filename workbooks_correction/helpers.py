@@ -12,7 +12,7 @@ d'une docstring du module.
 """
 
 
-def duration_for(how_many: int , unit_duration=7):
+def duration_for(how_many: int, unit_duration=7):
     return int(how_many) * int(unit_duration)
 
 

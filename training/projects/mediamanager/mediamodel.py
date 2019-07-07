@@ -9,23 +9,52 @@ import dataclasses as dc
 
 
 class TvShow:
-    def __init__(self, name):
-        self.name = name
+    def __init__(self, name: str):
+        self.name = name.capitalize()
         self._episodes = []
 
     @property
     def episodes(self):
+        """
+        Fonction déclarée pour exposer une property en tant qu'accesseur pour
+        l'attribut episodes qui ne doit pas être modifié par l'exterrieur.
+
+        :return: une copie de la liste des épisodes.
+        """
         return self._episodes.copy()
 
     def add_episode(self, title, number, season_number):
-        new_episode = Episode(title, number, season_number)
+        """
+        Ajoute un épisode à la série.
+
+        :param title: Titre de l'épisode
+        :param number: Numéro de l'épisode dans la saison
+        :param season_number: Numéro de la saison de l'épisode
+        :raise ValueError: si l'épisode existe déjà dans la série ou si les
+        numéros ne représentent pas des nombres.
+        """
+        new_episode = Episode(title, int(number), int(season_number))
         if new_episode in self._episodes:
             raise ValueError("Episode [s{:02}e{:02}-{}]exists"
                              .format(season_number, number, title))
 
         self._episodes.append(new_episode)
+        self._episodes.sort(key=lambda episode: (episode.season_number,
+                                                 episode.number))
 
     def get_episodes(self, season=None):
+        """
+        Retourne une liste triée d'épisodes.
+
+        Par défaut retourne tous les épisodes de la série. Si un numéro de
+        saison est passé en paramètre, les épisodes sont filtrés en fonction de
+        celui-ci.
+
+        :param season: Saison selon laquelle filtrer les épisodes.
+        :return: Une liste d'épisodes, vide si la série ne contient aucun
+        épisode ou si elle ne contient pas d'épisode de la saison passée en
+        paramètre.
+        """
         if season is not None:
             season = int(season)
             return [episode
@@ -33,6 +62,9 @@ class TvShow:
                     if episode.season_number == season]
         else:
             return self.episodes
+
+    def __str__(self):
+        return "TV Show [{}]".format(self.name)
 
 
 @dc.dataclass(eq=False, frozen=True)
