@@ -9,15 +9,15 @@ from training.projects.mediamanager import mediamodel
 class CreateShow(unittest.TestCase):
 
     def test_create_new_show(self):
-        show = mediamodel.TvShow('Mr. Robot')
+        show = mediamodel.TvShow("my show")
         self.assertIsNotNone(show)
 
     def test_show_name_accessible(self):
-        show = mediamodel.TvShow('Mr. Robot')
+        show = mediamodel.TvShow("my show")
         self.assertEqual(show.name, 'Mr. Robot')
 
     def test_shouldnt_assign_name(self):
-        show = mediamodel.TvShow('Mr. Robot')
+        show = mediamodel.TvShow("my show")
         with self.assertRaises(AttributeError):
             show.name = 'Dr. Who'
 
@@ -25,7 +25,7 @@ class CreateShow(unittest.TestCase):
 class AccessEpisodes(unittest.TestCase):
 
     def setUp(self):
-        self.show = mediamodel.TvShow('Game of Thrones')
+        self.show = mediamodel.TvShow("my show")
 
     def tearDown(self):
         del self.show
@@ -68,7 +68,7 @@ class SeasonEvolution(unittest.TestCase):
     """
 
     def setUp(self):
-        self.show = mediamodel.TvShow('Game of Thrones')
+        self.show = mediamodel.TvShow("my show")
         self.show.add_episode("Into the North", 1, 1)
 
     def tearDown(self):
