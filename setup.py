@@ -3,6 +3,10 @@
 """
 Exemple de *build script* pour setuptools.
 
+Ce script contient le *minimum* nécessaire pour créer une archive déployable. Ce
+projet contient les packages inclus dans `training`, les autres sont considérés
+comme des ressources de développement.
+
 Pour créer une archive, exécuter à la racine::
 
     python setup.py sdist bdist_wheel

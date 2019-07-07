@@ -100,11 +100,6 @@ class BankAccount:
         else:
             raise ValueError("Negative value")
 
-    def _set_id(self, nid):
-        if not nid:
-            raise ValueError('Wrong id')
-        self._id = nid
-
     def _get_id(self):
         return self._id
 
@@ -112,7 +107,7 @@ class BankAccount:
     def balance(self):
         return self._balance
 
-    nid = property(_get_id, _set_id)
+    nid = property(_get_id)
 
     def __str__(self):
         return "Compte client {} - solde {}"\
