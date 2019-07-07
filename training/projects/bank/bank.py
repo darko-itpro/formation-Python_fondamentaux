@@ -4,7 +4,6 @@
 Module métier de gestion bancaire
 ---------------------------------
 
-
 """
 
 from datetime import datetime
