@@ -48,6 +48,7 @@ def test_add_several_episodes(empty_show):
     assert len(empty_show.episodes) == 5
 
 
+@pytest.mark.check_ordering
 def test_episodes_should_be_ordered(empty_show):
     empty_show.add_episode("first", 1, 1)
     empty_show.add_episode("fifth", 5, 1)
@@ -56,6 +57,7 @@ def test_episodes_should_be_ordered(empty_show):
     assert empty_show.episodes[1].title == "third"
 
 
+@pytest.mark.check_ordering
 def test_episodes_should_be_ordered_by_season(empty_show):
     empty_show.add_episode("first", 1, 2)
     empty_show.add_episode("fifth", 5, 1)
@@ -82,4 +84,3 @@ def test_cannot_add_duplicate(empty_show):
 
     with pytest.raises(ValueError):
         empty_show.add_episode("Duplicate", 2, 1)
-
