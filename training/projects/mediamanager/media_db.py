@@ -1,6 +1,11 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*-
 
+"""
+Cette DAO illustre une manière de se connecter à une base de données à partir
+d'objets représentant une série.
+"""
+
 import sqlite3 as sqlite
 from training.projects.mediamanager import mediamodel as media
 

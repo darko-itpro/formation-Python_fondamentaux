@@ -99,7 +99,7 @@ if __name__ == "__main__":
 
     SHOW_NAME = input("Quelle est votre série ? ")
 
-    TV_SHOW = media.TvShow(SHOW_NAME, DB_PATH)
+    TV_SHOW = media.TvShow("my show")
 
     print("Gestion de série")
 

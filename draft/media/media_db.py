@@ -11,7 +11,8 @@ SQL_GET_EPISODES_FOR_SEASON = "SELECT title, season, number FROM episodes where 
 
 class TvShowDao:
     def __init__(self, dbname="test"):
-        self._db_name = dbname.replace(" ", "_") + '.db'
+        import re
+        self._db_name = re.sub("[ .()]", "_", dbname) + '.db'  # Voir regex
         self._connect = sqlite.connect(dbname)
 
         try:

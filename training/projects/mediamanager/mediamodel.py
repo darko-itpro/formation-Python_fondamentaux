@@ -5,340 +5,98 @@
 Module définissant les objets *métier* de la gestion d'une médiathèque.
 """
 
-
-class Media:
-    """
-    Classe générale représentant un Media.
-    """
-    def __init__(self, title: str, duration: int = None, year: int = None):
-
-        try:
-            if not title or title.isspace():
-                raise ValueError("Title must have characters")
-        except AttributeError:
-            raise ValueError("Title must be a String")
-
-        self._title = title
-        self._duration = int(duration) if duration else None
-        self.year = int(year) if year else None
-
-    @property
-    def duration(self):
-        """Retourne la durée d'un épisode. Utilisé en tant que property"""
-        if self._duration == 0:
-            raise ValueError("Duration not set")
-
-        return self._duration
-
-    @duration.setter
-    def duration(self, value: int):
-        """
-        Permet d'attribuer une durée en tant que property mais en levant une
-        exception si la durée est négative.
-        :param value:
-        """
-        if value <= 0:
-            raise ValueError("Duration must be a positive value")
-        self._duration = int(value)
-
-    @duration.deleter
-    def duration(self):
-        """
-        Property permétant de supprimer la durée et la remet à None.
-        :return:
-        """
-        self._duration = None
-
-    @property
-    def title(self):
-        """
-        Méthode destinées à la property retournant le titre.
-        """
-        return self._title
-
-    def hm_duration(self):
-        """
-        Retourne la durée en un format heures/minutes
-        :return: a tuple representing the duration where the first element is
-        the duration in hours and the second is the remaining duration in
-        minutes
-        """
-        return divmod(self.duration, 60) if self.duration else None
+import dataclasses as dc
 
 
-class Episode(Media):
-    """
-    Définit un épisode qui est un objet de type média.
-
-    Le titre et le numéro sont considérés comme pouvant être modifés.
-
-    :param title: Titre de l'épisode
-    :param number: Numéro de l'épisode, doit être un entier positif ou nul.
-    :param season: Saison à laquelle appartient l'épisode. Soit être un entier
-    positif ou nul ou None si la saison n'est pas connue.
-    :param duration: Durée en minutes. Doit être un entier positif ou None si
-    la durée est inconnue.
-    :param year: Année de l'épisode, doit être un entier positif suppérieur à
-    1900 ou None si inconnu.
-    """
-
-    def __init__(self, title: str, number: int, season: int = None,
-                 duration: int = None, year: int = None):
-        Media.__init__(self, title, duration, year)
-        self._number = int(number)
-        self._season = int(season) if season else None
-
-    @property
-    def number(self):
-        """
-        Le numérod e l'épisode, ne peut être modifié.
-        """
-        return self._number
-
-    @property
-    def season(self):
-        """
-        La saison à laquelle appartient l'épisode. Ne peut être modifiée.
-        """
-        return self._season
-
-    def __str__(self):
-        return "ep.{} - {}".format(self.number, self.title)
-
-
-class Movie(Media):
-    """
-    Généralisaton du concept de Media.
-    """
-    def __init__(self, title: str, duration: int = None,
-                 year: int = None, director: str = None):
-        Media.__init__(self, title, duration, year)
-        self.director = str(director) if director else None
-
-
-class Season:
-    """
-    Définit une saison caractérisée par son *numéro* et la liste des épisodes.
-    """
-    def __init__(self, number: int):
-
-        self._number = int(number) if number else None
-        if self._number and  self._number < 0:
-            raise ValueError('Season number cannot be negative')
-
+class TvShow:
+    def __init__(self, name: str):
+        self.name = name.capitalize()
         self._episodes = []
-
-    def add(self, episode: Episode):
-        if episode not in self:
-            self._episodes.append(episode)
-            self.sort()
-        else:
-            raise ValueError("Episode exists")
-
-    def episode(self, number: int):
-        """
-        Retourne un épisode en fonction de son numéro. Une exception est levée
-        si aucun épisode ne correspond.
-
-        :param number: Numéro de l'épisode.
-        :return: Un épisode si la saison contient un épisode avec ce numéro ou None.
-        :raises ValueError: If there is no episode with the given number.
-        """
-        for element in self._episodes:
-            if element.number == int(number):
-                return element
-
-        raise ValueError('Episode {} does not exist'.format(number))
-
-    @property
-    def number(self):
-        return self._number
 
     @property
     def episodes(self):
         """
-        Cet *accesseur* retourne une copie de la liste des épisodes, évitant
-        ainsi une modification accidentelle.
-        :return: La liste des épisodes
+        Fonction déclarée pour exposer une property en tant qu'accesseur pour
+        l'attribut episodes qui ne doit pas être modifié par l'exterrieur.
+
+        :return: une copie de la liste des épisodes.
         """
-        return list(self._episodes)
+        return self._episodes.copy()
 
-    def sort(self):
-        self._episodes.sort(key=lambda x: x.number)
-
-    def __lt__(self, other):
-        return self.number < other.number
-
-    def __len__(self):
-        return len(self._episodes)
-
-    def __contains__(self, item: Episode):
+    def add_episode(self, title, number, season_number):
         """
-        Fonction *avancée* permétant d'interroger un objet Season pour savoir
-        il possède un objet de type Episode avec l'instruction *episode in
-        season*
-
-        :param item: un objet de type Episode ou du moins qui contient un
-        attribut *number*
-        :return: vrai si un élément de la collection contient un attribut
-        *number* égal à l'attribut
-        *number* de l'objet.
-        """
-        for element in self._episodes:
-            if element.number == item.number:
-                return True
-
-        return False
-
-    def __iter__(self):
-        """
-        Fonction *avancée*, permet de retourner un itérateur sous la forme d'un
-        générateur qui sera utilisé pour la fonction for et permet de d'itérer
-        sur les épisodes.
-
-        :return: un générateur sur les épisodes
-        """
-        for episode in self._episodes:
-            yield episode
-
-    def __str__(self):
-        return "Season {} <{}>".format(self.number, len(self._episodes))
-
-
-class TvShow:
-    """
-    Représente une série et permet de gérer les saisons associées ainsi que les
-    informations générales de la série.
-
-    La gestion des saisons se fait ici à l'aide d'une liste triée à l'ajout de
-    chaque nouvelle saison.
-    """
-    def __init__(self, name: str):
-        """
-        Crée une nouvelle série
-
-        :param name: Nom de la série (non modifiable)
-        """
-        self._name = name
-        self._seasons = []
-
-    def _add_season(self, season: Season):
-        """
-        On ne gère pas de saison directement, cette méthode est donc privée. Il
-        est préférable de passer par cette méthode qui s'assure le tri.
-
-        :param season:
-        :return: None
-        """
-        if season not in self:
-            self._seasons.append(season)
-            self._sort()
-        else:
-            raise ValueError('Season exists')
-
-    def add_episode(self, title: str, ep_number: int,
-                    season_number: int = None):
-        """
-        Ajoute un épisode
+        Ajoute un épisode à la série.
 
         :param title: Titre de l'épisode
-        :param ep_number: Numéro de l'épisode, entier positif
-        :param season_number: Numéro de saison entier positif ou nul
+        :param number: Numéro de l'épisode dans la saison
+        :param season_number: Numéro de la saison de l'épisode
+        :raise ValueError: si l'épisode existe déjà dans la série ou si les
+        numéros ne représentent pas des nombres.
         """
-        for season in self._seasons:
-            if season.number == season_number:
-                season.add(Episode(title, ep_number, season_number))
-                break
+        new_episode = Episode(title, int(number), int(season_number))
+        if new_episode in self._episodes:
+            raise ValueError("Episode [s{:02}e{:02}-{}]exists"
+                             .format(season_number, number, title))
+
+        self._episodes.append(new_episode)
+        self._episodes.sort(key=lambda episode: (episode.season_number,
+                                                 episode.number))
+
+    def get_episodes(self, season=None):
+        """
+        Retourne une liste triée d'épisodes.
+
+        Par défaut retourne tous les épisodes de la série. Si un numéro de
+        saison est passé en paramètre, les épisodes sont filtrés en fonction de
+        celui-ci.
+
+        :param season: Saison selon laquelle filtrer les épisodes.
+        :return: Une liste d'épisodes, vide si la série ne contient aucun
+        épisode ou si elle ne contient pas d'épisode de la saison passée en
+        paramètre.
+        """
+        if season is not None:
+            season = int(season)
+            return [episode
+                    for episode in self.episodes
+                    if episode.season_number == season]
         else:
-            season = Season(season_number)
-            season.add(Episode(title, ep_number, season_number))
-            self._add_season(season)
-
-    @property
-    def name(self):
-        return self._name
-
-    @property
-    def seasons(self):
-        """return a copy of this object's seasons list"""
-        return list(self._seasons)
-
-    def season(self, number: int):
-        for season in self._seasons:
-            if season.number == number:
-                import copy
-                return copy.deepcopy(season)
-
-        return None
-
-    def get_episodes(self, season_number: int = None):
-        """
-        Retourne une liste d'épisodes
-
-        :param season_number: Numéro de saison afin de filtrer les épisodes,
-        entier positif ou nul.
-        :return: Une liste d'épisodes ou vide si aucun épiside ne correspond à
-        la saison.
-        """
-
-        if season_number is not None:
-            for season in self._seasons:
-                if season.number == season_number:
-                    return season.episodes
-
-            episodes = []
-
-        else:
-            episodes = sum([season.episodes
-                            for season
-                            in self._seasons], [])
-
-        return episodes
-
-    def _sort(self):
-        """
-        Tri les saisons par ordre *naturel* (numéro de saison).
-
-        La méthode est privée car la collection en elle même est privée en
-        conséquence, le tri de la liste appatient à l'objet.
-        """
-        self._seasons.sort(key=lambda x: x.number)
-
-    def __len__(self):
-        """
-        Un TvShow peut être considéré comme un conteneur de saisons. Cette
-        méthode spéciale permet donc d'obtenir la *taille* d'un TvShow qui sera
-        donc le nombre de saisons grâce à la fonction len :
-        `len(show)`
-        :return: un entier correspondant au nombre de saisons.
-        """
-        return len(self._seasons)
-
-    def __contains__(self, item: Season):
-        """
-        Un TvShow peut être considéré comme un conteneur de saisons. Cette
-        méthode spéciale permet donc d'interroger un TvShow à la manière
-        `saison in show`
-
-        :param item: Un élément qui doit être une saison mais qui doit surtout
-        posséder une propriété `number`
-        :return: Vrai si la collection de saisons possède un élément du même
-        numéro.
-        """
-        if hasattr(item, "number"):
-            cmp_value = item.number
-        else:
-            cmp_value = item
-
-        for element in self._seasons:
-            if element.number == cmp_value:
-                return True
-
-        return False
+            return self.episodes
 
     def __str__(self):
-        return "{} <{}>".format(self.name, len(self._seasons))
+        return "TV Show [{}]".format(self.name)
 
 
-if __name__ == '__main__':
-    pass
+@dc.dataclass(eq=False, frozen=True)
+class Episode:
+    title: str
+    number: int
+    season_number: int
+
+    def __post_init__(self):
+        """
+        Méthode exécutée après l'initialisation chargée ici de vérifier la
+        cohérence des données.
+        """
+        if self.number < 0:
+            raise ValueError(f"Episode number should be positive "
+                             f"({self.number})")
+
+        if self.season_number < 0:
+            raise ValueError(f"Episode season number should be positive "
+                             f"({self.season_number})")
+
+    def __eq__(self, other):
+        """
+        Le critère d'égalité entre deux épisodes se limite aux numéro d'épisode
+        et numéro de saison.
+
+        :param other: L'objet avec lequel self est comparé.
+        :return: Vrai si le numéro d'épisode et numéro de saison sont égaux
+        sinon faux. Les autres paramètres ne sont pas pris en compte.
+        """
+        if not isinstance(other, Episode):
+            return False
+        else:
+            return (self.number, self.season_number) == (other.number,
+                                                         other.season_number)

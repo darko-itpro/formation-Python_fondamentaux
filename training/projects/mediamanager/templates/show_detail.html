@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <a href="/">Home</a> - <a href="/show/{{title.replace(' ', '_')}}/add">Add Episode</a>
+    {% if episodes %}
+    <ul>
+        {% for episode in episodes %}
+        <li>{{episode.title}}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Pas d'épisode pour l'instant.</p>
+    {% endif %}
+
+{% endblock %}
