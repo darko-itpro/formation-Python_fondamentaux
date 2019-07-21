@@ -3,7 +3,7 @@
 
 import re
 
-f = open("Assets/comptage-voyageurs-trains-transilien.csv", 'r')
+f = open("../../../assets/SNCF/comptage-voyageurs-trains-transilien.csv", 'r')
 time_count_matcher = re.compile("Entre ([0-9]*)h et ([0-9]*)h")
 
 

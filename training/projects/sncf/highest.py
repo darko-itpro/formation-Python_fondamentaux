@@ -10,7 +10,7 @@ fichier de données.
 """
 import os.path
 
-FILE_NAME = "assets/comptage-voyageurs-trains-transilien.csv"
+FILE_NAME = "../../../assets/SNCF/comptage-voyageurs-trains-transilien.csv"
 
 if not os.path.exists(FILE_NAME):
     print('Attention, exécutez ce module à la racine du projet !')

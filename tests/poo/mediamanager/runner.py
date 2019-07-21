@@ -3,8 +3,8 @@
 
 import unittest
 
-from tests.poo.mediamanager.mediamodel import object_episode
-from tests.poo.mediamanager.mediamodel import object_show
+from tests.poo.mediamanager.umediamodel import object_episode
+from tests.poo.mediamanager.umediamodel import object_show
 
 loader = unittest.TestLoader()
 suite = unittest.TestSuite()

@@ -36,4 +36,5 @@ def add_hero():
     return "<a href='/tpl/'>Go back<a>"
 
 
-run(app, host='localhost', port=8080)
+if __name__ == "__main__":
+    run(app, host='localhost', port=8080)

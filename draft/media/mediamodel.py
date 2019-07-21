@@ -34,7 +34,7 @@ class Episode:
         self._number = int(number)
         self._season_number = int(season) if season else None
 
-    def get_number(self):
+    def _get_number(self):
         """
         Cette méthode n'est pas une méthode dans cet objet. Plus bas, elle est
         un paramètre de la classe property qui est une autre manière
@@ -73,10 +73,10 @@ class Episode:
         if not isinstance(other, Episode):
             return False
 
-        return self.number == other.number \
-               and self.season_number == other.season_number
+        return (self.number, other.number) == (self.season_number,
+                                               other.season_number)
 
-    number = property(get_number)  # Voir documentaiton de la méthode get_number
+    number = property(_get_number)  # Voir documentaiton de la méthode _get_number
 
 
 class TvShow:

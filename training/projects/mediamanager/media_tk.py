@@ -2,9 +2,13 @@
 # -*- coding: utf-8 -*-
 
 """
-Crée une fenêtre permétant de gérer des épisodes d'une série télévisée. Les widgets sont dans un
-module dédié. Les épisodes sont gérés sous forme d'une collection dans une liste dans ce module.
+Crée une fenêtre permétant de gérer des épisodes d'une série télévisée.
+Les widgets sont dans un module dédié.
 
+Les épisodes sont gérés sous forme d'une liste déclarée dans ce module. Ce
+modèle ne permet pas d'être connecté à une autre source de données comme la
+base de données. Ce choix est volontaire car cet exemple d'interface a pour but
+d'illustrer certaines techniques.
 """
 
 import tkinter as tk
