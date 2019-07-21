@@ -9,14 +9,36 @@ principal.
 from draft.media import mediamodel as media
 
 
-def display_existing_shows(path):
-    #TODO: utilisez votre fonction de chargement de données
+def display_existing_shows(path: str):
+    """
+    Affiche les noms de séries existantes
+
+    Cette fonction est optionnelle, elle doit premettre d'afficher les titres de
+    séries à partir d'un fichier de données. Si vous avez écrit une fonction
+    permettant de charger les données à partir d'un fichier, utilisez la ici.
+
+    :param path: Chemin vers le fichier de données
+    """
+    # TODO: utilisez votre fonction de chargement de données
     for title in list(set([show[0]
                            for show in from_file.load_episode_from_file(path)])):
         print(" - {}".format(title))
 
 
-def load_from_file(path, show):
+def load_from_file(path: str, show: media.TvShow):
+    """
+    Ajoute les épisodes d'une série si ils existent.
+
+    Cette fonction est optionnelle, elle doit premettre d'ajouter des épisodes à
+    la série après avoir extrait les informations (titre, numéro d'épisode et
+    numéro de saison) du fichier en path. Elle permet ainsi de parcourir des
+    données sans avoir à les saisir.
+
+    :param path: Chemin vers le fichier de données
+    :param show: Une série pour laquelle la fonction ajoutera les épisodes à
+    partir des informations dans le fichier si la série est présente dans le
+    fichier. Ne fait rien sinon.
+    """
     # TODO: utilisez votre fonction de chargement de données
     for data in from_file.load_episode_from_file(path):
         if data[0] == show.name:
