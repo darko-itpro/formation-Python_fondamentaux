@@ -8,22 +8,22 @@ Module d'interface terminal avec l'utilisateur
 EPISODE_DETAIL_TEMPLATE = "s{:0>2}e{:0>2} {}"
 
 
-def episodes_list():
+def episodes_list(tv_show):
     """
-    Fonction qui liste les épisodes pour la série gérée
+    Fonction qui liste les épisodes pour la série en paramètre
     :return: None
     """
     print("Liste d'épisodes")
-    ep_liste = TV_SHOW.get_episodes()
+    ep_liste = tv_show.get_episodes()
     if ep_liste:
         for entry in ep_liste:
             print(EPISODE_DETAIL_TEMPLATE
-                  .format(entry.season, entry.number, entry.title))
+                  .format(entry.season_number, entry.number, entry.title))
     else:
         print("Pas d'épisodes")
 
 
-def add_episode():
+def add_episode(tv_show):
     """
     Fonction qui permet d'ajouter un épisode à la série.
     :return:
@@ -37,7 +37,7 @@ def add_episode():
         return
 
     try:
-        TV_SHOW.add_episode(ep_title, str(ep_season), str(ep_number))
+        tv_show.add_episode(ep_title, str(ep_season), str(ep_number))
     except ValueError:
         print("L'épisode {} de la saison {} existe déjà"
               .format(ep_number, ep_season))
@@ -93,13 +93,15 @@ if __name__ == "__main__":
         DB_PATH = "default.db"
         from training.projects.mediamanager import media_db as media
 
-    display_shows(DB_PATH)
-
-    print()
-
-    SHOW_NAME = input("Quelle est votre série ? ")
-
-    TV_SHOW = media.TvShow("my show")
+    if DB_PATH is None:
+        print("Gestion en mémoire")
+        SHOW_NAME = input("Quelle est votre série ? ")
+        TV_SHOW = media.TvShow(SHOW_NAME)
+    else:
+        display_shows(DB_PATH)
+        print()
+        SHOW_NAME = input("Quelle est votre série ? ")
+        TV_SHOW = media.TvShow(SHOW_NAME, DB_PATH)
 
     print("Gestion de série")
 
@@ -114,7 +116,7 @@ if __name__ == "__main__":
         if CHOICE == "q":
             break
         elif CHOICE in ACTIONS:
-            ACTIONS[CHOICE]()
+            ACTIONS[CHOICE](TV_SHOW)
         else:
             print("Choix non valide")
     print("Bye")
