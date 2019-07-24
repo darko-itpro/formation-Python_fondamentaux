@@ -48,10 +48,12 @@ def add_show_details(name):
 
 @app.route('/add/<name>/episode/add', methods=['POST'])
 def view_add_episode(name):
-    episode_title = request.forms.get('episode_title')
-    episode_number = request.forms.get('episode_number')
-    episode_season = request.forms.get('season_number')
-    return render_template("<b>Ok</b>")
+    episode_title = request.form['episode_title']
+    episode_number = request.form['episode_number']
+    episode_season = request.form['season_number']
+    selected_show = media_db.TvShow(name)
+    selected_show.add_episode(episode_title, episode_number, episode_season)
+    return redirect("/show/%s" % name)
 
 
 if __name__ == '__main__':
