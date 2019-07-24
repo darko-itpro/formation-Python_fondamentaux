@@ -2,6 +2,7 @@
 
 {% block content %}
     <a href="/">Home</a> - <a href="/show/{{title.replace(' ', '_')}}/add">Add Episode</a>
+    <h2>{{title}}</h2>
     {% if episodes %}
     <ul>
         {% for episode in episodes %}

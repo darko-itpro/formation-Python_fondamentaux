@@ -19,6 +19,9 @@ if __name__ == "__main__":
 
     # parser.add_argument('who', help='Who are you ?')
     # parser.add_argument('many', type=int)
+    # parser.add_argument("command", help="Action this program should perform")
+    # parser.add_argument("command", choices=["run", "load", "update"],
+    #                     help="Action this program should perform")
     # parser.add_argument('-v', '--verbose') # Will fail
     # parser.add_argument('-v', '--verbose', action='store_true')
     # parser.add_argument('-o', "--output",
@@ -28,6 +31,9 @@ if __name__ == "__main__":
 
     # if args.verbose:
     #     print('lets do it')
+    #
+    # print(args.command)
+    #
     #
     # if args.output:
     #     print("output file: " + args.output)

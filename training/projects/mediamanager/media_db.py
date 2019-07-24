@@ -39,7 +39,7 @@ class MediaDao:
     """
     Cette DAO gère les données au niveau des séries.
     """
-    def __init__(self, dbname="test.db"):
+    def __init__(self, dbname="default.db"):
         self._db_name = dbname
         self._connect = sqlite.connect(dbname)
 
@@ -68,7 +68,7 @@ class TvShow:
     """
     Représente une série gérée en base SQLite
     """
-    def __init__(self, show_name, dbname="test.db"):
+    def __init__(self, show_name, dbname="default.db"):
         """
         Crée une nouvelle série
 
