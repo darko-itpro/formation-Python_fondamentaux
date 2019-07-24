@@ -20,12 +20,24 @@ def launch_webapp(args):
     webapp.app.run()
 
 
+def load_data(args):
+    import training.projects.mediamanager.media_file_loader as loader
+
+    for media in loader.load_episode_from_file(args.file):
+        print(media)
+
+
+def load_cli(args):
+    from training.projects.mediamanager import mediacli
+    mediacli.display_main_menu(args.db_path)
+
+
 if __name__ == '__main__':
 
-    actions = {"cli": None,
+    actions = {"cli": load_cli,
                "web": launch_webapp,
                "app": launch_app,
-               "load": None}
+               "load": load_data}
 
     import argparse
 

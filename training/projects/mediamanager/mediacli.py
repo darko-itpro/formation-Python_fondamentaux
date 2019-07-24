@@ -47,10 +47,7 @@ def display_shows(db_path):
     """
     Affiche les séries contenues dans un gestionnaire de séries.
     """
-    if db_path is None:
-        print('Gestion en mémoire.')
-        return
-
+    from training.projects.mediamanager import media_db as media
     shows_db = media.MediaDao(db_path)
 
     shows = shows_db.get_shows()
@@ -62,9 +59,40 @@ def display_shows(db_path):
         print('Pas de série dans la base')
 
 
-ACTIONS = {}
-ACTIONS['a'] = add_episode
-ACTIONS['e'] = episodes_list
+def display_main_menu(db_path):
+    actions = {'a': add_episode,
+               'e': episodes_list}
+
+    if db_path is None:
+        print("Gestion en mémoire")
+        from training.projects.mediamanager import mediamodel as media
+        show_name = input("Quelle est votre série ? ")
+        tv_show = media.TvShow(show_name)
+    else:
+        from training.projects.mediamanager import media_db as media
+        display_shows(db_path)
+        print()
+        show_name = input("Quelle est votre série ? ")
+        tv_show = media.TvShow(show_name, db_path)
+
+    print("Gestion de série")
+
+    while True:
+        print("""
+        [a] ajouter un épisode
+        [e] lister les épisodes
+        [q] sortie
+        """)
+
+        choice = input("Choix ? ")
+        if choice == "q":
+            break
+        elif choice in actions:
+            actions[choice](tv_show)
+        else:
+            print("Choix non valide")
+    print("Bye")
+
 
 if __name__ == "__main__":
 
@@ -85,38 +113,9 @@ if __name__ == "__main__":
 
     if ARGS.db_path:
         DB_PATH = ARGS.db_path
-        from training.projects.mediamanager import media_db as media
     elif ARGS.statefull:
         DB_PATH = None
-        from training.projects.mediamanager import mediamodel as media
     else:
         DB_PATH = "default.db"
-        from training.projects.mediamanager import media_db as media
 
-    if DB_PATH is None:
-        print("Gestion en mémoire")
-        SHOW_NAME = input("Quelle est votre série ? ")
-        TV_SHOW = media.TvShow(SHOW_NAME)
-    else:
-        display_shows(DB_PATH)
-        print()
-        SHOW_NAME = input("Quelle est votre série ? ")
-        TV_SHOW = media.TvShow(SHOW_NAME, DB_PATH)
-
-    print("Gestion de série")
-
-    while True:
-        print("""
-        [a] ajouter un épisode
-        [e] lister les épisodes
-        [q] sortie
-        """)
-
-        CHOICE = input("Choix ? ")
-        if CHOICE == "q":
-            break
-        elif CHOICE in ACTIONS:
-            ACTIONS[CHOICE](TV_SHOW)
-        else:
-            print("Choix non valide")
-    print("Bye")
+    display_main_menu(DB_PATH)
