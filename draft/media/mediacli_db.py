@@ -11,7 +11,7 @@ from draft.media import media_db as media
 def episodes_list():
     """
     Fonction qui liste les épisodes pour la série gérée
-    :return: None
+    :return: Une liste d'épisodes
     """
     print("Liste d'épisodes")
 
@@ -21,7 +21,7 @@ def episodes_list():
 def add_episode():
     """
     Fonction qui permet d'ajouter un épisode à la série.
-    :return:
+    :return: None
     """
     ep_title = input("Titre de l'épisode ")
     try:
@@ -44,7 +44,7 @@ if __name__ == "__main__":
     print("Gestion de série")
     tvshow_name = input("Entrez le titre de la série ")
 
-    _db = media.TvShowDao()
+    show_db = media.TvShowDao()
 
     while True:
         print("""
