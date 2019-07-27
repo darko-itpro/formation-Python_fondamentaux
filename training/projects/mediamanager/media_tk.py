@@ -30,7 +30,7 @@ def add_episode(title, number):
     :param number: Numéro de l'épisode à ajouter
     """
 
-    episode = mediamodel.Episode(title, number)
+    episode = mediamodel.Episode(title, number, 0)
     EPISODE_LIST.append(episode)
     EPISODE_LIST.sort(key=lambda x: x.number)
     ep_index = EPISODE_LIST.index(episode)
