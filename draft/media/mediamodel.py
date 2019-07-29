@@ -98,7 +98,7 @@ class TvShow:
         """
         new_episode = Episode(title, number, season_number)
         if new_episode in self._episodes:
-            raise ValueError('Duplicate Episode [{}]'.format(title))
+            raise ValueError(f'Duplicate Episode [{title}]')
 
         self._episodes.append(new_episode)
 

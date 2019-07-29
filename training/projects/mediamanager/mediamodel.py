@@ -35,8 +35,8 @@ class TvShow:
         """
         new_episode = Episode(title, int(number), int(season_number))
         if new_episode in self._episodes:
-            raise ValueError("Episode [s{:02}e{:02}-{}]exists"
-                             .format(season_number, number, title))
+            raise ValueError(
+                f"Episode [s{season_number:02}e{number:02}-{title}]exists")
 
         self._episodes.append(new_episode)
         self._episodes.sort(key=lambda episode: (episode.season_number,
