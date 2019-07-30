@@ -11,8 +11,6 @@ def load():
                                           filetypes=(("Text files", "*.txt"),
                                                      ("All file", "*.*")))
 
-    print(filename)
-
 
 tk.Button(window, text="load", command=load).pack()
 
