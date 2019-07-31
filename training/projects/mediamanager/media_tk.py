@@ -30,7 +30,7 @@ def add_episode(title, number):
     :param number: Numéro de l'épisode à ajouter
     """
 
-    episode = mediamodel.Episode(title, number, 0)
+    episode = mediamodel.Episode(title, int(number), 0)
     EPISODE_LIST.append(episode)
     EPISODE_LIST.sort(key=lambda x: x.number)
     ep_index = EPISODE_LIST.index(episode)
@@ -55,6 +55,22 @@ def delete_episode(ep_index):
     """
     EPISODE_LIST.pop(ep_index)
 
+
+def load_file():
+    from tkinter import filedialog
+    from training.projects.mediamanager import media_file_loader as loader
+
+    filename = filedialog.askopenfilename(title="Select media file",
+                                          filetypes=(("CSV files", "*.csv"),
+                                                     ("Text files", "*.txt"),
+                                                     ("All files", "*.*")))
+
+    data = loader.load_episode_from_file(filename)
+
+    for show, season, number, title, duration, year in data:
+        add_episode(title, number)
+
+
 FENETRE.title('Episode Manager')
 
 BUTTONS_FRAME = tk.Frame(FENETRE)
@@ -66,5 +82,6 @@ EPISODES_FRAME = media_widgets.CollectionFrame(FENETRE, select_callback=select_e
                                                delete_callback=delete_episode)
 EPISODES_FRAME.pack(side=tk.LEFT)
 FORM_FRAME.pack()
+tk.Button(FENETRE, text="load", command=load_file).pack()
 
 FENETRE.mainloop()
