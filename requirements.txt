@@ -2,6 +2,7 @@ bottle>=0.12.16
 coverage>=4.5.3
 Faker>=1.0.7
 Flask>=1.0.2
+geopy>=1.20.0
 ipython>=7.4.0
 jupyter==1.0.0
 pylint>=2.3.1
