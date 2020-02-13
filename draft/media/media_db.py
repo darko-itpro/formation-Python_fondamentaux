@@ -31,16 +31,16 @@ class TvShowDao:
             cur.execute(SQL_CREATE_EPISODES_TABLE)
 
         except sqlite.Error as e:
-            print("Error occured")  # Voir docstring pour print
-            print(e)  # Voir docstring pour print
+            print("Error occured")  # Voir docstring à propos du print
+            print(e)  # Voir docstring à propos du print
 
     def __del__(self):
         try:
             self._connect.close()
 
         except sqlite.Error as e:
-            print("Could not close database")  # Voir docstring pour print
-            print(e)  # Voir docstring pour print
+            print("Could not close database")  # Voir docstring à propos du print
+            print(e)  # Voir docstring à propos du print
 
     def __str__(self):
         return 'Media DB Connector ({})'.format(self._db_name)
