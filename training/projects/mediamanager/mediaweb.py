@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Module illsutrant une interface web.
+Module d'illustratin d'une interface web.
 """
 
 from flask import Flask, render_template, request, redirect
