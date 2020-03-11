@@ -12,32 +12,6 @@ Ces sources sont organisées pour proposer des exemples de code sur les thèmes
 couverts par les formations de base Python. Elles respectent avec quelques
 adaptations l'organisation d'un package.
 
-## Exercices pratiques
-
-Ces sources contiennet des propositions de *corrections* des exercices pratiques
-proposés en formation. Leur objectif principal est d'illustrer ce qui a été
-présenté en formation. Les répertoires d'intérêt sont :
-* `/training/projects` propose plusieurs projets regroupés en packages.
-    * `/bank` sur le thème de la gestion de comptes bancaires contient
-      principalement du code tel que présent dans le support. 
-    * `/mediamanager` contient un projet complet de gestion de médiathèque.
-    * `/museums` contient un projet de maniulation de données sur les musées
-    * `/sncf` contient un projet de manipulation de données issues de la SNCF
-    * `/stacks` propose un exemple d'implémentation de piles
-    * `/trainig` sur le thème de la gestion de fomrations reprends le code du
-      support.
-* `/training/cases` est un package contennat des modules illustrant des outils
-    présentés durant la formation
-
-
-Le répertoire `/docs` contient normalement une documentation du projet. Elle
-contient actuellement un exemple de contenu pouvant produire un support pour
-cette formation. Notez que comme toute bonne documentation, elle n'est pas
-maintenue.
- 
-Le répertoire `/draft` est un répertoire contenant des squelettes de modules à
-compléter.
-
 ## Mise en place de l'environnement
 
 ### Prérequis
@@ -56,7 +30,7 @@ python -m pip --version
 
 ### Récupérez le projet
 Récupérez ce projet en local. En tant que projet hébergé sur Github, vous pouvez
-soit le cloner soit en récupérer une copie en tant qu'archive. Vous êtes libres
+soit le cloner soit en récupérer une copie en tant qu'archive. Vous êtes libre
 de le placer dans l'arborescence à votre convenance.
 
 ### Installez les dépendances
@@ -82,6 +56,32 @@ make html
 ```
 
 La documentation est alors dispoible dans le sous répertoire *_build/html*.
+
+## Exercices pratiques
+
+Ces sources contiennet des propositions de *corrections* des exercices pratiques
+proposés en formation. Leur objectif principal est d'illustrer ce qui a été
+présenté en formation. Les répertoires d'intérêt sont :
+* `/training/projects` propose plusieurs projets regroupés en packages.
+    * `/bank` sur le thème de la gestion de comptes bancaires contient
+      principalement du code tel que présent dans le support. 
+    * `/mediamanager` contient un projet complet de gestion de médiathèque.
+    * `/museums` contient un projet de maniulation de données sur les musées
+    * `/sncf` contient un projet de manipulation de données issues de la SNCF
+    * `/stacks` propose un exemple d'implémentation de piles
+    * `/trainig` sur le thème de la gestion de fomrations reprends le code du
+      support.
+* `/training/cases` est un package contennat des modules illustrant des outils
+    présentés durant la formation
+
+
+Le répertoire `/docs` contient normalement une documentation du projet. Elle
+contient actuellement un exemple de contenu pouvant produire un support pour
+cette formation. Notez que comme toute bonne documentation, elle n'est pas
+maintenue.
+ 
+Le répertoire `/draft` est un répertoire contenant des squelettes de modules à
+compléter.
 
 ## Cahiers d'exercices
 
