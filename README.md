@@ -49,7 +49,8 @@ Votre environnement contient alors toutes les dépendances nécessaires. Il ne
 reste plus qu'à générer la documentation (optionnel).
 
 ### Générez la documentation
-Placez-vous dans le répertoire *docs* et exécutez
+Le répertoire /docs/ contient un exemple de documentation de projet. Pour la générer,
+Placez-vous dans ce répertoire et exécutez
  
 ```
 make html
@@ -73,15 +74,37 @@ présenté en formation. Les répertoires d'intérêt sont :
       support.
 * `/training/cases` est un package contennat des modules illustrant des outils
     présentés durant la formation
+    
+### MediaManager
+Le projet MediaManager est le plus aboutit, il s'agti du fil directeur le plus
+régulièrement utilisé durant mes formations. Vous pouvez tester les exemples en
+lançant les différents modules. Les commandes les plus pratiques seront :
 
+```
+python -m training.projects.mediamanager.mediamanager load -f assets/showslist.csv
+``` 
 
-Le répertoire `/docs` contient normalement une documentation du projet. Elle
-contient actuellement un exemple de contenu pouvant produire un support pour
-cette formation. Notez que comme toute bonne documentation, elle n'est pas
-maintenue.
- 
-Le répertoire `/draft` est un répertoire contenant des squelettes de modules à
-compléter.
+qui permet de créer la base de données et de l'alimenter avec les informations du
+fichier csv.
+
+```
+python -m training.projects.mediamanager.mediamanager cli
+```
+
+lance l'interface en ligne de commande.
+
+```
+python -m training.projects.mediamanager.mediamanager app
+```
+
+lance l'interface tkinter. Cette interface n'est pas connectée à la base de données,
+elle ne gère pas non plus la notion de *séries*.
+
+```
+python -m training.projects.mediamanager.mediamanager web
+```
+
+lance le serveur web pour l'application Flask qui est connecté à la base de données.
 
 ## Cahiers d'exercices
 
@@ -98,6 +121,15 @@ python -m jupyter notebook
 
 Vous pouvez maintenant travailler avec les *workbooks*. Ceux-ci sont proposés
 comme outil pour vous aider à vous familiariser avec le langage.
+
+## Les autres répertoires
+Le répertoire `/docs` contient normalement une documentation du projet. Elle
+contient actuellement un exemple de contenu pouvant produire un support pour
+cette formation. Notez que comme toute bonne documentation… elle n'est pas
+maintenue.
+ 
+Le répertoire `/draft` est un répertoire contenant des squelettes de modules à
+compléter.
 
 ## Dépendances du projet
 Le fichier requirements liste les dépendances nécessaires au projet dans son

@@ -22,9 +22,13 @@ def launch_webapp(args):
 
 def load_data(args):
     import training.projects.mediamanager.media_file_loader as loader
+    import training.projects.mediamanager.media_db as db
 
-    for media in loader.load_episode_from_file(args.file):
-        print(media)
+    db_name = args.db_path
+
+    for show_name, season, number, title, *_ in loader.load_episode_from_file(args.file):
+        show = db.TvShow(show_name, db_name)
+        show.add_episode(title, season, number)
 
 
 def load_cli(args):
@@ -59,8 +63,5 @@ if __name__ == '__main__':
                                              "des données.")
 
     ARGS = PARSER.parse_args()
-
-    print(ARGS.command)
-    print(ARGS.db_path)
 
     actions[ARGS.command](ARGS)
