@@ -8,7 +8,7 @@
 <h1>{{title}}</h1>
 Add an episode to show {{title}}
 
-<form action="/add/{{title}}/episode/add" method="post">
+<form action="/add/{{title.replace(' ', '_')}}/episode/add" method="post">
     Titre : <input type="text" name="episode_title"><br />
     Numéro : <input type="text" name="episode_number"><br />
     Saison : <input type="text" name="season_number"><br />
