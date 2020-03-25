@@ -4,7 +4,7 @@ Module pour une représentation de formation sous forme d'objet.
 
 
 class Student:
-    def __init__(self, name: str, company: str = None):
+    def __init__(self, name: str, title:str = None, company: str = None):
         """
         Describes a student
 
@@ -12,6 +12,7 @@ class Student:
         :param company: The student's company name
         """
         self._name = name.capitalize()
+        self.title = title
         self._company = company.capitalize() if company else None
 
     @property
@@ -39,14 +40,16 @@ class Training:
         :param available_seats: maximum seats available for the training
         """
 
-        duration = int(duration)
-        if duration < 1:
+        self._duration = int(duration)
+        if self._duration < 1:
             raise ValueError("Duration should be at least one (1) day")
 
-        self._subject = subject
-        self._duration = int(duration)
-        self._students = []
         self._seats = int(available_seats)
+        if self._seats < 1:
+            raise ValueError('The training should have at least one seat')
+
+        self._subject = subject
+        self._students = []
 
     @property
     def subject(self):
