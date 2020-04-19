@@ -25,10 +25,13 @@ def duration_for(how_many: int, unit_duration=7):
     how_many = int(how_many)
     unit_duration = int(unit_duration)
 
-    if how_many < 0 or unit_duration < 0:
-        raise ValueError("Les paramètres doivent être positifs.")
+    if how_many < 0:
+        raise ValueError('Your duration should be positive or null')
 
-    return int(how_many) * int(unit_duration)
+    if unit_duration < 0:
+        raise ValueError('Your unit duration should be positive or null')
+
+    return how_many * unit_duration
 
 
 def to_minutes(hours: int, minutes=0):
