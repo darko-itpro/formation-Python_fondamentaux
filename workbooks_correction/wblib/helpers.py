@@ -48,4 +48,4 @@ def to_minutes(hours: int, minutes=0):
     if hours < 0 or minutes < 0:
         raise ValueError("Les durées doivent être positives")
 
-    return int(hours) * 60 + int(minutes)
+    return hours * 60 + minutes
