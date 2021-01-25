@@ -15,10 +15,10 @@ adaptations l'organisation d'un package.
 ## Mise en place de l'environnement
 
 ### Prérequis
-[Python](https://www.python.org) doit être installé. La formation est prévue
-pour être compatible Python 3.4+ mais certains codes illustrent des
-fonctionalitées récentes. Il sera alors nécessaire de disposer d'une version
-compatible.
+[Python](https://www.python.org) doit être installé sur votre poste.
+
+La formation est prévue pour une version de Python 3.6+. Certains codes
+peuvent illuster des fonctionalités plus récentes.
 
 Python ainsi que les dépendances doivent être dans le PATH. Vous pouvez vérifier
 le bon fonctionnement dans un terminal/invite de commande par les instructions
@@ -29,9 +29,7 @@ python -m pip --version
 ```
 
 ### Récupérez le projet
-Récupérez ce projet en local. En fonction de vos outils et de vos connaissances de Git,
-clonez le répertoire ou récupérez les sources dnas un zip. Vous pouvez placer le projet
-où vous le souhaitez dans votre arborescence.
+Le projet peut être où vous le souhaitez sur votre disque.
 
 ### Installez les dépendances
 [pip](https://pypi.python.org/pypi/pip) est le gestionnaire de dépendances qui
@@ -55,10 +53,11 @@ Votre environnement contient alors toutes les dépendances nécessaires.
 
 Le répertoire *workbooks* contient des *cahiers d'exercices*. Ceux-ci sont
 des documents type *Jupyter Notebooks* générés à l'aide de
-[Jupyter](http://jupyter.org/). Ce dernier est inclus dans les dépendances.
+[Jupyter](http://jupyter.org/). Pour pouvoir les utiliser, vous devez avoir
+installé la dépendance (vois section précédente).
  
-Dans un terminal à partir du répertoire racine du projet,  exécutez la
-commande
+Pour accéder aux cahiers d'exercice, dans un terminal à partir du répertoire
+racine du projet,  exécutez la commande
 
 ```
 jupyter notebook
