@@ -13,33 +13,32 @@ Python. Elles respectent avec quelques adaptations l'organisation d'un package.
 ## Mise en place de l'environnement
 
 ### Prérequis
-[Python](https://www.python.org) doit être installé sur votre poste.
+[Python](https://www.python.org) doit être installé sur votre poste. Si Python n'est pas présent,
+vous pouvez l'installer à partir du site de la fondation sur le lien précédent.
 
-La formation est prévue pour une version de Python 3.6+. Certains codes peuvent illuster des fonctionalités plus
-récentes. Une version de Python plus récente permettra de tester ces codes mais n'est pas indispensable.
+La formation est prévue pour une version de Python 3.6+.
 
-Python ainsi que les dépendances doivent être dans le PATH. Vous pouvez vérifier le bon fonctionnement dans un
-terminal/invite de commande par les instructions
+Python ainsi que les dépendances doivent être dans le PATH. Vous pouvez vérifier le bon
+fonctionnement dans un terminal/invite de commande par les instructions
 
 ```
 python --version
 python -m pip --version
 ```
 
-### Prérequis : les environnements de développement
-Python ne nécessite aucun IDE en particulier et cette formation n'impose aucun outil.
+### Environnements de développement
+Python ne nécessite aucun IDE en particulier.
 
-La formation sera illustrée sur [PyCharm](https://www.jetbrains.com/fr-fr/pycharm/)
-et [Visual Studio Code](https://code.visualstudio.com/). Ce dernier n'est pas dédié à Python et nécessite l'installation
-du plug-in.
+Les environnements conseillés sont [PyCharm](https://www.jetbrains.com/fr-fr/pycharm/)
+et [Visual Studio Code](https://code.visualstudio.com/).
 
-PyCharm possède plus de fonctionalités intégrées qui facilitent la vie du développeur mais le plug-in pour Visual Studio
-Code évolue rapidement.
+PyCharm est un environnement dédié à Python, il intègre donc un certain nombre d'outils. VS Code
+nécessite l'installation d'un plug-in pour la prise en charge de Python.
 
-### Récupérez le projet
+## Récupérez le projet
 Le projet peut être dans l'arborescence que vous souhaitez sur votre disque.
 
-### Configurez un environnement virtuel
+## Environnement virtuel
 Un environnement virtuel permet d'isoler l'environnement du projet de votre environnement système. Il permet ainsi
 d'éviter les conflits de dépendance et facilite l'exécution des programmes Python indépendament des versions de
 l'interpréteur.
@@ -64,15 +63,28 @@ python3.6 -m venv venv
 Le second *venv* est le nom du répertoire qui sera créé. Celui-ci contiendra toute la configuration de l'environnement
 virtuel. Le nom *venv* est attribué par convention, celui-ci est par défaut dans les fichiers comme les git ignore.
 
-Activer un environnement virtuel dépend de votre système, le plus simple est de consulter [la documentation](https://docs.python.org/fr/3/library/venv.html).
+Activer un environnement virtuel dépend de votre système, le plus simple est de consulter
+[la documentation](https://docs.python.org/fr/3/library/venv.html).
 
-### Installez les dépendances
-Dans un premier temps, vous n'aurez pas besoin de dépendances.
+### Installation de dépendances
+[pip](https://pypi.python.org/pypi/pip) est le gestionnaire de dépendances qui va vous permettre
+d'installer les dépendances nécessaires à ce projet.
 
-[pip](https://pypi.python.org/pypi/pip) est le gestionnaire de dépendances qui va nous permettre d'installer tout ce
-qui est nécessaire à ce projet. Placez vous alors à la racine du projet et saisissez
+**Attention** : `pip` utilise des ports dédiés pour communiquer avec les dépôts. Si vous êtes
+derrière un Firewall, il sera nécessaire de lui communiquer le proxy.
 
+Vous pouvez installer une dépendance spécifique par l'instruction
+
+```shell
+pip install ipython
 ```
+
+Cette commande permet d'installer la dépendance `ipython`.
+
+Les dépendances nécessaires au projet sont déclarées dans le fichier `requirements.txt`. Vous pouvez
+donc tout installer avec la commande :
+
+```shell
 pip install -r requirements.txt
 ```
 ou
@@ -82,15 +94,13 @@ python -m pip install -r requirements.txt
 
 Votre environnement contient alors toutes les dépendances nécessaires.
  
-## Cahiers d'exercices
+## Documents d'illustration
 
-Le répertoire *workbooks* contient des *cahiers d'exercices*. Ceux-ci sont
-des documents type *Jupyter Notebooks* générés à l'aide de
-[Jupyter](http://jupyter.org/). Pour pouvoir les utiliser, vous devez avoir
+Certains fichiers ont l'extension `.ipynob`. Il s'agit de documents de type *Jupyter Notebooks*
+générés à l'aide de [Jupyter](http://jupyter.org/). Pour pouvoir les utiliser, vous devez avoir
 installé la dépendance (vois section précédente).
  
-Pour accéder aux cahiers d'exercice, dans un terminal à partir du répertoire
-racine du projet,  exécutez la commande
+Pour accéder à ces documents, il faut lancer le serveur Jupyter par la commande :
 
 ```
 jupyter notebook
@@ -99,9 +109,6 @@ ou
 ```
 python -m jupyter notebook
 ```
-
-Vous pouvez maintenant travailler avec les *workbooks*. Ceux-ci sont proposés
-comme outil pour vous aider à vous familiariser avec le langage.
 
 ## Dépendances du projet
 Le fichier requirements liste les dépendances nécessaires au projet dans son
