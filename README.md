@@ -121,4 +121,4 @@ ensemble. Il s'agit de :
 ## Ressources
 
 Durant la formation, des ressources complémentaires peuvent être disponibles
-[sur le partage suivant](https://goo.gl/lRyzMZ).
+[sur le partage suivant](https://goo.gl/lRyzMZ) ainsi que [sur le Gist](https://gist.github.com/darko-itpro/ea20f35269e745f5586ceb8f6d6008fc).
