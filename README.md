@@ -24,6 +24,8 @@ est la suivante :
  * **stage** : est votre répertoire de travail. Il est destiné à contenir le
  code que vous allez produire durant la formation et vous permettre de le
  retrouver dans cet emplacement unique.
+ * **pylib** : est un répertoire contenant du code qui sera utilisé par vos
+ programmes.
 
 ## Mise en place de l'environnement
 
