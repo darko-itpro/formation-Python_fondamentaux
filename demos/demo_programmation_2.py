@@ -5,14 +5,14 @@ ma_formation_ref = 0
 budget = 2300
 
 trainings = [
-    {"name":"Python, Programmation Objet",
-     "duration":5,
-     "max seats":12,
-     "price":2500},
+    {"name": "Python, Programmation Objet",
+     "duration": 5,
+     "max seats": 12,
+     "price": 2500},
     {"name": "Django",
      "duration": 4,
      "max seats": 12,
-     "price":2000}
+     "price": 2000}
 ]
 
 ma_formation = trainings[ma_formation_ref]
