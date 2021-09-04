@@ -5,6 +5,9 @@ Ces données sont hétéroclytes, évidemment, dans un "vrai" projet, elles sera
 arborescence fonctionnelle.
 """
 
+import random
+random.seed()
+
 bbt_s12 = [['The Conjugal Configuration', True, 20],
            ['The Wedding Gift Wormhole', True, 21],
            ['The Procreation Calculation', True, 20],
@@ -68,6 +71,9 @@ def _to_dict(title, duration, viewed):
     episode = {"title": title, "duration": duration}
     if viewed:
         episode['viewed'] = True
+    else:
+        if random.random() > 0.8:
+            episode['viewed'] = False
 
     return episode
 
