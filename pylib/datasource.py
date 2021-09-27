@@ -48,10 +48,6 @@ def get_start_time():
     return "20h42"
 
 
-T_MAX = 26
-T_MIN = 18
-
-
 def get_season(user=None):
     """
     Fonction permétant d'accéder à la saison d'une série. Si un paramètre user est passé, le retour
