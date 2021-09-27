@@ -148,4 +148,4 @@ ensemble. Il s'agit de :
 ## Ressources
 
 Durant la formation, des ressources complémentaires peuvent être disponibles
-[sur le partage suivant](https://goo.gl/lRyzMZ)
+[sur le partage suivant](https://bit.ly/3uh2MEQ)
