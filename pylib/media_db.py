@@ -25,6 +25,8 @@ SQL_GET_EPISODES_FOR_SEASON = "SELECT title, season, e_number FROM episodes wher
 
 class TvShowDao:
     def __init__(self, dbname="test"):
+        self.name = dbname
+
         import re
         self._db_name = re.sub("[ .()]", "_", dbname) + '.db'  # Voir regex
         self._connect = sqlite.connect(self._db_name)
@@ -65,7 +67,7 @@ class TvShowDao:
                 cur = self._connect.cursor()
                 cur.execute(SQL_ADD_EPISODE, (ep_number, season_number, title))
         except sqlite.IntegrityError:
-            raise ValueError(f"Episode {title} s{season_number}e{ep_number} axists")
+            raise ValueError(f"Episode {title} s{season_number}e{ep_number} exists")
 
     def get_episodes(self, season=None):
         """
@@ -75,4 +77,10 @@ class TvShowDao:
         :return: la liste des épisodes pour la saison si spécifiée, tous les épisodes si
         pas de paramètre. Liste vide si la saison n'existe pas.
         """
-        pass
+        cur = self._connect.cursor()
+        if season:
+            cur.execute(SQL_GET_EPISODES_FOR_SEASON, (int(season),))
+        else:
+            cur.execute(SQL_GET_ALL_EPISODES)
+
+        return cur.fetchall()
