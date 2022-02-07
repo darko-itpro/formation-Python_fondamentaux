@@ -1,4 +1,4 @@
-# A Python Training - Les bases
+# A Python Training - Les fondamentaux
 
 This is the practical cases for Python training I provide. Intended for french trainee, the rest of the explanations
 are in french.
@@ -19,8 +19,8 @@ structure conventionnelle d'un projet Python. L'organisation des répertoires
 est la suivante :
  * **assets** : contient des fichiers qui seront nécessaires pour le parcours 
  et la manipulation de fichiers.
- * **demos** : est un répertoire contenant des fichiers de démonstration et
- d'illustration.
+ * **demos** : est un package contenant des fichiers de démonstration et
+ d'illustration. Ce package contient également des exemples Tkinter.
  * **stage** : est votre répertoire de travail. Il est destiné à contenir le
  code que vous allez produire durant la formation et vous permettre de le
  retrouver dans cet emplacement unique.
@@ -58,11 +58,11 @@ Python.
 ## Environnement virtuel
 Un environnement virtuel permet d'isoler l'environnement du projet de votre
 environnement système. Il permet ainsi d'éviter les conflits de dépendance et
-facilite l'exécution des programmes Python indépendament des versions de
+facilite l'exécution des programmes Python indépendamment des versions de
 l'interpréteur.
 
 Créer un environnement virtuel n'est pas indispensable. Vous pouvez passer
-cette étape sur des postes dédiés à la foramtion.
+cette étape sur des postes dédiés à la formation.
 
 Il y a deux moyens de créer un environnement virtuel : par l'invite de commande
 ou par les outils intégrés de certains IDE. Depuis une version relativement

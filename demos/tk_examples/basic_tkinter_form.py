@@ -43,6 +43,14 @@ class UserInfo(tk.Frame):
         self.last_name_value.set(last_name)
 
 
+def log_form_values():
+    """
+    Fonction appelée par le bouton pour faire un log du contenu des champs.
+    """
+    first_name, last_name = user_frame.get_values()
+    print("Data: ", first_name, "and", last_name)
+
+
 if __name__ == '__main__':
 
     window = tk.Tk()
@@ -50,13 +58,6 @@ if __name__ == '__main__':
 
     user_frame = UserInfo(window)
     user_frame.pack()
-
-    def log_form_values():
-        """
-        Fonction appelée par le bouton pour faire un log du contenu des champs.
-        """
-        first_name, last_name = user_frame.get_values()
-        print("Data: ", first_name, "and", last_name)
 
     buttons_frame = tk.Frame(window)
 

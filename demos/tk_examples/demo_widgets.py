@@ -18,23 +18,23 @@ class BasicForm(tk.Frame):
         tk.Label(self, text=label_2_text if label_2_text else 'Label 2')\
             .grid(column=0, row=1)
 
-        self.field_1_value = tk.StringVar()
-        self.field_2_value = tk.StringVar()
+        self._field_1_value = tk.StringVar()
+        self._field_2_value = tk.StringVar()
 
-        tk.Entry(self, textvariable=self.field_1_value, width=30)\
+        tk.Entry(self, textvariable=self._field_1_value, width=30)\
             .grid(column=1, row=0)
-        tk.Entry(self, textvariable=self.field_2_value, width=30)\
+        tk.Entry(self, textvariable=self._field_2_value, width=30)\
             .grid(column=1, row=1)
 
     def get_values(self):
         """
         Permet d'obtenir les valeurs saisies par l'utilisateur.
         """
-        value_1 = self.field_1_value.get()
-        value_2 = self.field_2_value.get()
+        value_1 = self._field_1_value.get()
+        value_2 = self._field_2_value.get()
 
-        self.field_1_value.set("")
-        self.field_2_value.set("")
+        self._field_1_value.set("")
+        self._field_2_value.set("")
 
         return value_1, value_2
 
@@ -43,8 +43,8 @@ class BasicForm(tk.Frame):
         Permet de communiquer des valeurs à afficher dans le formulaire
 
         """
-        self.field_1_value.set(value_1)
-        self.field_2_value.set(value_2)
+        self._field_1_value.set(value_1)
+        self._field_2_value.set(value_2)
 
 
 if __name__ == "__main__":

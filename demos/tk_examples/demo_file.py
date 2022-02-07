@@ -7,17 +7,26 @@ Demo de l'usage de l'ouverture de fichier.
 import tkinter as tk
 from tkinter import filedialog
 
-window = tk.Tk()
-window.title('Demo file')
-window.geometry('100x50')
 
 def load():
+    """
+    Open a Tkinter file dialog and returns the selected filename.
+
+    :return: The filename of the file selected
+    """
     filename = filedialog.askopenfilename(initialdir=".", title="Select file",
-                                          filetypes=(("Text files", "*.txt"),
-                                                     ("All file", "*.*")))
+                                          filetypes=(("CSV files", "*.csv"),
+                                                     ("All files", "*.*")))
+
+    return filename
 
 
-tk.Button(window, text="Load", command=load).pack()
-tk.Button(window, text="Quit", command=window.quit).pack()
+if __name__ == "__main__":
+    window = tk.Tk()
+    window.title('Demo file')
+    window.geometry('100x50')
 
-window.mainloop()
+    tk.Button(window, text="Load", command=load).pack()
+    tk.Button(window, text="Quit", command=window.quit).pack()
+
+    window.mainloop()
