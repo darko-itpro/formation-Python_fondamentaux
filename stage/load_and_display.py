@@ -44,8 +44,13 @@ def load_data_from_path(path:str, shows:dict[str, media.TvShow] = None) -> dict[
 if __name__ == "__main__":
     # La ligne suivante utilse la variable `__file__`pour déterminer le chemin
     # du module afin de construire le chemin vers le fichier csv.
-    file_path = os.path.join(__file__, "..", "assets", "showslist.csv")
-    #  file_path = Path('.').resolve().parent / "assets" / "showslist.csv"  # Alternative avec Path
+    csv_path = os.path.join(__file__, "..", "assets", "showslist.csv")
+    dir_path = os.path.join(__file__, "..", "assets", "files")
 
-    shows = load_data_from_file(file_path)
+    # Ci-dessous, les alternatives avec Path. Attention, dans ce cas, la racine sera
+    # le répertoire d'exécution de Python et non le fichier.
+    #  file_path = Path('.').resolve().parent / "assets" / "showslist.csv"
+    #  dir_path = Path('.').resolve().parent / "assets" / "files"
+
+    shows = load_data_from_path(file_path)
     cli.display_shows(shows)
