@@ -5,10 +5,27 @@ from pathlib import Path
 import os.path
 
 
-def load_data_from_file(path:str) -> dict[str, media.TvShow]:
-    my_episodes = fu.load_from_csv(path)
+def load_data_from_path(path:str, shows:dict[str, media.TvShow] = None) -> dict[str, media.TvShow]:
+    """
+    Charge les données d'une série à partir d'une source et retourne un dictionnaire de séries.
 
-    shows = {}
+    Le paramètre optionnel `shows` permet de compléter une collection existante. La valeur par
+    défaut est `None` car le dictionnaire est un type mutable.
+
+    :param path: Chemin vers la source de données. Doit être un fichier csv ou un répertoire.
+    :param shows: Dictionnaire de TvShows dont la clef est le titre. Optionnel. Si non founri
+    un nouveau dictionnaire est créé.
+    :return: Un dictionnaire de TvShows dont la clef est le titre. Si un dictionnaire a été passé en
+    argument, l'original n'est pas modifié.
+    """
+    if os.path.isdir(path):
+        my_episodes = fu.load_from_filenames(path)
+    elif os.path.isfile(path):
+        my_episodes = fu.load_from_csv(path)
+    else:
+        raise ValueError(f"Provided path does not exist {path}")
+
+    shows = shows.copy() if shows else {}
 
     for show_name, season, number, title, *other in my_episodes:  # *other premt de récupérer d'autres données
         if show_name not in shows:
