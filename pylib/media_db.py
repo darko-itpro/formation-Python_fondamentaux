@@ -10,6 +10,7 @@ place.
 """
 
 import sqlite3 as sqlite
+from collections import namedtuple
 
 SQL_CREATE_EPISODES_TABLE = "CREATE TABLE IF NOT EXISTS episodes ("\
                             "e_number INT NOT NULL, "\
@@ -21,6 +22,12 @@ SQL_ADD_EPISODE = "INSERT INTO episodes values(?, ?, ?)"
 SQL_GET_EPISODE = "SELECT title, season, e_number FROM episodes where season = ? and e_number = ?"
 SQL_GET_ALL_EPISODES = "SELECT title, season, e_number FROM episodes ORDER BY season, e_number"
 SQL_GET_EPISODES_FOR_SEASON = "SELECT title, season, e_number FROM episodes where season = ? ORDER BY e_number"
+
+
+# Ce module utilise un namedtuple comme structure de données pour remplacer la classe Episode
+# tout en gardant la syntaxe pour accéder aux attributs.
+Episode = namedtuple("Episode", ('title', 'season_number', 'number', 'duration', 'year'),
+                     defaults=[None, None])
 
 
 class TvShowDao:
@@ -49,6 +56,7 @@ class TvShowDao:
 
     def __str__(self):
         return 'Media DB Connector ({})'.format(self._db_name)
+
 
     def add_episode(self, title: str, ep_number: int, season_number: int,
                     duration: int = None, year: int = None):
@@ -83,4 +91,5 @@ class TvShowDao:
         else:
             cur.execute(SQL_GET_ALL_EPISODES)
 
-        return cur.fetchall()
+        return [Episode._make(episode_data)
+                for episode_data in cur.fetchall()]

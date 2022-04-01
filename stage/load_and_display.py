@@ -49,8 +49,8 @@ if __name__ == "__main__":
 
     # Ci-dessous, les alternatives avec Path. Attention, dans ce cas, la racine sera
     # le répertoire d'exécution de Python et non le fichier.
-    #  file_path = Path('.').resolve().parent / "assets" / "showslist.csv"
-    #  dir_path = Path('.').resolve().parent / "assets" / "files"
+    #  file_path = Path(__file__).parent / "assets" / "showslist.csv"
+    #  dir_path = Path(__file__).parent / "assets" / "files"
 
     shows = load_data_from_path(file_path)
     cli.display_shows(shows)
