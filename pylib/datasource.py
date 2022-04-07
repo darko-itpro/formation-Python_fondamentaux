@@ -54,13 +54,15 @@ def get_season(user=None):
     sera adapté à l'utilisateur
 
     :param user: un identifiant d'utilisateur.
-    :return: Si un identifant est donné, une liste d'épisodes où un épisode est représenté par une liste
-    [titre:str, vu:bool, durée:int]. Sinon, une liste de titres.
+    :return: Si un identifant est donné, une liste d'épisodes où un épisode est représenté par un
+    dictionnaire contenant les clefs `title`, `duration` et `viewed`. Si l'épisode n'a pas été vu,
+    cette dernière peut être absente.
     """
     if user is None:
         return [title for title, *_ in bbt_s12]
     else:
-        return bbt_s12
+        return [_to_dict(title, duration, viewed)
+                for title, viewed, duration in bbt_s12]
 
 
 def _to_dict(title, duration, viewed):
@@ -72,10 +74,6 @@ def _to_dict(title, duration, viewed):
             episode['viewed'] = False
 
     return episode
-
-def load_season(user=None):
-    return [_to_dict(title, duration, viewed)
-            for title, viewed, duration in bbt_s12]
 
 
 def get_movies():
