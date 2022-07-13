@@ -1,5 +1,3 @@
-#!/usr/bin/env python 
-
 """
 Demo de l'interraction avec un champ de saisie.
 """

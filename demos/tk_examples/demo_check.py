@@ -1,5 +1,3 @@
-#!/usr/bin/env python 
-
 """
 Demo de check button complétant la saisie d'un champ.
 """

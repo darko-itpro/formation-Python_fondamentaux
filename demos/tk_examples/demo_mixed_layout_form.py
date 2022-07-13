@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Demo d'une fenêtre de formulaire avec un mix de layouts.
 """

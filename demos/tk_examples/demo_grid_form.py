@@ -1,5 +1,3 @@
-#!/usr/bin/env python 
-
 """
 demo de mise en forme avec un grid layout
 """

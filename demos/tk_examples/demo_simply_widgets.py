@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Presentation de base de widgets standards.
 """

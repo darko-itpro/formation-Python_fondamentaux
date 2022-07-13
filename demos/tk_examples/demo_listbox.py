@@ -1,5 +1,3 @@
-#!/usr/bin/env python 
-
 """
 Demo de list box avec ajout et sélection.
 """

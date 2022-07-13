@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Exemple de code Python avec un bouton de log basique et Quit
 """

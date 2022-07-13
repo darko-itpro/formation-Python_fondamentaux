@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Demo de l'usage de l'ouverture de fichier.
 """
