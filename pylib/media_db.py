@@ -17,11 +17,20 @@ SQL_CREATE_EPISODES_TABLE = "CREATE TABLE IF NOT EXISTS episodes ("\
                             "season INT NOT NULL, "\
                             "title TEXT NOT NULL, "\
                             "PRIMARY KEY (e_number , season))"
+SQL_CREATE_SHOW_TABLE = "CREATE TABLE IF NOT EXISTS show ("\
+                        "key TEXT NOT NULL, "\
+                        "value TEXT NOT NULL, "\
+                        "PRIMARY KEY (key))"
+
+SQL_ADD_SHOW_DATA = "INSERT INTO show values (?, ?)"
+SQL_GET_SHOW_DATA = "SELECT value FROM show WHERE key = ?"
 
 SQL_ADD_EPISODE = "INSERT INTO episodes values(?, ?, ?)"
 SQL_GET_EPISODE = "SELECT title, season, e_number FROM episodes where season = ? and e_number = ?"
 SQL_GET_ALL_EPISODES = "SELECT title, season, e_number FROM episodes ORDER BY season, e_number"
 SQL_GET_EPISODES_FOR_SEASON = "SELECT title, season, e_number FROM episodes where season = ? ORDER BY e_number"
+
+KEY_SHOW_NAME = "name"
 
 
 # Ce module utilise un namedtuple comme structure de données pour remplacer la classe Episode
@@ -30,21 +39,29 @@ Episode = namedtuple("Episode", ('title', 'season_number', 'number', 'duration',
                      defaults=[None, None])
 
 
-class TvShowDao:
-    def __init__(self, dbname="test"):
-        self.name = dbname
+class TvShow:
+    """
+    TV Show DAO (Data Access Object) for a single show
+    """
+    def __init__(self, name="test"):
+        self._name = name.title()
 
         import re
-        self._db_name = re.sub("[ .()]", "_", dbname) + '.db'  # Voir regex
+        self._db_name = re.sub("[ .()]", "_", name) + '.db'  # Voir regex
         self._connect = sqlite.connect(self._db_name)
 
         try:
             cur = self._connect.cursor()
             cur.execute(SQL_CREATE_EPISODES_TABLE)
+            cur.execute(SQL_CREATE_SHOW_TABLE)
+            cur.execute(SQL_ADD_SHOW_DATA, (KEY_SHOW_NAME, self._name))
 
         except sqlite.Error as e:
-            print("Error occured")  # Voir docstring à propos du print
-            print(e)  # Voir docstring à propos du print
+            # L'erreur qui se produirait ici résulterait de l'existance des tables.
+            # Nous pouvons alors considérer que les tables existent et que le nom est attribué
+            cur.execute(SQL_GET_SHOW_DATA, (KEY_SHOW_NAME,))
+            self._name = cur.fetchone()[0]
+
 
     def __del__(self):
         try:
@@ -57,6 +74,9 @@ class TvShowDao:
     def __str__(self):
         return 'Media DB Connector ({})'.format(self._db_name)
 
+    @property
+    def name(self):
+        return self._name
 
     def add_episode(self, title: str, ep_number: int, season_number: int,
                     duration: int = None, year: int = None):
@@ -91,5 +111,10 @@ class TvShowDao:
         else:
             cur.execute(SQL_GET_ALL_EPISODES)
 
-        return [Episode._make(episode_data)
+        return [Episode(*episode_data)
                 for episode_data in cur.fetchall()]
+
+
+    @property
+    def episodes(self):
+        return self.get_episodes()
