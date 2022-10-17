@@ -42,12 +42,16 @@ def load_data_from_path(path:str, shows:dict[str, media.TvShow] = {}) -> dict[st
 
 
 if __name__ == "__main__":
-    file_path = Path(__file__).parent.parent / "assets" / "showslist.csv"
-    dir_path = Path(__file__).parent.parent / "assets" / "files"
+    paths = []
+    paths.append(Path(__file__).parent.parent / "assets" / "showslist.csv")
+    paths.append(Path(__file__).parent.parent / "assets" / "files")
 
     shows = {}  # Servira à stocker des données titre:show
 
-    shows = load_data_from_path(file_path, shows)
-    shows = load_data_from_path(dir_path, shows)
+    for source_path in paths:
+        try:
+            shows = load_data_from_path(source_path, shows)
+        except ValueError:
+            print(f"Impossible de charger les données de {source_path}")
 
     cli.display_shows(shows)
