@@ -1,11 +1,11 @@
-import stage.file_utils as fu  # Module de la fonction chargeant les informations de séries.
+import pylib.file_utils as fu  # Module de la fonction chargeant les informations de séries.
 import stage.mediatheque as media  # Module contenant les objets liés à la gestion des médias
 from pylib.utils import cli
 from pathlib import Path
 import os.path
 
 
-def load_data_from_path(path:str, shows:dict[str, media.TvShow] = None) -> dict[str, media.TvShow]:
+def load_data_from_path(path:str, shows:dict[str, media.TvShow] = {}) -> dict[str, media.TvShow]:
     """
     Charge les données d'une série à partir d'une source et retourne un dictionnaire de séries.
 
@@ -13,7 +13,7 @@ def load_data_from_path(path:str, shows:dict[str, media.TvShow] = None) -> dict[
     défaut est `None` car le dictionnaire est un type mutable.
 
     :param path: Chemin vers la source de données. Doit être un fichier csv ou un répertoire.
-    :param shows: Dictionnaire de TvShows dont la clef est le titre. Optionnel. Si non founri
+    :param shows: Dictionnaire de TvShows dont la clef est le titre. Optionnel. Si absent
     un nouveau dictionnaire est créé.
     :return: Un dictionnaire de TvShows dont la clef est le titre. Si un dictionnaire a été passé en
     argument, l'original n'est pas modifié.
@@ -25,9 +25,9 @@ def load_data_from_path(path:str, shows:dict[str, media.TvShow] = None) -> dict[
     else:
         raise ValueError(f"Provided path does not exist {path}")
 
-    shows = shows.copy() if shows else {}
+    shows = shows.copy()
 
-    for show_name, season, number, title, *other in my_episodes:  # *other premt de récupérer d'autres données
+    for show_name, season, number, title, *other in my_episodes:  # *other permet de récupérer d'autres données
         if show_name not in shows:
             shows[show_name] = media.TvShow(show_name)
 
@@ -45,5 +45,9 @@ if __name__ == "__main__":
     file_path = Path(__file__).parent.parent / "assets" / "showslist.csv"
     dir_path = Path(__file__).parent.parent / "assets" / "files"
 
-    shows = load_data_from_path(file_path)
+    shows = {}  # Servira à stocker des données titre:show
+
+    shows = load_data_from_path(file_path, shows)
+    shows = load_data_from_path(dir_path, shows)
+
     cli.display_shows(shows)

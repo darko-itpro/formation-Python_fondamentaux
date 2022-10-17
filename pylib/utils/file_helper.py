@@ -4,7 +4,9 @@ import re
 
 def load_from_filenames(dir_path):
     """
-    Creates an iterator to return filename data
+    Générateur qui fournit les informations média série à partir du nom des fichiers du répertoire.
+    
+    :param dir_path: Chemin vers un répertoire de fichiers média correctement formatés
     """
     pattern = "-s(?P<season>[0-9]{2})e(?P<episode>[0-9]{2})-"
     p = Path(dir_path)
@@ -17,12 +19,18 @@ def load_from_filenames(dir_path):
                   result.group("season"), result.group("episode"), \
                   episode_name[result.end():].replace("_", " ")
 
+
 def load_from_csv(file_path):
     """
-    Creates an iterator to return show csv file data.
+    Générateur qui fournit les informations média série à partir d'un fichier csv
+    
+    :param file_path: Chemin vers un fichier csv correctement formaté
+    :return: 
     """
     with open(file_path) as csv_file:
-        csv_file.readline()
+        header = tuple(csv_file.readline().split(";"))
+        if header != ("tvshow", "season", "ep_number", "ep_title", "duration", "year"):
+            raise ValueError("Unexpected CSV structure")
 
         for episode in csv_file:
             yield tuple(episode.split(";"))
