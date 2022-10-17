@@ -1,5 +1,6 @@
 """
-Cecli est un module de fonctions utiles pour l'usage du terminal.
+Ceci est un module de fonctions utiles pour l'affichage d'informations dans le
+terminal.
 """
 
 def display_shows(shows:dict):

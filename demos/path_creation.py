@@ -26,10 +26,10 @@ def display_parentpath():
     print(f"{Path(__file__).parent=}")
 
 def display_childpath():
-    print("Déduction du parent avec os.path.split :")
+    print("Construction du chemin voisin avec os.path.split :")
     print(f"{os.path.join(os.path.split(__file__)[0], 'argument')=}")
     print(SEP)
-    print("Déduction du parent avec l'objet Path :")
+    print("Construction du chemin voisin avec l'objet Path :")
     print(f"{Path(__file__).parent / 'arguments' =}")
 
 

@@ -16,6 +16,8 @@ SQL_CREATE_EPISODES_TABLE = "CREATE TABLE IF NOT EXISTS episodes ("\
                             "e_number INT NOT NULL, "\
                             "season INT NOT NULL, "\
                             "title TEXT NOT NULL, "\
+                            "duration INT, "\
+                            "year INT, "\
                             "PRIMARY KEY (e_number , season))"
 SQL_CREATE_SHOW_TABLE = "CREATE TABLE IF NOT EXISTS show ("\
                         "key TEXT NOT NULL, "\
@@ -25,10 +27,10 @@ SQL_CREATE_SHOW_TABLE = "CREATE TABLE IF NOT EXISTS show ("\
 SQL_ADD_SHOW_DATA = "INSERT INTO show values (?, ?)"
 SQL_GET_SHOW_DATA = "SELECT value FROM show WHERE key = ?"
 
-SQL_ADD_EPISODE = "INSERT INTO episodes values(?, ?, ?)"
-SQL_GET_EPISODE = "SELECT title, season, e_number FROM episodes where season = ? and e_number = ?"
-SQL_GET_ALL_EPISODES = "SELECT title, season, e_number FROM episodes ORDER BY season, e_number"
-SQL_GET_EPISODES_FOR_SEASON = "SELECT title, season, e_number FROM episodes where season = ? ORDER BY e_number"
+SQL_ADD_EPISODE = "INSERT INTO episodes values(?, ?, ?, ?, ?)"
+SQL_GET_EPISODE = "SELECT title, season, e_number, duration, year FROM episodes where season = ? and e_number = ?"
+SQL_GET_ALL_EPISODES = "SELECT title, season, e_number, duration, year FROM episodes ORDER BY season, e_number"
+SQL_GET_EPISODES_FOR_SEASON = "SELECT title, season, e_number, duration, year FROM episodes where season = ? ORDER BY e_number"
 
 KEY_SHOW_NAME = "name"
 
@@ -93,7 +95,7 @@ class TvShow:
         try:
             with self._connect:
                 cur = self._connect.cursor()
-                cur.execute(SQL_ADD_EPISODE, (ep_number, season_number, title))
+                cur.execute(SQL_ADD_EPISODE, (ep_number, season_number, title, duration, year))
         except sqlite.IntegrityError:
             raise ValueError(f"Episode {title} s{season_number}e{ep_number} exists")
 
