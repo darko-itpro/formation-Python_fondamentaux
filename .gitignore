@@ -87,10 +87,5 @@ ENV/
 
 # Rope project settings
 .ropeproject
-.idea/.gitignore
-.idea/formation-Python_bases.iml
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/inspectionProfiles/profiles_settings.xml
-.vscode/settings.json
+.idea/
+.vscode/
