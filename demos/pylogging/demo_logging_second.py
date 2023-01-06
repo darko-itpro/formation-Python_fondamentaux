@@ -4,7 +4,7 @@ Second logging module which has to be called from the basic.
 
 import logging
 
-logging.warning("failing")
+logging.warning("Log called in module root")
 
 
 def do_something():
