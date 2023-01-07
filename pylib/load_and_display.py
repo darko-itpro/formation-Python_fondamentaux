@@ -1,8 +1,9 @@
-import pylib.file_utils as fu  # Module de la fonction chargeant les informations de séries.
-import stage.mediatheque as media  # Module contenant les objets liés à la gestion des médias
-from pylib.utils import cli
 from pathlib import Path
 import os.path
+
+import pylib.file_utils as fu  # Module de la fonction chargeant les informations de séries.
+import pylib.media_db as media  # Module contenant les objets liés à la gestion des médias
+from pylib.utils import cli
 
 
 def load_data_from_path(path:str, shows:dict[str, media.TvShow] = {}) -> dict[str, media.TvShow]:
@@ -20,8 +21,10 @@ def load_data_from_path(path:str, shows:dict[str, media.TvShow] = {}) -> dict[st
     """
     if os.path.isdir(path):
         my_episodes = fu.load_from_filenames(path)
+        logging.info(f"Using dir handler in path {path}")
     elif os.path.isfile(path):
         my_episodes = fu.load_from_csv(path)
+        logging.info(f"Using csv handler in path {path}")
     else:
         raise ValueError(f"Provided path does not exist {path}")
 
@@ -36,12 +39,18 @@ def load_data_from_path(path:str, shows:dict[str, media.TvShow] = {}) -> dict[st
         try:
             show.add_episode(title, number, season)
         except ValueError:
-            print(f"Episode {title} for {show_name} exists")
+            logging.warning(f"Episode {title} for {show_name} exists")
 
     return shows
 
 
 if __name__ == "__main__":
+    import logging
+
+    logging.basicConfig(level=logging.INFO,
+                        format="%(asctime)s - %(levelname)s - %(message)s",
+                        datefmt="%H:%M:%S")
+
     paths = []
     paths.append(Path(__file__).parent.parent / "assets" / "showslist.csv")
     paths.append(Path(__file__).parent.parent / "assets" / "files")
@@ -52,6 +61,6 @@ if __name__ == "__main__":
         try:
             shows = load_data_from_path(source_path, shows)
         except ValueError:
-            print(f"Impossible de charger les données de {source_path}")
+            logging.error(f"Impossible de charger les données de {source_path}")
 
     cli.display_shows(shows)

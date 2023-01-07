@@ -9,11 +9,12 @@ import logging
 # configuration du lvl de log
 logging.basicConfig(level=logging.INFO)
 
-# configuration du lvl de log et du format
+# configuration du lvl de log et du format, le temps reformaté pour l'heure seule
 # logging.basicConfig(level=logging.INFO,
-#                     format="%(asctime)s - %(levelname)s - %(message)s")
+#                     format="%(asctime)s - %(levelname)s - %(message)s",
+#                     datefmt="%H:%M:%S")
 
-# configuration du lvl de log et du format
+# configuration du lvl de log et du format dans un fichier en utilisant le format temps standard
 # logging.basicConfig(filename="file.log",
 #                     level=logging.INFO,
 #                     format="%(asctime)s - %(levelname)s - %(message)s")

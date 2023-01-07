@@ -11,6 +11,7 @@ place.
 
 import sqlite3 as sqlite
 from collections import namedtuple
+import logging
 
 SQL_CREATE_EPISODES_TABLE = "CREATE TABLE IF NOT EXISTS episodes ("\
                             "e_number INT NOT NULL, "\
@@ -70,8 +71,7 @@ class TvShow:
             self._connect.close()
 
         except sqlite.Error as e:
-            print("Could not close database")  # Voir docstring à propos du print
-            print(e)  # Voir docstring à propos du print
+            logging.exception("Could not close database")
 
     def __str__(self):
         return 'Media DB Connector ({})'.format(self._db_name)
