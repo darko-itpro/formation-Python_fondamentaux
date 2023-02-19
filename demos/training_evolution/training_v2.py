@@ -1,10 +1,16 @@
+"""
+Ces modules vont présenter l'évolution du modèle de la formation.
 
-class TraininfFullException(Exception):
+Cette troisième version propose la notion de stagiaire sous forme d'objet.
+"""
+
+
+class TrainingFullException(Exception):
     ...
 
 
 class Student:
-    def __init__(self, name:str, title:str, company:str=None):
+    def __init__(self, name: str, title: str, company: str = None):
         self.name = name
         self.title = title
         self.company = company
@@ -20,28 +26,30 @@ class Training:
     def __init__(self, subject: str, duration: int, capacity: int = 12):
         self.subject = subject
         self.duration = int(duration)
-        self.available_seats = int(capacity)
+        self._capacity = int(capacity)
         self._students = []
 
-        if self.available_seats < 1:
+        if self._capacity < 1:
             raise ValueError(f"Capacity must be positive, "
                              f"got {self.available_seats}")
 
     @property
-    def remaining_seats(self):
+    def capacity(self):
+        return self._capacity
+
+    @property
+    def available_seats(self):
         return self.available_seats - len(self._students)
 
     @property
     def students(self):
         return self._students.copy()
 
-    def add_student(self, student:Student):
+    def add_student(self, student: Student):
         if len(self.students) >= self.available_seats:
-            raise TraininfFullException('Training full')
+            raise TrainingFullException('Training full')
 
         if student in self._students:
             raise ValueError("Student already in training")
 
         self.students.append(student)
-
-
