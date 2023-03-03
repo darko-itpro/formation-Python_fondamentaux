@@ -32,7 +32,7 @@ est la suivante :
 ### Prérequis
 [Python](https://www.python.org) doit être installé sur votre poste.
 
-La formation est prévue pour une version de Python 3.6+.
+La formation est prévue pour une version de Python 3.8+.
 
 Python ainsi que les dépendances doivent être dans le PATH. Vous pouvez vérifier le bon
 fonctionnement dans un terminal/invite de commande par les instructions
@@ -143,7 +143,9 @@ ensemble. Il s'agit de :
    d'illustration. Cette dépendance installera également le shell intéractif 
    avancé `ipython`.
  * [Pytest](https://docs.pytest.org/) : utilisé pour la partie tests unitaires
- * [Pytz](https://pypi.org/project/pytz/) : utilisé pour la gestion des TimeZone des dates.
+ * [Pytz](https://pypi.org/project/pytz/) : utilisé pour la gestion des TimeZone des dates
+ * [flake8](https://flake8.pycqa.org/) : outil de validation statique de code
+ * [pylint](https://pypi.org/project/pylint/) : outil d'analyse statique de code
  
 ## Ressources
 
