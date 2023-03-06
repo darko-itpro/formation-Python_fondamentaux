@@ -2,7 +2,7 @@ from pathlib import Path
 import os.path
 
 import pylib.file_utils as fu  # Module de la fonction chargeant les informations de séries.
-import pylib.media_db as media  # Module contenant les objets liés à la gestion des médias
+import pylib.pyflix.media_db as media  # Module contenant les objets liés à la gestion des médias
 from pylib.utils import cli
 
 
