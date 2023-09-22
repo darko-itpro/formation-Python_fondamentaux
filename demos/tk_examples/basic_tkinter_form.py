@@ -15,12 +15,12 @@ class UserInfo(tk.Frame):
         tk.Label(self, text='nom').grid(column=0, row=0)
         tk.Label(self, text='prenom').grid(column=0, row=1)
 
-        self.last_name_value = tk.StringVar()
-        self.first_name_value = tk.StringVar()
+        self._last_name_value = tk.StringVar()
+        self._first_name_value = tk.StringVar()
 
-        tk.Entry(self, textvariable=self.last_name_value, width=30)\
+        tk.Entry(self, textvariable=self._last_name_value, width=30)\
             .grid(column=1, row=0)
-        tk.Entry(self, textvariable=self.first_name_value, width=30) \
+        tk.Entry(self, textvariable=self._first_name_value, width=30) \
             .grid(column=1, row=1)
 
     def get_values(self):
@@ -32,15 +32,15 @@ class UserInfo(tk.Frame):
         :return: les données du formulaire
         :return type: Tuple
         """
-        return self.first_name_value.get(), self.last_name_value.get()
+        return self._first_name_value.get(), self._last_name_value.get()
 
     def set_defaut_values(self, first_name='John', last_name='Doe'):
         """
         Méthode permétant d'assigner des données par défaut aux composants du
         Frame.
         """
-        self.first_name_value.set(first_name)
-        self.last_name_value.set(last_name)
+        self._first_name_value.set(first_name)
+        self._last_name_value.set(last_name)
 
 
 def log_form_values():
