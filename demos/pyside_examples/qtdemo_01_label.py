@@ -1,18 +1,9 @@
 import sys
-from PySide6 import QtCore, QtWidgets, QtGui
+from PySide6.QtWidgets import QApplication, QLabel
 
-class MyWidget(QtWidgets.QWidget):
-    def __init__(self):
-        super().__init__()
-        self.label = QtWidgets.QLabel("Hello World", alignment=QtCore.Qt.AlignCenter)
+app = QApplication(sys.argv)
 
-        self.layout = QtWidgets.QVBoxLayout(self)
-        self.layout.addWidget(self.label)
+label = QLabel("Hello World!")
+label.show()
 
-if __name__ == "__main__":
-    app = QtWidgets.QApplication([])
-
-    widget = MyWidget()
-    widget.show()
-
-    sys.exit(app.exec())
+app.exec()
