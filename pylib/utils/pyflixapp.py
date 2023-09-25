@@ -25,7 +25,6 @@ if __name__ == '__main__':
     window.title('PyFlix BackEnd')
 
     menubar = tk.Menu(window)
-    window.config(menu=menubar)
     file_menu = tk.Menu(menubar)
     file_menu.add_command(label="Open shows", command=open_shows)
     file_menu.add_separator()
@@ -33,6 +32,7 @@ if __name__ == '__main__':
     file_menu.add_separator()
     file_menu.add_command(label="Exit", command=window.quit)
     menubar.add_cascade(label="File", menu=file_menu, underline=0)
+    window.config(menu=menubar)
 
     shows_var = tk.StringVar(window)
     shows_spinner = tk.Spinbox(window, values=list(SHOWS), textvariable=shows_var)
