@@ -40,4 +40,3 @@ class Student(Person):
     def __init__(self, name:str, title:str, company:str=None):
         super().__init__(name, title)
         self.company = company
-

@@ -44,7 +44,7 @@ def main():
             sys.exit()
         elif o in ('-o', '--output'):
             output_filename = a
-            print('Output is %s' % output_filename)
+            print(f'Output is {output_filename}')
 
     print(args)
 

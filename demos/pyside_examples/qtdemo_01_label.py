@@ -1,9 +1,9 @@
 import sys
-from PySide6.QtWidgets import QApplication, QLabel
+from PySide6 import QtWidgets
 
-app = QApplication(sys.argv)
+app = QtWidgets.QApplication(sys.argv)
 
-label = QLabel("Hello World!")
+label = QtWidgets.QLabel("Hello World!")
 label.show()
 
 app.exec()

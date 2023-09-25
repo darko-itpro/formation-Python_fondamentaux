@@ -1,7 +1,8 @@
+import re
+import os
+import os.path
+
 def load_from_filenames(path):
-    import re
-    import os
-    import os.path
 
     pattern = r"-s(?P<season>[0-9]?)e(?P<episode>[0-9]2)-"
 
@@ -18,10 +19,8 @@ def load_from_filenames(path):
 
 
 def load_from_csv(path):
-    with open(path) as episodes_file:
+    with open(path, encoding="utf-8") as episodes_file:
         episodes_file.readline()
 
         for episode in episodes_file:
             yield tuple(episode.split(";"))
-
-    return None

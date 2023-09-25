@@ -6,7 +6,7 @@ import pylib.pyflix.media_db as media  # Module contenant les objets liés à la
 from pylib.utils import cli
 
 
-def load_data_from_path(path:str, shows:dict[str, media.TvShow] = {}) -> dict[str, media.TvShow]:
+def load_data_from_path(path:str, shows:dict[str, media.TvShow] = None) -> dict[str, media.TvShow]:
     """
     Charge les données d'une série à partir d'une source et retourne un dictionnaire de séries.
 
@@ -28,7 +28,7 @@ def load_data_from_path(path:str, shows:dict[str, media.TvShow] = {}) -> dict[st
     else:
         raise ValueError(f"Provided path does not exist {path}")
 
-    shows = shows.copy()
+    shows = shows.copy() if shows is not None else {}
 
     for show_name, season, number, title, *other in my_episodes:  # *other permet de récupérer d'autres données
         if show_name not in shows:

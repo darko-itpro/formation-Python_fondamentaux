@@ -7,7 +7,6 @@ associé à une fonction.
 """
 
 import tkinter as tk
-from tkinter import filedialog
 
 if __name__ == '__main__':
 

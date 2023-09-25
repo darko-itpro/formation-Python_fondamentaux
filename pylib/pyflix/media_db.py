@@ -59,7 +59,7 @@ class TvShow:
             cur.execute(SQL_CREATE_SHOW_TABLE)
             cur.execute(SQL_ADD_SHOW_DATA, (KEY_SHOW_NAME, self._name))
 
-        except sqlite.Error as e:
+        except sqlite.Error:
             # L'erreur qui se produirait ici résulterait de l'existance des tables.
             # Nous pouvons alors considérer que les tables existent et que le nom est attribué
             cur.execute(SQL_GET_SHOW_DATA, (KEY_SHOW_NAME,))
@@ -70,11 +70,11 @@ class TvShow:
         try:
             self._connect.close()
 
-        except sqlite.Error as e:
+        except sqlite.Error:
             logging.exception("Could not close database")
 
     def __str__(self):
-        return 'Media DB Connector ({})'.format(self._db_name)
+        return f'Media DB Connector ({self._db_name})'
 
     @property
     def name(self):
@@ -96,8 +96,8 @@ class TvShow:
             with self._connect:
                 cur = self._connect.cursor()
                 cur.execute(SQL_ADD_EPISODE, (ep_number, season_number, title, duration, year))
-        except sqlite.IntegrityError:
-            raise ValueError(f"Episode {title} s{season_number}e{ep_number} exists")
+        except sqlite.IntegrityError as exc:
+            raise ValueError(f"Episode {title} s{season_number}e{ep_number} exists") from exc
 
     def get_episodes(self, season=None):
         """

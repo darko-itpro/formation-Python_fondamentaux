@@ -27,7 +27,7 @@ def load_from_csv(file_path):
     :param file_path: Chemin vers un fichier csv correctement formaté
     :return: 
     """
-    with open(file_path) as csv_file:
+    with open(file_path, encoding="utf-8") as csv_file:
         header = tuple(csv_file.readline().split(";"))
         if header != ("tvshow", "season", "ep_number", "ep_title", "duration", "year"):
             raise ValueError("Unexpected CSV structure")
