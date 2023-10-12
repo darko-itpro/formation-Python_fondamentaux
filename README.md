@@ -137,15 +137,28 @@ python -m jupyter notebook
 ```
 
 ## Dépendances du projet
-Le fichier requirements liste les dépendances nécessaires au projet dans son
-ensemble. Il s'agit de :
- * [jupyter](https://jupyter.org/) : Jupyter sera utilisé pour ses notebooks, documents
-   d'illustration. Cette dépendance installera également le shell intéractif 
-   avancé `ipython`.
+Un projet Python est accompagné d'un fichier `requirements.txt` déclarant les dépendances de
+développement nécessaires au projet. Le fichier `requirements.txt` de ce projet ne contient que
+les dépendances minimum pour ce support de formation. Ceci afin de ne pas télécharger _trop_
+d'archives en fonction de ce qu'autorise la plate-forme informatique du lieu de dispense de la
+formation.
+
+Les dépendances dans ce fichier sont les suivantes :
+ * [ipython](https://jupyter.org/) : il s'agit d'un shell intéractif avancé préféré au shell
+   intéractif standard.
  * [Pytest](https://docs.pytest.org/) : utilisé pour la partie tests unitaires
  * [Pytz](https://pypi.org/project/pytz/) : utilisé pour la gestion des TimeZone des dates
  * [flake8](https://flake8.pycqa.org/) : outil de validation statique de code
  * [pylint](https://pypi.org/project/pylint/) : outil d'analyse statique de code
+
+Un fichier `requirements-xtra.py` contient les dépendances optionnelles. Notez que celles-ci sont
+volumineuses (donc prendront du temps et de l'espace disque) et certaines sont redondantes (jupyter
+et jupyter-lab par exemple afin de comparer les deux).
+ * [jupyter](https://jupyter.org/) : Jupyter sera utilisé pour ses notebooks, documents
+   d'illustration. Cette dépendance installera également le shell intéractif 
+   avancé `ipython`.
+ * [jupyter-lab](https://jupyter.org/) : est une évolution du projet Jupyter. Normalement on
+   utilise l'un ou l'autre. Les deux sont présents dans le contexte de formation.
  
 ## Ressources
 
