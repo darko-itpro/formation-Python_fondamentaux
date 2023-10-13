@@ -46,7 +46,11 @@ class TvShow:
     """
     TV Show DAO (Data Access Object) for a single show
     """
-    def __init__(self, name="test"):
+
+    def __init__(self, name: str):
+        if not name:
+            raise ValueError('A TV Show must have a name.')
+
         self._name = name.title()
 
         import re
