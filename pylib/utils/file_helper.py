@@ -28,9 +28,9 @@ def load_from_csv(file_path):
     :return: 
     """
     with open(file_path, encoding="utf-8") as csv_file:
-        header = tuple(csv_file.readline().split(";"))
+        header = tuple(csv_file.readline().strip().split(";"))
         if header != ("tvshow", "season", "ep_number", "ep_title", "duration", "year"):
             raise ValueError("Unexpected CSV structure")
 
         for episode in csv_file:
-            yield tuple(episode.split(";"))
+            yield tuple(episode.strip().split(";"))
