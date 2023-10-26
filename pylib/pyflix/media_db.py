@@ -9,9 +9,11 @@ formations ne traitant en général pas les loggers, un print est utilisé à la
 place.
 """
 
+from pathlib import Path
 import sqlite3 as sqlite
 from collections import namedtuple
 import logging
+from pylib import conf
 
 SQL_CREATE_EPISODES_TABLE = "CREATE TABLE IF NOT EXISTS episodes ("\
                             "e_number INT NOT NULL, "\
@@ -54,7 +56,7 @@ class TvShow:
         self._name = name.title()
 
         import re
-        self._db_name = re.sub("[ .()]", "_", name) + '.db'  # Voir regex
+        self._db_name = Path(conf.ROOT_PATH, re.sub("[ .()]", "_", name)).with_suffix('.db')  # Voir regex
         self._connect = sqlite.connect(self._db_name)
 
         try:
