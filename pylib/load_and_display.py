@@ -1,6 +1,8 @@
 from pathlib import Path
 import os.path
 
+from pylib import conf
+
 import pylib.file_utils as fu  # Module de la fonction chargeant les informations de séries.
 import pylib.pyflix.media_db as media  # Module contenant les objets liés à la gestion des médias
 from pylib.utils import cli
@@ -47,13 +49,9 @@ def load_data_from_path(path:str, shows:dict[str, media.TvShow] = None) -> dict[
 if __name__ == "__main__":
     import logging
 
-    logging.basicConfig(level=logging.INFO,
-                        format="%(asctime)s - %(levelname)s - %(message)s",
-                        datefmt="%H:%M:%S")
-
     paths = []
-    paths.append(Path(__file__).parent.parent / "assets" / "showslist.csv")
-    paths.append(Path(__file__).parent.parent / "assets" / "files")
+    paths.append(conf.ROOT_PATH.joinpath("assets", "showslist.csv"))
+    paths.append(conf.ROOT_PATH.joinpath("assets", "files"))
 
     shows = {}  # Servira à stocker des données titre:show
 

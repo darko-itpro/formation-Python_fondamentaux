@@ -151,14 +151,16 @@ Les dépendances dans ce fichier sont les suivantes :
  * [flake8](https://flake8.pycqa.org/) : outil de validation statique de code
  * [pylint](https://pypi.org/project/pylint/) : outil d'analyse statique de code
 
-Un fichier `requirements-xtra.py` contient les dépendances optionnelles. Notez que celles-ci sont
-volumineuses (donc prendront du temps et de l'espace disque) et certaines sont redondantes (jupyter
-et jupyter-lab par exemple afin de comparer les deux).
+Un fichier `requirements-xtra.py` contient les dépendances optionnelles. Notez que celles-ci
+peuvent être volumineuses (donc prendront du temps et de l'espace disque) et certaines sont
+redondantes (jupyter et jupyter-lab par exemple afin de comparer les deux).
  * [jupyter](https://jupyter.org/) : Jupyter sera utilisé pour ses notebooks, documents
    d'illustration. Cette dépendance installera également le shell intéractif 
    avancé `ipython`.
  * [jupyter-lab](https://jupyter.org/) : est une évolution du projet Jupyter. Normalement on
    utilise l'un ou l'autre. Les deux sont présents dans le contexte de formation.
+ * [rich](https://rich.readthedocs.io/) : bibliothèque destinée à un affichage de texte _riche_,
+   c'est à dire avec couleur et styles, ainsi que du contenu _avancé_ comme des tableaux.
  
 ## Ressources
 
