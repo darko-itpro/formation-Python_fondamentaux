@@ -31,16 +31,16 @@ SQL_ADD_SHOW_DATA = "INSERT INTO show values (?, ?)"
 SQL_GET_SHOW_DATA = "SELECT value FROM show WHERE key = ?"
 
 SQL_ADD_EPISODE = "INSERT INTO episodes values(?, ?, ?, ?, ?)"
-SQL_GET_EPISODE = "SELECT title, season, e_number, duration, year FROM episodes where season = ? and e_number = ?"
-SQL_GET_ALL_EPISODES = "SELECT title, season, e_number, duration, year FROM episodes ORDER BY season, e_number"
-SQL_GET_EPISODES_FOR_SEASON = "SELECT title, season, e_number, duration, year FROM episodes where season = ? ORDER BY e_number"
+SQL_GET_EPISODE = "SELECT title, e_number, season, duration, year FROM episodes where season = ? and e_number = ?"
+SQL_GET_ALL_EPISODES = "SELECT title, e_number, season, duration, year FROM episodes ORDER BY season, e_number"
+SQL_GET_EPISODES_FOR_SEASON = "SELECT title, e_number, season, duration, year FROM episodes where season = ? ORDER BY e_number"
 
 KEY_SHOW_NAME = "name"
 
 
 # Ce module utilise un namedtuple comme structure de données pour remplacer la classe Episode
 # tout en gardant la syntaxe pour accéder aux attributs.
-Episode = namedtuple("Episode", ('title', 'season_number', 'number', 'duration', 'year'),
+Episode = namedtuple("Episode", ('title', 'number', 'season_number', 'duration', 'year'),
                      defaults=[None, None])
 
 
