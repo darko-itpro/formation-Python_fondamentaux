@@ -61,34 +61,13 @@ environnement système. Il permet ainsi d'éviter les conflits de dépendance et
 facilite l'exécution des programmes Python indépendamment des versions de
 l'interpréteur.
 
-Créer un environnement virtuel n'est pas indispensable. Vous pouvez passer
-cette étape sur des postes dédiés à la formation.
+Créer un environnement virtuel n'est pas indispensable dans le cadre de cette formation en
+particulier si vous utilisez une machine dédiée à la formation.
 
-Il y a deux moyens de créer un environnement virtuel : par l'invite de commande
-ou par les outils intégrés de certains IDE. Depuis une version relativement
-récente, PyCharm proposera de créer et configurer un venv à l'ouverture du
-projet.
+Si vous utilisez PyCharm, il vous proposera de créer automatiquement un environnement virtuel.
 
-Pour créer un venv par invite de commande, il suffit de se placer dans le
-répertoire du projet et d'exécuter l'instruction suivante :
-```
-python -m venv venv
-```
-
-Vous devez utiliser la version de l'interpréteur pour laquelle vous voulez
-créer un environnement virtuel. Ainsi, si *python* pointe sur du 2.7 et que
-pour exécuter l'interpréteur python 3.6, il faut exécuter *python3.6*,
-l'instruction est :
-```
-python3.6 -m venv venv
-```
-
-Le second *venv* est le nom du répertoire qui sera créé. Celui-ci contiendra
-toute la configuration de l'environnement virtuel. Le nom *venv* est attribué
-par convention, celui-ci est par défaut dans les fichiers comme les git ignore.
-
-Activer un environnement virtuel dépend de votre système, le plus simple est de
-consulter [la documentation](https://docs.python.org/fr/3/library/venv.html).
+Si vous avez besoin d'information sur leur création et utilisation, vous pouvez consulter
+[la documentation](https://docs.python.org/fr/3/library/venv.html).
 
 ### Installation de dépendances
 [pip](https://pypi.python.org/pypi/pip) est le gestionnaire de dépendances qui
@@ -98,7 +77,7 @@ va vous permettre d'installer les dépendances nécessaires à ce projet.
 dépôts. Si vous êtes derrière un Firewall, il sera nécessaire de lui
 communiquer le proxy.
 
-Vous pouvez installer une dépendance spécifique par l'instruction
+Vous pouvez installer une dépendance spécifique avec l'instruction
 ```shell
 pip install ipython
 ```
@@ -124,7 +103,7 @@ Votre environnement est alors prêt à l'emploi.
 Certains fichiers ont l'extension `.ipynb`. Il s'agit de documents de type
 *Jupyter Notebooks* générés à l'aide de [Jupyter](http://jupyter.org/). Pour
 pouvoir les utiliser, vous devez avoir installé la dépendance (voir section
-précédente).
+précédente ET suivante).
  
 Pour accéder à ces documents, il faut lancer le serveur Jupyter par
 l'instruction :
@@ -132,16 +111,28 @@ l'instruction :
 jupyter notebook
 ```
 ou
+
 ```
 python -m jupyter notebook
+```
+
+Notez que le projet Jupyter évolue, cette évolution est JupyterLab. Cette dépendance est
+différente et doit être installée. Pour le lancer, vous devez exécuter :
+```
+jupyter lab
+```
+
+ou
+
+```
+python -m jupyter lab
 ```
 
 ## Dépendances du projet
 Un projet Python est accompagné d'un fichier `requirements.txt` déclarant les dépendances de
 développement nécessaires au projet. Le fichier `requirements.txt` de ce projet ne contient que
 les dépendances minimum pour ce support de formation. Ceci afin de ne pas télécharger _trop_
-d'archives en fonction de ce qu'autorise la plate-forme informatique du lieu de dispense de la
-formation.
+d'archives en fonction de ce qu'autorise la plate-forme informatique du lieu de la formation.
 
 Les dépendances dans ce fichier sont les suivantes :
  * [ipython](https://jupyter.org/) : il s'agit d'un shell intéractif avancé préféré au shell

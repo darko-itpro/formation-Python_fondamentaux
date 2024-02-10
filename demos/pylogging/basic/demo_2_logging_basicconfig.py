@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO)
 #                     datefmt="%H:%M:%S")
 
 # configuration du lvl de log et du format dans un fichier en utilisant le format temps standard
-# logging.basicConfig(filename="file.log",
+# logging.basicConfig(filename="file.log", encoding='utf-8',
 #                     level=logging.INFO,
 #                     format="%(asctime)s - %(levelname)s - %(message)s")
 
