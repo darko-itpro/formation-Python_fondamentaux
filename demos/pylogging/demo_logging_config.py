@@ -1,26 +1,31 @@
 import logging
 
 
-# Creation d'un logger *custom*
-logger = logging.getLogger(__name__)
+# Création des formatters pour gérer les formats d'affichage
+daily_format = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s',
+                                 datefmt='%H:%M:%S')
+complete_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 # Création des handlers, un vers la console, un vers un fichier
-c_handler = logging.StreamHandler()
-c_handler.setLevel(logging.WARNING)
+console_handler = logging.StreamHandler()
 
-f_handler = logging.FileHandler('file.log')
-f_handler.setLevel(logging.ERROR)
+file_handler = logging.FileHandler('file.log')
+file_handler.setLevel(logging.ERROR)
 
-# Création des formatters et ajout aux handlers
-c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
-c_handler.setFormatter(c_format)
+# Association des formatters aux handlers
+console_handler.setFormatter(daily_format)
+file_handler.setFormatter(complete_format)
 
-f_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-f_handler.setFormatter(f_format)
+# Creation d'un logger *custom*
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 # Ajout des handlers au logger
-logger.addHandler(c_handler)
-logger.addHandler(f_handler)
+logger.addHandler(console_handler)
+logger.addHandler(file_handler)
 
-logger.warning('This is a warning')
-logger.error('This is an error')
+logger.debug('Un debug')
+logger.info('Une info')
+logger.warning("Un warning")
+logger.error("Une erreur")
+logger.critical('Critique')

@@ -8,4 +8,5 @@ logging.warning("Log called in module root")
 
 
 def do_something():
-    logging.warning("In secondary module")
+    logging.warning("Function declared In secondary module")
+
