@@ -7,6 +7,9 @@ arborescence fonctionnelle.
 
 from pathlib import Path
 import random
+import logging
+from pylib import settings
+
 random.seed()
 
 
@@ -17,11 +20,18 @@ def time_loader():
     return "30"
 
 
-def get_start_time():
+def get_start_time(test=False):
     """
-    Fonction simulant la collecte de la donnée à partir d'une source de données.
+    Fonction simulant la collecte de la donnée de temps à partir d'une source de données.
+
+    :param test: Si `True`, le retour sera toujours la chaine "20h01".
     """
-    return "20h42"
+    start_hour = random.randint(19, 21)
+    start_minutes = random.randint(0, 59 if start_hour < 21 else 38)
+
+    value = f"{start_hour:02}h{start_minutes:02}"
+
+    return value
 
 
 def get_season(user=None) -> list:
@@ -63,11 +73,17 @@ def _randomize_viewed(season: list) -> None:
     :param season: Une liste de dictionnaires
     """
     is_viewed = True
+    first_founded = False
 
 
     for episode in season:
         if random.random() > 0.8:
             is_viewed = False
+
+            if not first_founded:
+                logging.info(f'Premier épisode non-vu : "{episode["title"]}"')
+                first_founded = True
+
 
         if is_viewed:
             episode['viewed'] = True
