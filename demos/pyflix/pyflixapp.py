@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import filedialog
-import pylib.load_and_display as ld
+import demos.pyflix.load_and_display as ld
 
 SHOWS = {}
 

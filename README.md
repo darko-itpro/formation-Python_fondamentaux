@@ -21,25 +21,38 @@ est la suivante :
  et la manipulation de fichiers.
  * **demos** : est un package contenant des fichiers de démonstration et
  d'illustration. Ce package contient également des exemples Tkinter.
- * **stage** : est votre répertoire de travail. Il est destiné à contenir le
+ * **exos** : est votre répertoire de travail. Il est destiné à contenir le
  code que vous allez produire durant la formation et vous permettre de le
  retrouver dans cet emplacement unique.
- * **pylib** : est un répertoire contenant du code qui sera utilisé par vos
- programmes.
 
-## Mise en place de l'environnement
+## Quickstart
+Voici les étapes à suivre pour préparer l'environnement. Ces étapes ne prennent pas en compte
+l'IDE. Vous trouverez le détail à la suite.
+- Assurez vous de disposer d'une version de [Python](https://www.python.org) suppérieure ou égale à
+  la 3.10 accessible dans le path.
+- Créez et activez un environnement virtuel si besoin en
+  suivant [la documentation de venv](https://docs.python.org/fr/3/library/venv.html).
+- Installez les dépendances par `pip install -r requirements.txt`.
+- Récupérez la dernière release au format wheel (extension `.whl`) du 
+  projet [pyschool-lib](https://github.com/darko-itpro/pyschool-lib/releases)
+- Installez cette dépendance avec une commande similaire
+  à `pip install pyschoollib-0.2.0-py3-none-any.whl`
 
+Vous êtes prêt à travailler.
+
+## Mise en place de l'environnement (version détaillée)
 ### Prérequis
 [Python](https://www.python.org) doit être installé sur votre poste.
 
-La formation est prévue pour une version de Python 3.8+.
+La formation est prévue pour une version de Python 3.10+ (les versions précédentes sont considérées
+comme obsolètes).
 
 Python ainsi que les dépendances doivent être dans le PATH. Vous pouvez vérifier le bon
-fonctionnement dans un terminal/invite de commande par les instructions
+fonctionnement dans un terminal/invite de commande par les instructions du type
 
 ```
 python --version
-python -m pip --version
+pip --version
 ```
 
 ### Environnements de développement
@@ -91,9 +104,17 @@ la commande :
 ```shell
 pip install -r requirements.txt
 ```
-ou
-```
-python -m pip install -r requirements.txt
+
+Vous devez en plus installer une dépendance proposée par votre intervenant, bibliothèque qui
+fournit des fonctionalités pour les exercices.
+
+Cette bibliothèque est le projet [pyschool-lib](https://github.com/darko-itpro/pyschool-lib). Allez
+sur la page des [releases](https://github.com/darko-itpro/pyschool-lib/releases), choisissez la
+dernière et téléchargez le fichier `.whl`. Il doit avoir un nom de la
+forme `pyschoollib-0.2.0-py3-none-any.whl`. Vous allez l'installer avec l'instruction
+
+```shell
+pip install pyschoollib-0.2.0-py3-none-any.whl
 ```
 
 Votre environnement est alors prêt à l'emploi.
@@ -102,30 +123,22 @@ Votre environnement est alors prêt à l'emploi.
 
 Certains fichiers ont l'extension `.ipynb`. Il s'agit de documents de type
 *Jupyter Notebooks* générés à l'aide de [Jupyter](http://jupyter.org/). Pour
-pouvoir les utiliser, vous devez avoir installé la dépendance (voir section
-précédente ET suivante).
+pouvoir les consulter, vous devez installer la dépendance Jupyter. Celle-ci est incluse dans
+le fichier `requirements-xtra.txt`, vous pouvez donc l'intaller avec la même instruction que
+précédemment.
  
 Pour accéder à ces documents, il faut lancer le serveur Jupyter par
 l'instruction :
 ```
 jupyter notebook
 ```
-ou
+Notez que le projet Jupyter évolue, cette évolution s'appelle JupyterLab. Cette dépendance est
+différente et doit être installée à part. Cependant, elle est également déclarée dans le fichier
+`requirements-xtra.txt`.
 
-```
-python -m jupyter notebook
-```
-
-Notez que le projet Jupyter évolue, cette évolution est JupyterLab. Cette dépendance est
-différente et doit être installée. Pour le lancer, vous devez exécuter :
+Pour le lancer, vous devez exécuter :
 ```
 jupyter lab
-```
-
-ou
-
-```
-python -m jupyter lab
 ```
 
 ## Dépendances du projet

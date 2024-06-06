@@ -1,11 +1,11 @@
-from pathlib import Path
 import os.path
 
-from pylib import settings
+import pyflix.loaders.file_helpers as fu  # Module de la fonction chargeant les informations de séries.
+import demos.pyflix.media_db as media  # Module contenant les objets liés à la gestion des médias
+from pyflix.utils import cli
+#from pyflix.utils import rich_cli as cli
 
-import pylib.file_utils as fu  # Module de la fonction chargeant les informations de séries.
-import pylib.pyflix.media_db as media  # Module contenant les objets liés à la gestion des médias
-from pylib.utils import cli
+import demos.settings as conf
 
 
 def load_data_from_path(path:str, shows:dict[str, media.TvShow] = None) -> dict[str, media.TvShow]:

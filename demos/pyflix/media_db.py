@@ -13,7 +13,7 @@ from pathlib import Path
 import sqlite3 as sqlite
 from collections import namedtuple
 import logging
-from pylib import settings
+from demos import settings
 
 SQL_CREATE_EPISODES_TABLE = "CREATE TABLE IF NOT EXISTS episodes ("\
                             "e_number INT NOT NULL, "\
