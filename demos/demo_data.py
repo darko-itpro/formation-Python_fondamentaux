@@ -1,3 +1,8 @@
+"""
+Ce module est uniquement destiné à fournir des données pour les illustrations afin de
+tout récupérer par copier/coller plutôt que de tout resaisir.
+"""
+
 camelot = ["Arthur", "Merlin", "Lancelot", "Robin", "Perceval", "Karadoc"]
 wizards = ["Merlin", "Tim"]
 
