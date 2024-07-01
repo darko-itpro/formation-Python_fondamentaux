@@ -30,7 +30,7 @@ def display_childpath():
     print(f"{os.path.join(os.path.split(__file__)[0], 'argument')=}")
     print(SEP)
     print("Construction du chemin voisin avec l'objet Path :")
-    print(f"{Path(__file__).parent / 'arguments' =}")
+    print(f"{Path(__file__).parent / 'arguments'=}")
 
 
 #display_filepath()
