@@ -12,3 +12,7 @@ camelot = [("Arthur", "king"), ("Merlin", "wizard"),
 
 camelot = {"king":"Arthur", "wizard":"Merlin",
            "knights":["Lancelot", "Robin", "Perceval", "Karadoc"]}
+
+target = [name.upper()
+          for name, job in camelot
+          if job != "wizard"]
