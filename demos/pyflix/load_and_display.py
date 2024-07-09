@@ -1,4 +1,4 @@
-import os.path
+from pathlib import Path
 
 import pyflix.loaders.file_helpers as fu  # Module de la fonction chargeant les informations de séries.
 import demos.pyflix.media_db as media  # Module contenant les objets liés à la gestion des médias
@@ -8,7 +8,7 @@ from pyflix.utils import cli
 import demos.settings as conf
 
 
-def load_data_from_path(path:str, shows:dict[str, media.TvShow] = None) -> dict[str, media.TvShow]:
+def load_data_from_path(path: str | Path, shows: dict[str, media.TvShow] = None) -> dict[str, media.TvShow]:
     """
     Charge les données d'une série à partir d'une source et retourne un dictionnaire de séries.
 
@@ -21,10 +21,13 @@ def load_data_from_path(path:str, shows:dict[str, media.TvShow] = None) -> dict[
     :return: Un dictionnaire de TvShows dont la clef est le titre. Si un dictionnaire a été passé en
     argument, l'original n'est pas modifié.
     """
-    if os.path.isdir(path):
+
+    path = Path(path) #  Pour s'assurer d'avoir un objet Path
+
+    if path.is_dir():
         my_episodes = fu.load_from_filenames(path)
         logging.info(f"Using dir handler in path {path}")
-    elif os.path.isfile(path):
+    elif path.is_file():
         my_episodes = fu.load_from_csv(path)
         logging.info(f"Using csv handler in path {path}")
     else:
