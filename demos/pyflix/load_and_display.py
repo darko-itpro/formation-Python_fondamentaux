@@ -2,8 +2,11 @@ from pathlib import Path
 
 import pyflix.loaders.file_helpers as fu  # Module de la fonction chargeant les informations de séries.
 import demos.pyflix.media_db as media  # Module contenant les objets liés à la gestion des médias
-from pyflix.utils import cli
-#from pyflix.utils import rich_cli as cli
+
+try:
+    from pyflix.utils import rich_cli as cli
+except ModuleNotFoundError:
+    from pyflix.utils import cli
 
 import demos.settings as conf
 
@@ -35,16 +38,16 @@ def load_data_from_path(path: str | Path, shows: dict[str, media.TvShow] = None)
 
     shows = shows.copy() if shows is not None else {}
 
-    for show_name, season, number, title, *other in my_episodes:  # *other permet de récupérer d'autres données
+    for show_name, *episode_data in my_episodes:  # *other permet de récupérer d'autres données
         if show_name not in shows:
             shows[show_name] = media.TvShow(show_name)
 
         show = shows[show_name]
 
         try:
-            show.add_episode(title, number, season)
+            show.add_episode(*episode_data)
         except ValueError:
-            logging.warning(f"Episode {title} for {show_name} exists")
+            logging.warning(f"Episode {episode_data[0]} for {show_name} exists")
 
     return shows
 
