@@ -35,6 +35,7 @@ SQL_GET_EPISODE = "SELECT title, e_number, season, duration, year FROM episodes 
 SQL_GET_ALL_EPISODES = "SELECT title, e_number, season, duration, year FROM episodes ORDER BY season, e_number"
 SQL_GET_EPISODES_FOR_SEASON = "SELECT title, e_number, season, duration, year FROM episodes where season = ? ORDER BY e_number"
 
+
 KEY_SHOW_NAME = "name"
 
 
@@ -126,3 +127,11 @@ class TvShow:
     @property
     def episodes(self):
         return self.get_episodes()
+
+
+    @property
+    def duration(self):
+        cur = self._connect.cursor()
+        cur.execute(SQL_GET_ALL_EPISODES)
+        return sum([episode_data[3]
+                    for episode_data in cur.fetchall()])
