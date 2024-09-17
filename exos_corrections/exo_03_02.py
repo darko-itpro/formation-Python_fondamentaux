@@ -5,8 +5,7 @@ episode_not_viewed = ['Installing the softwares', 2, 42, False]
 episode = episode_viewed
 # episode = episode_not_viewed
 
-viewed = episode[3]
-if viewed:
-    print("Épisode vu")
-else:
-    print("Épisode NON vu")
+def is_viewed(episode:list):
+    return bool(episode[3])
+
+print("épisode vu" if is_viewed(episode) else "Episode non vu")
