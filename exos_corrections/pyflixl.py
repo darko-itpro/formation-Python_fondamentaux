@@ -1,5 +1,9 @@
+
 def is_viewed(episode:list):
-    return bool(len(episode) > 3 and episode[3])
+    try:
+        return bool(episode[3])
+    except IndexError:
+        return False
 
 
 def to_minutes(hours:int|str, minutes:int|str = 0):
