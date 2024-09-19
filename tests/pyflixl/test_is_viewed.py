@@ -1,22 +1,13 @@
-from exos_corrections.pyflixl import is_viewed
+from exos_corrections.exo_dict import is_viewed
 
-
-def test_episode_viewed_as_int():
-    episode = ["The new Project", 1, 98, 1]
+def test_episode_viewed():
+    episode = {"title": "The Conjugal Configuration", "duration": 20, "viewed": True}
     assert is_viewed(episode) is True
 
-def test_episode_not_viewed_as_int():
-    episode = ['Installing the softwares', 2, 42, 0]
+def test_episode_not_viewed():
+    episode = {"title": "The Conjugal Configuration", "duration": 20, "viewed": False}
     assert is_viewed(episode) is False
 
-def test_episode_viewed_as_bool():
-    episode = ["The new Project", 1, 98, True]
-    assert is_viewed(episode) is True
-
-def test_episode_not_viewed_as_bool():
-    episode = ['Installing the softwares', 2, 42, False]
-    assert is_viewed(episode) is False
-
-def test_episode_not_viewed_without_viewed():
-    episode = ['Installing the softwares', 2, 42]
+def test_episode_without_viewed_not_viewed():
+    episode = {"title": "The Conjugal Configuration", "duration": 20}
     assert is_viewed(episode) is False
