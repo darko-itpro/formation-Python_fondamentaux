@@ -12,45 +12,39 @@ aller y chercher le nombre de places disponibles.
 
 
 from datetime import datetime
+from dataclasses import dataclass, field
 
 
 class TrainingFullException(Exception):
     ...
 
 
+@dataclass(frozen=True)
 class Student:
-    def __init__(self, name: str, title: str, company: str = None):
-        self.name = name
-        self.title = title
-        self.company = company
-
-    def __eq__(self, other):
-        if not isinstance(other, Student):
-            return False
-
-        return (self.name, self.company) == (other.name, other.company)
+    name:str
+    title:str = field(default=None, compare=False)
+    company: str|None = None
 
 
 class Address:
     pass
 
 
+@dataclass(frozen=True)
 class Venue:
-    def __init__(self, name: str, address: Address, room_number: int, capacity: int):
-        self.name = name
-        self.address = address
-        self.room_number = room_number
-        self.capacity = capacity
+    name:str
+    address:Address
+    room_number:int
+    capacity:int
 
 
+@dataclass(frozen=True)
 class Training:
-    def __init__(self, subject: str, duration: int, price: float,
-                 content: str = "", max_seats: int = 12):
-        self.subject = subject
-        self.content = content
-        self.duration = int(duration)
-        self.max_seats = int(max_seats)
-        self.price = price
+    subject:str
+    content:str
+    duration:int
+    price:int
+    max_seats:int=12
 
 
 class TrainingSession:

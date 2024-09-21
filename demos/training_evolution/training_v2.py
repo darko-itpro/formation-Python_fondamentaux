@@ -24,14 +24,22 @@ class Student:
 
 class Training:
     def __init__(self, subject: str, duration: int, capacity: int = 12):
-        self.subject = subject
-        self.duration = int(duration)
+        self._subject = subject
+        self._duration = int(duration)
         self._capacity = int(capacity)
         self._students = []
 
         if self._capacity < 1:
             raise ValueError(f"Capacity must be positive, "
                              f"got {self.available_seats}")
+
+    @property
+    def subject(self):
+        return self._subject
+
+    @property
+    def duration(self):
+        return self._duration
 
     @property
     def capacity(self):
