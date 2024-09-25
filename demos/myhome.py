@@ -10,4 +10,3 @@ def confort(temperature:int):
         value = "froid"
 
     return value
-
