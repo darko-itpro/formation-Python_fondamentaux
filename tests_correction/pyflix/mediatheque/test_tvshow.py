@@ -1,6 +1,5 @@
 import pytest
 
-from demos.demo_main import episode
 from exos_correction.pyflix.mediatheque import TvShow
 
 def test_create_new_show():

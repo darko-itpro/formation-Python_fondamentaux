@@ -18,12 +18,19 @@ class Episode:
 class TvShow:
     def __init__(self, name:str):
         self.name = name.title()
-        self.episodes = []
+        self._episodes = []
 
+    @property
+    def duration(self):
+        return sum([episode.duration for episode in self._episodes])
+
+    @property
+    def episodes(self):
+        return self._episodes.copy()
 
     def add_episode(self, title:str, number:int, season_number:int, duration:int=None, year:int=None):
         new_episode = Episode(title, number, season_number, duration, year)
-        if new_episode in self.episodes:
+        if new_episode in self._episodes:
             raise ValueError(f"Duplicate episode {number}, {season_number}")
 
-        self.episodes.append(new_episode)
+        self._episodes.append(new_episode)
