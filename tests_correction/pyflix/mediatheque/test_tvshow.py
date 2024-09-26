@@ -24,3 +24,8 @@ def show_with_3_episodes(empty_show):
 def test_add_first_episode(empty_show):
     empty_show.add_episode("The isle", 1, 1)
     assert len(empty_show.episodes) == 1
+
+def test_add_duplicate_episode(show_with_3_episodes):
+    show = show_with_3_episodes
+    with pytest.raises(ValueError):
+        show.add_episode("The isle", 1, 2)
