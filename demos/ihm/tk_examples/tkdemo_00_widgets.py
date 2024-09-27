@@ -9,7 +9,7 @@ window.title('Demo button')
 
 tk.Entry(window).pack()
 tk.Checkbutton(window, text="check").pack()
-tk.Button(window, text="Log").pack()
-tk.Button(window, text="Quit").pack()
+tk.Button(window, text="Log").pack(side=tk.LEFT)
+tk.Button(window, text="Quit").pack(side=tk.LEFT)
 
 window.mainloop()
