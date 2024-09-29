@@ -143,25 +143,29 @@ jupyter-lab
 
 ## Dépendances du projet
 Un projet Python est accompagné d'un fichier `requirements.txt` déclarant les dépendances de
-développement nécessaires au projet. Le fichier `requirements.txt` de ce projet ne contient que
-les dépendances minimum pour ce support de formation. Ceci afin de ne pas télécharger _trop_
-d'archives en fonction de ce qu'autorise la plate-forme informatique du lieu de la formation.
+développement nécessaires au projet.
 
 Les dépendances dans ce fichier sont les suivantes :
  * [ipython](https://jupyter.org/) : il s'agit d'un shell intéractif avancé préféré au shell
    intéractif standard.
  * [Pytest](https://docs.pytest.org/) : utilisé pour la partie tests unitaires
-
-Un fichier `requirements-xtra.py` contient les dépendances optionnelles. Notez que celles-ci
-peuvent être volumineuses (donc prendront du temps et de l'espace disque).
  * [Pytz](https://pypi.org/project/pytz/) : utilisé pour la gestion des TimeZone des dates
  * [flake8](https://flake8.pycqa.org/) : outil de validation statique de code
  * [pylint](https://pypi.org/project/pylint/) : outil d'analyse statique de code
+
+Un fichier `requirements-xtra.py` contient les dépendances optionnelles. Notez que celles-ci
+peuvent être volumineuses (donc prendront du temps et de l'espace disque).
  * [jupyter-lab](https://jupyter.org/) : est l'évolution du projet Jupyter. Il sera utilisé pour ses notebooks,
    documents d'illustration. Cette dépendance installera également le shell intéractif 
    avancé `ipython`.
  * [rich](https://rich.readthedocs.io/) : bibliothèque destinée à un affichage de texte _riche_,
    c'est à dire avec couleur et styles, ainsi que du contenu _avancé_ comme des tableaux.
+
+Les démos de ce projet contiennent également des exemples d'IHM avec PySide6. Les programmes de
+formation proposent en général une introduction aux interfaces graphiques avec TkInter mais il y
+a des demandes pour une bibliothèque plus aboutie. L'installation devra être faite manuellement,
+en particulier du fait de la taille (plus de 450Mo téléchargé pour plus de 1Go sur disque…)
+ * [PySide6](https://pypi.org/project/PySide6/) : à installer avec `pip install PySide6`
  
 ## Ressources
 

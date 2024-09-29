@@ -7,15 +7,19 @@ import tkinter as tk
 window = tk.Tk()
 window.title('Demo list')
 
-other_knights = ['Robin', 'Bedivere', 'Galahad']
-
 values = tk.Variable(window, ('Arthur', 'Merlin', 'Lancelot'))
 listbox = tk.Listbox(window, listvariable=values, selectmode='single')
 listbox.pack()
 
+value = tk.StringVar()
+tk.Entry(window, textvariable=value).pack()
+
 
 def add():
-    listbox.insert(tk.END, other_knights.pop(0))
+    new_knight = value.get()
+    if len(new_knight) > 0 and not new_knight.isspace():
+        listbox.insert(tk.END, new_knight)
+    value.set("")
 
 
 def log_selected():

@@ -8,6 +8,6 @@ import logging
 logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s - %(levelname)s - %(message)s")
 
-import demos.pylogging.demo_logging_second as ls
+import demos.pylogging.withconfig.demo_logging_second as ls
 
 ls.do_something()
