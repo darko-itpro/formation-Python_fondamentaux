@@ -7,7 +7,7 @@ def confort(temperature:int|str) -> str:
 
     value = "bon"
     if temperature > 26:
-        value = "Chaud"
+        value = "chaud"
     elif temperature < 18:
         value = "froid"
 
