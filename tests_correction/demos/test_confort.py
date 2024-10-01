@@ -1,5 +1,5 @@
 # test_confort.py
-
+import pytest
 from demos.myhome import confort
 
 def test_hot_temp():
