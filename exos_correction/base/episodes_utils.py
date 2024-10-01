@@ -1,2 +1,7 @@
+
+
 def is_viewed(episode:list):
-    return len(episode) > 3 and bool(episode[3])
+    try:
+        return bool(episode[3])
+    except IndexError:
+        return False
