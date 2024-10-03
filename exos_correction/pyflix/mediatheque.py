@@ -1,3 +1,5 @@
+from multiprocessing.managers import Value
+
 
 class Episode:
     def __init__(self, title: str, number: int, season_number: int,
@@ -20,16 +22,41 @@ class Episode:
 
 class TvShow:
     def __init__(self, name:str):
-        self.name = name.title()
-        self.episodes = []
+        self.name = name
+        self._episodes = []
+
+    @classmethod
+    def with_episodes(cls, name:str, episodes:list):
+        show = cls(name)
+        for episode in episodes:
+            show.add_episode(*episode)
+
+        return show
+
+    @property
+    def duration(self):
+        return sum((episode.duration
+                    for episode in self._episodes))
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, new_name:str):
+        self._name = new_name.title()
+
+    @property
+    def episodes(self):
+        return self._episodes.copy()
 
     def add_episode(self, title:str, number:int, season_number:int, duration:int=None, year:int=None):
         new_episode = Episode(title, number, season_number, duration, year)
 
-        if new_episode in self.episodes:
+        if new_episode in self._episodes:
             raise ValueError('Duplicate episode')
 
-        self.episodes.append(new_episode)
+        self._episodes.append(new_episode)
 
     def __str__(self):
-        return f"Show '{self.name}', {len(self.episodes)} episode(s)"
+        return f"Show '{self.name}', {len(self._episodes)} episode(s)"
