@@ -1,4 +1,6 @@
-from multiprocessing.managers import Value
+
+class DuplicateError(ValueError):
+    pass
 
 
 class Episode:
@@ -54,7 +56,7 @@ class TvShow:
         new_episode = Episode(title, number, season_number, duration, year)
 
         if new_episode in self._episodes:
-            raise ValueError('Duplicate episode')
+            raise DuplicateError(f'Duplicate episode season {season_number} episode {number}')
 
         self._episodes.append(new_episode)
 
