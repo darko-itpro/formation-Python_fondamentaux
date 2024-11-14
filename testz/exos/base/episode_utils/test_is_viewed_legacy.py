@@ -1,4 +1,4 @@
-from exos_correction.base.episode_utils import is_viewed
+from exos_correction.base.episode_utils_legacy import is_viewed
 
 def test_episode_as_count_viewed():
     episode = ["The new Project", 1, 98, 5]
