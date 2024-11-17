@@ -17,6 +17,10 @@ class ListBoxContainer(tk.Frame):
         self._listbox.pack()
 
 
+    def insert(self, position:int, data):
+        self._listbox.insert(position, data)
+
+
     def add(self, data):
         self._listbox.insert(tk.END, data)
 
