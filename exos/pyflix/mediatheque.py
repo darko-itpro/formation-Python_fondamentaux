@@ -1,6 +1,6 @@
 
 class Episode:
-    def __init__(self, title: str, number: int, season_number: int,
+    def __init__(self, title: str, season_number: int, number: int,
                  duration: int = None, year: int = None):
         self.title = title
         self.number = number

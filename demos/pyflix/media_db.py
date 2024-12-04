@@ -31,9 +31,9 @@ SQL_ADD_SHOW_DATA = "INSERT INTO show values (?, ?)"
 SQL_GET_SHOW_DATA = "SELECT value FROM show WHERE key = ?"
 
 SQL_ADD_EPISODE = "INSERT INTO episodes values(?, ?, ?, ?, ?)"
-SQL_GET_EPISODE = "SELECT title, e_number, season, duration, year FROM episodes where season = ? and e_number = ?"
-SQL_GET_ALL_EPISODES = "SELECT title, e_number, season, duration, year FROM episodes ORDER BY season, e_number"
-SQL_GET_EPISODES_FOR_SEASON = "SELECT title, e_number, season, duration, year FROM episodes where season = ? ORDER BY e_number"
+SQL_GET_EPISODE = "SELECT title, season, e_number, duration, year FROM episodes where season = ? and e_number = ?"
+SQL_GET_ALL_EPISODES = "SELECT title, season, e_number, duration, year FROM episodes ORDER BY season, e_number"
+SQL_GET_EPISODES_FOR_SEASON = "SELECT title, season, e_number, duration, year FROM episodes where season = ? ORDER BY e_number"
 
 
 KEY_SHOW_NAME = "name"
@@ -41,7 +41,7 @@ KEY_SHOW_NAME = "name"
 
 # Ce module utilise un namedtuple comme structure de données pour remplacer la classe Episode
 # tout en gardant la syntaxe pour accéder aux attributs.
-Episode = namedtuple("Episode", ('title', 'number', 'season_number', 'duration', 'year'),
+Episode = namedtuple("Episode", ('title', 'season_number', 'number', 'duration', 'year'),
                      defaults=[None, None])
 
 
@@ -87,14 +87,14 @@ class TvShow:
     def name(self):
         return self._name
 
-    def add_episode(self, title: str, ep_number: int, season_number: int,
+    def add_episode(self, title: str, season_number: int, ep_number: int,
                     duration: int = None, year: int = None):
         """
         Ajoute un épisode à la collection.
 
         :param title: titre de l'épisode
-        :param ep_number: numério de l'épisode
         :param season_number: numéro de saison de l'épisode
+        :param ep_number: numério de l'épisode
         :param duration: durée en minutes d'un épisode, optionnel - non utilisé
         :param year: année de l'épisode, optionnel - non utilisé
         :raises ValueError: si l'épisode existe déjà
