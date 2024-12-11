@@ -10,5 +10,5 @@ def to_minutes(hours:int|str, minutes:int|str = 0):
     minutes = int(minutes)
 
     if hours < 0 or minutes < 0:
-        raise ValueError("Hours and minutes must be positive or null")
+        raise ValueError(f"Hours and minutes must be positive or null, got {hours} and {minutes}")
     return hours * 60 + minutes
