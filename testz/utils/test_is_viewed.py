@@ -1,17 +1,14 @@
-from demos.episodes_utils import is_viewed
+import pytest
+from exo_corrections.base.episodes_utils import is_viewed
 
-def test_episode_not_viewed():
-    episode = ['Installing the softwares', 2, 42, False]
-    assert is_viewed(episode) is False
+episodes_data = [({"title": "The Conjugal Configuration", "duration": 20, "viewed": True}, True),
+                 ({"title": "The Conjugal Configuration", "duration": 20, "viewed": 3}, True),
+                 ({"title": "The Conjugal Configuration", "duration": 20, "viewed": 3, "year": 2019}, True),
+                 ({"title": "The Conjugal Configuration", "duration": 20, "viewed": False}, False),
+                 ({"title": "The Conjugal Configuration", "duration": 20, "viewed": 0}, False),
+                 ({"title": "The Conjugal Configuration", "duration": 20}, False),
+                 ({"title": "The Conjugal Configuration", "duration": 20, "year": 2018}, False), ]
 
-def test_episode_viewed():
-    episode = ['Installing the softwares', 2, 42, True]
-    assert is_viewed(episode) is True
-
-def test_episode_as_count_viewed():
-    episode = ['Installing the softwares', 2, 42, 5]
-    assert is_viewed(episode) is True
-
-def test_episode_as_count_not_viewed():
-    episode = ['Installing the softwares', 2, 42, 0]
-    assert is_viewed(episode) is False
+@pytest.mark.parametrize("episode, expected", episodes_data)
+def test_is_viewed(episode, expected):
+    assert is_viewed(episode) is expected
