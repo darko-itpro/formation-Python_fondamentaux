@@ -1,5 +1,5 @@
 import pytest
-from exos.base.pyflix.evening_manager import get_playlist_from
+from exo_corrections.base.evening_manager import get_playlist_from
 
 @pytest.fixture
 def show_7ep_3viewed():

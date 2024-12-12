@@ -1,4 +1,4 @@
-from exos.base.pyflix.basic_evening_manager import season_duration
+from exo_corrections.base.basic_evening_manager import season_duration
 
 
 def test_empty_show_len():
