@@ -5,7 +5,17 @@ def is_viewed(episode:dict):
         return False
 
 
-def to_minutes(hours:int|str, minutes:int|str = 0):
+def to_minutes(hours:int|str, minutes:int|str = 0) -> int:
+    """
+    Converts hours and minutes to minute.
+
+    Lorem Ipsum
+
+    :param hours: Number of hours, must be positive or null.
+    :param minutes:
+    :raises ValueError: raised if values are negative
+    :return:
+    """
     hours = int(hours)
     minutes = int(minutes)
 
