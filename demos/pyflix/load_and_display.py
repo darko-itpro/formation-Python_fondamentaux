@@ -3,6 +3,7 @@ import logging
 
 import pyflix.loaders.file_helpers as fu  # Module de la fonction chargeant les informations de séries.
 import demos.pyflix.media_db as media  # Module contenant les objets liés à la gestion des médias
+#import exo_corrections.pyflix.mediatheque as media
 
 import demos.settings as conf
 
