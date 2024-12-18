@@ -2,6 +2,9 @@ def is_viewed(episode:dict) -> bool:
     return "viewed" in episode and bool(episode["viewed"])
 
 def add_to_playlist(episode:dict, playlist:list[dict]=None):
+    if "title" not in episode:
+        raise ValueError("Data is not an episode (must contain key title)")
+
     if playlist is None:
         playlist = []
     else:
