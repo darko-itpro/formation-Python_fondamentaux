@@ -1,5 +1,10 @@
+
+
 def is_viewed(episode:dict) -> bool:
-    return "viewed" in episode and bool(episode["viewed"])
+    try:
+        return bool(episode["viewed"])
+    except KeyError:
+        return False
 
 def add_to_playlist(episode:dict, playlist:list[dict]=None):
     if "title" not in episode:
