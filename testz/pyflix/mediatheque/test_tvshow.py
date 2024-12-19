@@ -28,3 +28,10 @@ def test_add_first_episode_with_all_data(show_without_episodes):
     myshow = show_without_episodes
     myshow.add_episode("Title", 1, 1, 67, 1899)
     assert len(myshow.episodes) == 1
+
+def test_duplicate_episode_must_raise(show_with_3_episodes):
+    myshow = show_with_3_episodes
+
+    myshow.add_episode("test dup", 4, 4)
+    with pytest.raises(ValueError):
+        myshow.add_episode("test dup", 4, 4)
