@@ -1,12 +1,18 @@
+class Media:
+    def __init__(self, title, year):
+        self.title = title.title()
+        self.year = year
 
-class Episode:
+
+class Episode(Media):
     def __init__(self, title: str, season_number: int, number: int,
                  duration: int = None, year: int = None):
-        self.title = title
+        super().__init__(title, year)
+
         self.number = number
         self.season_number = season_number
         self.duration = duration
-        self.year = year
+
 
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
@@ -19,6 +25,14 @@ class TvShow:
     def __init__(self, name):
         self.name = name
         self._episodes = []
+
+    def __str__(self):
+        return f"Show {self.name} ({len(self._episodes)} episodes)"
+
+    @property
+    def duration(self):
+        return sum([episode.duration
+                    for episode in self._episodes])
 
     @property
     def name(self):
