@@ -6,5 +6,3 @@ def is_viewed(episode:list) -> bool:
     return episode[3]
 
 
-is_viewed(episode_viewed)
-is_viewed(episode_not_viewed)
