@@ -20,4 +20,17 @@ def get_playlist(season:list[dict]):
 if __name__ == "__main__":
     bbt_s12 = ds.get_season('The Big Bang Theory', "Sheldon Cooper")
 
+    playlist = get_playlist(bbt_s12)
+
+    time_remaining = 120
+
+    while playlist and time_remaining >= playlist[0]["duration"]:
+        episode = playlist.pop(0)
+        print(episode['title'])
+        time_remaining -= episode['duration']
+        episode['viewed'] = True
+
+    print(time_remaining)
+    pprint(bbt_s12)
+
 
