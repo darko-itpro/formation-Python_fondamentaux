@@ -8,6 +8,9 @@ class Episode:
         self.duration = duration
         self.year = year
 
+    def __eq__(self, other):
+        return (self.number, self.season_number) == (other.number , other.season_number)
+
 
 class TvShow:
     def __init__(self, name: str):
@@ -19,4 +22,7 @@ class TvShow:
                     number: int,
                     duration: int = None,
                     year: int = None):
-        self.episodes.append(Episode(title, season_number, number, duration, year))
+        new_episode = Episode(title, season_number, number, duration, year)
+        if new_episode in self.episodes:
+            raise ValueError(f"Episode '{new_episode.title}' already exists")
+        self.episodes.append(new_episode)
