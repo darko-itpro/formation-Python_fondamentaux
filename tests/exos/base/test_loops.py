@@ -15,6 +15,24 @@ def season():
                 ]
     return episodes
 
+@pytest.fixture
+def set_episodes_as_viewed(season):
+    for episode in season:
+        episode['viewed'] = True
+
+
+@pytest.fixture
+def set_episodes_as_not_viewed(season):
+    for episode in season:
+        episode['viewed'] = False
+
+def test_find_first_unseen_episode_all_viewed(season, set_episodes_as_viewed):
+    assert find_first_unseen_episode(season) == tuple()
+
+
+def test_find_first_unseen_episode_none_viewed(season, set_episodes_as_not_viewed):
+    assert find_first_unseen_episode(season) == (0, {'title': 'The Conjugal Configuration', 'duration': 20, 'viewed': False})
+
 def test_find_first_unseen_episode(season):
     assert find_first_unseen_episode(season) == (2, {'title': 'The Procreation Calculation', 'duration': 20, 'viewed': False})
 
