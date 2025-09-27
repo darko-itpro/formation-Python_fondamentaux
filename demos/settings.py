@@ -10,6 +10,7 @@ import logging
 from pathlib import Path
 
 ROOT_PATH = Path(__file__).resolve().parent.parent
+DATA_PATH = ROOT_PATH / "data"
 
 logging.basicConfig(level=logging.DEBUG,
                     format="%(asctime)s - %(levelname)s - %(message)s",

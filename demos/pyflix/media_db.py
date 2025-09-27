@@ -57,7 +57,7 @@ class TvShow:
         self._name = name.title()
 
         import re
-        self._db_name = Path(settings.ROOT_PATH, re.sub("[ .()]", "_", name)).with_suffix('.db')  # Voir regex
+        self._db_name = Path(settings.DATA_PATH, re.sub("[ .()]", "_", name)).with_suffix('.db')  # Voir regex
         self._connect = sqlite.connect(self._db_name)
 
         try:
