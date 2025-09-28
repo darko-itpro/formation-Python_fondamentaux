@@ -135,3 +135,13 @@ class TvShow:
         cur.execute(SQL_GET_ALL_EPISODES)
         return sum([episode_data[3]
                     for episode_data in cur.fetchall()])
+
+    @classmethod
+    def from_db(cls, db_path: Path):
+        connect = sqlite.connect(db_path)
+        cur = connect.cursor()
+        cur.execute("SELECT value FROM show WHERE key = ?", (KEY_SHOW_NAME,))
+        show_name = cur.fetchone()[0]
+        connect.close()
+        return cls(show_name)
+

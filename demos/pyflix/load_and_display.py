@@ -1,8 +1,13 @@
 from pathlib import Path
 import logging
 
-import pyflix.loaders.file_helpers as fu  # Module de la fonction chargeant les informations de séries.
-import demos.pyflix.media_db as media  # Module contenant les objets liés à la gestion des médias
+# Module de la fonction chargeant les informations de séries. Cette dépendance est dans le module
+# pyschoollib à installer
+import pyflix.loaders.file_helpers as fu
+
+# Module contenant les objets liés à la gestion des médias. Module dans le projet courant pouvant
+# être remplacé par le module créé lors de la formation.
+import demos.pyflix.media_db as media
 
 import demos.settings as conf
 
@@ -10,6 +15,18 @@ try:
     from pyflix.utils import rich_cli as cli
 except ModuleNotFoundError:
     from pyflix.utils import cli
+
+
+def local_shows_loader(shows: dict[str, media.TvShow] = None) -> dict[str, media.TvShow]:
+    shows = shows.copy() if shows is not None else {}
+
+    src_path = conf.DATA_PATH
+
+    for datasource in src_path.iterdir():
+        show = media.TvShow.from_db(datasource)
+        shows[show.name] = show
+
+    return shows
 
 
 def load_data_from_path(path: str | Path, shows: dict[str, media.TvShow] = None) -> dict[str, media.TvShow]:
