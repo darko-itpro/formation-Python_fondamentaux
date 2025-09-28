@@ -118,6 +118,12 @@ pip install pyschoollib-0.2.0-py3-none-any.whl
 ```
 
 Votre environnement est alors prêt à l'emploi.
+
+### Makefile
+Si vous êtes sur un environnement POSIX (Linux ou MacOs) ou plus généralement si vous utilisez
+l'outil `make`, vous pouvez utiliser le `makefile` fourni :
+ * `make setup` : met à jour `pip` et installe toutes les dépendances.
+ * `make clean` : supprime le répertoire `data` créé par une démo.
  
 ## Documents d'illustration
 
@@ -160,6 +166,8 @@ peuvent être volumineuses (donc prendront du temps et de l'espace disque).
    avancé `ipython`.
  * [rich](https://rich.readthedocs.io/) : bibliothèque destinée à un affichage de texte _riche_,
    c'est à dire avec couleur et styles, ainsi que du contenu _avancé_ comme des tableaux.
+ * [questionary](https://pypi.org/project/questionary/) : bibliothèque destinée à avoir une
+   intéraction dans l'invite de commande.
 
 Les démos de ce projet contiennent également des exemples d'IHM avec PySide6. Les programmes de
 formation proposent en général une introduction aux interfaces graphiques avec TkInter mais il y
