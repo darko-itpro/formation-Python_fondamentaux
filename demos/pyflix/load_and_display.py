@@ -6,6 +6,11 @@ import demos.pyflix.media_db as media  # Module contenant les objets liés à la
 
 import demos.settings as conf
 
+try:
+    from pyflix.utils import rich_cli as cli
+except ModuleNotFoundError:
+    from pyflix.utils import cli
+
 
 def load_data_from_path(path: str | Path, shows: dict[str, media.TvShow] = None) -> dict[str, media.TvShow]:
     """
@@ -47,24 +52,38 @@ def load_data_from_path(path: str | Path, shows: dict[str, media.TvShow] = None)
 
     return shows
 
+def load_default_data(shows:dict = None) -> dict[str, media.TvShow]:
+    paths = []  # Liste des chemins vers les ressources à utiliser.
+    shows = shows.copy() if shows is not None else {}  # Servira à stocker des données titre:show.
 
-if __name__ == "__main__":
-    try:
-        from pyflix.utils import rich_cli as cli
-    except ModuleNotFoundError:
-        from pyflix.utils import cli
-
-
-    paths = []
+    # Configuration des chemins vers les ressources.
     paths.append(conf.ROOT_PATH.joinpath("assets", "showslist.csv"))
     paths.append(conf.ROOT_PATH.joinpath("assets", "files"))
 
-    shows = {}  # Servira à stocker des données titre:show
-
     for source_path in paths:
-        try:
-            shows = load_data_from_path(source_path, shows)
-        except ValueError:
-            logging.error(f"Impossible de charger les données de {source_path}")
+        shows = load_data_from_path(source_path, shows)
+
+    return shows
+
+def add_data_to_shows(source_path:Path, shows:dict[str, media.TvShow] = None) -> dict[str, media.TvShow]:
+    shows = shows.copy() if shows is not None else {}  # Servira à stocker des données titre:show.
+
+    try:
+        shows = load_data_from_path(source_path, shows)
+    except ValueError:
+        logging.error(f"Impossible de charger les données de {source_path}")
+
+    return shows
+
+def display_all_shows(shows:dict[str, media.TvShow]):
+    cli.display_shows(shows)
+
+
+def run():
+
+    shows = {}  # Servira à stocker des données titre:show.
+
+    shows = load_default_data(shows)
 
     cli.display_shows(shows)
+
