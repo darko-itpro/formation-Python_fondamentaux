@@ -1,0 +1,33 @@
+[project]
+name = "formation-python-fondamentaux"
+version = "2025.10"
+description = "Project for my basic Python training."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name="Darko Stankovski", email="darko.itpro@gmail.com"},
+]
+
+license = "GPL-3.0-or-later"
+
+
+dependencies = [
+    "jupyterlab>=4.4,<4.5",
+    "pytz>=2022.7.1",
+    "questionary>=2.1",
+    "rich>=13.6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/darko-itpro/formation-Python_fondamentaux"
+Documentation = "https://github.com/darko-itpro/formation-Python_fondamentaux/wiki"
+Repository = "https://github.com/darko-itpro/formation-Python_fondamentaux.git"
+Issues = "https://github.com/darko-itpro/formation-Python_fondamentaux/issues"
+
+[dependency-groups]
+dev = [
+    "flake8>=7.3.0",
+    "ipython>=8.37.0",
+    "pylint>=4.0.1",
+    "pytest>=8.4.2",
+]
