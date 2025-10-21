@@ -16,3 +16,6 @@ def test_episode_not_viewed_as_count():
     episode = ["The new Project", 1, 98, 0]
     assert is_viewed(episode) is False
 
+def test_episode_not_viewed_with_missing_count():
+    episode = ["The new Project", 1, 98]
+    assert is_viewed(episode) is False
