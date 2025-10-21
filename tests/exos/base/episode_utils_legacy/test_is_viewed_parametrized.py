@@ -1,5 +1,5 @@
 import pytest
-from exos.base.episode_utils import is_viewed
+from exos.base.episode_utils_legacy import is_viewed
 
 test_data = [
     (["The new Project", 1, 98, True], True),
