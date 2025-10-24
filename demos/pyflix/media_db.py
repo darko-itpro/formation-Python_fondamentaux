@@ -9,9 +9,9 @@ formations ne traitant en général pas les loggers, un print est utilisé à la
 place.
 """
 
-from pathlib import Path
 import sqlite3 as sqlite
 from collections import namedtuple
+from pathlib import Path
 import logging
 from demos import settings
 
@@ -21,20 +21,22 @@ SQL_CREATE_EPISODES_TABLE = "CREATE TABLE IF NOT EXISTS episodes ("\
                             "title TEXT NOT NULL, "\
                             "duration INT, "\
                             "year INT, "\
-                            "PRIMARY KEY (e_number , season))"
+                            "PRIMARY KEY (e_number , season))"\
+                            ";"
 SQL_CREATE_SHOW_TABLE = "CREATE TABLE IF NOT EXISTS show ("\
                         "key TEXT NOT NULL, "\
                         "value TEXT NOT NULL, "\
-                        "PRIMARY KEY (key))"
+                        "PRIMARY KEY (key))"\
+                        ";"
 
-SQL_ADD_SHOW_DATA = "INSERT INTO show values (?, ?)"
-SQL_GET_SHOW_DATA = "SELECT value FROM show WHERE key = ?"
+SQL_ADD_SHOW_DATA = "INSERT INTO show values (?, ?);"
+SQL_GET_SHOW_DATA = "SELECT value FROM show WHERE key = ?;"
 
-SQL_ADD_EPISODE = "INSERT INTO episodes values(?, ?, ?, ?, ?)"
-SQL_GET_EPISODE = "SELECT title, season, e_number, duration, year FROM episodes where season = ? and e_number = ?"
-SQL_GET_ALL_EPISODES = "SELECT title, season, e_number, duration, year FROM episodes ORDER BY season, e_number"
-SQL_GET_EPISODES_FOR_SEASON = "SELECT title, season, e_number, duration, year FROM episodes where season = ? ORDER BY e_number"
-
+SQL_ADD_EPISODE = "INSERT INTO episodes values(?, ?, ?, ?, ?);"
+SQL_GET_EPISODE = "SELECT title, season, e_number, duration, year FROM episodes where season = ? and e_number = ?;"
+SQL_GET_ALL_EPISODES = "SELECT title, season, e_number, duration, year FROM episodes ORDER BY season, e_number;"
+SQL_GET_EPISODES_FOR_SEASON = "SELECT title, season, e_number, duration, year FROM episodes where season = ? ORDER BY e_number;"
+SQL_COUNT_EPISODES = "SELECT COUNT(*) FROM episodes;"
 
 KEY_SHOW_NAME = "name"
 
@@ -47,17 +49,13 @@ Episode = namedtuple("Episode", ('title', 'season_number', 'number', 'duration',
 
 class TvShow:
     """
-    TV Show DAO (Data Access Object) for a single show
+    TV Show DAO (Data Access Object) pour une série.
     """
-
-    def __init__(self, name: str):
-        if not name:
-            raise ValueError('A TV Show must have a name.')
-
+    def __init__(self, name:str):
         self._name = name.title()
 
         import re
-        self._db_name = Path(settings.DATA_PATH, re.sub("[ .()]", "_", name)).with_suffix('.db')  # Voir regex
+        self._db_name = Path(settings.ROOT_PATH, re.sub("[ .()]", "_", name)).with_suffix('.db')  # Voir regex
         self._connect = sqlite.connect(self._db_name)
 
         try:
@@ -66,7 +64,7 @@ class TvShow:
             cur.execute(SQL_CREATE_SHOW_TABLE)
             cur.execute(SQL_ADD_SHOW_DATA, (KEY_SHOW_NAME, self._name))
 
-        except sqlite.Error:
+        except sqlite.Error as e:
             # L'erreur qui se produirait ici résulterait de l'existance des tables.
             # Nous pouvons alors considérer que les tables existent et que le nom est attribué
             cur.execute(SQL_GET_SHOW_DATA, (KEY_SHOW_NAME,))
@@ -77,24 +75,25 @@ class TvShow:
         try:
             self._connect.close()
 
-        except sqlite.Error:
-            logging.exception("Could not close database")
+        except sqlite.Error as e:
+            print("Could not close database")  # Voir docstring à propos du print
+            print(e)  # Voir docstring à propos du print
 
     def __str__(self):
-        return f'Media DB Connector ({self._db_name})'
+        return 'Media DB Connector ({})'.format(self._db_name)
 
     @property
     def name(self):
         return self._name
 
-    def add_episode(self, title: str, season_number: int, ep_number: int,
+    def add_episode(self, title: str, ep_number: int, season_number: int,
                     duration: int = None, year: int = None):
         """
         Ajoute un épisode à la collection.
 
         :param title: titre de l'épisode
-        :param season_number: numéro de saison de l'épisode
         :param ep_number: numério de l'épisode
+        :param season_number: numéro de saison de l'épisode
         :param duration: durée en minutes d'un épisode, optionnel - non utilisé
         :param year: année de l'épisode, optionnel - non utilisé
         :raises ValueError: si l'épisode existe déjà
@@ -103,8 +102,8 @@ class TvShow:
             with self._connect:
                 cur = self._connect.cursor()
                 cur.execute(SQL_ADD_EPISODE, (ep_number, season_number, title, duration, year))
-        except sqlite.IntegrityError as exc:
-            raise ValueError(f"Episode {title} s{season_number}e{ep_number} exists") from exc
+        except sqlite.IntegrityError as ext:
+            raise ValueError(f"Episode {title} s{season_number}e{ep_number} exists") from ext
 
     def get_episodes(self, season=None):
         """
@@ -128,10 +127,59 @@ class TvShow:
     def episodes(self):
         return self.get_episodes()
 
-
     @property
     def duration(self):
         cur = self._connect.cursor()
         cur.execute(SQL_GET_ALL_EPISODES)
         return sum([episode_data[3]
                     for episode_data in cur.fetchall()])
+
+    def __len__(self):
+        cur = self._connect.cursor()
+        cur.execute(SQL_COUNT_EPISODES)
+        return cur.fetchone()[0]
+
+    def __contains__(self, item: Episode):
+        cur = self._connect.cursor()
+        cur.execute(SQL_GET_EPISODE, (item.season_number, item.number))
+        return True if cur.fetchone else False
+
+    def __iter__(self):
+        return TvShowIterator(self._db_name)
+
+
+class TvShowIterator:
+    """
+    Itérateur sur les épisodes d'une seule série
+    """
+    def __init__(self, datasource):
+        """
+        L'implémentation de cet itérateur charge tous les épisodes dans un attribut local. Une
+        alternative serait de paginer à l'aide d'un thread par exemple.
+        """
+        self._datasource = Path(datasource)
+        if not self._datasource.exists():
+            raise ValueError(f'File {datasource} does not exist')
+
+        self._connect = sqlite.connect(self._datasource)
+        cur = self._connect.cursor()
+        cur.execute(SQL_GET_ALL_EPISODES)
+
+        self._episodes = [Episode(*episode_data)
+                for episode_data in cur.fetchall()]
+
+        self._connect.close()
+
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        next_episode = self._episodes.pop(0)
+        if next_episode:
+            return next_episode
+        else:
+            raise StopIteration()
+
+
+
