@@ -80,8 +80,16 @@ class TvShow:
         except sqlite.Error:
             logging.exception("Could not close database")
 
+
     def __str__(self):
         return f'Media DB Connector ({self._db_name})'
+
+
+    def __repr__(self):
+        class_name = type(self).__name__
+        # or: class_name = self.__class__.__name__
+        return f"{class_name}(name={self._name!r})"
+
 
     @property
     def name(self):
