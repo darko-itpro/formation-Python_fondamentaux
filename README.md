@@ -1,7 +1,7 @@
 # A Python Training - Les fondamentaux
 
 This is the practical cases for Python training I provide. Intended for french trainee, the rest of the explanations
-are in french.
+are in French.
 
 Ce référentiel complète la formation que je propose et est donc destiné à mes stagiaires. 
 
@@ -11,6 +11,9 @@ Ces sources sont organisées pour proposer des exemples de code sur les thèmes 
 Python. Elles respectent avec quelques adaptations l'organisation d'un package.
 
 ## Récupérez le projet
+En fonction de vos compétences et outils à disposition, vous pouvez soit cloner le projet soit le
+récupérer sous forme d'une archive.
+
 Le projet peut être dans l'arborescence que vous souhaitez sur votre disque.
 
 ## Structure du projet
@@ -28,15 +31,15 @@ est la suivante :
 ## Quickstart
 Voici les étapes à suivre pour préparer l'environnement. Ces étapes ne prennent pas en compte
 l'IDE. Vous trouverez le détail à la suite.
-- Assurez vous de disposer d'une version de [Python](https://www.python.org) suppérieure ou égale à
-  la 3.10 accessible dans le path.
+- Assurez-vous de disposer d'une version de [Python](https://www.python.org) récente accessible dans le path. Dans
+  l'idéal, vous devriez être dans la dernière ou avant-dernière version de Python. 
 - Créez et activez un environnement virtuel si besoin en
   suivant [la documentation de venv](https://docs.python.org/fr/3/library/venv.html).
 - Installez les dépendances par `pip install -r requirements.txt`.
 - Récupérez la dernière release au format wheel (extension `.whl`) du 
   projet [pyschool-lib](https://github.com/darko-itpro/pyschool-lib/releases)
 - Installez cette dépendance avec une commande similaire
-  à `pip install pyschoollib-0.2.0-py3-none-any.whl`
+  à `pip install "pyschoollib-0.2.0-py3-none-any.whl"`
 
 Vous êtes prêt à travailler.
 
@@ -44,8 +47,8 @@ Vous êtes prêt à travailler.
 ### Prérequis
 [Python](https://www.python.org) doit être installé sur votre poste.
 
-La formation est prévue pour une version de Python 3.10+ (les versions précédentes sont considérées
-comme obsolètes).
+La formation est prévue pour toutes les versions de Python maintenues (voir le
+[statut des versions](https://devguide.python.org/versions/)).
 
 Python ainsi que les dépendances doivent être dans le PATH. Vous pouvez vérifier le bon
 fonctionnement dans un terminal/invite de commande par les instructions du type
@@ -53,6 +56,13 @@ fonctionnement dans un terminal/invite de commande par les instructions du type
 ```
 python --version
 pip --version
+```
+
+ou
+
+```
+python3 --version
+pip3 --version
 ```
 
 ### Environnements de développement
@@ -106,7 +116,7 @@ pip install -r requirements.txt
 ```
 
 Vous devez en plus installer une dépendance proposée par votre intervenant, bibliothèque qui
-fournit des fonctionalités pour les exercices.
+fournit des fonctionnalités pour les exercices.
 
 Cette bibliothèque est le projet [pyschool-lib](https://github.com/darko-itpro/pyschool-lib). Allez
 sur la page des [releases](https://github.com/darko-itpro/pyschool-lib/releases), choisissez la
@@ -114,8 +124,10 @@ dernière et téléchargez le fichier `.whl`. Il doit avoir un nom de la
 forme `pyschoollib-0.2.0-py3-none-any.whl`. Vous allez l'installer avec l'instruction
 
 ```shell
-pip install pyschoollib-0.2.0-py3-none-any.whl
+pip install "pyschoollib-0.2.0-py3-none-any.whl"
 ```
+
+Attention évidemment à adapter le nom avec la version en cours.
 
 Votre environnement est alors prêt à l'emploi.
 
@@ -130,7 +142,7 @@ l'outil `make`, vous pouvez utiliser le `makefile` fourni :
 Certains fichiers ont l'extension `.ipynb`. Il s'agit de documents de type
 *Jupyter Notebooks* générés à l'aide de [Jupyter](http://jupyter.org/). Pour
 pouvoir les consulter, vous devez installer la dépendance Jupyter. Celle-ci est incluse dans
-le fichier `requirements-xtra.txt`, vous pouvez donc l'intaller avec la même instruction que
+le fichier `requirements-xtra.txt`, vous pouvez donc l'installer avec la même instruction que
 précédemment.
  
 Pour accéder à ces documents, il faut lancer le serveur Jupyter par
@@ -155,7 +167,8 @@ Les dépendances dans ce fichier sont les suivantes :
  * [ipython](https://jupyter.org/) : il s'agit d'un shell intéractif avancé préféré au shell
    intéractif standard.
  * [Pytest](https://docs.pytest.org/) : utilisé pour la partie tests unitaires
- * [Pytz](https://pypi.org/project/pytz/) : utilisé pour la gestion des TimeZone des dates
+ * [Pytz](https://pypi.org/project/pytz/) : utilisé pour la gestion des TimeZone des dates (cette bibliothèque est obsolète
+   depuis la 3.9)
  * [flake8](https://flake8.pycqa.org/) : outil de validation statique de code
  * [pylint](https://pypi.org/project/pylint/) : outil d'analyse statique de code
 
@@ -165,7 +178,7 @@ peuvent être volumineuses (donc prendront du temps et de l'espace disque).
    documents d'illustration. Cette dépendance installera également le shell intéractif 
    avancé `ipython`.
  * [rich](https://rich.readthedocs.io/) : bibliothèque destinée à un affichage de texte _riche_,
-   c'est à dire avec couleur et styles, ainsi que du contenu _avancé_ comme des tableaux.
+   c'est-à-dire avec couleur et styles, ainsi que du contenu _avancé_ comme des tableaux.
  * [questionary](https://pypi.org/project/questionary/) : bibliothèque destinée à avoir une
    intéraction dans l'invite de commande.
 
