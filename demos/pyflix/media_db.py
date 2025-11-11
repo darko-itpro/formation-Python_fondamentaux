@@ -21,19 +21,32 @@ SQL_CREATE_EPISODES_TABLE = "CREATE TABLE IF NOT EXISTS episodes ("\
                             "title TEXT NOT NULL, "\
                             "duration INT, "\
                             "year INT, "\
-                            "PRIMARY KEY (e_number , season))"
+                            "PRIMARY KEY (e_number , season))"\
+                            ";"
+
 SQL_CREATE_SHOW_TABLE = "CREATE TABLE IF NOT EXISTS show ("\
                         "key TEXT NOT NULL, "\
                         "value TEXT NOT NULL, "\
-                        "PRIMARY KEY (key))"
+                        "PRIMARY KEY (key)) "\
+                        ";"
 
-SQL_ADD_SHOW_DATA = "INSERT INTO show values (?, ?)"
-SQL_GET_SHOW_DATA = "SELECT value FROM show WHERE key = ?"
+SQL_ADD_SHOW_DATA = "INSERT INTO show values (?, ?);"
+SQL_GET_SHOW_DATA = "SELECT value FROM show WHERE key = ?;"
 
-SQL_ADD_EPISODE = "INSERT INTO episodes values(?, ?, ?, ?, ?)"
-SQL_GET_EPISODE = "SELECT title, season, e_number, duration, year FROM episodes where season = ? and e_number = ?"
-SQL_GET_ALL_EPISODES = "SELECT title, season, e_number, duration, year FROM episodes ORDER BY season, e_number"
-SQL_GET_EPISODES_FOR_SEASON = "SELECT title, season, e_number, duration, year FROM episodes where season = ? ORDER BY e_number"
+SQL_ADD_EPISODE = "INSERT INTO episodes values(?, ?, ?, ?, ?);"
+SQL_GET_EPISODE = ("SELECT title, season, e_number, duration, year "
+                   "FROM episodes "
+                   "WHERE season = ? AND e_number = ? "
+                   ";")
+SQL_GET_ALL_EPISODES = ("SELECT title, season, e_number, duration, year "
+                        "FROM episodes "
+                        "ORDER BY season, e_number "
+                        ";")
+SQL_GET_EPISODES_FOR_SEASON = ("SELECT title, season, e_number, duration, year "
+                               "FROM episodes "
+                               "WHERE season = ? "
+                               "ORDER BY e_number "
+                               ";")
 
 
 KEY_SHOW_NAME = "name"
@@ -114,7 +127,7 @@ class TvShow:
         except sqlite.IntegrityError as exc:
             raise ValueError(f"Episode {title} s{season_number}e{ep_number} exists") from exc
 
-    def get_episodes(self, season=None):
+    def get_episodes(self, season:int|None = None):
         """
         Permet d'accéder aux épisodes en fonction de la saison.
 
@@ -123,7 +136,7 @@ class TvShow:
         pas de paramètre. Liste vide si la saison n'existe pas.
         """
         cur = self._connect.cursor()
-        if season:
+        if season is not None:
             cur.execute(SQL_GET_EPISODES_FOR_SEASON, (int(season),))
         else:
             cur.execute(SQL_GET_ALL_EPISODES)
