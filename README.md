@@ -181,6 +181,7 @@ peuvent être volumineuses (donc prendront du temps et de l'espace disque).
    c'est-à-dire avec couleur et styles, ainsi que du contenu _avancé_ comme des tableaux.
  * [questionary](https://pypi.org/project/questionary/) : bibliothèque destinée à avoir une
    intéraction dans l'invite de commande.
+ * [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) pour la documentation.
 
 Les démos de ce projet contiennent également des exemples d'IHM avec PySide6. Les programmes de
 formation proposent en général une introduction aux interfaces graphiques avec TkInter mais il y
