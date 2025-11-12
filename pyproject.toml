@@ -28,6 +28,7 @@ Issues = "https://github.com/darko-itpro/formation-Python_fondamentaux/issues"
 dev = [
     "flake8>=7.3.0",
     "ipython>=8.37.0",
+    "mkdocs-material>=9.7.0",
     "pylint>=4.0.1",
     "pytest>=8.4.2",
 ]

@@ -19,6 +19,15 @@ nav:
   - Home: index.md
   - En français:
     - fr/index.md
+    - Aides mémoire:
+      - Les fonctions: fr/memo/fonctions.md
+      - La Programmation Orientée Objet: fr/memo/poo.md
+      - Les tests avec pytest:
+          - fr/memo/tests/index.md
+          - Aide mémoire sur les bases: fr/memo/tests/bases.md
+          - Les tests paramétrés: fr/memo/tests/parametrized_tests.md
+          - Les fixtures: fr/memo/tests/fixtures.md
+      - Les loggers: fr/memo/loggers.md
     - Exercices:
         fr/activities/index.md
   - In English:
