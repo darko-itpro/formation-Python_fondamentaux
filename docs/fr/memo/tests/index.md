@@ -23,7 +23,7 @@ Consultez la [page des bases de Pytest](bases.md)
 
 ## Les tests paramétrés
 
-Consultez la [page sur les tests paramétrés](tests/parametrized_tests.md)
+Consultez la [page sur les tests paramétrés](parametrized_tests.md)
 
 ## Utilisation des fixtures
 
