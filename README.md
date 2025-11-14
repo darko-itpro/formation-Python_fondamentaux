@@ -1,11 +1,15 @@
 # A Python Training - Les fondamentaux
 
-This is the practical cases for Python training I provide. Intended for french trainee, the rest of the explanations
-are in French.
+This is the practical cases for Python training I provide. Intended for french trainee, the rest of 
+the explanations are in French.
 
-Ce référentiel complète la formation que je propose et est donc destiné à mes stagiaires. 
+Ce référentiel complète la formation que je propose et est donc destiné à mes stagiaires.
+
+La [Documentation github](https://darko-itpro.github.io/formation-Python_fondamentaux/) est 
+disponible.
 
 [![License](https://img.shields.io/github/license/darko-itpro/training-python.svg?style=plastic)](https://github.com/darko-itpro/training-python/blob/master/LICENSE)
+[![Static Badge](https://img.shields.io/badge/Github-Documentation-blue?logo=github)](https://darko-itpro.github.io/formation-Python_fondamentaux/)
 
 Ces sources sont organisées pour proposer des exemples de code sur les thèmes couverts par les formations de base
 Python. Elles respectent avec quelques adaptations l'organisation d'un package.

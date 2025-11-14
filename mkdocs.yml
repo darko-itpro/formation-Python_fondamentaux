@@ -27,9 +27,30 @@ nav:
           - Aide mémoire sur les bases: fr/memo/tests/bases.md
           - Les tests paramétrés: fr/memo/tests/parametrized_tests.md
           - Les fixtures: fr/memo/tests/fixtures.md
-      - Les loggers: fr/memo/loggers.md
     - Exercices:
-        fr/activities/index.md
+        - fr/activities/index.md
+        - Les bases:
+          - Découverte du langage: fr/activities/discovery.md
+          - Les listes (1): fr/activities/listes_1.md
+          - Les conditionnelles (1): fr/activities/conditionnelles_1.md
+          - Introduction aux fonctions: fr/activities/fonctions_introduction.md
+          - Les conditionnelles (2): fr/activities/conditionnelles_2.md
+          - Les dictionnaires: fr/activities/dictionnaires.md
+          - Les listes (2): fr/activities/listes_2.md
+          - D'autres fonctions: fr/activities/autres_fonctions.md
+          - Les paramètres optionnels: fr/activities/parametres_optionnels.md
+          - Les exceptions (levée): fr/activities/exception_raise.md
+          - Les exceptions (capture): fr/activities/exception_catch.md
+          - Formatage des chaînes de caractères: fr/activities/strings.md
+          - Les boucles: fr/activities/boucles.md
+        - Plus spécialisé:
+          - Les List Comprehension: fr/activities/list_comprehension.md
+        - L'objet:
+          - Notre modèle objet: fr/activities/modele_objet.md
+    - Informations complémentaires:
+        - Le package pyflix: fr/pyflix.md
+        - Les loggers: fr/memo/loggers.md
+
   - In English:
     - en/index.md
 

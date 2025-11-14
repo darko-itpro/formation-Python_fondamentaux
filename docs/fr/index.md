@@ -8,15 +8,13 @@ Les sources de ce projet sont sur
 ## Les sujets d'exercices
 Les exercices sont sur une [page dédiée](activities/index.md)
 
+## Rappels et aides mémoire
+
+ * [Les fonctions](memo/fonctions.md)
+ * [Les tests](memo/tests/index.md)
+ * [La programmation orientée objet](memo/poo.md)
+
 ## Informations complémentaires
-### Utilisation d'un logger
-Les loggers sont rarement abordés et au programme des formations *de base* des langages. Ils sont 
-cependant indispensables pour une bonne pratique du code. Pour les utiliser, consultez la page 
-dédiée [aux loggers](memo/loggers.md)
 
-### Les tests
-
-Voir la [page dédiée aux tests](memo/tests/index.md)
-
-### Cas des imports
-Une information pour [configurer le PYTHONPATH dans VSCode](https://www.dad3zero.net/202311/pythonpath-vs-code/).
+ * [configurer le PYTHONPATH dans VSCode](https://www.dad3zero.net/202311/pythonpath-vs-code/).
+ * [Les loggers](memo/loggers.md)

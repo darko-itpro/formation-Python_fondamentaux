@@ -1,5 +1,8 @@
 # Les boucles
 
+## Prérequis
+Vous aurez besoin du package [pyflix](../pyflix.md)
+
 ## Objectifs
 Dans cet exercice, nous allons simuler le comportement du media-center PyFlix.
 

@@ -40,6 +40,8 @@ de l'exception pour être plus informatif.
 
 ---
 ## Troisième exercice
+Vous aurez besoin du package [pyflix](../pyflix.md)
+
 Je veux déterminer à quelle heure j'irai me coucher après avoir regardé quelques épisodes de ma 
 série.
 

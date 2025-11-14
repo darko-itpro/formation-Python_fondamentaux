@@ -1,11 +1,8 @@
 # Les listes
 
 ## Avant de commencer
-Pour cet exercice et certains exercices suivants, vous aurez besoin d'une ressource supplémentaire
-qui vous est fournie sous forme d'une bibliothèque à installer. Celle-ci n'est pas sur les repos
-standard, elle est disponible sous forme d'un projet,
-[Pyschool Lib](https://github.com/darko-itpro/pyschool-lib) Les instructions d'installation sont
-disponibles dans le README.
+Pour cet exercice (et certains exercices suivants), vous aurez besoin d'une ressource 
+supplémentaire, le package [pyflix](../pyflix.md)
 
 ## Présentation
 Nous allons lancer un service de streaming vidéo, PyFlix, un peu comme Netflix mais en Python. Nous

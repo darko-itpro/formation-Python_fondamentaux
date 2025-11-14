@@ -23,8 +23,10 @@ Ce qui peut nous donner quelque chose du type :
 [len(element) for element in sequence if len(element) > 10]
 ```
 
-## Outils
-Le module `pyflix.datasource`contient une fonction `get_movies()` qui retourne la liste des films 
+## Ressources
+Vous aurez besoin du package [pyflix](../pyflix.md)
+
+Le module `pyflix.datasource` contient une fonction `get_movies()` qui retourne la liste des films 
 Harry Potter. Chaque film est représenté par une liste contenant 3 valeurs :
 
  * le titre
