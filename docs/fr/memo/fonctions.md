@@ -1,7 +1,7 @@
 # Les fonctions
 
 ## Structure
-```
+```python
 def nom_fonction(param1, param2):
     do_somerhing()
     return value

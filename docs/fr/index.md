@@ -16,5 +16,5 @@ Les exercices sont sur une [page dédiée](activities/index.md)
 
 ## Informations complémentaires
 
- * [configurer le PYTHONPATH dans VSCode](https://www.dad3zero.net/202311/pythonpath-vs-code/).
+ * [configurer le PYTHONPATH dans VSCode](vscode.md).
  * [Les loggers](memo/loggers.md)

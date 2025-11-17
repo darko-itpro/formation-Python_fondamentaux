@@ -20,7 +20,13 @@ nav:
   - En français:
     - fr/index.md
     - Aides mémoire:
+      - Les collections:
+          - Les séquences: fr/memo/collections/sequences.md
+          - Les listes: fr/memo/collections/listes.md
+          - Chaines de caractères : fr/memo/collections/strings.md
       - Les fonctions: fr/memo/fonctions.md
+      - Structures de contrôle - les conditionnelles: fr/memo/conditionnelles.md
+      - Structures de contrôle - les boucles: fr/memo/boucles.md
       - La Programmation Orientée Objet: fr/memo/poo.md
       - Les tests avec pytest:
           - fr/memo/tests/index.md
@@ -49,6 +55,7 @@ nav:
           - Notre modèle objet: fr/activities/modele_objet.md
     - Informations complémentaires:
         - Le package pyflix: fr/pyflix.md
+        - Configuration du PYTHONPATH dans VSCode: fr/vscode.md
         - Les loggers: fr/memo/loggers.md
 
   - In English:
