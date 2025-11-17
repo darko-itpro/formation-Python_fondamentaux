@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../strings/">
+        <link rel="prev" href="../listes/">
       
       
-        <link rel="next" href="../list_comprehension/">
+        <link rel="next" href="../../fonctions/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>Les boucles - Python, les fondamentaux</title>
+        <title>Chaines de caractères - Python, les fondamentaux</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.618322db.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#les-boucles" class="md-skip">
+        <a href="#les-chaines-de-caracteres" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Python, les fondamentaux" class="md-header__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
+    <a href="../../../.." title="Python, les fondamentaux" class="md-header__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Les boucles
+              Chaines de caractères
             
           </span>
         </div>
@@ -190,7 +190,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Python, les fondamentaux" class="md-nav__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
+    <a href="../../../.." title="Python, les fondamentaux" class="md-nav__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -220,7 +220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -273,7 +273,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   
@@ -314,8 +314,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -335,11 +337,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -360,7 +362,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -375,8 +377,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -390,11 +394,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
@@ -415,7 +419,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -433,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/sequences/" class="md-nav__link">
+      <a href="../sequences/" class="md-nav__link">
         
   
   
@@ -461,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/listes/" class="md-nav__link">
+      <a href="../listes/" class="md-nav__link">
         
   
   
@@ -486,10 +490,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../memo/collections/strings/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chaines de caractères
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -505,6 +536,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generalites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Généralités
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatage-des-chaines-de-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formatage des chaînes de caractères
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatage des chaînes de caractères">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-methode-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La méthode format()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-f-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les f-string
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -525,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/fonctions/" class="md-nav__link">
+      <a href="../../fonctions/" class="md-nav__link">
         
   
   
@@ -553,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/conditionnelles/" class="md-nav__link">
+      <a href="../../conditionnelles/" class="md-nav__link">
         
   
   
@@ -581,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/boucles/" class="md-nav__link">
+      <a href="../../boucles/" class="md-nav__link">
         
   
   
@@ -609,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/poo/" class="md-nav__link">
+      <a href="../../poo/" class="md-nav__link">
         
   
   
@@ -661,7 +762,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../memo/tests/" class="md-nav__link ">
+            <a href="../../tests/" class="md-nav__link ">
               
   
   
@@ -705,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/tests/bases/" class="md-nav__link">
+      <a href="../../tests/bases/" class="md-nav__link">
         
   
   
@@ -733,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/tests/parametrized_tests/" class="md-nav__link">
+      <a href="../../tests/parametrized_tests/" class="md-nav__link">
         
   
   
@@ -761,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/tests/fixtures/" class="md-nav__link">
+      <a href="../../tests/fixtures/" class="md-nav__link">
         
   
   
@@ -802,8 +903,6 @@
                 
   
   
-    
-  
   
   
     
@@ -823,15 +922,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../activities/" class="md-nav__link ">
               
   
   
@@ -855,7 +954,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -872,10 +971,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -909,11 +1006,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
         
           
           <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
@@ -934,7 +1031,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -952,7 +1049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../discovery/" class="md-nav__link">
+      <a href="../../../activities/discovery/" class="md-nav__link">
         
   
   
@@ -980,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../listes_1/" class="md-nav__link">
+      <a href="../../../activities/listes_1/" class="md-nav__link">
         
   
   
@@ -1008,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../conditionnelles_1/" class="md-nav__link">
+      <a href="../../../activities/conditionnelles_1/" class="md-nav__link">
         
   
   
@@ -1036,7 +1133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fonctions_introduction/" class="md-nav__link">
+      <a href="../../../activities/fonctions_introduction/" class="md-nav__link">
         
   
   
@@ -1064,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../conditionnelles_2/" class="md-nav__link">
+      <a href="../../../activities/conditionnelles_2/" class="md-nav__link">
         
   
   
@@ -1092,7 +1189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dictionnaires/" class="md-nav__link">
+      <a href="../../../activities/dictionnaires/" class="md-nav__link">
         
   
   
@@ -1120,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../listes_2/" class="md-nav__link">
+      <a href="../../../activities/listes_2/" class="md-nav__link">
         
   
   
@@ -1148,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autres_fonctions/" class="md-nav__link">
+      <a href="../../../activities/autres_fonctions/" class="md-nav__link">
         
   
   
@@ -1176,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parametres_optionnels/" class="md-nav__link">
+      <a href="../../../activities/parametres_optionnels/" class="md-nav__link">
         
   
   
@@ -1204,7 +1301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exception_raise/" class="md-nav__link">
+      <a href="../../../activities/exception_raise/" class="md-nav__link">
         
   
   
@@ -1232,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exception_catch/" class="md-nav__link">
+      <a href="../../../activities/exception_catch/" class="md-nav__link">
         
   
   
@@ -1260,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strings/" class="md-nav__link">
+      <a href="../../../activities/strings/" class="md-nav__link">
         
   
   
@@ -1285,37 +1382,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Les boucles
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../activities/boucles/" class="md-nav__link">
         
   
   
@@ -1331,98 +1401,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prérequis
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#objectifs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Objectifs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#obtenir-la-liste-des-episodes-a-voir" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Obtenir la liste des épisodes à voir
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Obtenir la liste des épisodes à voir">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vous-coincez" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vous coincez ?
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ma-soiree" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ma soirée…
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#evolution-un-peu-avancee" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Évolution un peu avancée…
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1494,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../list_comprehension/" class="md-nav__link">
+      <a href="../../../activities/list_comprehension/" class="md-nav__link">
         
   
   
@@ -1581,7 +1559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../modele_objet/" class="md-nav__link">
+      <a href="../../../activities/modele_objet/" class="md-nav__link">
         
   
   
@@ -1680,7 +1658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pyflix/" class="md-nav__link">
+      <a href="../../../pyflix/" class="md-nav__link">
         
   
   
@@ -1708,7 +1686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vscode/" class="md-nav__link">
+      <a href="../../../vscode/" class="md-nav__link">
         
   
   
@@ -1736,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/loggers/" class="md-nav__link">
+      <a href="../../loggers/" class="md-nav__link">
         
   
   
@@ -1797,7 +1775,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../en/" class="md-nav__link ">
+            <a href="../../../../en/" class="md-nav__link ">
               
   
   
@@ -1863,10 +1841,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequis" class="md-nav__link">
+  <a href="#generalites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prérequis
+        Généralités
       
     </span>
   </a>
@@ -1874,33 +1852,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#objectifs" class="md-nav__link">
+  <a href="#formatage-des-chaines-de-caracteres" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objectifs
+        Formatage des chaînes de caractères
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#obtenir-la-liste-des-episodes-a-voir" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Obtenir la liste des épisodes à voir
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Obtenir la liste des épisodes à voir">
+    <nav class="md-nav" aria-label="Formatage des chaînes de caractères">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#vous-coincez" class="md-nav__link">
+  <a href="#la-methode-format" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Vous coincez ?
+        La méthode format()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-f-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les f-string
       
     </span>
   </a>
@@ -1909,28 +1887,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ma-soiree" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ma soirée…
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#evolution-un-peu-avancee" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Évolution un peu avancée…
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1954,77 +1910,35 @@
   
 
 
-<h1 id="les-boucles">Les boucles</h1>
-<h2 id="prerequis">Prérequis</h2>
-<p>Vous aurez besoin du package <a href="../../pyflix/">pyflix</a></p>
-<h2 id="objectifs">Objectifs</h2>
-<p>Dans cet exercice, nous allons simuler le comportement du media-center PyFlix.</p>
-<p>La fonction  <code>get_season()</code> du module <code>pyflix.datasource</code> peut prendre deux paramètres, le premier
-est le nom d'une série, le second est le nom (ou identifiant) d’un utilisateur. La signature de la
-fonction est <code>get_season(show_name: str = None, user: str = None)</code>.</p>
-<p>Nous récupérons alors la liste des épisodes. Chaque épisode est un dictionnaire.</p>
-<p>Vous pouvez obtenir les épisodes de The Big Bang Theory de la manière suivante :
-<div class="highlight"><pre><span></span><code><span class="n">pyflix</span><span class="o">.</span><span class="n">datasource</span><span class="o">.</span><span class="n">get_season</span><span class="p">(</span><span class="s1">&#39;The Big Bang Theory&#39;</span><span class="p">,</span> <span class="s2">&quot;Sheldon Cooper&quot;</span><span class="p">)</span>
+<h1 id="les-chaines-de-caracteres">Les chaines de caractères</h1>
+<h2 id="generalites">Généralités</h2>
+<p>Vous pouvez consulter les différentes méthodes des chaînes de caractères avec :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 </code></pre></div></p>
-<p>Nous voulons dans un premier temps écrire une fonction qui prends une saison complète en paramètre
-et retourne la liste des épisodes restant à voir, c’est à dire l’extrait de la liste à partir du
-premier épisode non vu.</p>
-<p>Vous pouvez récupérer la liste des épisodes de Big Bang Theory pour vous faire des jeux de données.
-Le retour de cette fonction servira de donnée "de prod’".</p>
-<h2 id="obtenir-la-liste-des-episodes-a-voir">Obtenir la liste des épisodes à voir</h2>
-<p>Écrivez une fonction <code>get_playlist_from(season: list) -&gt; list</code> qui retourne la liste des épisodes
-restant à voir. Cette liste commence à partir du premier épisode non vu jusqu’à la fin. Cette
-fonction retourne donc une liste d’épisodes qui peut être vide si nous n'avons plus d'épisodes à
-voir.</p>
-<p>Vous êtes encouragé à utiliser les tests pour, d'une part, valider votre code et d'autre part, pour
-vous aider à concevoir le modèle par une approche TDD. Si par cette démarche vous faites apparaitre
-d'autres fonctions <em>intermédiaires</em>, c'est normal. Gardez-les et utilisez-les.</p>
-<h3 id="vous-coincez">Vous coincez ?</h3>
-<p>Si vous avez des difficultés à répondre à la question, vous pouvez consulter les indices suivants :
-Les étapes de votre fonction devraient être :</p>
-<details>
-<summary>Indice 1</summary>
-Itérer sur les épisodes. Vous pouvez afficher chaque épisode pour valider que vous le faites.
-</details>
-<details>
-<summary>Indice 2</summary>
-Identifier les épisodes que vous n’avez pas vu. Vous pouvez n’afficher que ceux là lors de votre
-itération pour valider votre code.
-</details>
-<details>
-<summary>Indice 3</summary>
-Identifier le premier épisode qu’il vous reste à voir. N’affichez alors que celui-là ou mieux,
-écrivez le test qui démontre que que vous l'avez trouvé. La fonction retourne alors cet épisode.
-</details>
-<details>
-<summary>Indice 4</summary>
-Déterminer l’indice de cet épisode
-</details>
-<details>
-<summary>Indice 5</summary>
-Utiliser cet indice pour créer grâce au slicing une nouvelle liste des épisodes qu’il reste à voir.
-</details>
-
-<h2 id="ma-soiree">Ma soirée…</h2>
-<p>J’ai à nouveau 2 heures ce soir et je souhaite regarder des épisodes qu'il me reste à voir. Je veux
-regarder le maximum d'épisodes en entier, c'est à dire que je dois finir l'épisode dans le temps
-disponible.</p>
-<p>Vous allez récupérer tous les épisodes d'une saison grâce à la fonction
-<code>get_season(show_name: str = None, user: str = None)</code>. Fournissez bien un paramètre <code>name</code> pour
-obtenir une liste d’épisodes avec l'information vus/non vus. Conservez cette collection dans une 
-variable.</p>
-<p>Obtenez la liste des épisodes qu’il me reste à voir grâce à la fonction de la première partie. 
-Utilisez une variable que vous appellerez <code>playlist</code> pour la référencer.</p>
-<p>Nous allons ensuite simuler le fonctionnement d’un media-center. Affichez le titre de l’épisode 
-suivant en le supprimant de la playlist. Répétez ceci pour autant d’épisodes que je peux regarder 
-en 2 heures.</p>
-<p>Consignes : commencez par résoudre le problème au plus simple. Si vous écrivez une fonction, soyez 
-cohérent dans le choix des paramètres.
-Vous pouvez afficher les listes en fin de programme pour valider le traitement.</p>
-<h2 id="evolution-un-peu-avancee">Évolution un peu avancée…</h2>
-<p>Lorsque vous supprimez un épisode de la playlist, basculez le flag vu/pas vu à <code>True</code> dans la liste 
-de référence.</p>
-<p><em>Indice</em> : rappelez-vous qu’en Python, tout est référence…</p>
+<p>Beaucoup de méthodes permettent de <em>modifier</em> les chaînes de caractères mais le type étant immuable,
+ces méthodes retournent une nouvelle donnée.</p>
+<h2 id="formatage-des-chaines-de-caracteres">Formatage des chaînes de caractères</h2>
+<h3 id="la-methode-format">La méthode <code>format()</code></h3>
+<div class="highlight"><pre><span></span><code><span class="n">pref_string</span> <span class="o">=</span> <span class="s2">&quot;Mon langage favori est </span><span class="si">{}</span><span class="s2">&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pref_string</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+</code></pre></div>
+<p>Les accolades permettent de mettre en forme les données à afficher. Le microlangage étant assez 
+complexe, je vous invite à consulter 
+<a href="https://docs.python.org/3.14/library/string.html#format-string-syntax">la documentation</a><br />
+pour les fonctionnalités exhaustives.</p>
+<p>On retiendra les plus courantes :</p>
+<ul>
+<li><strong>{1}</strong> permet d’afficher le second élément de la liste des données.</li>
+<li><strong>{:.2f}</strong> permet d’afficher la donnée sous forme de réel avec deux chiffres après la virgule</li>
+<li><strong>{:10}</strong> réserve 10 espaces pour afficher la donnée</li>
+<li><strong>{:10.2f}</strong> réserve 10 espaces pour afficher un réel avec deux chiffres après la virgule</li>
+<li><strong>{1:10.2f}</strong> réserve 10 espaces pour afficher sous forme de réel avec deux chiffres après la 
+  virgule le second élément de la liste des données</li>
+</ul>
+<h3 id="les-f-string">Les <em>f-string</em></h3>
+<p><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mon langage favori est </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+Les fonctionnalités de mise en forme de la méthode <code>.format()</code> s’appliquent également aux f-strings.</p>
 
 
 
@@ -2074,10 +1988,10 @@ de référence.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>

@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../strings/">
+        <link rel="prev" href="../conditionnelles/">
       
       
-        <link rel="next" href="../list_comprehension/">
+        <link rel="next" href="../poo/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Les boucles - Python, les fondamentaux</title>
+        <title>Structures de contrôle - les boucles - Python, les fondamentaux</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#les-boucles" class="md-skip">
+        <a href="#structures-de-controle-les-boucles" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Les boucles
+              Structures de contrôle - les boucles
             
           </span>
         </div>
@@ -314,8 +314,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -335,11 +337,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -360,7 +362,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -433,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/sequences/" class="md-nav__link">
+      <a href="../collections/sequences/" class="md-nav__link">
         
   
   
@@ -461,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/listes/" class="md-nav__link">
+      <a href="../collections/listes/" class="md-nav__link">
         
   
   
@@ -489,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/strings/" class="md-nav__link">
+      <a href="../collections/strings/" class="md-nav__link">
         
   
   
@@ -525,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/fonctions/" class="md-nav__link">
+      <a href="../fonctions/" class="md-nav__link">
         
   
   
@@ -553,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/conditionnelles/" class="md-nav__link">
+      <a href="../conditionnelles/" class="md-nav__link">
         
   
   
@@ -578,10 +580,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../memo/boucles/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Structures de contrôle - les boucles
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -597,6 +626,165 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#iteration-avec-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Itération avec for
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Itération avec for">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iteration-en-suivant-lindice-diteration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Itération en suivant l'indice d'itération
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repeter-une-action-n-fois" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Répéter une action n fois
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iteration-avec-while" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Itération avec while
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Itération avec while">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interruptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interruptions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interruptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interruption-de-literation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interruption de l'itération
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interruption-de-la-boucle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interruption de la boucle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cas-de-la-recherche-dun-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cas de la recherche d'un élément
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -609,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/poo/" class="md-nav__link">
+      <a href="../poo/" class="md-nav__link">
         
   
   
@@ -661,7 +849,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../memo/tests/" class="md-nav__link ">
+            <a href="../tests/" class="md-nav__link ">
               
   
   
@@ -705,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/tests/bases/" class="md-nav__link">
+      <a href="../tests/bases/" class="md-nav__link">
         
   
   
@@ -733,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/tests/parametrized_tests/" class="md-nav__link">
+      <a href="../tests/parametrized_tests/" class="md-nav__link">
         
   
   
@@ -761,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/tests/fixtures/" class="md-nav__link">
+      <a href="../tests/fixtures/" class="md-nav__link">
         
   
   
@@ -802,8 +990,6 @@
                 
   
   
-    
-  
   
   
     
@@ -823,15 +1009,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../activities/" class="md-nav__link ">
               
   
   
@@ -855,7 +1041,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -872,10 +1058,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -909,11 +1093,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
         
           
           <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
@@ -934,7 +1118,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -952,7 +1136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../discovery/" class="md-nav__link">
+      <a href="../../activities/discovery/" class="md-nav__link">
         
   
   
@@ -980,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../listes_1/" class="md-nav__link">
+      <a href="../../activities/listes_1/" class="md-nav__link">
         
   
   
@@ -1008,7 +1192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../conditionnelles_1/" class="md-nav__link">
+      <a href="../../activities/conditionnelles_1/" class="md-nav__link">
         
   
   
@@ -1036,7 +1220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fonctions_introduction/" class="md-nav__link">
+      <a href="../../activities/fonctions_introduction/" class="md-nav__link">
         
   
   
@@ -1064,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../conditionnelles_2/" class="md-nav__link">
+      <a href="../../activities/conditionnelles_2/" class="md-nav__link">
         
   
   
@@ -1092,7 +1276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dictionnaires/" class="md-nav__link">
+      <a href="../../activities/dictionnaires/" class="md-nav__link">
         
   
   
@@ -1120,7 +1304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../listes_2/" class="md-nav__link">
+      <a href="../../activities/listes_2/" class="md-nav__link">
         
   
   
@@ -1148,7 +1332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autres_fonctions/" class="md-nav__link">
+      <a href="../../activities/autres_fonctions/" class="md-nav__link">
         
   
   
@@ -1176,7 +1360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parametres_optionnels/" class="md-nav__link">
+      <a href="../../activities/parametres_optionnels/" class="md-nav__link">
         
   
   
@@ -1204,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exception_raise/" class="md-nav__link">
+      <a href="../../activities/exception_raise/" class="md-nav__link">
         
   
   
@@ -1232,7 +1416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exception_catch/" class="md-nav__link">
+      <a href="../../activities/exception_catch/" class="md-nav__link">
         
   
   
@@ -1260,7 +1444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strings/" class="md-nav__link">
+      <a href="../../activities/strings/" class="md-nav__link">
         
   
   
@@ -1285,37 +1469,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Les boucles
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../activities/boucles/" class="md-nav__link">
         
   
   
@@ -1331,98 +1488,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prérequis
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#objectifs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Objectifs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#obtenir-la-liste-des-episodes-a-voir" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Obtenir la liste des épisodes à voir
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Obtenir la liste des épisodes à voir">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vous-coincez" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vous coincez ?
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ma-soiree" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ma soirée…
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#evolution-un-peu-avancee" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Évolution un peu avancée…
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1494,7 +1559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../list_comprehension/" class="md-nav__link">
+      <a href="../../activities/list_comprehension/" class="md-nav__link">
         
   
   
@@ -1581,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../modele_objet/" class="md-nav__link">
+      <a href="../../activities/modele_objet/" class="md-nav__link">
         
   
   
@@ -1736,7 +1801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/loggers/" class="md-nav__link">
+      <a href="../loggers/" class="md-nav__link">
         
   
   
@@ -1863,44 +1928,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequis" class="md-nav__link">
+  <a href="#iteration-avec-for" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prérequis
+        Itération avec for
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#objectifs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Objectifs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#obtenir-la-liste-des-episodes-a-voir" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Obtenir la liste des épisodes à voir
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Obtenir la liste des épisodes à voir">
+    <nav class="md-nav" aria-label="Itération avec for">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#vous-coincez" class="md-nav__link">
+  <a href="#structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Vous coincez ?
+        Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iteration-en-suivant-lindice-diteration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Itération en suivant l'indice d'itération
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repeter-une-action-n-fois" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Répéter une action n fois
       
     </span>
   </a>
@@ -1913,24 +1989,80 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ma-soiree" class="md-nav__link">
+  <a href="#iteration-avec-while" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ma soirée…
+        Itération avec while
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Itération avec while">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#evolution-un-peu-avancee" class="md-nav__link">
+  <a href="#interruptions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Évolution un peu avancée…
+        Interruptions
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Interruptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interruption-de-literation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interruption de l'itération
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interruption-de-la-boucle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interruption de la boucle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cas-de-la-recherche-dun-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cas de la recherche d'un élément
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1954,77 +2086,65 @@
   
 
 
-<h1 id="les-boucles">Les boucles</h1>
-<h2 id="prerequis">Prérequis</h2>
-<p>Vous aurez besoin du package <a href="../../pyflix/">pyflix</a></p>
-<h2 id="objectifs">Objectifs</h2>
-<p>Dans cet exercice, nous allons simuler le comportement du media-center PyFlix.</p>
-<p>La fonction  <code>get_season()</code> du module <code>pyflix.datasource</code> peut prendre deux paramètres, le premier
-est le nom d'une série, le second est le nom (ou identifiant) d’un utilisateur. La signature de la
-fonction est <code>get_season(show_name: str = None, user: str = None)</code>.</p>
-<p>Nous récupérons alors la liste des épisodes. Chaque épisode est un dictionnaire.</p>
-<p>Vous pouvez obtenir les épisodes de The Big Bang Theory de la manière suivante :
-<div class="highlight"><pre><span></span><code><span class="n">pyflix</span><span class="o">.</span><span class="n">datasource</span><span class="o">.</span><span class="n">get_season</span><span class="p">(</span><span class="s1">&#39;The Big Bang Theory&#39;</span><span class="p">,</span> <span class="s2">&quot;Sheldon Cooper&quot;</span><span class="p">)</span>
-</code></pre></div></p>
-<p>Nous voulons dans un premier temps écrire une fonction qui prends une saison complète en paramètre
-et retourne la liste des épisodes restant à voir, c’est à dire l’extrait de la liste à partir du
-premier épisode non vu.</p>
-<p>Vous pouvez récupérer la liste des épisodes de Big Bang Theory pour vous faire des jeux de données.
-Le retour de cette fonction servira de donnée "de prod’".</p>
-<h2 id="obtenir-la-liste-des-episodes-a-voir">Obtenir la liste des épisodes à voir</h2>
-<p>Écrivez une fonction <code>get_playlist_from(season: list) -&gt; list</code> qui retourne la liste des épisodes
-restant à voir. Cette liste commence à partir du premier épisode non vu jusqu’à la fin. Cette
-fonction retourne donc une liste d’épisodes qui peut être vide si nous n'avons plus d'épisodes à
-voir.</p>
-<p>Vous êtes encouragé à utiliser les tests pour, d'une part, valider votre code et d'autre part, pour
-vous aider à concevoir le modèle par une approche TDD. Si par cette démarche vous faites apparaitre
-d'autres fonctions <em>intermédiaires</em>, c'est normal. Gardez-les et utilisez-les.</p>
-<h3 id="vous-coincez">Vous coincez ?</h3>
-<p>Si vous avez des difficultés à répondre à la question, vous pouvez consulter les indices suivants :
-Les étapes de votre fonction devraient être :</p>
-<details>
-<summary>Indice 1</summary>
-Itérer sur les épisodes. Vous pouvez afficher chaque épisode pour valider que vous le faites.
-</details>
-<details>
-<summary>Indice 2</summary>
-Identifier les épisodes que vous n’avez pas vu. Vous pouvez n’afficher que ceux là lors de votre
-itération pour valider votre code.
-</details>
-<details>
-<summary>Indice 3</summary>
-Identifier le premier épisode qu’il vous reste à voir. N’affichez alors que celui-là ou mieux,
-écrivez le test qui démontre que que vous l'avez trouvé. La fonction retourne alors cet épisode.
-</details>
-<details>
-<summary>Indice 4</summary>
-Déterminer l’indice de cet épisode
-</details>
-<details>
-<summary>Indice 5</summary>
-Utiliser cet indice pour créer grâce au slicing une nouvelle liste des épisodes qu’il reste à voir.
-</details>
+<h1 id="structures-de-controle-les-boucles">Structures de contrôle : les boucles</h1>
+<h2 id="iteration-avec-for">Itération avec <code>for</code></h2>
+<h3 id="structure">Structure</h3>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">:</span>
+    <span class="n">do_something_with</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="usage">Usage</h3>
+<div class="highlight"><pre><span></span><code><span class="n">camelot</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;arthur&#39;</span><span class="p">,</span> <span class="s1">&#39;Merlin&#39;</span><span class="p">,</span> <span class="s1">&#39;Lancelot&#39;</span><span class="p">]</span>
 
-<h2 id="ma-soiree">Ma soirée…</h2>
-<p>J’ai à nouveau 2 heures ce soir et je souhaite regarder des épisodes qu'il me reste à voir. Je veux
-regarder le maximum d'épisodes en entier, c'est à dire que je dois finir l'épisode dans le temps
-disponible.</p>
-<p>Vous allez récupérer tous les épisodes d'une saison grâce à la fonction
-<code>get_season(show_name: str = None, user: str = None)</code>. Fournissez bien un paramètre <code>name</code> pour
-obtenir une liste d’épisodes avec l'information vus/non vus. Conservez cette collection dans une 
-variable.</p>
-<p>Obtenez la liste des épisodes qu’il me reste à voir grâce à la fonction de la première partie. 
-Utilisez une variable que vous appellerez <code>playlist</code> pour la référencer.</p>
-<p>Nous allons ensuite simuler le fonctionnement d’un media-center. Affichez le titre de l’épisode 
-suivant en le supprimant de la playlist. Répétez ceci pour autant d’épisodes que je peux regarder 
-en 2 heures.</p>
-<p>Consignes : commencez par résoudre le problème au plus simple. Si vous écrivez une fonction, soyez 
-cohérent dans le choix des paramètres.
-Vous pouvez afficher les listes en fin de programme pour valider le traitement.</p>
-<h2 id="evolution-un-peu-avancee">Évolution un peu avancée…</h2>
-<p>Lorsque vous supprimez un épisode de la playlist, basculez le flag vu/pas vu à <code>True</code> dans la liste 
-de référence.</p>
-<p><em>Indice</em> : rappelez-vous qu’en Python, tout est référence…</p>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">camelot</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</code></pre></div>
+<h3 id="iteration-en-suivant-lindice-diteration">Itération en suivant l'indice d'itération</h3>
+<p>Itération sur un <code>enumerate(sequence)</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">camelot</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</code></pre></div>
+<h3 id="repeter-une-action-n-fois">Répéter une action n fois</h3>
+<p>Itération sur le générateur <code>range(n)</code>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hip&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hourra !&#39;</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="iteration-avec-while">Itération avec while</h2>
+<h3 id="structure_1">Structure</h3>
+<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="n">do_something</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h2 id="interruptions">Interruptions</h2>
+<h3 id="interruption-de-literation">Interruption de l'itération</h3>
+<p>avec <code>continue</code> qui interrompt l'itération et passe à l'itération suivante.
+Structure :
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">:</span>
+    <span class="n">do_something_always</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="n">do_something_if_not_condition</span><span class="p">()</span>
+</code></pre></div></p>
+<h3 id="interruption-de-la-boucle">Interruption de la boucle</h3>
+<p>avec <code>break</code> qui interrompt l'itération et sort de la structure.
+Structure :
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">:</span>
+    <span class="n">do_something_always</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">do_something_but_not_in_last_iteration</span><span class="p">()</span>
+</code></pre></div></p>
+<h3 id="cas-de-la-recherche-dun-element">Cas de la recherche d'un élément</h3>
+<p>La clause <code>if else</code> permet de réaliser une action si un élement n'est pas trouvé.
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">found</span><span class="p">:</span>
+        <span class="n">do_something_for_found</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+        <span class="k">break</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">do_something_if_not_found</span><span class="p">()</span>
+</code></pre></div></p>
 
 
 
