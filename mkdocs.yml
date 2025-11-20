@@ -24,6 +24,7 @@ nav:
           - Les séquences: fr/memo/collections/sequences.md
           - Les listes: fr/memo/collections/listes.md
           - Chaines de caractères : fr/memo/collections/strings.md
+          - Les dictionnaires: fr/memo/collections/dictionnaires.md
       - Les fonctions: fr/memo/fonctions.md
       - Structures de contrôle - les conditionnelles: fr/memo/conditionnelles.md
       - Structures de contrôle - les boucles: fr/memo/boucles.md

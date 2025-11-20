@@ -63,6 +63,8 @@ Par indexation (*subscript*)
 'Karradoc'
 ```
 
+L'absence de l'indice lève une `IndexError`.
+
 ---
 ## Test élément dans séquence
 Avec le mot-clef `in`

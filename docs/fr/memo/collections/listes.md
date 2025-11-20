@@ -1,5 +1,9 @@
 # Les listes
 
+Cet aide mémoire complète celui des [séquences](sequences.md)
+
+De manière générale, l'absence de l'indice lorsqu'utilisé lève une `IndexError`.
+
 La liste de référence pour ces exemples est :
 ```python
 >>> camelot = ['Arthur', 'Merlin', 'Lancelot', 'Robin', 'Bohort', 'Perceval', 'Karradoc']
@@ -40,4 +44,5 @@ La liste de référence pour ces exemples est :
 >>> camelot
 ['Arthur', 'Merlin', 'Lancelot', 'Bedivere', 'Robin', 'Bohort', 'Perceval', 'Karradoc']
 ```
+
 

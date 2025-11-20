@@ -1,5 +1,7 @@
 # Les chaines de caractères
 
+Cet aide mémoire complète celui des [séquences](sequences.md)
+
 ## Généralités
 Vous pouvez consulter les différentes méthodes des chaînes de caractères avec :
 ```python
