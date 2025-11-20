@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../parametres_optionnels/">
+        <link rel="prev" href="../strings/">
       
       
-        <link rel="next" href="../exception_catch/">
+        <link rel="next" href="../../fonctions/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>Les exceptions (levée) - Python, les fondamentaux</title>
+        <title>Les dictionnaires - Python, les fondamentaux</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.618322db.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#la-levee-dexception" class="md-skip">
+        <a href="#les-dictionnaires" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Python, les fondamentaux" class="md-header__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
+    <a href="../../../.." title="Python, les fondamentaux" class="md-header__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Les exceptions (levée)
+              Les dictionnaires
             
           </span>
         </div>
@@ -190,7 +190,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Python, les fondamentaux" class="md-nav__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
+    <a href="../../../.." title="Python, les fondamentaux" class="md-nav__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -220,7 +220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -273,7 +273,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   
@@ -314,8 +314,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -335,11 +337,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -360,7 +362,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -375,8 +377,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -392,11 +396,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
@@ -417,7 +421,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -435,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/sequences/" class="md-nav__link">
+      <a href="../sequences/" class="md-nav__link">
         
   
   
@@ -463,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/listes/" class="md-nav__link">
+      <a href="../listes/" class="md-nav__link">
         
   
   
@@ -491,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/strings/" class="md-nav__link">
+      <a href="../strings/" class="md-nav__link">
         
   
   
@@ -516,10 +520,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../memo/collections/dictionnaires/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les dictionnaires
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -535,6 +566,114 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Création
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taille-du-dictionnaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taille du dictionnaire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tester-lexistence-dune-clef" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tester l'existence d'une clef
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acces-a-un-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accès à un élément
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remplacement-dun-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remplacement d'un élément
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajout-dun-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ajout d'un élément
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suppression-dun-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suppression d'un élément
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suppression-et-retour-dun-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suppression et retour d'un élément
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -555,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/fonctions/" class="md-nav__link">
+      <a href="../../fonctions/" class="md-nav__link">
         
   
   
@@ -583,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/conditionnelles/" class="md-nav__link">
+      <a href="../../conditionnelles/" class="md-nav__link">
         
   
   
@@ -611,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/boucles/" class="md-nav__link">
+      <a href="../../boucles/" class="md-nav__link">
         
   
   
@@ -639,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/poo/" class="md-nav__link">
+      <a href="../../poo/" class="md-nav__link">
         
   
   
@@ -691,7 +830,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../memo/tests/" class="md-nav__link ">
+            <a href="../../tests/" class="md-nav__link ">
               
   
   
@@ -735,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/tests/bases/" class="md-nav__link">
+      <a href="../../tests/bases/" class="md-nav__link">
         
   
   
@@ -763,7 +902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/tests/parametrized_tests/" class="md-nav__link">
+      <a href="../../tests/parametrized_tests/" class="md-nav__link">
         
   
   
@@ -791,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/tests/fixtures/" class="md-nav__link">
+      <a href="../../tests/fixtures/" class="md-nav__link">
         
   
   
@@ -832,8 +971,6 @@
                 
   
   
-    
-  
   
   
     
@@ -853,15 +990,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../activities/" class="md-nav__link ">
               
   
   
@@ -885,7 +1022,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -902,10 +1039,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -939,11 +1074,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
         
           
           <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
@@ -964,7 +1099,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -982,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../discovery/" class="md-nav__link">
+      <a href="../../../activities/discovery/" class="md-nav__link">
         
   
   
@@ -1010,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../listes_1/" class="md-nav__link">
+      <a href="../../../activities/listes_1/" class="md-nav__link">
         
   
   
@@ -1038,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../conditionnelles_1/" class="md-nav__link">
+      <a href="../../../activities/conditionnelles_1/" class="md-nav__link">
         
   
   
@@ -1066,7 +1201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fonctions_introduction/" class="md-nav__link">
+      <a href="../../../activities/fonctions_introduction/" class="md-nav__link">
         
   
   
@@ -1094,7 +1229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../conditionnelles_2/" class="md-nav__link">
+      <a href="../../../activities/conditionnelles_2/" class="md-nav__link">
         
   
   
@@ -1122,7 +1257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dictionnaires/" class="md-nav__link">
+      <a href="../../../activities/dictionnaires/" class="md-nav__link">
         
   
   
@@ -1150,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../listes_2/" class="md-nav__link">
+      <a href="../../../activities/listes_2/" class="md-nav__link">
         
   
   
@@ -1178,7 +1313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autres_fonctions/" class="md-nav__link">
+      <a href="../../../activities/autres_fonctions/" class="md-nav__link">
         
   
   
@@ -1206,7 +1341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parametres_optionnels/" class="md-nav__link">
+      <a href="../../../activities/parametres_optionnels/" class="md-nav__link">
         
   
   
@@ -1231,37 +1366,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Les exceptions (levée)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../activities/exception_raise/" class="md-nav__link">
         
   
   
@@ -1277,59 +1385,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#aide-memoire" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Aide mémoire
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fichiers-de-travail" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fichiers de travail
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercice
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1342,7 +1397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exception_catch/" class="md-nav__link">
+      <a href="../../../activities/exception_catch/" class="md-nav__link">
         
   
   
@@ -1370,7 +1425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strings/" class="md-nav__link">
+      <a href="../../../activities/strings/" class="md-nav__link">
         
   
   
@@ -1398,7 +1453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../boucles/" class="md-nav__link">
+      <a href="../../../activities/boucles/" class="md-nav__link">
         
   
   
@@ -1485,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../list_comprehension/" class="md-nav__link">
+      <a href="../../../activities/list_comprehension/" class="md-nav__link">
         
   
   
@@ -1572,7 +1627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../modele_objet/" class="md-nav__link">
+      <a href="../../../activities/modele_objet/" class="md-nav__link">
         
   
   
@@ -1671,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pyflix/" class="md-nav__link">
+      <a href="../../../pyflix/" class="md-nav__link">
         
   
   
@@ -1699,7 +1754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vscode/" class="md-nav__link">
+      <a href="../../../vscode/" class="md-nav__link">
         
   
   
@@ -1727,7 +1782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/loggers/" class="md-nav__link">
+      <a href="../../loggers/" class="md-nav__link">
         
   
   
@@ -1788,7 +1843,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../en/" class="md-nav__link ">
+            <a href="../../../../en/" class="md-nav__link ">
               
   
   
@@ -1854,10 +1909,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aide-memoire" class="md-nav__link">
+  <a href="#creation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aide mémoire
+        Création
       
     </span>
   </a>
@@ -1865,10 +1920,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fichiers-de-travail" class="md-nav__link">
+  <a href="#taille-du-dictionnaire" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fichiers de travail
+        Taille du dictionnaire
       
     </span>
   </a>
@@ -1876,10 +1931,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercice" class="md-nav__link">
+  <a href="#tester-lexistence-dune-clef" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exercice
+        Tester l'existence d'une clef
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acces-a-un-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accès à un élément
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remplacement-dun-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remplacement d'un élément
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajout-dun-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ajout d'un élément
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suppression-dun-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suppression d'un élément
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suppression-et-retour-dun-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suppression et retour d'un élément
       
     </span>
   </a>
@@ -1906,21 +2016,55 @@
   
 
 
-<h1 id="la-levee-dexception">La levée d'exception</h1>
-<h2 id="aide-memoire">Aide mémoire</h2>
-<p>Lever une exception se fait par appel à l'instruction <code>raise</code> :
-<div class="highlight"><pre><span></span><code><span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;un message d&#39;</span><span class="n">erreur</span><span class="s1">&#39;)</span>
+<h1 id="les-dictionnaires">Les dictionnaires</h1>
+<h2 id="creation">Création</h2>
+<div class="highlight"><pre><span></span><code><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;key_1&#39;</span><span class="p">:</span> <span class="s1">&#39;value_1&#39;</span><span class="p">,</span> <span class="s1">&#39;key_2&#39;</span><span class="p">:</span> <span class="s1">&#39;value_2&#39;</span><span class="p">}</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">key_1</span><span class="o">=</span><span class="s1">&#39;value_1&#39;</span><span class="p">,</span> <span class="n">key_2</span><span class="o">=</span><span class="s1">&#39;value_2&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>Par la suite, le dictionnaire de référence pour ces exemples est :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;king&#39;</span><span class="p">:</span> <span class="s1">&#39;Arthur&#39;</span><span class="p">,</span> <span class="s1">&#39;wizard&#39;</span><span class="p">:</span> <span class="s1">&#39;Merlin&#39;</span><span class="p">}</span>
 </code></pre></div></p>
-<p>Vous trouverez la liste des exceptions sur <a href="https://docs.python.org/3/library/exceptions.html">la page de la documentation des exceptions</a>.</p>
-<h2 id="fichiers-de-travail">Fichiers de travail</h2>
-<p>Pour les exercices de cet énoncé, vous allez travailler avec le fichier contenant la fonction
-<code>add_to_playlist()</code>.</p>
-<h2 id="exercice">Exercice</h2>
-<p>Nous allons ajouter une petite validation à cette fonction. Elle ne doit ajouter que des 
-dictionnaires représentant des épisodes soit des dictionnaires possédant la clef <code>"title"</code>. </p>
-<p>Commencez par modifier votre fonction pour qu’elle adopte ce comportement.</p>
-<p>Le code appelant doit savoir que l'ajout n'a pas été fait. Faites donc lever une exception dans ce 
-cas.</p>
+<h2 id="taille-du-dictionnaire">Taille du dictionnaire</h2>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">camelot</span><span class="p">)</span>
+<span class="mi">2</span>
+</code></pre></div>
+<h2 id="tester-lexistence-dune-clef">Tester l'existence d'une clef</h2>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;king&quot;</span> <span class="ow">in</span> <span class="n">camelot</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;queen&quot;</span> <span class="ow">in</span> <span class="n">camelot</span>
+<span class="kc">False</span>
+</code></pre></div>
+<h2 id="acces-a-un-element">Accès à un élément</h2>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="p">[</span><span class="s1">&#39;king&#39;</span><span class="p">]</span>
+<span class="s1">&#39;Pendragon&#39;</span>
+</code></pre></div>
+<p>L'absence de la clef lève une <code>KeyError</code>.</p>
+<h2 id="remplacement-dun-element">Remplacement d'un élément</h2>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="p">[</span><span class="s1">&#39;king&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Pendragon&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span>
+<span class="p">{</span><span class="s1">&#39;king&#39;</span><span class="p">:</span> <span class="s1">&#39;Pendragon&#39;</span><span class="p">,</span> <span class="s1">&#39;wizard&#39;</span><span class="p">:</span> <span class="s1">&#39;Merlin&#39;</span><span class="p">}</span>
+</code></pre></div>
+<p>L'absence de la clef entraine sa création.</p>
+<h2 id="ajout-dun-element">Ajout d'un élément</h2>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; camelot[&#39;knights&#39;] = []
+&gt;&gt;&gt; camelot
+{&#39;king&#39;: &#39;Arthur&#39;, &#39;wizard&#39;: &#39;Merlin&#39;, &#39;knights&#39;: []}
+</code></pre></div>
+<h2 id="suppression-dun-element">Suppression d'un élément</h2>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">del</span> <span class="n">camelot</span><span class="p">[</span><span class="s1">&#39;wizard&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span>
+<span class="p">{</span><span class="s1">&#39;king&#39;</span><span class="p">:</span> <span class="s1">&#39;Arthur&#39;</span><span class="p">}</span>
+</code></pre></div>
+<p>L'absence de la clef lève une <code>KeyError</code>.</p>
+<h2 id="suppression-et-retour-dun-element">Suppression et retour d'un élément</h2>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;wizard&#39;</span><span class="p">)</span>
+<span class="s1">&#39;Merlin&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span>
+<span class="p">{</span><span class="s1">&#39;king&#39;</span><span class="p">:</span> <span class="s1">&#39;Arthur&#39;</span><span class="p">}</span>
+</code></pre></div>
 
 
 
@@ -1970,10 +2114,10 @@ cas.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>
