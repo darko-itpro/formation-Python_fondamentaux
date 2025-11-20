@@ -1,7 +1,7 @@
 # A Python Training - Les fondamentaux
 
 This is the practical cases for Python training I provide. Intended for french trainee, the rest of 
-the explanations are in French.
+the explanations are in French. [English](README_en.md)
 
 Ce référentiel complète la formation que je propose et est donc destiné à mes stagiaires.
 
@@ -162,6 +162,39 @@ Pour le lancer, vous devez exécuter :
 ```
 jupyter-lab
 ```
+
+## Documentation
+Un bon projet est accompagné d'une bonne documentation… Dans le cadre de ce projet, la 
+documentation est générée par [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). 
+L'ensemble des fichiers de documentation sont dans le répertoire `docs/` et sont au format rst. Vous
+pouvez donc consulter les documents directement dans vos IDEs, PyCharm et VS Code ont un panneau 
+de prévisualisation.
+
+### Consulter la documentation de manière dynamique
+Mkdocs propose un serveur web local qui permet de consulter la doc de manière dynamique.
+
+Après vous êtes assuré d'avoir installé les dépendances (`mkdocs-material`qui est dans le fichier 
+`requirements_xtra.txt`), dans une invite de commande, exécutez :
+
+```shell
+mkdocs serve
+```
+
+Le log de lancement vous indiquera à quelle adresse vous pouvez consulter la doc (normalement, 
+`http://127.0.0.1:8000/`).
+
+Si vous souhiatez la modifier et voir la mise à jour de vos documents, exécutez :
+```shell
+mkdocs serve --livereload
+```
+
+### Créer localement le site de documentation
+Vous pouvez générer le site de documentation avec la commande :
+```shell
+mkdocs build
+```
+
+L'ensemble des fichiers sera disponible dans le répertoire `site/`.
 
 ## Dépendances du projet
 Un projet Python est accompagné d'un fichier `requirements.txt` déclarant les dépendances de
