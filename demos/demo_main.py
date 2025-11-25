@@ -5,7 +5,7 @@ episode_not_viewed = ['Installing the softwares', 2, 42, False]
 #import demos.episode_util
 #demos.episode_util.is_viewed(episode_viewed)
 
-from demos import episode_util
+from demos import episode_util_legacy
 episode_util.is_viewed(episode_not_viewed)
 
 #import demos.episode_util as eu
