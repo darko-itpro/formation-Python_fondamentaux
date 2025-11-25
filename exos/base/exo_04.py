@@ -1,5 +1,5 @@
 
 def is_viewed(episode:list):
 
-    return episode[3]
+    return bool(episode[3])
 
