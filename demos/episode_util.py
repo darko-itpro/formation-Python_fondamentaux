@@ -1,3 +1,4 @@
+
 def is_viewed(episode:list):
 
     viewed = episode[3]
@@ -6,3 +7,6 @@ def is_viewed(episode:list):
     else:
         print("pas vu")
 
+if __name__ == "__main__":
+    print("It worked")
+    print(__name__)
