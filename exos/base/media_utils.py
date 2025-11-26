@@ -8,9 +8,15 @@ def is_viewed(episode:dict):
     :param episode: explication du paramètre
     :return: explication du retour
     """
-    return "viewed" in episode and bool(episode["viewed"])
+    try:
+        return bool(episode["viewed"])
+    except KeyError:
+        return False
 
 def add_to_playlist(episode: dict, playlist:list=None):
+    if "title" not in episode:
+        raise ValueError("This is not an episode")
+
     if playlist is None:
         playlist = []
     playlist = playlist.copy()

@@ -1,4 +1,10 @@
+import pytest
 from exos.base.media_utils import add_to_playlist
+
+def test_episode_without_title_must_raise():
+    episode = {"duration": 28}
+    with pytest.raises(ValueError):
+        add_to_playlist(episode, [])
 
 
 def test_without_playlist():
