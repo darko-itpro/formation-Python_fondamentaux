@@ -1,2 +1,2 @@
 def is_viewed(episode:dict):
-    return bool(episode["viewed"])
+    return "viewed" in episode and bool(episode["viewed"])
