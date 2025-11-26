@@ -1,15 +1,17 @@
+import pytest
 from exos.base.media_utils import is_viewed
 
-def test_is_viewed_as_bool():
-    episode = {"title": "The Conjugal Configuration", "duration": 20, "viewed": True}
-    assert is_viewed(episode) is True
+test_data = [
+    ({"title": "The Conjugal Configuration", "duration": 20, "viewed": True}, True),
+    ({"title": "The Conjugal Configuration", "duration": 20, "viewed": False}, False),
+    ({"title": "The Conjugal Configuration", "duration": 20, "viewed": 3}, True),
+    ({"title": "The Conjugal Configuration", "duration": 20, "viewed": 3, "year": 2019}, True),
+    ({"title": "The Conjugal Configuration", "duration": 20, "viewed": 0}, False),
+    ({"title": "The Conjugal Configuration", "duration": 20}, False),
+    ({"title": "The Conjugal Configuration", "duration": 20, "year":2018}, False),
+]
 
-#{"title": "The Conjugal Configuration", "duration": 20, "viewed": 3}
-#{"title": "The Conjugal Configuration", "duration": 20, "viewed": 3, "year": 2019}
 
-def test_is_not_viewed_as_bool():
-    episode = {"title": "The Conjugal Configuration", "duration": 20, "viewed": False}
-    assert is_viewed(episode) is False
-#{"title": "The Conjugal Configuration", "duration": 20, "viewed": 0}
-#{"title": "The Conjugal Configuration", "duration": 20}
-#{"title": "The Conjugal Configuration", "duration": 20, "year":2018}
+@pytest.mark.parametrize("episode, expected_viewed", test_data)
+def test_is_viewed(episode, expected_viewed):
+    assert is_viewed(episode) is expected_viewed
