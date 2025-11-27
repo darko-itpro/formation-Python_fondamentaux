@@ -32,7 +32,14 @@ def test_add_first_episode(tvshow):
     assert len(tvshow.episodes) == 1
     assert tvshow.episodes[0].title == "title 1"
 
-def test_duplicate_episode_must_raise(tvshow, add_one_episode):
+
+def test_add_second_episode(tvshow, add_one_episode):
+    tvshow.add_episode("title other", 2, 2)
+    assert len(tvshow.episodes) == 2
+
+
+def test_duplicate_episode_must_raise(tvshow):
+    tvshow.add_episode("title 1", 1, 1)
     with pytest.raises(ValueError):
         tvshow.add_episode("title 1", 1, 1)
 
