@@ -1,10 +1,10 @@
 import pytest
-from exos.pyflix.mediatheque import TvShow
+from exos.pyflix.mediatheque import TvShow, Episode
 
 def test_create_tvshow():
     tv = TvShow("My Show")
 
-    assert tv.title == "My Show"
+    assert tv.name == "My Show"
     assert len(tv.episodes) == 0
 
 
@@ -42,4 +42,3 @@ def test_duplicate_episode_must_raise(tvshow):
     tvshow.add_episode("title 1", 1, 1)
     with pytest.raises(ValueError):
         tvshow.add_episode("title 1", 1, 1)
-
