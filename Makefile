@@ -8,3 +8,4 @@ setup:
 clean:
 	rm -rf data
 	rm -rf site
+	rm file.log
