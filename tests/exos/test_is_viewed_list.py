@@ -1,3 +1,4 @@
+import pytest
 from exos.base.episode_utils import is_viewed
 
 def test_episode_viewed():
