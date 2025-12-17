@@ -15,4 +15,11 @@ if __name__ == '__main__':
 
     print(duration(bbt_s12, EPISODE_DURATION))
 
-    pprint(get_next_episodes(bbt_s12, EPISODE_DURATION, remaining_duration))
+    #pprint(get_next_episodes(bbt_s12, EPISODE_DURATION, remaining_duration))
+
+    playlist = bbt_s12.copy()
+    print(playlist.pop(0))
+    print(duration(playlist, EPISODE_DURATION), duration(bbt_s12, EPISODE_DURATION))
+
+    print(id(bbt_s12) == id(playlist))
+    print(bbt_s12 is playlist)
