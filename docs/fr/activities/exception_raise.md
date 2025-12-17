@@ -3,7 +3,7 @@
 ## Aide mémoire
 Lever une exception se fait par appel à l'instruction `raise` :
 ```python
-raise ValueError('un message d'erreur')
+raise ValueError("un message d'erreur")
 ```
 
 Vous trouverez la liste des exceptions sur [la page de la documentation des exceptions](https://docs.python.org/3/library/exceptions.html).
@@ -13,10 +13,8 @@ Pour les exercices de cet énoncé, vous allez travailler avec le fichier conten
 `add_to_playlist()`.
 
 ## Exercice
-Nous allons ajouter une petite validation à cette fonction. Elle ne doit ajouter que des 
-dictionnaires représentant des épisodes soit des dictionnaires possédant la clef `"title"`. 
+Dans [l'exercice sur les listes](listes_2.md), vous avez créé une fonction calculant la durée d'une
+liste d'épisode. Cette fonction prends en paramètres la liste et la durée des épisodes.
 
-Commencez par modifier votre fonction pour qu’elle adopte ce comportement.
-
-Le code appelant doit savoir que l'ajout n'a pas été fait. Faites donc lever une exception dans ce 
-cas.
+Cette durée doit être positive. Modifiez la fonction pour que si une durée négative ou nulle est 
+passée, la fonction lève une exception de type `ValueError`. 

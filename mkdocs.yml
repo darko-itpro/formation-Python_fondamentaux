@@ -44,8 +44,6 @@ nav:
           - Les conditionnelles (2): fr/activities/conditionnelles_2.md
           - Les dictionnaires: fr/activities/dictionnaires.md
           - Les listes (2): fr/activities/listes_2.md
-          - D'autres fonctions: fr/activities/autres_fonctions.md
-          - Les paramètres optionnels: fr/activities/parametres_optionnels.md
           - Les exceptions (levée): fr/activities/exception_raise.md
           - Les exceptions (capture): fr/activities/exception_catch.md
           - Formatage des chaînes de caractères: fr/activities/strings.md
