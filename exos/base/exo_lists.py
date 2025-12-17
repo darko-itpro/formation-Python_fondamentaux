@@ -3,6 +3,8 @@ import pyflix.datasource as ds
 
 
 def duration(episodes:list, duration:int):
+    if duration < 0:
+        raise ValueError('duration must be positive')
     return len(episodes) * duration
 
 def get_next_episodes(episodes:list, episode_duration:int, max_duration):
