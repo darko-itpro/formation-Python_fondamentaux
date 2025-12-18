@@ -1,7 +1,6 @@
 import pytest
-from pip._internal.commands import show
 
-from exos.pyflix.mediatheque import TvShow
+from exos.pyflix.mediatheque import TvShow, Episode
 
 def test_create_show():
     show = TvShow("my show")
@@ -21,3 +20,4 @@ def test_duplicate_episode_must_raise():
 
     with pytest.raises(ValueError):
         show.add_episode("title", 1, 1)
+
