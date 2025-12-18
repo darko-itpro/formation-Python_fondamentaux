@@ -10,4 +10,15 @@ class Episode:
 
 
 class TvShow:
-    pass
+    def __init__(self, name:str):
+        self.name = name
+        self.episodes = []
+
+    def add_episode(self, title: str, season_number: int, number: int,
+                          duration: int = None, year: int = None):
+        new_episode = Episode(title, season_number, number, duration, year)
+
+        if new_episode in self.episodes:
+            raise ValueError('Duplicate episode')
+
+        self.episodes.append(new_episode)

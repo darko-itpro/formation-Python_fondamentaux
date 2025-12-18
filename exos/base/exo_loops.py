@@ -10,6 +10,14 @@ def get_first_unseen_episode(episodes:list) -> int:
             return index
 
 def get_playlist_from(episodes:list):
+    """
+    Get a playlist starting at first unseen from a list of episodes.
+
+    Lorem ipsum
+
+    :param episodes: A list of episodes as dictionaries
+    :return:
+    """
     return episodes[get_first_unseen_episode(episodes):]
 
 def watch_episodes(episodes:list, max_duration:int):
