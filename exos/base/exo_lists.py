@@ -4,13 +4,14 @@ import pyflix.datasource as ds
 
 def duration(episodes:list, duration:int):
     if duration < 0:
-        raise ValueError('duration must be positive')
+        raise ValueError(f'duration must be positive, got {duration}')
     return len(episodes) * duration
 
 def get_next_episodes(episodes:list, episode_duration:int, max_duration):
     return episodes[:max_duration // episode_duration]
 
 if __name__ == '__main__':
+    duration([], -2)
     bbt_s12 = ds.get_season()
     EPISODE_DURATION = 23
     remaining_duration = 120

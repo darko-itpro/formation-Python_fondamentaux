@@ -31,6 +31,6 @@ class TvShow:
         new_episode = Episode(title, season_number, number, duration, year)
 
         if new_episode in self._episodes:
-            raise ValueError('Duplicate episode')
+            raise ValueError(f'Episode s{season_number}e{number} already exists')
 
         self._episodes.append(new_episode)
