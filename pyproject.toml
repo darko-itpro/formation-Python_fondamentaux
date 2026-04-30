@@ -12,7 +12,7 @@ license = "GPL-3.0-or-later"
 
 
 dependencies = [
-    "jupyterlab>=4.4,<4.5",
+    "jupyterlab>=4.5.7,<4.6",
     "pytz>=2022.7.1",
     "questionary>=2.1",
     "rich>=13.6.0",
