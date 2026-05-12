@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../parametres_optionnels/">
+        <link rel="prev" href="../listes_2/">
       
       
         <link rel="next" href="../exception_catch/">
@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -931,10 +931,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -1175,62 +1171,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../autres_fonctions/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    D'autres fonctions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../parametres_optionnels/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Les paramètres optionnels
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1298,17 +1238,6 @@
     <span class="md-ellipsis">
       
         Aide mémoire
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fichiers-de-travail" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fichiers de travail
       
     </span>
   </a>
@@ -1438,6 +1367,8 @@
       
         
       
+        
+      
     
     
     
@@ -1493,6 +1424,34 @@
     
   
     Les List Comprehension
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les dates
   
 
     
@@ -1865,17 +1824,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fichiers-de-travail" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fichiers de travail
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#exercice" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1909,18 +1857,14 @@
 <h1 id="la-levee-dexception">La levée d'exception</h1>
 <h2 id="aide-memoire">Aide mémoire</h2>
 <p>Lever une exception se fait par appel à l'instruction <code>raise</code> :
-<div class="highlight"><pre><span></span><code><span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;un message d&#39;</span><span class="n">erreur</span><span class="s1">&#39;)</span>
+<div class="highlight"><pre><span></span><code><span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;un message d&#39;erreur&quot;</span><span class="p">)</span>
 </code></pre></div></p>
 <p>Vous trouverez la liste des exceptions sur <a href="https://docs.python.org/3/library/exceptions.html">la page de la documentation des exceptions</a>.</p>
-<h2 id="fichiers-de-travail">Fichiers de travail</h2>
-<p>Pour les exercices de cet énoncé, vous allez travailler avec le fichier contenant la fonction
-<code>add_to_playlist()</code>.</p>
 <h2 id="exercice">Exercice</h2>
-<p>Nous allons ajouter une petite validation à cette fonction. Elle ne doit ajouter que des 
-dictionnaires représentant des épisodes soit des dictionnaires possédant la clef <code>"title"</code>. </p>
-<p>Commencez par modifier votre fonction pour qu’elle adopte ce comportement.</p>
-<p>Le code appelant doit savoir que l'ajout n'a pas été fait. Faites donc lever une exception dans ce 
-cas.</p>
+<p>Dans <a href="../listes_2/">l'exercice sur les listes</a>, vous avez créé une fonction calculant la durée d'une
+liste d'épisode. Cette fonction prends en paramètres la liste et la durée des épisodes.</p>
+<p>Cette durée doit être positive. Modifiez la fonction pour que si une durée négative ou nulle est 
+passée, la fonction lève une exception de type <code>ValueError</code>. </p>
 
 
 
@@ -1970,10 +1914,10 @@ cas.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
