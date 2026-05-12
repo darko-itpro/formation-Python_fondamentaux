@@ -8,10 +8,6 @@ raise ValueError("un message d'erreur")
 
 Vous trouverez la liste des exceptions sur [la page de la documentation des exceptions](https://docs.python.org/3/library/exceptions.html).
 
-## Fichiers de travail
-Pour les exercices de cet énoncé, vous allez travailler avec le fichier contenant la fonction
-`add_to_playlist()`.
-
 ## Exercice
 Dans [l'exercice sur les listes](listes_2.md), vous avez créé une fonction calculant la durée d'une
 liste d'épisode. Cette fonction prends en paramètres la liste et la durée des épisodes.

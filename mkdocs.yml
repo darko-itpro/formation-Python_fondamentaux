@@ -50,6 +50,7 @@ nav:
           - Les boucles: fr/activities/boucles.md
         - Plus spécialisé:
           - Les List Comprehension: fr/activities/list_comprehension.md
+          - Les dates: fr/activities/dates.md
         - L'objet:
           - Notre modèle objet: fr/activities/modele_objet.md
     - Informations complémentaires:

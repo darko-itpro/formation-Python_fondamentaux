@@ -34,12 +34,7 @@ Un petit calcul de vitesse. J’ai parcouru **19, 7 mètres** en **6,892 seconde
 vitesse avec son unité en imposant deux chiffres après le point décimal.
 
 ---
-## Second exercice
-Reprenez votre fonction levant une exception et mettez à jour le message d'erreur lors de la levée 
-de l'exception pour être plus informatif.
-
----
-## Troisième exercice
+## Deuxième exercice
 Vous aurez besoin du package [pyflix](../pyflix.md)
 
 Je veux déterminer à quelle heure j'irai me coucher après avoir regardé quelques épisodes de ma 
