@@ -17,7 +17,7 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 nav:
   - Home: index.md
-  - En français:
+  - 🇫🇷 En français:
     - fr/index.md
     - Aides mémoire:
       - Les collections:
@@ -58,6 +58,12 @@ nav:
         - Configuration du PYTHONPATH dans VSCode: fr/vscode.md
         - Les loggers: fr/memo/loggers.md
 
-  - In English:
+  - 🇬🇧 In English:
     - en/index.md
+    - Activities:
+        - en/activities/index.md
+        - Basics:
+            - Discovering the language: en/activities/discovery.md
+            - Lists (1): en/activities/lists_1.md
+            - Conditional statements (1): en/activities/conditional_statement_1.md
 
