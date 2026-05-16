@@ -3,7 +3,7 @@
 ## Aide mémoire
 Lever une exception se fait par appel à l'instruction `raise` :
 ```python
-raise ValueError("un message d'erreur")
+raise ValueError("un message de ce qui s'est mal passé")
 ```
 
 Vous trouverez la liste des exceptions sur [la page de la documentation des exceptions](https://docs.python.org/3/library/exceptions.html).

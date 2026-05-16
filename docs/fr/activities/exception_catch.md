@@ -4,7 +4,7 @@
 Capturer une exception se fait avec la structure :
 ```python
 try:
-    …
+    ...
 except ValueError:
     do_something_for_exception()
 ```
@@ -14,7 +14,7 @@ Ici, le code sait gérer une `ValueError`.
 La clause `finally` permet d'exécuter du code dans tous les cas.
 ```python
 try:
-    …
+    ...
 except ValueError:
     do_something_for_exception()
 finally:

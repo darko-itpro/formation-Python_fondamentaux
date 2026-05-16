@@ -1,37 +1,41 @@
 # Les dictionnaires
 
-Après la mise en production, nous avons découvert qu'il pouvait y avoir deux structures de données
-pour un épisode **non vu** :
+Jusqu'ici, nous avons travaillé avec des données où un épisode est représenté sous forme d'une 
+liste. Mais nous avons vu que certaines données peuvent manquer. Imaginons que nous puissions avoir
+l'information de l'année de production en 5ème position, lorsque l'information vu/pas vu est 
+absente, cela peut être ingérable :
 
 ```python
 episode_not_viewed = ["The new Project", 1, 98, 0]
 episode_not_viewed = ['Installing the softwares', 2, 42]
+episode_not_viewed_with_year = ["The new Project", 1, 98, 0, 2026]
+episode_not_viewed_with_year = ['Installing the softwares', 2, 42, 2026]
 ```
 
-La première contient un entier représentant le nombre de vus en quatrième position et le second n’a
-que 3 valeurs. Le problème vient de sources de données différentes.
-
-Si vous utilisez cette seconde donnée avec votre fonction, elle lèvera une exception.
-
 Une représentation de données sous forme de liste est obtenue dans certains cas comme lors de la
-lecture de fichiers CSV ou l’interrogation de bases de données. Mais cette structure est
-"peu pratique". Aussi, nous allons travailler sur des données structurées en dictionnaires.
-La donnée a été chargée sous forme de liste par un parser qui connait la source et la transformera
-en dictionnaire.
+lecture de fichiers CSV ou l’interrogation de bases de données. Mais nous avons alors encore 
+l'information des _colonnes_. Pour gérer les données, cette structure est "peu pratique".
+
+Nous allons travailler sur des données structurées en dictionnaires. La donnée a été chargée sous 
+forme de liste par un parser qui connait la source et la transformera en dictionnaire.
 
 La structure de la donnée sera la suivante :
 
 ```python
 {"title": "The Conjugal Configuration",
  "duration": 20,
- "viewed": 0}
+ "viewed": 0,
+ "year": 2026
+}
 ```
+
+Ainsi, une donnée peut être abente, nous le saurons par absence de sa clef.
 
 ## Fichiers de travail
 Dans un cas réel, nous serions en train de faire une évolution pour remplacer le contenu de
-`exos\media_utils.py` par un traitement à l'aide de dictionnaires. Dans le cadre d'une formation,
-afin de conserver les exercices que vous avez réalisé, renommez ce fichier en
-`exos\media_utils_legacy.py` ainsi que les tests associés. N'oubliez pas de mettre à jour les
+`exos/bases/media_utils.py` par un traitement à l'aide de dictionnaires. Dans le cadre d'une formation,
+afin de conserver les exercices que vous avez réalisés, renommez ce fichier en
+`exos/bases/media_utils_legacy.py` ainsi que les tests associés. N'oubliez pas de mettre à jour les
 import si votre IDE ne vous assiste pas.
 
 ## Exercices
@@ -39,8 +43,8 @@ import si votre IDE ne vous assiste pas.
 Commencer par nous faire la main sur cette donnée. Recopiez cette donnée dans un shell intéractif ou
 un script de brouillon pour faire quelques actions :
 
-Affichez le titre.
-Modifiez son statut (il doit devenir "vu") et affichez la donnée. Bien que le statut "vu/non vu"
+ * Affichez le titre.
+ * Modifiez son statut (il doit devenir "vu") et affichez la donnée. Bien que le statut "vu/non vu"
 est un booléen, anticipez qu'il puisse être autre chose.
 
 ### Une fonction pour le statut

@@ -5,7 +5,7 @@ Les deux exercices sont indépendants.
 ## Fichiers de travail
 Pour les exercices de cet énoncé, vous allez travailler avec les fichiers suivants :
 
- * `exos/media_utils.py` que vous avez créé précédemment (il est possible que durant la formation
+ * `exos/base/media_utils.py` que vous avez créé précédemment (il est possible que durant la formation
    un autre nom soit choisi).
 
 ## Exercice

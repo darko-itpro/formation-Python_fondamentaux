@@ -66,4 +66,11 @@ nav:
             - Discovering the language: en/activities/discovery.md
             - Lists (1): en/activities/lists_1.md
             - Conditional statements (1): en/activities/conditional_statement_1.md
-
+            - Functions, an introduction: en/activities/functions_introduction.md
+            - Conditional statements (2): en/activities/conditional_statement_2.md
+            - Dictionaries: en/activities/dictionaries.md
+            - Lists (2): en/activities/lists_2.md
+            - Exceptions (raise): en/activities/exception_raise.md
+            - Exceptions (catch): en/activities/exception_catch.md
+            - String formatting : en/activities/strings.md
+            - Loops : en/activities/loops.md

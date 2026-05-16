@@ -1,6 +1,6 @@
 # Conditional statements
 
-## Cheat sheet
+## Quick Reference
 The basic form of a conditional statement is
 
 ```python

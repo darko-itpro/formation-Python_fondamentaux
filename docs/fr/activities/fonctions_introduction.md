@@ -15,11 +15,11 @@ défaut `None`.
 ## Fichiers de travail
 Pour les exercices de cet énoncé, vous allez reprendre le contenu des deux fichiers suivants :
 
- * `exos/exo_03_01.py` sur lequel vous avez travaillé.
- * `exos/exo_03_02.py` sur lequel vous avez travaillé.
- * `exos/exo_04.py` que vous allez créer
+ * `exos/base/exo_03_01.py` sur lequel vous avez travaillé.
+ * `exos/base/exo_03_02.py` sur lequel vous avez travaillé.
+ * `exos/base/exo_04.py` que vous allez créer
 
-Après avoir créé le fichier `exos/exo_04.py`, recopiez-y les données des fichiers précédents. Vous
+Après avoir créé le fichier `exos/base/exo_04.py`, recopiez-y les données des fichiers précédents. Vous
 devrez renommer un des couples pour différencier celles avec un booléen de celles avec un entier.
 
 ## Création d’une fonction

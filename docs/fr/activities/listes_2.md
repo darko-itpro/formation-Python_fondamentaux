@@ -1,4 +1,4 @@
-# Les listes
+# Les listes, seconde partie
 
 ## Avant de commencer
 Pour cet exercice (et certains exercices suivants), vous aurez besoin d'une ressource 
@@ -11,6 +11,14 @@ allons donc gérer un catalogue.
 Le module `pyflix.datasource`  contient une fonction nommée `get_season()` qui retourne la liste des
 titre des épisodes de la saison 12 de Big Bang Theory. Nous allons extraire des informations de
 cette liste.
+
+La manière la plus simple d'utiliser cette fonction est la suivante :
+
+```python
+import pyflix.datasource as ds
+
+ds.get_season()
+```
 
 Pour l'utilisation de cette fonction, vous pouvez consulter
 [la page dédiée du wiki](https://github.com/darko-itpro/pyschool-lib/wiki/Le-module-pyflix.datasource)
@@ -49,10 +57,10 @@ Nous voulons obtenir une liste des premiers épisodes dont la durée totale est 
 une durée.
 
 Pour cela, vous devez créer une fonction avec comme paramètre (au moins) une liste d’épisodes
-(liste_ep) et cette durée maximum (d_max). Cette fonction doit retourner la liste des N premiers
-épisodes de liste_ep où N est le nombre maximum d’épisodes à regarder. N étant un maximum.
+(`liste_ep`) et cette durée maximum (`d_max`). Cette fonction doit retourner la liste des N premiers
+épisodes de `liste_ep` où N est le nombre maximum d’épisodes à regarder. N étant un maximum.
 
-Note : "liste_ep" et "d_max" sont utilisées ici pour référencer les données, vous pouvez utiliser
+**Note** : `liste_ep` et `d_max` sont utilisées ici pour référencer les données, vous pouvez utiliser
 des noms plus adaptés comme paramètres.
 
 Utilisez cette fonction avec `bbt_s12` comme argument et une durée de 2 heures.
