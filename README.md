@@ -28,6 +28,7 @@ est la suivante :
  et la manipulation de fichiers.
  * **demos** : est un package contenant des fichiers de démonstration et
  d'illustration. Ce package contient également des exemples Tkinter.
+ * **docs** : documentation réalisée à l'aide de [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
  * **exos** : est votre répertoire de travail. Il est destiné à contenir le
  code que vous allez produire durant la formation et vous permettre de le
  retrouver dans cet emplacement unique.
@@ -43,7 +44,7 @@ l'IDE. Vous trouverez le détail à la suite.
 - Récupérez la dernière release au format wheel (extension `.whl`) du 
   projet [pyschool-lib](https://github.com/darko-itpro/pyschool-lib/releases)
 - Installez cette dépendance avec une commande similaire
-  à `pip install "pyschoollib-0.2.0-py3-none-any.whl"`
+  à `pip install "pyschoollib-0.8.0-py3-none-any.whl"`
 
 Vous êtes prêt à travailler.
 
@@ -125,10 +126,10 @@ fournit des fonctionnalités pour les exercices.
 Cette bibliothèque est le projet [pyschool-lib](https://github.com/darko-itpro/pyschool-lib). Allez
 sur la page des [releases](https://github.com/darko-itpro/pyschool-lib/releases), choisissez la
 dernière et téléchargez le fichier `.whl`. Il doit avoir un nom de la
-forme `pyschoollib-0.2.0-py3-none-any.whl`. Vous allez l'installer avec l'instruction
+forme `pyschoollib-0.8.0-py3-none-any.whl`. Vous allez l'installer avec l'instruction
 
 ```shell
-pip install "pyschoollib-0.2.0-py3-none-any.whl"
+pip install "pyschoollib-0.8.0-py3-none-any.whl"
 ```
 
 Attention évidemment à adapter le nom avec la version en cours.
@@ -151,30 +152,26 @@ précédemment.
  
 Pour accéder à ces documents, il faut lancer le serveur Jupyter par
 l'instruction :
-```
-jupyter notebook
-```
-Notez que le projet Jupyter évolue, cette évolution s'appelle JupyterLab. Cette dépendance est
-différente et doit être installée à part. Cependant, elle est également déclarée dans le fichier
-`requirements-xtra.txt`.
 
-Pour le lancer, vous devez exécuter :
 ```
 jupyter-lab
 ```
 
 ## Documentation
+
 Un bon projet est accompagné d'une bonne documentation… Dans le cadre de ce projet, la 
-documentation est générée par [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). 
-L'ensemble des fichiers de documentation sont dans le répertoire `docs/` et sont au format rst. Vous
-pouvez donc consulter les documents directement dans vos IDEs, PyCharm et VS Code ont un panneau 
-de prévisualisation.
+documentation est générée par [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+
+L'ensemble des fichiers de documentation sont dans le répertoire `docs/` et sont au format `rst`.
+Vous pouvez donc consulter les documents directement dans vos IDEs, PyCharm et VS Code ont un 
+panneau de prévisualisation.
 
 ### Consulter la documentation de manière dynamique
+
 Mkdocs propose un serveur web local qui permet de consulter la doc de manière dynamique.
 
 Après vous êtes assuré d'avoir installé les dépendances (`mkdocs-material`qui est dans le fichier 
-`requirements_xtra.txt`), dans une invite de commande, exécutez :
+`requirements-xtra.txt`), dans une invite de commande, exécutez :
 
 ```shell
 mkdocs serve
