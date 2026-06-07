@@ -33,4 +33,4 @@ cet exercice.
 Revenez sur le code du script `exo_01b.py`.
 
 Capturez l’exception lorsque l’utilisateur saisit une chaine de caractère qui ne se convertit pas 
-en entier et l’informe qu’il a fait une mauvaise saisie.
+en entier et l’informe du problème.

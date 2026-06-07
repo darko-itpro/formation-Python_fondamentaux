@@ -40,8 +40,8 @@ Pour les exercices de cet énoncé, vous allez travailler avec les fichiers suiv
 Le fichier source `exo_03_01.py` contient la déclaration de deux variables auxquelles sont affectées
 des données correspondant à deux épisodes : un épisode vu et un non vu.
 
-Ce code déclare également une variable episode à laquelle est affectée une des variable précédente
-et une ligne en commentaire où c’est l’autre. Vous allez travailler sur la variable episode, ainsi,
+Ce code déclare également une variable episode à laquelle est affectée une des variables précédentes
+et une ligne en commentaire où c’est l’autre. **Travaillez sur la variable episode**, ainsi,
 pour tester l’un ou l’autre comportement, il vous suffira de commenter l’une ou l’autre ligne.
 
 * Ecrivez le code qui affichera « l’épisode a été vu » si l’épisode… a été vu et rien si il n’a pas
@@ -52,7 +52,7 @@ pour tester l’un ou l’autre comportement, il vous suffira de commenter l’u
 ---
 
 ## Second exercice
-Le ficher source `exo_03_02.py` contient un code similaire mais l’information vu ou non est
+Le fichier source `exo_03_02.py` contient un code similaire mais l’information vu ou non est
 représentée par un entier représentant le nombre de fois où l’épisode a été vu.
 
-Reprenez les questions précédentes pour cette représentation de données.
+ * Reprenez les questions précédentes pour cette représentation de données.

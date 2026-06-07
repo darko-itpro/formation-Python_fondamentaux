@@ -5,8 +5,8 @@ Les deux exercices sont indépendants.
 ## Fichiers de travail
 Pour les exercices de cet énoncé, vous allez travailler avec les fichiers suivants :
 
- * `exos/base/media_utils.py` que vous avez créé précédemment (il est possible que durant la formation
-   un autre nom soit choisi).
+ * `exos/base/media_utils_v1.py` que vous avez créé précédemment (il est possible que durant la 
+   formation un autre nom soit choisi).
 
 ## Exercice
 Après la mise en production, nous avons découvert qu'il pouvait y avoir deux structures de données

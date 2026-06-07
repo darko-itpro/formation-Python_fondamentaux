@@ -26,13 +26,15 @@ Cette valeur est déclarée et affectée à une variable dans le fichier `exo_02
 
 ---
 
-## Exercice
+## Exercice, première partie
  * Affichez le titre de l’épisode.
  * Affichez sa durée.
 
 Voyez si vous pouvez avoir un code « compréhensible ».
 
-Enfin :
+---
+
+## Exercice, seconde partie
 
  * affichez le nombre de fois où l’épisode a été vu
  * incrémentez cette valeur de 1

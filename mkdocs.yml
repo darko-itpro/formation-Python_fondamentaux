@@ -41,10 +41,10 @@ nav:
           - Les listes (1): fr/activities/listes_1.md
           - Les conditionnelles (1): fr/activities/conditionnelles_1.md
           - Introduction aux fonctions: fr/activities/fonctions_introduction.md
+          - Introduction aux fonctions: fr/activities/tests.md
           - Les conditionnelles (2): fr/activities/conditionnelles_2.md
           - Les dictionnaires: fr/activities/dictionnaires.md
           - Les listes (2): fr/activities/listes_2.md
-          - Les exceptions (levée): fr/activities/exception_raise.md
           - Les exceptions (capture): fr/activities/exception_catch.md
           - Formatage des chaînes de caractères: fr/activities/strings.md
           - Les boucles: fr/activities/boucles.md
@@ -52,7 +52,7 @@ nav:
           - Les List Comprehension: fr/activities/list_comprehension.md
           - Les dates: fr/activities/dates.md
         - L'objet:
-          - Notre modèle objet: fr/activities/modele_objet.md
+          - Notre modèle objet: fr/activities/oop/modele_objet.md
     - Informations complémentaires:
         - Le package pyflix: fr/pyflix.md
         - Configuration du PYTHONPATH dans VSCode: fr/vscode.md
