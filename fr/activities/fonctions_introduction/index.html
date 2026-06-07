@@ -12,7 +12,7 @@
         <link rel="prev" href="../conditionnelles_1/">
       
       
-        <link rel="next" href="../conditionnelles_2/">
+        <link rel="next" href="../tests/">
       
       
         
@@ -1209,6 +1209,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction aux fonctions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../conditionnelles_2/" class="md-nav__link">
         
   
@@ -1273,34 +1301,6 @@
     
   
     Les listes (2)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../exception_raise/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Les exceptions (levée)
   
 
     
@@ -1581,7 +1581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../modele_objet/" class="md-nav__link">
+      <a href="../oop/modele_objet/" class="md-nav__link">
         
   
   
@@ -2433,17 +2433,14 @@ défaut <code>None</code>.</p>
 <p>Pour les exercices de cet énoncé, vous allez reprendre le contenu des deux fichiers suivants :</p>
 <ul>
 <li><code>exos/base/exo_03_01.py</code> sur lequel vous avez travaillé.</li>
-<li><code>exos/base/exo_03_02.py</code> sur lequel vous avez travaillé.</li>
 <li><code>exos/base/exo_04.py</code> que vous allez créer</li>
 </ul>
-<p>Après avoir créé le fichier <code>exos/base/exo_04.py</code>, recopiez-y les données des fichiers précédents. Vous
-devrez renommer un des couples pour différencier celles avec un booléen de celles avec un entier.</p>
+<p>Après avoir créé le fichier <code>exos/base/exo_04.py</code>, recopiez-y le contenu du fichier <code>exos/base/exo_03_01.py</code>.</p>
 <h2 id="creation-dune-fonction">Création d’une fonction</h2>
-<p>Nous avons souhaité dans l’exercice précédent tester le code avec plusieurs données. Afin de
-faciliter cette étape, nous allons déporter le code dans une fonction.</p>
+<p>Nous allons déplacer le code dans une fonction.</p>
 <h3 id="premiere-version">Première version</h3>
-<p>Écrivez une fonction <code>is_viewed(episode)</code> qui affiche si l’épisode a été vu ou non. Pour un épisode
-de titre Episode 1, l'affichage attendu est :</p>
+<p>Écrivez une fonction <code>is_viewed(episode:list) -&gt; None</code> qui affiche si l’épisode a été vu ou non. 
+Pour un épisode de titre Episode 1, l'affichage attendu est :</p>
 <div class="highlight"><pre><span></span><code>Episode<span class="w"> </span><span class="m">1</span>
 Cet<span class="w"> </span>épisode<span class="w"> </span>a<span class="w"> </span>été<span class="w"> </span>vu
 </code></pre></div>
@@ -2451,6 +2448,7 @@ Cet<span class="w"> </span>épisode<span class="w"> </span>a<span class="w"> </s
 <div class="highlight"><pre><span></span><code>Episode<span class="w"> </span><span class="m">1</span>
 Cet<span class="w"> </span>épisode<span class="w"> </span>n<span class="err">&#39;</span>a<span class="w"> </span>pas<span class="w"> </span>été<span class="w"> </span>vu
 </code></pre></div>
+<hr />
 <h3 id="bonne-pratique-avec-les-fonctions">Bonne pratique avec les fonctions</h3>
 <p>Une bonne fonction ne fait qu’une seule chose (et la fait bien). Notre fonction en fait 2 : elle
 détermine un état et affiche celui-ci. Ceci est une mauvaise pratique car :</p>
@@ -2461,9 +2459,11 @@ détermine un état et affiche celui-ci. Ceci est une mauvaise pratique car :</p
 </ul>
 <p>Il est donc préférable qu’une fonction qui calcule une valeur se contente de retourner cette valeur.
 Un autre composant s’occupera d’en faire autre chose.</p>
+<hr />
 <h3 id="seconde-version">Seconde version</h3>
-<p>Modifiez cette fonction pour qu’elle retourne <code>True</code> ou <code>False</code> en fonction du statut de l’épisode.
-Le comportement global doit rester le même.</p>
+<p>Modifiez cette fonction pour que sa signature devienne <code>is_viewed(episode:list) -&gt; bool</code> et retourne 
+donc <code>True</code> ou <code>False</code> en fonction du statut de l’épisode. </p>
+<p>Le comportement global doit rester le même.</p>
 
 
 

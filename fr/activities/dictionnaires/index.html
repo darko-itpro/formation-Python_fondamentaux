@@ -1090,6 +1090,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction aux fonctions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../conditionnelles_2/" class="md-nav__link">
         
   
@@ -1251,34 +1279,6 @@
     
   
     Les listes (2)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../exception_raise/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Les exceptions (levée)
   
 
     
@@ -1559,7 +1559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../modele_objet/" class="md-nav__link">
+      <a href="../oop/modele_objet/" class="md-nav__link">
         
   
   
@@ -2400,14 +2400,14 @@ forme de liste par un parser qui connait la source et la transformera en diction
 </code></pre></div>
 <p>Ainsi, une donnée peut être abente, nous le saurons par absence de sa clef.</p>
 <h2 id="fichiers-de-travail">Fichiers de travail</h2>
-<p>Dans un cas réel, nous serions en train de faire une évolution pour remplacer le contenu de
-<code>exos/bases/media_utils.py</code> par un traitement à l'aide de dictionnaires. Dans le cadre d'une formation,
-afin de conserver les exercices que vous avez réalisés, renommez ce fichier en
-<code>exos/bases/media_utils_legacy.py</code> ainsi que les tests associés. N'oubliez pas de mettre à jour les
-import si votre IDE ne vous assiste pas.</p>
+<p>Dans un cas réel, nous devrions faire une évolution et donc remplacer le contenu de
+<code>exos/bases/media_utils_v1.py</code> par un traitement à l'aide de dictionnaires. Dans le cadre d'une 
+formation, afin de conserver les exercices que vous avez réalisés, nous allons travailler dans un 
+nouveau fichier, renommez ce fichier <code>exos/bases/media_utils.py</code> sans <em>version</em>, car c'est le fichier 
+définitif. Nous allons également travailler avec une nouvelle arborescence de tests.</p>
 <h2 id="exercices">Exercices</h2>
 <h3 id="prise-en-main-des-dictionnaires">Prise en main des dictionnaires</h3>
-<p>Commencer par nous faire la main sur cette donnée. Recopiez cette donnée dans un shell intéractif ou
+<p>Commencer par vous faire la main sur cette donnée. Recopiez cette donnée dans un shell intéractif ou
 un script de brouillon pour faire quelques actions :</p>
 <ul>
 <li>Affichez le titre.</li>
@@ -2415,12 +2415,13 @@ un script de brouillon pour faire quelques actions :</p>
 est un booléen, anticipez qu'il puisse être autre chose.</li>
 </ul>
 <h3 id="une-fonction-pour-le-statut">Une fonction pour le statut</h3>
-<p>Un épisode non-vu possède la clef <code>viewed</code> associé à la valeur <code>False</code> ou ne possède pas cette clef.
+<p>Un épisode non-vu possède la clef <code>viewed</code> associée à la valeur <code>False</code> ou ne possède pas cette clef.
 Essayez de déterminer comment gérer la situation.</p>
-<p>Dans le module <code>exos\media_utils.py</code>, écrivez une fonction  <code>is_viewed(episode: dict)</code> qui prends un
-dictionnaire en paramètre et qui retourne <code>True</code> si l’épisode a été vu sinon <code>False</code>. N’hésitez pas
-à utiliser une approche <em>test-first</em> pour écrire cette fonction grâce aux données à disposition.</p>
-<p>Voici 2 exemples de données qui vous donnent les cas de test.</p>
+<p>Dans le module <code>exos/bases/media_utils.py</code>, écrivez une fonction  <code>is_viewed(episode: dict)</code> qui 
+prend un dictionnaire en paramètre et qui retourne <code>True</code> si l’épisode a été vu sinon <code>False</code>. 
+N’hésitez pas à utiliser une approche <em>test-first</em> pour écrire cette fonction grâce aux données à 
+disposition.</p>
+<p>Voici une série d'exemples de données qui vous donnent les cas de test.</p>
 <p>Épisodes vus :</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;The Conjugal Configuration&quot;</span><span class="p">,</span> <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;viewed&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
 <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;The Conjugal Configuration&quot;</span><span class="p">,</span> <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;viewed&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
