@@ -4,3 +4,9 @@ episode_not_viewed = ['Installing the softwares', 2, 42, 0]
 
 episode = episode_viewed
 # episode = episode_not_viewed
+
+viewed = episode[3]
+if viewed > 0:
+    print("Episode vu")
+else:
+    print("Episode non vu")
