@@ -6,7 +6,7 @@ episode = episode_viewed
 # episode = episode_not_viewed
 
 viewed = episode[3]
-if viewed > 0:
+if viewed:
     print("Episode vu")
 else:
     print("Episode non vu")
