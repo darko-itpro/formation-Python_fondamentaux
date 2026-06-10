@@ -53,6 +53,8 @@ nav:
           - Les dates: fr/activities/dates.md
         - L'objet:
           - Notre modèle objet: fr/activities/oop/modele_objet.md
+          - Consolider le modèle: fr/activities/oop/consolidation.md
+          - Charger des données: fr/activities/oop/usage.md
     - Informations complémentaires:
         - Le package pyflix: fr/pyflix.md
         - Configuration du PYTHONPATH dans VSCode: fr/vscode.md
