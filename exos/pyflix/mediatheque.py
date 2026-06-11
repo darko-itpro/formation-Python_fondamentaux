@@ -9,7 +9,7 @@ class Episode:
         self.year = year
 
     def __eq__(self, other):
-        if isinstance(other, self.__class__):
+        if not isinstance(other, self.__class__):
             return False
 
         return (self.number, self.season_number) == (other.number, other.season_number)
