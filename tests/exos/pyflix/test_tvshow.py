@@ -1,5 +1,5 @@
 import pytest
-from exos.pyflix.mediatheque import TvShow, Episode
+from exos.pyflix.mediatheque import TvShow, Episode, DuplicateEpisodeError
 
 def test_create_show():
     show = TvShow('One Piece')
@@ -24,7 +24,7 @@ def test_add_several_episodes(show):
 
 def test_duplicate_must_raise(show):
     show.add_episode("Grand Line", 1, 1)
-    with pytest.raises(ValueError):
+    with pytest.raises(DuplicateEpisodeError):
         show.add_episode("Grand Line", 1, 1)
 
 def test_episodes_are_equal(show):

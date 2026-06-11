@@ -1,4 +1,7 @@
 
+class DuplicateEpisodeError(ValueError):
+    pass
+
 class Episode:
     def __init__(self, title: str, season_number: int, number: int,
                  duration: int = None, year: int = None):
@@ -43,6 +46,6 @@ class TvShow:
         episode = Episode(title, season_number, number, duration, year)
 
         if episode in self._episodes:
-            raise ValueError(f"Episode {episode.title} already exists")
+            raise DuplicateEpisodeError(f"Episode {episode.title} already exists")
 
         self._episodes.append(episode)
