@@ -10,4 +10,10 @@ class Episode:
 
 
 class TvShow:
-    pass
+    def __init__(self, name):
+        self.name = name
+        self.episodes = []
+
+    def add_episode(self, title:str, season_number: int, number: int,
+                    duration: int|None = None, year: int|None = None):
+        self.episodes.append(Episode(title, season_number, number, duration, year))
