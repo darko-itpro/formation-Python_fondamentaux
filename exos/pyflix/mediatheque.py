@@ -16,9 +16,17 @@ class Episode:
 
 
 class TvShow:
-    def __init__(self, name):
+    def __init__(self, name:str):
         self.name = name
         self._episodes = []
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, new_name: str):
+        self._name = new_name.title()
 
     @property
     def duration(self):
