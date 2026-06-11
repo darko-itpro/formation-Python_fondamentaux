@@ -16,4 +16,6 @@ class TvShow:
 
     def add_episode(self, title:str, season_number: int, number: int,
                     duration: int|None = None, year: int|None = None):
-        self.episodes.append(Episode(title, season_number, number, duration, year))
+        episode = Episode(title, season_number, number, duration, year)
+
+        self.episodes.append(episode)
