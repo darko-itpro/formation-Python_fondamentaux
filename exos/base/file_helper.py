@@ -12,7 +12,7 @@ def load_from_csv(file_path:str|Path):
             show_name, season, number, title, duration, year = line.strip().split(";")
             yield show_name, title, int(season), int(number), int(duration), int(year)
 
-my_show = md.TvShow("Arcane")
+my_shows = {}
 
 # Un version "simple" peut être :
 # for csv_episode_data in load_from_csv(file_path):
@@ -20,7 +20,13 @@ my_show = md.TvShow("Arcane")
 #    episode_data = csv_episode_data[1:]
 
 for show_name, *episode_data in load_from_csv(file_path):
-    if show_name == "Arcane":
-        my_show.add_episode(*episode_data)
+    try:
+        my_show = my_shows[show_name]
+    except KeyError:
+        my_show = md.TvShow(show_name)
+        my_shows[show_name] = my_show
 
-print(len(my_show.episodes))
+    my_show.add_episode(*episode_data)
+
+for show in my_shows.values():
+    print(show.name, len(show.episodes))
