@@ -1,7 +1,5 @@
 from pathlib import Path
 
-from jsonschema.benchmarks import const_vs_enum
-
 from demos import settings
 import exos.pyflix.mediatheque as md
 
