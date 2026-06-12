@@ -33,8 +33,8 @@ class TvShow:
 
     @property
     def duration(self):
-        return sum([episode.duration
-                    for episode in self._episodes])
+        return sum((episode.duration
+                    for episode in self._episodes))
 
     @property
     def episodes(self):
