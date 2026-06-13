@@ -31,6 +31,7 @@ def load_default_data():
 def display_shows():
     runner.display_all_shows(working_shows)
 
+
 def stop_running():
     global running
     running = False
@@ -44,6 +45,8 @@ choices = {
 
 running = True
 
+working_shows = runner.local_shows_loader(working_shows)
+
 while running:
 
     choice = questionary.select(
@@ -53,4 +56,4 @@ while running:
 
     choices[choice]()
 
-print("By")
+print("Bye")
