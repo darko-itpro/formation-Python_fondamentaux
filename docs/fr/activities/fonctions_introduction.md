@@ -15,10 +15,10 @@ défaut `None`.
 ## Fichiers de travail
 Pour les exercices de cet énoncé, vous allez reprendre le contenu des deux fichiers suivants :
 
- * `exos/base/exo_03_01.py` sur lequel vous avez travaillé.
- * `exos/base/exo_04.py` que vous allez créer
+ * `exos/exo_03_01.py` sur lequel vous avez travaillé.
+ * `exos/exo_04.py` que vous allez créer
 
-Après avoir créé le fichier `exos/base/exo_04.py`, recopiez-y le contenu du fichier `exos/base/exo_03_01.py`.
+Après avoir créé le fichier `exos/exo_04.py`, recopiez-y le contenu du fichier `exos/exo_03_01.py`.
 
 ## Création d’une fonction
 Nous allons déplacer le code dans une fonction.

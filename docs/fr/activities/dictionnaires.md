@@ -33,7 +33,7 @@ Ainsi, une donnée peut être abente, nous le saurons par absence de sa clef.
 
 ## Fichiers de travail
 Dans un cas réel, nous devrions faire une évolution et donc remplacer le contenu de
-`exos/bases/media_utils_v1.py` par un traitement à l'aide de dictionnaires. Dans le cadre d'une 
+`exos/media_utils_v1.py` par un traitement à l'aide de dictionnaires. Dans le cadre d'une 
 formation, afin de conserver les exercices que vous avez réalisés, nous allons travailler dans un 
 nouveau fichier.
 

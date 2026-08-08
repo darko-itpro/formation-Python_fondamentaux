@@ -31,8 +31,8 @@ else:
 ## Fichiers de travail
 Pour les exercices de cet énoncé, vous allez travailler avec les fichiers suivants :
 
- * `exos/base/exo_03_01.py` qui vous est fourni. 
- * `exos/base/exo_03_02.py` qui vous est fourni.
+ * `exos/exo_03_01.py` qui vous est fourni. 
+ * `exos/exo_03_02.py` qui vous est fourni.
 
 ---
 

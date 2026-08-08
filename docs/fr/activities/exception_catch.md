@@ -24,7 +24,7 @@ finally:
 ## Fichiers de travail
 Pour les exercices de cet énoncé, vous allez revenir sur un des premiers fichiers :
 
- * `exos/base/exo_01b.py`qui vous est fourni.
+ * `exos/exo_01b.py`qui vous est fourni.
 
 ## Exercice
 Pour la mise en pratique de la capture des exceptions, nous allons simplement modifier le code de 

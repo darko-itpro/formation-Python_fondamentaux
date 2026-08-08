@@ -3,10 +3,10 @@
 ## Fichiers de travail
 Pour les exercices de cet énoncé, vous allez travailler avec les fichiers suivants :
 
- * `exos/base/exo_02.py` qui vous est fourni.
+ * `exos/exo_02.py` qui vous est fourni.
 
 ## Contexte
-Pour un projet de service de streaming vidéo, PyFlix (un peu comme Netflix mais en Python), nous
+Pour un projet de service de streaming vidéo, PyFlix (un peu comme Netflix, mais en Python), nous
 devons étudier la gestion de données pour représenter un épisode d'une série.
 
 Nous allons représenter un épisode de Stranger Code (une série exclusive) de la manière suivante :
@@ -18,7 +18,7 @@ Nous allons représenter un épisode de Stranger Code (une série exclusive) de 
 Un épisode est représenté par une liste où :
 
  * Le premier élément est le titre
- * Le second est le numéro de l’épisode
+ * Le second est le numéro de l’épisode.
  * Le troisième est la durée
  * Le quatrième est un compteur représentant le nombre de fois que l'épisode a été vu.
 

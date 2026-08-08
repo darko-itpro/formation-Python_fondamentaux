@@ -6,8 +6,8 @@ valeur**, n’essayez pas de mettre en forme, cela sera la responsabilité d’a
 ## Fichiers de travail
 Pour les exercices de cet énoncé, vous allez travailler avec les fichiers suivants :
 
- * `exos/base/exo_01a.py` que vous devrez créer.
- * `exos/base/exo_01b.py` qui vous est fourni.
+ * `exos/exo_01a.py` que vous devrez créer.
+ * `exos/exo_01b.py` qui vous est fourni.
 
 ---
 

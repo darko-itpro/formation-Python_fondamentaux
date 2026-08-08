@@ -31,7 +31,7 @@ Episode(title:str, season_number:int, number:int, duration:int=None, year:int=No
 Notez que l'ordre des attributs dans le diagramme et l'ordre des paramètres du constructeur peuvent 
 n'avoir aucun rapport entre eux.
 
-Une implémentation est présente dans le fichier `exos/pyflix/mediatheque`. Mais elle est incomplète.
+Une implémentation est présente dans le fichier `src/pyflix/mediatheque`. Mais elle est incomplète.
 
 ## Exercice
 

@@ -1,12 +1,12 @@
 # Résolution du problème de chemin : le package éditable
 
 Dans l'exercice précédent, il vous a été demandé de déplacer la fonction dans le fichier 
-`exos/base/media_utils_v1.py`. Essayez maintenant de l'utiliser à partir des fichiers de travail 
-dans `exos/base`. Si vous exécutez vos scripts à partir de PyCharm, ça va passer. Avec VS Code, non.
-Si vous essayez à partir d'un termina avec `python exos/base/monscript.py`, ça ne passe pas non plus.
+`exos/media_utils_v1.py`. Essayez maintenant de l'utiliser à partir des fichiers de travail 
+dans `exos/`. Si vous exécutez vos scripts à partir de PyCharm, ça va passer. Avec VS Code, non.
+Si vous essayez à partir d'un termina avec `python exos/monscript.py`, ça ne passe pas non plus.
 
 Ceci provient du problème des chemins construits par Python. Si l'exécution de la ligne de commande 
-se corrige en utilisant `python -m exos.base.monscript`, ce n'est pas le cas pour l'exécution dans 
+se corrige en utilisant `python -m exos.monscript`, ce n'est pas le cas pour l'exécution dans 
 certains IDEs comme VS Code. Pour VS Code, il existe des solutions en configurant la création 
 automatique avant chaque exécution d'une variable d'environnement `PYTHONPATH` qui référence la 
 racine du projet. Mais il y a plus simple et _sécurisé_ en passant par le packaging.
