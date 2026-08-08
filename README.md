@@ -24,14 +24,16 @@ Le projet peut être dans l'arborescence que vous souhaitez sur votre disque.
 Ce projet est un projet de formation. Sa structure ne suit donc pas la
 structure conventionnelle d'un projet Python. L'organisation des répertoires
 est la suivante :
- * **assets** : contient des fichiers qui seront nécessaires pour le parcours 
+ * `assets` : contient des fichiers qui seront nécessaires pour le parcours 
  et la manipulation de fichiers.
- * **demos** : est un package contenant des fichiers de démonstration et
+ * `demos` : est un package contenant des fichiers de démonstration et
  d'illustration. Ce package contient également des exemples Tkinter.
- * **docs** : documentation réalisée à l'aide de [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
- * **exos** : est votre répertoire de travail. Il est destiné à contenir le
+ * `docs` : documentation réalisée à l'aide de [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+ * `exos` : est votre répertoire de travail. Il est destiné à contenir le
  code que vous allez produire durant la formation et vous permettre de le
  retrouver dans cet emplacement unique.
+ * `src` : contient _normalement_ le code source de l'application, mais dans le cadre de ce projet 
+   de formation, contient du code de _support_ pour les exercices.  
 
 ## Quickstart
 Voici les étapes à suivre pour préparer l'environnement. Ces étapes ne prennent pas en compte
