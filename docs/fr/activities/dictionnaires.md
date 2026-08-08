@@ -35,8 +35,10 @@ Ainsi, une donnée peut être abente, nous le saurons par absence de sa clef.
 Dans un cas réel, nous devrions faire une évolution et donc remplacer le contenu de
 `exos/bases/media_utils_v1.py` par un traitement à l'aide de dictionnaires. Dans le cadre d'une 
 formation, afin de conserver les exercices que vous avez réalisés, nous allons travailler dans un 
-nouveau fichier, renommez ce fichier `exos/bases/media_utils.py` sans *version*, car c'est le fichier 
-définitif. Nous allons également travailler avec une nouvelle arborescence de tests.
+nouveau fichier.
+
+Nous allons créer le fichier dans `src`. Créez un fichier `src/pyflix/media_utils.py`. En ce qui 
+concerne les tests, nous allons également travailler avec une nouvelle arborescence de tests.
 
 ## Exercices
 ### Prise en main des dictionnaires
@@ -51,10 +53,13 @@ est un booléen, anticipez qu'il puisse être autre chose.
 Un épisode non-vu possède la clef `viewed` associée à la valeur `False` ou ne possède pas cette clef.
 Essayez de déterminer comment gérer la situation.
 
-Dans le module `exos/bases/media_utils.py`, écrivez une fonction  `is_viewed(episode: dict)` qui 
+Dans le fichier `src/pyflix/media_utils.py`, écrivez une fonction  `is_viewed(episode: dict)` qui 
 prend un dictionnaire en paramètre et qui retourne `True` si l’épisode a été vu sinon `False`. 
 N’hésitez pas à utiliser une approche *test-first* pour écrire cette fonction grâce aux données à 
 disposition.
+
+Pour rappel, dans vos tests ou vos scripts, vous référencez cette ressource par 
+`import pyflix.media_utils`.
 
 Voici une série d'exemples de données qui vous donnent les cas de test.
 

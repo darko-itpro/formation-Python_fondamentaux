@@ -1,6 +1,6 @@
 # Introduction aux fonctions
 
-## Aide mémoire
+## Aide-mémoire
 La structure d’une fonction est
 
 ```python

@@ -43,6 +43,7 @@ nav:
           - Introduction aux fonctions: fr/activities/fonctions_introduction.md
           - Introduction aux tests: fr/activities/tests.md
           - Les conditionnelles (2): fr/activities/conditionnelles_2.md
+          - Le problème des paths: fr/activities/install_project.md
           - Les dictionnaires: fr/activities/dictionnaires.md
           - Les listes (2): fr/activities/listes_2.md
           - Les exceptions (capture): fr/activities/exception_catch.md

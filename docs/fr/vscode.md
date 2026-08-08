@@ -1,8 +1,11 @@
 # Configuration du PYTHONPATH dans VSCode
 
 Le bouton *exécuter* de VS Code exécute le script dans son répertoire et non à la racine du projet. 
-Les imports absolus sont alors introuvables car Python ne charge pas le répertoire racine comme 
+Les imports absolus sont alors introuvables, car Python ne charge pas le répertoire racine comme 
 racine des chemins.
+
+Notez que cette configuration est inutile si vous travaillez avec des sources installées sous 
+forme de package en mode éditable.
 
 ## Configuration
 Il est nécessaire d'ajouter la configuration du `PYTHONPATH` à VS Code via le fichier 

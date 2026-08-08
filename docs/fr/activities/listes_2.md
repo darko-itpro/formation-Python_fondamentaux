@@ -2,10 +2,11 @@
 
 ## Avant de commencer
 Pour cet exercice (et certains exercices suivants), vous aurez besoin d'une ressource 
-supplémentaire, le package [pyflix](../pyflix.md)
+supplémentaire qui vous est fournie par le package `pyflix`. Il est supposé que vous avez bien 
+installé le projet par `pip install -e .`. 
 
 ## Présentation
-Nous allons lancer un service de streaming vidéo, PyFlix, un peu comme Netflix mais en Python. Nous
+Nous allons lancer un service de streaming vidéo, PyFlix, un peu comme Netflix, mais en Python. Nous
 allons donc gérer un catalogue.
 
 Le module `pyflix.datasource`  contient une fonction nommée `get_season()` qui retourne la liste des
