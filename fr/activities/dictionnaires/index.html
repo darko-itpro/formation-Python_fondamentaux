@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../conditionnelles_2/">
+        <link rel="prev" href="../install_project/">
       
       
         <link rel="next" href="../listes_2/">
@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -933,6 +933,8 @@
       
         
       
+        
+      
     
     
     
@@ -1128,6 +1130,34 @@
     
   
     Les conditionnelles (2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Le problème des paths
   
 
     
@@ -2582,8 +2612,9 @@ forme de liste par un parser qui connait la source et la transformera en diction
 <p>Dans un cas réel, nous devrions faire une évolution et donc remplacer le contenu de
 <code>exos/bases/media_utils_v1.py</code> par un traitement à l'aide de dictionnaires. Dans le cadre d'une 
 formation, afin de conserver les exercices que vous avez réalisés, nous allons travailler dans un 
-nouveau fichier, renommez ce fichier <code>exos/bases/media_utils.py</code> sans <em>version</em>, car c'est le fichier 
-définitif. Nous allons également travailler avec une nouvelle arborescence de tests.</p>
+nouveau fichier.</p>
+<p>Nous allons créer le fichier dans <code>src</code>. Créez un fichier <code>src/pyflix/media_utils.py</code>. En ce qui 
+concerne les tests, nous allons également travailler avec une nouvelle arborescence de tests.</p>
 <h2 id="exercices">Exercices</h2>
 <h3 id="prise-en-main-des-dictionnaires">Prise en main des dictionnaires</h3>
 <p>Commencer par vous faire la main sur cette donnée. Recopiez cette donnée dans un shell intéractif ou
@@ -2596,10 +2627,12 @@ est un booléen, anticipez qu'il puisse être autre chose.</li>
 <h3 id="une-fonction-pour-le-statut">Une fonction pour le statut</h3>
 <p>Un épisode non-vu possède la clef <code>viewed</code> associée à la valeur <code>False</code> ou ne possède pas cette clef.
 Essayez de déterminer comment gérer la situation.</p>
-<p>Dans le module <code>exos/bases/media_utils.py</code>, écrivez une fonction  <code>is_viewed(episode: dict)</code> qui 
+<p>Dans le fichier <code>src/pyflix/media_utils.py</code>, écrivez une fonction  <code>is_viewed(episode: dict)</code> qui 
 prend un dictionnaire en paramètre et qui retourne <code>True</code> si l’épisode a été vu sinon <code>False</code>. 
 N’hésitez pas à utiliser une approche <em>test-first</em> pour écrire cette fonction grâce aux données à 
 disposition.</p>
+<p>Pour rappel, dans vos tests ou vos scripts, vous référencez cette ressource par 
+<code>import pyflix.media_utils</code>.</p>
 <p>Voici une série d'exemples de données qui vous donnent les cas de test.</p>
 <p>Épisodes vus :</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;The Conjugal Configuration&quot;</span><span class="p">,</span> <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;viewed&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
@@ -2664,7 +2697,7 @@ disposition.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

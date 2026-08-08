@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -929,6 +929,8 @@
       
         
       
+        
+      
     
     
     
@@ -1124,6 +1126,34 @@
     
   
     Les conditionnelles (2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../activities/install_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Le problème des paths
   
 
     
@@ -1798,6 +1828,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#precision-sur-la-structure-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Précision sur la structure du projet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-du-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation du package
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#utilisation-de-la-bibliotheque" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2456,6 +2508,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#precision-sur-la-structure-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Précision sur la structure du projet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-du-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation du package
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#utilisation-de-la-bibliotheque" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2499,13 +2573,19 @@
 
 <h1 id="le-package-pyflix">Le package Pyflix</h1>
 <p>Pour certains exercices, il vous est demandé d'utiliser le module <code>pyflix.datasource</code>. Ce module est
-dans un package dédié qui est un projet à part, 
-<a href="https://github.com/darko-itpro/pyschool-lib">pyschool-lib</a>.</p>
-<p>Vous disposez d'une 
-<a href="https://darko-itpro.github.io/pyschool-lib/fr/installation/">documentation d'installation</a>.</p>
+dans un package dédié qui doit être <em>installé</em>.</p>
+<h2 id="precision-sur-la-structure-du-projet">Précision sur la structure du projet</h2>
+<p>Le package <code>pyflix</code> est dans le répertoire <code>src</code>. Cette structure <em>src-based</em> est typique d'un 
+projet destiné au packaging. Le fichier de configuration <code>pyproject.toml</code> est configuré pour créer 
+un package avec le contenu du répertoire <code>src</code>. Si on se limite à la configuration, le projet 
+actuel tient dans le contenu du <code>src</code>.</p>
+<p>Et en soi, c'est un <em>hack</em> pour la formation car nous allons utiliser l'approche packaging en mode 
+<em>éditable</em>. Ceci permet d'éditer le code et voir immédiatement le résultat.</p>
+<h2 id="installation-du-package">Installation du package</h2>
+<p>Assurez-vous d'être dans l'environnement virtuel et exécutez :</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</code></pre></div>
 <h2 id="utilisation-de-la-bibliotheque">Utilisation de la bibliothèque</h2>
-<p>Assurez-vous d'avoir installé la dernière version en suivant la 
-<a href="https://darko-itpro.github.io/pyschool-lib/fr/installation/">documentation d'installation</a>.</p>
 <p>Dans un script Python ou dans le shell intéractif (ou iPython), vous pouvez importer le module 
 <code>pyflix.datasource</code> :</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pyflix.datasource</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ds</span>
@@ -2570,7 +2650,7 @@ certains exercices.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
