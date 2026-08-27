@@ -2590,10 +2590,10 @@
 liste. Mais nous avons vu que certaines données peuvent manquer. Imaginons que nous puissions avoir
 l'information de l'année de production en 5ème position, lorsque l'information vu/pas vu est 
 absente, cela peut être ingérable :</p>
-<div class="highlight"><pre><span></span><code><span class="n">episode_not_viewed</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The new Project&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
-<span class="n">episode_not_viewed</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Installing the softwares&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">42</span><span class="p">]</span>
-<span class="n">episode_not_viewed_with_year</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The new Project&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2026</span><span class="p">]</span>
-<span class="n">episode_not_viewed_with_year</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Installing the softwares&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">2026</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">episode_not_viewed</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"The new Project"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">episode_not_viewed</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Installing the softwares'</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">42</span><span class="p">]</span>
+<span class="n">episode_not_viewed_with_year</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"The new Project"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2026</span><span class="p">]</span>
+<span class="n">episode_not_viewed_with_year</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Installing the softwares'</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">2026</span><span class="p">]</span>
 </code></pre></div>
 <p>Une représentation de données sous forme de liste est obtenue dans certains cas comme lors de la
 lecture de fichiers CSV ou l’interrogation de bases de données. Mais nous avons alors encore 
@@ -2601,10 +2601,10 @@ l'information des <em>colonnes</em>. Pour gérer les données, cette structure e
 <p>Nous allons travailler sur des données structurées en dictionnaires. La donnée a été chargée sous 
 forme de liste par un parser qui connait la source et la transformera en dictionnaire.</p>
 <p>La structure de la donnée sera la suivante :</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;The Conjugal Configuration&quot;</span><span class="p">,</span>
- <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
- <span class="s2">&quot;viewed&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
- <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2026</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s2">"title"</span><span class="p">:</span> <span class="s2">"The Conjugal Configuration"</span><span class="p">,</span>
+ <span class="s2">"duration"</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+ <span class="s2">"viewed"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2026</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Ainsi, une donnée peut être abente, nous le saurons par absence de sa clef.</p>
@@ -2613,8 +2613,9 @@ forme de liste par un parser qui connait la source et la transformera en diction
 <code>exos/media_utils_v1.py</code> par un traitement à l'aide de dictionnaires. Dans le cadre d'une 
 formation, afin de conserver les exercices que vous avez réalisés, nous allons travailler dans un 
 nouveau fichier.</p>
-<p>Nous allons créer le fichier dans <code>src</code>. Créez un fichier <code>src/pyflix/media_utils.py</code>. En ce qui 
-concerne les tests, nous allons également travailler avec une nouvelle arborescence de tests.</p>
+<p>Et comme nous venons de basculer sur une arborescence de packaging, nous allons créer le fichier 
+dans <code>src</code>. Créez un fichier <code>src/pyflix/media_utils.py</code>. En ce qui concerne les tests, nous allons 
+également travailler avec une nouvelle arborescence de tests (<code>tests/pyflix/</code>).</p>
 <h2 id="exercices">Exercices</h2>
 <h3 id="prise-en-main-des-dictionnaires">Prise en main des dictionnaires</h3>
 <p>Commencer par vous faire la main sur cette donnée. Recopiez cette donnée dans un shell intéractif ou
@@ -2635,15 +2636,15 @@ disposition.</p>
 <code>import pyflix.media_utils</code>.</p>
 <p>Voici une série d'exemples de données qui vous donnent les cas de test.</p>
 <p>Épisodes vus :</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;The Conjugal Configuration&quot;</span><span class="p">,</span> <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;viewed&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
-<span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;The Conjugal Configuration&quot;</span><span class="p">,</span> <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;viewed&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
-<span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;The Conjugal Configuration&quot;</span><span class="p">,</span> <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;viewed&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2019</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s2">"title"</span><span class="p">:</span> <span class="s2">"The Conjugal Configuration"</span><span class="p">,</span> <span class="s2">"duration"</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">"viewed"</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+<span class="p">{</span><span class="s2">"title"</span><span class="p">:</span> <span class="s2">"The Conjugal Configuration"</span><span class="p">,</span> <span class="s2">"duration"</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">"viewed"</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="p">{</span><span class="s2">"title"</span><span class="p">:</span> <span class="s2">"The Conjugal Configuration"</span><span class="p">,</span> <span class="s2">"duration"</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">"viewed"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2019</span><span class="p">}</span>
 </code></pre></div>
 <p>Épisodes non vus :</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;The Conjugal Configuration&quot;</span><span class="p">,</span> <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;viewed&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
-<span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;The Conjugal Configuration&quot;</span><span class="p">,</span> <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;viewed&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
-<span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;The Conjugal Configuration&quot;</span><span class="p">,</span> <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}</span>
-<span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;The Conjugal Configuration&quot;</span><span class="p">,</span> <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">:</span><span class="mi">2018</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s2">"title"</span><span class="p">:</span> <span class="s2">"The Conjugal Configuration"</span><span class="p">,</span> <span class="s2">"duration"</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">"viewed"</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
+<span class="p">{</span><span class="s2">"title"</span><span class="p">:</span> <span class="s2">"The Conjugal Configuration"</span><span class="p">,</span> <span class="s2">"duration"</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">"viewed"</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="p">{</span><span class="s2">"title"</span><span class="p">:</span> <span class="s2">"The Conjugal Configuration"</span><span class="p">,</span> <span class="s2">"duration"</span><span class="p">:</span> <span class="mi">20</span><span class="p">}</span>
+<span class="p">{</span><span class="s2">"title"</span><span class="p">:</span> <span class="s2">"The Conjugal Configuration"</span><span class="p">,</span> <span class="s2">"duration"</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">"year"</span><span class="p">:</span><span class="mi">2018</span><span class="p">}</span>
 </code></pre></div>
 
 

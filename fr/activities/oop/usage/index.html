@@ -2579,7 +2579,7 @@ série. Vous pouvez obtenir la liste des séries connues par <code>pyflix.dataso
 <p>Un exemple réel d'usage peut être :</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pyflix.datasource</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ds</span>
 
-<span class="n">show</span> <span class="o">=</span> <span class="n">TvShow</span><span class="p">(</span><span class="s2">&quot;Arcane&quot;</span><span class="p">)</span>
+<span class="n">show</span> <span class="o">=</span> <span class="n">TvShow</span><span class="p">(</span><span class="s2">"Arcane"</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">episode_data</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">load_show</span><span class="p">():</span>
     <span class="n">show</span><span class="o">.</span><span class="n">add_episode</span><span class="p">(</span><span class="o">*</span><span class="n">episode_data</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>

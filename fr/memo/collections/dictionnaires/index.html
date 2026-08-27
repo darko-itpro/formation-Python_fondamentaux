@@ -2666,49 +2666,49 @@
 <div class="highlight"><pre><span></span><code><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">my_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 
-<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;key_1&#39;</span><span class="p">:</span> <span class="s1">&#39;value_1&#39;</span><span class="p">,</span> <span class="s1">&#39;key_2&#39;</span><span class="p">:</span> <span class="s1">&#39;value_2&#39;</span><span class="p">}</span>
-<span class="n">my_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">key_1</span><span class="o">=</span><span class="s1">&#39;value_1&#39;</span><span class="p">,</span> <span class="n">key_2</span><span class="o">=</span><span class="s1">&#39;value_2&#39;</span><span class="p">)</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'key_1'</span><span class="p">:</span> <span class="s1">'value_1'</span><span class="p">,</span> <span class="s1">'key_2'</span><span class="p">:</span> <span class="s1">'value_2'</span><span class="p">}</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">key_1</span><span class="o">=</span><span class="s1">'value_1'</span><span class="p">,</span> <span class="n">key_2</span><span class="o">=</span><span class="s1">'value_2'</span><span class="p">)</span>
 </code></pre></div>
 <p>Par la suite, le dictionnaire de référence pour ces exemples est :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;king&#39;</span><span class="p">:</span> <span class="s1">&#39;Arthur&#39;</span><span class="p">,</span> <span class="s1">&#39;wizard&#39;</span><span class="p">:</span> <span class="s1">&#39;Merlin&#39;</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'king'</span><span class="p">:</span> <span class="s1">'Arthur'</span><span class="p">,</span> <span class="s1">'wizard'</span><span class="p">:</span> <span class="s1">'Merlin'</span><span class="p">}</span>
 </code></pre></div></p>
 <h2 id="taille-du-dictionnaire">Taille du dictionnaire</h2>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">camelot</span><span class="p">)</span>
 <span class="mi">2</span>
 </code></pre></div>
 <h2 id="tester-lexistence-dune-clef">Tester l'existence d'une clef</h2>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;king&quot;</span> <span class="ow">in</span> <span class="n">camelot</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s2">"king"</span> <span class="ow">in</span> <span class="n">camelot</span>
 <span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;queen&quot;</span> <span class="ow">in</span> <span class="n">camelot</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">"queen"</span> <span class="ow">in</span> <span class="n">camelot</span>
 <span class="kc">False</span>
 </code></pre></div>
 <h2 id="acces-a-un-element">Accès à un élément</h2>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="p">[</span><span class="s1">&#39;king&#39;</span><span class="p">]</span>
-<span class="s1">&#39;Pendragon&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="p">[</span><span class="s1">'king'</span><span class="p">]</span>
+<span class="s1">'Pendragon'</span>
 </code></pre></div>
 <p>L'absence de la clef lève une <code>KeyError</code>.</p>
 <h2 id="remplacement-dun-element">Remplacement d'un élément</h2>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="p">[</span><span class="s1">&#39;king&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Pendragon&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="p">[</span><span class="s1">'king'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Pendragon'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span>
-<span class="p">{</span><span class="s1">&#39;king&#39;</span><span class="p">:</span> <span class="s1">&#39;Pendragon&#39;</span><span class="p">,</span> <span class="s1">&#39;wizard&#39;</span><span class="p">:</span> <span class="s1">&#39;Merlin&#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="s1">'king'</span><span class="p">:</span> <span class="s1">'Pendragon'</span><span class="p">,</span> <span class="s1">'wizard'</span><span class="p">:</span> <span class="s1">'Merlin'</span><span class="p">}</span>
 </code></pre></div>
 <p>L'absence de la clef entraine sa création.</p>
 <h2 id="ajout-dun-element">Ajout d'un élément</h2>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; camelot[&#39;knights&#39;] = []
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; camelot['knights'] = []
 &gt;&gt;&gt; camelot
-{&#39;king&#39;: &#39;Arthur&#39;, &#39;wizard&#39;: &#39;Merlin&#39;, &#39;knights&#39;: []}
+{'king': 'Arthur', 'wizard': 'Merlin', 'knights': []}
 </code></pre></div>
 <h2 id="suppression-dun-element">Suppression d'un élément</h2>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">del</span> <span class="n">camelot</span><span class="p">[</span><span class="s1">&#39;wizard&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">del</span> <span class="n">camelot</span><span class="p">[</span><span class="s1">'wizard'</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span>
-<span class="p">{</span><span class="s1">&#39;king&#39;</span><span class="p">:</span> <span class="s1">&#39;Arthur&#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="s1">'king'</span><span class="p">:</span> <span class="s1">'Arthur'</span><span class="p">}</span>
 </code></pre></div>
 <p>L'absence de la clef lève une <code>KeyError</code>.</p>
 <h2 id="suppression-et-retour-dun-element">Suppression et retour d'un élément</h2>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;wizard&#39;</span><span class="p">)</span>
-<span class="s1">&#39;Merlin&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">'wizard'</span><span class="p">)</span>
+<span class="s1">'Merlin'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span>
-<span class="p">{</span><span class="s1">&#39;king&#39;</span><span class="p">:</span> <span class="s1">&#39;Arthur&#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="s1">'king'</span><span class="p">:</span> <span class="s1">'Arthur'</span><span class="p">}</span>
 </code></pre></div>
 
 

@@ -3216,7 +3216,7 @@ On y accède en le référant de la même manière.
         <span class="bp">self</span><span class="o">.</span><span class="n">attribute_2</span> <span class="o">=</span> <span class="n">param_2</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Objet </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_2</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">'Objet </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_1</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_2</span><span class="si">}</span><span class="s1">'</span>
 </code></pre></div>
 <h4 id="representation-officielle-avec-__repr__">Représentation <em>officielle</em> avec <code>__repr__</code></h4>
 <p>The target audience for the string representation returned by <code>.__repr__()</code> is the programmer developing and maintaining the program. In general, it provides detailed and unambiguous information about the object. Another important property of the official string representation is that a programmer can normally use it to re-create an object equal to the original one.
@@ -3228,7 +3228,7 @@ One way to implement the method is the following:
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">class_name</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">class_name</span><span class="si">}</span><span class="s2">(param_1=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_1</span><span class="si">!r}</span><span class="s2">, param_2=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_2</span><span class="si">!r}</span><span class="s2">)&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">class_name</span><span class="si">}</span><span class="s2">(param_1=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_1</span><span class="si">!r}</span><span class="s2">, param_2=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_2</span><span class="si">!r}</span><span class="s2">)"</span>
 </code></pre></div></p>
 <p><strong>Note</strong> : si <code>__repr__</code>est surchargé mais pas <code>__str__</code>, le retour de <code>__repr__</code> sera utilisé lors des requêtes à <code>__str__</code>.</p>
 <h3 id="autres-methodes-speciales">Autres méthodes spéciales</h3>

@@ -2704,21 +2704,21 @@
 </ul>
 <h2 id="creation">Création</h2>
 <h3 id="creer-une-chaine-de-caracteres">Créer une chaine de caractères</h3>
-<div class="highlight"><pre><span></span><code><span class="n">my_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="n">my_string</span> <span class="o">=</span> <span class="s1">''</span>
+<span class="n">my_string</span> <span class="o">=</span> <span class="s2">""</span>
 <span class="n">my_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">()</span>
 
-<span class="n">king</span> <span class="o">=</span> <span class="s2">&quot;Arthur&quot;</span>
+<span class="n">king</span> <span class="o">=</span> <span class="s2">"Arthur"</span>
 </code></pre></div>
 <h3 id="creer-une-liste">Créer une liste</h3>
 <div class="highlight"><pre><span></span><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">my_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-<span class="n">camelot</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Arthur&#39;</span><span class="p">,</span> <span class="s1">&#39;Merlin&#39;</span><span class="p">,</span> <span class="s1">&#39;Lancelot&#39;</span><span class="p">,</span> <span class="s1">&#39;Robin&#39;</span><span class="p">,</span> <span class="s1">&#39;Bohort&#39;</span><span class="p">,</span> <span class="s1">&#39;Perceval&#39;</span><span class="p">,</span> <span class="s1">&#39;Karradoc&#39;</span><span class="p">]</span>
+<span class="n">camelot</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Arthur'</span><span class="p">,</span> <span class="s1">'Merlin'</span><span class="p">,</span> <span class="s1">'Lancelot'</span><span class="p">,</span> <span class="s1">'Robin'</span><span class="p">,</span> <span class="s1">'Bohort'</span><span class="p">,</span> <span class="s1">'Perceval'</span><span class="p">,</span> <span class="s1">'Karradoc'</span><span class="p">]</span>
 </code></pre></div>
 <h3 id="creer-un-n-uplet-tuple">Créer un n-uplet (<em>tuple</em>)</h3>
 <div class="highlight"><pre><span></span><code><span class="n">my_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span> <span class="c1"># tuple vide</span>
-<span class="n">wizards</span> <span class="o">=</span> <span class="s1">&#39;Merlin&#39;</span><span class="p">,</span>
-<span class="n">tavern</span> <span class="o">=</span> <span class="s1">&#39;Perceval&#39;</span><span class="p">,</span> <span class="s1">&#39;Karradoc&#39;</span><span class="p">,</span>
+<span class="n">wizards</span> <span class="o">=</span> <span class="s1">'Merlin'</span><span class="p">,</span>
+<span class="n">tavern</span> <span class="o">=</span> <span class="s1">'Perceval'</span><span class="p">,</span> <span class="s1">'Karradoc'</span><span class="p">,</span>
 </code></pre></div>
 <hr />
 <h2 id="taille">Taille</h2>
@@ -2734,59 +2734,59 @@
 <h2 id="acces-a-un-element">Accès à un élément</h2>
 <p>Par indexation (<em>subscript</em>)
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">king</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="s1">&#39;t&#39;</span>
+<span class="s1">'t'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="s1">&#39;Merlin&#39;</span>
+<span class="s1">'Merlin'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">tavern</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="s1">&#39;Perceval&#39;</span>
+<span class="s1">'Perceval'</span>
 </code></pre></div></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">king</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="s1">&#39;r&#39;</span>
+<span class="s1">'r'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
-<span class="s1">&#39;Perceval&#39;</span>
+<span class="s1">'Perceval'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">tavern</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="s1">&#39;Karradoc&#39;</span>
+<span class="s1">'Karradoc'</span>
 </code></pre></div>
 <p>L'absence de l'indice lève une <code>IndexError</code>.</p>
 <hr />
 <h2 id="test-element-dans-sequence">Test élément dans séquence</h2>
 <p>Avec le mot-clef <code>in</code>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;t&#39;</span> <span class="ow">in</span> <span class="n">king</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s1">'t'</span> <span class="ow">in</span> <span class="n">king</span>
 <span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Mordred&#39;</span> <span class="ow">in</span> <span class="n">camelot</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">'Mordred'</span> <span class="ow">in</span> <span class="n">camelot</span>
 <span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Tavernier&#39;</span> <span class="ow">in</span> <span class="n">tavern</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">'Tavernier'</span> <span class="ow">in</span> <span class="n">tavern</span>
 <span class="kc">False</span>
 </code></pre></div></p>
 <hr />
 <h2 id="unpacking">Unpacking</h2>
 <p>Fonctionne avec toute séquence
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">quest</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rabbit of Caerbannog&#39;</span><span class="p">,</span> <span class="s1">&#39;cave&#39;</span><span class="p">,</span> <span class="s1">&#39;Location of the Holly Grail&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">quest</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Rabbit of Caerbannog'</span><span class="p">,</span> <span class="s1">'cave'</span><span class="p">,</span> <span class="s1">'Location of the Holly Grail'</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">opponent_name</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">reward</span> <span class="o">=</span> <span class="n">quest</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">opponent_name</span>
-<span class="s1">&#39;Rabbit of Caerbannog&#39;</span>
+<span class="s1">'Rabbit of Caerbannog'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">location</span>
-<span class="s1">&#39;cave&#39;</span>
+<span class="s1">'cave'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">reward</span>
-<span class="s1">&#39;Location of the Holly Grail&#39;</span>
+<span class="s1">'Location of the Holly Grail'</span>
 </code></pre></div></p>
 <hr />
 <h2 id="slicing">Slicing</h2>
 <p>Structures : <code>seq[start:stop]</code> ou <code>seq[start:stop:step]</code>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">king</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
-<span class="s1">&#39;thu&#39;</span>
+<span class="s1">'thu'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
-<span class="p">[</span><span class="s1">&#39;Lancelot&#39;</span><span class="p">,</span> <span class="s1">&#39;Robin&#39;</span><span class="p">,</span> <span class="s1">&#39;Bohort&#39;</span><span class="p">,</span> <span class="s1">&#39;Perceval&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">'Lancelot'</span><span class="p">,</span> <span class="s1">'Robin'</span><span class="p">,</span> <span class="s1">'Bohort'</span><span class="p">,</span> <span class="s1">'Perceval'</span><span class="p">]</span>
 </code></pre></div></p>
 <p>Si <code>start</code> et/ou <code>stop</code> est omis, le slice ira à l'extrémité.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
-<span class="p">[</span><span class="s1">&#39;Arthur&#39;</span><span class="p">,</span> <span class="s1">&#39;Merlin&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">'Arthur'</span><span class="p">,</span> <span class="s1">'Merlin'</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
-<span class="p">[</span><span class="s1">&#39;Robin&#39;</span><span class="p">,</span> <span class="s1">&#39;Bohort&#39;</span><span class="p">,</span> <span class="s1">&#39;Perceval&#39;</span><span class="p">,</span> <span class="s1">&#39;Karradoc&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">'Robin'</span><span class="p">,</span> <span class="s1">'Bohort'</span><span class="p">,</span> <span class="s1">'Perceval'</span><span class="p">,</span> <span class="s1">'Karradoc'</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
-<span class="p">[</span><span class="s1">&#39;Perceval&#39;</span><span class="p">,</span> <span class="s1">&#39;Karradoc&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">'Perceval'</span><span class="p">,</span> <span class="s1">'Karradoc'</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">camelot</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
-<span class="p">[</span><span class="s1">&#39;Arthur&#39;</span><span class="p">,</span> <span class="s1">&#39;Lancelot&#39;</span><span class="p">,</span> <span class="s1">&#39;Bohort&#39;</span><span class="p">,</span> <span class="s1">&#39;Karradoc&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">'Arthur'</span><span class="p">,</span> <span class="s1">'Lancelot'</span><span class="p">,</span> <span class="s1">'Bohort'</span><span class="p">,</span> <span class="s1">'Karradoc'</span><span class="p">]</span>
 </code></pre></div>
 
 

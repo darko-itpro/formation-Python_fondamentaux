@@ -2457,7 +2457,7 @@ paramétrer les tests.</p>
 </li>
 <li>
 <p>Déclarer le test les utilisant en le décorant avec le décorateur <code>@pytest.mark.parametrized</code>
-<div class="highlight"><pre><span></span><code><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrized</span><span class="p">(</span><span class="s2">&quot;param, expected&quot;</span><span class="p">,</span> <span class="n">test_data</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrized</span><span class="p">(</span><span class="s2">"param, expected"</span><span class="p">,</span> <span class="n">test_data</span><span class="p">):</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">test_something</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
     <span class="k">assert</span> <span class="n">func_to_test</span><span class="p">(</span><span class="n">param</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected</span>
 </code></pre></div></p>
