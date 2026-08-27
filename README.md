@@ -41,12 +41,9 @@ l'IDE. Vous trouverez le détail à la suite.
 - Assurez-vous de disposer d'une version de [Python](https://www.python.org) récente accessible dans le path. Dans
   l'idéal, vous devriez être dans la dernière ou avant-dernière version de Python. 
 - Créez et activez un environnement virtuel si besoin en
-  suivant [la documentation de venv](https://docs.python.org/fr/3/library/venv.html).
-- Installez les dépendances par `pip install -r requirements.txt`.
-- Récupérez la dernière release au format wheel (extension `.whl`) du 
-  projet [pyschool-lib](https://github.com/darko-itpro/pyschool-lib/releases)
-- Installez cette dépendance avec une commande similaire
-  à `pip install "pyschoollib-0.8.0-py3-none-any.whl"`
+  suivant [la documentation de venv](https://docs.python.org/fr/3/library/venv.html) et activez le.
+- Mettez à jour `pip` avec `pip install --upgrade pip`.
+- Installez les dépendances par `pip install . --only-deps`.
 
 Vous êtes prêt à travailler.
 
@@ -55,7 +52,7 @@ Vous êtes prêt à travailler.
 [Python](https://www.python.org) doit être installé sur votre poste.
 
 La formation est prévue pour toutes les versions de Python maintenues (voir le
-[statut des versions](https://devguide.python.org/versions/)).
+[statut des versions](https://devguide.python.org/versions/)) et une version de `pip`>= 26.2
 
 Python ainsi que les dépendances doivent être dans le PATH. Vous pouvez vérifier le bon
 fonctionnement dans un terminal/invite de commande par les instructions du type
@@ -100,12 +97,18 @@ Si vous avez besoin d'information sur leur création et utilisation, vous pouvez
 [la documentation](https://docs.python.org/fr/3/library/venv.html).
 
 ### Installation de dépendances
-[pip](https://pypi.python.org/pypi/pip) est le gestionnaire de dépendances qui
+[pip](https://pypi.python.org/pypi/pip) est le gestionnaire de dépendances standard qui
 va vous permettre d'installer les dépendances nécessaires à ce projet.
 
 **Attention** : `pip` utilise des ports dédiés pour communiquer avec les
 dépôts. Si vous êtes derrière un Firewall, il sera nécessaire de lui
 communiquer le proxy.
+
+Commencez par mettre à jour `pip` par :
+
+```bash
+pip install --upgrade pip
+```
 
 Vous pouvez installer une dépendance spécifique avec l'instruction
 ```shell
@@ -114,27 +117,27 @@ pip install ipython
 
 Cette commande permet d'installer la dépendance `ipython`.
 
-Les dépendances nécessaires au projet sont déclarées dans le fichier
-`requirements.txt`. Vous pouvez donc installer l'ensemble des dépendances avec
-la commande :
+À partir de l'automne 2026, ce projet s'est adapté aux normes en vigueur. Les dépendances sont 
+décrites dans le fichier `pyproject.toml`. Il faudra exécuter deux instructions :
+
+```bash
+pip install --only-deps .
+pip install --group dev
+```
+
+Dans le fichier `pyproject.toml`, les dépendances sont déclarées en deux _groupes_ : les 
+dépendances dites _de prod'_ (celles indispensables au projet) et les dépendances dites _de dev'_.
+
+La première ligne installe les dépendances indispensables au projet, la seconde complète avec les 
+dépendances de développement. 
+
+**À titre d'illustration**, le projet conserve le fichier `requirements.txt` qui était la manière 
+historique de référencer les dépendances. Ce fichier n'est plus maintenu. Vous pouvez tout de même 
+l'utiliser avec la commande :
 
 ```shell
 pip install -r requirements.txt
 ```
-
-Vous devez en plus installer une dépendance proposée par votre intervenant, bibliothèque qui
-fournit des fonctionnalités pour les exercices.
-
-Cette bibliothèque est le projet [pyschool-lib](https://github.com/darko-itpro/pyschool-lib). Allez
-sur la page des [releases](https://github.com/darko-itpro/pyschool-lib/releases), choisissez la
-dernière et téléchargez le fichier `.whl`. Il doit avoir un nom de la
-forme `pyschoollib-0.8.0-py3-none-any.whl`. Vous allez l'installer avec l'instruction
-
-```shell
-pip install "pyschoollib-0.8.0-py3-none-any.whl"
-```
-
-Attention évidemment à adapter le nom avec la version en cours.
 
 Votre environnement est alors prêt à l'emploi.
 

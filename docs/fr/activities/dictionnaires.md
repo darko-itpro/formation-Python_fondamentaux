@@ -37,8 +37,9 @@ Dans un cas réel, nous devrions faire une évolution et donc remplacer le conte
 formation, afin de conserver les exercices que vous avez réalisés, nous allons travailler dans un 
 nouveau fichier.
 
-Nous allons créer le fichier dans `src`. Créez un fichier `src/pyflix/media_utils.py`. En ce qui 
-concerne les tests, nous allons également travailler avec une nouvelle arborescence de tests.
+Et comme nous venons de basculer sur une arborescence de packaging, nous allons créer le fichier 
+dans `src`. Créez un fichier `src/pyflix/media_utils.py`. En ce qui concerne les tests, nous allons 
+également travailler avec une nouvelle arborescence de tests (`tests/pyflix/`).
 
 ## Exercices
 ### Prise en main des dictionnaires

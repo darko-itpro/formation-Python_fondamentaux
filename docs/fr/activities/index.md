@@ -8,11 +8,12 @@
  * [04 - Introduction aux fonctions](fonctions_introduction.md)
  * [05 - Introduction aux tests](tests.md)
  * [06 - Les conditionnelles, seconde partie](conditionnelles_2.md)
- * [07 - Les dictionnaires](dictionnaires.md)
- * [08 - Les listes](listes_2.md)
- * [09 - Les exceptions - capture](exception_catch.md)
- * [10 - Le formatage des chaînes de caractères](strings.md)
- * [11 - Les boucles](boucles.md)
+ * [07 - Le problème des paths](install_project.md)
+ * [08 - Les dictionnaires](dictionnaires.md)
+ * [09 - Les listes](listes_2.md)
+ * [10 - Les exceptions - capture](exception_catch.md)
+ * [11 - Le formatage des chaînes de caractères](strings.md)
+ * [12 - Les boucles](boucles.md)
 
 ## Un peu plus spécialisé
 
