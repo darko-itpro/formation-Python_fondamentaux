@@ -10,6 +10,8 @@ def display_if_viewed(episode:list):
         print("Episode vu")
     else:
         print("Episode pas vu")
+        
+    print("Episode vu" if is_viewed(episode) else "Episode non vu")
     
 
 def is_viewed(episode: list) -> bool:

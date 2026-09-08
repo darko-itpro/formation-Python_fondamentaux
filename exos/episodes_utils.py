@@ -1,3 +1,3 @@
 
 def is_viewed(episode: list) -> bool:
-    return episode[3]
+    return len(episode) > 3 and bool(episode[3])
