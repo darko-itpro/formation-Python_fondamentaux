@@ -7,9 +7,9 @@ episode = episode_viewed
 
 def display_if_viewed(episode:list):
     if is_viewed(episode):
-        print("Episode", episode[0], "vu")
+        print("Episode vu")
     else:
-        print("Episode", episode[0], "pas vu")
+        print("Episode pas vu")
     
 
 def is_viewed(episode: list) -> bool:
