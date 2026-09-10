@@ -24,6 +24,13 @@ premier épisode non vu.
 Vous pouvez récupérer la liste des épisodes de Big Bang Theory pour vous faire des jeux de données.
 Le retour de cette fonction servira de donnée "de prod’".
 
+## Fichier(s) de travail
+Dans cet exercice, il vous est demandé de créer plusieurs fonctions. Afin de pouvoir tester 
+correctement ces fonctions dans une approche _test-first_, le plus judicieux est de les déclarer 
+dans le fichier `src/pyflix/media_utils.py` où vous avez créé la fonction `is_viewed()`.
+
+Vous pouvez résoudre l'exercice grâce à un script qui sera dans le package `exos`.
+
 ## Obtenir la liste des épisodes à voir
 Écrivez une fonction `get_playlist_from(season: list) -> list` qui retourne la liste des épisodes
 restant à voir. Cette liste commence à partir du premier épisode non vu jusqu’à la fin. Cette

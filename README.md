@@ -232,5 +232,3 @@ en particulier du fait de la taille (plus de 450Mo téléchargé pour plus de 1G
 
 Durant la formation, des ressources complémentaires peuvent être disponibles
 [sur le partage suivant](https://bit.ly/3uh2MEQ)
-
-Les exercices sont disponibles sur le wiki du projet.
