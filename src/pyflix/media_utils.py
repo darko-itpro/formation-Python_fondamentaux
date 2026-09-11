@@ -1,5 +1,8 @@
 def is_viewed(episode: dict):
-    return "viewed" in episode and bool(episode["viewed"])
+    try:
+        return bool(episode["viewed"])
+    except KeyError:
+        return False
 
 
 def get_index_first_unseen_episode(episodes: list) -> int:
