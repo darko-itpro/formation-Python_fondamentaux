@@ -12,7 +12,7 @@ print("----")
 print(episode[3])
 episode[3] = episode[3] + 1
 print(episode)
-episode[3] = episode[3] + 1
+episode[3] += 1
 print(episode)
 
 
