@@ -11,8 +11,12 @@ class Episode:
 
 class TvShow:
     def __init__(self, name:str):
+        if name is None or not name.strip():
+            raise ValueError("Name cannot be empty")
+
         self.name = name
         self.episodes = []
+
 
     def add_episode(self, title, season_number, number, duration, year):
         self.episodes.append(Episode(title, season_number, number, duration, year))

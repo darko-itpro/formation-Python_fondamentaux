@@ -1,3 +1,4 @@
+import pytest
 from pyflix.mediatheque import TvShow
 
 def test_create_tvshow():
@@ -11,3 +12,11 @@ def test_add_first_episode():
     tvshow.add_episode("titre", 2, 3, 90, 2014)
 
     assert len(tvshow.episodes) == 1
+
+def test_empty_name_must_raise():
+    with pytest.raises(ValueError, match="^Name cannot be empty$"):
+        TvShow("")
+
+def test_without_name_must_raise():
+    with pytest.raises(ValueError, match="^Name cannot be empty$"):
+        TvShow(None)
