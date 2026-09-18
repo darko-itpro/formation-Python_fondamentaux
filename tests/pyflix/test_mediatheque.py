@@ -20,3 +20,11 @@ def test_empty_name_must_raise():
 def test_without_name_must_raise():
     with pytest.raises(ValueError, match="^Name cannot be empty$"):
         TvShow(None)
+
+def test_duplicate_episode_must_raise():
+    tvshow = TvShow("Breaking Bad")
+
+    tvshow.add_episode("titre", 2, 3, 90, 2014)
+    with pytest.raises(ValueError):
+        tvshow.add_episode("titre", 2, 3, 90, 2014)
+
