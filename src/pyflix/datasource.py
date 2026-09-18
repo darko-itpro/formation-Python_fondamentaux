@@ -98,7 +98,7 @@ def get_start_time() -> str:
     :return: Une heure au format `"mmhss"` (`'%Mh%S'` pour les connaisseurs).
     """
     start_hour = random.randint(19, 21)
-    start_minutes = random.randint(0, 59 if start_hour < 21 else 38)
+    start_minutes = random.randint(0, 59 if start_hour < 21 else 18)
 
     value = f"{start_hour:02}h{start_minutes:02}"
 
