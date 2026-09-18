@@ -1,5 +1,8 @@
 def is_viewed(episode:dict):
-    return "viewed" in episode and bool(episode["viewed"])
+    try:
+        return bool(episode["viewed"])
+    except KeyError:
+        return False
 
 
 def episodes_duration(episodes: list, episode_duration: int):
