@@ -1,6 +1,6 @@
 # Introduction aux tests
 
-Pour toute information, consultez [l'aide mémoire destiné aux tests](../memo/tests/index.md).
+Pour toute information, consultez [l'aide mémoire destiné aux tests](../../memo/tests/index.md).
 
 ## Création du module de la fonction
 

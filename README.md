@@ -43,7 +43,8 @@ l'IDE. Vous trouverez le détail à la suite.
 - Créez et activez un environnement virtuel si besoin en
   suivant [la documentation de venv](https://docs.python.org/fr/3/library/venv.html) et activez le.
 - Mettez à jour `pip` avec `pip install --upgrade pip`.
-- Installez les dépendances par `pip install . --only-deps`.
+- Installez les projet en mode éditable par `pip install -e .`.
+- Installez les dépendances de dev par `pip install --group dev`.
 
 Vous êtes prêt à travailler.
 
@@ -121,15 +122,15 @@ Cette commande permet d'installer la dépendance `ipython`.
 décrites dans le fichier `pyproject.toml`. Il faudra exécuter deux instructions :
 
 ```bash
-pip install --only-deps .
+pip install -e .
 pip install --group dev
 ```
 
 Dans le fichier `pyproject.toml`, les dépendances sont déclarées en deux _groupes_ : les 
 dépendances dites _de prod'_ (celles indispensables au projet) et les dépendances dites _de dev'_.
 
-La première ligne installe les dépendances indispensables au projet, la seconde complète avec les 
-dépendances de développement. 
+La première ligne installe les dépendances indispensables au projet tout en installant le projet en 
+mode éditable. La seconde complète avec les dépendances de développement. 
 
 **À titre d'illustration**, le projet conserve le fichier `requirements.txt` qui était la manière 
 historique de référencer les dépendances. Ce fichier n'est plus maintenu. Vous pouvez tout de même 
@@ -143,7 +144,9 @@ Votre environnement est alors prêt à l'emploi.
 
 ### Makefile
 Si vous êtes sur un environnement POSIX (Linux ou MacOs) ou plus généralement si vous utilisez
-l'outil `make`, vous pouvez utiliser le `makefile` fourni :
+l'outil `make`, vous pouvez utiliser le `makefile` fourni : 
+ * `make install-dev` : met à jour `pip` et installe le projet en mode éditable ains que toutes les 
+   dépendances de dev.
  * `make setup` : met à jour `pip` et installe toutes les dépendances.
  * `make clean` : supprime le répertoire `data` créé par une démo.
  
@@ -207,7 +210,7 @@ Les dépendances dans ce fichier sont les suivantes :
    intéractif standard.
  * [Pytest](https://docs.pytest.org/) : utilisé pour la partie tests unitaires
  * [Pytz](https://pypi.org/project/pytz/) : utilisé pour la gestion des TimeZone des dates (cette bibliothèque est obsolète
-   depuis la 3.9)
+   depuis la 3.9, présente ici du fait d'une présentation de la gestion _legacy_ des dates.)
  * [flake8](https://flake8.pycqa.org/) : outil de validation statique de code
  * [pylint](https://pypi.org/project/pylint/) : outil d'analyse statique de code
 

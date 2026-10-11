@@ -2,10 +2,10 @@
 
 ## Rappel pour le formatage de dates
 
-Pour [le code formatage, consultez la documentation](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes).
+Pour [le code de formatage, consultez la documentation](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes).
 
 Vous pouvez utiliser ces codes de formatage dans les templates pour la méthode `str.format()` et 
-avec les *f-strings*.
+avec les *f-strings* :
 
 ```python
 from datetime import datetime
@@ -17,8 +17,8 @@ print(f"We are {now:%A %B the %d}")
 
 ## Exercice 1
 
-Nous allons reprendre l'exercice sur le formatage des chaines de caractères mais en utilisant les
-objets `datetime` et `timedelta`.
+Nous allons reprendre le second exercice sur [le formatage des chaines de caractères](../basics/strings.md) 
+en utilisant les objets `datetime` et `timedelta`.
 
 Je veux déterminer à quelle heure j'irai me coucher après avoir regardé quelques épisodes de ma 
 série.
@@ -27,7 +27,9 @@ série.
 
 Le début de ma soirée est obtenu par la fonction `pyflix.datasource.get_start_time()`.
 
-Affichez l'heure de coucher sous la forme `"J'irai me coucher à 22h04"`
+ * Affichez l'heure de coucher sous la forme `"J'irai me coucher à 22h04"`
+ * Modifiez le nombre d'épisodes et leur durée afin d'observer que vous avez un horaire cohérent 
+   après minuit.
 
 <details>
 <summary>Comment créer l'heure de début ?</summary>
@@ -44,5 +46,7 @@ Je dois me lever à 6h demain matin et souhaite dormir 8h. À quelle heure au pl
 commencer à regarder mes épisodes ?
 
 ## Exercice 4
+**Note** : cet exercice nécessite d'avoir abordé les timezones
+
 Je dois me lever à 6h du matin ce 29 octobre 2023 et souhaite dormir 8h. À quelle heure au plus 
 tard dois-je commencer à regarder mes épisodes ?

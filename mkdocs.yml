@@ -37,21 +37,22 @@ nav:
     - Exercices:
         - fr/activities/index.md
         - Les bases:
-          - Découverte du langage: fr/activities/discovery.md
-          - Les listes (1): fr/activities/listes_1.md
-          - Les conditionnelles (1): fr/activities/conditionnelles_1.md
-          - Introduction aux fonctions: fr/activities/fonctions_introduction.md
-          - Introduction aux tests: fr/activities/tests.md
-          - Les conditionnelles (2): fr/activities/conditionnelles_2.md
+          - Découverte du langage: fr/activities/basics/introduction.md
+          - Les listes (1): fr/activities/basics/listes_1.md
+          - Les conditionnelles (1): fr/activities/basics/conditionnelles_1.md
+          - Introduction aux fonctions: fr/activities/basics/fonctions_introduction.md
+          - Introduction aux tests: fr/activities/basics/tests.md
+          - Les conditionnelles (2): fr/activities/basics/conditionnelles_2.md
           - Le problème des paths: fr/activities/install_project.md
-          - Les dictionnaires: fr/activities/dictionnaires.md
-          - Les listes (2): fr/activities/listes_2.md
-          - Les exceptions (capture): fr/activities/exception_catch.md
-          - Formatage des chaînes de caractères: fr/activities/strings.md
-          - Les boucles: fr/activities/boucles.md
+          - Les dictionnaires: fr/activities/basics/dictionnaires.md
+          - Les listes (2): fr/activities/basics/listes_2.md
+          - Les exceptions (levée): fr/activities/basics/exception_raise.md
+          - Les exceptions (capture): fr/activities/basics/exception_catch.md
+          - Formatage des chaînes de caractères: fr/activities/basics/strings.md
+          - Les boucles: fr/activities/basics/loops.md
         - Plus spécialisé:
-          - Les List Comprehension: fr/activities/list_comprehension.md
-          - Les dates: fr/activities/dates.md
+          - Les List Comprehension: fr/activities/advanced/list_comprehension.md
+          - Les dates: fr/activities/advanced/dates.md
         - L'objet:
           - Notre modèle objet: fr/activities/oop/modele_objet.md
           - Consolider le modèle: fr/activities/oop/consolidation.md

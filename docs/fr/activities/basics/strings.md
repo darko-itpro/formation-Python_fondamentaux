@@ -35,7 +35,7 @@ vitesse avec son unité en imposant deux chiffres après le point décimal.
 
 ---
 ## Deuxième exercice
-Vous aurez besoin du package [pyflix](../pyflix.md)
+Vous aurez besoin du package [pyflix](../../pyflix.md)
 
 Je veux déterminer à quelle heure j'irai me coucher après avoir regardé quelques épisodes de ma 
 série.

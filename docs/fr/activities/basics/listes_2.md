@@ -10,7 +10,7 @@ Nous allons lancer un service de streaming vidéo, PyFlix, un peu comme Netflix,
 allons donc gérer un catalogue.
 
 Le module `pyflix.datasource`  contient une fonction nommée `get_season()` qui retourne la liste des
-titre des épisodes de la saison 12 de Big Bang Theory. Nous allons extraire des informations de
+titres des épisodes de la saison 12 de Big Bang Theory. Nous allons extraire des informations de
 cette liste.
 
 La manière la plus simple d'utiliser cette fonction est la suivante :
@@ -48,9 +48,9 @@ donc l’importer directement.
 
 ### Calculez la durée de la saison
 
-Nous considérons que chaque épisode dure 23 minutes, combien de temps dure la saison ?
+Nous considérons que chaque épisode dure **23 minutes**, combien de temps dure la saison ?
 
-Pour cela, écrivez une fonction qui prends en argument (au moins) une liste d’épisodes et retourne
+Pour cela, écrivez une fonction qui prend en argument (au moins) une liste d’épisodes et retourne
 la durée de cette liste d’épisodes.
 
 ### Gérez votre playlist du soir

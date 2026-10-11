@@ -2,6 +2,7 @@
 
 ## Aide mémoire
 Lever une exception se fait par appel à l'instruction `raise` :
+
 ```python
 raise ValueError("un message de ce qui s'est mal passé")
 ```
@@ -10,7 +11,7 @@ Vous trouverez la liste des exceptions sur [la page de la documentation des exce
 
 ## Exercice
 Dans [l'exercice sur les listes](listes_2.md), vous avez créé une fonction calculant la durée d'une
-liste d'épisode. Cette fonction prends en paramètres la liste et la durée des épisodes.
+liste d'épisode. Cette fonction prend en paramètres la liste et la durée des épisodes.
 
-Cette durée doit être positive. Modifiez la fonction pour que si une durée négative ou nulle est 
+Cette durée **doit être positive**. Modifiez la fonction pour que si une durée négative ou nulle est 
 passée, la fonction lève une exception de type `ValueError`. 

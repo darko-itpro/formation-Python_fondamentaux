@@ -1,7 +1,7 @@
 # Les boucles
 
 ## Prérequis
-Vous aurez besoin du package [pyflix](../pyflix.md)
+Vous aurez besoin du package [pyflix](../../pyflix.md)
 
 ## Objectifs
 Dans cet exercice, nous allons simuler le comportement du media-center PyFlix.
@@ -18,7 +18,7 @@ pyflix.datasource.get_season('The Big Bang Theory', "Sheldon Cooper")
 ```
 
 Nous voulons dans un premier temps écrire une fonction qui prends une saison complète en paramètre
-et retourne la liste des épisodes restant à voir, c’est à dire l’extrait de la liste à partir du
+et retourne la liste des épisodes restant à voir, c'est-à-dire l’extrait de la liste à partir du
 premier épisode non vu.
 
 Vous pouvez récupérer la liste des épisodes de Big Bang Theory pour vous faire des jeux de données.
@@ -38,7 +38,7 @@ fonction retourne donc une liste d’épisodes qui peut être vide si nous n'avo
 voir.
 
 Vous êtes encouragé à utiliser les tests pour, d'une part, valider votre code et d'autre part, pour
-vous aider à concevoir le modèle par une approche TDD. Si par cette démarche vous faites apparaitre
+vous aider à concevoir le modèle par une approche TDD. Si par cette démarche, vous faites apparaitre
 d'autres fonctions *intermédiaires*, c'est normal. Gardez-les et utilisez-les.
 
 ### Vous coincez ?

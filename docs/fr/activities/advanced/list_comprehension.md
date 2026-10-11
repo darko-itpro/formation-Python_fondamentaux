@@ -24,7 +24,7 @@ Ce qui peut nous donner quelque chose du type :
 ```
 
 ## Ressources
-Vous aurez besoin du package [pyflix](../pyflix.md)
+Vous aurez besoin du package [pyflix](../../pyflix.md)
 
 Le module `pyflix.datasource` contient une fonction `get_movies()` qui retourne la liste des films 
 Harry Potter. Chaque film est représenté par une liste contenant 3 valeurs :
