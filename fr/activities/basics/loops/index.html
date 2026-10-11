@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../strings/">
+      
+      
+        <link rel="next" href="../../advanced/list_comprehension/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>La levée d'exception - Python, les fondamentaux</title>
+        <title>Les boucles - Python, les fondamentaux</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -42,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -60,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#la-levee-dexception" class="md-skip">
+        <a href="#les-boucles" class="md-skip">
           Skip to content
         </a>
       
@@ -76,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Python, les fondamentaux" class="md-header__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
+    <a href="../../../.." title="Python, les fondamentaux" class="md-header__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -96,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              La levée d'exception
+              Les boucles
             
           </span>
         </div>
@@ -186,7 +190,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Python, les fondamentaux" class="md-nav__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
+    <a href="../../../.." title="Python, les fondamentaux" class="md-nav__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -216,7 +220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -240,6 +244,8 @@
       
   
   
+    
+  
   
   
     
@@ -259,15 +265,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   
@@ -291,7 +297,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -429,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/sequences/" class="md-nav__link">
+      <a href="../../../memo/collections/sequences/" class="md-nav__link">
         
   
   
@@ -457,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/listes/" class="md-nav__link">
+      <a href="../../../memo/collections/listes/" class="md-nav__link">
         
   
   
@@ -485,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/strings/" class="md-nav__link">
+      <a href="../../../memo/collections/strings/" class="md-nav__link">
         
   
   
@@ -513,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/dictionnaires/" class="md-nav__link">
+      <a href="../../../memo/collections/dictionnaires/" class="md-nav__link">
         
   
   
@@ -549,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/fonctions/" class="md-nav__link">
+      <a href="../../../memo/fonctions/" class="md-nav__link">
         
   
   
@@ -577,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/conditionnelles/" class="md-nav__link">
+      <a href="../../../memo/conditionnelles/" class="md-nav__link">
         
   
   
@@ -605,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/boucles/" class="md-nav__link">
+      <a href="../../../memo/boucles/" class="md-nav__link">
         
   
   
@@ -633,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/poo/" class="md-nav__link">
+      <a href="../../../memo/poo/" class="md-nav__link">
         
   
   
@@ -685,7 +691,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../memo/tests/" class="md-nav__link ">
+            <a href="../../../memo/tests/" class="md-nav__link ">
               
   
   
@@ -729,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/tests/bases/" class="md-nav__link">
+      <a href="../../../memo/tests/bases/" class="md-nav__link">
         
   
   
@@ -757,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/tests/parametrized_tests/" class="md-nav__link">
+      <a href="../../../memo/tests/parametrized_tests/" class="md-nav__link">
         
   
   
@@ -785,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/tests/fixtures/" class="md-nav__link">
+      <a href="../../../memo/tests/fixtures/" class="md-nav__link">
         
   
   
@@ -826,6 +832,8 @@
                 
   
   
+    
+  
   
   
     
@@ -847,15 +855,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -879,7 +887,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -896,8 +904,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -925,15 +935,17 @@
       
         
       
+        
+      
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
@@ -954,7 +966,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -972,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../discovery/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   
@@ -1140,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../install_project/" class="md-nav__link">
+      <a href="../../install_project/" class="md-nav__link">
         
   
   
@@ -1224,6 +1236,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../exception_raise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les exceptions (levée)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../exception_catch/" class="md-nav__link">
         
   
@@ -1277,10 +1317,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../boucles/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les boucles
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1296,6 +1363,109 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prérequis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectifs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fichiers-de-travail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichier(s) de travail
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtenir-la-liste-des-episodes-a-voir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtenir la liste des épisodes à voir
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Obtenir la liste des épisodes à voir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vous-coincez" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vous coincez ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ma-soiree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ma soirée…
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evolution-un-peu-avancee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Évolution un peu avancée…
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1369,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../list_comprehension/" class="md-nav__link">
+      <a href="../../advanced/list_comprehension/" class="md-nav__link">
         
   
   
@@ -1397,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dates/" class="md-nav__link">
+      <a href="../../advanced/dates/" class="md-nav__link">
         
   
   
@@ -1488,7 +1658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop/modele_objet/" class="md-nav__link">
+      <a href="../../oop/modele_objet/" class="md-nav__link">
         
   
   
@@ -1516,7 +1686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop/consolidation/" class="md-nav__link">
+      <a href="../../oop/consolidation/" class="md-nav__link">
         
   
   
@@ -1544,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop/usage/" class="md-nav__link">
+      <a href="../../oop/usage/" class="md-nav__link">
         
   
   
@@ -1633,7 +1803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../project/files/" class="md-nav__link">
+      <a href="../../project/files/" class="md-nav__link">
         
   
   
@@ -1661,7 +1831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../project/loader/" class="md-nav__link">
+      <a href="../../project/loader/" class="md-nav__link">
         
   
   
@@ -1760,7 +1930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pyflix/" class="md-nav__link">
+      <a href="../../../pyflix/" class="md-nav__link">
         
   
   
@@ -1788,7 +1958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vscode/" class="md-nav__link">
+      <a href="../../../vscode/" class="md-nav__link">
         
   
   
@@ -1816,7 +1986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/loggers/" class="md-nav__link">
+      <a href="../../../memo/loggers/" class="md-nav__link">
         
   
   
@@ -1879,7 +2049,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../en/" class="md-nav__link ">
+            <a href="../../../../en/" class="md-nav__link ">
               
   
   
@@ -1943,7 +2113,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../en/activities/" class="md-nav__link ">
+            <a href="../../../../en/activities/" class="md-nav__link ">
               
   
   
@@ -2058,7 +2228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/discovery/" class="md-nav__link">
+      <a href="../../../../en/activities/discovery/" class="md-nav__link">
         
   
   
@@ -2086,7 +2256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/lists_1/" class="md-nav__link">
+      <a href="../../../../en/activities/lists_1/" class="md-nav__link">
         
   
   
@@ -2114,7 +2284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/conditional_statement_1/" class="md-nav__link">
+      <a href="../../../../en/activities/conditional_statement_1/" class="md-nav__link">
         
   
   
@@ -2142,7 +2312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/functions_introduction/" class="md-nav__link">
+      <a href="../../../../en/activities/functions_introduction/" class="md-nav__link">
         
   
   
@@ -2170,7 +2340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/conditional_statement_2/" class="md-nav__link">
+      <a href="../../../../en/activities/conditional_statement_2/" class="md-nav__link">
         
   
   
@@ -2198,7 +2368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/dictionaries/" class="md-nav__link">
+      <a href="../../../../en/activities/dictionaries/" class="md-nav__link">
         
   
   
@@ -2226,7 +2396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/lists_2/" class="md-nav__link">
+      <a href="../../../../en/activities/lists_2/" class="md-nav__link">
         
   
   
@@ -2254,7 +2424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/exception_raise/" class="md-nav__link">
+      <a href="../../../../en/activities/exception_raise/" class="md-nav__link">
         
   
   
@@ -2282,7 +2452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/exception_catch/" class="md-nav__link">
+      <a href="../../../../en/activities/exception_catch/" class="md-nav__link">
         
   
   
@@ -2310,7 +2480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/strings/" class="md-nav__link">
+      <a href="../../../../en/activities/strings/" class="md-nav__link">
         
   
   
@@ -2338,7 +2508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/loops/" class="md-nav__link">
+      <a href="../../../../en/activities/loops/" class="md-nav__link">
         
   
   
@@ -2409,10 +2579,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aide-memoire" class="md-nav__link">
+  <a href="#prerequis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aide mémoire
+        Prérequis
       
     </span>
   </a>
@@ -2420,10 +2590,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercice" class="md-nav__link">
+  <a href="#objectifs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exercice
+        Objectifs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fichiers-de-travail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichier(s) de travail
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtenir-la-liste-des-episodes-a-voir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtenir la liste des épisodes à voir
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Obtenir la liste des épisodes à voir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vous-coincez" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vous coincez ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ma-soiree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ma soirée…
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evolution-un-peu-avancee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Évolution un peu avancée…
       
     </span>
   </a>
@@ -2450,17 +2681,82 @@
   
 
 
-<h1 id="la-levee-dexception">La levée d'exception</h1>
-<h2 id="aide-memoire">Aide mémoire</h2>
-<p>Lever une exception se fait par appel à l'instruction <code>raise</code> :
-<div class="highlight"><pre><span></span><code><span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"un message de ce qui s'est mal passé"</span><span class="p">)</span>
+<h1 id="les-boucles">Les boucles</h1>
+<h2 id="prerequis">Prérequis</h2>
+<p>Vous aurez besoin du package <a href="../../../pyflix/">pyflix</a></p>
+<h2 id="objectifs">Objectifs</h2>
+<p>Dans cet exercice, nous allons simuler le comportement du media-center PyFlix.</p>
+<p>La fonction  <code>get_season()</code> du module <code>pyflix.datasource</code> peut prendre deux paramètres, le premier
+est le nom d'une série, le second est le nom (ou identifiant) d’un utilisateur. La signature de la
+fonction est <code>get_season(show_name: str = None, user: str = None)</code>.</p>
+<p>Nous récupérons alors la liste des épisodes. Chaque épisode est un dictionnaire.</p>
+<p>Vous pouvez obtenir les épisodes de The Big Bang Theory de la manière suivante :
+<div class="highlight"><pre><span></span><code><span class="n">pyflix</span><span class="o">.</span><span class="n">datasource</span><span class="o">.</span><span class="n">get_season</span><span class="p">(</span><span class="s1">'The Big Bang Theory'</span><span class="p">,</span> <span class="s2">"Sheldon Cooper"</span><span class="p">)</span>
 </code></pre></div></p>
-<p>Vous trouverez la liste des exceptions sur <a href="https://docs.python.org/3/library/exceptions.html">la page de la documentation des exceptions</a>.</p>
-<h2 id="exercice">Exercice</h2>
-<p>Dans <a href="../listes_2/">l'exercice sur les listes</a>, vous avez créé une fonction calculant la durée d'une
-liste d'épisode. Cette fonction prends en paramètres la liste et la durée des épisodes.</p>
-<p>Cette durée doit être positive. Modifiez la fonction pour que si une durée négative ou nulle est 
-passée, la fonction lève une exception de type <code>ValueError</code>. </p>
+<p>Nous voulons dans un premier temps écrire une fonction qui prends une saison complète en paramètre
+et retourne la liste des épisodes restant à voir, c'est-à-dire l’extrait de la liste à partir du
+premier épisode non vu.</p>
+<p>Vous pouvez récupérer la liste des épisodes de Big Bang Theory pour vous faire des jeux de données.
+Le retour de cette fonction servira de donnée "de prod’".</p>
+<h2 id="fichiers-de-travail">Fichier(s) de travail</h2>
+<p>Dans cet exercice, il vous est demandé de créer plusieurs fonctions. Afin de pouvoir tester 
+correctement ces fonctions dans une approche <em>test-first</em>, le plus judicieux est de les déclarer 
+dans le fichier <code>src/pyflix/media_utils.py</code> où vous avez créé la fonction <code>is_viewed()</code>.</p>
+<p>Vous pouvez résoudre l'exercice grâce à un script qui sera dans le package <code>exos</code>.</p>
+<h2 id="obtenir-la-liste-des-episodes-a-voir">Obtenir la liste des épisodes à voir</h2>
+<p>Écrivez une fonction <code>get_playlist_from(season: list) -&gt; list</code> qui retourne la liste des épisodes
+restant à voir. Cette liste commence à partir du premier épisode non vu jusqu’à la fin. Cette
+fonction retourne donc une liste d’épisodes qui peut être vide si nous n'avons plus d'épisodes à
+voir.</p>
+<p>Vous êtes encouragé à utiliser les tests pour, d'une part, valider votre code et d'autre part, pour
+vous aider à concevoir le modèle par une approche TDD. Si par cette démarche, vous faites apparaitre
+d'autres fonctions <em>intermédiaires</em>, c'est normal. Gardez-les et utilisez-les.</p>
+<h3 id="vous-coincez">Vous coincez ?</h3>
+<p>Si vous avez des difficultés à répondre à la question, vous pouvez consulter les indices suivants :
+Les étapes de votre fonction devraient être :</p>
+<details>
+<summary>Indice 1</summary>
+Itérer sur les épisodes. Vous pouvez afficher chaque épisode pour valider que vous le faites.
+</details>
+<details>
+<summary>Indice 2</summary>
+Identifier les épisodes que vous n’avez pas vu. Vous pouvez n’afficher que ceux là lors de votre
+itération pour valider votre code.
+</details>
+<details>
+<summary>Indice 3</summary>
+Identifier le premier épisode qu’il vous reste à voir. N’affichez alors que celui-là ou mieux,
+écrivez le test qui démontre que que vous l'avez trouvé. La fonction retourne alors cet épisode.
+</details>
+<details>
+<summary>Indice 4</summary>
+Déterminer l’indice de cet épisode
+</details>
+<details>
+<summary>Indice 5</summary>
+Utiliser cet indice pour créer grâce au slicing une nouvelle liste des épisodes qu’il reste à voir.
+</details>
+
+<h2 id="ma-soiree">Ma soirée…</h2>
+<p>J’ai à nouveau 2 heures ce soir et je souhaite regarder des épisodes qu'il me reste à voir. Je veux
+regarder le maximum d'épisodes en entier, c'est à dire que je dois finir l'épisode dans le temps
+disponible.</p>
+<p>Vous allez récupérer tous les épisodes d'une saison grâce à la fonction
+<code>get_season(show_name: str = None, user: str = None)</code>. Fournissez bien un paramètre <code>name</code> pour
+obtenir une liste d’épisodes avec l'information vus/non vus. Conservez cette collection dans une 
+variable.</p>
+<p>Obtenez la liste des épisodes qu’il me reste à voir grâce à la fonction de la première partie. 
+Utilisez une variable que vous appellerez <code>playlist</code> pour la référencer.</p>
+<p>Nous allons ensuite simuler le fonctionnement d’un media-center. Affichez le titre de l’épisode 
+suivant en le supprimant de la playlist. Répétez ceci pour autant d’épisodes que je peux regarder 
+en 2 heures.</p>
+<p>Consignes : commencez par résoudre le problème au plus simple. Si vous écrivez une fonction, soyez 
+cohérent dans le choix des paramètres.
+Vous pouvez afficher les listes en fin de programme pour valider le traitement.</p>
+<h2 id="evolution-un-peu-avancee">Évolution un peu avancée…</h2>
+<p>Lorsque vous supprimez un épisode de la playlist, basculez le flag vu/pas vu à <code>True</code> dans la liste 
+de référence.</p>
+<p><em>Indice</em> : rappelez-vous qu’en Python, tout est référence…</p>
 
 
 
@@ -2510,10 +2806,10 @@ passée, la fonction lève une exception de type <code>ValueError</code>. </p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

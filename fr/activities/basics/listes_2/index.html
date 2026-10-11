@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../listes_2/">
+        <link rel="prev" href="../dictionnaires/">
       
       
-        <link rel="next" href="../strings/">
+        <link rel="next" href="../exception_raise/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Les exceptions (capture) - Python, les fondamentaux</title>
+        <title>Les listes (2) - Python, les fondamentaux</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#la-capture-dexceptions" class="md-skip">
+        <a href="#les-listes-seconde-partie" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Python, les fondamentaux" class="md-header__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
+    <a href="../../../.." title="Python, les fondamentaux" class="md-header__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Les exceptions (capture)
+              Les listes (2)
             
           </span>
         </div>
@@ -190,7 +190,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Python, les fondamentaux" class="md-nav__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
+    <a href="../../../.." title="Python, les fondamentaux" class="md-nav__button md-logo" aria-label="Python, les fondamentaux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -220,7 +220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -273,7 +273,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   
@@ -435,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/sequences/" class="md-nav__link">
+      <a href="../../../memo/collections/sequences/" class="md-nav__link">
         
   
   
@@ -463,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/listes/" class="md-nav__link">
+      <a href="../../../memo/collections/listes/" class="md-nav__link">
         
   
   
@@ -491,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/strings/" class="md-nav__link">
+      <a href="../../../memo/collections/strings/" class="md-nav__link">
         
   
   
@@ -519,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/collections/dictionnaires/" class="md-nav__link">
+      <a href="../../../memo/collections/dictionnaires/" class="md-nav__link">
         
   
   
@@ -555,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/fonctions/" class="md-nav__link">
+      <a href="../../../memo/fonctions/" class="md-nav__link">
         
   
   
@@ -583,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/conditionnelles/" class="md-nav__link">
+      <a href="../../../memo/conditionnelles/" class="md-nav__link">
         
   
   
@@ -611,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/boucles/" class="md-nav__link">
+      <a href="../../../memo/boucles/" class="md-nav__link">
         
   
   
@@ -639,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/poo/" class="md-nav__link">
+      <a href="../../../memo/poo/" class="md-nav__link">
         
   
   
@@ -691,7 +691,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../memo/tests/" class="md-nav__link ">
+            <a href="../../../memo/tests/" class="md-nav__link ">
               
   
   
@@ -735,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/tests/bases/" class="md-nav__link">
+      <a href="../../../memo/tests/bases/" class="md-nav__link">
         
   
   
@@ -763,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/tests/parametrized_tests/" class="md-nav__link">
+      <a href="../../../memo/tests/parametrized_tests/" class="md-nav__link">
         
   
   
@@ -791,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/tests/fixtures/" class="md-nav__link">
+      <a href="../../../memo/tests/fixtures/" class="md-nav__link">
         
   
   
@@ -863,7 +863,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -910,6 +910,8 @@
   
     
     
+      
+        
       
         
       
@@ -982,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../discovery/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   
@@ -1150,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../install_project/" class="md-nav__link">
+      <a href="../../install_project/" class="md-nav__link">
         
   
   
@@ -1203,34 +1205,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../listes_2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Les listes (2)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1250,7 +1224,7 @@
   <span class="md-ellipsis">
     
   
-    Les exceptions (capture)
+    Les listes (2)
   
 
     
@@ -1268,7 +1242,7 @@
   <span class="md-ellipsis">
     
   
-    Les exceptions (capture)
+    Les listes (2)
   
 
     
@@ -1294,10 +1268,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aide-memoire" class="md-nav__link">
+  <a href="#avant-de-commencer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aide mémoire
+        Avant de commencer
       
     </span>
   </a>
@@ -1305,24 +1279,74 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fichiers-de-travail" class="md-nav__link">
+  <a href="#presentation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fichiers de travail
+        Présentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Présentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creez-une-reference-de-la-donnee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créez une référence de la donnée
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#astuce-afficher-des-collections" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exercice
+        Astuce : afficher des collections
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculez-la-duree-de-la-saison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculez la durée de la saison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gerez-votre-playlist-du-soir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gérez votre playlist du soir
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-playlist-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La playlist utilisateur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1330,6 +1354,62 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exception_raise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les exceptions (levée)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exception_catch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les exceptions (capture)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1370,7 +1450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../boucles/" class="md-nav__link">
+      <a href="../loops/" class="md-nav__link">
         
   
   
@@ -1459,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../list_comprehension/" class="md-nav__link">
+      <a href="../../advanced/list_comprehension/" class="md-nav__link">
         
   
   
@@ -1487,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dates/" class="md-nav__link">
+      <a href="../../advanced/dates/" class="md-nav__link">
         
   
   
@@ -1578,7 +1658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop/modele_objet/" class="md-nav__link">
+      <a href="../../oop/modele_objet/" class="md-nav__link">
         
   
   
@@ -1606,7 +1686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop/consolidation/" class="md-nav__link">
+      <a href="../../oop/consolidation/" class="md-nav__link">
         
   
   
@@ -1634,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop/usage/" class="md-nav__link">
+      <a href="../../oop/usage/" class="md-nav__link">
         
   
   
@@ -1723,7 +1803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../project/files/" class="md-nav__link">
+      <a href="../../project/files/" class="md-nav__link">
         
   
   
@@ -1751,7 +1831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../project/loader/" class="md-nav__link">
+      <a href="../../project/loader/" class="md-nav__link">
         
   
   
@@ -1850,7 +1930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pyflix/" class="md-nav__link">
+      <a href="../../../pyflix/" class="md-nav__link">
         
   
   
@@ -1878,7 +1958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vscode/" class="md-nav__link">
+      <a href="../../../vscode/" class="md-nav__link">
         
   
   
@@ -1906,7 +1986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../memo/loggers/" class="md-nav__link">
+      <a href="../../../memo/loggers/" class="md-nav__link">
         
   
   
@@ -1969,7 +2049,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../en/" class="md-nav__link ">
+            <a href="../../../../en/" class="md-nav__link ">
               
   
   
@@ -2033,7 +2113,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../en/activities/" class="md-nav__link ">
+            <a href="../../../../en/activities/" class="md-nav__link ">
               
   
   
@@ -2148,7 +2228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/discovery/" class="md-nav__link">
+      <a href="../../../../en/activities/discovery/" class="md-nav__link">
         
   
   
@@ -2176,7 +2256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/lists_1/" class="md-nav__link">
+      <a href="../../../../en/activities/lists_1/" class="md-nav__link">
         
   
   
@@ -2204,7 +2284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/conditional_statement_1/" class="md-nav__link">
+      <a href="../../../../en/activities/conditional_statement_1/" class="md-nav__link">
         
   
   
@@ -2232,7 +2312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/functions_introduction/" class="md-nav__link">
+      <a href="../../../../en/activities/functions_introduction/" class="md-nav__link">
         
   
   
@@ -2260,7 +2340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/conditional_statement_2/" class="md-nav__link">
+      <a href="../../../../en/activities/conditional_statement_2/" class="md-nav__link">
         
   
   
@@ -2288,7 +2368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/dictionaries/" class="md-nav__link">
+      <a href="../../../../en/activities/dictionaries/" class="md-nav__link">
         
   
   
@@ -2316,7 +2396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/lists_2/" class="md-nav__link">
+      <a href="../../../../en/activities/lists_2/" class="md-nav__link">
         
   
   
@@ -2344,7 +2424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/exception_raise/" class="md-nav__link">
+      <a href="../../../../en/activities/exception_raise/" class="md-nav__link">
         
   
   
@@ -2372,7 +2452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/exception_catch/" class="md-nav__link">
+      <a href="../../../../en/activities/exception_catch/" class="md-nav__link">
         
   
   
@@ -2400,7 +2480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/strings/" class="md-nav__link">
+      <a href="../../../../en/activities/strings/" class="md-nav__link">
         
   
   
@@ -2428,7 +2508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../en/activities/loops/" class="md-nav__link">
+      <a href="../../../../en/activities/loops/" class="md-nav__link">
         
   
   
@@ -2499,10 +2579,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aide-memoire" class="md-nav__link">
+  <a href="#avant-de-commencer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aide mémoire
+        Avant de commencer
       
     </span>
   </a>
@@ -2510,24 +2590,74 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fichiers-de-travail" class="md-nav__link">
+  <a href="#presentation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fichiers de travail
+        Présentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Présentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creez-une-reference-de-la-donnee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créez une référence de la donnée
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#astuce-afficher-des-collections" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exercice
+        Astuce : afficher des collections
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculez-la-duree-de-la-saison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculez la durée de la saison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gerez-votre-playlist-du-soir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gérez votre playlist du soir
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-playlist-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La playlist utilisateur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2551,34 +2681,66 @@
   
 
 
-<h1 id="la-capture-dexceptions">La capture d'exceptions</h1>
-<h2 id="aide-memoire">Aide mémoire</h2>
-<p>Capturer une exception se fait avec la structure :
-<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
-    <span class="o">...</span>
-<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-    <span class="n">do_something_for_exception</span><span class="p">()</span>
-</code></pre></div></p>
-<p>Ici, le code sait gérer une <code>ValueError</code>.</p>
-<p>La clause <code>finally</code> permet d'exécuter du code dans tous les cas.
-<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
-    <span class="o">...</span>
-<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-    <span class="n">do_something_for_exception</span><span class="p">()</span>
-<span class="k">finally</span><span class="p">:</span>
-    <span class="n">cleanup</span><span class="p">()</span>
-</code></pre></div></p>
-<h2 id="fichiers-de-travail">Fichiers de travail</h2>
-<p>Pour les exercices de cet énoncé, vous allez revenir sur un des premiers fichiers :</p>
-<ul>
-<li><code>exos/exo_01b.py</code>qui vous est fourni.</li>
-</ul>
-<h2 id="exercice">Exercice</h2>
-<p>Pour la mise en pratique de la capture des exceptions, nous allons simplement modifier le code de 
-cet exercice.</p>
-<p>Revenez sur le code du script <code>exo_01b.py</code>.</p>
-<p>Capturez l’exception lorsque l’utilisateur saisit une chaine de caractère qui ne se convertit pas 
-en entier et l’informe du problème.</p>
+<h1 id="les-listes-seconde-partie">Les listes, seconde partie</h1>
+<h2 id="avant-de-commencer">Avant de commencer</h2>
+<p>Pour cet exercice (et certains exercices suivants), vous aurez besoin d'une ressource 
+supplémentaire qui vous est fournie par le package <code>pyflix</code>. Il est supposé que vous avez bien 
+installé le projet par <code>pip install -e .</code>. </p>
+<h2 id="presentation">Présentation</h2>
+<p>Nous allons lancer un service de streaming vidéo, PyFlix, un peu comme Netflix, mais en Python. Nous
+allons donc gérer un catalogue.</p>
+<p>Le module <code>pyflix.datasource</code>  contient une fonction nommée <code>get_season()</code> qui retourne la liste des
+titres des épisodes de la saison 12 de Big Bang Theory. Nous allons extraire des informations de
+cette liste.</p>
+<p>La manière la plus simple d'utiliser cette fonction est la suivante :</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pyflix.datasource</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ds</span>
+
+<span class="n">ds</span><span class="o">.</span><span class="n">get_season</span><span class="p">()</span>
+</code></pre></div>
+<p>Pour l'utilisation de cette fonction, vous pouvez consulter
+<a href="https://github.com/darko-itpro/pyschool-lib/wiki/Le-module-pyflix.datasource">la page dédiée du wiki</a></p>
+<h3 id="creez-une-reference-de-la-donnee">Créez une référence de la donnée</h3>
+<p>Affectez le retour de cette fonction à une variable <code>bbt_s12</code>. Il s’agit de la donnée de référence
+de la saison chargée en mémoire dans votre module.</p>
+<p>Nous utiliserons cette variable pour les questions suivantes (vous ne devez plus rappeler la
+fonction pour ne pas surcharger le serveur). Les questions suivantes restent indépendantes entre elles.</p>
+<h3 id="astuce-afficher-des-collections">Astuce : afficher des collections</h3>
+<p>Pour afficher la collection, vous verrez que la fonction <code>print()</code> n’est pas adaptée. Elle affiche
+le contenu de la liste sur une seule ligne, ce qui n’est pas <em>pratique</em> pour voir son contenu.
+Pour voir le contenu de la liste, je vous propose d’utiliser la fonction
+<code>pprint()</code> du module <code>pprint</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pprint</span><span class="w"> </span><span class="kn">import</span> <span class="n">pprint</span>
+
+<span class="n">pprint</span><span class="p">(</span><span class="n">bbt_s12</span><span class="p">)</span>
+</code></pre></div>
+<p>Cette fonction a un nom qui ne rentrera pas en collision avec la fonction <code>print()</code>, vous pouvez
+donc l’importer directement.</p>
+<h3 id="calculez-la-duree-de-la-saison">Calculez la durée de la saison</h3>
+<p>Nous considérons que chaque épisode dure <strong>23 minutes</strong>, combien de temps dure la saison ?</p>
+<p>Pour cela, écrivez une fonction qui prend en argument (au moins) une liste d’épisodes et retourne
+la durée de cette liste d’épisodes.</p>
+<h3 id="gerez-votre-playlist-du-soir">Gérez votre playlist du soir</h3>
+<p>Nous voulons obtenir une liste des premiers épisodes dont la durée totale est inférieure ou égale à
+une durée.</p>
+<p>Pour cela, vous devez créer une fonction avec comme paramètre (au moins) une liste d’épisodes
+(<code>liste_ep</code>) et cette durée maximum (<code>d_max</code>). Cette fonction doit retourner la liste des N premiers
+épisodes de <code>liste_ep</code> où N est le nombre maximum d’épisodes à regarder. N étant un maximum.</p>
+<p><strong>Note</strong> : <code>liste_ep</code> et <code>d_max</code> sont utilisées ici pour référencer les données, vous pouvez utiliser
+des noms plus adaptés comme paramètres.</p>
+<p>Utilisez cette fonction avec <code>bbt_s12</code> comme argument et une durée de 2 heures.</p>
+<h3 id="la-playlist-utilisateur">La playlist utilisateur</h3>
+<p>Les utilisateurs souhaitent suivre leur avancée dans une série, nous allons gérer ça sous forme
+d’une <em>playlist</em> qui sera une copie de la saison. Le prochain épisode à regarder est le premier de
+la playlist. Dès qu’il est vu, il est supprimé de la playlist.</p>
+<p>Créez  une copie de la liste de la saison 12 (<code>bbt_s12</code>) dans une variable <code>playlist</code> (peu importe
+si le nom était déjà utilisé pour la liste précédente).</p>
+<p>Pour simuler la vision d’un épisode (le premier de la playlist), affichez simplement son titre. En
+même temps, supprimez-le de la playlist. Vous pouvez bien entendu utiliser une fonction pour cela,
+fonction qui prends en argument une liste d’épisodes.</p>
+<p>La playlist ne contient que les épisodes restant à voir (actuellement un de moins que la série
+complète). Utilisez la fonction qui calcule la durée pour afficher la  durée des épisodes restant
+et de la saison complète pour comparer les deux valeurs.</p>
+<p>Que remarquez-vous ?</p>
 
 
 
@@ -2628,10 +2790,10 @@ en entier et l’informe du problème.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
