@@ -1,4 +1,4 @@
-# In English
+# Python, fundamentals of the language
 
 ## Project Sources
 

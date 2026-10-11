@@ -5,11 +5,11 @@ the explanations are in French. [English](README_en.md)
 
 Ce référentiel complète la formation que je propose et est donc destiné à mes stagiaires.
 
-La [Documentation github](https://darko-itpro.github.io/formation-Python_fondamentaux/) est 
+La [Documentation github](https://darko-itpro.github.io/formation-Python_fondamentaux/fr/) est 
 disponible.
 
 [![License](https://img.shields.io/github/license/darko-itpro/training-python.svg?style=plastic)](https://github.com/darko-itpro/training-python/blob/master/LICENSE)
-[![Static Badge](https://img.shields.io/badge/Github-Documentation-blue?logo=github)](https://darko-itpro.github.io/formation-Python_fondamentaux/)
+[![Static Badge](https://img.shields.io/badge/Github-Documentation-blue?logo=github)](https://darko-itpro.github.io/formation-Python_fondamentaux/fr/)
 
 Ces sources sont organisées pour proposer des exemples de code sur les thèmes couverts par les formations de base
 Python. Elles respectent avec quelques adaptations l'organisation d'un package.

@@ -1,4 +1,6 @@
-# En Français
+# Python, les fondamentaux
+
+Ceci est la documentation des supports de ma formation sur Python, les fondamentaux du langage.
 
 ## Sources du projet de travail
 
@@ -6,13 +8,15 @@ Les sources de ce projet sont sur
 [GitHub: Python les fondamentaux](https://github.com/darko-itpro/formation-Python_fondamentaux).
 
 ## Les sujets d'exercices
-Les exercices sont sur une [page dédiée](activities/index.md)
+Les exercices sont sur une [page dédiée aux exercices](activities/index.md)
 
 ## Le support de formation
 Le présent site héberge [une version _web_ des supports de formation](docs/index.html){: target="_blank" } 
 (s'ouvre dans une nouvelle fenêtre car ne gère pas la navigation).
 
 ## Rappels et aides mémoire
+
+Ces rappels datent d'avant l'intégration du support et n'ont pas été relus.
 
  * [Les fonctions](memo/fonctions.md)
  * [Les tests](memo/tests/index.md)
