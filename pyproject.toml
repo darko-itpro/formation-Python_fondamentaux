@@ -4,10 +4,10 @@ build-backend = "hatchling.build"
 
 [project]
 name = "formation-python-fondamentaux"
-version = "2026.08"
+version = "2026.10"
 description = "Project for my basic Python training."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 authors = [
     {name="Darko Stankovski", email="darko.itpro@gmail.com"},
 ]
