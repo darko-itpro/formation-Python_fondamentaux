@@ -1,0 +1,979 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Python, Les Fondamentaux",
+    "section": "",
+    "text": "Présentation de la formation\nCe document est un support de formation destiné à être utilisé suite à mes formations.\nCe document est préparé pour permettre d’accéder aux informations présentées en formation et non pour être lu comme un manuel.",
+    "crumbs": [
+      "Présentation de la formation"
+    ]
+  },
+  {
+    "objectID": "index.html#pré-requis",
+    "href": "index.html#pré-requis",
+    "title": "Python, Les Fondamentaux",
+    "section": "Pré-requis",
+    "text": "Pré-requis\nCette formation est destinée à une audience ayant des connaissances de base en programmation. Les concepts d’instruction, donnée, variable, structure de contrôle et fonction sont supposés connus. Les notions de base sur l’utilisation du terminal/invite de commande est également nécessaire.\nLicence CC-BY-NC-ND Darko Stankovski 2017-2026 version 2026.10",
+    "crumbs": [
+      "Présentation de la formation"
+    ]
+  },
+  {
+    "objectID": "Introduction/Worktools.html",
+    "href": "Introduction/Worktools.html",
+    "title": "1  Boite à outils",
+    "section": "",
+    "text": "1.1 L’interpréteur\nCe chapitre propose un aperçu de l’écosystème des outils de développement Python.\nL’interpréteur est le seul outil indispensable. Pour l’installer :\nPour être plus précis, vous n’installez pas que l’interpréteur mais la distribution standard (ou distribution de référence) qui vient avec l’interpréteur, la bibliothèque standard et des outils complémentaires.\nParmi ces outils, vous avez :",
+    "crumbs": [
+      "L'environnement de travail",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Boite à outils</span>"
+    ]
+  },
+  {
+    "objectID": "Introduction/Worktools.html#linterpréteur",
+    "href": "Introduction/Worktools.html#linterpréteur",
+    "title": "1  Boite à outils",
+    "section": "",
+    "text": "Pour Windows et Mac OS, télécharger la dernière version de Python sur le site de la fondation Pyhton : https://www.python.org\nPour Linux, vous pouvez récupérer les sources sur python.org. Mais il sera plus simple d’utiliser le gestionnaire de paquets.\n\n\n\n\npip : le gestionnaire de paquets (https://pypi.python.org/pypi/pip)\nvenv : l’outil de création d’environneemnts virtuels qui permet d’isoler les environnements d’exécution (https://docs.python.org/3/library/venv.html)\nIDLE : définis comme un IDE léger, c’est plutôt un éditeur avancé",
+    "crumbs": [
+      "L'environnement de travail",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Boite à outils</span>"
+    ]
+  },
+  {
+    "objectID": "Introduction/Worktools.html#environnement-de-développement",
+    "href": "Introduction/Worktools.html#environnement-de-développement",
+    "title": "1  Boite à outils",
+    "section": "1.2 Environnement de développement",
+    "text": "1.2 Environnement de développement\nL’usage d’un environnement de développement n’est pas nécessaire pour Python. Il est possible d’utiliser un simple éditeur de texte en s’assurant qu’il est configuré en UTF-8. Un IDE (Environnement de Développement Intégré) apportera tout de même certaines facilitées.\nIl existe un certain nombre d’environnements intégrés plus ou moins complets. La liste suivante n’est pas exhaustive.\n\n1.2.1 Thonny\nThonny est un éditeur de code créé en 2014. Il est destiné à l’apprentissage du code Python, est simple et complet pour cette tâche. À noter qu’il vient avec sa propre version de l’interpréteur officiel ce qui permet de plonger directement dans l’apprentissage de Python.\nhttps://thonny.org/\n\n\n1.2.2 Visual Studio Code\nL’éditeur de code léger de Microsoft prend en charge Python de manière relativement complète pour ce type d’éditeur basé sur plug-ins. La prise en charge s’améliore avec les versions.\nhttps://code.visualstudio.com/\n\n\n1.2.3 PyCharm\nPyCharm est un IDE proposé par la société JetBrains à qui on doit IntelliJ Idea. Initialement, PyCharm était proposé sous deux licences, une commerciale et une community. Ces deux versions ont été fusionnées. L’usage community est largement suffisant.\nhttps://www.jetbrains.com/pycharm/download/\n\n\n1.2.4 Jupyter-lab\nLe projet Jupyter est un projet open-source d’application web qui permet de partager des pages contenant du code exécutable. Le projet a évolué de notebooks (calepins) vers Jupyter Lab qui se veut proposer un IDE web. Les notebooks sont des fichiers spécifiques qui sont gérés par de nombreux IDEs.\nhttp://jupyter.org/",
+    "crumbs": [
+      "L'environnement de travail",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Boite à outils</span>"
+    ]
+  },
+  {
+    "objectID": "Introduction/Worktools.html#outil-de-gestion-de-projet-uv",
+    "href": "Introduction/Worktools.html#outil-de-gestion-de-projet-uv",
+    "title": "1  Boite à outils",
+    "section": "1.3 Outil de gestion de projet : uv",
+    "text": "1.3 Outil de gestion de projet : uv\nPython n’a pas réellement d’outil de gestion de projet et de manière générale, pas standard. Plusieurs initiatives ont vu le jour et actuellement, uv se démarque.\nCréé en février 2024 par la société Astral (à qui nous devons Ruff), uv tends à remplacer l’usage de venv, pip et de la création de packages tout en assurant une cohérence dans le travail d’équipe.\nhttps://docs.astral.sh/uv/",
+    "crumbs": [
+      "L'environnement de travail",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Boite à outils</span>"
+    ]
+  },
+  {
+    "objectID": "Introduction/Workspace.html",
+    "href": "Introduction/Workspace.html",
+    "title": "2  L’environnement de travail",
+    "section": "",
+    "text": "2.1 Isoler son environnement de travail\nBien que vous puissiez écrire un script Python dans un fichier n’importe où dans votre système de fichiers, travailler de manière plus robuste nécessite de bien préparer son environnement de travail.\nUn projet Python, c’est un interpréteur (sa version) et un ensemble de dépendances. Plusieurs interpréteurs peuvent cohabiter sur un même système. Les dépendances vont être spécifiques à une version d’interpréteur (installer pytest pour Python 3.13 ne le rends pas disponible pour 3.14). Chaque interpréteur a donc un environnement d’exécution. Si vous avez deux projets Python utilisant la même version d’interpréteur, elles utiliseront aussi le même environnement avec les mêmes dépendances.\nPour isoler les environnement par projet, nous utilisons les venv. L’utilitaire pour les créer fait parti du package standard.\nCi dessous, vous avez les grandes lignes mais consultez la documentation : https://docs.python.org/3/library/venv.html pour plus de précisions.",
+    "crumbs": [
+      "L'environnement de travail",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L'environnement de travail</span>"
+    ]
+  },
+  {
+    "objectID": "Introduction/Workspace.html#isoler-son-environnement-de-travail",
+    "href": "Introduction/Workspace.html#isoler-son-environnement-de-travail",
+    "title": "2  L’environnement de travail",
+    "section": "",
+    "text": "2.1.1 Création de l’environnement virtuel\nL’outil s’utilise en ligne de commande et il faut commencer par créer l’environnement virtuel. La commande est de la forme :\npython3.XX -m venv [ENV_DIR]\noù :\n\npython3.XX est la version de Python utilisée pour créer le venv et sera la version active de cet environnement. En fonction de votre système, vous pourrez avoir besoin de déclarer le chemin absolu.\n-m venv est la commande de création du venv.\n[ENV_DIR] est le nom du répertoire où sera créé le venv. De manière générale, il est créé à la racine du projet et est nommé .venv.\n\nLa commande habituelle, exécutée dans le répertoire du projet, est sous cette forme (en supposant l’usage de python3.14) :\npython3.14 -m venv .venv\n\n\n2.1.2 Activation de l’environnement virtuel\nCréer un environnement virtuel consiste à créer un répertoire. Pour pouvoir l’utiliser, il faut l’activer. La commande va dépende re votre système. Les exemples suivants considèrent que l’environnement virtuel a été créé dans un répertoire .venv.\nSous sh, bash ou zsh :\nsource .venv/bin/activate\nSous Windows, avec le PowerShell\n.venv/bin/Activate.ps1\nSous Windows, avec le cmd.exe\n.venv\\Scripts\\activate.bat\n\n\n2.1.3 Désactiver un environnement virtuel\nSi vous avez besoin de sortir de l’environnement virtuel, c’est à dire de le désactiver dans le terminal, l’instruction est :\ndeactivate\n\n\n2.1.4 Supprimer un environnement virtuel\nSupprimer un environnement virtuel consiste à supprimer le répertoire qui le contient.\n\n\n2.1.5 Les environnements virtuels et les gestionnaires de version\nLe répertoire d’un environnement virtuel n’est pas sous contrôle de version. Ces environnement sont volumineux et peuvent contenir des packages spécifiques à votre système (OS ou architecture). Les environnements virtuels se reconstruisent.\n\n\n2.1.6 Les environnements virtuels et les IDEs\nLes principaux IDEs (PyCharm et Visual Studio Code) on des outils plus graphiques de gestion des environnements virtuels. Il ne s’agit cependant que d’une interface sur les instructions présentées ici.",
+    "crumbs": [
+      "L'environnement de travail",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L'environnement de travail</span>"
+    ]
+  },
+  {
+    "objectID": "Introduction/Workspace.html#gérer-des-dépendances-de-manière-standard",
+    "href": "Introduction/Workspace.html#gérer-des-dépendances-de-manière-standard",
+    "title": "2  L’environnement de travail",
+    "section": "2.2 Gérer des dépendances de manière standard",
+    "text": "2.2 Gérer des dépendances de manière standard\nLes dépendances se gèrent de manière standard avec pip.\n\n2.2.1 Installer une dépendance\nPour installer une dépendance :\npip install pytest\nVous pouvez installer plusieurs dépendances en une instruction\npip install pytest pylint ruff\n\n\n2.2.2 Mettre à jour une dépendance\npip install --upgrade pytest\nPour information, pip se met à jour par lui même :\npip install --upgrade pip\n\n\n2.2.3 Supprimer une dépendance\npip uninstall pytest\n\n\n2.2.4 Lister les dépendances\npip list\n\n\n2.2.5 Gérer les dépendances d’un projet, approche historique\nHistoriquement, les dépendances d’un projet sont déclarées dans un fichier requirements.txt, ce qui facilite leur installation. Ce fichier doit suivre une certaine syntaxe. Le plus simple est de le générer, à l’aide de l’instruction :\npip freeze\nCette instruction affichera dans le terminal les bibliothèques installées avec la syntaxe suivante :\nflake8==5.0.4\nipython==8.11.0\npylint==2.15.5\npytest==7.0.1\nPour créer le fichier, il suffit de rediriger la sortie standard vers le fichier :\npip freeze &gt; requirements.txt\nPour installer le contenu du fichier :\npip install -r requirements.txt\nIl est également possible d’utiliser ce fichier pour mettre à jour des dépendances :\npip install --upgrade -r requirements.txt",
+    "crumbs": [
+      "L'environnement de travail",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L'environnement de travail</span>"
+    ]
+  },
+  {
+    "objectID": "Introduction/Workspace.html#lapproche-packaging-standard",
+    "href": "Introduction/Workspace.html#lapproche-packaging-standard",
+    "title": "2  L’environnement de travail",
+    "section": "2.3 L’approche packaging standard",
+    "text": "2.3 L’approche packaging standard\nUn programme Python, dans sa forme la plus simple, est une arborescence de fichiers. Python prévoit également la possibilité de packager le code pour en faite un package. C’est exactement le type de fichiers que vous installez avec pip instal. Mais créer un projet destiné au packaging a aussi un intérêt dans le cadre du développement.\nUn projet destiné au packaging a une structure particulière (src-based layout) et est décrit dans un fichier pyproject.toml.\nIl y a plusieurs intérêts pour le développement.\n\n2.3.1 Installation du projet en mode éditable\npip install -e .\nLe projet actuel n’est pas installé, un lien est créé dans la bibliothèque des packages vers l’arborescence. Ceci permet de ne plus avoir de problème de chemin vers les ressources.\n\n\n2.3.2 Une gestion centralisée des dépendances\nLorsqu’un projet est destiné au packaging, la création d’un package ne regarde pas le fichier requirements.txt. Les dépendances sont décrites dans le pyproject.toml.\nDepuis pip 26.2, il est possible d’utiliser le fichier pyproject.toml et se passer du requirements.txt :\npip install . --only-deps\nEn général, dans un pyproject.toml, les dépendances ne sont que les dépendances de prod. Les dépendances de développement sont un groupe habituellement nommé dev et que l’on peut installer par :\npip install --group dev",
+    "crumbs": [
+      "L'environnement de travail",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L'environnement de travail</span>"
+    ]
+  },
+  {
+    "objectID": "02-donnees_variables.html",
+    "href": "02-donnees_variables.html",
+    "title": "3  Données et variables",
+    "section": "",
+    "text": "3.1 Les données\nLa programmation consiste à manipuler des données. Pour accéder aux données, il est fait usage de variables. Pour le programmeur, une variable est un nom qui doit identifier la donnée manipulée.\nUne donnée représente une information. Elle a un type et une valeur.\nLes données sont manipulées avec des instructions qui peuvent également être des symboles ou des fonctions.",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Données et variables</span>"
+    ]
+  },
+  {
+    "objectID": "02-donnees_variables.html#les-données",
+    "href": "02-donnees_variables.html#les-données",
+    "title": "3  Données et variables",
+    "section": "",
+    "text": "Le type définit la nature des valeurs que peut prendre la donnée ainsi que les opérateurs qui peuvent lui être appliqués et leur effet.\nLa valeur représente l’information.",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Données et variables</span>"
+    ]
+  },
+  {
+    "objectID": "02-donnees_variables.html#les-variables",
+    "href": "02-donnees_variables.html#les-variables",
+    "title": "3  Données et variables",
+    "section": "3.2 Les variables",
+    "text": "3.2 Les variables\nUne variable est un nom avec lequel on va manipuler une donnée. Une variable est créée par affectation.\n1&gt;&gt;&gt; question = 'Meaning of life'\n2&gt;&gt;&gt; answer = 42\n\n1\n\nCréation de la variable question référençant la donnée 'Meaning of life'\n\n2\n\nCréation de la variable answer référençant la donnée 42\n\n\nEn Python, les variables référencent des données. Une variables ne contient pas la valeur mais une référence vers une valeur.\nPython est un langage non déclaratif : il n’y a pas de déclaration du type des données référencées par les variables. Une variable peut donc référencer des données de type différents au cours de son existence. Le type est déterminé dynamiquement par l’interpréteur.\nPython est un langage de haut niveau qui va gérer la mémoire par un mécanisme de comptage de références. Le développeur n’a pas à se soucier de la gestion de la mémoire. Les données seront détruites lorsqu’elles ne seront plus accessibles, c’est à dire lorsqu’elles ne seront plus référencées.\n1&gt;&gt;&gt; answer = 42\n&gt;&gt;&gt; print(type(answer))\n&lt;class 'int'&gt;\n2&gt;&gt;&gt; del answer\n\n1\n\nCréation de la variable par affectation.\n\n2\n\nDestruction de la variable et en conséquence de la valeur.\n\n\nUne instruction peut se limiter au nom d’une variable. Il s’agit alors d’une instruction qui retourne la donnée référencée par la variable.\n&gt;&gt;&gt; answer = 42\n&gt;&gt;&gt; answer\n42\nUne variable dans le code doit donc systématiquement être considérée comme la valeur qu’elle référence.",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Données et variables</span>"
+    ]
+  },
+  {
+    "objectID": "02-donnees_variables.html#règles-de-nommage",
+    "href": "02-donnees_variables.html#règles-de-nommage",
+    "title": "3  Données et variables",
+    "section": "3.3 Règles de nommage",
+    "text": "3.3 Règles de nommage\nLes variables en Python peuvent contenir des caractères alphanumérique sans diacritique (tel que les accents, cédille…) ou souligné _ (underscore). Le premier caractère ne peut pas être un caractère numérique (de 0 à 9). Python est sensible à la casse (capitale ou minuscule).\nL’expression rationnelle représentant un nom de variable Python peut s’écrire : [a-zA-Z_][a-zA-Z0-9_]\nEn plus de la règle de nommage, vous ne pouvez pas utiliser les mots réservés.",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Données et variables</span>"
+    ]
+  },
+  {
+    "objectID": "02-donnees_variables.html#conventions-de-codage-la-pep-8",
+    "href": "02-donnees_variables.html#conventions-de-codage-la-pep-8",
+    "title": "3  Données et variables",
+    "section": "3.4 Conventions de codage : la PEP 8",
+    "text": "3.4 Conventions de codage : la PEP 8\nTout développement nécessite de s’accorder sur des conventions de codage afin de rendre l’ensemble du code lisible et maintenance. Dans l’univers Python, ces règles et conventions sont généralisés dans la PEP 8. Une PEP, pour Python Enhancement Proposal, est un document destiné à proposer une évolution du langage puis, si accepté, à documenter cette évolution. L’explication plus détaillée est publiée dans la PEP 1 et la liste de toutes les PEPs dans la PEP 0.\nLa PEP 8 est le document formalisant les règles de codage adoptées par la communauté. La PEP 8 propose des règles à props des variables. Elle ne concerne que la question du formatage et tient en 3 cas (plus un lié à la lisibilité) :\n\nÉvitez les caractères l, O ou I comme nom de variable à une lettre (en général des indices) car en fonction des polices, ils ne sont pas lisibles et peuvent être confondus avec les valeurs 0 et 1.\nsnake_case : lettres minuscules pour les noms de modules, variables et fonctions. Pour représenter plusieurs mots, les séparer par le caractère souligné (exemple : ma_variable).\nLettres capitales et soulignés pour les constantes (exemple : MA_CONSTANTE)\nCamelCase (ou CapWords) pour les noms de classes (exemple: MaClasse)\n\nPrincipes et conventions\nAu delà des règles de formatage des noms de variables, il y a quelques principes et conventions.\n\nExplicit is better than implicit\n\nPython étant un langage non déclaratif, le nom des variables doit expliquer ce qu’elles contiennent.  Cependant, ne laissez pas supposer du type de la donnée puisque le type peut changer.",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Données et variables</span>"
+    ]
+  },
+  {
+    "objectID": "02-donnees_variables.html#affecter-une-donnée-à-une-variable",
+    "href": "02-donnees_variables.html#affecter-une-donnée-à-une-variable",
+    "title": "3  Données et variables",
+    "section": "3.5 Affecter une donnée à une variable",
+    "text": "3.5 Affecter une donnée à une variable\nLe symbole égal = est l’opérateur d’affectation et permet donc d’affecter une donnée à une variable.\n&gt;&gt;&gt; answer = 42",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Données et variables</span>"
+    ]
+  },
+  {
+    "objectID": "02-donnees_variables.html#absence-de-déclaration-du-type",
+    "href": "02-donnees_variables.html#absence-de-déclaration-du-type",
+    "title": "3  Données et variables",
+    "section": "3.6 Absence de déclaration du type",
+    "text": "3.6 Absence de déclaration du type\nPython est un langage non-déclaratif, c’est à dire que lors de la création d’une variable, on ne déclare pas le type de donnée qui sera référencé par cette variable. La conséquence est que le type de la variable référencée par l’interpréteur pourra varier. Le type de la donnée sera défini par l’initialisation de la donnée (voir les différents types).",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Données et variables</span>"
+    ]
+  },
+  {
+    "objectID": "02-donnees_variables.html#manipuler-et-comprendre-des-données",
+    "href": "02-donnees_variables.html#manipuler-et-comprendre-des-données",
+    "title": "3  Données et variables",
+    "section": "3.7 Manipuler et comprendre des données",
+    "text": "3.7 Manipuler et comprendre des données\nPython propose plusieurs outils permettant de comprendre les variables, donc les données. Soit une variable ma_variable :\n\nprint(ma_variable) affiche la valeur référencée par la variable\nprint(type(ma_variable)) affiche le type de la valeur référencée par la variable\nid(ma_variable) affiche l’identifiant unique de la donnée référencée par la variable\ndir(ma_variable) retourne la liste des attributs du type de la donnée référencée par la variable.\nhelp(ma_variable) affiche l’aide sur le type de la données référencée par la variable.",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Données et variables</span>"
+    ]
+  },
+  {
+    "objectID": "03-types_base.html",
+    "href": "03-types_base.html",
+    "title": "4  Les types de base (built-in)",
+    "section": "",
+    "text": "4.1 Les types numériques\nPython propose plusieurs types, ou plutôt familles de types, de base (built-in).\nLes scalaires sont représentés par les types numériques.\nLes types de données qui représentent plusieurs données sont les collections.\nEn Python, nous avons 3 types numériques :\nLe type booléens (bool) représente les notions de vrai et faux et prennent deux valeurs : True et False.\nDe manière générale en Python, le type de la donnée est déduite par l’interpréteur. Les types built-in ont la particularité d’être déclarés par leur valeur. Néanmoins, il existe aussi des fonctions pour initialiser ces données. Ces fonctions peuvent également convertir un type dans le type correspondant au nom de la fonction : int(var), float(var) ou complex(var1, var2).\nCi-dessous, vous avez un exemple de déclaration de types numérique\nEn Python, il n’y a pas de taille maximum des entiers. La curiosité est que si sa valeur est comprise entre -2^(n-1) et 2^(n-1)-1, il est géré en registre, sinon en mémoire. Les réels ont une taille correspondant à un double en C.",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Les types de base (built-in)</span>"
+    ]
+  },
+  {
+    "objectID": "03-types_base.html#les-types-numériques",
+    "href": "03-types_base.html#les-types-numériques",
+    "title": "4  Les types de base (built-in)",
+    "section": "",
+    "text": "int qui représente les entiers\nfloat pour les réels\ncomplex pour les nombres complexe.\n\n\n\n\n1answer = 42\n2answer = 42.0\n\n1\n\nDéclaration d’un entier ( int)\n\n2\n\nDéclaration d’un réel (Float)\n\n\nIn [10]: var_int = int(42.2)\nIn [11]: var_int = 42\n\nIn [12]: var_float = float(3)\nIn [13]: var_float = 3.\nIn [14]: var_float = 3.14\n\nIn [15]: var_cpx = complex(42, 2)\nIn [16]: var_cpx = 42 + 2j\nIn [17]: var_cpx.real\nOut[17]: 42.0\nIn [18]: var_cpx.imag\nOut[18]: 2.0",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Les types de base (built-in)</span>"
+    ]
+  },
+  {
+    "objectID": "03-types_base.html#opérateurs-arithmétiques",
+    "href": "03-types_base.html#opérateurs-arithmétiques",
+    "title": "4  Les types de base (built-in)",
+    "section": "4.2 Opérateurs arithmétiques",
+    "text": "4.2 Opérateurs arithmétiques\nPython propose les opérateurs arithmétiques classiques ainsi que quelques autres.\n\n\n\nx + y\nAddition\n\n\nx - y\nSoustraction\n\n\nx * y\nMultiplication\n\n\nx / y\nDivision\n\n\nx // y\nDivision entière\n\n\nx % y\nReste\n\n\n-x\nOpposé\n\n\n+x\nIdentité\n\n\nx ** y\nPuissance\n\n\n\nLa priorité des opérateurs est la priorité mathématique. À priorité égale, les opérations sont résolues de gauche à droite. Les parenthèses ont la plus grande priorité et permettent de grouper les opérations.\nCes opérateurs sont utilisés entre les types numériques en tant qu’opérateurs mathématiques mais certains peuvent être utilisés avec d’autres types. Ainsi, l’addition de deux chaines de caractères (voir partie sur les collections) produira une chaine de caractères correspondant à la concaténation de ces deux chaines.",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Les types de base (built-in)</span>"
+    ]
+  },
+  {
+    "objectID": "03-types_base.html#les-opérateurs-bitwise",
+    "href": "03-types_base.html#les-opérateurs-bitwise",
+    "title": "4  Les types de base (built-in)",
+    "section": "4.3 Les opérateurs bitwise",
+    "text": "4.3 Les opérateurs bitwise\nAussi appelés opérateurs bits à bits, ils sont souvent à tord appelés opérateurs binaires.\nPython propose les opérateurs suivants : \n\n\n\nx | y\nOu binaire\n\n\nx ^ y\nOu exclusif\n\n\nx & y\nEt binaire\n\n\nx &lt;&lt; y\nDécalage à gauche\n\n\nx &gt;&gt; y\nDécalage à droite\n\n\n~ x\nInversion\n\n\n\nCes opérateurs permettent de manipuler la représentation binaire des valeurs, par exemple : \nIn [1]: x = 5\n\nIn [2]: y = 6\n\nIn [3]: res = x | y\n\nIn [4]: print(res)\n7\n5 en binaire est 0b101\n6 en binaire est 0b110\nDonc 0b101 OU BINAIRE 0b110 donne 0b111 soit 7.\nLeur intérêt se retrouve surtout dans les opérations usuelles comme dans l’exemple suivant, déterminer si un entier est une puissance de deux (dans cet exemple, 0 est également considéré comme une puissance de 2) :\nIn [5]: (value & (value - 1)) == 0",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Les types de base (built-in)</span>"
+    ]
+  },
+  {
+    "objectID": "03-types_base.html#les-collections",
+    "href": "03-types_base.html#les-collections",
+    "title": "4  Les types de base (built-in)",
+    "section": "4.4 Les collections",
+    "text": "4.4 Les collections\nLes collections représentent des types qui regroupent une collection de données.\nLes collections qui contiennent des éléments ordonnées sont des séquences. Python propose trois types pour les séquences :\n\nles chaines de caractères (str)\nles listes (list)\nles N-uplets (tuple)\n\nLes collections qui ne sont pas des séquences sont :\n\nles ensembles (set)\nles dictionnaires (dict)\n\nLes collections sont des objets. En plus des opérateurs communs, chaque type a ses méthodes spécifiques qui permettent des actions spécifiques. Souvenez-vous que vous pouvez consulter la documentation de chaque type avec la fonction help().\nToutes les collections peuvent être initialisées par une fonction du nom du type qui, sans paramètre, retournera une collection vide.\n\n4.4.1 Instructions communes\nLes différents types de collection, soit str, list, tuple et dict, ont des comportements communs. Les instructions suivantes sont communes à ces différents types. Ainsi, soit my_collection une collection d’un de ces types, x une valeur et n un entier (int).\n\nx in my_collection : retourne True si my_collection contient x, sinon False\nx not in my_collection : retourne False si my_collection contient x, sinon True\nmy_collection1 + my_collection2 : Retourne une concaténation les deux collections du même type.\nmy_collection * n : où n est un entier, retourne une nouvelle collection multiple de l’originale \nlen(my_collection) : retourne la taille de la collection\n\n\n\n4.4.2 Les séquences : accès aux éléments\nConcerne : str, list, tuple\nLes éléments d’une séquence sont identifiés par leur position. La position d’un élément est représentée par son indice qui est la position en commençant à 0.\nPour accéder à un élément d’une séquence, on utilise son indice entre crochet. Python utilise les indices négatifs afin d’accéder aux éléments à partir de la fin.\nIn [30]: knights = [\"Arthur\", \"Lancelot\", \"Robin\", \"Bedevere\", \"Galaad\"]\nIn [31]: antagonist = 'Killer Rabbit of Caerbannog'\n\nIn [32]: print(knights[2])\nRobin\n\nIn [33]: print(antagonist[2])\nl\n\nIn [34]: print(knights[-1])\nGalaad\n\nIn [35]: print(antagonist[-5])\na\nCeci permet d’illustrer un des adages de Python : “There should be one– and preferably only one –obvious way to do it” ou « Il devrait y avoir une, et de préférence une seule, manière évidente de faire une chose ». Ainsi, une demande du type « quel est le dernier élément de la liste » se traduit par ma_liste[-1].\n\n\n4.4.3 Modification d’un élément\nConcerne : list\nUn élément d’une liste peut être remplacé en attribuant une valeur à un indice existant. La valeur référencée par cet indice est alors remplacée par la nouvelle.\nIn [50]: knights = [\"Arthur\", \"Robin\", \"Bedevere\", \"Galaad\"]\n\nIn [51]: knights[1] = 'Lancelot'\nIn [52]: print(knights)\n['Arthur', 'Lancelot', 'Bedevere', 'Galaad']\nLes tuples et les chaines de caractères sont des types immuables. Il est impossible de replacer un de leurs éléments.",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Les types de base (built-in)</span>"
+    ]
+  },
+  {
+    "objectID": "03-types_base.html#slicing",
+    "href": "03-types_base.html#slicing",
+    "title": "4  Les types de base (built-in)",
+    "section": "4.5 Slicing",
+    "text": "4.5 Slicing\nConcerne : str, list, tuple\nLe slicing permet d’extraire une sous-séquence. Cette opérateur va retourner une nouvelle séquence du même type avec les éléments correspondants à la plage indiquée.\n\n4.5.1 Usage\nL’opérateur de slicing ainsi que ses différents usages sont les suivants (seq étant une séquence) :\n\nseq[x:y] : extrait une séquence de l’indice x à l’indice y exclu\nseq[:y] : extrait une séquence de l’indice 0 à l’indice y exclu\nseq[x:] : extrait une séquence de l’indice x à la fin de la séquence seq\nseq[x:y:z] : extrait une séquence de l’indice x à l’indice y exclu avec un pas de z.\n\nLes valeurs x, y et z sont toutes optionnelles, seq[:] retournera ainsi une copie de la séquence.\nSi les bornes sont en dehors des limites de la séquence, le slicing retournera une séquence vide.\nIn [2]: knights = [\"Arthur\", \"Lancelot\", \"Robin\", \"Bedevere\", \"Galaad\"]\n\nIn [3]: knights[2:4]\nOut[3]: ['Robin', 'Bedevere']\n\nIn [4]: # Récupérons les deux premiers éléments\n\nIn [5]: knights[:2]\nOut[5]: ['Arthur', 'Lancelot']\n\nIn [6]: # Récupérons les éléments à partir du troisième\n\nIn [7]: knights[2:]\nOut[7]: ['Robin', 'Bedevere', 'Galaad']\n\nIn [8]: # Récupérons les deux derniers éléments avec les indices négatifs\n\nIn [9]: knights[-2:]\nOut[9]: ['Bedevere', 'Galaad']\n\nIn [10]: antagonist = 'Killer Rabbit of Caerbannog'\n\nIn [11]: antagonist[::2]\nOut[11]: 'Kle abto arang'\n\n\n4.5.2 Mais pourquoi cette exclusion ?\nLa position des éléments dans une séquence en Python est représenté par leur indice, le premier élément est à l’indice 0. On parle de 0-based indexing. ABC, Algol, Fortran ou Pascal utilisaient le 1-based indexing.\nLe slicing permet d’obtenir selon la définition mathématique, un intervalle semi-ouvert à droite. Cela se noterait [x, y[. Pourquoi ce choix d’implémentation ?\nGuido Van Rossum s’est exprimé sur ce choix. Il faut savoir que c’est le slicing qui a conduit au choix entre une indexation 0-based ou 1-based. Ce choix repose sur les cas d’usage les plus courants :\n\nObtenir les n premiers éléments\nObtenir les n éléments à partir de l’indice i\nObtenir des tranches adjacentes à l’aide d’un invariant.\n\nCes cas sont illustrés ci-dessous\nIn [12]: n = 2\n\nIn [13]: i = 1\n\nIn [14]: knights[:2]  # Les deux premiers\nOut[14]: ['Arthur', 'Lancelot']\n\nIn [15]: knights[i: i + n]  # Les deux après l'indice i\nOut[15]: ['Lancelot', 'Robin']\n\nIn [16]: # Les deux premiers et les suivants\n\nIn [17]: knights[:2]\nOut[17]: ['Arthur', 'Lancelot']\n\nIn [18]: knights[2:]\nOut[18]: ['Robin', 'Bedevere', 'Galaad']",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Les types de base (built-in)</span>"
+    ]
+  },
+  {
+    "objectID": "04-structure_controle.html",
+    "href": "04-structure_controle.html",
+    "title": "5  Les structures de contrôle",
+    "section": "",
+    "text": "5.1 Les structures\nLes structures de contrôle servent à structurer l’exécution du code. Elles permettent de définir des blocs qui vont être exécutés de manière conditionnelle ou en boucle.\nLe bloc est un ensemble d’instructions qui est précédé d’un en tête. Un en tête est une ligne qui commence par un mot clef et se termine par deux points (:).\nEn Python, il n’y a pas de délimiteur pour le bloc d’instructions comme les accolades. Un bloc est défini par l’indentation par rapport à la déclaration. Cette indentation est un retrait de 4 espaces (PEP8).",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Les structures de contrôle</span>"
+    ]
+  },
+  {
+    "objectID": "04-structure_controle.html#les-structures",
+    "href": "04-structure_controle.html#les-structures",
+    "title": "5  Les structures de contrôle",
+    "section": "",
+    "text": "5.1.1 Les blocs\nLes blocs sont donc un ensemble d’instructions exécutées en fonction de l’en tête qui le précède. Ces instructions sont indentées par rapport à la déclaration, c’est à dire qu’ils sont en retrait. Ce retrait est défini par la pep 8 comme étant de 4 espaces.\nVeillez donc à vous assurer que votre éditeur de code convertisse les tabulations en 4 espaces.\n\n\n5.1.2 L’instruction pass\nL’instruction pass est une instruction que ne fait… rien. Après une déclaration de bloc (que ce soit une structure de contrôle, une déclaration de fonction ou de classe), l’interpréteur attends une ligne indentée. Si vous n’avez aucune instruction à déclarer dans le bloc (voir les cas lors de la formation), l’instruction pass permet de ne pas avoir d’erreur d’interprétation.\nif True:\n    pass\n\n\n5.1.3 Exécution conditionnelle avec if\nL’instruction if permet d’exécuter un bloc d’instructions de manière conditionnelle.\nif knight == \"Arthur\":\n    print(\"Is the King\")\nUne ou plusieurs conditions alternatives peuvent être déclarées avec l’instruction elif. L’instruction else permet de gérer tous les autres cas.\nif knight == \"Arthur\":\n    print(\"Is the King\")\n elif knight == \"Robin\":\n    print(\"He's not that brave\")\n else:\n    print(\"Who's that lad ?\") \nLes différentes conditions sont exclusives. À la première condition évaluée à vrai (True), l’interpréteur exécute le bloc puis sort de la structure conditionnelle. \nLa condition, aussi appelée structure de contrôle, doit retourner une expression booléenne. Cette expression peut aussi bien être le retour d’une fonction que le résultat d’un opérateur de comparaison ou d’un opérateur logique.\n\n\n5.1.4 Les opérateurs de comparaison\nLes opérateurs de comparaisons entre deux déclarations sont :\n\n\n\n&lt;\nStrictement inférieur à\n\n\n&gt;\nStrictement supérieur à\n\n\n&lt;=\nInférieur ou égal à\n\n\n&gt;=\nSupérieur ou égal à\n\n\n==\nÉgal à\n\n\n!=\nDifférent de\n\n\n\nPython permet également l’évaluation de l’identité par le mot réservé is. Attention, is doit être utilisé avec des valeurs comme None, True ou False car il s’agit de comparer avec ces types et non des valeurs.\n\n\n5.1.5 Les valeurs booléennes\nN’importe quel objet en Python peut être évalué à vrai ou faux. Le type booléen (bool) est le seul à représenter cette notion, mais pour tous les autres types, Python peut reconnaitre que certaines valeurs auront le sens de faux. Dans le cas des types de base, voici le comportement :\n\n\n\nType\nFAUX\n\n\nBool\nFalse\n\n\nint\n0\n\n\nfloat\n0.0\n\n\nstring\n“”\n\n\ntuple\n()\n\n\nlist\n[]\n\n\ndict\n{}\n\n\nNone Type\nNone\n\n\n\nAinsi en Python, il n’est pas nécessaire d’écrire certaines comparaisons.\n\n\n5.1.6 Les opérateurs logiques\nLes opérateurs logiques, nom utilisé pour les valeurs de vérité de l’algèbre de Bool, sont la conjonction (et), la disjonction (ou) et la négation (non). En Python, les mots-clef respectifs sont  and, or et not.\nSoient X et Y deux expressions qui retournent une valeur booléenne.\n\nConjonction : X ET Y est vrai si et seulement si X est vrai et Y est vrai\nEn python, elle s’écrit X and Y\nDisjonction : X OU Y est vrai si et seulement si X est vrai ou Y est vrai\nEn python, elle s’écrit X or Y\nNégation : la négation de X est vrai si et seulement si X est faux\nEn python, elle s’écrit not X\n\nEn python, les fonctions de conjonction et de disjonction sont des opérations paresseuses. Si l’évaluation du premier terme ne laisse aucun doute sur le résultat de l’opération (si X est faux pour une conjonction ou X est vrai pour une disjonction), le second terne n’est pas évalué. Gardez ceci à l’esprit si les expressions sont des appels de fonctions.\n\n\n5.1.7 Chainage des opérateurs de comparaison\nAu lieu d’utiliser l’opérateur logique and, il est possible dans certains cas de chainer les opérateurs.\nIn [1]: x = 10                                                                  \n\nIn [2]: x &gt; 0 and x &lt; 10                                                        \nOut[2]: False\n\nIn [3]: 0 &lt; x &lt; 10                                                              \nOut[3]: False\nCeci permet une syntaxe similaire à ce que nous écrivons.\n\n\n5.1.8 Comparaison de tuples\nDans le même ordre d’idée, les tuples pouvant être comparés, la comparaison est similaire à l’opérateur logique and.\nIn [8]: x1 == y1 and x2 == y2                                                   \nOut[8]: True\n\nIn [9]: (x1, x2) == (y1, y2)                                                    \nOut[9]: True",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Les structures de contrôle</span>"
+    ]
+  },
+  {
+    "objectID": "Les_fonctions.html",
+    "href": "Les_fonctions.html",
+    "title": "6  Les fonctions",
+    "section": "",
+    "text": "6.1 Structure",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Les fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "Les_fonctions.html#structure",
+    "href": "Les_fonctions.html#structure",
+    "title": "6  Les fonctions",
+    "section": "",
+    "text": "def nom_fonction(param1, param2):\n    do_somerhing()\n    return value",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Les fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "Les_fonctions.html#retours",
+    "href": "Les_fonctions.html#retours",
+    "title": "6  Les fonctions",
+    "section": "6.2 Retours",
+    "text": "6.2 Retours\nUne fonction retourne\n\nreturn est optionnel\nreturn avec ou sans paramètre interrompt l’exécution de la fonction\nreturn value retourne la valeur associée à value. La fonction retourne cette valeur.\nL’absence de return entraine un return None implicite\nUn return sans paramètre correspond à un return none",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Les fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "Les_fonctions.html#paramètres",
+    "href": "Les_fonctions.html#paramètres",
+    "title": "6  Les fonctions",
+    "section": "6.3 Paramètres",
+    "text": "6.3 Paramètres\n\n6.3.1 Paramètres positionnels\ndef func(param1, param2):\n    pass\nfunc('val1', 'val 2')\n\n\n6.3.2 Paramètres optionnels\ndef func(param=\"value\"):\n    pass\nfunc()\nfunc('val')\nLes paramètres optionnels sont en dernier (un paramètre positionnel ne peut suivre un paramètre optionnel).\ndef func(param_pos, param_opt=\"value\"):\n    pass\nfunc('val opsitionnelle')\nfunc('val opsitionnelle', 'val optionnelle')\n\n\n6.3.3 Arguments nommés\ndef func(param_pos, param_opt=\"value\"):\n    pass\nfunc('val opsitionnelle', param_opt='val optionnelle')",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Les fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "Les_fonctions.html#utilisation-des-type-hints",
+    "href": "Les_fonctions.html#utilisation-des-type-hints",
+    "title": "6  Les fonctions",
+    "section": "6.4 Utilisation des type hints",
+    "text": "6.4 Utilisation des type hints\ndef func(param_pos:str, param_opt:int = 1) -&gt; str:\n    return param_pos * param_opt",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Les fonctions</span>"
+    ]
+  },
+  {
+    "objectID": "Les_sequences.html",
+    "href": "Les_sequences.html",
+    "title": "7  Les séquences",
+    "section": "",
+    "text": "7.1 Création\nUne séquence est une collection d’éléments ordonnés.\nParmi les types de bases, les séquences sont :",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Les séquences</span>"
+    ]
+  },
+  {
+    "objectID": "Les_sequences.html#création",
+    "href": "Les_sequences.html#création",
+    "title": "7  Les séquences",
+    "section": "",
+    "text": "7.1.1 Créer une chaine de caractères\nmy_string = ''\nmy_string = \"\"\nmy_string = str()\n\nking = \"Arthur\"\n\n\n7.1.2 Créer une liste\nmy_list = []\nmy_list = list()\n\ncamelot = ['Arthur', 'Merlin', 'Lancelot', \n           'Robin', 'Bohort', 'Perceval', 'Karradoc']\n\n\n7.1.3 Créer un n-uplet (tuple)\nmy_tuple = tuple() # tuple vide\n\nwizards = 'Merlin',\ntavern = 'Perceval', 'Karradoc',",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Les séquences</span>"
+    ]
+  },
+  {
+    "objectID": "Les_sequences.html#taille",
+    "href": "Les_sequences.html#taille",
+    "title": "7  Les séquences",
+    "section": "7.2 Taille",
+    "text": "7.2 Taille\nAvec la fonction len(seq)\n&gt;&gt;&gt; len(king)\n6\n&gt;&gt;&gt; len(camelot)\n7\n&gt;&gt;&gt; len(wizards)\n1",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Les séquences</span>"
+    ]
+  },
+  {
+    "objectID": "Les_sequences.html#accès-à-un-élément",
+    "href": "Les_sequences.html#accès-à-un-élément",
+    "title": "7  Les séquences",
+    "section": "7.3 Accès à un élément",
+    "text": "7.3 Accès à un élément\nPar indexation (subscript)\n&gt;&gt;&gt; king[2]\n't'\n&gt;&gt;&gt; camelot[1]\n'Merlin'\n&gt;&gt;&gt; tavern[0]\n'Perceval'\n&gt;&gt;&gt; king[-1]\n'r'\n&gt;&gt;&gt; camelot[-2]\n'Perceval'\n&gt;&gt;&gt; tavern[-1]\n'Karradoc'",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Les séquences</span>"
+    ]
+  },
+  {
+    "objectID": "Les_sequences.html#test-élément-dans-séquence",
+    "href": "Les_sequences.html#test-élément-dans-séquence",
+    "title": "7  Les séquences",
+    "section": "7.4 Test élément dans séquence",
+    "text": "7.4 Test élément dans séquence\nAvec le mot-clef in\n&gt;&gt;&gt; 't' in king\nTrue\n&gt;&gt;&gt; 'Mordred' in camelot\nFalse\n&gt;&gt;&gt; 'Tavernier' in tavern\nFalse",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Les séquences</span>"
+    ]
+  },
+  {
+    "objectID": "Les_sequences.html#unpacking",
+    "href": "Les_sequences.html#unpacking",
+    "title": "7  Les séquences",
+    "section": "7.5 Unpacking",
+    "text": "7.5 Unpacking\nFonctionne avec toute séquence\n&gt;&gt;&gt; quest = ['Rabbit of Caerbannog', 'cave', \n...          'Location of the Holly Grail']\n&gt;&gt;&gt; opponent_name, location, reward = quest\n&gt;&gt;&gt; opponent_name\n'Rabbit of Caerbannog'\n&gt;&gt;&gt; location\n'cave'\n&gt;&gt;&gt; reward\n'Location of the Holly Grail'",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Les séquences</span>"
+    ]
+  },
+  {
+    "objectID": "Les_sequences.html#slicing",
+    "href": "Les_sequences.html#slicing",
+    "title": "7  Les séquences",
+    "section": "7.6 Slicing",
+    "text": "7.6 Slicing\nStructure : `seq[start:stop:step]\n&gt;&gt;&gt; king[2:5]\n'thu'\n&gt;&gt;&gt; camelot[2:6]\n['Lancelot', 'Robin', 'Bohort', 'Perceval']\n&gt;&gt;&gt; camelot[:2]\n['Arthur', 'Merlin']\n&gt;&gt;&gt; camelot[3:]\n['Robin', 'Bohort', 'Perceval', 'Karradoc']\n&gt;&gt;&gt; camelot[-2:]\n['Perceval', 'Karradoc']",
+    "crumbs": [
+      "Les fondamentaux",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Les séquences</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_concepts.html",
+    "href": "POO/POO_concepts.html",
+    "title": "8  Concepts de la Programmation Orientée Objet",
+    "section": "",
+    "text": "8.1 Les paradigmes de programmation\nIl s’agit des différentes façons de raisonner et d’implémenter une solution à un problème en programmation. Nous pouvons citer trois grandes familles :",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Concepts de la Programmation Orientée Objet</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_concepts.html#les-paradigmes-de-programmation",
+    "href": "POO/POO_concepts.html#les-paradigmes-de-programmation",
+    "title": "8  Concepts de la Programmation Orientée Objet",
+    "section": "",
+    "text": "La programmation impérative\nparadigme originel et le plus courant\nLa programmation orientée objet (POO)\nconsistant en la définition et l’assemblage de briques logiciel appelées objets\nLa programmation déclarative\nconsistant à déclarer les données du problème, puis à demander au programme de le résoudre",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Concepts de la Programmation Orientée Objet</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_concepts.html#le-concept-dobjet",
+    "href": "POO/POO_concepts.html#le-concept-dobjet",
+    "title": "8  Concepts de la Programmation Orientée Objet",
+    "section": "8.2 Le concept d’objet",
+    "text": "8.2 Le concept d’objet\nLe problème à traiter va être modélisé par des objets. Un objet est une entité caractérisée par :\n\nUn état, représenté par des données spécifiques à l’objet que nous appellerons des attributs. \nDes comportements, représentés par des fonctions spécifiques au type d’objet que nous appelleront des méthodes.\n\nUn objet est donc un composant qui regroupe au sein d’une même entité des données et des traitements.\nVous avez déjà manipulé des objets. Si nous prenons les listes, l’état correspond aux données de la liste et les comportements sont les méthodes comme sort, split, append…\nUn objet sera un composant du traitement de notre problème et plusieurs objets devront interagir pour traiter notre problème. Un principe pour la conception des objets est que chaque objet devra avoir une seule responsabilité. Par exemple, un objet qui gérera un compte ne s’occupera pas de son affichage.",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Concepts de la Programmation Orientée Objet</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_concepts.html#la-notion-de-classe",
+    "href": "POO/POO_concepts.html#la-notion-de-classe",
+    "title": "8  Concepts de la Programmation Orientée Objet",
+    "section": "8.3 La notion de classe",
+    "text": "8.3 La notion de classe\nEn programmation orientée objet, nous utilisons des objets. La structure de ces objets est définie dans des classes. Une classe peut être vue comme le moule qui permet de produire les objets. Dans le vocabulaire orienté objet, les objets sont des instances d’une classe. Les objets étant en soi des données, ils ont un type qui est leur classe. \nBien qu’un objet soit l’instance d’une classe, nous allons voir qu’il s’agit de deux composants différents dans le mécanisme de la programmation orientée objet.",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Concepts de la Programmation Orientée Objet</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_concepts.html#représentation-présentation-duml",
+    "href": "POO/POO_concepts.html#représentation-présentation-duml",
+    "title": "8  Concepts de la Programmation Orientée Objet",
+    "section": "8.4 Représentation : présentation d’UML",
+    "text": "8.4 Représentation : présentation d’UML\nAfin de pouvoir représenter les notions de classes et objets, nous allons utiliser UML, Unified Modeling Language. UML est un langage de modélisation graphique basé sur des diagrammes et des pictogrammes. Il est standardisé et se veut être une synthèse des méthodes de modélisation. Pour cela, en version 2.5, il propose 14 type de diagrammes qui vont bien au delà de la modélisation objet.\n\n8.4.1 Représenter une classe\nLa classe la plus basique peut être représentée par le diagramme ci-dessous. Cette classe n’a ni état (pas d’attributs) ni de comportement (pas de méthode). Notez que le nom de la classe correspond à la règle de nommage de la PEP8 et est donc en CamelCase.\n\n\n\n\n\n\n\n\n\n\n\nMyClass\n\n\n\n\n\n\n\n\n\n\nSi cette classe n’est pas censée exister d’un point de vue paradigme, elle nous permet de voir le code qui permet de déclarer une classe dans la partie suivante.\n\n\n8.4.2 Représenter les attributs et méthodes\nPour illustrer le concept de l’orienté objet, nous utiliserons un exemple de suivi de formations. Nous allons commencer par définir ce qu’est une formation et les actions sur celle-ci.\nL’état d’une formation est représentée par son nom, sa durée, le nombre de places et la liste des stagiaires (pour l’instant représentés par leur nom). Une formation a donc les attributs subject, duration, students et available_seats.\nÀ une formation, nous pouvons ajouter ou supprimer des participants, nous aurons donc des méthodes pour cela.\nUML permet de représenter dans un diagramme de classe ses attributs et méthodes. Le diagramme ci-dessous représente cette notion de formation. \nUne classe est représentée en 3 blocs. Le premier est le nom de la classe, le second est l’ensemble des attributs de la classe et la troisième les méthodes.\nPour les attributs, il est possible de spécifier le type et la valeur par défaut.\nLes méthodes spécifient les paramètres attendus entre parenthèses ainsi que le type du retour. \nAttributs et méthodes sont précédés d’un symbole qui représente leur visibilité.\n\n\n\n\n\n\n\n\n\n\n\nTraining\n\n\n\n\n\n\n\n+subject : String\n\n\n\n\n\n\n\n-duration : Integer\n\n\n\n\n\n\n\n-students : String[*]\n\n\n\n\n\n\n\n-available_seats : Integer = 12\n\n\n\n\n\n\n\n+add_student(name : String)\n\n\n\n\n\n\n\n+remove_student(name : String)\n\n\n\n\n\n\n\n+students() : String[*]\n\n\n\n\n\n\n\n+duration() : Integer\n\n\n\n\n\n\n\n\n\n\n\nTraining est le nom de la classe.\ntitle, duration, students et seats sont des attributs.\nadd_student(name), remove_student(name) et students() sont des méthodes.\n\n\n\n8.4.3 Notion de visibilité des attributs et méthodes\nLa visibilité est un concept important de la conception objet puisqu’elle définit qui pourra accéder à l’attribut ou à la méthode et permet de mettre en œuvre le principe de l’encapsulation. Accéder à un attribut signifie avoir la possibilité de consulter la valeur mais aussi la modifier. UML permet de représenter 4 visibilité :\n\nPublic représenté par le symbole +. Un attribut ou une méthode publique pourra être accédé par n’importe quel composant. \nPackage représenté par le symbole ~. Un attribut ou une méthode package pourra être accédé par n’importe quel composant déclaré dans le même package. \nProtected représenté par le symbole #. Un attribut ou une méthode protégée ne pourra être accédé que par le composant qui l’a déclaré ou par tout composant spécialisé (voir notions d’héritage)\nPrivate représenté par le symbole -. Un attribut ou une méthode privée ne pourra être accédé que par le composant qui l’a déclaré.  \n\nDans notre exemple, la durée, la liste des participants et le nombre de places disponibles sont des attributs privés car ils ne doivent pas être modifiés par un composant extérieur. La liste de participants évoluera par appel aux méthodes d’ajout et suppression de participants. Des méthodes permettent également de consulter ces attributs privés (students() et duration()).\nVous avez remarqué que ce modèle ne permet pas en l’état de consulter le nombre de places disponibles.\n\n\n8.4.4 Cardinalité et contraintes\nLa liste des stagiaires est définie comme pouvant contenir de 0 à un nombre indéfini de stagiaires. Mais une formation a une limite de places. Cette limite dépend de la formation. Il est donc impossible de l’imposer dans le modèle, ce qui nous conduit à cette cardinalité de 0 ou plusieurs.\nUML ne permet pas de modéliser les contraintes, celles-ci sont modélisées par un autre langage, OCL (Object Constraint Language). Cette contrainte doit être appliquée à notre modèle et c’est pourquoi l’ajout de participants doit passer par une méthode. Celle-ci connait la règle métier qui sera d’ajouter un stagiaire uniquement si le nombre de participants est inférieur au nombre de places.\n\n\n8.4.5 La notion de relations\nLorsque nous définissons des objets, ceux-ci peuvent être liés les uns aux autres. Nous parlons de relations.\nLes relations permettent de représenter les associations entre les classes.\nNous pouvons compléter notre modèle de formation. Un stagiaire n’est pas limité à une chaine de caractères, nous pouvons définir une classe pour le représenter. Il faudra ensuite l’associer à la formation.\n\n\n8.4.6 Relation simple\nEn UML, la relation est symbolisée par un trait, en général horizontal, reliant les deux classes. Une flèche permet d’orienter la relation. Cette dernière est importante car elle détermine où (dans quelle classe) sera exprimée la relation.\nUML nous permet également de préciser la cardinalité de cette relation. Les indications possibles sont :\n\nn où n est un nombre signifiant exactement n instances\n* signifie un nombre indéterminé d’instances\nm..n où m est un entier et n est soit un entier soit * et signifie de m à n instances.\n\n\n\n\n\n\n\n\n\n\n\n\nHas\n\n\n\n\n\n*\n\n\n\n*\n\n\n\n\n\nTraining\n\n\n\n\n\n\n\n+subject : String\n\n\n\n\n\n\n\n-duration : Integer\n\n\n\n\n\n\n\n-available_seats : Integer\n\n\n\n\n\n\n\n+add_student(String name : String)\n\n\n\n\n\n\n\n+remove_student(String name : String)\n\n\n\n\n\n\n\nStudent\n\n\n\n\n\n\n\n+name : String\n\n\n\n\n\n\n\n+title : String\n\n\n\n\n\n\n\n+company : String\n\n\n\n\n\n\n\n\n\n\n Dans notre modèle, une formation est dispensée à plusieurs stagiaires et un même stagiaire peut suivre plusieurs formations.\nLa flèche ainsi que la définition de la relation indiquée au dessus de cette flèche nous renseigne sur l’implémentation attendue. Ainsi, une formation possède des stagiaires. L’implémentation devra donc définir une liste de stagiaires dans la classe Training. Vous remarquerez qu’il n’y a pas d’attribut students:Student[*] déclarée dans ce dernier schéma, contrairement au premier. C’est parce cette relation implique implicitement cet attribut.",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Concepts de la Programmation Orientée Objet</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_concepts.html#uml-les-limites-de-la-représentation-graphique",
+    "href": "POO/POO_concepts.html#uml-les-limites-de-la-représentation-graphique",
+    "title": "8  Concepts de la Programmation Orientée Objet",
+    "section": "8.5 UML : les limites de la représentation graphique",
+    "text": "8.5 UML : les limites de la représentation graphique\nNous avons vu que nous pouvons représenter beaucoup d’informations sous forme de diagrammes en UML. Mais la représentation graphique a des limites. Dans le cas de nos formations, techniquement, la liste des stagiaires n’a pas de limite supérieure. Cependant, cette limite est définie par un autre paramètre qui, en soi, est une variable.\nIl est donc impossible de représenter cette contrainte de manière graphique et nous devrions exprimer certaines contraintes en langage naturel.\nCependant, il existe depuis la version 1.1 d’UML un langage formel, OCL (Object Constraint Language). Le langage naturel est évidemment le plus facile à mettre en œuvre, à formuler et à comprendre. Mais il est également source d’ambiguïtés qu’OCL essaye d’éviter.\nCette formation n’est pas une formation UML/OCL, ce sujet ne sera pas abordé ici.",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Concepts de la Programmation Orientée Objet</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_classes.html",
+    "href": "POO/POO_classes.html",
+    "title": "9  La Programmation Orientée Objet en Python",
+    "section": "",
+    "text": "9.1 Déclarer une classe\nEn Python, une classe est déclarée par la directive class. Elle est suivie du nom de la classe puis de deux points. Le corps de la classe doit évidemment être indenté.\nUne classe est un callable. Un appel à cette classe retournera une instance de cette classe et pour maintenir une référence à cette instance, nous allons l’affecter a une variable.\nLe code suivant est le code minimum permettant de déclarer et d’instancier une classe. La variable myInstance référence alors une donnée de type MyClass.\nLes instances de cette classe sont des objets sans état et sans comportement. Ils ne servent pas à grand chose mais nous avons tout de même créé un nouveau type dans notre système.",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>La Programmation Orientée Objet en Python</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_classes.html#déclarer-une-classe",
+    "href": "POO/POO_classes.html#déclarer-une-classe",
+    "title": "9  La Programmation Orientée Objet en Python",
+    "section": "",
+    "text": "class MyClass:\n    pass\n\nmyInstance = MyClass()",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>La Programmation Orientée Objet en Python</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_classes.html#les-méthodes",
+    "href": "POO/POO_classes.html#les-méthodes",
+    "title": "9  La Programmation Orientée Objet en Python",
+    "section": "9.2 Les méthodes",
+    "text": "9.2 Les méthodes\nEn Python, les méthodes sont des fonctions. Il s’agit donc des traitements. Lors de la conception d’un objet, les méthodes doivent être caractérisées par des verbes et représentent des actions.\nLes méthodes peuvent recevoir des paramètres et retourner une donnée. Deux caractéristiques  vont faire qu’une fonction est une méthodes :\n\nLes méthodes sont définies dans les classes.\nVous devez déclarer un premier paramètre nommé par convention self. Ce paramètre est destiné à recevoir l’instance en cours. Vous pouvez déclarer d’autres paramètres en plus de ce paramètre self. \n\nPour appeler une méthode, il faut la préfixer par le nom de l’objet à laquelle elle appartient en ignorant le paramètre attendu self.\nclass MyClass:\n    def doSomething(self):\n        print(\"I did something\")\n\n    def doSomethingWith(self, value):\n        print(\"I will do something with {}\".format(value))\n\n\nmyObject = MyClass()\n\n1myObject.doSomething()\n2myObject.doSomethingWith('a value').\n\n1\n\nAffiche I did something\n\n2\n\nAffiche I will do something with a value\n\n\n\n9.2.1 appels\n1my_object = MyClass()\n2my_object.my_method_without_param()\n3my_object.my_method_with_param(42)\n\n1\n\nInstanciation de l’objet\n\n2\n\nAppel d’une méthode sans arguments\n\n3\n\nAppel d’une méthode avec arguments\n\n\n\n\n9.2.2 Les attributs\nUn attribut représente une donnée propre à un objet. En soi, c’est une variable qui référence donc une donnée. Lors de la conception d’un objet, les attributs sont caractérisés par des noms.\nPour distinguer les attributs des variables au sein d’un objet (dans le code des méthodes de la classe), un attribut est préfixé par le namespace self (ce n’est pas qu’une convention). Pour accéder à un attribut en dehors de l’objet, il faut le préfixer par la référence de son instance.\nclass Training:\n    def reset_students(self):\n        self.students = []\n\n    def get_available_seats(self):\n        return self.max_seats - len(self.students)\n\n\ntraining = Training(\"Python\")\nprint(training.students)\nDans cet exemple, la liste des participants, students, est un attribut public accessible à l’extérieur de l’objet comme le montre la dernière ligne.\n\n\n9.2.3 En Python, un objet n’a que des attributs\nSi vous consultez la documentation de la fonction dir(), vous verrez qu’elle liste tous les attributs d’un objet. Or, dans cette liste, il y a des méthodes.\nRappelons qu’en Python, tout est objet. Une méthode peut donc être considérée comme un attribut qui a la particularité d’être un callable, donc de pouvoir être exécuté. Cette propriété permet la mise en œuvre de l’introspection.\n\n\n9.2.4 Méthode particulière : le constructeur\nPour créer un objet, l’interpréteur va appeler une méthode particulière. Cette méthode porte habituellement le nom de constructeur. Le constructeur est appelée à l’instanciation de l’objet et permet de définir son état initial. Elle est disponible pour toutes les classes et par défaut ne définit aucun état.\nPython a une particularité : lors de l’instanciation de l’objet, deux méthodes sont appelées successivement :\n\nLa méthode __new__(self) qui est le constructeur et s’assure de la création technique de l’objet\nLa méthode __init__(self) qui est un initialiseur et qui définit l’état initial de l’objet. \n\nEn Python, l’état initial d’un objet et plus généralement tout son comportement fonctionnel à l’initialisation sont définis dans l’initialiseur. Par abus de langage, on parle de constructeur.\nLe constructeur de base est le suivant.\nclass UselessClass:\n    def __init__(self):\n        pass\nLe comportement de cet initialiseur est le comportement par défaut, il est inutile d’écrire la fonction __init__() de ce type. En son absence, un initialiseur équivalent par défaut est appelé.\nNous pouvons tester le comportement du constructeur par le code suivant. \nNous pouvons voir que le message est affiché à l’instanciation et donc que cette méthode est bien appelée à ce moment.\nclass DemoClass:\n    def __init__(self):\n        print('I have been initilized')\n\n1obj = DemoClass()\n\n1\n\nCette expression va créer un objet de type DemoClass et le retourner mais auparavant, elle va afficher la chaine de caractères I have been initilized.\n\n\n\n\n9.2.5 Méthode particulière : le destructeur\nIl existe une autre méthode particulière communément appelée destructeur. En fait, c’est une méthode appelée lorsque l’objet perdra sa dernière référence soit juste avant sa destruction.\nLe comportement peut être illustré par le code suivant.\nclass DemoClass:\n    def __init__(self):\n        print('I have been initilized')\n        \n    def __del__(self):\n        print('I will be destroyed')\n\n\n1c = DemoClass()\n\n2del c\n\n1\n\nAffichera I have been initilized en créant l’objet.\n\n2\n\nAffichera I will be destroyed car la suppression de la variable entraine la suppression de la dernière référence à l’objet donc sa destruction.\n\n\nL’usage est donc la libération de ressources (c’est le rôle des destructeurs dans les langages bas niveau) et faire le ménage.\n\n\n9.2.6 Utilisation du constructeur\nLe constructeur est indispensable pour initialiser un objet, c’est à dire définir son état initial. Évidemment, des paramètres doivent être passés à l’initialisation de l’objet. Ces paramètres sont ceux de l’initialiseur __init__(). Ainsi, le code suivant permet d’instancier une formation selon la spécification du diagramme UML.\nclass Training:\n    def __init__(self, subject: str, duration: int, capacity: int = 12):\n        self.subject = subject\n        self.duration = duration\n        self.available_seats = capacity\n        self.students = []\n        \nVous remarquerez plusieurs points ici.\nEn premier lieu, les paramètres de l’initialiseur et les attributs n’ont pas à avoir le même nom. En effet, il s’agit de choses très différentes. Les paramètres ne sont que des informations pour construire l’état de l’objet. Dans notre cas, nous utilisons directement les données pour les affecter aux attributs, mais ce ne sera pas toujours le cas. Vous avez cependant une illustration du changement de concept entre l’attente d’information sur la capacité en terme de places de la formation devenant le nombre de places disponibles pour l’inscription.\nL’initialiseur étant une fonction, nous pouvons utiliser les même propriétés à savoir l’argument par défaut.\nRetenez également qu’il n’y a pas de symétrie entre les paramètres et les attributs. Nous venons de voir en sens, mais aussi en nombre. L’attribut self.students est une liste qui sera alimentée au fur et à mesure de l’inscription des stagiaires. Sa création n’attends pas d’information spécifique lors de l’instanciation, elle est donc créée dans dépendance à un paramètre.\nl’initialiseur est une méthode appelée à l’instanciation de l’objet et dont le rôle est de s’assurer de l’état initial de l’objet. C’est au sein de cette méthode que vous devez vous assurer de l’intégrité de l’objet. Par principe, mettez-y le tout le code assurant l’intégrité de l’objet. Déclarez également tous les attributs qui font l’objet. Mais assurez-vous aussi de la cohérence de l’état de l’objet. Ainsi, nous pouvons par exemple ajouter la validation suivante (le code se limite au code d’intérêt).\nclass Training:\n    def __init__(self, subject: str, duration: int, capacity: int = 12):\n        self.available_seats = int(capacity)\n\n        if self.available_seats &lt; 1:\n            raise ValueError(f\"Capacity must be positive, got {self.available_seats}\")\n            \n\n\n9.2.7 Méthodes et état de l’objet\nNous avons vu plus haut comment déclarer des méthodes. Une méthode voit les attribut de l’objet et peut donc les interroger ou les modifier.\nC’est donc par les méthodes que l’état d’un objet doit changer. Ainsi, d’après notre modèle, l’objet de type Training doit avoir une méthode add_student(name). Cette méthode ajoutera un stagiaire, dont le nom est passé en paramètre, à la formation. Comme précédemment, je ne m’intéresse qu’au code d’intérêt qui est le suivant.\nclass Training:\n    def __init__(self, subject: str, duration: int, capacity: int = 12):\n        self.available_seats = int(capacity)\n        self.students = []\n\n    def add_student(self, name:str):\n        self.students.append(name)\n        \nL’intérêt de la méthode est d’avoir les plein contrôles sur le changement d’état de l’objet. Ainsi, il est de la responsabilité de cette méthode de s’assurer de l’absence de doublons (non illustré ici) et du respect de la contrainte de places disponibles. La méthode add_student(name) devrait donc aller dans le sens suivant :\nclass Training:\n    def __init__(self, subject: str, duration: int, capacity: int = 12):\n        self.available_seats = int(capacity)\n        self.students = []\n\n    def add_student(self, name:str):\n        if len(self.students) &gt;= self.available_seats:\n            raise ValueError('Training full')\n        \n        self.students.append(name)",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>La Programmation Orientée Objet en Python</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_classes.html#visibilité-et-encapsulation-en-python",
+    "href": "POO/POO_classes.html#visibilité-et-encapsulation-en-python",
+    "title": "9  La Programmation Orientée Objet en Python",
+    "section": "9.3 Visibilité et encapsulation en Python",
+    "text": "9.3 Visibilité et encapsulation en Python\nJusque’ici, nous ne nous sommes pas soucié de la notion de visibilité. Aucun mot clef ne a déclare. Vous remarquerez que vous accédez librement à tous les attributs et méthodes.\nEt pour cause, en Python, tous les attributs et les méthodes ont une visibilité publique. \nC’est tout à fait voulu par Guido Van Rossum.\n\nWe are all grown up adults here\n\nIl existe cependant une convention forte : lorsqu’un nom d’attribut ou de méthode commence par le caractère souligné, l’underscore, il doit être considéré comme privé. Ainsi :\n\nmon_attribut est un attribut publique\n_mon_attribut est un attribut privé.\n\nPour être plus cohérent, on parlera souvent d’attribut non-public.\nLa visibilité est un concept à associer à celui de l’encapsulation.\n\n9.3.1 Principe d’encapsulation\nL’encapsulation est le principe de la programmation orientée objet consistant à masquer l’implémentation et à communiquer avec les interfaces publiques.\nContrairement à des idées reçues, l’objectif est avant tout de maitriser le comportement et l’évolution de l’implémentation. Et surtout de décolérer ce qui est exposé de l’implémentation.\nPour une formation, nous ne voulons pas nous contenter du nombre total de places mais aussi du nombre de places disponibles. La méthode ici peut laisser entendre l’existence d’un attribut mais calcul cette valeur :\nclass Training:\n    def __init__(self, subject: str, duration: int, capacity: int = 12):\n        self.available_seats = int(capacity)\n        self.students = []\n\n    def remaining_seats(self):\n        return self.available_seats - len(self._students)   \nL’encapsulation permet de mettre en œuvre le principe Open/Closed : ouvert à l’extension, fermé à la modification.\n\n\n9.3.2 Name Mangling\nLe Name Mangling est une technique permettant de s’assurer qu’un attribut ne sera pas renommé dans une classe fille lors de la mise en œuvre de l’héritage.\nEn Python, des attributs dont le nom commence par au moins deux underscores et se termine par au plus un underscore basculent sur un mécanisme de résolution qui semble les faire apparaitre comme réellement privés. Ce n’est pas le cas…\nLe code suivant semble pourtant montrer ce comportement à première vue.\nclass Training:\n    def __init__(self, subject: str, duration: int, capacity: int = 12):\n        self.available_seats = int(capacity)\n        self.__students_ = []\n        \nt = Training('Python', 5)\n1t.__students_\n\n1\n\nProvoque une AttributeError\n\n\nOui mais…\nT._Training__students_\nRetourne bien une liste.\nCet attribut est donc bien visible mais avec un nom modifié. Il ne s’agit pas de __attribut_ mais _classe__attribut_.\nLa méconnaissance de ce mécanisme conduit de nombreux dévelopeur Python à utiliser cette convention de nom avec l’illusion de rendre l’attribut invisible de l’extérieur. Ce n’est pas le cas (puisqu’il ne le fait pas, faites un dir(t)…), ce mécanisme sert à éviter qu’un attribut soit renommé par accident dans une classe spécialisée lors de la mise en œuvre de l’héritage.\n\n\n9.3.3 Les properties\nLa visibilité des attributs d’une classe est absolue : elle définit tous les accès à l’attribut. Il n’est pas possible de définir un attribut qui sera accédé de manière publique en lecture mais privée en écriture. Dans notre exemple, nous avons besoin de limiter l’accès à l’attribut students. En effet, nous devons certes y accéder pour consulter la liste des inscrits, mais nous ne devrions pas y avoir accès en modification. L’objet doit être le seul maître de l’évolution de son état.\nPour cette raison, la visibilité est définie en privé. Pour y accéder, nous aurons une méthode.\nclass Training:\n    def __init__(self, subject: str, duration: int, capacity: int = 12):\n        self.subject = subject\n        self._students = []\n\n    def students(self):\n        return self._students.copy()\n        \n Mais cette implémentation entraine une violation du principe d’accès uniforme : certains attributs sont obtenus par appel à l’attribut et d’autres par appel à des méthodes, ce qui provoque une complexité : comment l’utilisateur saura comment accéder à un attribut donné ? Dans beaucoup de langages, l’uniformisation consiste à définir tous les attributs en privé et à définir des méthodes dites accesseurs.\nEn outre, une évolution d’un attribut publique vers un accès par méthode, même si le nom est conservé, entraine une modification du code utilisant cet objet. En effet, il faudra modifier tous les accès pour ajouter des parenthèses. Ceci est particulièrement dangereux en Python où accéder à un méthode retourne sa référence. Déclarer tous les attributs en privé et définir des accesseurs permet également, dans beaucoup de langages, d’éviter cette situation. \nPython permet le respect du principe objet en proposant un descripteur de données, les property.\nLes property s’utilisent de deux manières différentes : sous forme de décorateurs ou sous forme de classe interne. Ce document présentera l’usage du décorateur (dont le principe est détaillé plus loin). Pour plus d’informations, voir : https://docs.python.org/3/howto/descriptor.html#properties\nL’usage du décorateur property est simple, il suffit de le rajouter avant la méthode accesseur. Le nom de la méthode devient donc un attribut.\nVoici un extrait du de la déclaration de la fonction limité au code qui nous intéresse.\nclass Training:\n    def __init__(self, subject: str, duration: int, capacity: int = 12):\n        self.subject = subject\n        self._students = []\n\n    @property\n    def students(self):\n        return self._students.copy()\nL’usage sera le suivant.\nIn [2]: t_python = training.Training(\"Python\", 5)\n\nIn [3]: print(t_python.students)\n[]\nVous voyez qu’à l’usage, il semble y avoir un attribut students qui retourne bien la valeur attendue. Mais cet attribut n’existe pas, c’est une property qui masque l’accès à une fonction. Cette fonction n’accepte pas de paramètre et retourne une donnée.\nAvec cette implémentation, la liste des stagiaires peut être accédée comme un attribut mais cet attribut ne pourra pas être modifié par affectation (cela lèvera un AttributeError). Ainsi, cette liste est accédée par la property et évolue par appel aux méthodes add_student() et remove_student().\nIl est possible grâce aux properties de masquer une fonction accesseur pour y accéder comme une affectation de valeur à un attribut ou pour supprimer un attribut. Ces usages sortent du périmètre de cette formation.\nNotez que le descripteur property permet ainsi la mise en œuvre du principe de la Programmation Orientée Objet qu’est l’encapsulation. Vous allez masquer l’implémentation et ne communiquer que par les attributs et méthodes publiques.\nVoici ci-dessous l’exemple à l’accès à la propriété places restantes. que bous avons exprimée plus haut sous forme de méthode :\nclass Training:\n    def __init__(self, subject: str, duration: int, capacity: int = 12):\n        self.subject = subject\n        self.available_seats = int(capacity)\n        self._students = []\n\n    @property\n    def remaining_seats(self):\n        return self.available_seats - len(self._students)\n        \nCette propriété apparait comme un attribut d’un objet de type Training mais est en pratique déduit à partir d’attributs réels.",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>La Programmation Orientée Objet en Python</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_classes.html#les-méthodes-spéciales",
+    "href": "POO/POO_classes.html#les-méthodes-spéciales",
+    "title": "9  La Programmation Orientée Objet en Python",
+    "section": "9.4 Les méthodes spéciales",
+    "text": "9.4 Les méthodes spéciales\nNous avons vu jusqu’ici une méthode spéciale : __init__(self). Les méthodes spéciales sont des méthodes qui sont encadrés de double-underscores. Leur particularité est qu’elle ne sont jamais (rarement) appelées directement. __init__ est appelée par l’interpréteur lors de l’instanciation d’un objet. Python propose un ensemble de méthodes spéciales :\n\n__init__(self) : initialiseur appelé juste après l’instanciation d’un objet\n__del__(self) : destructeur, appelé juste avant la destruction de l’objet\n__str__(self) -&gt; str : est appelé par la fonction de conversion de type str() et par la fonction print(). Elle doit donc retourner une chaine de caractères représentant l’objet.\n__repr__(self) -&gt; str : est appelé par la fonction repr() et doit retourner une chaine de caractères contenue entre des chevrons et contenant nom, type de l’objet et informations additionnelles.\n\nIl est conseillé de redéfinir (surcharger, vois l’héritage) ces méthodes lorsque vous créez vos classes.\nPython propose également des méthodes de comparaison entre objets. Celles-ci sont appelées par les opérations de comparaison correspondantes. Dans la colonne Opération du tableau suivant, x représente l’objet courant et y l’objet other avec qui il est comparé.\n\n\n\nMéthode\nOpération\n\n\n__lt__(self, other)\nx &lt; y\n\n\n__le__(self, other)\nx &lt;= y\n\n\n__eq__(self, other)\nx == y\n\n\n__ne__(self, other)\nx != y\n\n\n__ge__(self, other)\nx &gt;= y\n\n\n__gt__(self, other)\nx &gt; y\n\n\n\nCes méthodes ne doivent être redéfinies que si elles sont un sens. Si vos objets doivent être triés, vous devez redéfinir la méthode __gt__(self, other).\nPython propose également des méthodes spéciales qui permettent des opérations mathématiques entre les objets.\n\n\n\nMéthode\nOpération\n\n\n__neg__\n-x\n\n\n__add__\nx + y\n\n\n__sub__\nx - y\n\n\n__mul__\nx * y\n\n\n__div__\nx / y\n\n\n\nPython propose d’autres méthodes spéciales, pour plus d’informations, vous pouvez consulter :\nhttps://docs.python.org/3/reference/datamodel.html",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>La Programmation Orientée Objet en Python</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_classes.html#attributs-et-méthodes-de-classes",
+    "href": "POO/POO_classes.html#attributs-et-méthodes-de-classes",
+    "title": "9  La Programmation Orientée Objet en Python",
+    "section": "9.5 Attributs et méthodes de classes",
+    "text": "9.5 Attributs et méthodes de classes\nLes attributs et les méthodes de classe ne sont pas liés à une instance mais à une classe.\n\n9.5.1 Attributs de classe\nUn attribut de classe est déclaré au niveau de la classe :\nclass MyClass:\n    class_attr = None\nD’usage, un tel attribut est accédé par MyClass.class_attr. Dans une instance de cette classe, vous pouvez y accéder par self.class_attr mais attention : une consultation retournera bien la valeur de l’attribut de classe mais une modification (l’affectation d’une valeur) créera un attribut d’instance qui masquera l’attribut de classe.\nLes attributs de classe ont un usage technique en Python comme pour les descripteurs ou les properties.\n\n\n9.5.2 Méthodes de classe\nUne méthode de classe est déclarée avec un décorateur :\nclass MyClass:\n\n    @classmethod\n    def class_method(cls):\n        pass\nCe sont des méthodes qui seront appelées préfixées par la classe, qui connaissent la classe (notez le premier paramètre cls et non self) mais pas d’instance.\nEn Python, elles sont utilisées pour proposer des constructeurs alternatifs. Ainsi, pour notre classe Training, nous pouvons proposer un constructeur qui accepte les informations sur les participants et crée une formation avec des participants. Pour l’exemple suivant, students_data est une liste d’informations extraite d’une base de données ou d’un CSV.\nclass Training:\n    @classmethod\n    def with_students(cls, subject: str, duration: int, \n                      capacity: int = 12, students_data: list = None):\n        training = cls(subject, duration, capacity)\n        \n        if students_data:\n            for student_data in students_data:\n                training.add_student(*student_data)\n                \n        return training\nEt son usage :\nTraining.with_students('Python', 5, students_data=['Nicolas', 'Alceste',\n                                                   'Agnan', 'Rufus'])",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>La Programmation Orientée Objet en Python</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_classes.html#héritage-et-abstraction",
+    "href": "POO/POO_classes.html#héritage-et-abstraction",
+    "title": "9  La Programmation Orientée Objet en Python",
+    "section": "9.6 Héritage et abstraction",
+    "text": "9.6 Héritage et abstraction\n\n9.6.1 L’héritage\nL’héritage définit la relation entre classes comme « est un ». Le vocabulaire associé est la généralisation et la spécialisation qui représentent les sens opposés de la relation.\nAu delà de la définition, il y a une conséquence technique : la spécialisation est et peut faire tout ce qu’est ou sait faire la définition plus générale.\nAinsi, la généralisation consiste à avoir une définition universelle, donc réutilisable. La spécialisation consiste à adapter les caractéristiques et les comportements pour une définition plus spécifique.\n\n\n9.6.2 Base de l’héritage avec les exceptions\nLe premier bénéfice de la spécialisation est d’avoir un nouveau type qui est également le type de la classe héritée (et ainsi en cascade). Une première application concerne les exceptions.\nEn effet, pour créer nos propres exceptions, nous devrons créer des classes qui héritent de Exception. Vous avez vu dans le chapitre concerné qu’il existe toute une arborescence, en fait, nous pouvons spécialiser un type d’exception plus spécifique que Exception.\nDans notre code d’illustration, nous levons une exception de type ValueError lorsque nous essayons d’ajouter un stagiaire à une formation qui ne peut en accepter d’avantage. Ce n’est évidemment pas le bon type de message.\nNous pouvons créer un nouveau type d’exception, TrainingFullException qui spécialise directement Exception.\nclass TraininfFullException(Exception):\n    ...\n    \nEt c’est tout. Cette simple instruction permet de créer un nouveau type d’exception en se basant sur le type existant. TrainingFullException se comporte exactement comme Exception, mais c’est un type, donc un message, en plus.\nNous allons pouvoir l’utiliser de la manière suivante.\nclass Training:\n    def __init__(self, subject: str, duration: int, capacity: int = 12):\n        self.available_seats = int(capacity)\n\n        if self.available_seats &lt; 1:\n            raise TraininfFullException(f\"Capacity must be positive, \"\n                                        f\"got {self.available_seats}\")\n                                        \n\n\n9.6.3 Base de conception de l’héritage \nLa relation d’héritage apparait en général lors de la conception. Si nous reprenons notre modèle, nous avons défini une classe Student pour représenter les stagiaires. Dans un soucis de simplification, je ne représente ci-dessous que les attributs de cette classe. Ces attributs ont été complétés par un identifiant et l’information de la société qui emploi le stagiaire.\n\n\n\n\n\n\n\n\n\n\n\nStudent\n\n\n\n\n\n\n\n+name : String\n\n\n\n\n\n\n\n+st_id : String\n\n\n\n\n\n\n\n+title : String\n\n\n\n\n\n\n\n+company : String\n\n\n\n\n\n\n\n\n\n\nMais il nous manque une notion pour animer cette formation : l’intervenant…\n Nous allons donc définir une nouvelle classe que nous allons appeler Coach. Cette notion nécessite une nouvelle classe pour plusieurs raisons.\n\n\n\n\n\n\n\n\n\n\n\nCoach\n\n\n\n\n\n\n\n+name : String\n\n\n\n\n\n\n\n+co_id : String\n\n\n\n\n\n\n\n+title : String\n\n\n\n\n\n\n\n+salary : Float\n\n\n\n\n\n\n\n\n\n\nD’une part, il s’agit d’un autre concept, je dois pouvoir identifier ce que je manipule.\nD’autre part, l’état de l’objet est différent. L’identifiant n’est pas le même que pour les stagiaires, je n’ai pas besoin d’information de société et, indépendamment de la formation, l’intervenant a un salaire.\nDéfinir un autre objet est tout à fait nécessaire. Mais bien qu’il s’agisse de deux notions différentes, elles partagent des similitudes.\nEn premier lieu, elles partagent la même notion : un stagiaire et un intervenant peuvent être, toutes deux, qualifiées de personnes. Nous pouvons perler d’elles de manière plus abstraite.\nEn conséquence, elles partagent des caractéristiques communes : le nom et la civilité.\nNous allons donc pouvoir généraliser le concept de personne.\nLa représentation de la relation de ces trois  classes est représentée ci-dessous. Les classes Student et Coach héritent de Person. Student et Coach sont des spécialisations de Person, Person est une généralisation de Student ou de Coach.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n«abstract»\n\n\n\n\n\n\n\nPerson\n\n\n\n\n\n\n\n+name : String\n\n\n\n\n\n\n\n+title : String\n\n\n\n\n\n\n\nStudent\n\n\n\n\n\n\n\n+st_id : String\n\n\n\n\n\n\n\n+company : String\n\n\n\n\n\n\n\nCoach\n\n\n\n\n\n\n\n+co_id : String\n\n\n\n\n\n\n\n+salary : Float\n\n\n\n\n\n\n\n\n\n\nVous remarquerez que Person définit les attributs name et title. En même temps, ces attributs sont absents de la définition de Student et Coach. Mais comme Student ou Coach sont également de type Person, les objets posséderont évidemment ces attributs.\n\n\n9.6.4 Notion d’implémentation de l’héritage\nCommençons de manière simple. Nous avions une classe Student qui avait un constructeur que nous pouvons rappeler ici.\nclass Student:\n    def __init__(self, name:str, title:str, company:str=None):\n        if len(name) &lt; 2:\n            raise ValueError(\"Name too short\")\n        \n        self.name = name        \n        self.title = title\n        self.company = company\n        \nCe constructeur possède une validation sur la taille du nom.\nLa classe Coach a un comportement similaire. Nous décidons de généraliser la notion de personne ce qui nous conduit à la définition suivante. \nclass Person:\n    def __init__(self, name:str, title:str):\n        if len(name) &lt; 2:\n            raise ValueError(\"Name too short\")\n\n        self.name = name\n        self.title = title\nNous retrouvons évidemment le même code que pour la classe Student. Code qui est, pour cette partie, identique à la classe Coach (non représenté ici).\nLa première étape de la généralisation consiste donc à définir une classe reprenant les notions générales de nos implémentations.\nNous allons donc maintenant pouvoir considérer que Student et Coach sont des spécialisations de Person. Qu’elles héritent de Person.\nEn premier lieu, pour déclarer que Student hérite de Person, il faut modifier la déclaration de la classe et ajouter, entre parenthèses, le nom des classes héritées. Oui, pluriel car Python prends en charge l’héritage multiple ce qui sera détaillé plus loin.\nLa base sera la suivante.\nclass Student(Person):\n    def __init__(self, name:str, title:str, company:str=None):\n        self.company = company\n        \nNous venons ici de définir une classe Student qui, en héritant de Person, est du même type et accède donc aux mêmes méthodes. Cependant, en déclarant la méthode __init__(), nous remplaçons son contenu pour la classe Student. Ainsi, si vous instanciez un objet de type Student, c’est ce constructeur qui sera exécuté et lui seul. Donc, les attributs name et title ne seront pas créés.\nPour que la classe Student délègue à la classe Person la gestion de ce qu’elle sait faire, il faut appeler sa méthode. Ceci est réalisé par une fonction spéciale, super().\nNotre code devient :\nclass Student(Person):\n    def __init__(self, name:str, title:str, company:str=None):\n        super().__init__(name, title)\n        self.company = company\n        \nLorsque le constructeur sera appelé, la fonction super() appellera le constructeur du parent puis continuera l’exécution. Cela permet donc de déléguer une partie du traitement à la classe parent avant de réaliser la partie spécifique.\n\n\n9.6.5 Héritage simple et héritage multiple\nLe schéma précédent présente un héritage simple : chaque classe spécialisée n’hérite que d’une seule classe générale. Certains langages permettent l’héritage multiple, c’est à dire qu’une classe peut hériter de plusieurs classes. Elle acquiert alors les caractéristiques de l’ensemble des classes héritées.\nEn général, l’héritage multiple est difficile à mettre en œuvre efficacement car il est source d’erreurs et est assez difficile à maintenir. Même si le langage le permet, évitez un héritage multiple.\n\n\n9.6.6 Héritage et type des objets\nLe type d’un objet est sa classe. Mais dans le mécanisme de l’héritage, un objet est également du type d’une classe parente. Ainsi, une instance de Student est aussi bien de type Student que Person.\nCette propriété est fondamentale dans les langages déclaratifs afin de manipuler plusieurs types spécialisés pour leur caractéristique commune. C’est le premier pas vers les notions d’abstraction.\n\n\n9.6.7 Abstraction : classes abstraites et classes concrètes\nDans l’exemple précédent, la classe Person est une classe abstraite. Une classe abstraite est une classe qui ne peut être instanciée. Elle ne peut être que spécialisée.\nCette propriété permet de s’assurer qu’une classe qui n’a pas de sens dans notre système ne pourra exister en elle même. Mais qu’il sera possible de la spécialiser. ### Abstraction : les interfaces\nUne interface peut être définie de la manière la plus simple comme un contrat.\nIl s’agit d’un composant abstrait qui ne fait que définir des méthodes publiques que les classes qui implémentent l’interface doivent déclarer. Une interface garantit donc un comportement commun entre des objets de types distincts sans aucune filiation. Une interface est représentée par un trait vertical discontinu.\nL’autre propriété d’une interfaces est que, même si elle n’est pas une classe, elle confère son type à la classe qui l’implémente. Dans l’exemple ci-dessous, la classe Account est également de type BankAccount.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n«interface»\n\n\n\n\n\n\n\nBankAccount\n\n\n\n\n\n\n\n+deposit(value : Float)\n\n\n\n\n\n\n\n+withdraw(value : Float)\n\n\n\n\n\n\n\n+balance() : Float\n\n\n\n\n\n\n\nAccount\n\n\n\n\n\n\n\n-id : Integer\n\n\n\n\n\n\n\n-balance : Float\n\n\n\n\n\n\n\n\n\n\nLa notion d’interface est apparue avec les langages déclaratifs interdisant l’héritage multiple. Elles permettent un comportement et un type commun entre objets sans filiation. \nPython et les abstractions\nPar rapport à ce qui a été présenté ci-dessus, Python\n\npermet l’héritage\nsupporte l’héritage multiple\nne possède pas (nativement) la notion de classes abstraites\nne possède pas la notion d’interfaces\n\nPython ne propose pas nativement la notion de classe abstraite. Cependant, la PEP-3119 propose la notion d’Abstract Base Class (ABC). Ce mécanisme n’est pas abordé dans cette formation.\n\n\n9.6.8 L’héritage en Python\nPour définir qu’une classe est une spécialisation d’une autre en Python, on l’indique dans la déclaration de la class en faisant suivre le nom de la classe par des parenthèses contenant le ou  les nom(s) de la ou des classe(s) héritée(s).\nLa déclaration de la classe Client ci-dessous suffit pour déclarer un nouveau type spécialisant la notion de Person. Ce nouveau type déclare tous les états et comportements du type Person.\nclass Client(Person):\n    pass\n    \nSpécialiser une classe signifie lui donner un comportement spécifique, mais cela peut également signifier lui attribuer des comportements complémentaires.\nDans ce dernier cas, une classe spécialisée peut déléguer à la classe générale ce qu’elle sait gérer. Lors de l’instanciation d’une classe Client, la classe Person sait gérer l’initialisation de nom et prénom. Nous pouvons lui déléguer cette gestion dans le constructeur.\nclass Client(Person):\n    def __init__(self, nom, prenom, nid):\n        super().__init__(nom, prenom)\n        self._identifiant = nid\n        self._accounts = []\n        \nLa fonction super() permet d’appeler les parents de la classe Client et donc leur méthode. Dans le cas de l’héritage simple (Client est la spécialisation d’un seul parent), c’est donc la méthode du parent qui est appelée. Dans le cas de l’héritage multiple (Client est la spécialisation de plusieurs parents), la fonction super() gérera l’ordre d’appel des méthodes des parents.\nLes attributs créés par l’initialiseur de la classe Person seront évidemment accessibles par l’objet Client.",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>La Programmation Orientée Objet en Python</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_classes.html#notions-de-polymorphisme",
+    "href": "POO/POO_classes.html#notions-de-polymorphisme",
+    "title": "9  La Programmation Orientée Objet en Python",
+    "section": "9.7 Notions de polymorphisme",
+    "text": "9.7 Notions de polymorphisme\nLe polymorphisme est la capacité d’un système à choisir l’implémentation réelle d’une méthode. Nous la mettons déjà en œuvre en surchargeant la méthode __init__(self).\nSpécialiser une classe peut ainsi conduire à redéfinir le comportement de certaines méthodes. Si nous avons un nouveau type de compte DeferedAccount qui est compte à débit différé, l’opération de débit ne peut être la même que la classe Account dont il hérite. Nous allons donc implémenter cette classe de la manière suivante :\nclass DeferedAccount(Account):\n\n    def __init__(self, nid, balance=100):\n        Account.__init__(self, nid, balance)\n        self._operations = []\n\n    def withdraw(self, value):\n        self._operations.append(value)\n        \nPour les objets de type DeferedAccount, l’interpréter ne fera pas appel à la méthode withdraw() de la classe parent mais bien à celle redéfinie (surchargée) dans la déclaration de DeferedAccount.",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>La Programmation Orientée Objet en Python</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_classes.html#polymorphisme-et-duck-typing",
+    "href": "POO/POO_classes.html#polymorphisme-et-duck-typing",
+    "title": "9  La Programmation Orientée Objet en Python",
+    "section": "9.8 Polymorphisme et duck typing",
+    "text": "9.8 Polymorphisme et duck typing\nEn Python, la notion de polymorphisme repose sur la notion de duck typing. \n\nSi je vois un animal qui vole comme un canard, cancane comme un canard, et nage comme un canard, alors j’appelle cet oiseau un canard\n\nCe qui nous intéresse en Python, ce n’est pas quel est le type réel de l’objet mais est-ce qu’il a la caractéristique nécessaire à l’action.\nCe principe peut être résumé par cette citation :\n\nDon’t check whether it IS-a duck: check whether it QUACKS-like-a duck, WALKS-like-a duck, etc, etc, depending on exactly what subset of duck-like behaviour you need to play your language-games with. If the argument fails this speci c-ducklyhood-subset-test, then you can shrug, ask « why a duck? »\nAlex Martelli\n\nCe qui nous conduit à un principe clef en Python :\n\nIt’s easier to ask for forgiveness than permission\n\n\n9.8.1 Ne testez pas si c’est un canard…\nIl existe une fonction qui permet de vérifier si un objet est une instance d’une classe : isinstance(objet, classe). En Python, nous allons rarement l’utiliser. Plutôt que de tester si l’objet est de cette instance, nous testerons si il a les propriétés qui nous intéressent. Pour cela, nous utiliserons la fonction hasattr(objet, nom) qui permet de vérifier si un objet a un certain attribut. Le paramètre nom est une chaine de caractère du nom de la propriété.\nIn [1]: hasattr(my_account, 'deposit')\nOut[1]: True\n\nIn [2]: hasattr(my_account, 'upper')\nOut[2]: False\n\n\n9.8.2 Ou ne testez pas du tout\nSi vous tentez d’appeler une méthode qui n’existe pas, cet appel va provoquer une exception de type AttributeError.\nIn [3]: my_account.upper()\n---------------------------------------------------------------------------\nAttributeError                            Traceback (most recent call last)\n&lt;ipython-input-7-436618faa434&gt; in &lt;module&gt;()\n----&gt; 1 my_account.upper()\n\nAttributeError: 'DebtAccount' object has no attribute 'upper'\nVous pouvez donc directement capturer et gérer l’exception comme le décrit le chapitre suivant.",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>La Programmation Orientée Objet en Python</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_classes.html#les-attributs-1",
+    "href": "POO/POO_classes.html#les-attributs-1",
+    "title": "9  La Programmation Orientée Objet en Python",
+    "section": "9.9 Les attributs",
+    "text": "9.9 Les attributs\n\n9.9.1 Affecter et accéder à une valeur dans l’objet\nUn attribut dans la classe a un syntaxe self.nom_attribut.\nOn affecte une valeur à un attribut en déclarant celui-ci préfixé par self :\nclass MyClass:\n    def assign_value(self, value:int):\n        self.attribute = value\n        \nOn y accède en le référant de la même manière.\nclass MyClass:\n    def access_value(self) -&gt; int:\n        return self.attribute\n        \n\n\n9.9.2 Accéder à un attribut en dehors de l’objet\nOn peut accéder à un attribut en dehors de l’objet\n&gt;&gt;&gt; my_object = MyClass()\n&gt;&gt;&gt; my_object.assign_value(42)\n&gt;&gt;&gt; my_object.value\n42\nOn peut modifier la valeur par assignation avec la même syntaxe. Note que si l’attribut n’existe pas, il est créé.\n&gt;&gt;&gt; my_object = MyClass()\n&gt;&gt;&gt; my_object.value = 42\n&gt;&gt;&gt; my_object.value\n42",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>La Programmation Orientée Objet en Python</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_classes.html#les-méthodes-spéciales-1",
+    "href": "POO/POO_classes.html#les-méthodes-spéciales-1",
+    "title": "9  La Programmation Orientée Objet en Python",
+    "section": "9.10 Les méthodes spéciales",
+    "text": "9.10 Les méthodes spéciales\nDocumentation : https://docs.python.org/3/reference/datamodel.html\n\n9.10.1 L’initialiseur\nclass MyClass:\n    def __init__(self, param_1, param_2):\n        self.attribute_1 = param_1\n        self.attribute_2 = param_2\n        \n\n\n9.10.2 La représentation sous forme de chaine de caractères\n\n9.10.2.1 Représentation informelle avec __str__\nclass MyClass:\n    def __init__(self, param_1, param_2):\n        self.attribute_1 = param_1\n        self.attribute_2 = param_2\n        \n    def __str__(self):\n        return f'Objet {self.attribute_1} {self.attribute_2}'\n        \n\n\n9.10.2.2 Représentation officielle avec __repr__\nThe target audience for the string representation returned by .__repr__() is the programmer developing and maintaining the program. In general, it provides detailed and unambiguous information about the object. Another important property of the official string representation is that a programmer can normally use it to re-create an object equal to the original one.\nOne way to implement the method is the following :.\nclass MyClass:\n    def __init__(self, param_1, param_2):\n        self.attribute_1 = param_1\n        self.attribute_2 = param_2\n        \n    def __repr__(self):\n        class_name = type(self).__name__\n        return f\"{class_name}(param_1={self.attribute_1!r}, \n                              param_2={self.attribute_2!r})\"\n                              \nNote : si __repr__est surchargé mais pas __str__, le retour de __repr__ sera utilisé lors des requêtes à __str__.\n\n\n\n9.10.3 Autres méthodes spéciales\n\n9.10.3.1 Opérateurs de comparaison\n\n\n\nMéthode spéciale\nOpérateur\n\n\n\n\n__lt__(self, other)\nself &lt; other\n\n\n__gt__(self, other)\nself &gt; other\n\n\n__le__(self, other)\nself &lt;= other\n\n\n__ge__(self, other)\nself &gt;= other\n\n\n__eq__(self, other)\nself == other\n\n\n__ne__(self, other)\nself != other\n\n\n\n\n\n9.10.3.2 Opérateurs mathématiques\n\n\n\nMéthode spéciale\nOpérateur\n\n\n\n\n__neg__(self)\n-self\n\n\n__add__(self, other)\nself + other\n\n\n__sub__(self, other)\nself - other\n\n\n__mul__(self, other)\nself * other\n\n\n__truediv__(self, other)\nself / other",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>La Programmation Orientée Objet en Python</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_classes.html#visibilité-des-attributs",
+    "href": "POO/POO_classes.html#visibilité-des-attributs",
+    "title": "9  La Programmation Orientée Objet en Python",
+    "section": "9.11 Visibilité des attributs",
+    "text": "9.11 Visibilité des attributs\nEn Python, tout a une visibilité publique. Par convention, un attribut est considéré comme non-public si son nom commence par un underscore (_) :\nclass MyClass:\n    def __init__(self):\n        self._non_publi_attribute = 42\n        \n    def _non_public_method(self):\n        pass",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>La Programmation Orientée Objet en Python</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_xtra.html",
+    "href": "POO/POO_xtra.html",
+    "title": "10  Pour quelques notions de plus",
+    "section": "",
+    "text": "10.1 Le paramètre self de la déclaration des méthodes dans la classe\nCette partie présente quelques outils que propose Python pour une meilleur implémentation de l’Objet.\nLorsque vous écrivez une méthode, vous êtes tenus de déclarer un premier paramètre qui par convention, aura pour nom self. Ce paramètre est destiné à recevoir l’instance. Explication…\nLes objets sont des instances de classes. Le principe de la programmation orientée objet consiste à définir des entités qui regroupent un état et des comportements. Il paraît évident de se représenter les objets comme des composants construits sur le modèle d’une classe et qui embarquent données (les attributs) et comportements. Mais en Python, l’implémentation de la POO est par prototype, ce n’est donc pas tout à fait ça.\nCommençons par définir une classe et créons une instance.\nPuisque les méthodes sont des fonctions, si nous faisons appel à d.say_hello, nous devons avoir en retour une référence à la méthode (fonction) say_hello de l’objet d.\nD’après ce retour, nous pouvons vérifier que nous pouvons accéder à Demo.say_hello.\nPython voit donc say_hello(self) comme une fonction définie dans la classe Demo, perçue comme un namespace.\nLa méthode say_hello() de l’objet (instance) d est donc une méthode liée à cette fonction.\nNous pouvons donc exécuter la fonction Demo.say_hello()… Ce qui va lever une exception  car il manque un arguments. Cet argument correspond au paramètre self.\nLe paramètre self attends en effet une instance de Demo.\nCette instruction, c’est ce que l’interpréteur exécute réellement. Nous écrivons une instruction qui fait appel à la méthode de l’instance et l’interpréteur va exécuter la méthode de la classe en fournissant en premier paramètre l’instance. Ce paramètre self est donc un paramètre de la méthode de la classe destiné à recevoir l’instance sur laquelle exécuter la méthode.",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Pour quelques notions de plus</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_xtra.html#le-paramètre-self-de-la-déclaration-des-méthodes-dans-la-classe",
+    "href": "POO/POO_xtra.html#le-paramètre-self-de-la-déclaration-des-méthodes-dans-la-classe",
+    "title": "10  Pour quelques notions de plus",
+    "section": "",
+    "text": "In [1]: class Demo:\n   ...:     def __init__(self, name):\n   ...:         self.name = name\n   ...:\n   ...:     def say_hello(self):\n   ...:         print(f\"Hello, I'm {self.name}\")\n   ...: \n\nIn [2]: d = Demo(\"One\")\n\nIn [3]: d.say_hello\nOut[3]: &lt;bound method Demo.say_hello of &lt;__main__.Demo object at 0x102d2ceb0&gt;&gt;\n\nIn [4]: Demo.say_hello\nOut[4]: &lt;function __main__.Demo.say_hello(self)&gt;\n\n\n\n\nIn [5]: Demo.say_hello(d)\nHello, I'm One",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Pour quelques notions de plus</span>"
+    ]
+  },
+  {
+    "objectID": "POO/POO_xtra.html#notion-de-properties",
+    "href": "POO/POO_xtra.html#notion-de-properties",
+    "title": "10  Pour quelques notions de plus",
+    "section": "10.2 Notion de properties",
+    "text": "10.2 Notion de properties\nLorsqu’un attribut est déclaré comme non_public, pour accéder à sa valeur, li\nCette partie ne présente les properties que en tant que décorateurs\n\n10.2.1 Accesseurs (getters)\nclass MyClass:\n\n    @property\n    def my_property(self):\n        return 42\nUsage:\n&gt;&gt;&gt; my_object = MyClass()\n&gt;&gt;&gt; my_object.my_property\n42\n\n\n10.2.2 Mutateurs (setters)\nLe mutateur nécessite qu’un accesseur ai été défini\nclass MyClass:\n    def __init__(self):\n        self._property_value = 42\n\n    @property\n    def my_property(self):\n        return self._property_value\n        \n    @my_property.setter\n    def my_property(self, new_value):\n        self._property_value = new_value\nUsage:\n&gt;&gt;&gt; my_object = MyClass()\n&gt;&gt;&gt; my_object.my_property\n42\n&gt;&gt;&gt; my_object.my_property = 24\n&gt;&gt;&gt; my_object.my_property\n24\n\n\n10.2.3 Cas pratique : notre formation\nSi je reprends notre formation en ne m’intéressant qu’aux attributs, sa conception logique doit être :\n\n\n\n\n\n\n\n\n\n\n\nTraining\n\n\n\n\n\n\n\n+String subject\n\n\n\n\n\n\n\n-Int duration [readonly]\n\n\n\n\n\n\n\n-List&lt;String&gt; students [readonly]\n\n\n\n\n\n\n\n-Int max_seats\n\n\n\n\n\n\n\n+Int available_seats\n\n\n\n\n\n\n\n\n\n\nNote : l’outil “mermaid” utilisé pour générer ce schéma ne supporte pas la représentation standard qui devrait être -List&lt;String&gt; students {readonly}.\nclass Training:\n    def __init__(self, subject:str, duration:int, seats:int):\n        self.subject = subject\n        self._duration = duration\n        self._seats = seats\n        self.students = []\nPour les attributs en lecture seule duration et students, l’ajout de properties accesseurs seules est évidente. Attention à ne pas retourner la référence vers _students.\n@property\ndef duration(self):\n    return self._duration\n    \n@property\ndef students(self):\n    return self._students.copy()\nLe diagramme UML indique que nous devons avoir un attribut max_seats en lecture seule représentant le nombre maximum de places. Sauf que nous avons un attribut non_public _seats et non _max_seats. Et ceci n’est pas un problème : rien n’oblige à ce que les attributs exposés (publiques) référencent un attribut privé du même nom. Donc, on ajoute la property\n@property\ndef max_seats(self):\n    return self._seats\nEnfin, il y a un attribut en lecture seule available_seats. Celui-ci représente la différence entre le nombre de places de la formation et le nombre d’inscrits. Au lieu de retourner la valeur d’un attribut privé, nous pouvons calculer cette valeur :\n@property\ndef available_seats(self):\n    return self.seats - len(self._students\nEt ceci illustre en quoi les properties sont un outil fondamental de l’encapsulation : elles permettent de décorréler l’implémentation de l’interface de l’objet. De l’extérieur, on voit un état cohérent pour l’utilisateur de l’objet mais l’implémentation utilise un état cohérent pour son traitement.",
+    "crumbs": [
+      "La Programmation Orientée Objet",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Pour quelques notions de plus</span>"
+    ]
+  },
+  {
+    "objectID": "Les_tests.html",
+    "href": "Les_tests.html",
+    "title": "11  Les tests en Python",
+    "section": "",
+    "text": "11.1 Pourquoi tester ?\nLes tests font partie intégrante du développement logiciel. Le test le plus proche du développeur est le test unitaire. Cette partie traitera que des tests unitaires.\nLes tests ne font pas parti du code fonctionnel. Ils sont toutefois fondamentaux dans le développement logiciel. Les tests  permettent de\nPython propose deux outils pour les tests : doctest et unittest. L’intérêt de ces deux outils est qu’ils sont présents dans la distribution standard de Python. Cependant, une bibliothèque tierce rend en Python les tests beaucoup plus simples : PyTest.",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Les tests en Python</span>"
+    ]
+  },
+  {
+    "objectID": "Les_tests.html#pourquoi-tester",
+    "href": "Les_tests.html#pourquoi-tester",
+    "title": "11  Les tests en Python",
+    "section": "",
+    "text": "Montrer que le code fonctionne\nMontrer que le code répond aux attentes\nIllustrer l’usage du code\nMontrer que le code fonctionne toujours",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Les tests en Python</span>"
+    ]
+  },
+  {
+    "objectID": "Les_tests.html#démarche-générale-pour-le-test",
+    "href": "Les_tests.html#démarche-générale-pour-le-test",
+    "title": "11  Les tests en Python",
+    "section": "11.2 Démarche générale pour le test",
+    "text": "11.2 Démarche générale pour le test\nTester consiste à s’assurer que le système a le comportement attendu en fonction d’une condition donnée. Tester se fait en 3 étapes, les 3A :\n\nArrange : Initialiser le système dans un état de départ. Ce système est le système testé habituellement appelé SUT (System Under Test).\nAct : Exécuter le code que nous souhaitons tester.\nAssert : Observer le système et s’assurer qu’il est dans l’état attendu. ## Notions de tests unitaires\n\nLe code relatif à cette partie est à voir dans les sources avec le projet.\nTester un programme fait parti du processus de réalisation du programme. Vous testez naturellement vos programmes en vérifiant leur fonctionnement. Python en particulier permet de vérifier des parties de code grâce à l’interpréteur interactif.\nSi cette pratique permet de valider le bon comportement du code, elle a le défaut d’être manuelle et donc ne nécessiter un effort d’analyse du résultat de vos instructions. Le principe des tests n’est pas très différent de votre pratique et va surtout permettre l’automatisation.\n\n11.2.1 Glossaire\nDans la partie suivante, le code fonctionnel fera référence au code destiné à la production. C’est le code qui répond à votre besoin. Le code de test correspond au code destiné à tester le code fonctionnel. \n\n\n11.2.2 Principe des tests\nL’automatisation des tests consiste à écrire du code de code qui comporte deux parties :\n\nDu code qui exécute le code fonctionnel \nDu code qui valide le comportement du code fonctionnel. \n\nLa première partie, vous l’écrivez déjà lorsque vous écrivez du code de validation manuelle. Nous allons devoir ajouter du code de validation. Une validation consistera en une assertion d’état. Les bibliothèques de tests fournissent un ensemble d’assertions que nous pourrons utiliser. \nAinsi, nous pourrons de manière automatique jouer et re-jouer ces tests. Cette automatisation a 4 intérêts :\n\nElle permet de montrer que le code fonctionne\nElle permet de montrer que le code répond aux attentes\nElle permet d’illustrer l’usage du code\nElle permet de montrer que le code fonctionne toujours\n\nCe dernier point est important. Un code peut ne plus fonctionner suite à une modification. On appelle cela une régression.\nPour éviter la régression, nous devons avoir une stratégie de tests afin d’identifier le plus rapidement et le plus précisément toute régression. C’est pour cela que les tests unitaires ont été créés.\n\n\n11.2.3 Principe des tests unitaires\nLe principe des tests unitaires consiste à tester de manière isolée les plus petites parties possible du programme afin d’identifier le plus précisément les régressions ou les défaillances.\nTester de manière isolée doit permettre de s’assurer un comportement déterministe, c’est à dire que le test produira toujours le même résultat. Un test en échec doit mettre en évidence une erreur du code et non une influence extérieur.\nExemple : lorsque vous testez la récupération d’une base de données réseau, vous n’êtes pas isolé. Votre attente sera de récupérer certaines données que vous ne récupérerez pas si votre code est mal écrit, mais aussi si le réseau est absent, que le serveur n’est pas accessible, que la connexion à la base est impossible…",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Les tests en Python</span>"
+    ]
+  },
+  {
+    "objectID": "Les_tests.html#doctest-la-documentation-auto-testée",
+    "href": "Les_tests.html#doctest-la-documentation-auto-testée",
+    "title": "11  Les tests en Python",
+    "section": "11.3 Doctest, la documentation auto-testée",
+    "text": "11.3 Doctest, la documentation auto-testée\nDoctest est un test inclus dans la documentation proposé par le module doctest. Le principe est d’illustrer par un code simple le composant documenté. \ndef add(a, b):\n    \"\"\"\n        :Example:\n \n        &gt;&gt;&gt; add(1, 1)\n        2\n        &gt;&gt;&gt; add(2.1, 3.4)\n        5.5\n \n    \"\"\"\n    return a + b\n \nif __name__ == \"__main__\":\n    import doctest\n    doctest.testmod()\nDans cet exemple, l’exécution du module exécutera doctest qui recherchera tout code dans la documentation, l’exécutera et comparera le retour obtenu avec le retour attendu. Doctest ne signale que les erreurs.\nDoctest est un outil pratique permettant d’illustrer l’usage mais limité à des exemples simples. N’oubliez pas que ces exemples vont se trouver dans la documentation.",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Les tests en Python</span>"
+    ]
+  },
+  {
+    "objectID": "Les_tests.html#les-tests-unitaires-avec-unittest",
+    "href": "Les_tests.html#les-tests-unitaires-avec-unittest",
+    "title": "11  Les tests en Python",
+    "section": "11.4 Les tests unitaires avec unittest",
+    "text": "11.4 Les tests unitaires avec unittest\nUnittest, aussi appelé PyUnit, est la version Python de JUnit.\nJunit est le framework de test créé par Kent Beck et Erich Gamma pour le langage Java en 1997. Il est lui même inspiré de SUnit créé par Kent Beck en 1994 et est considéré comme le framework fondateur des framework de type xUnit.\nLa documentation complète est disponible à l’adresse : https://docs.python.org/3/library/unittest.html \n\n11.4.1 Mise en œuvre de Unittest\nLe principe des tests unitaires est de tester un comportement et un seul. Pour cela, le système testé doit être isolé au maximum afin qu’aucun composant externe n’influe sur le résultat du test.\nUnittest permet l’isolation et l’indépendance des tests.\nLe principe de mise en œuvre est le suivant :\n\nOn crée une classe héritant d’unittest par fonctionnalité testée\nAu sein de cette classe, on crée une méthode de test par cas testé. Le nom de ces méthodes doit commencer par test, unittest détermine par introspection si une méthode est une méthode de test.\nUnittest met à disposition deux méthodes, setup() et teardown() qui sont exécutées respectivement avant et après chaque méthode de test et qui sont destinés à préparer et à nettoyer l’environnement de test.\n\nUn test (implanté dans une méthode de test) consiste à exécuter un appel à la fonctionnalité et à faire une assertion sur l’état après cet appel. \nClasses et méthodes doivent avoir un nom sans ambiguïté sur leur comportement. En cas d’échec d’un test, le reporting indiquera le nom de ces classes et méthodes. Un nom adapté facilitera la correction. \nLes méthodes setup() et teardown() vous permettent de garantir l’indépendance des tests. La première doit s’assurer de la préparation de l’environnement pour le test. La seconde s’assure de nettoyer l’environnement pour le test suivant. N’oubliez pas que vous ne pouvez faire aucune spéculation sur l’ordre d’exécution des tests.\n\n\n11.4.2 Cas des tests simples\nLe code suivant test la création d’une formation. Nous testons les différents cas sans oublier le comportement lorsque la durée ou le nombre de places est d’un autre type. \nimport unittest\nimport academy.training as tr\n\nclass TestCreateTraining(unittest.TestCase):\n\n    def testCreateTraining(unittest.TestCase):\n        training = tr.Training('Python, fondamentaux', 5)\n        self.assertEqual('Python, fondamentaux', training.subject)\n        self.assertEqual(5, training.duration)\n        self.assertEqual(12, training.seats)\n\n    def testCreateTrainingWithSeats(unittest.TestCase):\n        training = tr.Training('Python, fondamentaux', 5, 8)\n        self.assertEqual(5, training.duration)\n        self.assertEqual(8, training.seats)\n\n    def testCreateTrainingWithValuesAsStrings(unittest.TestCase):\n        training = tr.Training('Python, fondamentaux', '5', '8')\n        self.assertEqual(5, training.duration)\n        self.assertEqual(8, training.seats)\n\n\n11.4.3 Cas des tests modifiant l’état\nLe code suivant l’ajout de participants. Tester un ajout de participant nécessite l’existence d’un objet de type formation, donc sa création qui est réalisée dans la méthode setUp(). Cet objet étant modifié par l’appel à la méthode .add_student(), il est détruit par la méthode tearDown(). \nclass TestNewStudents(unittest.TestCase):\n\n    def setUp(self):\n        self.training = tr.Training('Python, fondamentaux', 5)\n\n    def testAddFirstStudent(self):\n        self.training.add_student('Eliott Alderson')\n        self.assertEqual(1, len(self.training.students)\n\n    def tearDown(self):\n        del self.training\nLe bon fonctionnement de la méthode .add_student() nécessite que l’objet soit correctement créé. La bonne création de l’objet est assurée par les tests précédents.\n\n\n11.4.4 Les assertions\nLes principales assertions sont :\n\n\n\nMethode\nVérifie que\n\n\nassertEqual(a, b)\na == b\n\n\nassertNotEqual(a, b)\na != b\n\n\nassertTrue(x)\nbool(x) is True\n\n\nassertFalse(x)\nbool(x) is False\n\n\nassertIs(a, b)\na is b\n\n\nassertIsNot(a, b)\na is not b\n\n\nassertIsNone(x)\nx is None\n\n\nassertIsNotNone(x)\nx is not None\n\n\nassertIn(a, b)\na in b\n\n\nassertNotIn(a, b)\na not in b\n\n\nassertIsInstance(a, b)\nisinstance(a, b)\n\n\nassertNotIsInstance(a, b)\nnot isinstance(a, b)\n\n\n\nDans le cas de notre formation, ajouter un doublon (représenté par le même nom) conduit à la levée d’une exception. Il existe une assertion spécifique pour ce cas, assertRaises() qui prend en paramètre l’exception attendue. Elle est utilisée de la manière suivante. \ndef testDuplicateStudent(self):\n    self.training.add_student('Eliott Alderson')\n\n    with self.assertRaises(ValueError):\n        self.training.add_student('Eliott Alderson')\nPour discriminer l’origine de la levée de l’exception, nous nous baserons sur les arguments et paramètres de l’exception. La source de l’exception doit pouvoir être identifiée non pas pour des questions de testabilité mais de facilité de maintenance. \ndef testDuplicateStudent(self):\n    self.training.add_student('Eliott Alderson')\n\n    with self.assertRaises(ValueError) as context:\n        self.training.add_student('Eliott Alderson')\n        self.assertTrue('Duplicate student' in context.exception)",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Les tests en Python</span>"
+    ]
+  },
+  {
+    "objectID": "Les_tests.html#les-tests-unitaires-avec-pytest",
+    "href": "Les_tests.html#les-tests-unitaires-avec-pytest",
+    "title": "11  Les tests en Python",
+    "section": "11.5 Les tests unitaires avec pytest",
+    "text": "11.5 Les tests unitaires avec pytest\nPytest, ou Py.Test, est une bibliothèque qui se veut plus Pythonique que unittest avec une philosophie « we-don’t-need-no-stinking-API unit test suite ». L’objectif est de simplifier l’écriture des tests sans en perdre la puissance des libs xUnit. Ainsi, PyTest n’utilise pour les tests que de simples fonctions et assertions. Le premier exemple de tests unittest se transpose en Pytest de la manière suivante : \nimport academy.training as tr\n\ndef test_create_training(self):\n    training = tr.Training('Python, fondamentaux', 5)\n    assert 'Python, fondamentaux', training.subject\n    assert training.duration == 5\n    assert training.seats == 12\n\ndef test_create_training_with_seats(self):\n    training = tr.Training('Python, fondamentaux', 5, 8)\n    assert training.duration == 5\n    assert training.seats == 8\n\ndef test_create_training_with_values_as_strings(self):\n    training = tr.Training('Python, fondamentaux', '5', '8')\n    assert training.duration == 5\n    assert training.seats == 8\nAvec pytest, les tests ne sont que de simples fonctions et l’assertion est vérifiée avec la directive native de Python assert. Vous pouvez remarquer que le code précédent se suffit à lui même. Il n’y besoin d’aucune dépendance à la bibliothèque de tests.\nPour exécuter les tests, il suffit d’exécuter l’instruction py.test sur l’invite de commande à la racine du projet. Pytest suit les conventions de découverte des tests et exécutera donc tous les tests de l’arborescence. Il évidemment possible de fournir un chemin en paramètre afin de spécifier un répertoire ou un module pour cette exécution ou même de le configurer dans le pyproject.toml.\n\n11.5.1 Tester la levée d’exceptions\nIl est indispensable de tester que certaines exceptions sont bien levées dans des conditions spécifiques. Afin de conserver un code concis et lisible, Pytest fournit un context manager. En déclarant ce context manager, il faut indiquer quelle exception doit être levée. \nimport academy.training as tr\nimport pytest\n\ndef test_duplicate_student_must_raise(create_account):\n    training = tr.Training('Python, fondamentaux', 5)\n    training.add_student('Eliott Alderson')\n    \n    with pytest.raises(ValueError):\n        training.add_student('Eliott Alderson')\nLe test de l’appel de la méthode deposit() nécessite une instance d’objet. Cependant, nous aurons besoin de tester ce même système dans différentes conditions. Il sera donc nécessaire de pouvoir accéder à cet objet de manière uniforme.\n\n\n11.5.2 Une base de tests avec les test fixtures \nLes test fixtures offrent une base fixe afin de répéter de manière fiable un contexte de tests. L’usage le plus simple est de créer un objet lorsque l’on veut tester un appel de méthode.\nUn objet doit être initialisé de la même manière pour l’ensemble des tests de la fonctionnalité. Une fixture permet de s’assurer que nous aurons toujours le même objet dans les différents tests. Nous pouvons donc reprendre le test de l’ajout de participants dans l’ensemble de tests ci-dessous.\nfrom academy.training as tr\nimport pytest\n\n@pytest.fixture()\ndef training:\n    return tr.Training('Python, fondamentaux', 5)\n\ndef test_add_student(training):\n    training.add_student('Eliott Alderson')\n    \n    assert len(training.students) == 1\n    assert training.students[-1] == \"Eliott Alderson\"\n\ndef test_duplicate_student_must_raise(training):\n    training.add_student('Eliott Alderson')\n    \n    with pytest.raises(ValueError):\n        training.add_student('Eliott Alderson')\nVous remarquerez qu’une fixture se présente comme un paramètre de la fonction. Il est donc possible de passer plusieurs fixtures pour un même test.\nLe mécanisme des fixtures est de l’injection de dépendances.",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Les tests en Python</span>"
+    ]
+  },
+  {
+    "objectID": "Les_tests.html#lapproche-test-first",
+    "href": "Les_tests.html#lapproche-test-first",
+    "title": "11  Les tests en Python",
+    "section": "11.6 L’approche test-first",
+    "text": "11.6 L’approche test-first\nIl est indispensable pour la qualité du code que celui-ci soit accompagné de tests. La démarche habituelle consiste à écrire son code en fonction des spécifications puis les tests. Cette démarche à plusieurs défauts :\n\nReportés à la fin de la tâche, les tests ne sont finalement pas écrits. Après tout, le code fonctionne et il est urgent de passer à la tâche suivante.\nLes tests sont écrits en fonction du code existant et montrent surtout que le code répond aux attentes.\nCette stratégie confirme le reproche fait à l’écriture des tests qui est que cela prends du temps.\n\nL’idéal serait d’écrire les tests en même temps que le code en diminuant au maximum le temps nécessaire à leur écriture. C’est ce que promet l’approche TDD pour Test Driven Development. Ce document n’a pas l’ambition d’être une une formation à TDD (qui mérite une formation dédiée). Mais en résumé, si vous souhaitez mettre en œuvre cette approche, vous avez 3 règles à respecter scrupuleusement :\n\nVous ne pouvez écrire du code de production que pour corriger un test en échec\nVous ne devez écrire qu’un minimum de code de test pour que celui-ci soit en échec\nVous ne devez pas écrire plus de code de production que pour faire passer un test en échec\n\nVous y verrez que\n\nLes intentions sont écrites avant leur réalisation\nLes intentions sont exhaustives\nLes tests tendent à être plus exhaustifs comparé à leur écriture à postériori\nLe temps passé à écrire les tests est compensé par l’absence d’écriture de code inutile.",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Les tests en Python</span>"
+    ]
+  },
+  {
+    "objectID": "fichiers_systeme_fichiers.html",
+    "href": "fichiers_systeme_fichiers.html",
+    "title": "12  Les fichiers et le système de fichiers",
+    "section": "",
+    "text": "12.1 Le système de fichiers\nLa manipulation de fichiers comporte deux aspects :\nNous allons voir dans un premier temps ce que Python propose pour la manipulation des fichiers avant de nous intéresser au contenu des fichiers.\nIl y a fondamentalement 3 modules qui vont offrir des fonctionnalités pour la manipulation du système de fichiers :\nÀ ces trois là s’ajoute un module plus récent, pathlib, plus récent et qui propose une approche objet pour manipuler le système de fichiers. Il tend à remplacer principalement os.path.\nConsultez les documentations en lien de chaque modules pour en apprendre d’avantage sur ce que propose chaque module. Dans ce document, nous allons plutôt nous intéresser à des cas pratiques.",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Les fichiers et le système de fichiers</span>"
+    ]
+  },
+  {
+    "objectID": "fichiers_systeme_fichiers.html#le-système-de-fichiers",
+    "href": "fichiers_systeme_fichiers.html#le-système-de-fichiers",
+    "title": "12  Les fichiers et le système de fichiers",
+    "section": "",
+    "text": "os : https://docs.python.org/3/library/os.html\nPermet d’utiliser des fonctions dépendant du système d’exploitation\nos.path : https://docs.python.org/3/library/os.path.html#module-os.path\nPermet de manipuler les chemins. os.path est un module virtuel dont l’implémentation réelle est chargée en fonction du système sur lequel s’exécute le code.\nshutil : https://docs.python.org/3/library/shutil.html#module-shutil\nPermet des manipulations de haut-niveau des fichiers. Certaines fonctions peuvent appeler des fonctions du module os.\n\n\n\n\n12.1.1 Obtenir le contenu d’un répertoire\nIl existe plusieurs méthodes pour obtenir le contenu d’un répertoire. La manière historique utilise la fonction os.listdir(path) qui retourne une liste de chaines de caractères. \nIn [2]: import os                                                               \nIn [3]: os.listdir(\"assets\")                                                    \nOut[3]: \n['Paris', 'bbts12.csv','movieslist.csv', 'ile_de_france',\n'showslist_bad.csv', 'ministere_culture', 'showsfiles.txt',\n'files', 'movieslistdest.csv', 'showslist.csv', 'SNCF']\nBien entendu, vous ne manipulerez jamais réellement la liste mais les éléments de la liste.\nLa fonction listdir() ne prends pas en charge les glob (les wildcards utilisés pour filtrer le contenu d’un répertoire). Historiquement, il a été ajouté un module glob qui contient une fonction glob(). \nIn [4]: import glob                                                             \nIn [5]: glob.glob('assets/*.csv')                                               \nOut[5]: \n['assets/bbts12.csv', 'assets/movieslist.csv',\n'assets/showslist_bad.csv', 'assets/movieslistdest.csv',\n'assets/showslist.csv']\nDepuis Python 3.5, il existe une nouvelle manière de manipuler le contenu d’un répertoire à l’aide de la fonction os.scandir(). La fonction scandir() retourne un itérateur sur des objets de type os.DirEntry. \nIn [6]: for file in os.scandir(\"assets\"): \n   ...:     print(file) \n   ...:                                                                        \n&lt;DirEntry 'Paris'&gt;\n&lt;DirEntry 'bbts12.csv'&gt;\n&lt;DirEntry 'movieslist.csv'&gt;\n&lt;DirEntry 'ile_de_france'&gt;\n…\nL’usage conseillé utilise un contexte manager de la manière suivante : \nIn [7]: with os.scandir(\"assets\") as entries: \n   ...:     for file in entries: \n   ...:         print(file) \n   ...:                                                                        \n&lt;DirEntry 'Paris'&gt;\n&lt;DirEntry 'bbts12.csv'&gt;\n&lt;DirEntry 'movieslist.csv'&gt;\n&lt;DirEntry 'ile_de_france'&gt;\n…\nLa raison est que le Context Manager s’assurera de la bonne fermeture de l’itérateur et de la libération des ressources.\n\n\n12.1.2 Exploiter le contenu d’un répertoire\nÀ nouveau, tout va dépendre de la fonction que vous allez utiliser, listdir() ou scandir(). Dans le premier cas, vous avez des chaines de caractères représentant les noms basename des fichiers, dans le second, des objets de type os.DirEntry.\nLes objets de type os.DirEntry possèdent des attributs et méthodes qui vont faciliter la manipulation des fichiers. Nous avons ainsi :\n\nDirEntry.name : retourne le nom de base du fichier (sans l’arborescence)\nDirEntry.path : retourne le nom du fichier avec l’arborescence relative (celle qui a été utilisée pour scandir).\nDirEntry.is_dir() : retourne True si il s’agit d’un répertoire sinon False\nDirEntry.is_file() : retourne True si il s’agit d’un fichier sinon False\nDirEntry.stat() : retourne un objet de type stat_result comportant un ensemble d’informations sur le fichier. Ne sera pas couvert dans cette formation.\n\nCes attributs et méthodes permettent déjà d’obtenir des informations sur les éléments contenus dans un répertoire.\nAinsi, si nous souhaitons lister uniquement les fichier d’un répertoire avec un chemin relatif, avec scandir(), il suffit d’écrire le code suivant : \nIn [8]: basepath = \"assets\"                                                    \nIn [9]: with os.scandir(basepath) as entries: \n   ...:     for file in entries: \n   ...:         if file.is_file(): \n   ...:             print(file.path) \n   ...:                                                                        \nassets/bbts12.csv\nassets/movieslist.csv\nassets/showslist_bad.csv\nassets/showsfiles.txt\nassets/movieslistdest.csv\nassets/showslist.csv\nAvec listdir(), il faudra quelques éléments en plus.\nIl est possible de tester si un chemin est un fichier ou un répertoire grâce aux fonctions os.path.isdir(path) et os.path.isfile(path).\nMais il faudra fournir un chemin à ces fonctions. Or listdir() ne retourne que le nom basename du fichier. Il faudra donc le reconstruire grâce à la fonction os.path.join(path, *paths). \nIn [10]: basepath = \"assets\"                                                    \n\nIn [11]: for entry in os.listdir(basepath): \n    ...:     if os.path.isfile(os.path.join(basepath, entry)): \n    ...:         print(entry) \n    ...:                                                                        \nbbts12.csv\nmovieslist.csv\nshowslist_bad.csv\nshowsfiles.txt\nmovieslistdest.csv\nshowslist.csv",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Les fichiers et le système de fichiers</span>"
+    ]
+  },
+  {
+    "objectID": "fichiers_systeme_fichiers.html#en-résumé",
+    "href": "fichiers_systeme_fichiers.html#en-résumé",
+    "title": "12  Les fichiers et le système de fichiers",
+    "section": "12.2 En résumé",
+    "text": "12.2 En résumé\n\n12.2.1 Obtenir le contenu d’un répertoire\n\nos.listdir(path) : retourne le contenu d’un répertoire sous forme d’une liste de chaînes de caractères représentant le nom basename du contenu du répertoire.\nos.scandir(path) : retourne un itérateur sur des objets de type DirEntry représentant le contenu du répertoire.\nglob.glob(path) : liste le contenu du répertoire en fonction du pattern et permet ainsi l’utilisation de wildcards.\n\n\n\n12.2.2 Créer des répertoires\n\nos.mkdir(path, mode) : crée répertoire, mode UNIX\nos.makedirs(path, mode) : crée une arborescence de répertoires, mode UNIX\n\n\n\n12.2.3 Supprimer des fichiers et des répertoires \n\nos.remove(path) : supprime un fichier\nos.rmdir(path) : supprime un répertoire\nos.removedirs(name) : supprime répertoires récursivement à partir de la fin (leaf)\nshutil.rmtree(path) : supprime le répertoire et tout son contenu\n\n\n\n12.2.4 Copier, déplacer et renommer\n\nshutil.copy(src, dest) : copie un fichier. dest peut être un répertoire, dans ce cas, le fichier sera copié dans ce répertoire.\nshutil.copy2(src, dest) : copie un fichier avec les métadonnées. dest peut être un répertoire, dans ce cas, le fichier sera copié dans ce répertoire.\nshutil.copytree(src, dest) : copie un répertoire et son contenu.\nshutil.move(src, dest) : déplace ou renomme un fichier ou un répertoire\nos.rename(src, dest) : renomme fichier ou répertoire. Si dest est une arborescence, déplace le fichier ou le répertoire.\nos.renames(src, dest) : renomme fichier ou répertoire en créant les répertoires si ils n’existent pas. Si dest est une arborescence, déplace le fichier ou le répertoire.\n\n\n\n12.2.5 Informations sur le nom de fichier\nDans les exemples suivants, path est un nom de fichier ou répertoire contenant ou non une arborescence.\n\nos.path.exists(path) : est-ce que le fichier ou répertoire existe\nos.path.isdir(path) : est-ce un répertoire\nos.path.isfile(path) : est-ce un fichier\nos.path.join(path, *paths) : retourne une chaine de caractères représentant un chemin, concaténation des paramètres.\nos.path.dirname(path) : retourne l’arborescence de répertoires\nos.path.basename(path) : retourne le nom du fichier\nos.path.split(path) : retourne un tuple des deux précédents\nos.path.splitext(path) : retourne un tuple pour obtenir l’extension",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Les fichiers et le système de fichiers</span>"
+    ]
+  },
+  {
+    "objectID": "fichiers_systeme_fichiers.html#le-module-pathlib",
+    "href": "fichiers_systeme_fichiers.html#le-module-pathlib",
+    "title": "12  Les fichiers et le système de fichiers",
+    "section": "12.3 Le module pathlib",
+    "text": "12.3 Le module pathlib\nLe module pathlib, ajouté à partir de Python 3.4 (voir https://www.python.org/dev/peps/pep-0428/), permet de manipuler les chemins avec une approche objet. La classe principale est la classe Path que nous allons importer directement. \nIn [1]: from pathlib import Path\nCette classe permet de créer un objet chemin en lui passant en paramètre une chaîne de caractères représentant ce chemin. Ce chemin peut être absolu ou relatif. Dans l’exemple de code plus bas, vous pouvez voir que le type de l’objet est PosixPath. Path() est une classe abstraite (ou plus exactement une factory et donc une abstract factory) . Elle retourne l’implémentation concrète selon le système d’exploitation : PosixPath pour les systèmes posix, WindowsPath pour Windows.\nLa classe Path() permet de créer facilement un objet sur le répertoire courant. Ce chemin reste abstrait. Vous pouvez créer un nouvel objet avec le chemin réel grâce en résolvant le chemin par la méthode du même nom.\nCet objet possède un attribut .parent qui retourne un nouvel objet PosixPath, utilisé communément pour remonter l’arborescence.\nIn [2]: p = Path('.')\n\nIn [3]: p\nOut[3]: PosixPath('.')\n\nIn [4]: p.resolve()\nOut[4]: PosixPath('/Users/dad3zero/formation-Python_fondamentaux')\n\nIn [5]: p.parent\nOut[5]: PosixPath('.')\n\nIn [6]: p.resolve().parent\nOut[6]: PosixPath('/Users/dad3zero')\n\n12.3.1 Fichier ou répertoire ?\nL’objet Path possède des méthodes .is_dir() et .is_file() qui permettent de tester si le chemin correspond à un fichier ou un répertoire.\nIn [7]: [px for px in p.iterdir() if px.is_file()]\nOut[7]: \n[PosixPath('LICENSE'),\n PosixPath('requirements.txt'),\n PosixPath('README.md'),\n PosixPath('.gitignore')]\nAttention, un retour False de ces méthodes peut signifier que le chemin n’existe pas.\n\n\n12.3.2 Obtenir le contenu d’un répertoire\nÀ partir d’un objet Path, il est possible d’obtenir son contenu si il s’agit d’un répertoire. Les éléments retournés seront également de type Path (PosixPath pour être plus précis). \nL’objet de type Path permet également d’utiliser les glob. Dans ce cas, c’est un objet de type générateur qui est retourné.\nIn [8]: list(p.glob('p*/*.py'))\nOut[8]: \n[PosixPath('pylib/templating.py'),\n PosixPath('pylib/__init__.py'),\n PosixPath('pylib/datasource.py'),\n PosixPath('pylib/media_db.py')]\nL’objet de type Path a un usage particulier de l’opérateur divisé /. Celui-ci peut être utilisé en tant que réparateur avec d’autres chaines afin de créer un nouvel objet de type PosixPath. Attention, cet objet nouvellement créé n’est pas un élément existant. Un objet PosixPath est plus proche de ce qui est manipulé par la lib os.path. Vous pouvez évidemment tester l’existence de cette ressource créée. \nIn [9]: new_path = p / 'stage'\n\nIn [10]: new_path\nOut[10]: PosixPath('stage')\n\nIn [11]: new_path.exists()\nOut[11]: True\n\nIn [12]: new_path = p / 'toto'\n\nIn [13]: new_path\nOut[13]: PosixPath('toto')\n\nIn [14]: new_path.exists()\nOut[14]: False\nCet opérateur, bien qu’utilisé, est plus une curiosité inadapté à certains cas. Il existe également une méthode Path.joinpath(*pathsegments) qui permet d’ajouter autant de segment que nécessaire.\nIn [15]: p.joinpath('stage', 'python', 'exercices')\nOut[15]: PosixPath('stage/python/exercices')\nSi le chemin est un fichier, vous pouvez l’ouvrir par la méthode .open() exactement comme la fonction que nous allons voir.\nIn [29]: my_file = (p / \"README.md\").open()\n\nIn [30]: my_file\nOut[30]: &lt;_io.TextIOWrapper name='README.md' mode='r' encoding='UTF-8'&gt;",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Les fichiers et le système de fichiers</span>"
+    ]
+  },
+  {
+    "objectID": "fichiers_systeme_fichiers.html#ouverture-et-fermeture-de-fichier",
+    "href": "fichiers_systeme_fichiers.html#ouverture-et-fermeture-de-fichier",
+    "title": "12  Les fichiers et le système de fichiers",
+    "section": "12.4 Ouverture et fermeture de fichier",
+    "text": "12.4 Ouverture et fermeture de fichier\n\n12.4.1 Ouvrir un fichier\nPour manipuler le contenu d’un fichier avec Python, aucune dépendance n’est nécessaire. La fonction open(path, mode) est une fonction de base de Python (built-in). Elle prends deux paramètres : le nom fichier à ouvrir et le mode. Le nom du fichier s’entends au sens UNIX, c’est à dire comprenant ou non le chemin relatif ou absolu. Le mode est une chaine de caractères optionnelle avec les options sont les suivantes.\nLe mode :\n\nr : lecture seule, paramètre par défaut\nw : écriture, écrase un fichier existant, crée un fichier inexistant\nx : ouverture pour création (levée d’exception si fichier existe)\na : écriture en mode ajout, écrit en fin de fichier, le crée si inexistant\n\nLe type de fichier :\n\nb : ajouté au précédent ouverture en mode binaire\nt : ajouté au précédent ouverture en mode texte (défaut)\n\nEn plus…\n\n+ : ajouté au précédent lecture et écriture\n\nLa fonction open() retourne un objet de type fichier.\nSi vous utilisez le module pathlib, vous pouvez aussi passer un objet de type Path à la fonction open(). Cet objet possède méthode .open(mode) qui se comporte comme la fonction.\n\n\n12.4.2 Fermer un fichier\nVous devez toujours prévoir de fermer un fichier ouvert. En effet, Python délègue les opérations sur les fichiers au système d’exploitation. Le système d’exploitation limite le nombre de fichiers qu’un process peut ouvrir (il est de l’ordre du millier). De plus, vous pouvez subir une perte de données en écriture principalement parce que l’écriture est asynchrone. Il est donc important de toujours refermer un fichier par la méthode .close().\n\n\n12.4.3 Risques d’exceptions\nLa manipulation d’un fichier risque toujours de lever une exception, elle se fait donc dans une clause try. Une bonne pratique consiste à toujours fermer le fichier dans une clause finally. \nIn [1]: try:\n   ...:     mfile = open('showsfiles.txt', 'r')\n   ...: except OSError:\n   ...:     if not mfile.closed():\n   ...:          mfile.close()\n   ...:         \n\nIn [2]: mfile\nOut[2]: &lt;_io.TextIOWrapper name='showsfiles.txt' mode='r' encoding='UTF-8'&gt;\n\nIn [3]: mfile.close()\n\n\n12.4.4 Usage idiomatique avec un context manager\nAfin de simplifier l’écriture, nous pouvons utiliser un context manager avec le pattern with open(). Le context manager ferme le fichier proprement même si une exception est levée. \nIn [7]: with open('showsfiles.txt', 'r') as mfile:\n   ...:     mfile.read()\n   ...:\nNous allons dans cette partie traiter uniquement des fichiers texte. Depuis Python 3, les fichiers text sont de type _io.TextIOWrapper.",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Les fichiers et le système de fichiers</span>"
+    ]
+  },
+  {
+    "objectID": "fichiers_systeme_fichiers.html#lire-et-écrire-dans-un-fichier",
+    "href": "fichiers_systeme_fichiers.html#lire-et-écrire-dans-un-fichier",
+    "title": "12  Les fichiers et le système de fichiers",
+    "section": "12.5 Lire et écrire dans un fichier",
+    "text": "12.5 Lire et écrire dans un fichier\nNous avons plusieurs méthodes pour lire et écrire dans un fichier.\n\n12.5.1 Les méthodes d’écriture\nPour écrire dans un fichier, le fichier doit être ouvert en écriture. L’objet fichier propose les méthodes suivantes :\n\nwrite(str) : écrit la chaine str dans le fichier et retourne le nombre de caractères écrits.\nwritelines(sequences) : écrit à la suite dans le fichier les chaines de la liste passée en paramètre.\n\nAttention, aucun caractère n’est inséré en plus du paramètre. C’est donc à vous de vous assurer de la présence des caractères de fin de ligne.\n\n\n12.5.2 Les méthodes de lecture\nPour lire un fichier, celui-ci doit être ouvert en lecture. L’objet fichier propose plusieurs méthodes pour lire dans un fichier :\n\nread([size]) : sans argument, retourne le contenu du fichier sous forme d’une chaine de caractères. L’argument optionnel est la taille maximum lue en nombre de caractères.\nreadline([size]) : retourne le contenu du fichier jusqu’au prochain saut de ligne (inclut). Si l’argument optionnel size est renseigné, la lecture sera limitée à ce nombre de caractères.\nreadlines([hint]) : Sans argument, retourne le contenu du fichier sous la forme d’une liste de chaines de caractères correspondant aux lignes contenues dans le fichier. Le paramètre hint spécifie le nombre de caractères lus. Le nombre total de caractères de la liste ne pourra donc pas être supérieur à ce paramètre.\n\n\n\n12.5.3 Lecture avec l’itérateur\nCependant, le plus facile et le plus efficace est d’utiliser un itérateur qui facilite le parcours et le traitement d’un fichier ligne à ligne. L’usage est le suivant : \nIn [1]: for line in file:\n   ...:     print(line[:-1])",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Les fichiers et le système de fichiers</span>"
+    ]
+  },
+  {
+    "objectID": "fichiers_systeme_fichiers.html#manipuler-le-curseur",
+    "href": "fichiers_systeme_fichiers.html#manipuler-le-curseur",
+    "title": "12  Les fichiers et le système de fichiers",
+    "section": "12.6 Manipuler le curseur",
+    "text": "12.6 Manipuler le curseur\nLa position dans un fichier est définie par un curseur. Il est donc possible de manipuler le curseur  sur un fichier. Pour cela, nous avons 2 méthodes :\n\ntell() : retourne la position du curseur\nseek(offset[, whence]) : permet de déplacer le curseur de la valeur offset en fonction du paramètre whence. Le paramètre whence peut prendre trois valeurs :\n0 ou os.SEEK_SET : déplace le curseur par rapport au début du fichier. C’est le comportement par défaut. Le paramètre offset est un entier de valeur 0 ou positif.\n1 ou os.SEEK_CUR : déplace le curseur par rapport à la position courante du curseur. Pour un fichier texte, le paramètre offset ne peut avoir que la valeur de 0.\n2 ou os.SEEK_END : déplace le curseur par rapport à la fin du fichier. Pour un fichier texte, le paramètre offset ne peut avoir que la valeur de 0.\n\nAttention : si vous utilisez l’itérateur, depuis Python 3, le curseur est inaccessible. Ceci est justifié parce que libérateur utilise un buffer (tampon) et que donc la position du curseur ne correspond pas à la position réellement lue.",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Les fichiers et le système de fichiers</span>"
+    ]
+  },
+  {
+    "objectID": "fichiers_systeme_fichiers.html#le-module-pickle",
+    "href": "fichiers_systeme_fichiers.html#le-module-pickle",
+    "title": "12  Les fichiers et le système de fichiers",
+    "section": "12.7 Le module pickle",
+    "text": "12.7 Le module pickle\nPour plus d’informations : https://docs.python.org/3/library/pickle.html\nLe module pickle est le module permettant la stérialisation et désérialisation d’objets en Python. Sérialiser un objet consiste à convertir un objet en flux d’octets ce qui permet de sauvegarder une donnée et son type. Pour éviter les confusions entre serialization, marshalling, et flattening, on parlera de pickling et unpickling.\nLe module pickle propose deux fonctions principales :\n\ndump(objet, file) : sauvegarde la donnée\nload(file) : charge une donnée\n\nLe module pickle propose également deux classes :\n\nPickler(file) qui possède une méthode dump(object) qui sauvegarde une donnée\nUnpickler(file) qui possède une méthode load() qui charge une donnée\n\nL’usage est le suivant :  \npile_name = \"ma pile\"\npile_value = [42, 'answer'] \n\nimport pickle\n\nf = open(\"pile_backup\", w)\npickle.dump(pile_name, f)\npickle.dump(pile_value, f)\nf.close\nimport pickle\n\nf = open(\"pile_backup\", r)\npile_name = pickle.load(f)\npile_value = pickle.load(f)\nf.close\nComme vous pouvez le constater, il n’y a aucune sécurité sur les données serialisées et déserialisées. Ne désérialisez donc que des données dont vous êtes à 200 % sûr.",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Les fichiers et le système de fichiers</span>"
+    ]
+  },
+  {
+    "objectID": "fichiers_systeme_fichiers.html#les-fichiers-csv",
+    "href": "fichiers_systeme_fichiers.html#les-fichiers-csv",
+    "title": "12  Les fichiers et le système de fichiers",
+    "section": "12.8 Les fichiers CSV",
+    "text": "12.8 Les fichiers CSV\n\n12.8.1 La méthode standard… et ancienne\nPython propose un module permettant de gérer les fichiers CSV. Pour la documentation complète, voir : https://docs.python.org/3/library/csv.html\nLe principe général de ce module est de fournir des objets permettant la lecture ou l’écriture de fichiers CSV. L’utilisation de base fera appel aux fonctions csv.reader(csvfile) et csv.writer(csvfile) qui retourneront un objet de type csv.reader et csv.writer. Un paramètre optionnel delimiter permet de spécifier le séparateur de colonnes et un paramètre optionnel quotechar permet de spécifier le caractère encadrant les chaînes. Un exemple de lecture est proposé dans le code suivant : \nIn [10]: with open('csvfile.csv') as csvfile:\n    ...:     csvreader = csv.reader(csvfile, delimiter=';',\n    ...:                            quotechar='\"')\n    ...:     for row in csvreader:\n    ...:         print(row)\n    ...:  \nUn exemple d’écriture est proposé dans le code suivant : \nIn [24]: with open('csvfile.csv', 'w', newline='') as csvfile:\n    ...:     csvwriter = csv.writer(csvfile, delimiter=';') \n    ...:     for row in list_elements:                                          \n    ...:         csvwriter.writerow(row)\n    ...: \nUn comparatif de code est disponible dans le projet de référence et vous pouvez voir que pour un traitement de base, le module csv apporte peu de choses, en tout cas pour la lecture.\nIl peut cependant être intéressant d’utiliser la classe DictReader qui instancie un objet. Cet objet est un itérateur qui retourne la ligne suivante sous forme d’un dictionnaire. Sans paramètre fieldnames, qui permet de définir les clefs, la première ligne (l’en-tête) est utilisée pour définir les clefs. \nIn [10]: with open('csvfile.csv') as csvfile:\n    ...:     csvreader = csv.DictReader(csvfile, delimiter=';',\n    ...:                            quotechar='\"')\n    ...:     for row in csvreader:\n    ...:         print(row)\n    ...:  \n\n\n12.8.2 La méthode plus moderne même si complexe\nBien qu’initialement destinée à la datascience la bibliothèque Pandas est souvent utilisée pour charger des fichiers csv. Pandas retournera un objet de type DataFrame. Ce type d’objet est un tableau qui possèdes des fonctionnalités pour sélectionner ou filtrer des données.",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Les fichiers et le système de fichiers</span>"
+    ]
+  },
+  {
+    "objectID": "bases_donnees.html",
+    "href": "bases_donnees.html",
+    "title": "13  Python et les bases de données",
+    "section": "",
+    "text": "13.1 Connexion à MariaDb\nCette partie va présenter les principes de base de la connexion aux bases de données, à l’envoi de requêtes et au traitement des données retournées. Cette partie traite des bases de données relationnelles. Les outils tel que les ORMs ne sont pas abordés.\nLe principe général indépendant de la base de données est :\nCette partie illustre le principe précédent à l’aide d’une base MariaDb. Cet exemple est évidemment transposable directement à MySQL et plus généralement à tout système de gestion de bases de données (PostgreSql, Oracle…).\nNous aurons besoins d’un connecteur ou pilote. Pour MariaDb, qui est un fort de MySQL, il s’agit de celui de MySQL disponible par pip.\nLe code suivant montre comment récupérer la version de MariaDb.\nNotez que cet exemple utiliser pour se connecter les paramètres host, user, passwd et db. Les trois premiers sont indispensables. Le dernier vous permet de vous connecter à une base de donnée. Vous pouvez l’omettre pour vous connecter au serveur de base de données en dehors de toute base. Dans ce contexte, vous pouvez effectuer les tâches d’administration tel que la création de tables.\nSi vous vous connectez sur le serveur pour créer une base, pour utiliser cette base il faudra créer une nouvelle connexion. ## Connexion à SQLite\nPour les formations et l’apprentissage, il y a une base de données plus adaptée, SQLite. Ses caractéristiques sont :\nSQLite est une base que vous pouvez utiliser à chaque fois que vous avez besoin de gérer des données de manière relationnelle. En tant que base en mémoire, SQLite est la base à utiliser lors des tests.\nLe code suivant montre comment récupérer la version de SQLite.\nPour travailler avec une base en mémoire, il faut spécifier une chaine de caractères spécifique :",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Python et les bases de données</span>"
+    ]
+  },
+  {
+    "objectID": "bases_donnees.html#connexion-à-mariadb",
+    "href": "bases_donnees.html#connexion-à-mariadb",
+    "title": "13  Python et les bases de données",
+    "section": "",
+    "text": "import MySQLdb\n\ntry:\n    conn = MySQLdb.connect(host='localhost', user='test user',\n                           passwd='test pass', db='test')\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT VERSION()\")\n    row = cursor.fetchone()\n    print('server version', row[0])\n\nfinally:\n    if conn:\n        conn.close()\n\n\n\n\nLe pilote SQLite est disponible dans l’installation standard de Python. Il n’est pas nécessaire d’installer d’autres dépendances. \nSQLite est une base de données fichier. Il n’y a pas de notion de base de donnée à laquelle se connecter ni d’utilisateurs. \nLors de la connexion à la base, si elle n’existe pas, elle est créée. \nIl est possible de travailler avec une base en mémoire. \n\n\n\nimport sqlite3 as lite\n\ncon = lite.connect('testdb.db')\n\ntry:\n    cursor = con.cursor()\n    cursor.execute(\"SELECT SQLITE_VERSION()\")\n    row = cursor.fetchone()\n    print('server version', row[0])\n\nfinally:\n    if con:\n        con.close()\n\ncon = sqlite3.connect(\":memory:\")",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Python et les bases de données</span>"
+    ]
+  },
+  {
+    "objectID": "bases_donnees.html#utilisation-dun-context-manager",
+    "href": "bases_donnees.html#utilisation-dun-context-manager",
+    "title": "13  Python et les bases de données",
+    "section": "13.2 Utilisation d’un Context Manager",
+    "text": "13.2 Utilisation d’un Context Manager\nLes connecteurs aux bases de données proposent des Context Managers. Celui-ci prends en charge la fermeture de la connexion. La contre-partie est que la connexion étant fermée à la sortie du bloc suivant le with, l’ensemble des traitements doit être réalisé dans ce bloc.\nimport sqlite3 as lite\n\ncon = lite.connect('testdb.db')\n\nwith con:\n    cursor = con.cursor()\n    cursor.execute('SELECT SQLITE_VERSION()')\n    row = cursor.fetchone()\n    print('server version', row[0])",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Python et les bases de données</span>"
+    ]
+  },
+  {
+    "objectID": "bases_donnees.html#les-requêtes",
+    "href": "bases_donnees.html#les-requêtes",
+    "title": "13  Python et les bases de données",
+    "section": "13.3 Les requêtes",
+    "text": "13.3 Les requêtes\nLes requêtes sont exécutées sur des curseurs. Une requête doit être une requête SQL valide. \n\n13.3.1 Création de tables\nLes requêtes de création de tables sont en principe prédéfinies. Elles consistent en une chaine de caractères que nous allons passer à la méthode execute() du curseur. La requête suivante crée une table dans la base SQLite. \ncur = conn.cursor()\ncur.execute(\"CREATE TABLE IF NOT EXISTS trainings (\"\n            \"subject TEXT NOT NULL, \"\n            \"duration INT NOT NULL, \"\n            \"seats INT NOT NULL\")\n\n\n13.3.2 Insertion de données : requêtes paramétrées\nLes requêtes d’insertion et d’extraction nécessiteront des paramètres (insertion, filtre…). Ces paramètres ont une origine non fiable. Il est indispensable de s’assurer de la sécurité de la base de données en particulier face à l’injection SQL. Il faut alors utiliser la fonctionnalité des requêtes paramétrées. Pour cela, l’endroit de la requête SQL où un paramètre est attendu est marqué par un ?. Les paramètres attendus seront ajoutés à l’appel de la méthode exécuté. \ntitle = \"Python, l'essentiel\"\nduration = 5\nseats = 12\n\ncur.execute(\"INSERT INTO trainings VALUES (?, ?, ?)\",\n            (title, duration, seats))\nVous pouvez également utiliser les requêtes paramétrées avec une syntaxe de dictionnaire. Ci-dessous, un exemple avec une requête d’extraction. \ncur.execute(\"SELECT * FROM trainings WHERE duration=:duration\",\n            {duration:5})\nUtilisez toujours les requêtes paramétrées qui ont entre autre la fonction d’échapper tout caractère qui ferait parti d’une requête et ainsi limiter les risques d’injection SQL.\n\n\n13.3.3 Extractions de données\nUne requête d’extraction de données retourne des enregistrements. Un enregistrement n’est autre qu’une liste de données. Pour obtenir ces enregistrements, nous avons plusieurs méthodes à not disposition après l’exécution de la requête :\n\nfetchone() : renvoi l’enregistrement suivant ou None si il n’y en a plus. \nfetchmany([size]) : retourne un nombre d’enregistrements correspondant au paramètre size. En cas d’itération, size doit rester constant. \nfetchall() : envoi tous les enregistrements correspondant à la requête sous la forme d’une liste (dans la limite du paramètre cursor.arraysize de la base de données",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Python et les bases de données</span>"
+    ]
+  },
+  {
+    "objectID": "bases_donnees.html#les-transactions",
+    "href": "bases_donnees.html#les-transactions",
+    "title": "13  Python et les bases de données",
+    "section": "13.4 Les transactions",
+    "text": "13.4 Les transactions\nUn système de gestion de base de données qui est transactionnel doit respecter un ensemble de règles baptisé A.C.I.D. pour Actomicity, Coherence, Isolation et Durability.\nUne transaction est un ensemble de modifications indivisible qui doit se réaliser en assurant la cohérence de la base de données en isolation des autres requêtes.\n\n13.4.1 Illustrations par un exemple.\nSoit un transfert de compte à compte où les comptes ne doivent pas basculer en négatif. Nous avons 2 écritures : un débit et un crédit. La première contrainte est donc de ne pas faire passer en négatif le compte à débiter. La démarche intuitive est de vérifier si le solde est suffisant et si oui, débiter le compte. Cependant, cela n’empêche pas un débit entre la consultation et le retrait effectif conduisant à un état incohérent de la base.\nLa bonne démarche consiste donc à effectuer l’écriture de débit puis à vérifier que le solde est toujours positif ou nul avant de continuer. Si ce n’est pas le cas, alors on informera la base d’annuler ces requêtes, c’est à dire cette transaction. Le système reviendra dans son état initial. Parce que la base gère les transactions en isolation (tant qu’elles ne sont pas validées, elles sont invisibles de l’extérieur), cette opération est sans conséquences sur les autres requêtes.\n\n\n13.4.2 Mécanisme des transactions\nDu point de vue de la base de données, une transaction débute par une commande BEGIN et se poursuit jusque’à une commande COMMIT qui valide l’ensemble des modifications ou ROLLBACK qui annule l’ensemble des modifications.\nDu point de vue Python, la transaction va débuter avec la première requête de modification et se poursuit jusqu’à l’appel de la méthode commit() ou de la méthode rollback().\nLes enregistrements concernés seront verrouillés le temps de la transaction. Il est donc important d’exécuter une transaction aussi vite que possible. Pour éviter un verrou de la base, celles-ci ont en général un mécanisme de Deadlock qui annule une transaction en cas d’inactivité après un certain délais. Dans le cas de SQLite, ce délais est de 5 secondes par défaut.\n\n\n13.4.3 Transactions et exceptions\nTransactions et exceptions sont deux mécanismes distincts. Il appartient au développeur de réaliser un rollback suite à une exception ou de déclencher une exception après un rollback. Si nécessaire, l’un et l’autre ne sont pas systématiques.\nEn reprenant l’exemple du compte bancaire, si le compte débité est négatif, le rollback annulera la transaction mais aucune information ne remonte au code appelant. Il sera nécessaire de lever une exception.\n\n\n13.4.4 Les context managers et les transactions\nLes objects connexion peuvent être utilisés comme des context managers si le pilote le permet (c’est le cas de SQLite ou PostgreSQL). Celui-ci déclenche automatiquement les commit et rollback. Dans le cas où une exception se produit, le contexte manager provoquera un rollback. Une sortie normale du context manager provoquera un commit.\nEn sortie du context manager, l’exception est toujours levée, c’est donc l’information que la transaction ne s’est pas achevée normalement. Elle doit donc être capturée.\nDes exemples d’illustrations vous seront montrés en formation sur des exemples d’illustration.",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Python et les bases de données</span>"
+    ]
+  },
+  {
+    "objectID": "bases_donnees.html#organisation-du-code",
+    "href": "bases_donnees.html#organisation-du-code",
+    "title": "13  Python et les bases de données",
+    "section": "13.5 Organisation du code",
+    "text": "13.5 Organisation du code\nL’organisation du code (connexion, exécution des requêtes, traitement des données…) dépendra évidemment de votre application. Une manière d’organiser son code de connexion à une base de données est de créer une classe de type dao. Vous avez quelques exemples dans des modules   du package training.projects (les modules se terminant par _db). Le principe général proposé dans ce code consiste à :\n\nÉtablir la connexion dans le constructeur. Pour une connexion à une base SQLite, les tables sont également créées dans le constructeur.\nLe destructeur s’occupe de fermer la connexion.\nDes méthodes encapsulent les requêtes et le chargement des données.",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Python et les bases de données</span>"
+    ]
+  },
+  {
+    "objectID": "dates.html",
+    "href": "dates.html",
+    "title": "14  Les dates en Python",
+    "section": "",
+    "text": "14.1 Création d’un instant avec la classe datetime\nTravailler avec les dates est systématiquement compliqué. Tous les langages proposent une bibliothèque pour simplifier la tâche.\nLa distribution standard Python fournit le module datetime. Celui-ci contient fondamentalement deux classes qui permettent de représenter les concepts fondamentaux :\nLes paramètres du constructeur sont : l’année, le mois, le jour, l’heure, les minutes, les secondes, les microsondes et le timezone. Les paramètres autre que le timezone sont des entiers et seuls l’année, mois et jour sont nécessaires.\nLa gestion des fuseaux horaires est assez complexe, elle sera abordée dans une partie dédiée.\nL’objet créé avec uniquement l’année, mois et jour est donc un instant à la date donnée à minuit.\nLa classe datetime contient des méthodes de classe pour créer un instant autrement que par le passage de tous les paramètres. Ainsi, pour représenter l’instant présent, nous avons la méthode now().\nNotez qu’il existe également une méthode utcnow() qui crée un objet datetime en UTC. Pour cela, l’interpréteur se reposera sur les informations du système. L’objet datetime créé sera naïf.\nConsultez la documentation pour les autres méthodes de classe.",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Les dates en Python</span>"
+    ]
+  },
+  {
+    "objectID": "dates.html#création-dun-instant-avec-la-classe-datetime",
+    "href": "dates.html#création-dun-instant-avec-la-classe-datetime",
+    "title": "14  Les dates en Python",
+    "section": "",
+    "text": "In [1]: from datetime import datetime\n\nIn [2]: datetime(2015, 12, 16)\nOut[2]: datetime.datetime(2015, 12, 16, 0, 0)\n\n\nIn [3]: datetime.now()\nOut[3]: datetime.datetime(2015, 12, 16, 14, 30, 13, 835376)\n\nIn [3]: datetime.now()\nOut[3]: datetime.datetime(2015, 12, 16, 14, 30, 13, 835376)\nIn [4]: datetime.utcnow()\nOut[4]: datetime.datetime(2015, 12, 16, 13, 30, 13, 835376)",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Les dates en Python</span>"
+    ]
+  },
+  {
+    "objectID": "dates.html#objet-datetime-et-chaines-de-caractères",
+    "href": "dates.html#objet-datetime-et-chaines-de-caractères",
+    "title": "14  Les dates en Python",
+    "section": "14.2 Objet datetime et chaines de caractères",
+    "text": "14.2 Objet datetime et chaines de caractères\nPour convertir une chaine de caractères représentant une date en objet de type datetime ou inversement, la classe datetime dispose de deux méthodes : .strptime(date, format) et .strftime(format).\nLe paramètre format est une chaine de caractère décrivant le format à lire ou à produire. Sa syntaxe est décrite dans la documentation :\nhttps://docs.python.org/3.12/library/datetime.html#strftime-strptime-behavior\nPour lire une date à partir d’une chaine de caractères et générer un objet datetime, nous allons utiliser la méthode strptime(string, format). \nIn [4]: date_object = datetime.strptime('Jun 1 2005  1:33PM', \n                                        '%b %d %Y %I:%M%p')\nPour créer une chaine de caractères représentant un objet datetime, nous utiliserons la méthode strftime(format). \nIn [5]: date_object.strftime('%Y-%m-%d %H:%M:%S.%f')\nOut[5]: '2005-06-01 13:33:00.000000'\nPar défaut, la date est en anglais. Pour travailler avec les informations de date en français, il faut modifier la locale : \nIn [6]: date_object.strftime('%a %d %B %Y')\nOut[6]: 'Wed 01 June 2005'\n\nIn [7]: import locale\n\nIn [8]: locale.setlocale(locale.LC_TIME, 'fr_FR')\nOut[8]: 'fr_FR'\n\nIn [9]: date_object.strftime('%a %d %B %Y')\nOut[9]: 'Mer 01 juin 2005'",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Les dates en Python</span>"
+    ]
+  },
+  {
+    "objectID": "dates.html#les-durées",
+    "href": "dates.html#les-durées",
+    "title": "14  Les dates en Python",
+    "section": "14.3 Les durées",
+    "text": "14.3 Les durées\nTravailler avec des dates, c’est travailler avec les différences entre ces dates soit des durées. Elles sont représentées par des objets datetime.timedelta. La différence entre deux instants permet d’obtenir une durée. \nIn [10]: duration = datetime(2017, 12, 15) - datetime(2015, 12, 16)\n\nIn [11]: print(duration)\n730 days, 0:00:00\n\nIn [12]: duration\nOut[12]: datetime.timedelta(730)\nOn peut évidemment instancier un objet de type timedelta et ainsi déterminer des instants à partir d’autres instants. \nIn [13]: cuisson_oeuf = timedelta(seconds=180)\n\nIn [14]: datetime.now() + cuisson_oeuf\nOut[14]: datetime.datetime(2017, 9, 10, 12, 12, 52, 776483)\nDes opérations mathématiques sont donc possibles entre des objets de type datetime (soustraction), timedelta (addition et soustraction), datetime et timedelta (addition et soustraction) et timedelta et des valeurs numériques (multiplication et division).\nLes objets de type timedelta ne sont pas adaptés à la représentation des durées (conversion en chaines de caractères human-friendly). Elles ne proposent pas de méthodes de parsing ou de formatage de la donnée. L’information de durée ne peut être extraite qu’en jour, secondes et microsecondes.",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Les dates en Python</span>"
+    ]
+  },
+  {
+    "objectID": "dates.html#jours-et-heures",
+    "href": "dates.html#jours-et-heures",
+    "title": "14  Les dates en Python",
+    "section": "14.4 Jours et heures",
+    "text": "14.4 Jours et heures\nLe module datetime propose des objets de type datetime.dateet datetime.time pour représenter une date (jour) et un instant dans une journée. Il est possible soit d’instancier spécifiquement ces données, soit de les extraire d’un objet de type datetime.\nIn [15]: ep8 = datetime(2017, 12, 15)\n\nIn [16]: ep8.date()\nOut[16]: datetime.date(2017, 12, 15)\n\nIn [17]: from datetime import time\n\nIn [18]: show_time = time(20, 30)\n\nIn [19]: print(show_time)\n20:30:00",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Les dates en Python</span>"
+    ]
+  },
+  {
+    "objectID": "dates.html#le-temps-des-objets-immuables",
+    "href": "dates.html#le-temps-des-objets-immuables",
+    "title": "14  Les dates en Python",
+    "section": "14.5 Le temps : des objets immuables",
+    "text": "14.5 Le temps : des objets immuables\nLes informations liées au temps sont des données critiques. Afin de ne pas les altérer par accident, les objets sont immuables, ils ne peuvent pas être modifiés. La méthode replace() de la classe datetime permet de modifier un attribut de l’objet mais celle-ci retourne une copie de l’objet. \nIn [20]: ep8.replace(year=2019, day=20)\nOut[20]: datetime.datetime(2019, 12, 20, 0, 0)\n\nIn [21]: print(ep8)\n2017-12-15 00:00:00\nSi vous souhaitez modifier une donnée, il faut donc le faire explicitement.",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Les dates en Python</span>"
+    ]
+  },
+  {
+    "objectID": "dates.html#les-fuseaux-horaires",
+    "href": "dates.html#les-fuseaux-horaires",
+    "title": "14  Les dates en Python",
+    "section": "14.6 Les fuseaux horaires",
+    "text": "14.6 Les fuseaux horaires\nJusqu’ici, nous avons utilisé des objets datetime sans fuseau horaire. Nous parlons alors de dates naïves. Des dates naïves ne peuvent pas réellement être comparées entre elles. La notion de timezone ou fuseau horaire, c’est le décalage de date en fonction du lieu géographique. Mais il y a également les notions politique dont le plus simple est le changement d’heure. Il faut donc ajouter la notion de fuseau horaire et le gérer.\n\n14.6.1 Attribuer une timezone\nPour rendre les dates aware (traduit par avisées), il faut leur associer un timezone. Python propose depuis la version 3.9 une implémentation concrète de la base IANA issue de la PEP 615 : zoneinfo.\nNote : avant Python 3.9, il fallait passer par des projets tiers et en particulier pytz. Ce projet est toujours maintenu (en 2026) pour fournir le support concret aux codes utilisant une version de Python antérieur à la 3.9.\n\n\n14.6.2 Créer des dates aware\nLa première étape est de créer un objet ZoneInfo.\nfrom zoneinfo import ZoneInfo\n\nparis_tz = ZoneInfo('Europe/Paris')\nnew_york_tz = ZoneInfo('America/New_York')\nPour connaitre les arguments possibles, zoneinfo fournit une fonction available_timezones() qui en retourne la liste.\nNous pouvons maintenant créer une date aware. Il y a pour cela 2 possibilités :\n\nassigner le timezone à la création\nassigner le timezone à une date naïve.\n\nDans le code suivant, la ligne 3 crée une date localisée, la ligne 6 localise une date naïve créée précédemment.\nfrom datetime import datetime, timedelta\n\nsummer_time = datetime(2021, 10, 30, tzinfo=paris_tz)\n\nnaive_summer_time = datetime(2021, 10, 30)\nsummer_time = naive_summer_time.replace(tzinfo=paris_tz)\n\n\n14.6.3 Re-localiser une date\nSi une date avisée est localisée dans un timezone. Pour la convertir à un autre timezone, il y a la méthode .astimezone().\nmeeting_fr = datetime(2021, 3, 29, 9, tzinfo=paris_tz)\nmeeting_us = meeting_fr.astimezone(new_york_tz)\nprint(meeting_us) #  affiche 2021-03-29 03:00:00-04:00\n\n\n14.6.4 Changement d’heure : une gestion calendaire\nPython réalise ses calculs de temps entre dates avisées de manière calendaire :\n&gt;&gt;&gt; summer_time = datetime(2026, 10, 24, tzinfo=paris_tz)\n\n&gt;&gt;&gt; winter_time = datetime(2026, 10, 26, tzinfo=paris_tz)\n\n# L'été est bien en UTC+2\n&gt;&gt;&gt; print(summer_time)\n2026-10-24 00:00:00+02:00\n\n# L'hiver est bien en UTC+1\n&gt;&gt;&gt; print(winter_time)\n2026-10-26 00:00:00+01:00\n\n# 2 jours calendaires sont ajoutés et le timezone adapté\n&gt;&gt;&gt; print(summer_time + timedelta(days=2))\n2026-10-26 00:00:00+01:00\n\n# La différence est calendaire et non absolue\n&gt;&gt;&gt; print(winter_time - summer_time)\n2 days, 0:00:00\n\n\n14.6.5 Calcul des durées réelles\nPour calculer les durées réelles, il faut passer par une référence : UTC.\n&gt;&gt;&gt; utc_tz = ZoneInfo(\"UTC\")\n\n&gt;&gt;&gt; summer_time_utc = summer_time.astimezone(utc_tz)\n&gt;&gt;&gt; winter_time_utc = winter_time.astimezone(utc_tz)\n\n&gt;&gt;&gt; print(summer_time_utc)\n2026-10-23 22:00:00+00:00\n\n&gt;&gt;&gt; print(winter_time_utc)\n2026-10-25 23:00:00+00:00\n\n# La différence est la durée réelle\n&gt;&gt;&gt; print(winter_time_utc - summer_time_utc)\n2 days, 1:00:00\n\n# La nouvelle date est à 48 heures réels\n&gt;&gt;&gt; print(summer_time_utc + timedelta(days=2))\n2026-10-25 22:00:00+00:00\n\n# Et pour finir, une illustration de la relocalisation\n&gt;&gt;&gt; print((summer_time_utc + timedelta(days=2)).astimezone(paris_tz))\n2026-10-25 23:00:00+01:00",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Les dates en Python</span>"
+    ]
+  },
+  {
+    "objectID": "dates.html#le-calendrier",
+    "href": "dates.html#le-calendrier",
+    "title": "14  Les dates en Python",
+    "section": "14.7 Le calendrier",
+    "text": "14.7 Le calendrier\n\n14.7.1 Des fonctions et constantes utilitaires \nLe module calendar offre des fonctionnalités pour gérer un calendrier ou une date dans un calendrier. Le module propose avant tout un certain nombre de constantes et de fonction afin d’accéder à des données usuelles.\nIn [22]: import calendar\nIn [23]: calendar.EPOCH\nOut[23]: 1970\nIn [24]: calendar.MONDAY\nOut[24]: 0\nIn [25]: calendar.TUESDAY\nOut[25]: 1\nIn [26]: calendar.January\nOut[26]: 1\nVous pouvez voir avec le code ci-dessus que pour Python, lundi est représenté par la valeur 0 et janvier par 1. Les constantes proposées par le module sont donc utiles pour éviter toute confusion.\nLe module calendar propose également des constantes et méthodes liées aux dates ou aux mois :\nIn [27]: calendar.mdays\nOut[27]: [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n\nIn [28]: calendar.isleap(2018) # annee bissextile\nOut[28]: False\n\nIn [29]: calendar.leapdays(2000, 2018)\nOut[29]: 5\n\nIn [30]: calendar.weekday(2017, 12, 13)\nOut[30]: 2\nLe module calendar intègre également de quoi mettre en forme des informations de calendrier. \nIn [31]: calendar.prmonth(2017, 12)\n   décembre 2017\nLu Ma Me Je Ve Sa Di\n             1  2  3\n 4  5  6  7  8  9 10\n11 12 13 14 15 16 17\n18 19 20 21 22 23 24\n25 26 27 28 29 30 31\nCes fonctions sont similaires à l’instruction cal du bash. L’instruction ci-dessus est équivalente à print(calendar.month(2017, 12)).\n\n\n14.7.2 La classe Calendar\nLe module calendar permet également de manipuler un calendrier sous forme d’objet, il propose en effet une classe Calendar. Celle-ci prend un paramètre qui est le premier jour de la semaine, par défaut c’est 0 soit lundi.\nCette classe fournit surtout des données liées au formatage. Elle ne fait pas de formatage en elle même, ceci est à déléguer aux classes spécialisées. \nIn [43]: cal = calendar.Calendar()                                              \n\nIn [44]: print(list(cal.itermonthdays(2020, 3)))                                \n[0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 0, 0, 0, 0, 0]\n\nIn [45]: print(list(cal.itermonthdays2(2020, 3)))                               \n[(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 6), (2, 0), (3, 1), (4, 2), (5, 3), (6, 4), (7, 5), (8, 6), (9, 0), (10, 1), (11, 2), (12, 3), (13, 4), (14, 5), (15, 6), (16, 0), (17, 1), (18, 2), (19, 3), (20, 4), (21, 5), (22, 6), (23, 0), (24, 1), (25, 2), (26, 3), (27, 4), (28, 5), (29, 6), (30, 0), (31, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6)]\n\nIn [46]: print(list(cal.itermonthdates(2020, 3)))                               \n[datetime.date(2020, 2, 24), datetime.date(2020, 2, 25), datetime.date(2020, 2, 26), datetime.date(2020, 2, 27), datetime.date(2020, 2, 28), datetime.date(2020, 2, 29), datetime.date(2020, 3, 1), datetime.date(2020, 3, 2), datetime.date(2020, 3, 3), datetime.date(2020, 3, 4), datetime.date(2020, 3, 5), datetime.date(2020, 3, 6), datetime.date(2020, 3, 7), datetime.date(2020, 3, 8), datetime.date(2020, 3, 9), datetime.date(2020, 3, 10), datetime.date(2020, 3, 11), datetime.date(2020, 3, 12), datetime.date(2020, 3, 13), datetime.date(2020, 3, 14), datetime.date(2020, 3, 15), datetime.date(2020, 3, 16), datetime.date(2020, 3, 17), datetime.date(2020, 3, 18), datetime.date(2020, 3, 19), datetime.date(2020, 3, 20), datetime.date(2020, 3, 21), datetime.date(2020, 3, 22), datetime.date(2020, 3, 23), datetime.date(2020, 3, 24), datetime.date(2020, 3, 25), datetime.date(2020, 3, 26), datetime.date(2020, 3, 27), datetime.date(2020, 3, 28), datetime.date(2020, 3, 29), datetime.date(2020, 3, 30), datetime.date(2020, 3, 31), datetime.date(2020, 4, 1), datetime.date(2020, 4, 2), datetime.date(2020, 4, 3), datetime.date(2020, 4, 4), datetime.date(2020, 4, 5)]",
+    "crumbs": [
+      "La lib standard (et plus)",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Les dates en Python</span>"
+    ]
+  }
+]

@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>11&nbsp; Les tests en Python – Python, Les Fondamentaux</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./fichiers_systeme_fichiers.html" rel="next">
+<link href="./POO/POO_xtra.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-367522ac618891c39d4b2ae87ea7600e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Les_tests.html">La lib standard (et plus)</a></li><li class="breadcrumb-item"><a href="./Les_tests.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Les tests en Python</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Python, Les Fondamentaux</a> 
+        <div class="sidebar-tools-main">
+    <a href="./python-fondamentaux-dstankovski.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Recherche"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Présentation de la formation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">L’environnement de travail</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Introduction/Worktools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Boite à outils</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Introduction/Workspace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L’environnement de travail</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Les fondamentaux</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-donnees_variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Données et variables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-types_base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Les types de base (built-in)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-structure_controle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Les structures de contrôle</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Les_fonctions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Les fonctions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Les_sequences.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Les séquences</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">La Programmation Orientée Objet</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./POO/POO_concepts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Concepts de la Programmation Orientée Objet</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./POO/POO_classes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">La Programmation Orientée Objet en Python</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./POO/POO_xtra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Pour quelques notions de plus</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">La lib standard (et plus)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Les_tests.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Les tests en Python</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichiers_systeme_fichiers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Les fichiers et le système de fichiers</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bases_donnees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Python et les bases de données</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Les dates en Python</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#pourquoi-tester" id="toc-pourquoi-tester" class="nav-link active" data-scroll-target="#pourquoi-tester"><span class="header-section-number">11.1</span> Pourquoi tester ?</a></li>
+  <li><a href="#démarche-générale-pour-le-test" id="toc-démarche-générale-pour-le-test" class="nav-link" data-scroll-target="#démarche-générale-pour-le-test"><span class="header-section-number">11.2</span> Démarche générale pour le test</a>
+  <ul class="collapse">
+  <li><a href="#glossaire" id="toc-glossaire" class="nav-link" data-scroll-target="#glossaire"><span class="header-section-number">11.2.1</span> Glossaire</a></li>
+  <li><a href="#principe-des-tests" id="toc-principe-des-tests" class="nav-link" data-scroll-target="#principe-des-tests"><span class="header-section-number">11.2.2</span> Principe des tests</a></li>
+  <li><a href="#principe-des-tests-unitaires" id="toc-principe-des-tests-unitaires" class="nav-link" data-scroll-target="#principe-des-tests-unitaires"><span class="header-section-number">11.2.3</span> Principe des tests unitaires</a></li>
+  </ul></li>
+  <li><a href="#doctest-la-documentation-auto-testée" id="toc-doctest-la-documentation-auto-testée" class="nav-link" data-scroll-target="#doctest-la-documentation-auto-testée"><span class="header-section-number">11.3</span> Doctest, la documentation auto-testée</a></li>
+  <li><a href="#les-tests-unitaires-avec-unittest" id="toc-les-tests-unitaires-avec-unittest" class="nav-link" data-scroll-target="#les-tests-unitaires-avec-unittest"><span class="header-section-number">11.4</span> Les tests unitaires avec unittest</a>
+  <ul class="collapse">
+  <li><a href="#mise-en-œuvre-de-unittest" id="toc-mise-en-œuvre-de-unittest" class="nav-link" data-scroll-target="#mise-en-œuvre-de-unittest"><span class="header-section-number">11.4.1</span> Mise en œuvre de Unittest</a></li>
+  <li><a href="#cas-des-tests-simples" id="toc-cas-des-tests-simples" class="nav-link" data-scroll-target="#cas-des-tests-simples"><span class="header-section-number">11.4.2</span> Cas des tests simples</a></li>
+  <li><a href="#cas-des-tests-modifiant-létat" id="toc-cas-des-tests-modifiant-létat" class="nav-link" data-scroll-target="#cas-des-tests-modifiant-létat"><span class="header-section-number">11.4.3</span> Cas des tests modifiant l’état</a></li>
+  <li><a href="#les-assertions" id="toc-les-assertions" class="nav-link" data-scroll-target="#les-assertions"><span class="header-section-number">11.4.4</span> Les assertions</a></li>
+  </ul></li>
+  <li><a href="#les-tests-unitaires-avec-pytest" id="toc-les-tests-unitaires-avec-pytest" class="nav-link" data-scroll-target="#les-tests-unitaires-avec-pytest"><span class="header-section-number">11.5</span> Les tests unitaires avec pytest</a>
+  <ul class="collapse">
+  <li><a href="#tester-la-levée-dexceptions" id="toc-tester-la-levée-dexceptions" class="nav-link" data-scroll-target="#tester-la-levée-dexceptions"><span class="header-section-number">11.5.1</span> Tester la levée d’exceptions</a></li>
+  <li><a href="#une-base-de-tests-avec-les-test-fixtures" id="toc-une-base-de-tests-avec-les-test-fixtures" class="nav-link" data-scroll-target="#une-base-de-tests-avec-les-test-fixtures"><span class="header-section-number">11.5.2</span> Une base de tests avec les test fixtures&nbsp;</a></li>
+  </ul></li>
+  <li><a href="#lapproche-test-first" id="toc-lapproche-test-first" class="nav-link" data-scroll-target="#lapproche-test-first"><span class="header-section-number">11.6</span> L’approche test-first</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Les_tests.html">La lib standard (et plus)</a></li><li class="breadcrumb-item"><a href="./Les_tests.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Les tests en Python</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Les tests en Python</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Les tests font partie intégrante du développement logiciel. Le test le plus proche du développeur est le test unitaire. Cette partie traitera que des tests unitaires.</p>
+<section id="pourquoi-tester" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="pourquoi-tester"><span class="header-section-number">11.1</span> Pourquoi tester ?</h2>
+<p>Les tests ne font pas parti du code <em>fonctionnel</em>. Ils sont toutefois fondamentaux dans le développement logiciel. Les tests&nbsp; permettent de</p>
+<ul>
+<li>Montrer que le code fonctionne</li>
+<li>Montrer que le code répond aux attentes</li>
+<li>Illustrer l’usage du code</li>
+<li>Montrer que le code fonctionne <strong>toujours</strong></li>
+</ul>
+<p>Python propose deux outils pour les tests : <code>doctest</code> et <code>unittest</code>. L’intérêt de ces deux outils est qu’ils sont présents dans la distribution standard de Python. Cependant, une bibliothèque tierce rend en Python les tests beaucoup plus simples : <code>PyTest</code>.</p>
+</section>
+<section id="démarche-générale-pour-le-test" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="démarche-générale-pour-le-test"><span class="header-section-number">11.2</span> Démarche générale pour le test</h2>
+<p>Tester consiste à s’assurer que le système a le comportement attendu en fonction d’une condition donnée. Tester se fait en 3 étapes, les 3A :</p>
+<ul>
+<li><strong>Arrange</strong> : Initialiser le système dans un état de départ. Ce système est le système testé habituellement appelé SUT (System Under Test).</li>
+<li><strong>Act</strong> : Exécuter le code que nous souhaitons tester.</li>
+<li><strong>Assert</strong> : Observer le système et s’assurer qu’il est dans l’état attendu. ## Notions de tests unitaires</li>
+</ul>
+<p>Le code relatif à cette partie est à voir dans les sources avec le projet.</p>
+<p>Tester un programme fait parti du processus de réalisation du programme. Vous testez naturellement vos programmes en vérifiant leur fonctionnement. Python en particulier permet de vérifier des parties de code grâce à l’interpréteur interactif.</p>
+<p>Si cette pratique permet de valider le bon comportement du code, elle a le défaut d’être manuelle et donc ne nécessiter un effort d’analyse du résultat de vos instructions. Le principe des tests n’est pas très différent de votre pratique et va surtout permettre l’automatisation.</p>
+<section id="glossaire" class="level3" data-number="11.2.1">
+<h3 data-number="11.2.1" class="anchored" data-anchor-id="glossaire"><span class="header-section-number">11.2.1</span> Glossaire</h3>
+<p>Dans la partie suivante, le <strong>code fonctionnel</strong> fera référence au code destiné à la production. C’est le code qui répond à votre besoin. Le <strong>code de test</strong> correspond au code destiné à tester le code fonctionnel.&nbsp;</p>
+</section>
+<section id="principe-des-tests" class="level3" data-number="11.2.2">
+<h3 data-number="11.2.2" class="anchored" data-anchor-id="principe-des-tests"><span class="header-section-number">11.2.2</span> Principe des tests</h3>
+<p>L’automatisation des tests consiste à écrire du code de code qui comporte deux parties :</p>
+<ul>
+<li>Du code qui exécute le code fonctionnel&nbsp;</li>
+<li>Du code qui <em>valide</em> le comportement du code fonctionnel.&nbsp;</li>
+</ul>
+<p>La première partie, vous l’écrivez déjà lorsque vous écrivez du code de validation manuelle. Nous allons devoir ajouter du code de <em>validation</em>. Une validation consistera en une <em>assertion</em> d’état. Les bibliothèques de tests fournissent un ensemble d’assertions que nous pourrons utiliser.&nbsp;</p>
+<p>Ainsi, nous pourrons de manière automatique <em>jouer</em> et <em>re-jouer</em> ces tests. Cette automatisation a 4 intérêts :</p>
+<ul>
+<li>Elle permet de montrer que le code fonctionne</li>
+<li>Elle permet de montrer que le code répond aux attentes</li>
+<li>Elle permet d’illustrer l’usage du code</li>
+<li>Elle permet de montrer que le code fonctionne toujours</li>
+</ul>
+<p>Ce dernier point est important. Un code peut ne plus fonctionner suite à une modification. On appelle cela une <strong>régression</strong>.</p>
+<p>Pour éviter la régression, nous devons avoir une stratégie de tests afin d’identifier le plus rapidement et le plus précisément toute régression. C’est pour cela que les <strong>tests unitaires</strong> ont été créés.</p>
+</section>
+<section id="principe-des-tests-unitaires" class="level3" data-number="11.2.3">
+<h3 data-number="11.2.3" class="anchored" data-anchor-id="principe-des-tests-unitaires"><span class="header-section-number">11.2.3</span> Principe des tests unitaires</h3>
+<p>Le principe des tests unitaires consiste à tester de manière <strong>isolée</strong> les plus petites parties possible du programme afin d’identifier le plus précisément les régressions ou les défaillances.</p>
+<p>Tester de manière isolée doit permettre de s’assurer un comportement déterministe, c’est à dire que le test produira toujours le même résultat. Un test en échec doit mettre en évidence une <em>erreur</em> du code et non une influence extérieur.</p>
+<p>Exemple : lorsque vous testez la récupération d’une base de données réseau, vous n’êtes pas isolé. Votre attente sera de récupérer certaines données que vous ne récupérerez pas si votre code est mal écrit, mais aussi si le réseau est absent, que le serveur n’est pas accessible, que la connexion à la base est impossible…</p>
+</section>
+</section>
+<section id="doctest-la-documentation-auto-testée" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="doctest-la-documentation-auto-testée"><span class="header-section-number">11.3</span> Doctest, la documentation auto-testée</h2>
+<p>Doctest est un test inclus dans la documentation proposé par le module doctest. Le principe est d’illustrer par un code simple le composant documenté.&nbsp;</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">        :Example:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"> </span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">        &gt;&gt;&gt; add(1, 1)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">        2</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">        &gt;&gt;&gt; add(2.1, 3.4)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">        5.5</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"> </span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> doctest</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    doctest.testmod()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Dans cet exemple, l’exécution du module exécutera doctest qui recherchera tout code dans la documentation, l’exécutera et comparera le retour obtenu avec le retour attendu. Doctest ne signale que les erreurs.</p>
+<p>Doctest est un outil pratique permettant d’illustrer l’usage mais limité à des exemples simples. N’oubliez pas que ces exemples vont se trouver dans la documentation.</p>
+</section>
+<section id="les-tests-unitaires-avec-unittest" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="les-tests-unitaires-avec-unittest"><span class="header-section-number">11.4</span> Les tests unitaires avec unittest</h2>
+<p>Unittest, aussi appelé PyUnit, est la version Python de JUnit.</p>
+<p>Junit est le framework de test créé par Kent Beck et Erich Gamma pour le langage Java en 1997. Il est lui même inspiré de SUnit créé par Kent Beck en 1994 et est considéré comme le framework fondateur des framework de type xUnit.</p>
+<p>La documentation complète est disponible à l’adresse : <a href="https://docs.python.org/3/library/unittest.html">https://docs.python.org/3/library/unittest.html</a>&nbsp;</p>
+<section id="mise-en-œuvre-de-unittest" class="level3" data-number="11.4.1">
+<h3 data-number="11.4.1" class="anchored" data-anchor-id="mise-en-œuvre-de-unittest"><span class="header-section-number">11.4.1</span> Mise en œuvre de Unittest</h3>
+<p>Le principe des tests unitaires est de tester un comportement et un seul. Pour cela, le système testé doit être isolé au maximum afin qu’aucun composant externe n’influe sur le résultat du test.</p>
+<p>Unittest permet l’isolation et l’indépendance des tests.</p>
+<p>Le principe de mise en œuvre est le suivant :</p>
+<ul>
+<li>On crée une classe héritant d’unittest par fonctionnalité testée</li>
+<li>Au sein de cette classe, on crée une méthode de test par cas testé. Le nom de ces méthodes doit commencer par <code>test</code>, unittest détermine par introspection si une méthode est une méthode de test.</li>
+<li><code>Unittest</code> met à disposition deux méthodes, <code>setup()</code> et <code>teardown()</code> qui sont exécutées respectivement avant et après chaque méthode de test et qui sont destinés à préparer et à nettoyer l’environnement de test.</li>
+</ul>
+<p>Un test (implanté dans une méthode de test) consiste à exécuter un appel à la fonctionnalité et à faire une assertion sur l’état après cet appel.&nbsp;</p>
+<p>Classes et méthodes doivent avoir un nom sans ambiguïté sur leur comportement. En cas d’échec d’un test, le reporting indiquera le nom de ces classes et méthodes. Un nom adapté facilitera la correction.&nbsp;</p>
+<p>Les méthodes <code>setup()</code> et <code>teardown()</code> vous permettent de garantir l’indépendance des tests. La première doit s’assurer de la préparation de l’environnement pour le test. La seconde s’assure de nettoyer l’environnement pour le test suivant. N’oubliez pas que <strong>vous ne pouvez faire aucune spéculation sur l’ordre d’exécution des tests</strong>.</p>
+</section>
+<section id="cas-des-tests-simples" class="level3" data-number="11.4.2">
+<h3 data-number="11.4.2" class="anchored" data-anchor-id="cas-des-tests-simples"><span class="header-section-number">11.4.2</span> Cas des tests simples</h3>
+<p>Le code suivant test la création d’une formation. Nous testons les différents cas sans oublier le comportement lorsque la durée ou le nombre de places est d’un autre type.&nbsp;</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> unittest</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> academy.training <span class="im">as</span> tr</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> TestCreateTraining(unittest.TestCase):</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> testCreateTraining(unittest.TestCase):</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        training <span class="op">=</span> tr.Training(<span class="st">'Python, fondamentaux'</span>, <span class="dv">5</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(<span class="st">'Python, fondamentaux'</span>, training.subject)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(<span class="dv">5</span>, training.duration)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(<span class="dv">12</span>, training.seats)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> testCreateTrainingWithSeats(unittest.TestCase):</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        training <span class="op">=</span> tr.Training(<span class="st">'Python, fondamentaux'</span>, <span class="dv">5</span>, <span class="dv">8</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(<span class="dv">5</span>, training.duration)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(<span class="dv">8</span>, training.seats)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> testCreateTrainingWithValuesAsStrings(unittest.TestCase):</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        training <span class="op">=</span> tr.Training(<span class="st">'Python, fondamentaux'</span>, <span class="st">'5'</span>, <span class="st">'8'</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(<span class="dv">5</span>, training.duration)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(<span class="dv">8</span>, training.seats)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="cas-des-tests-modifiant-létat" class="level3" data-number="11.4.3">
+<h3 data-number="11.4.3" class="anchored" data-anchor-id="cas-des-tests-modifiant-létat"><span class="header-section-number">11.4.3</span> Cas des tests modifiant l’état</h3>
+<p>Le code suivant l’ajout de participants. Tester un ajout de participant nécessite l’existence d’un objet de type formation, donc sa création qui est réalisée dans la méthode <code>setUp()</code>. Cet objet étant modifié par l’appel à la méthode <code>.add_student()</code>, il est détruit par la méthode <code>tearDown()</code>.&nbsp;</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> TestNewStudents(unittest.TestCase):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> setUp(<span class="va">self</span>):</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.training <span class="op">=</span> tr.Training(<span class="st">'Python, fondamentaux'</span>, <span class="dv">5</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> testAddFirstStudent(<span class="va">self</span>):</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.training.add_student(<span class="st">'Eliott Alderson'</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(<span class="dv">1</span>, <span class="bu">len</span>(<span class="va">self</span>.training.students)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> tearDown(<span class="va">self</span>):</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">del</span> <span class="va">self</span>.training</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Le bon fonctionnement de la méthode <code>.add_student()</code> nécessite que l’objet soit correctement créé. La bonne création de l’objet est assurée par les tests précédents.</p>
+</section>
+<section id="les-assertions" class="level3" data-number="11.4.4">
+<h3 data-number="11.4.4" class="anchored" data-anchor-id="les-assertions"><span class="header-section-number">11.4.4</span> Les assertions</h3>
+<p>Les principales assertions sont :</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><strong>Methode</strong></td>
+<td><strong>Vérifie que</strong></td>
+</tr>
+<tr class="even">
+<td>assertEqual(a,&nbsp;b)</td>
+<td>a&nbsp;==&nbsp;b</td>
+</tr>
+<tr class="odd">
+<td>assertNotEqual(a,&nbsp;b)</td>
+<td>a&nbsp;!=&nbsp;b</td>
+</tr>
+<tr class="even">
+<td>assertTrue(x)</td>
+<td>bool(x)&nbsp;is&nbsp;True</td>
+</tr>
+<tr class="odd">
+<td>assertFalse(x)</td>
+<td>bool(x)&nbsp;is&nbsp;False</td>
+</tr>
+<tr class="even">
+<td>assertIs(a,&nbsp;b)</td>
+<td>a&nbsp;is&nbsp;b</td>
+</tr>
+<tr class="odd">
+<td>assertIsNot(a,&nbsp;b)</td>
+<td>a&nbsp;is&nbsp;not&nbsp;b</td>
+</tr>
+<tr class="even">
+<td>assertIsNone(x)</td>
+<td>x&nbsp;is&nbsp;None</td>
+</tr>
+<tr class="odd">
+<td>assertIsNotNone(x)</td>
+<td>x&nbsp;is&nbsp;not&nbsp;None</td>
+</tr>
+<tr class="even">
+<td>assertIn(a,&nbsp;b)</td>
+<td>a&nbsp;in&nbsp;b</td>
+</tr>
+<tr class="odd">
+<td>assertNotIn(a,&nbsp;b)</td>
+<td>a&nbsp;not&nbsp;in&nbsp;b</td>
+</tr>
+<tr class="even">
+<td>assertIsInstance(a,&nbsp;b)</td>
+<td>isinstance(a,&nbsp;b)</td>
+</tr>
+<tr class="odd">
+<td>assertNotIsInstance(a,&nbsp;b)</td>
+<td>not&nbsp;isinstance(a,&nbsp;b)</td>
+</tr>
+</tbody>
+</table>
+<p>Dans le cas de notre formation, ajouter un doublon (représenté par le même nom) conduit à la levée d’une exception. Il existe une assertion spécifique pour ce cas, <code>assertRaises()</code> qui prend en paramètre l’exception attendue. Elle est utilisée de la manière suivante.&nbsp;</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> testDuplicateStudent(<span class="va">self</span>):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.training.add_student(<span class="st">'Eliott Alderson'</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="va">self</span>.assertRaises(<span class="pp">ValueError</span>):</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.training.add_student(<span class="st">'Eliott Alderson'</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Pour discriminer l’origine de la levée de l’exception, nous nous baserons sur les arguments et paramètres de l’exception. La source de l’exception doit pouvoir être identifiée non pas pour des questions de <em>testabilité</em> mais de facilité de maintenance.&nbsp;</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> testDuplicateStudent(<span class="va">self</span>):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.training.add_student(<span class="st">'Eliott Alderson'</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="va">self</span>.assertRaises(<span class="pp">ValueError</span>) <span class="im">as</span> context:</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.training.add_student(<span class="st">'Eliott Alderson'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertTrue(<span class="st">'Duplicate student'</span> <span class="kw">in</span> context.exception)       </span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="les-tests-unitaires-avec-pytest" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="les-tests-unitaires-avec-pytest"><span class="header-section-number">11.5</span> Les tests unitaires avec pytest</h2>
+<p>Pytest, ou Py.Test, est une bibliothèque qui se veut plus <em>Pythonique</em> que unittest avec une philosophie «&nbsp;we-don’t-need-no-stinking-API unit test suite&nbsp;». L’objectif est de simplifier l’écriture des tests sans en perdre la puissance des libs xUnit. Ainsi, PyTest n’utilise pour les tests que de simples fonctions et assertions. Le premier exemple de tests unittest se transpose en Pytest de la manière suivante :&nbsp;</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> academy.training <span class="im">as</span> tr</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_create_training(<span class="va">self</span>):</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    training <span class="op">=</span> tr.Training(<span class="st">'Python, fondamentaux'</span>, <span class="dv">5</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="st">'Python, fondamentaux'</span>, training.subject</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> training.duration <span class="op">==</span> <span class="dv">5</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> training.seats <span class="op">==</span> <span class="dv">12</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_create_training_with_seats(<span class="va">self</span>):</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    training <span class="op">=</span> tr.Training(<span class="st">'Python, fondamentaux'</span>, <span class="dv">5</span>, <span class="dv">8</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> training.duration <span class="op">==</span> <span class="dv">5</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> training.seats <span class="op">==</span> <span class="dv">8</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_create_training_with_values_as_strings(<span class="va">self</span>):</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    training <span class="op">=</span> tr.Training(<span class="st">'Python, fondamentaux'</span>, <span class="st">'5'</span>, <span class="st">'8'</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> training.duration <span class="op">==</span> <span class="dv">5</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> training.seats <span class="op">==</span> <span class="dv">8</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Avec pytest, les tests ne sont que de simples fonctions et l’assertion est vérifiée avec la directive native de Python <code>assert</code>. Vous pouvez remarquer que le code précédent se suffit à lui même. Il n’y besoin d’aucune dépendance à la bibliothèque de tests.</p>
+<p>Pour exécuter les tests, il suffit d’exécuter l’instruction <code>py.test</code> sur l’invite de commande à la racine du projet. Pytest suit les conventions de découverte des tests et exécutera donc tous les tests de l’arborescence. Il évidemment possible de fournir un chemin en paramètre afin de spécifier un répertoire ou un module pour cette exécution ou même de le configurer dans le <code>pyproject.toml</code>.</p>
+<section id="tester-la-levée-dexceptions" class="level3" data-number="11.5.1">
+<h3 data-number="11.5.1" class="anchored" data-anchor-id="tester-la-levée-dexceptions"><span class="header-section-number">11.5.1</span> Tester la levée d’exceptions</h3>
+<p>Il est indispensable de tester que certaines exceptions sont bien levées dans des conditions spécifiques. Afin de conserver un code concis et lisible, Pytest fournit un context manager. En déclarant ce context manager, il faut indiquer quelle exception doit être levée.&nbsp;</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> academy.training <span class="im">as</span> tr</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pytest</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_duplicate_student_must_raise(create_account):</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    training <span class="op">=</span> tr.Training(<span class="st">'Python, fondamentaux'</span>, <span class="dv">5</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    training.add_student(<span class="st">'Eliott Alderson'</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> pytest.raises(<span class="pp">ValueError</span>):</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        training.add_student(<span class="st">'Eliott Alderson'</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Le test de l’appel de la méthode <code>deposit()</code> nécessite une instance d’objet. Cependant, nous aurons besoin de tester ce même système dans différentes conditions. Il sera donc nécessaire de pouvoir accéder à cet objet de manière uniforme.</p>
+</section>
+<section id="une-base-de-tests-avec-les-test-fixtures" class="level3" data-number="11.5.2">
+<h3 data-number="11.5.2" class="anchored" data-anchor-id="une-base-de-tests-avec-les-test-fixtures"><span class="header-section-number">11.5.2</span> Une base de tests avec les test fixtures&nbsp;</h3>
+<p>Les test fixtures offrent une base fixe afin de répéter de manière fiable un contexte de tests. L’usage le plus simple est de créer un objet lorsque l’on veut tester un appel de méthode.</p>
+<p>Un objet doit être initialisé de la même manière pour l’ensemble des tests de la fonctionnalité. Une fixture permet de s’assurer que nous aurons toujours le même objet dans les différents tests. Nous pouvons donc reprendre le test de l’ajout de participants dans l’ensemble de tests ci-dessous.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> academy.training <span class="im">as</span> tr</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pytest</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="at">@pytest.fixture</span>()</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> training:</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> tr.Training(<span class="st">'Python, fondamentaux'</span>, <span class="dv">5</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_add_student(training):</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    training.add_student(<span class="st">'Eliott Alderson'</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(training.students) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> training.students[<span class="op">-</span><span class="dv">1</span>] <span class="op">==</span> <span class="st">"Eliott Alderson"</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_duplicate_student_must_raise(training):</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    training.add_student(<span class="st">'Eliott Alderson'</span>)</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> pytest.raises(<span class="pp">ValueError</span>):</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>        training.add_student(<span class="st">'Eliott Alderson'</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Vous remarquerez qu’une fixture se présente comme un paramètre de la fonction. Il est donc possible de passer plusieurs fixtures pour un même test.</p>
+<p>Le mécanisme des fixtures est de l’injection de dépendances.</p>
+</section>
+</section>
+<section id="lapproche-test-first" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="lapproche-test-first"><span class="header-section-number">11.6</span> L’approche test-first</h2>
+<p>Il est indispensable pour la qualité du code que celui-ci soit accompagné de tests. La démarche habituelle consiste à écrire son code en fonction des spécifications puis les tests. Cette démarche à plusieurs défauts :</p>
+<ul>
+<li>Reportés à la fin de la tâche, les tests ne sont finalement pas écrits. Après tout, le code fonctionne et il est urgent de passer à la tâche suivante.</li>
+<li>Les tests sont écrits en fonction du code existant et montrent surtout que le code répond aux attentes.</li>
+<li>Cette stratégie confirme le reproche fait à l’écriture des tests qui est que cela prends du temps.</li>
+</ul>
+<p>L’idéal serait d’écrire les tests en même temps que le code en diminuant au maximum le temps nécessaire à leur écriture. C’est ce que promet l’approche TDD pour Test Driven Development. Ce document n’a pas l’ambition d’être une une formation à TDD (qui mérite une formation dédiée). Mais en résumé, si vous souhaitez mettre en œuvre cette approche, vous avez 3 règles à respecter scrupuleusement :</p>
+<ol type="1">
+<li>Vous ne pouvez écrire du code de production que pour corriger un test en échec</li>
+<li>Vous ne devez écrire qu’un minimum de code de test pour que celui-ci soit en échec</li>
+<li>Vous ne devez pas écrire plus de code de production que pour faire passer un test en échec</li>
+</ol>
+<p>Vous y verrez que</p>
+<ul>
+<li>Les intentions sont écrites avant leur réalisation</li>
+<li>Les intentions sont exhaustives</li>
+<li>Les tests tendent à être plus exhaustifs comparé à leur écriture à postériori</li>
+<li>Le temps passé à écrire les tests est compensé par l’absence d’écriture de code inutile.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./POO/POO_xtra.html" class="pagination-link" aria-label="Pour quelques notions de plus">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Pour quelques notions de plus</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./fichiers_systeme_fichiers.html" class="pagination-link" aria-label="Les fichiers et le système de fichiers">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Les fichiers et le système de fichiers</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

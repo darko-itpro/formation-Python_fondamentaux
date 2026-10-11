@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>8&nbsp; Concepts de la Programmation Orientée Objet – Python, Les Fondamentaux</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../POO/POO_classes.html" rel="next">
+<link href="../Les_sequences.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-367522ac618891c39d4b2ae87ea7600e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<script src="../site_libs/quarto-diagram/mermaid-postprocess-shim.js"></script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../POO/POO_concepts.html">La Programmation Orientée Objet</a></li><li class="breadcrumb-item"><a href="../POO/POO_concepts.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Concepts de la Programmation Orientée Objet</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Python, Les Fondamentaux</a> 
+        <div class="sidebar-tools-main">
+    <a href="../python-fondamentaux-dstankovski.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Recherche"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Présentation de la formation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">L’environnement de travail</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Introduction/Worktools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Boite à outils</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Introduction/Workspace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L’environnement de travail</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Les fondamentaux</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02-donnees_variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Données et variables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../03-types_base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Les types de base (built-in)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04-structure_controle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Les structures de contrôle</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Les_fonctions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Les fonctions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Les_sequences.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Les séquences</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">La Programmation Orientée Objet</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../POO/POO_concepts.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Concepts de la Programmation Orientée Objet</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../POO/POO_classes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">La Programmation Orientée Objet en Python</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../POO/POO_xtra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Pour quelques notions de plus</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">La lib standard (et plus)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Les_tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Les tests en Python</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fichiers_systeme_fichiers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Les fichiers et le système de fichiers</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../bases_donnees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Python et les bases de données</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Les dates en Python</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#les-paradigmes-de-programmation" id="toc-les-paradigmes-de-programmation" class="nav-link active" data-scroll-target="#les-paradigmes-de-programmation"><span class="header-section-number">8.1</span> Les paradigmes de programmation</a></li>
+  <li><a href="#le-concept-dobjet" id="toc-le-concept-dobjet" class="nav-link" data-scroll-target="#le-concept-dobjet"><span class="header-section-number">8.2</span> Le concept d’objet</a></li>
+  <li><a href="#la-notion-de-classe" id="toc-la-notion-de-classe" class="nav-link" data-scroll-target="#la-notion-de-classe"><span class="header-section-number">8.3</span> La notion de classe</a></li>
+  <li><a href="#représentation-présentation-duml" id="toc-représentation-présentation-duml" class="nav-link" data-scroll-target="#représentation-présentation-duml"><span class="header-section-number">8.4</span> Représentation : présentation d’UML</a>
+  <ul class="collapse">
+  <li><a href="#représenter-une-classe" id="toc-représenter-une-classe" class="nav-link" data-scroll-target="#représenter-une-classe"><span class="header-section-number">8.4.1</span> Représenter une classe</a></li>
+  <li><a href="#représenter-les-attributs-et-méthodes" id="toc-représenter-les-attributs-et-méthodes" class="nav-link" data-scroll-target="#représenter-les-attributs-et-méthodes"><span class="header-section-number">8.4.2</span> Représenter les attributs et méthodes</a></li>
+  <li><a href="#notion-de-visibilité-des-attributs-et-méthodes" id="toc-notion-de-visibilité-des-attributs-et-méthodes" class="nav-link" data-scroll-target="#notion-de-visibilité-des-attributs-et-méthodes"><span class="header-section-number">8.4.3</span> Notion de visibilité des attributs et méthodes</a></li>
+  <li><a href="#cardinalité-et-contraintes" id="toc-cardinalité-et-contraintes" class="nav-link" data-scroll-target="#cardinalité-et-contraintes"><span class="header-section-number">8.4.4</span> Cardinalité et contraintes</a></li>
+  <li><a href="#la-notion-de-relations" id="toc-la-notion-de-relations" class="nav-link" data-scroll-target="#la-notion-de-relations"><span class="header-section-number">8.4.5</span> La notion de relations</a></li>
+  <li><a href="#relation-simple" id="toc-relation-simple" class="nav-link" data-scroll-target="#relation-simple"><span class="header-section-number">8.4.6</span> Relation simple</a></li>
+  </ul></li>
+  <li><a href="#uml-les-limites-de-la-représentation-graphique" id="toc-uml-les-limites-de-la-représentation-graphique" class="nav-link" data-scroll-target="#uml-les-limites-de-la-représentation-graphique"><span class="header-section-number">8.5</span> UML : les limites de la représentation graphique</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../POO/POO_concepts.html">La Programmation Orientée Objet</a></li><li class="breadcrumb-item"><a href="../POO/POO_concepts.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Concepts de la Programmation Orientée Objet</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Concepts de la Programmation Orientée Objet</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="les-paradigmes-de-programmation" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="les-paradigmes-de-programmation"><span class="header-section-number">8.1</span> Les paradigmes de programmation</h2>
+<p>Il s’agit des différentes façons de raisonner et d’implémenter une solution à un problème en programmation. Nous pouvons citer trois grandes familles :</p>
+<ul>
+<li>La programmation impérative<br>
+paradigme originel et le plus courant</li>
+<li>La programmation orientée objet (POO)<br>
+consistant en la définition et l’assemblage de briques logiciel appelées objets</li>
+<li>La programmation déclarative<br>
+consistant à déclarer les données du problème, puis à demander au programme de le résoudre</li>
+</ul>
+</section>
+<section id="le-concept-dobjet" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="le-concept-dobjet"><span class="header-section-number">8.2</span> Le concept d’objet</h2>
+<p>Le problème à traiter va être modélisé par des objets. Un objet est une entité caractérisée par :</p>
+<ul>
+<li>Un état, représenté par des données spécifiques à l’objet que nous appellerons des <em>attributs</em>.&nbsp;</li>
+<li>Des comportements, représentés par des fonctions spécifiques au type d’objet que nous appelleront des <em>méthodes</em>.</li>
+</ul>
+<p>Un objet est donc un composant qui regroupe au sein d’une même entité des données et des traitements.</p>
+<p>Vous avez déjà manipulé des objets. Si nous prenons les listes, l’état correspond aux données de la liste et les comportements sont les méthodes comme sort, split, append…</p>
+<p>Un objet sera un composant du traitement de notre problème et plusieurs objets devront interagir pour traiter notre problème. Un principe pour la conception des objets est que <strong>chaque objet devra avoir une seule responsabilité</strong>. Par exemple, un objet qui gérera un compte ne s’occupera pas de son affichage.</p>
+</section>
+<section id="la-notion-de-classe" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="la-notion-de-classe"><span class="header-section-number">8.3</span> La notion de classe</h2>
+<p>En programmation orientée objet, nous utilisons des objets. La structure de ces objets est définie dans des classes. Une classe peut être vue comme le moule qui permet de produire les objets. Dans le vocabulaire orienté objet, les objets sont des instances d’une classe. Les objets étant en soi des données, ils ont un type qui est leur classe.&nbsp;</p>
+<p>Bien qu’un objet soit l’instance d’une classe, nous allons voir qu’il s’agit de deux composants différents dans le mécanisme de la programmation orientée objet.</p>
+</section>
+<section id="représentation-présentation-duml" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="représentation-présentation-duml"><span class="header-section-number">8.4</span> Représentation : présentation d’UML</h2>
+<p>Afin de pouvoir représenter les notions de classes et objets, nous allons utiliser UML, Unified Modeling Language. UML est un langage de modélisation graphique basé sur des diagrammes et des pictogrammes. Il est standardisé et se veut être une synthèse des méthodes de modélisation. Pour cela, en version 2.5, il propose 14 type de diagrammes qui vont bien au delà de la modélisation objet.</p>
+<section id="représenter-une-classe" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="représenter-une-classe"><span class="header-section-number">8.4.1</span> Représenter une classe</h3>
+<p>La classe la plus basique peut être représentée par le diagramme ci-dessous. Cette classe n’a ni état (pas d’attributs) ni de comportement (pas de méthode). Notez que le nom de la classe correspond à la règle de nommage de la PEP8 et est donc en CamelCase.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg id="mermaid-figure-1" width="672" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" class="classDiagram" viewbox="0 0 97.28125 100" role="graphics-document document" aria-roledescription="class" height="480">
+<style>#mermaid-figure-1{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaid-figure-1 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaid-figure-1 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaid-figure-1 .error-icon{fill:#552222;}#mermaid-figure-1 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-1 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-1 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-1 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-1 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-1 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-1 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-1 .marker{fill:#333333;stroke:#333333;}#mermaid-figure-1 .marker.cross{stroke:#333333;}#mermaid-figure-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-1 p{margin:0;}#mermaid-figure-1 g.classGroup text{fill:#9370DB;stroke:none;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:10px;}#mermaid-figure-1 g.classGroup text .title{font-weight:bolder;}#mermaid-figure-1 .nodeLabel,#mermaid-figure-1 .edgeLabel{color:#131300;}#mermaid-figure-1 .edgeLabel .label rect{fill:#ECECFF;}#mermaid-figure-1 .label text{fill:#131300;}#mermaid-figure-1 .labelBkg{background:#ECECFF;}#mermaid-figure-1 .edgeLabel .label span{background:#ECECFF;}#mermaid-figure-1 .classTitle{font-weight:bolder;}#mermaid-figure-1 .node rect,#mermaid-figure-1 .node circle,#mermaid-figure-1 .node ellipse,#mermaid-figure-1 .node polygon,#mermaid-figure-1 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-figure-1 .divider{stroke:#9370DB;stroke-width:1;}#mermaid-figure-1 g.clickable{cursor:pointer;}#mermaid-figure-1 g.classGroup rect{fill:#ECECFF;stroke:#9370DB;}#mermaid-figure-1 g.classGroup line{stroke:#9370DB;stroke-width:1;}#mermaid-figure-1 .classLabel .box{stroke:none;stroke-width:0;fill:#ECECFF;opacity:0.5;}#mermaid-figure-1 .classLabel .label{fill:#9370DB;font-size:10px;}#mermaid-figure-1 .relation{stroke:#333333;stroke-width:1;fill:none;}#mermaid-figure-1 .dashed-line{stroke-dasharray:3;}#mermaid-figure-1 .dotted-line{stroke-dasharray:1 2;}#mermaid-figure-1 #compositionStart,#mermaid-figure-1 .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #compositionEnd,#mermaid-figure-1 .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #dependencyStart,#mermaid-figure-1 .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #dependencyStart,#mermaid-figure-1 .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #extensionStart,#mermaid-figure-1 .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #extensionEnd,#mermaid-figure-1 .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #aggregationStart,#mermaid-figure-1 .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #aggregationEnd,#mermaid-figure-1 .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #lollipopStart,#mermaid-figure-1 .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #lollipopEnd,#mermaid-figure-1 .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 .edgeTerminals{font-size:11px;line-height:initial;}#mermaid-figure-1 .classTitleText{text-anchor:middle;font-size:18px;fill:#333;}#mermaid-figure-1 .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mermaid-figure-1 .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mermaid-figure-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><defs><marker id="mermaid-figure-1-mermaid-1791747668390_class-aggregationStart" class="marker aggregation class" refx="18" refy="7" markerwidth="190" markerheight="240" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-1-mermaid-1791747668390_class-aggregationEnd" class="marker aggregation class" refx="1" refy="7" markerwidth="20" markerheight="28" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-1-mermaid-1791747668390_class-extensionStart" class="marker extension class" refx="18" refy="7" markerwidth="190" markerheight="240" orient="auto"><path d="M 1,7 L18,13 V 1 Z"></path></marker></defs><defs><marker id="mermaid-figure-1-mermaid-1791747668390_class-extensionEnd" class="marker extension class" refx="1" refy="7" markerwidth="20" markerheight="28" orient="auto"><path d="M 1,1 V 13 L18,7 Z"></path></marker></defs><defs><marker id="mermaid-figure-1-mermaid-1791747668390_class-compositionStart" class="marker composition class" refx="18" refy="7" markerwidth="190" markerheight="240" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-1-mermaid-1791747668390_class-compositionEnd" class="marker composition class" refx="1" refy="7" markerwidth="20" markerheight="28" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-1-mermaid-1791747668390_class-dependencyStart" class="marker dependency class" refx="6" refy="7" markerwidth="190" markerheight="240" orient="auto"><path d="M 5,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-1-mermaid-1791747668390_class-dependencyEnd" class="marker dependency class" refx="13" refy="7" markerwidth="20" markerheight="28" orient="auto"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-1-mermaid-1791747668390_class-lollipopStart" class="marker lollipop class" refx="13" refy="7" markerwidth="190" markerheight="240" orient="auto"><circle stroke="black" fill="transparent" cx="7" cy="7" r="6"></circle></marker></defs><defs><marker id="mermaid-figure-1-mermaid-1791747668390_class-lollipopEnd" class="marker lollipop class" refx="1" refy="7" markerwidth="190" markerheight="240" orient="auto"><circle stroke="black" fill="transparent" cx="7" cy="7" r="6"></circle></marker></defs><g class="root"><g class="clusters"></g><g class="edgePaths"></g><g class="edgeLabels"></g><g class="nodes"><g class="node default" id="classId-MyClass-0" transform="translate(48.640625, 50)"><g class="basic label-container"><path d="M-40.640625 -42 L40.640625 -42 L40.640625 42 L-40.640625 42" stroke="none" stroke-width="0" fill="#ECECFF" style=""></path><path d="M-40.640625 -42 C-12.677804803489387 -42, 15.285015393021226 -42, 40.640625 -42 M-40.640625 -42 C-17.68511376690822 -42, 5.27039746618356 -42, 40.640625 -42 M40.640625 -42 C40.640625 -18.528382535617546, 40.640625 4.943234928764909, 40.640625 42 M40.640625 -42 C40.640625 -20.73069854781665, 40.640625 0.538602904366698, 40.640625 42 M40.640625 42 C18.0839011256573 42, -4.472822748685402 42, -40.640625 42 M40.640625 42 C17.816990133293775 42, -5.00664473341245 42, -40.640625 42 M-40.640625 42 C-40.640625 9.087930186111528, -40.640625 -23.824139627776944, -40.640625 -42 M-40.640625 42 C-40.640625 18.522728674391104, -40.640625 -4.954542651217793, -40.640625 -42" stroke="#9370DB" stroke-width="1.3" fill="none" stroke-dasharray="0 0" style=""></path></g><g class="annotation-group text" transform="translate(0, -18)"></g><g class="label-group text" transform="translate(-28.640625, -18)"><g class="label" style="font-weight: bolder" transform="translate(0,-12)"><foreignobject width="57.28125" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 107px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
+MyClass
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="members-group text" transform="translate(-28.640625, 30)"></g><g class="methods-group text" transform="translate(-28.640625, 60)"></g><g class="divider" style=""><path d="M-40.640625 6 C-23.68987696464033 6, -6.73912892928066 6, 40.640625 6 M-40.640625 6 C-19.313011045056616 6, 2.0146029098867686 6, 40.640625 6" stroke="#9370DB" stroke-width="1.3" fill="none" stroke-dasharray="0 0" style=""></path></g><g class="divider" style=""><path d="M-40.640625 24 C-20.656469089381194 24, -0.672313178762387 24, 40.640625 24 M-40.640625 24 C-19.953265029308607 24, 0.7340949413827857 24, 40.640625 24" stroke="#9370DB" stroke-width="1.3" fill="none" stroke-dasharray="0 0" style=""></path></g></g></g></g></g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Si cette classe n’est pas censée exister d’un point de vue paradigme, elle nous permet de voir le code qui permet de déclarer une classe dans la partie suivante.</p>
+</section>
+<section id="représenter-les-attributs-et-méthodes" class="level3" data-number="8.4.2">
+<h3 data-number="8.4.2" class="anchored" data-anchor-id="représenter-les-attributs-et-méthodes"><span class="header-section-number">8.4.2</span> Représenter les attributs et méthodes</h3>
+<p>Pour illustrer le concept de l’orienté objet, nous utiliserons un exemple de suivi de formations. Nous allons commencer par définir ce qu’est une formation et les actions sur celle-ci.</p>
+<p>L’<em>état</em> d’une formation est représentée par son nom, sa durée, le nombre de places et la liste des stagiaires (pour l’instant représentés par leur nom). Une formation a donc les attributs <code>subject</code>, <code>duration</code>, <code>students</code> et <code>available_seats</code>.</p>
+<p>À une formation, nous pouvons ajouter ou supprimer des participants, nous aurons donc des méthodes pour cela.</p>
+<p>UML permet de représenter dans un diagramme de classe ses attributs et méthodes. Le diagramme ci-dessous représente cette notion de formation.&nbsp;</p>
+<p>Une classe est représentée en 3 blocs. Le premier est le nom de la classe, le second est l’ensemble des attributs de la classe et la troisième les méthodes.</p>
+<p>Pour les attributs, il est possible de spécifier le type et la valeur par défaut.</p>
+<p>Les méthodes spécifient les paramètres attendus entre parenthèses ainsi que le type du retour.&nbsp;</p>
+<p>Attributs et méthodes sont précédés d’un symbole qui représente leur visibilité.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg id="mermaid-figure-3" width="672" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" class="classDiagram" viewbox="0 0 302.2109375 304" role="graphics-document document" aria-roledescription="class" height="480">
+<style>#mermaid-figure-3{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaid-figure-3 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaid-figure-3 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaid-figure-3 .error-icon{fill:#552222;}#mermaid-figure-3 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-3 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-3 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-3 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-3 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-3 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-3 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-3 .marker{fill:#333333;stroke:#333333;}#mermaid-figure-3 .marker.cross{stroke:#333333;}#mermaid-figure-3 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-3 p{margin:0;}#mermaid-figure-3 g.classGroup text{fill:#9370DB;stroke:none;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:10px;}#mermaid-figure-3 g.classGroup text .title{font-weight:bolder;}#mermaid-figure-3 .nodeLabel,#mermaid-figure-3 .edgeLabel{color:#131300;}#mermaid-figure-3 .edgeLabel .label rect{fill:#ECECFF;}#mermaid-figure-3 .label text{fill:#131300;}#mermaid-figure-3 .labelBkg{background:#ECECFF;}#mermaid-figure-3 .edgeLabel .label span{background:#ECECFF;}#mermaid-figure-3 .classTitle{font-weight:bolder;}#mermaid-figure-3 .node rect,#mermaid-figure-3 .node circle,#mermaid-figure-3 .node ellipse,#mermaid-figure-3 .node polygon,#mermaid-figure-3 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-figure-3 .divider{stroke:#9370DB;stroke-width:1;}#mermaid-figure-3 g.clickable{cursor:pointer;}#mermaid-figure-3 g.classGroup rect{fill:#ECECFF;stroke:#9370DB;}#mermaid-figure-3 g.classGroup line{stroke:#9370DB;stroke-width:1;}#mermaid-figure-3 .classLabel .box{stroke:none;stroke-width:0;fill:#ECECFF;opacity:0.5;}#mermaid-figure-3 .classLabel .label{fill:#9370DB;font-size:10px;}#mermaid-figure-3 .relation{stroke:#333333;stroke-width:1;fill:none;}#mermaid-figure-3 .dashed-line{stroke-dasharray:3;}#mermaid-figure-3 .dotted-line{stroke-dasharray:1 2;}#mermaid-figure-3 #compositionStart,#mermaid-figure-3 .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-3 #compositionEnd,#mermaid-figure-3 .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-3 #dependencyStart,#mermaid-figure-3 .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-3 #dependencyStart,#mermaid-figure-3 .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-3 #extensionStart,#mermaid-figure-3 .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-3 #extensionEnd,#mermaid-figure-3 .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-3 #aggregationStart,#mermaid-figure-3 .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-3 #aggregationEnd,#mermaid-figure-3 .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-3 #lollipopStart,#mermaid-figure-3 .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-3 #lollipopEnd,#mermaid-figure-3 .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-3 .edgeTerminals{font-size:11px;line-height:initial;}#mermaid-figure-3 .classTitleText{text-anchor:middle;font-size:18px;fill:#333;}#mermaid-figure-3 .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mermaid-figure-3 .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mermaid-figure-3 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><defs><marker id="mermaid-figure-3-mermaid-1791747668671_class-aggregationStart" class="marker aggregation class" refx="18" refy="7" markerwidth="190" markerheight="240" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-3-mermaid-1791747668671_class-aggregationEnd" class="marker aggregation class" refx="1" refy="7" markerwidth="20" markerheight="28" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-3-mermaid-1791747668671_class-extensionStart" class="marker extension class" refx="18" refy="7" markerwidth="190" markerheight="240" orient="auto"><path d="M 1,7 L18,13 V 1 Z"></path></marker></defs><defs><marker id="mermaid-figure-3-mermaid-1791747668671_class-extensionEnd" class="marker extension class" refx="1" refy="7" markerwidth="20" markerheight="28" orient="auto"><path d="M 1,1 V 13 L18,7 Z"></path></marker></defs><defs><marker id="mermaid-figure-3-mermaid-1791747668671_class-compositionStart" class="marker composition class" refx="18" refy="7" markerwidth="190" markerheight="240" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-3-mermaid-1791747668671_class-compositionEnd" class="marker composition class" refx="1" refy="7" markerwidth="20" markerheight="28" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-3-mermaid-1791747668671_class-dependencyStart" class="marker dependency class" refx="6" refy="7" markerwidth="190" markerheight="240" orient="auto"><path d="M 5,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-3-mermaid-1791747668671_class-dependencyEnd" class="marker dependency class" refx="13" refy="7" markerwidth="20" markerheight="28" orient="auto"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-3-mermaid-1791747668671_class-lollipopStart" class="marker lollipop class" refx="13" refy="7" markerwidth="190" markerheight="240" orient="auto"><circle stroke="black" fill="transparent" cx="7" cy="7" r="6"></circle></marker></defs><defs><marker id="mermaid-figure-3-mermaid-1791747668671_class-lollipopEnd" class="marker lollipop class" refx="1" refy="7" markerwidth="190" markerheight="240" orient="auto"><circle stroke="black" fill="transparent" cx="7" cy="7" r="6"></circle></marker></defs><g class="root"><g class="clusters"></g><g class="edgePaths"></g><g class="edgeLabels"></g><g class="nodes"><g class="node default" id="classId-Training-0" transform="translate(151.10546875, 152)"><g class="basic label-container"><path d="M-143.10546875 -144 L143.10546875 -144 L143.10546875 144 L-143.10546875 144" stroke="none" stroke-width="0" fill="#ECECFF" style=""></path><path d="M-143.10546875 -144 C-70.23560533462263 -144, 2.6342580807547336 -144, 143.10546875 -144 M-143.10546875 -144 C-83.06397854258408 -144, -23.022488335168163 -144, 143.10546875 -144 M143.10546875 -144 C143.10546875 -66.62987880005247, 143.10546875 10.740242399895067, 143.10546875 144 M143.10546875 -144 C143.10546875 -67.15186762177885, 143.10546875 9.696264756442304, 143.10546875 144 M143.10546875 144 C77.8246089825346 144, 12.543749215069198 144, -143.10546875 144 M143.10546875 144 C78.0854297547796 144, 13.065390759559193 144, -143.10546875 144 M-143.10546875 144 C-143.10546875 54.60276980090971, -143.10546875 -34.794460398180576, -143.10546875 -144 M-143.10546875 144 C-143.10546875 47.65505259184516, -143.10546875 -48.689894816309675, -143.10546875 -144" stroke="#9370DB" stroke-width="1.3" fill="none" stroke-dasharray="0 0" style=""></path></g><g class="annotation-group text" transform="translate(0, -120)"></g><g class="label-group text" transform="translate(-29.7421875, -120)"><g class="label" style="font-weight: bolder" transform="translate(0,-12)"><foreignobject width="59.484375" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 105px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
+Training
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="members-group text" transform="translate(-131.10546875, -72)"><g class="label" style="" transform="translate(0,-12)"><foreignobject width="118.5" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 160px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
++subject : String
+</p>
+</span>
+</div>
+</foreignobject></g><g class="label" style="" transform="translate(0,12)"><foreignobject width="133.15625" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 171px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
+-duration : Integer
+</p>
+</span>
+</div>
+</foreignobject></g><g class="label" style="" transform="translate(0,36)"><foreignobject width="141.375" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 182px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
+-students : String[*]
+</p>
+</span>
+</div>
+</foreignobject></g><g class="label" style="" transform="translate(0,60)"><foreignobject width="216.96875" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 247px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
+-available_seats : Integer = 12
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="methods-group text" transform="translate(-131.10546875, 48)"><g class="label" style="" transform="translate(0,-12)"><foreignobject width="205.328125" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 238px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
++add_student(name : String)
+</p>
+</span>
+</div>
+</foreignobject></g><g class="label" style="" transform="translate(0,12)"><foreignobject width="232.46875" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 263px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
++remove_student(name : String)
+</p>
+</span>
+</div>
+</foreignobject></g><g class="label" style="" transform="translate(0,36)"><foreignobject width="155.640625" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 197px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
++students() : String[*]
+</p>
+</span>
+</div>
+</foreignobject></g><g class="label" style="" transform="translate(0,60)"><foreignobject width="147.421875" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 185px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
++duration() : Integer
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="divider" style=""><path d="M-143.10546875 -96 C-59.09116518896069 -96, 24.923138372078625 -96, 143.10546875 -96 M-143.10546875 -96 C-58.37713170128123 -96, 26.351205347437542 -96, 143.10546875 -96" stroke="#9370DB" stroke-width="1.3" fill="none" stroke-dasharray="0 0" style=""></path></g><g class="divider" style=""><path d="M-143.10546875 24 C-83.94837836919208 24, -24.791287988384155 24, 143.10546875 24 M-143.10546875 24 C-80.7954318217841 24, -18.485394893568213 24, 143.10546875 24" stroke="#9370DB" stroke-width="1.3" fill="none" stroke-dasharray="0 0" style=""></path></g></g></g></g></g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ul>
+<li><code>Training</code> est le nom de la classe.</li>
+<li><code>title</code>, <code>duration</code>, <code>students</code> et <code>seats</code> sont des attributs.</li>
+<li><code>add_student(name)</code>, <code>remove_student(name)</code> et <code>students()</code> sont des méthodes.</li>
+</ul>
+</section>
+<section id="notion-de-visibilité-des-attributs-et-méthodes" class="level3" data-number="8.4.3">
+<h3 data-number="8.4.3" class="anchored" data-anchor-id="notion-de-visibilité-des-attributs-et-méthodes"><span class="header-section-number">8.4.3</span> Notion de visibilité des attributs et méthodes</h3>
+<p>La visibilité est un concept important de la conception objet puisqu’elle définit <em>qui</em> pourra accéder à l’attribut ou à la méthode et permet de mettre en œuvre le principe de l’encapsulation. Accéder à un attribut signifie avoir la possibilité de consulter la valeur mais aussi la modifier. UML permet de représenter 4 visibilité :</p>
+<ul>
+<li><strong>Public</strong> représenté par le symbole <code>+</code>. Un attribut ou une méthode publique pourra être accédé par n’importe quel composant.&nbsp;</li>
+<li><strong>Package</strong> représenté par le symbole <code>~</code>. Un attribut ou une méthode package pourra être accédé par n’importe quel composant déclaré dans le même package.&nbsp;</li>
+<li><strong>Protected</strong> représenté par le symbole <code>#</code>. Un attribut ou une méthode protégée ne pourra être accédé que par le composant qui l’a déclaré ou par tout composant spécialisé (voir notions d’héritage)</li>
+<li><strong>Private</strong> représenté par le symbole <code>-</code>. Un attribut ou une méthode privée ne pourra être accédé que par le composant qui l’a déclaré. &nbsp;</li>
+</ul>
+<p>Dans notre exemple, la durée, la liste des participants et le nombre de places disponibles sont des attributs privés car ils ne doivent pas être modifiés par un composant extérieur. La liste de participants évoluera par appel aux méthodes d’ajout et suppression de participants. Des méthodes permettent également de consulter ces attributs privés (<code>students()</code> et <code>duration()</code>).</p>
+<p>Vous avez remarqué que ce modèle ne permet pas en l’état de consulter le nombre de places disponibles.</p>
+</section>
+<section id="cardinalité-et-contraintes" class="level3" data-number="8.4.4">
+<h3 data-number="8.4.4" class="anchored" data-anchor-id="cardinalité-et-contraintes"><span class="header-section-number">8.4.4</span> Cardinalité et contraintes</h3>
+<p>La liste des stagiaires est définie comme pouvant contenir de 0 à un nombre indéfini de stagiaires. Mais une formation a une limite de places. Cette limite dépend de la formation. Il est donc impossible de l’imposer dans le modèle, ce qui nous conduit à cette cardinalité de 0 ou plusieurs.</p>
+<p>UML ne permet pas de modéliser les contraintes, celles-ci sont modélisées par un autre langage, OCL (Object Constraint Language). Cette contrainte doit être appliquée à notre modèle et c’est pourquoi l’ajout de participants doit passer par une méthode. Celle-ci connait la règle métier qui sera d’ajouter un stagiaire uniquement si le nombre de participants est inférieur au nombre de places.</p>
+</section>
+<section id="la-notion-de-relations" class="level3" data-number="8.4.5">
+<h3 data-number="8.4.5" class="anchored" data-anchor-id="la-notion-de-relations"><span class="header-section-number">8.4.5</span> La notion de relations</h3>
+<p>Lorsque nous définissons des objets, ceux-ci peuvent être liés les uns aux autres. Nous parlons de relations.</p>
+<p>Les relations permettent de représenter les associations entre les classes.</p>
+<p>Nous pouvons compléter notre modèle de formation. Un stagiaire n’est pas limité à une chaine de caractères, nous pouvons définir une classe pour le représenter. Il faudra ensuite l’associer à la formation.</p>
+</section>
+<section id="relation-simple" class="level3" data-number="8.4.6">
+<h3 data-number="8.4.6" class="anchored" data-anchor-id="relation-simple"><span class="header-section-number">8.4.6</span> Relation simple</h3>
+<p>En UML, la relation est symbolisée par un trait, en général horizontal, reliant les deux classes. Une flèche permet d’orienter la relation. Cette dernière est importante car elle détermine où (dans quelle classe) sera exprimée la relation.</p>
+<p>UML nous permet également de préciser la cardinalité de cette relation. Les indications possibles sont :</p>
+<ul>
+<li><code>n</code> où n est un nombre signifiant exactement n instances</li>
+<li><code>*</code> signifie un nombre indéterminé d’instances</li>
+<li><code>m..n</code> où m est un entier et n est soit un entier soit <code>*</code> et signifie de <code>m</code> à <code>n</code> instances.</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg id="mermaid-figure-2" width="672" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" class="classDiagram" viewbox="0 0 606.3515625 232" role="graphics-document document" aria-roledescription="class" height="480">
+<style>#mermaid-figure-2{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaid-figure-2 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaid-figure-2 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaid-figure-2 .error-icon{fill:#552222;}#mermaid-figure-2 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-2 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-2 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-2 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-2 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-2 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-2 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-2 .marker{fill:#333333;stroke:#333333;}#mermaid-figure-2 .marker.cross{stroke:#333333;}#mermaid-figure-2 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-2 p{margin:0;}#mermaid-figure-2 g.classGroup text{fill:#9370DB;stroke:none;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:10px;}#mermaid-figure-2 g.classGroup text .title{font-weight:bolder;}#mermaid-figure-2 .nodeLabel,#mermaid-figure-2 .edgeLabel{color:#131300;}#mermaid-figure-2 .edgeLabel .label rect{fill:#ECECFF;}#mermaid-figure-2 .label text{fill:#131300;}#mermaid-figure-2 .labelBkg{background:#ECECFF;}#mermaid-figure-2 .edgeLabel .label span{background:#ECECFF;}#mermaid-figure-2 .classTitle{font-weight:bolder;}#mermaid-figure-2 .node rect,#mermaid-figure-2 .node circle,#mermaid-figure-2 .node ellipse,#mermaid-figure-2 .node polygon,#mermaid-figure-2 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-figure-2 .divider{stroke:#9370DB;stroke-width:1;}#mermaid-figure-2 g.clickable{cursor:pointer;}#mermaid-figure-2 g.classGroup rect{fill:#ECECFF;stroke:#9370DB;}#mermaid-figure-2 g.classGroup line{stroke:#9370DB;stroke-width:1;}#mermaid-figure-2 .classLabel .box{stroke:none;stroke-width:0;fill:#ECECFF;opacity:0.5;}#mermaid-figure-2 .classLabel .label{fill:#9370DB;font-size:10px;}#mermaid-figure-2 .relation{stroke:#333333;stroke-width:1;fill:none;}#mermaid-figure-2 .dashed-line{stroke-dasharray:3;}#mermaid-figure-2 .dotted-line{stroke-dasharray:1 2;}#mermaid-figure-2 #compositionStart,#mermaid-figure-2 .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-2 #compositionEnd,#mermaid-figure-2 .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-2 #dependencyStart,#mermaid-figure-2 .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-2 #dependencyStart,#mermaid-figure-2 .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-2 #extensionStart,#mermaid-figure-2 .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-2 #extensionEnd,#mermaid-figure-2 .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-2 #aggregationStart,#mermaid-figure-2 .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-2 #aggregationEnd,#mermaid-figure-2 .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-2 #lollipopStart,#mermaid-figure-2 .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-2 #lollipopEnd,#mermaid-figure-2 .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-2 .edgeTerminals{font-size:11px;line-height:initial;}#mermaid-figure-2 .classTitleText{text-anchor:middle;font-size:18px;fill:#333;}#mermaid-figure-2 .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mermaid-figure-2 .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mermaid-figure-2 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><defs><marker id="mermaid-figure-2-mermaid-1791747668538_class-aggregationStart" class="marker aggregation class" refx="18" refy="7" markerwidth="190" markerheight="240" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-2-mermaid-1791747668538_class-aggregationEnd" class="marker aggregation class" refx="1" refy="7" markerwidth="20" markerheight="28" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-2-mermaid-1791747668538_class-extensionStart" class="marker extension class" refx="18" refy="7" markerwidth="190" markerheight="240" orient="auto"><path d="M 1,7 L18,13 V 1 Z"></path></marker></defs><defs><marker id="mermaid-figure-2-mermaid-1791747668538_class-extensionEnd" class="marker extension class" refx="1" refy="7" markerwidth="20" markerheight="28" orient="auto"><path d="M 1,1 V 13 L18,7 Z"></path></marker></defs><defs><marker id="mermaid-figure-2-mermaid-1791747668538_class-compositionStart" class="marker composition class" refx="18" refy="7" markerwidth="190" markerheight="240" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-2-mermaid-1791747668538_class-compositionEnd" class="marker composition class" refx="1" refy="7" markerwidth="20" markerheight="28" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-2-mermaid-1791747668538_class-dependencyStart" class="marker dependency class" refx="6" refy="7" markerwidth="190" markerheight="240" orient="auto"><path d="M 5,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-2-mermaid-1791747668538_class-dependencyEnd" class="marker dependency class" refx="13" refy="7" markerwidth="20" markerheight="28" orient="auto"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-figure-2-mermaid-1791747668538_class-lollipopStart" class="marker lollipop class" refx="13" refy="7" markerwidth="190" markerheight="240" orient="auto"><circle stroke="black" fill="transparent" cx="7" cy="7" r="6"></circle></marker></defs><defs><marker id="mermaid-figure-2-mermaid-1791747668538_class-lollipopEnd" class="marker lollipop class" refx="1" refy="7" markerwidth="190" markerheight="240" orient="auto"><circle stroke="black" fill="transparent" cx="7" cy="7" r="6"></circle></marker></defs><g class="root"><g class="clusters"></g><g class="edgePaths"><path d="M340.617,116L346.897,116C353.177,116,365.737,116,377.297,116C388.857,116,399.417,116,404.697,116L409.977,116" id="id_Training_Student_1" class="edge-thickness-normal edge-pattern-solid relation" style=";;;" data-edge="true" data-et="edge" data-id="id_Training_Student_1" data-points="W3sieCI6MzQwLjYxNzE4NzUsInkiOjExNn0seyJ4IjozNzguMjk2ODc1LCJ5IjoxMTZ9LHsieCI6NDE1Ljk3NjU2MjUsInkiOjExNn1d" marker-end="url(#mermaid-figure-2-mermaid-1791747668538_class-dependencyEnd)"></path></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(378.296875, 116)"><g class="label" data-id="id_Training_Student_1" transform="translate(-12.6796875, -12)"><foreignobject width="25.359375" height="24">
+<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+<span class="edgeLabel">
+<p>
+Has
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="edgeTerminals" transform="translate(358.11718874999997, 131)"><g class="inner" transform="translate(0, 0)"><foreignobject style="width: 9px; height: 12px;">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; padding-right: 1px; white-space: nowrap;">
+<span class="edgeLabel">*</span>
+</div>
+</foreignobject></g></g><g class="edgeTerminals" transform="translate(393.47656125000003, 96)"><g class="inner" transform="translate(0, 0)"></g><foreignobject style="width: 9px; height: 12px;">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; padding-right: 1px; white-space: nowrap;">
+<span class="edgeLabel">*</span>
+</div>
+</foreignobject></g></g><g class="nodes"><g class="node default" id="classId-Training-0" transform="translate(174.30859375, 116)"><g class="basic label-container"><path d="M-166.30859375 -108 L166.30859375 -108 L166.30859375 108 L-166.30859375 108" stroke="none" stroke-width="0" fill="#ECECFF" style=""></path><path d="M-166.30859375 -108 C-71.46313340171288 -108, 23.38232694657424 -108, 166.30859375 -108 M-166.30859375 -108 C-62.53311068276365 -108, 41.2423723844727 -108, 166.30859375 -108 M166.30859375 -108 C166.30859375 -51.543419927814035, 166.30859375 4.913160144371929, 166.30859375 108 M166.30859375 -108 C166.30859375 -24.521670265748384, 166.30859375 58.95665946850323, 166.30859375 108 M166.30859375 108 C65.8089170263272 108, -34.69075969734561 108, -166.30859375 108 M166.30859375 108 C56.73351243263443 108, -52.841568884731146 108, -166.30859375 108 M-166.30859375 108 C-166.30859375 61.29327177223601, -166.30859375 14.586543544472022, -166.30859375 -108 M-166.30859375 108 C-166.30859375 43.69771955889904, -166.30859375 -20.604560882201923, -166.30859375 -108" stroke="#9370DB" stroke-width="1.3" fill="none" stroke-dasharray="0 0" style=""></path></g><g class="annotation-group text" transform="translate(0, -84)"></g><g class="label-group text" transform="translate(-29.7421875, -84)"><g class="label" style="font-weight: bolder" transform="translate(0,-12)"><foreignobject width="59.484375" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 105px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
+Training
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="members-group text" transform="translate(-154.30859375, -36)"><g class="label" style="" transform="translate(0,-12)"><foreignobject width="118.5" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 160px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
++subject : String
+</p>
+</span>
+</div>
+</foreignobject></g><g class="label" style="" transform="translate(0,12)"><foreignobject width="133.15625" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 171px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
+-duration : Integer
+</p>
+</span>
+</div>
+</foreignobject></g><g class="label" style="" transform="translate(0,36)"><foreignobject width="182.15625" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 214px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
+-available_seats : Integer
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="methods-group text" transform="translate(-154.30859375, 60)"><g class="label" style="" transform="translate(0,-12)"><foreignobject width="251.734375" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 281px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
++add_student(String name : String)
+</p>
+</span>
+</div>
+</foreignobject></g><g class="label" style="" transform="translate(0,12)"><foreignobject width="278.875" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 306px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
++remove_student(String name : String)
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="divider" style=""><path d="M-166.30859375 -60 C-47.67951851670722 -60, 70.94955671658556 -60, 166.30859375 -60 M-166.30859375 -60 C-52.16506925937564 -60, 61.97845523124872 -60, 166.30859375 -60" stroke="#9370DB" stroke-width="1.3" fill="none" stroke-dasharray="0 0" style=""></path></g><g class="divider" style=""><path d="M-166.30859375 36 C-78.91899119842559 36, 8.470611353148826 36, 166.30859375 36 M-166.30859375 36 C-55.82087350440354 36, 54.66684674119293 36, 166.30859375 36" stroke="#9370DB" stroke-width="1.3" fill="none" stroke-dasharray="0 0" style=""></path></g></g><g class="node default" id="classId-Student-1" transform="translate(507.1640625, 116)"><g class="basic label-container"><path d="M-91.1875 -84 L91.1875 -84 L91.1875 84 L-91.1875 84" stroke="none" stroke-width="0" fill="#ECECFF" style=""></path><path d="M-91.1875 -84 C-42.78234997820735 -84, 5.6228000435853005 -84, 91.1875 -84 M-91.1875 -84 C-44.546423503813 -84, 2.0946529923739945 -84, 91.1875 -84 M91.1875 -84 C91.1875 -36.42139277904825, 91.1875 11.157214441903506, 91.1875 84 M91.1875 -84 C91.1875 -24.459541608954417, 91.1875 35.080916782091165, 91.1875 84 M91.1875 84 C19.245602179858125 84, -52.69629564028375 84, -91.1875 84 M91.1875 84 C54.240674892764766 84, 17.29384978552953 84, -91.1875 84 M-91.1875 84 C-91.1875 29.35483388440933, -91.1875 -25.29033223118134, -91.1875 -84 M-91.1875 84 C-91.1875 18.344161144268668, -91.1875 -47.311677711462664, -91.1875 -84" stroke="#9370DB" stroke-width="1.3" fill="none" stroke-dasharray="0 0" style=""></path></g><g class="annotation-group text" transform="translate(0, -60)"></g><g class="label-group text" transform="translate(-29.125, -60)"><g class="label" style="font-weight: bolder" transform="translate(0,-12)"><foreignobject width="58.25" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 99px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
+Student
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="members-group text" transform="translate(-79.1875, -12)"><g class="label" style="" transform="translate(0,-12)"><foreignobject width="104.65625" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 150px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
++name : String
+</p>
+</span>
+</div>
+</foreignobject></g><g class="label" style="" transform="translate(0,12)"><foreignobject width="96.203125" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 140px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
++title : String
+</p>
+</span>
+</div>
+</foreignobject></g><g class="label" style="" transform="translate(0,36)"><foreignobject width="129.25" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 174px; text-align: center;">
+<span class="nodeLabel markdown-node-label" style="">
+<p>
++company : String
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="methods-group text" transform="translate(-79.1875, 84)"></g><g class="divider" style=""><path d="M-91.1875 -36 C-45.732059252332064 -36, -0.2766185046641283 -36, 91.1875 -36 M-91.1875 -36 C-47.065514211584585 -36, -2.9435284231691696 -36, 91.1875 -36" stroke="#9370DB" stroke-width="1.3" fill="none" stroke-dasharray="0 0" style=""></path></g><g class="divider" style=""><path d="M-91.1875 60 C-46.19046793780717 60, -1.193435875614341 60, 91.1875 60 M-91.1875 60 C-39.939729273255075 60, 11.30804145348985 60, 91.1875 60" stroke="#9370DB" stroke-width="1.3" fill="none" stroke-dasharray="0 0" style=""></path></g></g></g></g></g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>&nbsp;Dans notre modèle, une formation est dispensée à plusieurs stagiaires et un même stagiaire peut suivre plusieurs formations.</p>
+<p>La flèche ainsi que la définition de la relation indiquée au dessus de cette flèche nous renseigne sur l’implémentation attendue. Ainsi, une formation possède des stagiaires. L’implémentation devra donc définir une liste de stagiaires dans la classe <code>Training</code>. Vous remarquerez qu’il n’y a pas d’attribut <code>students:Student[*]</code> déclarée dans ce dernier schéma, contrairement au premier. C’est parce cette relation implique implicitement cet attribut.</p>
+</section>
+</section>
+<section id="uml-les-limites-de-la-représentation-graphique" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="uml-les-limites-de-la-représentation-graphique"><span class="header-section-number">8.5</span> UML : les limites de la représentation graphique</h2>
+<p>Nous avons vu que nous pouvons représenter beaucoup d’informations sous forme de diagrammes en UML. Mais la représentation graphique a des limites. Dans le cas de nos formations, techniquement, la liste des stagiaires n’a pas de limite supérieure. Cependant, cette limite est définie par un autre paramètre qui, en soi, est une variable.</p>
+<p>Il est donc impossible de représenter cette contrainte de manière graphique et nous devrions exprimer certaines contraintes en langage naturel.</p>
+<p>Cependant, il existe depuis la version 1.1 d’UML un langage formel, OCL (Object Constraint Language). Le langage naturel est évidemment le plus facile à mettre en œuvre, à formuler et à comprendre. Mais il est également source d’ambiguïtés qu’OCL essaye d’éviter.</p>
+<p>Cette formation n’est pas une formation UML/OCL, ce sujet ne sera pas abordé ici.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../Les_sequences.html" class="pagination-link" aria-label="Les séquences">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Les séquences</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../POO/POO_classes.html" class="pagination-link" aria-label="La Programmation Orientée Objet en Python">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">La Programmation Orientée Objet en Python</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
