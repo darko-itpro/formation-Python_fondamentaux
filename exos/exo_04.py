@@ -15,11 +15,14 @@ def is_viewed(episode:list) -> bool:
 if __name__ == "__main__":
     episode_viewed = ["The new Project", 1, 98, True]
     episode_not_viewed = ['Installing the softwares', 2, 42, False]
+    #
+    # is_viewed_bad(episode_viewed)
+    # is_viewed_bad(episode_not_viewed)
+    #
+    # if is_viewed(episode_viewed):
+    #     print("You have watched this episode")
+    # else:
+    #     print("You have not watched this episode")
 
-    is_viewed_bad(episode_viewed)
-    is_viewed_bad(episode_not_viewed)
-
-    if is_viewed(episode_viewed):
-        print("You have watched this episode")
-    else:
-        print("You have not watched this episode")
+    assert is_viewed(episode_viewed) is True
+    assert is_viewed(episode_not_viewed) is False
