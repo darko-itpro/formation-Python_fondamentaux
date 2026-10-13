@@ -15,4 +15,7 @@ def test_episode_is_viewed_as_count():
 def test_episode_is_not_viewed_as_count():
     episode = ['Installing the softwares', 2, 42, 0]
     assert is_viewed(episode) is False
-    
+
+def test_episode_without_viewed():
+    episode = ['Installing the softwares', 2, 42]
+    assert is_viewed(episode) is False
