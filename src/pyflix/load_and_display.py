@@ -7,9 +7,9 @@ import pyflix.loaders.file_helpers as fu
 
 # Module contenant les objets liés à la gestion des médias. Module dans le projet courant pouvant
 # être remplacé par le module créé lors de la formation.
-import demos.pyflix.media_db as media
+import pyflix.media_db as media
 
-import demos.settings as conf
+import settings as conf
 
 try:
     from pyflix.utils import rich_cli as cli
@@ -17,7 +17,7 @@ except ModuleNotFoundError:
     from pyflix.utils import cli
 
 
-def local_shows_loader(shows: dict[str, media.TvShow] = None) -> dict[str, media.TvShow]:
+def local_shows_loader(shows: dict[str, media.TvShow]|None = None) -> dict[str, media.TvShow]:
     shows = shows.copy() if shows is not None else {}
 
     src_path = conf.DATA_PATH
@@ -29,7 +29,7 @@ def local_shows_loader(shows: dict[str, media.TvShow] = None) -> dict[str, media
     return shows
 
 
-def load_data_from_path(path: str | Path, shows: dict[str, media.TvShow] = None) -> dict[str, media.TvShow]:
+def load_data_from_path(path: str | Path, shows: dict[str, media.TvShow]|None = None) -> dict[str, media.TvShow]:
     """
     Charge les données d'une série à partir d'une source et retourne un dictionnaire de séries.
 
@@ -69,7 +69,8 @@ def load_data_from_path(path: str | Path, shows: dict[str, media.TvShow] = None)
 
     return shows
 
-def load_default_data(shows:dict = None) -> dict[str, media.TvShow]:
+def load_default_data(shows:dict|None = None) -> dict[str, media.TvShow]:
+    raise NotImplementedError("Should fix path to files.")
     paths = []  # Liste des chemins vers les ressources à utiliser.
     shows = shows.copy() if shows is not None else {}  # Servira à stocker des données titre:show.
 
@@ -82,7 +83,7 @@ def load_default_data(shows:dict = None) -> dict[str, media.TvShow]:
 
     return shows
 
-def add_data_to_shows(source_path:Path, shows:dict[str, media.TvShow] = None) -> dict[str, media.TvShow]:
+def add_data_to_shows(source_path:Path, shows:dict[str, media.TvShow]|None = None) -> dict[str, media.TvShow]:
     shows = shows.copy() if shows is not None else {}  # Servira à stocker des données titre:show.
 
     try:
