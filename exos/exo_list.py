@@ -3,6 +3,9 @@ import pyflix.datasource as ds
 
 
 def episodes_duration(episodes:list, episode_duration: int):
+    if episode_duration < 0:
+        raise ValueError("Episode duration cannot be negative")
+
     return len(episodes) * episode_duration
 
 def evening_playlist(episodes:list, episode_duration: int, max_duration: int):
