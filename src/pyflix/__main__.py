@@ -1,10 +1,9 @@
-import logging
 import sys
 
 import questionary
 
-import demos.settings as conf
-import demos.pyflix.load_and_display as runner
+import settings as conf
+import pyflix.load_and_display as runner
 
 print("Gestion de mediathèque")
 

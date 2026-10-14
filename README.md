@@ -213,6 +213,7 @@ Les dépendances dans ce fichier sont les suivantes :
    depuis la 3.9, présente ici du fait d'une présentation de la gestion _legacy_ des dates.)
  * [flake8](https://flake8.pycqa.org/) : outil de validation statique de code
  * [pylint](https://pypi.org/project/pylint/) : outil d'analyse statique de code
+ * [platformdirs](https://pypi.org/project/platformdirs/) : utilisé pour déterminer les répertoires utilisateur en fonction de la plate-forme.
 
 Un fichier `requirements-xtra.py` contient les dépendances optionnelles. Notez que celles-ci
 peuvent être volumineuses (donc prendront du temps et de l'espace disque).

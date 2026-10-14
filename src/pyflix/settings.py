@@ -8,13 +8,16 @@ du projet.
 
 import logging
 from pathlib import Path
+from platformdirs import user_data_path, user_log_path
 
-ROOT_PATH = Path(__file__).resolve().parent.parent
-DATA_PATH = ROOT_PATH / "data"
+APP_NAME = "formation-python-pyflix"
+
+DATA_PATH = user_data_path(APP_NAME, ensure_exists=True)
+LOG_FILE = user_log_path(APP_NAME, ensure_exists=True) / "pyflix-file.log"
 
 logging.basicConfig(level=logging.DEBUG,
                     format="%(asctime)s - %(levelname)s - %(message)s",
                     datefmt="%H:%M:%S",
-                    filename=ROOT_PATH / "file.log",
+                    filename=LOG_FILE,
                     encoding='utf-8',
                     )
