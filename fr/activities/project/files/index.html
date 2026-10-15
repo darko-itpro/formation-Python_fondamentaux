@@ -1626,6 +1626,8 @@
       
         
       
+        
+      
     
     
     
@@ -1682,6 +1684,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture de fichier
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1698,6 +1718,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#le-contenu-dun-repertoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le contenu d'un répertoire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-contenu-dun-fichier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le contenu d'un fichier
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1719,6 +1780,34 @@
     
   
     Chargement d'objets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les expressions rationnelles
   
 
     
@@ -2452,6 +2541,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#le-contenu-dun-repertoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le contenu d'un répertoire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-contenu-dun-fichier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le contenu d'un fichier
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2471,16 +2590,27 @@
 
 
 <h1 id="traitement-de-fichiers">Traitement de fichiers</h1>
+<h2 id="le-contenu-dun-repertoire">Le contenu d'un répertoire</h2>
+<p>Le répertoire <code>/assets/files/</code> contient des fichiers média dont le nom est structuré avec les 
+informations sur l'épisode.</p>
+<p>Écrivez une fonction qui :</p>
+<ul>
+<li><em>Ouvre</em> le répertoire (le chemin doit être passé en paramètre).</li>
+<li>Parcourt le contenu élément par élément.</li>
+<li>Récupère les noms de fichiers et les affiche</li>
+</ul>
+<p>Cette fonction pourra être utilisée avec un autre exercice.</p>
+<h2 id="le-contenu-dun-fichier">Le contenu d'un fichier</h2>
 <p>Le répertoire <code>/assets</code> contient un fichier <code>showslist.csv</code>. Ce fichier au format <code>csv</code> contient 
 une liste de données à propos de séries que nous pouvons intégrer dans nos données.</p>
-<p>Nous allons écrire une fonction qui nous permet d'extraire les données de ce fichier.</p>
+<p>Nous allons écrire une fonction afin d'extraire les données de ce fichier.</p>
 <p>Écrivez une fonction qui :</p>
 <ul>
 <li>Ouvre le fichier (le chemin doit être passé en paramètre).</li>
 <li>Parcourt le fichier ligne à ligne.</li>
 <li>Décompose le contenu de chaque ligne en une liste.</li>
 <li>Ordonne la liste selon les données attendues comme paramètres du constructeur <code>Episode</code>. 
-   Attention, l'information de série doit aussi être présent.</li>
+   Attention, le titre de la série doit aussi être présent en premier élément.</li>
 <li>Assurez-vous lors de cette conversion que les types de données soient bien respectés.</li>
 <li>Affichez la liste obtenue (cette partie est temporaire pour vérifier le bon comportement)</li>
 </ul>
