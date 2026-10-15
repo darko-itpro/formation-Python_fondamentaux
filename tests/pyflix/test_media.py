@@ -13,3 +13,8 @@ def show():
 def test_add_first_episode(show):
     show.add_episode("Grand Line", 2, 1)
     assert len(show.episodes) == 1
+
+def test_duplicate_episode_must_raise(show):
+    show.add_episode("Grand Line", 2, 1)
+    with pytest.raises(ValueError):
+        show.add_episode("Grand Line", 2, 1)

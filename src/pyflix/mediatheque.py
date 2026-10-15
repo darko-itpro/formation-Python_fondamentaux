@@ -7,6 +7,12 @@ class Episode:
         self.season_number = season_number
         self.duration = duration
         self.year = year
+        
+    def __eq__(self, other):
+        if not isinstance(other, self.__class__):
+            return False
+        
+        return self.season_number == other.season_number and self.number == other.number
 
 
 class TvShow:
@@ -16,4 +22,7 @@ class TvShow:
 
     def add_episode(self, title:str, season_number:int, number, duration:int|None = None, year:int|None = None):
         episode = Episode(title, season_number, number, duration, year)
+        if episode in self.episodes:
+            raise ValueError(f"Episode s{episode.season_number}e{episode.number} exists")
+        
         self.episodes.append(episode)
