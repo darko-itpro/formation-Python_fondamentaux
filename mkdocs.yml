@@ -60,6 +60,7 @@ nav:
         - Les fichiers:
           - Lecture de fichier: fr/activities/project/files.md
           - Chargement d'objets: fr/activities/project/loader.md
+          - Les expressions rationnelles: fr/activities/project/regex.md
     - Informations complémentaires:
         - Le package pyflix: fr/pyflix.md
         - Configuration du PYTHONPATH dans VSCode: fr/vscode.md
