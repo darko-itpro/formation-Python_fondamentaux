@@ -97,7 +97,7 @@ def display_all_shows(shows:dict[str, media.TvShow]):
     cli.display_shows(shows)
 
 
-def run():
+def run(*paths):
 
     shows = {}  # Servira à stocker des données titre:show.
 
