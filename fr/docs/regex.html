@@ -297,18 +297,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#définir-un-motif" id="toc-définir-un-motif" class="nav-link active" data-scroll-target="#définir-un-motif"><span class="header-section-number">15.1</span> Définir un motif</a>
+  <li><a href="#le-vocabulaire" id="toc-le-vocabulaire" class="nav-link active" data-scroll-target="#le-vocabulaire"><span class="header-section-number">15.1</span> Le vocabulaire</a></li>
+  <li><a href="#définir-un-motif" id="toc-définir-un-motif" class="nav-link" data-scroll-target="#définir-un-motif"><span class="header-section-number">15.2</span> Définir un motif</a>
   <ul class="collapse">
-  <li><a href="#un-motif-de-base" id="toc-un-motif-de-base" class="nav-link" data-scroll-target="#un-motif-de-base"><span class="header-section-number">15.1.1</span> Un motif de base</a></li>
-  <li><a href="#la-position-dun-motif" id="toc-la-position-dun-motif" class="nav-link" data-scroll-target="#la-position-dun-motif"><span class="header-section-number">15.1.2</span> La position d’un motif</a></li>
-  <li><a href="#les-classes-de-caractères" id="toc-les-classes-de-caractères" class="nav-link" data-scroll-target="#les-classes-de-caractères"><span class="header-section-number">15.1.3</span> Les classes de caractères</a></li>
-  <li><a href="#nombre-doccurrences" id="toc-nombre-doccurrences" class="nav-link" data-scroll-target="#nombre-doccurrences"><span class="header-section-number">15.1.4</span> Nombre d’occurrences</a></li>
-  <li><a href="#les-groupes-de-caractères" id="toc-les-groupes-de-caractères" class="nav-link" data-scroll-target="#les-groupes-de-caractères"><span class="header-section-number">15.1.5</span> Les groupes de caractères</a></li>
-  <li><a href="#référence-précédente" id="toc-référence-précédente" class="nav-link" data-scroll-target="#référence-précédente"><span class="header-section-number">15.1.6</span> Référence précédente</a></li>
-  <li><a href="#les-fonctions-de-recherche" id="toc-les-fonctions-de-recherche" class="nav-link" data-scroll-target="#les-fonctions-de-recherche"><span class="header-section-number">15.1.7</span> Les fonctions de recherche</a></li>
+  <li><a href="#un-motif-de-base" id="toc-un-motif-de-base" class="nav-link" data-scroll-target="#un-motif-de-base"><span class="header-section-number">15.2.1</span> Un motif de base</a></li>
+  <li><a href="#les-classes-de-caractères" id="toc-les-classes-de-caractères" class="nav-link" data-scroll-target="#les-classes-de-caractères"><span class="header-section-number">15.2.2</span> Les classes de caractères</a></li>
+  <li><a href="#nombre-doccurrences" id="toc-nombre-doccurrences" class="nav-link" data-scroll-target="#nombre-doccurrences"><span class="header-section-number">15.2.3</span> Nombre d’occurrences</a></li>
+  <li><a href="#la-position-dun-motif" id="toc-la-position-dun-motif" class="nav-link" data-scroll-target="#la-position-dun-motif"><span class="header-section-number">15.2.4</span> La position d’un motif</a></li>
+  <li><a href="#les-groupes-de-caractères" id="toc-les-groupes-de-caractères" class="nav-link" data-scroll-target="#les-groupes-de-caractères"><span class="header-section-number">15.2.5</span> Les groupes de caractères</a></li>
+  <li><a href="#référence-précédente" id="toc-référence-précédente" class="nav-link" data-scroll-target="#référence-précédente"><span class="header-section-number">15.2.6</span> Référence précédente</a></li>
   </ul></li>
-  <li><a href="#les-match-objects-et-leurs-attributs" id="toc-les-match-objects-et-leurs-attributs" class="nav-link" data-scroll-target="#les-match-objects-et-leurs-attributs"><span class="header-section-number">15.2</span> Les Match Objects et leurs attributs</a></li>
-  <li><a href="#les-substitutions" id="toc-les-substitutions" class="nav-link" data-scroll-target="#les-substitutions"><span class="header-section-number">15.3</span> Les substitutions</a></li>
+  <li><a href="#utiliser-le-module-re" id="toc-utiliser-le-module-re" class="nav-link" data-scroll-target="#utiliser-le-module-re"><span class="header-section-number">15.3</span> Utiliser le module re</a>
+  <ul class="collapse">
+  <li><a href="#les-fonctions-de-recherche" id="toc-les-fonctions-de-recherche" class="nav-link" data-scroll-target="#les-fonctions-de-recherche"><span class="header-section-number">15.3.1</span> Les fonctions de recherche</a></li>
+  </ul></li>
+  <li><a href="#les-match-objects-et-leurs-attributs" id="toc-les-match-objects-et-leurs-attributs" class="nav-link" data-scroll-target="#les-match-objects-et-leurs-attributs"><span class="header-section-number">15.4</span> Les Match Objects et leurs attributs</a></li>
+  <li><a href="#les-sous-groupes" id="toc-les-sous-groupes" class="nav-link" data-scroll-target="#les-sous-groupes"><span class="header-section-number">15.5</span> Les sous-groupes</a>
+  <ul class="collapse">
+  <li><a href="#groupes-non-capturants" id="toc-groupes-non-capturants" class="nav-link" data-scroll-target="#groupes-non-capturants"><span class="header-section-number">15.5.1</span> Groupes non-capturants</a></li>
+  </ul></li>
+  <li><a href="#les-substitutions" id="toc-les-substitutions" class="nav-link" data-scroll-target="#les-substitutions"><span class="header-section-number">15.6</span> Les substitutions</a></li>
   </ul>
 </nav>
     </div>
@@ -334,176 +342,300 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Les expressions rationnelles, expressions régulières (anglicisme de <em>Regular Expressions</em>) ou simplement <em>RegEx</em> sont un puissant moyen pour rechercher ou isoler une chaine de caractères. Elles permettent la recherche d’un motif ou la validation d’une chaine de caractères.</p>
+<p>Une expression rationnelle, expressions régulières (anglicisme de <em>Regular Expressions</em>) ou simplement <strong>regex</strong>, décrit la forme d’un texte recherché.</p>
+<p>Elle sert notamment à :</p>
+<ul>
+<li>rechercher une information dans un texte ;</li>
+<li>vérifier qu’une valeur respecte un format ;</li>
+<li>extraire ou remplacer les parties reconnues.</li>
+</ul>
+<p>Une regex devient utile quand une partie peut varier :</p>
+<pre class="text"><code>CMD-2048    CMD-0007    CMD-9312
+    même forme, chiffres différents</code></pre>
 <p>Utiliser les regex consiste avant tout à définir un motif décrivant la chaine de caractères recherchée. C’est la partie la plus complexe. Ce document n’est qu’une introduction à la définition de ces motifs.</p>
 <p>En Python, les expression rationnelles sont gérées par le module <a href="[https://docs.python.org/3/library/re.html](https://docs.python.org/3/library/re.html)">re</a></p>
-<section id="définir-un-motif" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="définir-un-motif"><span class="header-section-number">15.1</span> Définir un motif</h2>
+<section id="le-vocabulaire" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="le-vocabulaire"><span class="header-section-number">15.1</span> Le vocabulaire</h2>
+<pre class="text"><code>texte : "Commande CMD-2048 expédiée"
+motif : r"CMD-\d{4}"
+                  └── correspondance : "CMD-2048"</code></pre>
+<ul>
+<li>Le <strong>texte</strong> contient les données à examiner.</li>
+<li>Le <strong>motif</strong> décrit ce que l’on cherche.</li>
+<li>Une <strong>correspondance</strong> est une portion du texte reconnue par le motif.</li>
+</ul>
+<p>Un motif combine des caractères ordinaires, comme <code>CMD-</code>, et des symboles spéciaux, comme <code>\d</code>.</p>
+</section>
+<section id="définir-un-motif" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="définir-un-motif"><span class="header-section-number">15.2</span> Définir un motif</h2>
 <p>Utiliser les RegEx consiste avant tout à définir un motif décrivant la chaine de caractères à rechercher ou valider. Ce motif est lui-même une chaine de caractères. Le moteur de RegEx cherchera à identifier ce motif dans une chaine de caractères.</p>
 <p>La suite de ce document présente une introduction à la définition d’un motif. La documentation citée en référence est bien plus exhaustive.</p>
-<section id="un-motif-de-base" class="level3" data-number="15.1.1">
-<h3 data-number="15.1.1" class="anchored" data-anchor-id="un-motif-de-base"><span class="header-section-number">15.1.1</span> Un motif de base</h3>
-<p>Le motif le plus simple est une chaine de caractères strict. ‘chat’ par exemple peut être sera identifié dans la chaine de caractères ‘chat’ mais aussi ‘chaton’, ‘achat’ et ‘un chat noir’.</p>
+<section id="un-motif-de-base" class="level3" data-number="15.2.1">
+<h3 data-number="15.2.1" class="anchored" data-anchor-id="un-motif-de-base"><span class="header-section-number">15.2.1</span> Un motif de base</h3>
+<p>Le motif le plus simple est une chaine de caractères strict. <code>'CMD-'</code> par exemple peut être sera identifié dans la chaine de caractères <code>'CMD-'</code> mais aussi <code>'CMD-2048'</code> ou <code>'Commande CMD-2048'</code>.</p>
 </section>
-<section id="la-position-dun-motif" class="level3" data-number="15.1.2">
-<h3 data-number="15.1.2" class="anchored" data-anchor-id="la-position-dun-motif"><span class="header-section-number">15.1.2</span> La position d’un motif</h3>
-<p>Le symbol <code>^</code> en premier caractère est un marqueur indiquant que le motif doit être en début de chaine. Ainsi, <code>'^chat'</code> identifie la chaine <code>'chat</code>’ dans les chaines de caractères <code>'chat'</code> et <code>'chaton'</code> mais pas dans <code>'achat'</code> ni dans <code>'un chat noir'</code>.</p>
-<p>De même, le symbol <code>$</code> en dernier caractère est un marqueur indiquant que le motif doit être en fin de chaine. Ainsi, <code>'chat$'</code> identifie la chaine <code>'chat'</code> dans les chaines de caractères <code>'chat'</code> et <code>'achat'</code> mais pas dans <code>'chaton'</code> ni dans <code>'un chat noir'</code>.</p>
+<section id="les-classes-de-caractères" class="level3" data-number="15.2.2">
+<h3 data-number="15.2.2" class="anchored" data-anchor-id="les-classes-de-caractères"><span class="header-section-number">15.2.2</span> Les classes de caractères</h3>
+<p>Une classe représente <strong>un caractère parmi plusieurs possibilités</strong>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Motif</th>
+<th>Signification</th>
+<th>Exemple reconnu</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>[abc]</code></td>
+<td><code>a</code>, <code>b</code> ou <code>c</code></td>
+<td><code>b</code></td>
+</tr>
+<tr class="even">
+<td><code>[A-Z]</code></td>
+<td>une capitale de <code>A</code> à <code>Z</code></td>
+<td><code>M</code></td>
+</tr>
+<tr class="odd">
+<td><code>\d</code></td>
+<td>un chiffre</td>
+<td><code>7</code></td>
+</tr>
+<tr class="even">
+<td><code>\w</code></td>
+<td>une lettre, un chiffre ou <code>_</code></td>
+<td><code>p</code></td>
+</tr>
+<tr class="odd">
+<td><code>\s</code></td>
+<td>un espace, une tabulation ou un saut de ligne</td>
+<td>espace</td>
+</tr>
+<tr class="even">
+<td><code>[^0-9]</code></td>
+<td>un caractère qui n’est pas un chiffre</td>
+<td><code>X</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>\D</code>, <code>\W</code> et <code>\S</code> sont les formes inverses de <code>\d</code>, <code>\w</code> et <code>\s</code>.</p>
+<p>Le point <code>'.'</code> représente presque n’importe quel caractère.</p>
 </section>
-<section id="les-classes-de-caractères" class="level3" data-number="15.1.3">
-<h3 data-number="15.1.3" class="anchored" data-anchor-id="les-classes-de-caractères"><span class="header-section-number">15.1.3</span> Les classes de caractères</h3>
-<p>Les crochets permettent de définir quel caractère sera attendu parmi ceux entre crochet à l’emplacement des crochets. Dans les crochets, les caractères - et ^ ont un comportement spécial décrit ci-dessous.</p>
+<section id="nombre-doccurrences" class="level3" data-number="15.2.3">
+<h3 data-number="15.2.3" class="anchored" data-anchor-id="nombre-doccurrences"><span class="header-section-number">15.2.3</span> Nombre d’occurrences</h3>
+<p>Un quantificateur indique combien de fois l’élément précédent peut apparaître.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Motif</th>
+<th style="text-align: right;">Nombre attendu</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>\d?</code></td>
+<td style="text-align: right;">zéro ou une fois</td>
+<td><code>7</code> ou rien</td>
+</tr>
+<tr class="even">
+<td><code>\d*</code></td>
+<td style="text-align: right;">zéro fois ou plus</td>
+<td><code>123</code> ou rien</td>
+</tr>
+<tr class="odd">
+<td><code>\d+</code></td>
+<td style="text-align: right;">une fois ou plus</td>
+<td><code>123</code></td>
+</tr>
+<tr class="even">
+<td><code>\d{4}</code></td>
+<td style="text-align: right;">exactement 4 fois</td>
+<td><code>2048</code></td>
+</tr>
+<tr class="odd">
+<td><code>\d{2,4}</code></td>
+<td style="text-align: right;">de 2 à 4 fois</td>
+<td><code>20</code>, <code>204</code>, <code>2048</code></td>
+</tr>
+</tbody>
+</table>
+<pre class="text"><code>CMD-\d{4}
+│   └──── exactement quatre chiffres
+└──────── texte attendu tel quel</code></pre>
+</section>
+<section id="la-position-dun-motif" class="level3" data-number="15.2.4">
+<h3 data-number="15.2.4" class="anchored" data-anchor-id="la-position-dun-motif"><span class="header-section-number">15.2.4</span> La position d’un motif</h3>
+<p>Les ancres indiquent <strong>où</strong> le motif doit se trouver.</p>
 <ul>
-<li><code>[aeiouy]</code> signifie un caractère parmi ceux entre crochets</li>
-<li><code>[a-z]</code> signifie un caractère entre a et z en minuscule.</li>
-<li><code>[a-zA-Z]</code> signifie un caractère entre a et z en minuscule ou capitale.</li>
-<li><code>[a-z-]</code> signifie un caractère entre a et z en minuscule ou un tiret.</li>
-<li><code>[^aeiouy]</code> le ^ est une négation, ici, il est attendu n’importe quel caractère sauf un de ceux entre crochets.</li>
-<li><code>.</code> signifie n’importe quel caractère.</li>
+<li><code>^</code> en début de motif représente le début de la chaîne.</li>
+<li><code>$</code> en fin de motif représente la fin de la chaîne.</li>
 </ul>
-<p>Les crochets signifient donc <code>ou</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pattern <span class="op">=</span> <span class="vs">r"</span><span class="dv">^</span><span class="vs">CMD-</span><span class="dv">\d</span><span class="op">{4}</span><span class="dv">$</span><span class="vs">"</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">bool</span>(re.search(pattern, <span class="st">"CMD-2048"</span>))           <span class="co"># True</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">bool</span>(re.search(pattern, <span class="st">"Commande CMD-2048"</span>))  <span class="co"># False</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="nombre-doccurrences" class="level3" data-number="15.1.4">
-<h3 data-number="15.1.4" class="anchored" data-anchor-id="nombre-doccurrences"><span class="header-section-number">15.1.4</span> Nombre d’occurrences</h3>
-<p>Un caractère ou une classe de caractères peut être attendu plusieurs fois. La définition d’un motif permet donc d’indiquer combien de fois un caractère est attendu en fonction du symbole suivant placé après :</p>
-<ul>
-<li><code>*</code> : 0, 1 ou plusieurs occurrences</li>
-<li><code>+</code> : 1 ou plusieurs occurrences</li>
-<li><code>?</code> : 0 ou 1 occurrences</li>
-<li><code>{m}</code> : strictement m occurrences</li>
-<li><code>{m,n}</code> : entre m et n occurrences</li>
-<li><code>{,n}</code> : de 0 à n occurrences</li>
-<li><code>{m,}</code> : plus de m occurrences</li>
-</ul>
+<section id="les-groupes-de-caractères" class="level3" data-number="15.2.5">
+<h3 data-number="15.2.5" class="anchored" data-anchor-id="les-groupes-de-caractères"><span class="header-section-number">15.2.5</span> Les groupes de caractères</h3>
+<p>Les parenthèses regroupent plusieurs éléments :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>re.fullmatch(<span class="vs">r"</span><span class="kw">(</span><span class="vs">ha</span><span class="kw">)</span><span class="op">+</span><span class="vs">"</span>, <span class="st">"hahaha"</span>)  <span class="co"># correspondance</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Le symbole <code>|</code> signifie « ou ».</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>re.fullmatch(<span class="vs">r"oui</span><span class="cf">|</span><span class="vs">non"</span>, <span class="st">"oui"</span>)  <span class="co"># correspondance</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="les-groupes-de-caractères" class="level3" data-number="15.1.5">
-<h3 data-number="15.1.5" class="anchored" data-anchor-id="les-groupes-de-caractères"><span class="header-section-number">15.1.5</span> Les groupes de caractères</h3>
-<p>Les parenthèses permettent de définir des groupes de caractères qui sont attendus dans leur ensemble. Les parenthèses définissent une relation <strong>et</strong>.</p>
-<p>Un groupe peut être combiné à d’autres marqueurs : * <code>(chat)+</code> est présent dans <code>'chatchat'</code> (deux fois) et dans <code>'tchatchatcha'</code> (deux fois aussi). * <code>([rf]i)+</code> identifie <code>'riri'</code> et <code>'fifi'</code> (et <code>'firi'</code> ou <code>'rifi'</code> ou <code>'rifiri'</code>…) * <code>(M.|Mme)</code> identifie soit <code>'M.'</code> soit <code>'Mme'</code>.</p>
+<section id="référence-précédente" class="level3" data-number="15.2.6">
+<h3 data-number="15.2.6" class="anchored" data-anchor-id="référence-précédente"><span class="header-section-number">15.2.6</span> Référence précédente</h3>
+<p>À l’aide d’un metacaractère appelé <em>backreference</em>, nous pouvons matcher un groupe capturé précédemment. Ce metacaractère s’écrit <code>\n</code> où <code>n</code> est un entier qui représente le match du nième groupe capturé.</p>
+<p>Ce metacaractère permet d’éviter le problème avec un pattern comme <code>([rf]i)+</code> qui capture <code>'riri'</code>, <code>'fifi'</code> mais aussi <code>'rifi'</code> et <code>'firi'</code>.</p>
+<p>Pour identifier spécifiquement <code>'riri'</code> ou <code>'fifi'</code> mais ni <code>'rifi'</code> ou <code>'firi'</code>, le pattern est <code>([rf]i)\1</code>.</p>
+<p>En passant, pour ajouter <code>'loulou'</code> aux matchs possibles, nous pouvons ajouter le ou : <code>([rf]i|lou)\1</code>.</p>
 </section>
-<section id="référence-précédente" class="level3" data-number="15.1.6">
-<h3 data-number="15.1.6" class="anchored" data-anchor-id="référence-précédente"><span class="header-section-number">15.1.6</span> Référence précédente</h3>
-<p>À l’aide d’un metacaractère appelé backreference, nous pouvons matcher un groupe capturé précédemment. Ce metacaractère s’écrit <code>\n</code> où n est un entier qui représente le match du nième groupe capturé.</p>
-<p>Ce metacaractère permet d’éviter tout problème avec le pattern <code>([rf]i)+</code>. Ainsi, identifier spécifiquement <code>'riri'</code> ou <code>'fifi'</code> mais ni <code>'rifi'</code> ou <code>'firi'</code>, le pattern est <code>([rf]i)\1</code>. En passant, pour ajouter <code>'loulou'</code> aux matchs possibles, nous pouvons ajouter le ou : <code>([rf]i|lou)\1</code>.       ## Utiliser le module re</p>
+</section>
+<section id="utiliser-le-module-re" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="utiliser-le-module-re"><span class="header-section-number">15.3</span> Utiliser le module re</h2>
 <p>Pour utiliser les RegEx, Python fournit le module <code>re</code>.</p>
+<section id="les-fonctions-de-recherche" class="level3" data-number="15.3.1">
+<h3 data-number="15.3.1" class="anchored" data-anchor-id="les-fonctions-de-recherche"><span class="header-section-number">15.3.1</span> Les fonctions de recherche</h3>
+<p>Le module <code>re</code> propose les fonctions de recherche suivantes :</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Fonction</th>
+<th>Zone examinée</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>re.search(motif, texte)</code></td>
+<td>n’importe où dans le texte</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>re.match(motif, texte)</code></td>
+<td>uniquement au début</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>re.fullmatch(motif, texte)</code></td>
+<td>toute la chaîne</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>En pratique, utilisez <code>search()</code> pour trouver et <code>fullmatch()</code> pour valider.</p>
+<p><code>re.search()</code> retournera la première occurence trouvée. Pour recherobtenir toutes les occurences, vous avez :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fonction</th>
+<th>Renvoie</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>re.findall(motif, texte)</code></td>
+<td>La liste des chaines de caractères trouvées</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>re.finditer(motif, texte)</code></td>
+<td>Un itérateur sur des <em>Match Objects</em></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Une RegEx peut également être utilisée comme un objet. Un motif utilisé plusieurs fois peut être compilé :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>cmd_ref <span class="op">=</span> re.<span class="bu">compile</span>(<span class="vs">r"CMD-</span><span class="dv">\d</span><span class="op">{4}</span><span class="vs">"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>cmd_ref.search(<span class="st">"Commande CMD-2048"</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>cmd_ref.fullmatch(<span class="st">"CMD-0007"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La variable <code>cmd_ref</code> regroupe le motif et ses options. L’objet propose les mêmes méthodes de recherche que les fonctions du module.</p>
+<p>Notez qu’un motif compilé n’est pas plus performant qu’utiliser la fonction. Si la <em>compilation</em> <em>optimise</em> la recherche, il en va de même au niveau du module pour les fonctions.</p>
 </section>
-<section id="les-fonctions-de-recherche" class="level3" data-number="15.1.7">
-<h3 data-number="15.1.7" class="anchored" data-anchor-id="les-fonctions-de-recherche"><span class="header-section-number">15.1.7</span> Les fonctions de recherche</h3>
-<p>Le module re propose les fonctions de recherche suivantes :</p>
-<ul>
-<li><code>re.search(pattern, string)</code> recherche le motif dans la chaine</li>
-<li><code>re.match(pattern, string)</code> recherche le motif en début de chaine</li>
-<li><code>re.fullmatch(pattern, string)</code> recherche un motif exact du pattern sur la chaine.</li>
-<li><code>re.findall(pattern, string)</code> : retourne une liste de toutes les occurrences du motif sous forme de chaine de caractères</li>
-<li><code>re.finditer(pattern, string)</code> : retourne un itérateur de match objects (voir ci-dessous).</li>
-</ul>
-<p>Si la fonction (à part <code>findall</code>) trouve une correspondance, un <em>Match Object</em>, est retourné sinon <code>None</code>.</p>
-<p>Une RegEx peut également être utilisée comme un objet. La fonction <code>re.compile(pattern)</code> retourne un objet de type <code>_sre.SRE_Pattern</code> dédié à l’identification du motif décrit par <code>pattern</code>. Cet objet dispose de méthodes similaires aux fonctions précédentes.</p>
 </section>
-</section>
-<section id="les-match-objects-et-leurs-attributs" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="les-match-objects-et-leurs-attributs"><span class="header-section-number">15.2</span> Les Match Objects et leurs attributs</h2>
+<section id="les-match-objects-et-leurs-attributs" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="les-match-objects-et-leurs-attributs"><span class="header-section-number">15.4</span> Les Match Objects et leurs attributs</h2>
 <p>Un Match Object expose principalement les 3 méthodes suivantes. Le paramètre optionnel <code>subgroup</code> est un entier ou une chaine de caractères.</p>
 <ul>
-<li><code>group([subgroup])</code> : retourne le motif trouvé (sans paramètre ou avec la valeur <code>0</code>) ou le motif correspondant au sous-groupe.</li>
-<li><code>start([subgroup])</code> : retourne l’indice de début du motif trouvé (sans paramètre ou avec la valeur <code>0</code>) ou pour celui correspondant au sous-groupe.</li>
-<li><code>end([subgroup])</code> : retourne l’indice de fin du motif trouvé (sans paramètre ou avec la valeur <code>0</code>) ou pour celui correspondant au sous-groupe.</li>
+<li><code>group([subgroup])</code> : utilisé sans paramètre ou avec la valeur <code>0</code>, retourne le motif trouvé, sinon le motif correspondant au sous-groupe.</li>
+<li><code>start([subgroup])</code> : utilisé sans paramètre ou avec la valeur <code>0</code>, retourne l’indice de début du motif trouvé, sinon celui correspondant au sous-groupe.</li>
+<li><code>end([subgroup])</code> : utilisé sans paramètre ou avec la valeur <code>0</code>, retourne l’indice de fin du motif trouvé, sinon celui correspondant au sous-groupe.</li>
 </ul>
-<p>Le paramètre sous-groupe représente un des groupes définis par des parenthèses. La seconde fonction des groupes est donc de définir des sous-motifs d’intérêt. Ceux-ci permettent de définir l’information réelle que nous souhaitons obtenir lorsqu’il n’est pas possible de définir un motif pour l’information que nous recherchons.</p>
-<p>L’exemple suivant définit un motif de recherche de nombres décimaux ayant une précision minimale de deux chiffres.</p>
-<p>Les groupes sont utilisés pour permettent d’extraire la partie entière et la partie décimale.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>float_regex <span class="op">=</span> re.<span class="bu">compile</span>(<span class="st">'([0-9]+)</span><span class="er">\</span><span class="st">.([0-9]{2,})'</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>ma_chaine <span class="op">=</span> <span class="st">'pi vaut 3.14'</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>resultat <span class="op">=</span> float_regex.search(ma_chaine)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> resultat:</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(resultat.group())</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(resultat.group(<span class="dv">0</span>))</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(resultat.group(<span class="dv">1</span>))</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(resultat.group(<span class="dv">2</span>))</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>   </span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Affiche:     </span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 3.14</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 3.14</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># 3</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># 14</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(resultat.start())</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># affiche:</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 8</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(resultat.end())</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Affiche:</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co"># 12</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(resultat.start(<span class="dv">2</span>))</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Affiche:</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># 10</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Remarquez le test à la ligne 5, il s’agit d’un pattern de code commun. Il est indispensable de vérifier l’existence d’un résultat afin d’appeler les méthodes sur ceux-ci et non sur la valeur <code>None</code>. Python nous simplifie la tâche avec le sens <em>falsy</em> de <code>None</code>.</p>
-<p>Se retrouver dans la numérotation des groupes n’est pas toujours évident surtout qu’un motif peut définir des groupes pour extraire de l’information mais aussi pour grouper des caractères en vue de leur description.</p>
-<p>Il est donc possible d’utiliser des marqueurs. Ainsi, un groupe avec la syntaxe suivante <code>(?P&lt;name&gt;…)</code> définira une étiquette name et c’est cette étiquette qui permettra d’identifier le groupe.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>float_regex <span class="op">=</span> re.<span class="bu">compile</span>(<span class="st">'(?P&lt;whole&gt;[0-9]+)</span><span class="er">\</span><span class="st">.(?P&lt;fraction&gt;[0-9]{2,})'</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>resultat <span class="op">=</span> float_regex.search(ma_chaine)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> resultat:</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'1'</span>, resultat.group(<span class="dv">1</span>))</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'whole'</span>, resultat.group(<span class="st">'whole'</span>))</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'fraction'</span>, resultat.group(<span class="st">'fraction'</span>))</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'start fraction'</span>, resultat.start(<span class="st">'fraction'</span>))</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Affiche:</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 3</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># whole 3</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># fraction 14</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># start fraction 10</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Un <em>sous-groupe</em> représente un groupe défini par des parenthèses.</p>
 </section>
-<section id="les-substitutions" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="les-substitutions"><span class="header-section-number">15.3</span> Les substitutions</h2>
+<section id="les-sous-groupes" class="level2" data-number="15.5">
+<h2 data-number="15.5" class="anchored" data-anchor-id="les-sous-groupes"><span class="header-section-number">15.5</span> Les sous-groupes</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>texte <span class="op">=</span> <span class="st">"Livraison prévue le 07/11/2026"</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>pattern <span class="op">=</span> <span class="vs">r"</span><span class="kw">(</span><span class="dv">\d</span><span class="op">{2}</span><span class="kw">)</span><span class="vs">/</span><span class="kw">(</span><span class="dv">\d</span><span class="op">{2}</span><span class="kw">)</span><span class="vs">/</span><span class="kw">(</span><span class="dv">\d</span><span class="op">{4}</span><span class="kw">)</span><span class="vs">"</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> re.search(motif, texte)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> m:</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(m.group(<span class="dv">0</span>))  <span class="co"># 07/11/2026 : motif complet</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(m.group(<span class="dv">1</span>))  <span class="co"># 07         : premier groupe</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(m.groups())  <span class="co"># ('07', '11', '2026')</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La seconde fonction des groupes est donc d’isoler des parties d’intérêt.</p>
+<p>Utiliser un nom rend l’extraction plus explicite qu’un numéro. Nous définissons une étiquette grâce à la syntaxe <code>(?P&lt;name&gt;…)</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pattern <span class="op">=</span> (<span class="vs">r"</span><span class="kw">(</span><span class="fu">?P&lt;jour&gt;</span><span class="dv">\d</span><span class="op">{2}</span><span class="kw">)</span><span class="vs">/</span><span class="kw">(</span><span class="fu">?P&lt;mois&gt;</span><span class="dv">\d</span><span class="op">{2}</span><span class="kw">)</span><span class="vs">/</span><span class="kw">(</span><span class="fu">?P&lt;annee&gt;</span><span class="dv">\d</span><span class="op">{4}</span><span class="kw">)</span><span class="vs">"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> re.search(pattern, <span class="st">"Livraison le 07/11/2026"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> m:</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(m.group(<span class="st">"annee"</span>))  <span class="co"># 2026</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(m.groupdict())     <span class="co"># {'jour': '07', 'mois': '11', 'annee': '2026'}</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="groupes-non-capturants" class="level3" data-number="15.5.1">
+<h3 data-number="15.5.1" class="anchored" data-anchor-id="groupes-non-capturants"><span class="header-section-number">15.5.1</span> Groupes non-capturants</h3>
+<p>Quand un groupe sert seulement à structurer le motif, <code>(?:...)</code> évite de le capturer :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>pattern <span class="op">=</span> <span class="vs">r"</span>(?:<span class="vs">M</span><span class="cf">|</span><span class="vs">Mme</span>)<span class="vs"> Dupont"</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>(?:M|Mme)</code> choisit une alternative sans créer de groupe à extraire.</p>
+</section>
+</section>
+<section id="les-substitutions" class="level2" data-number="15.6">
+<h2 data-number="15.6" class="anchored" data-anchor-id="les-substitutions"><span class="header-section-number">15.6</span> Les substitutions</h2>
 <p>Les RegEx peuvent être utilisées pour substituer du texte grâce à :</p>
 <ul>
 <li>La fonction <code>sub(pattern, repl, string, count=0, flags=0)</code></li>
 <li>la méthode <code>sub(repl, string, count=0, flags=0)</code></li>
 </ul>
-<p>Les paramètres sont : * <code>repl</code> peut-être soit une chaine de substitution, soit un <em>callable</em>, c’est à dire une fonction. Celle-ci prendra en paramètre un match object et devra retourner une chaine de caractères. * count permet de limiter le nombre de substitutions.</p>
+<p>Les paramètres sont :</p>
+<ul>
+<li><code>repl</code> peut-être soit une chaine de substitution, soit un <em>callable</em>, c’est à dire une fonction. Celle-ci prendra en paramètre un match object et devra retourner une chaine de caractères.</li>
+<li><code>count</code> permet de limiter le nombre de substitutions.</li>
+</ul>
 <p>Le code suivant illustre la substitution avec une chaine de caractères fixe.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ma_chaine <span class="op">=</span> <span class="st">'pi vaut 3.14 et e vaut 2.72'</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>float_regex.sub(<span class="st">'quelque chose'</span>, ma_chaine)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Retourne :</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 'pi vaut quelque chose et e vaut quelque chose'</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ma_chaine <span class="op">=</span> <span class="st">'pi vaut 3.14 et e vaut 2.72'</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>float_regex.sub(<span class="st">'quelque chose'</span>, ma_chaine)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Retourne : 'pi vaut quelque chose et e vaut quelque chose'</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Le code suivant illustre une substitution plus intelligente avec une fonction.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>temp_pattern <span class="op">=</span> <span class="vs">r"</span><span class="kw">(</span><span class="fu">?P&lt;temp&gt;</span><span class="pp">[0-9]</span><span class="op">+</span><span class="ch">\.</span><span class="pp">[0-9]</span><span class="op">{2}</span><span class="kw">)</span><span class="vs">°</span><span class="kw">(</span><span class="fu">?P&lt;value&gt;</span><span class="vs">c</span><span class="cf">|</span><span class="vs">F</span><span class="kw">)</span><span class="vs">"</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>t_regex <span class="op">=</span> re.<span class="bu">compile</span>(temp_pattern)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simplify(temp_match):</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    temp <span class="op">=</span> <span class="bu">float</span>(temp_match.group(<span class="st">'temp'</span>))</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> temp <span class="op">&gt;</span> <span class="dv">30</span>:</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Trop chaud"</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> temp <span class="op">&lt;</span> <span class="dv">15</span>:</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Trop froid"</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> temp_match.group() </span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>t_regex.sub(simplify, <span class="vs">r"Il fait 17</span><span class="dv">.</span><span class="vs">08°c"</span>)</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Retourne:</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 'Il fait 17.08°c'</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>t_regex.sub(simplify, <span class="vs">r"Il fait 32</span><span class="dv">.</span><span class="vs">08°c"</span>)</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Retourne:</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 'Il fait Trop chaud'</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>t_regex.sub(simplify, <span class="vs">r"Il fait 12</span><span class="dv">.</span><span class="vs">08°c"</span>)</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Retourne:</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 'Il fait Trop froid'</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>temp_pattern <span class="op">=</span> <span class="vs">r"</span><span class="kw">(</span><span class="fu">?P&lt;temp&gt;</span><span class="pp">[0-9]</span><span class="op">+</span><span class="ch">\.</span><span class="pp">[0-9]</span><span class="op">{2}</span><span class="kw">)</span><span class="vs">°</span><span class="kw">(</span><span class="fu">?P&lt;value&gt;</span><span class="vs">c</span><span class="cf">|</span><span class="vs">F</span><span class="kw">)</span><span class="vs">"</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>t_regex <span class="op">=</span> re.<span class="bu">compile</span>(temp_pattern)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simplify(temp_match):</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    temp <span class="op">=</span> <span class="bu">float</span>(temp_match.group(<span class="st">'temp'</span>))</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> temp <span class="op">&gt;</span> <span class="dv">30</span>:</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Trop chaud"</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> temp <span class="op">&lt;</span> <span class="dv">15</span>:</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Trop froid"</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> temp_match.group() </span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>t_regex.sub(simplify, <span class="vs">r"Il fait 17</span><span class="dv">.</span><span class="vs">08°c"</span>)</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Retourne: 'Il fait 17.08°c'</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>t_regex.sub(simplify, <span class="vs">r"Il fait 32</span><span class="dv">.</span><span class="vs">08°c"</span>)</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Retourne: 'Il fait Trop chaud'</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>t_regex.sub(simplify, <span class="vs">r"Il fait 12</span><span class="dv">.</span><span class="vs">08°c"</span>)</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Retourne: 'Il fait Trop froid'</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
