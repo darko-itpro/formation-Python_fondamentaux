@@ -9,7 +9,7 @@ import pyflix.loaders.file_helpers as fu
 # être remplacé par le module créé lors de la formation.
 import pyflix.media_db as media
 
-import settings as conf
+import pyflix.settings as conf
 
 try:
     from pyflix.utils import rich_cli as cli

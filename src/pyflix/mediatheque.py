@@ -14,6 +14,12 @@ class Episode:
         
         return self.season_number == other.season_number and self.number == other.number
 
+    def __repr__(self) -> str:
+        return f"Episode '{self.title}' s{self.season_number}e{self.number}"
+
+    def __str__(self) -> str:
+        return f"Episode '{self.title}' s{self.season_number}e{self.number}"
+
 
 class TvShow:
     def __init__(self, name:str):
