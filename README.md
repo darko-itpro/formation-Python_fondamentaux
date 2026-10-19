@@ -168,11 +168,12 @@ jupyter-lab
 ## Documentation
 
 Un bon projet est accompagné d'une bonne documentation… Dans le cadre de ce projet, la 
-documentation est générée par [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+documentation _principale_ est générée par [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
-L'ensemble des fichiers de documentation sont dans le répertoire `docs/` et sont au format `rst`.
-Vous pouvez donc consulter les documents directement dans vos IDEs, PyCharm et VS Code ont un 
-panneau de prévisualisation.
+Les fichiers se situent dans le répertoire `docs/` et sont au format `rst`. Vous pouvez donc les 
+consulter directement dans vos IDEs, PyCharm et VS Code ont un panneau de prévisualisation.
+
+Les supports de formation sont gérés différemment et ne sont donc pas diffusés ici.
 
 ### Consulter la documentation de manière dynamique
 
@@ -188,7 +189,7 @@ mkdocs serve
 Le log de lancement vous indiquera à quelle adresse vous pouvez consulter la doc (normalement, 
 `http://127.0.0.1:8000/`).
 
-Si vous souhiatez la modifier et voir la mise à jour de vos documents, exécutez :
+Si vous souhaitez la modifier et voir la mise à jour de vos documents, exécutez :
 ```shell
 mkdocs serve --livereload
 ```
