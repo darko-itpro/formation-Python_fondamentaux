@@ -15,7 +15,7 @@ authors = [
 license = "GPL-3.0-or-later"
 
 dependencies = [
-    "jupyterlab>=4.5.7,<4.6",
+    "jupyterlab>=4.6",
     "platformdirs>=4.13.0",
     "pytz>=2022.7.1",
     "questionary>=2.1",
