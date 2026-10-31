@@ -3,3 +3,7 @@ ipython>=8.11.0
 pylint>=2.15.5
 pytest>=7.0.1
 pytz>=2022.7.1
+jupyterlab>=4.6
+rich>=13.6.0
+questionary>=2.1
+mkdocs-material>=9.7
