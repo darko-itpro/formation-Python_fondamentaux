@@ -17,19 +17,9 @@ license = "GPL-3.0-or-later"
 dependencies = [
     "jupyterlab>=4.6",
     "platformdirs>=4.13.0",
-    "pytz>=2022.7.1",
     "questionary>=2.1",
     "rich>=13.6.0",
 ]
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/pyflix"]
-
-[project.urls]
-Homepage = "https://github.com/darko-itpro/formation-Python_fondamentaux"
-Documentation = "https://github.com/darko-itpro/formation-Python_fondamentaux/wiki"
-Repository = "https://github.com/darko-itpro/formation-Python_fondamentaux.git"
-Issues = "https://github.com/darko-itpro/formation-Python_fondamentaux/issues"
 
 [dependency-groups]
 dev = [
@@ -39,3 +29,18 @@ dev = [
     "pylint>=4.0.1",
     "pytest>=8.4.2",
 ]
+legacy = [
+    "pytz>=2026.5",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pyflix"]
+
+[project.scripts]
+pyflix = "pyflix.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/darko-itpro/formation-Python_fondamentaux"
+Documentation = "https://github.com/darko-itpro/formation-Python_fondamentaux/wiki"
+Repository = "https://github.com/darko-itpro/formation-Python_fondamentaux.git"
+Issues = "https://github.com/darko-itpro/formation-Python_fondamentaux/issues"

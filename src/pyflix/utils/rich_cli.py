@@ -18,6 +18,10 @@ def display_shows(shows: dict) -> None:
 
     :param shows: Dictionnaire dont les valeurs sont des objets série.
     """
+    if not shows:
+        print("No show yet !")
+        return
+
     for show in shows.values():
         console.rule(show.name)
         display_show(show)

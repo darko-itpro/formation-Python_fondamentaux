@@ -17,16 +17,15 @@ except ModuleNotFoundError:
     from pyflix.utils import cli
 
 
-def local_shows_loader(shows: dict[str, media.TvShow]|None = None) -> dict[str, media.TvShow]:
-    shows = shows.copy() if shows is not None else {}
-
+def local_shows_loader(shows: dict[str, media.TvShow]) -> None:
     src_path = conf.DATA_PATH
 
     for datasource in src_path.iterdir():
+        if datasource.suffix != ".db":
+            continue
+            
         show = media.TvShow.from_db(datasource)
         shows[show.name] = show
-
-    return shows
 
 
 def load_data_from_path(path: str | Path, shows: dict[str, media.TvShow]|None = None) -> dict[str, media.TvShow]:
