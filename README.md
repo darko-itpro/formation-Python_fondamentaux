@@ -232,8 +232,3 @@ formation proposent en général une introduction aux interfaces graphiques avec
 a des demandes pour une bibliothèque plus aboutie. L'installation devra être faite manuellement,
 en particulier du fait de la taille (plus de 450Mo téléchargé pour plus de 1Go sur disque…)
  * [PySide6](https://pypi.org/project/PySide6/) : à installer avec `pip install PySide6`
- 
-## Ressources
-
-Durant la formation, des ressources complémentaires peuvent être disponibles
-[sur le partage suivant](https://bit.ly/3uh2MEQ)
